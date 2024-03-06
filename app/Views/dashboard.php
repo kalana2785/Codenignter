@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<title>Dashboard</title>
+<title>My Dashboard</title>
 <link  href="<?= base_url('Assests/css/bootstrap.min.css');?>" rel="stylesheet">
 
 </head>
