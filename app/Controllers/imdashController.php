@@ -8,8 +8,8 @@ class imdashController extends BaseController
 {
     public function index()
     {
-        $dashboard = new DashboardModel();
-        $data['dashboards'] = $dashboard ->findAll(); 
-        return view('dashboard.php',$data);
+        $dashboardModel = new DashboardModel();
+        $data['dashboards'] = $dashboardModel->getDashboardData();
+        return view('dashboard.php', $data);
     }
 }

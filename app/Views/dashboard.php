@@ -24,18 +24,17 @@
   </thead>
   <tbody>
     <?php if ($dashboards):?>
-      <?php foreach($dashboards as $row) : ?>
-    <tr>
-    
-      <td><?php echo  $row['id']; ?></td>
-      <td><?php echo  $row['item name']; ?></td>
-      <td><?php echo  $row['catogory']; ?></td>
-      <td><?php echo  $row['quntity']; ?></td>
-      <td><?php echo  $row['Date']; ?></td>
-    </tr>
-   <?php endforeach;?> 
-  <?php endif;?>
-  </tbody>
+        <?php foreach($dashboards as $row) : ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['category_name']; ?></td>
+                <td><?php echo $row['quntity']; ?></td>
+                <td><?php echo $row['Date']; ?></td>
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
+</tbody>
 </table>
 
 

@@ -1,0 +1,730 @@
+ERROR - 2024-03-08 05:28:01 --> mysqli_sql_exception: Unknown column 'items.item' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:28:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.item' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:28:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.item' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:28:01 --> [Caused by] mysqli_sql_exception: Unknown column 'items.item' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `category` ON `category`.`Cid` = `items`.`catogory`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:29:10 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:29:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:29:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:29:10 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:29:12 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:29:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:29:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:29:12 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:32:00 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:32:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:00 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:32:01 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:32:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:01 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:32:01 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:32:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:01 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Nam`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:32:33 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:32:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:33 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:32:34 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:32:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:34 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:32:34 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:32:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:32:34 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-08 05:34:03 --> mysqli_sql_exception: Not unique table/alias: 'items' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-08 05:34:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:34:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-08 05:34:03 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'items'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`id`, `items`.`item` `name`, `items`.`catogory`, `items`.`quntity`, `items`.`Date`, `category`.`Cid`, `category`.`Category` `Name`
+FROM `items`
+JOIN `items` ON `items`.`catogory` = `category`.`Cid`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DashboardModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(12): App\Models\DashboardModel->getDashboardData()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
