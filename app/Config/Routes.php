@@ -8,3 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 $routes->get('/dashboard', 'imdashController::index' );
+
+$routes->get('/Imanger/Add', 'imdashController::AddForm' );
+$routes->get('/test', 'imdashController::testveiw' );
+
+$routes->post('/Imanger/Additems', 'imdashController::store');

@@ -2,16 +2,35 @@
 <head>
 
 <title>My Dashboard</title>
-<link  href="<?= base_url('Assests/css/bootstrap.min.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+
 
 </head>
 
 <body>
 
-<nav class="navbar fixed-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">Fixed top</a>
-</nav>
+<?= $this->include('Layout/header.php') ?>
+<?= $this->include('Layout/floter.php') ?>
+
+
 <br><br><br><br><br><br>
+<main id="main" class="main">
+
+<?php
+  if(session()->getFlashdata('status')){ ?>
+   <div class="alert alert-success" role="alert">
+    <strong>Hello </strong> <?= session()->getFlashdata('status'); ?>
+ </div>
+<?php
+  }
+   ?>
+
 <table class="table">
   <thead>
     <tr>
@@ -39,7 +58,7 @@
 
 
 
-
+</main>
 
 
 <script src="<?= base_url('Assests/js/jquery-3.7.1.js');?>" ></script>

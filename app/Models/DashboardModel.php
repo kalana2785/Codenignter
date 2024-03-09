@@ -10,7 +10,7 @@ class DashboardModel extends Model
    protected $primaryKey ='id';
    protected $allowedFields =
    [
-       'item name',
+       'item_name',
        'catogory',
        'quntity'
   
@@ -21,7 +21,7 @@ class DashboardModel extends Model
    {
        
        $this->join('category', 'items.catogory = category.Cid');
-       $query = $this->select('items.id, items.`item name` as item_name, items.catogory, items.quntity, items.Date, category.Cid, category.`Category Name` as category_name');
+       $query = $this->select('items.id, items.`item_name` as item_name, items.catogory, items.quntity, items.Date, category.Cid, category.`Category Name` as category_name');
        return $query->findAll();
    }
 }
