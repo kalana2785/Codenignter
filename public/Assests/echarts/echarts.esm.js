@@ -18,6 +18,7 @@
 * under the License.
 */
 
+<<<<<<< HEAD
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -47,6 +48,37 @@ function __extends(d, b) {
     extendStatics(d, b);
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+=======
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    if (typeof b !== "function" && b !== null)
+        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 }
 
 var Browser = (function () {
@@ -7287,12 +7319,21 @@ var ROUND_SUPPORTED_PRECISION_MAX = 20;
 function _trim(str) {
   return str.replace(/^\s+|\s+$/g, '');
 }
+<<<<<<< HEAD
 /**
  * Linear mapping a value from domain to range
  * @param  val
  * @param  domain Domain extent domain[0] can be bigger than domain[1]
  * @param  range  Range extent range[0] can be bigger than range[1]
  * @param  clamp Default to be false
+=======
+/**
+ * Linear mapping a value from domain to range
+ * @param  val
+ * @param  domain Domain extent domain[0] can be bigger than domain[1]
+ * @param  range  Range extent range[0] can be bigger than range[1]
+ * @param  clamp Default to be false
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -7339,9 +7380,15 @@ function linearMap(val, domain, range, clamp) {
 
   return (val - d0) / subDomain * subRange + r0;
 }
+<<<<<<< HEAD
 /**
  * Convert a percent string to absolute number.
  * Returns NaN if percent is not a valid string or number
+=======
+/**
+ * Convert a percent string to absolute number.
+ * Returns NaN if percent is not a valid string or number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function parsePercent$1(percent, all) {
@@ -7383,9 +7430,15 @@ function round(x, precision, returnStr) {
   x = (+x).toFixed(precision);
   return returnStr ? x : +x;
 }
+<<<<<<< HEAD
 /**
  * Inplacd asc sort arr.
  * The input arr will be modified.
+=======
+/**
+ * Inplacd asc sort arr.
+ * The input arr will be modified.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function asc(arr) {
@@ -7394,8 +7447,13 @@ function asc(arr) {
   });
   return arr;
 }
+<<<<<<< HEAD
 /**
  * Get precision.
+=======
+/**
+ * Get precision.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getPrecision(val) {
@@ -7426,8 +7484,13 @@ function getPrecision(val) {
 
   return getPrecisionSafe(val);
 }
+<<<<<<< HEAD
 /**
  * Get precision with slow but safe method
+=======
+/**
+ * Get precision with slow but safe method
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getPrecisionSafe(val) {
@@ -7441,8 +7504,13 @@ function getPrecisionSafe(val) {
   var decimalPartLen = dotIndex < 0 ? 0 : significandPartLen - 1 - dotIndex;
   return Math.max(0, decimalPartLen - exp);
 }
+<<<<<<< HEAD
 /**
  * Minimal dicernible data precisioin according to a single pixel.
+=======
+/**
+ * Minimal dicernible data precisioin according to a single pixel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getPixelPrecision(dataExtent, pixelExtent) {
@@ -7454,6 +7522,7 @@ function getPixelPrecision(dataExtent, pixelExtent) {
   var precision = Math.min(Math.max(-dataQuantity + sizeQuantity, 0), 20);
   return !isFinite(precision) ? 20 : precision;
 }
+<<<<<<< HEAD
 /**
  * Get a data of given precision, assuring the sum of percentages
  * in valueList is 1.
@@ -7464,6 +7533,18 @@ function getPixelPrecision(dataExtent, pixelExtent) {
  * @param idx index of the data to be processed in valueList
  * @param precision integer number showing digits of precision
  * @return percent ranging from 0 to 100
+=======
+/**
+ * Get a data of given precision, assuring the sum of percentages
+ * in valueList is 1.
+ * The largest remainder method is used.
+ * https://en.wikipedia.org/wiki/Largest_remainder_method
+ *
+ * @param valueList a list of all data
+ * @param idx index of the data to be processed in valueList
+ * @param precision integer number showing digits of precision
+ * @return percent ranging from 0 to 100
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getPercentWithPrecision(valueList, idx, precision) {
@@ -7474,6 +7555,7 @@ function getPercentWithPrecision(valueList, idx, precision) {
   var seats = getPercentSeats(valueList, precision);
   return seats[idx] || 0;
 }
+<<<<<<< HEAD
 /**
  * Get a data of given precision, assuring the sum of percentages
  * in valueList is 1.
@@ -7483,6 +7565,17 @@ function getPercentWithPrecision(valueList, idx, precision) {
  * @param valueList a list of all data
  * @param precision integer number showing digits of precision
  * @return {Array<number>}
+=======
+/**
+ * Get a data of given precision, assuring the sum of percentages
+ * in valueList is 1.
+ * The largest remainder method is used.
+ * https://en.wikipedia.org/wiki/Largest_remainder_method
+ *
+ * @param valueList a list of all data
+ * @param precision integer number showing digits of precision
+ * @return {Array<number>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getPercentSeats(valueList, precision) {
@@ -7532,9 +7625,15 @@ function getPercentSeats(valueList, precision) {
     return seat / digits;
   });
 }
+<<<<<<< HEAD
 /**
  * Solve the floating point adding problem like 0.1 + 0.2 === 0.30000000000000004
  * See <http://0.30000000000000004.com/>
+=======
+/**
+ * Solve the floating point adding problem like 0.1 + 0.2 === 0.30000000000000004
+ * See <http://0.30000000000000004.com/>
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function addSafe(val0, val1) {
@@ -7547,17 +7646,28 @@ function addSafe(val0, val1) {
 } // Number.MAX_SAFE_INTEGER, ie do not support.
 
 var MAX_SAFE_INTEGER = 9007199254740991;
+<<<<<<< HEAD
 /**
  * To 0 - 2 * PI, considering negative radian.
+=======
+/**
+ * To 0 - 2 * PI, considering negative radian.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function remRadian(radian) {
   var pi2 = Math.PI * 2;
   return (radian % pi2 + pi2) % pi2;
 }
+<<<<<<< HEAD
 /**
  * @param {type} radian
  * @return {boolean}
+=======
+/**
+ * @param {type} radian
+ * @return {boolean}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function isRadianAroundZero(val) {
@@ -7566,6 +7676,7 @@ function isRadianAroundZero(val) {
 
 var TIME_REG = /^(?:(\d{4})(?:[-\/](\d{1,2})(?:[-\/](\d{1,2})(?:[T ](\d{1,2})(?::(\d{1,2})(?::(\d{1,2})(?:[.,](\d+))?)?)?(Z|[\+\-]\d\d:?\d\d)?)?)?)?)?$/; // jshint ignore:line
 
+<<<<<<< HEAD
 /**
  * @param value valid type: number | string | Date, otherwise return `new Date(NaN)`
  *   These values can be accepted:
@@ -7581,6 +7692,23 @@ var TIME_REG = /^(?:(\d{4})(?:[-\/](\d{1,2})(?:[-\/](\d{1,2})(?:[T ](\d{1,2})(?:
  *     '2009/6/12 2:00', '2009/6/12 2:05:08', '2009/6/12 2:05:08.123'
  *   + a timestamp, which represent a time in UTC.
  * @return date Never be null/undefined. If invalid, return `new Date(NaN)`.
+=======
+/**
+ * @param value valid type: number | string | Date, otherwise return `new Date(NaN)`
+ *   These values can be accepted:
+ *   + An instance of Date, represent a time in its own time zone.
+ *   + Or string in a subset of ISO 8601, only including:
+ *     + only year, month, date: '2012-03', '2012-03-01', '2012-03-01 05', '2012-03-01 05:06',
+ *     + separated with T or space: '2012-03-01T12:22:33.123', '2012-03-01 12:22:33.123',
+ *     + time zone: '2012-03-01T12:22:33Z', '2012-03-01T12:22:33+8000', '2012-03-01T12:22:33-05:00',
+ *     all of which will be treated as local time if time zone is not specified
+ *     (see <https://momentjs.com/>).
+ *   + Or other string format, including (all of which will be treated as local time):
+ *     '2012', '2012-3-1', '2012/3/1', '2012/03/01',
+ *     '2009/6/12 2:00', '2009/6/12 2:05:08', '2009/6/12 2:05:08.123'
+ *   + a timestamp, which represent a time in UTC.
+ * @return date Never be null/undefined. If invalid, return `new Date(NaN)`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function parseDate(value) {
@@ -7626,22 +7754,39 @@ function parseDate(value) {
 
   return new Date(Math.round(value));
 }
+<<<<<<< HEAD
 /**
  * Quantity of a number. e.g. 0.1, 1, 10, 100
  *
  * @param val
  * @return
+=======
+/**
+ * Quantity of a number. e.g. 0.1, 1, 10, 100
+ *
+ * @param val
+ * @return
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function quantity(val) {
   return Math.pow(10, quantityExponent(val));
 }
+<<<<<<< HEAD
 /**
  * Exponent of the quantity of a number
  * e.g., 1234 equals to 1.234*10^3, so quantityExponent(1234) is 3
  *
  * @param val non-negative value
  * @return
+=======
+/**
+ * Exponent of the quantity of a number
+ * e.g., 1234 equals to 1.234*10^3, so quantityExponent(1234) is 3
+ *
+ * @param val non-negative value
+ * @return
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function quantityExponent(val) {
@@ -7650,10 +7795,17 @@ function quantityExponent(val) {
   }
 
   var exp = Math.floor(Math.log(val) / Math.LN10);
+<<<<<<< HEAD
   /**
    * exp is expected to be the rounded-down result of the base-10 log of val.
    * But due to the precision loss with Math.log(val), we need to restore it
    * using 10^exp to make sure we can get val back from exp. #11249
+=======
+  /**
+   * exp is expected to be the rounded-down result of the base-10 log of val.
+   * But due to the precision loss with Math.log(val), we need to restore it
+   * using 10^exp to make sure we can get val back from exp. #11249
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   if (val / Math.pow(10, exp) >= 10) {
@@ -7662,6 +7814,7 @@ function quantityExponent(val) {
 
   return exp;
 }
+<<<<<<< HEAD
 /**
  * find a “nice” number approximately equal to x. Round the number if round = true,
  * take ceiling if round = false. The primary observation is that the “nicest”
@@ -7672,6 +7825,18 @@ function quantityExponent(val) {
  * @param  val Non-negative value.
  * @param  round
  * @return Niced number
+=======
+/**
+ * find a “nice” number approximately equal to x. Round the number if round = true,
+ * take ceiling if round = false. The primary observation is that the “nicest”
+ * numbers in decimal are 1, 2, and 5, and all power-of-ten multiples of these numbers.
+ *
+ * See "Nice Numbers for Graph Labels" of Graphic Gems.
+ *
+ * @param  val Non-negative value.
+ * @param  round
+ * @return Niced number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function nice(val, round) {
@@ -7712,11 +7877,19 @@ function nice(val, round) {
 
   return exponent >= -20 ? +val.toFixed(exponent < 0 ? -exponent : 0) : val;
 }
+<<<<<<< HEAD
 /**
  * This code was copied from "d3.js"
  * <https://github.com/d3/d3/blob/9cc9a875e636a1dcf36cc1e07bdf77e1ad6e2c74/src/arrays/quantile.js>.
  * See the license statement at the head of this file.
  * @param ascArr
+=======
+/**
+ * This code was copied from "d3.js"
+ * <https://github.com/d3/d3/blob/9cc9a875e636a1dcf36cc1e07bdf77e1ad6e2c74/src/arrays/quantile.js>.
+ * See the license statement at the head of this file.
+ * @param ascArr
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function quantile(ascArr, p) {
@@ -7726,6 +7899,7 @@ function quantile(ascArr, p) {
   var e = H - h;
   return e ? v + e * (ascArr[h] - v) : v;
 }
+<<<<<<< HEAD
 /**
  * Order intervals asc, and split them when overlap.
  * expect(numberUtil.reformIntervals([
@@ -7747,6 +7921,29 @@ function quantile(ascArr, p) {
  * @param list, where `close` mean open or close
  *        of the interval, and Infinity can be used.
  * @return The origin list, which has been reformed.
+=======
+/**
+ * Order intervals asc, and split them when overlap.
+ * expect(numberUtil.reformIntervals([
+ *     {interval: [18, 62], close: [1, 1]},
+ *     {interval: [-Infinity, -70], close: [0, 0]},
+ *     {interval: [-70, -26], close: [1, 1]},
+ *     {interval: [-26, 18], close: [1, 1]},
+ *     {interval: [62, 150], close: [1, 1]},
+ *     {interval: [106, 150], close: [1, 1]},
+ *     {interval: [150, Infinity], close: [0, 0]}
+ * ])).toEqual([
+ *     {interval: [-Infinity, -70], close: [0, 0]},
+ *     {interval: [-70, -26], close: [1, 1]},
+ *     {interval: [-26, 18], close: [0, 1]},
+ *     {interval: [18, 62], close: [0, 1]},
+ *     {interval: [62, 150], close: [0, 1]},
+ *     {interval: [150, Infinity], close: [0, 0]}
+ * ]);
+ * @param list, where `close` mean open or close
+ *        of the interval, and Infinity can be used.
+ * @return The origin list, which has been reformed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function reformIntervals(list) {
@@ -7783,6 +7980,7 @@ function reformIntervals(list) {
     return a.interval[lg] < b.interval[lg] || a.interval[lg] === b.interval[lg] && (a.close[lg] - b.close[lg] === (!lg ? 1 : -1) || !lg && littleThan(a, b, 1));
   }
 }
+<<<<<<< HEAD
 /**
  * [Numeric is defined as]:
  *     `parseFloat(val) == val`
@@ -7798,6 +7996,23 @@ function reformIntervals(list) {
  *
  * @test See full test cases in `test/ut/spec/util/number.js`.
  * @return Must be a typeof number. If not numeric, return NaN.
+=======
+/**
+ * [Numeric is defined as]:
+ *     `parseFloat(val) == val`
+ * For example:
+ * numeric:
+ *     typeof number except NaN, '-123', '123', '2e3', '-2e3', '011', 'Infinity', Infinity,
+ *     and they rounded by white-spaces or line-terminal like ' -123 \n ' (see es spec)
+ * not-numeric:
+ *     null, undefined, [], {}, true, false, 'NaN', NaN, '123ab',
+ *     empty string, string with only white-spaces or line-terminal (see es spec),
+ *     0x12, '0x12', '-0x12', 012, '012', '-012',
+ *     non-string, ...
+ *
+ * @test See full test cases in `test/ut/spec/util/number.js`.
+ * @return Must be a typeof number. If not numeric, return NaN.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function numericToNumber(val) {
@@ -7806,27 +8021,47 @@ function numericToNumber(val) {
   && (valFloat !== 0 || !isString(val) || val.indexOf('x') <= 0) // For case ' 0x0 '.
   ? valFloat : NaN;
 }
+<<<<<<< HEAD
 /**
  * Definition of "numeric": see `numericToNumber`.
+=======
+/**
+ * Definition of "numeric": see `numericToNumber`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function isNumeric(val) {
   return !isNaN(numericToNumber(val));
 }
+<<<<<<< HEAD
 /**
  * Use random base to prevent users hard code depending on
  * this auto generated marker id.
  * @return An positive integer.
+=======
+/**
+ * Use random base to prevent users hard code depending on
+ * this auto generated marker id.
+ * @return An positive integer.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getRandomIdBase() {
   return Math.round(Math.random() * 9);
 }
+<<<<<<< HEAD
 /**
  * Get the greatest common divisor.
  *
  * @param {number} a one number
  * @param {number} b the other number
+=======
+/**
+ * Get the greatest common divisor.
+ *
+ * @param {number} a one number
+ * @param {number} b the other number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getGreatestCommonDividor(a, b) {
@@ -7836,11 +8071,19 @@ function getGreatestCommonDividor(a, b) {
 
   return getGreatestCommonDividor(b, a % b);
 }
+<<<<<<< HEAD
 /**
  * Get the least common multiple.
  *
  * @param {number} a one number
  * @param {number} b the other number
+=======
+/**
+ * Get the least common multiple.
+ *
+ * @param {number} a one number
+ * @param {number} b the other number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getLeastCommonMultiple(a, b) {
@@ -7895,6 +8138,7 @@ function deprecateReplaceLog(oldOpt, newOpt, scope) {
     deprecateLog((scope ? "[" + scope + "]" : '') + (oldOpt + " is deprecated, use " + newOpt + " instead."));
   }
 }
+<<<<<<< HEAD
 /**
  * If in __DEV__ environment, get console printable message for users hint.
  * Parameters are separated by ' '.
@@ -7903,6 +8147,16 @@ function deprecateReplaceLog(oldOpt, newOpt, scope) {
  *
  * @param hintInfo anything about the current execution context to hint users.
  * @throws Error
+=======
+/**
+ * If in __DEV__ environment, get console printable message for users hint.
+ * Parameters are separated by ' '.
+ * @usage
+ * makePrintable('This is an error on', someVar, someObj);
+ *
+ * @param hintInfo anything about the current execution context to hint users.
+ * @throws Error
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makePrintable() {
@@ -7948,8 +8202,13 @@ function makePrintable() {
 
   return msg;
 }
+<<<<<<< HEAD
 /**
  * @throws Error
+=======
+/**
+ * @throws Error
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function throwError(msg) {
@@ -7959,24 +8218,39 @@ function throwError(msg) {
 function interpolateNumber$1(p0, p1, percent) {
   return (p1 - p0) * percent + p0;
 }
+<<<<<<< HEAD
 /**
  * Make the name displayable. But we should
  * make sure it is not duplicated with user
  * specified name, so use '\0';
+=======
+/**
+ * Make the name displayable. But we should
+ * make sure it is not duplicated with user
+ * specified name, so use '\0';
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
 var DUMMY_COMPONENT_NAME_PREFIX = 'series\0';
 var INTERNAL_COMPONENT_ID_PREFIX = '\0_ec_\0';
+<<<<<<< HEAD
 /**
  * If value is not array, then translate it to array.
  * @param  {*} value
  * @return {Array} [value] or value
+=======
+/**
+ * If value is not array, then translate it to array.
+ * @param  {*} value
+ * @return {Array} [value] or value
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function normalizeToArray(value) {
   return value instanceof Array ? value : value == null ? [] : [value];
 }
+<<<<<<< HEAD
 /**
  * Sync default option between normal and emphasis like `position` and `show`
  * In case some one will write code like
@@ -7988,6 +8262,19 @@ function normalizeToArray(value) {
  *     emphasis: {
  *          label: { show: true }
  *     }
+=======
+/**
+ * Sync default option between normal and emphasis like `position` and `show`
+ * In case some one will write code like
+ *     label: {
+ *          show: false,
+ *          position: 'outside',
+ *          fontSize: 18
+ *     },
+ *     emphasis: {
+ *          label: { show: true }
+ *     }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function defaultEmphasis(opt, key, subOpts) {
@@ -8013,24 +8300,38 @@ var TEXT_STYLE_OPTIONS = ['fontStyle', 'fontWeight', 'fontSize', 'fontFamily', '
 //     'textStyle'
 // ]);
 
+<<<<<<< HEAD
 /**
  * The method does not ensure performance.
  * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
  * This helper method retrieves value from data.
+=======
+/**
+ * The method does not ensure performance.
+ * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
+ * This helper method retrieves value from data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getDataItemValue(dataItem) {
   return isObject(dataItem) && !isArray(dataItem) && !(dataItem instanceof Date) ? dataItem.value : dataItem;
 }
+<<<<<<< HEAD
 /**
  * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
  * This helper method determine if dataItem has extra option besides value
+=======
+/**
+ * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
+ * This helper method determine if dataItem has extra option besides value
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function isDataItemOption(dataItem) {
   return isObject(dataItem) && !(dataItem instanceof Array); // // markLine data can be array
   // && !(dataItem[0] && isObject(dataItem[0]) && !(dataItem[0] instanceof Array));
 }
+<<<<<<< HEAD
 /**
  * Mapping to existings for merge.
  *
@@ -8059,6 +8360,36 @@ function isDataItemOption(dataItem) {
  *     PENDING: This is an experimental mode yet.
  *
  * @return See the comment of <MappingResult>.
+=======
+/**
+ * Mapping to existings for merge.
+ *
+ * Mode "normalMege":
+ *     The mapping result (merge result) will keep the order of the existing
+ *     component, rather than the order of new option. Because we should ensure
+ *     some specified index reference (like xAxisIndex) keep work.
+ *     And in most cases, "merge option" is used to update partial option but not
+ *     be expected to change the order.
+ *
+ * Mode "replaceMege":
+ *     (1) Only the id mapped components will be merged.
+ *     (2) Other existing components (except internal components) will be removed.
+ *     (3) Other new options will be used to create new component.
+ *     (4) The index of the existing components will not be modified.
+ *     That means their might be "hole" after the removal.
+ *     The new components are created first at those available index.
+ *
+ * Mode "replaceAll":
+ *     This mode try to support that reproduce an echarts instance from another
+ *     echarts instance (via `getOption`) in some simple cases.
+ *     In this scenario, the `result` index are exactly the consistent with the `newCmptOptions`,
+ *     which ensures the component index referring (like `xAxisIndex: ?`) corrent. That is,
+ *     the "hole" in `newCmptOptions` will also be kept.
+ *     On the contrary, other modes try best to eliminate holes.
+ *     PENDING: This is an experimental mode yet.
+ *
+ * @return See the comment of <MappingResult>.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function mappingToExists(existings, newCmptOptions, mode) {
@@ -8234,9 +8565,15 @@ function mappingInReplaceAllMode(result, newCmptOptions) {
     });
   });
 }
+<<<<<<< HEAD
 /**
  * Make id and name for mapping result (result of mappingToExists)
  * into `keyInfo` field.
+=======
+/**
+ * Make id and name for mapping result (result of mappingToExists)
+ * into `keyInfo` field.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -8307,8 +8644,13 @@ function keyExistAndEqual(attr, obj1, obj2) {
 
   return key1 != null && key2 != null && key1 === key2;
 }
+<<<<<<< HEAD
 /**
  * @return return null if not exist.
+=======
+/**
+ * @return return null if not exist.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -8345,10 +8687,17 @@ function isNameSpecified(componentModel) {
 
   return !!(name && name.indexOf(DUMMY_COMPONENT_NAME_PREFIX));
 }
+<<<<<<< HEAD
 /**
  * @public
  * @param {Object} cmptOption
  * @return {boolean}
+=======
+/**
+ * @public
+ * @param {Object} cmptOption
+ * @return {boolean}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function isComponentIdInternal(cmptOption) {
@@ -8375,6 +8724,7 @@ function determineSubType(mainType, newCmptOption, existComponent, componentMode
 
   return subType;
 }
+<<<<<<< HEAD
 /**
  * A helper for removing duplicate items between batchA and batchB,
  * and in themselves, and categorize by series.
@@ -8382,6 +8732,15 @@ function determineSubType(mainType, newCmptOption, existComponent, componentMode
  * @param batchA Like: [{seriesId: 2, dataIndex: [32, 4, 5]}, ...]
  * @param batchB Like: [{seriesId: 2, dataIndex: [32, 4, 5]}, ...]
  * @return result: [resultBatchA, resultBatchB]
+=======
+/**
+ * A helper for removing duplicate items between batchA and batchB,
+ * and in themselves, and categorize by series.
+ *
+ * @param batchA Like: [{seriesId: 2, dataIndex: [32, 4, 5]}, ...]
+ * @param batchB Like: [{seriesId: 2, dataIndex: [32, 4, 5]}, ...]
+ * @return result: [resultBatchA, resultBatchB]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -8435,10 +8794,17 @@ function compressBatches(batchA, batchB) {
     return result;
   }
 }
+<<<<<<< HEAD
 /**
  * @param payload Contains dataIndex (means rawIndex) / dataIndexInside / name
  *                         each of which can be Array or primary type.
  * @return dataIndex If not found, return undefined/null.
+=======
+/**
+ * @param payload Contains dataIndex (means rawIndex) / dataIndexInside / name
+ *                         each of which can be Array or primary type.
+ * @return dataIndex If not found, return undefined/null.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function queryDataIndex(data, payload) {
@@ -8454,6 +8820,7 @@ function queryDataIndex(data, payload) {
     }) : data.indexOfName(payload.name);
   }
 }
+<<<<<<< HEAD
 /**
  * Enable property storage to any host object.
  * Notice: Serialization is not supported.
@@ -8473,6 +8840,27 @@ function queryDataIndex(data, payload) {
  * }
  *
  * @return {Function}
+=======
+/**
+ * Enable property storage to any host object.
+ * Notice: Serialization is not supported.
+ *
+ * For example:
+ * let inner = zrUitl.makeInner();
+ *
+ * function some1(hostObj) {
+ *      inner(hostObj).someProperty = 1212;
+ *      ...
+ * }
+ * function some2() {
+ *      let fields = inner(this);
+ *      fields.someProperty1 = 1212;
+ *      fields.someProperty2 = 'xx';
+ *      ...
+ * }
+ *
+ * @return {Function}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makeInner() {
@@ -8482,8 +8870,13 @@ function makeInner() {
   };
 }
 var innerUniqueIndex = getRandomIdBase();
+<<<<<<< HEAD
 /**
  * The same behavior as `component.getReferringComponents`.
+=======
+/**
+ * The same behavior as `component.getReferringComponents`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function parseFinder(ecModel, finderInput, opt) {
@@ -8611,8 +9004,13 @@ function getTooltipRenderMode(renderModeOption) {
     return renderModeOption || 'html';
   }
 }
+<<<<<<< HEAD
 /**
  * Group a list by key.
+=======
+/**
+ * Group a list by key.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function groupData(array, getKey // return key
@@ -8628,6 +9026,7 @@ function groupData(array, getKey // return key
     buckets: buckets
   };
 }
+<<<<<<< HEAD
 /**
  * Interpolate raw values of a series with percent
  *
@@ -8641,6 +9040,21 @@ function groupData(array, getKey // return key
  *                     If `sourceValue` and `targetValue` are `string`, return `string`.
  *                     If `sourceValue` and `targetValue` are `(string | number)[]`, return `(string | number)[]`.
  *                     Other cases do not supported.
+=======
+/**
+ * Interpolate raw values of a series with percent
+ *
+ * @param data         data
+ * @param labelModel   label model of the text element
+ * @param sourceValue  start value. May be null/undefined when init.
+ * @param targetValue  end value
+ * @param percent      0~1 percentage; 0 uses start value while 1 uses end value
+ * @return             interpolated values
+ *                     If `sourceValue` and `targetValue` are `number`, return `number`.
+ *                     If `sourceValue` and `targetValue` are `string`, return `string`.
+ *                     If `sourceValue` and `targetValue` are `(string | number)[]`, return `(string | number)[]`.
+ *                     Other cases do not supported.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function interpolateRawValues(data, precision, sourceValue, targetValue, percent) {
@@ -8682,9 +9096,15 @@ function interpolateRawValues(data, precision, sourceValue, targetValue, percent
 var TYPE_DELIMITER = '.';
 var IS_CONTAINER = '___EC__COMPONENT__CONTAINER___';
 var IS_EXTENDED_CLASS = '___EC__EXTENDED_CLASS___';
+<<<<<<< HEAD
 /**
  * Notice, parseClassType('') should returns {main: '', sub: ''}
  * @public
+=======
+/**
+ * Notice, parseClassType('') should returns {main: '', sub: ''}
+ * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function parseClassType(componentType) {
@@ -8701,8 +9121,13 @@ function parseClassType(componentType) {
 
   return ret;
 }
+<<<<<<< HEAD
 /**
  * @public
+=======
+/**
+ * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function checkClassType(componentType) {
@@ -8712,6 +9137,7 @@ function checkClassType(componentType) {
 function isExtendedClass(clz) {
   return !!(clz && clz[IS_EXTENDED_CLASS]);
 }
+<<<<<<< HEAD
 /**
  * Implements `ExtendableConstructor` for `rootClz`.
  *
@@ -8721,6 +9147,17 @@ function isExtendedClass(clz) {
  * type XxxConstructor = typeof Xxx & ExtendableConstructor
  * enableClassExtend(Xxx as XxxConstructor);
  * ```
+=======
+/**
+ * Implements `ExtendableConstructor` for `rootClz`.
+ *
+ * @usage
+ * ```ts
+ * class Xxx {}
+ * type XxxConstructor = typeof Xxx & ExtendableConstructor
+ * enableClassExtend(Xxx as XxxConstructor);
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function enableClassExtend(rootClz, mandatoryMethods) {
@@ -8778,6 +9215,7 @@ function enableClassExtend(rootClz, mandatoryMethods) {
 function isESClass(fn) {
   return isFunction(fn) && /^class\s/.test(Function.prototype.toString.call(fn));
 }
+<<<<<<< HEAD
 /**
  * A work around to both support ts extend and this extend mechanism.
  * on sub-class.
@@ -8791,6 +9229,21 @@ function isESClass(fn) {
  * // Without calling `markExtend`, `registerWhenExtend` will not work.
  * Component.markExtend(Series);
  * ```
+=======
+/**
+ * A work around to both support ts extend and this extend mechanism.
+ * on sub-class.
+ * @usage
+ * ```ts
+ * class Component { ... }
+ * classUtil.enableClassExtend(Component);
+ * classUtil.enableClassManagement(Component, {registerWhenExtend: true});
+ *
+ * class Series extends Component { ... }
+ * // Without calling `markExtend`, `registerWhenExtend` will not work.
+ * Component.markExtend(Series);
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -8799,6 +9252,7 @@ function mountExtend(SubClz, SupperClz) {
 } // A random offset.
 
 var classBase = Math.round(Math.random() * 10);
+<<<<<<< HEAD
 /**
  * Implements `CheckableConstructor` for `target`.
  * Can not use instanceof, consider different scope by
@@ -8811,6 +9265,20 @@ var classBase = Math.round(Math.random() * 10);
  * type XxxConstructor = typeof Xxx & CheckableConstructor;
  * enableClassCheck(Xxx as XxxConstructor)
  * ```
+=======
+/**
+ * Implements `CheckableConstructor` for `target`.
+ * Can not use instanceof, consider different scope by
+ * cross domain or es module import in ec extensions.
+ * Mount a method "isInstance()" to Clz.
+ *
+ * @usage
+ * ```ts
+ * class Xxx {}
+ * type XxxConstructor = typeof Xxx & CheckableConstructor;
+ * enableClassCheck(Xxx as XxxConstructor)
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function enableClassCheck(target) {
@@ -8844,6 +9312,7 @@ function superCall(context, methodName) {
 function superApply(context, methodName, args) {
   return this.superClass.prototype[methodName].apply(context, args);
 }
+<<<<<<< HEAD
 /**
  * Implements `ClassManager` for `target`
  *
@@ -8853,16 +9322,36 @@ function superApply(context, methodName, args) {
  * type XxxConstructor = typeof Xxx & ClassManager
  * enableClassManagement(Xxx as XxxConstructor);
  * ```
+=======
+/**
+ * Implements `ClassManager` for `target`
+ *
+ * @usage
+ * ```ts
+ * class Xxx {}
+ * type XxxConstructor = typeof Xxx & ClassManager
+ * enableClassManagement(Xxx as XxxConstructor);
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
 function enableClassManagement(target) {
+<<<<<<< HEAD
   /**
    * Component model classes
    * key: componentType,
    * value:
    *     componentClass, when componentType is 'a'
    *     or Object.<subKey, componentClass>, when componentType is 'a.b'
+=======
+  /**
+   * Component model classes
+   * key: componentType,
+   * value:
+   *     componentClass, when componentType is 'a'
+   *     or Object.<subKey, componentClass>, when componentType is 'a.b'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   var storage = {};
 
@@ -8932,8 +9421,13 @@ function enableClassManagement(target) {
     var componentTypeInfo = parseClassType(componentType);
     return !!storage[componentTypeInfo.main];
   };
+<<<<<<< HEAD
   /**
    * @return Like ['aa', 'bb'], but can not be ['aa.xx']
+=======
+  /**
+   * @return Like ['aa', 'bb'], but can not be ['aa.xx']
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -8944,8 +9438,13 @@ function enableClassManagement(target) {
     });
     return types;
   };
+<<<<<<< HEAD
   /**
    * If a main type is container and has sub types
+=======
+  /**
+   * If a main type is container and has sub types
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -12610,10 +13109,17 @@ function elementStateProxy(stateName, targetStates) {
 
   return state;
 }
+<<<<<<< HEAD
 /**
  * Set hover style (namely "emphasis style") of element.
  * @param el Should not be `zrender/graphic/Group`.
  * @param focus 'self' | 'selfInSeries' | 'series'
+=======
+/**
+ * Set hover style (namely "emphasis style") of element.
+ * @param el Should not be `zrender/graphic/Group`.
+ * @param focus 'self' | 'selfInSeries' | 'series'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -12977,12 +13483,21 @@ function getAllSelectedIndices(ecModel) {
   });
   return ret;
 }
+<<<<<<< HEAD
 /**
  * Enable the function that mouseover will trigger the emphasis state.
  *
  * NOTE:
  * This function should be used on the element with dataIndex, seriesIndex.
  *
+=======
+/**
+ * Enable the function that mouseover will trigger the emphasis state.
+ *
+ * NOTE:
+ * This function should be used on the element with dataIndex, seriesIndex.
+ *
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function enableHoverEmphasis(el, focus, blurScope) {
@@ -13019,8 +13534,13 @@ var defaultStyleGetterMap = {
   lineStyle: 'getLineStyle',
   areaStyle: 'getAreaStyle'
 };
+<<<<<<< HEAD
 /**
  * Set emphasis/blur/selected states of element.
+=======
+/**
+ * Set emphasis/blur/selected states of element.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function setStatesStylesFromModel(el, itemModel, styleType, // default itemStyle
@@ -13035,6 +13555,7 @@ getter) {
     state.style = getter ? getter(model) : model[defaultStyleGetterMap[styleType]]();
   }
 }
+<<<<<<< HEAD
 /**
  *
  * Set element as highlight / downplay dispatcher.
@@ -13053,6 +13574,26 @@ getter) {
  *        In this case, `highDownSilentOnTouch` should be used to disable
  *        hover-highlight on touch device.
  * @param asDispatcher If `false`, do not set as "highDownDispatcher".
+=======
+/**
+ *
+ * Set element as highlight / downplay dispatcher.
+ * It will be checked when element received mouseover event or from highlight action.
+ * It's in change of all highlight/downplay behavior of it's children.
+ *
+ * @param el
+ * @param el.highDownSilentOnTouch
+ *        In touch device, mouseover event will be trigger on touchstart event
+ *        (see module:zrender/dom/HandlerProxy). By this mechanism, we can
+ *        conveniently use hoverStyle when tap on touch screen without additional
+ *        code for compatibility.
+ *        But if the chart/component has select feature, which usually also use
+ *        hoverStyle, there might be conflict between 'select-highlight' and
+ *        'hover-highlight' especially when roam is enabled (see geo for example).
+ *        In this case, `highDownSilentOnTouch` should be used to disable
+ *        hover-highlight on touch device.
+ * @param asDispatcher If `false`, do not set as "highDownDispatcher".
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function setAsHighDownDispatcher(el, asDispatcher) {
@@ -13077,10 +13618,17 @@ function setAsHighDownDispatcher(el, asDispatcher) {
 function isHighDownDispatcher(el) {
   return !!(el && el.__highDownDispatcher);
 }
+<<<<<<< HEAD
 /**
  * Enable component highlight/downplay features:
  * + hover link (within the same name)
  * + focus blur in component
+=======
+/**
+ * Enable component highlight/downplay features:
+ * + hover link (within the same name)
+ * + focus blur in component
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function enableComponentHighDownFeatures(el, componentModel, componentHighDownName) {
@@ -13089,6 +13637,7 @@ function enableComponentHighDownFeatures(el, componentModel, componentHighDownNa
   ecData.componentIndex = componentModel.componentIndex;
   ecData.componentHighDownName = componentHighDownName;
 }
+<<<<<<< HEAD
 /**
  * Support highlight/downplay record on each elements.
  * For the case: hover highlight/downplay (legend, visualMap, ...) and
@@ -13096,6 +13645,15 @@ function enableComponentHighDownFeatures(el, componentModel, componentHighDownNa
  * Only all of the highlightDigit cleared, return to normal.
  * @param {string} highlightKey
  * @return {number} highlightDigit
+=======
+/**
+ * Support highlight/downplay record on each elements.
+ * For the case: hover highlight/downplay (legend, visualMap, ...) and
+ * user triggered highlight/downplay should not conflict.
+ * Only all of the highlightDigit cleared, return to normal.
+ * @param {string} highlightKey
+ * @return {number} highlightDigit
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getHighlightDigit(highlightKey) {
@@ -14576,8 +15134,13 @@ var IncrementalDisplayable = (function (_super) {
 }(Displayable));
 
 var transitionStore = makeInner();
+<<<<<<< HEAD
 /**
  * Return null if animation is disabled.
+=======
+/**
+ * Return null if animation is disabled.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getAnimationConfig(animationType, animatableModel, dataIndex, // Extra opts can override the option in animatable model.
@@ -14687,6 +15250,7 @@ function animateOrSetProps(animationType, el, props, animatableModel, dataIndex,
     cb && cb();
   }
 }
+<<<<<<< HEAD
 /**
  * Update graphic element properties with or without animation according to the
  * configuration in series.
@@ -14702,6 +15266,23 @@ function animateOrSetProps(animationType, el, props, animatableModel, dataIndex,
  *     graphic.updateProps(el, {
  *         position: [100, 100]
  *     }, seriesModel, function () { console.log('Animation done!'); });
+=======
+/**
+ * Update graphic element properties with or without animation according to the
+ * configuration in series.
+ *
+ * Caution: this method will stop previous animation.
+ * So do not use this method to one element twice before
+ * animation starts, unless you know what you are doing.
+ * @example
+ *     graphic.updateProps(el, {
+ *         position: [100, 100]
+ *     }, seriesModel, dataIndex, function () { console.log('Animation done!'); });
+ *     // Or
+ *     graphic.updateProps(el, {
+ *         position: [100, 100]
+ *     }, seriesModel, function () { console.log('Animation done!'); });
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -14709,6 +15290,7 @@ function updateProps(el, props, // TODO: TYPE AnimatableModel
 animatableModel, dataIndex, cb, during) {
   animateOrSetProps('update', el, props, animatableModel, dataIndex, cb, during);
 }
+<<<<<<< HEAD
 /**
  * Init graphic element properties with or without animation according to the
  * configuration in series.
@@ -14716,14 +15298,29 @@ animatableModel, dataIndex, cb, during) {
  * Caution: this method will stop previous animation.
  * So do not use this method to one element twice before
  * animation starts, unless you know what you are doing.
+=======
+/**
+ * Init graphic element properties with or without animation according to the
+ * configuration in series.
+ *
+ * Caution: this method will stop previous animation.
+ * So do not use this method to one element twice before
+ * animation starts, unless you know what you are doing.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function initProps(el, props, animatableModel, dataIndex, cb, during) {
   animateOrSetProps('enter', el, props, animatableModel, dataIndex, cb, during);
 }
+<<<<<<< HEAD
 /**
  * If element is removed.
  * It can determine if element is having remove animation.
+=======
+/**
+ * If element is removed.
+ * It can determine if element is having remove animation.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function isElementRemoved(el) {
@@ -14741,8 +15338,13 @@ function isElementRemoved(el) {
 
   return false;
 }
+<<<<<<< HEAD
 /**
  * Remove graphic element
+=======
+/**
+ * Remove graphic element
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function removeElement(el, props, animatableModel, dataIndex, cb, during) {
@@ -14782,11 +15384,19 @@ function removeElementWithFadeOut(el, animatableModel, dataIndex) {
     });
   }
 }
+<<<<<<< HEAD
 /**
  * Save old style for style transition in universalTransition module.
  * It's used when element will be reused in each render.
  * For chart like map, heatmap, which will always create new element.
  * We don't need to save this because universalTransition can get old style from the old element
+=======
+/**
+ * Save old style for style transition in universalTransition module.
+ * It's used when element will be reused in each render.
+ * For chart like map, heatmap, which will always create new element.
+ * We don't need to save this because universalTransition can get old style from the old element
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function saveOldStyle(el) {
@@ -14799,21 +15409,32 @@ function getOldStyle(el) {
 var mathMax$4 = Math.max;
 var mathMin$4 = Math.min;
 var _customShapeMap = {};
+<<<<<<< HEAD
 /**
  * Extend shape with parameters
+=======
+/**
+ * Extend shape with parameters
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function extendShape(opts) {
   return Path.extend(opts);
 }
 var extendPathFromString = extendFromString;
+<<<<<<< HEAD
 /**
  * Extend path
+=======
+/**
+ * Extend path
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function extendPath(pathData, opts) {
   return extendPathFromString(pathData, opts);
 }
+<<<<<<< HEAD
 /**
  * Register a user defined shape.
  * The shape class can be fetched by `getShapeClass`
@@ -14824,11 +15445,24 @@ function extendPath(pathData, opts) {
  *
  * @param name
  * @param ShapeClass Can be generated by `extendShape`.
+=======
+/**
+ * Register a user defined shape.
+ * The shape class can be fetched by `getShapeClass`
+ * This method will overwrite the registered shapes, including
+ * the registered built-in shapes, if using the same `name`.
+ * The shape can be used in `custom series` and
+ * `graphic component` by declaring `{type: name}`.
+ *
+ * @param name
+ * @param ShapeClass Can be generated by `extendShape`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function registerShape(name, ShapeClass) {
   _customShapeMap[name] = ShapeClass;
 }
+<<<<<<< HEAD
 /**
  * Find shape class registered by `registerShape`. Usually used in
  * fetching user defined shape.
@@ -14855,6 +15489,34 @@ function registerShape(name, ShapeClass) {
  *
  * @param name
  * @return The shape class. If not found, return nothing.
+=======
+/**
+ * Find shape class registered by `registerShape`. Usually used in
+ * fetching user defined shape.
+ *
+ * [Caution]:
+ * (1) This method **MUST NOT be used inside echarts !!!**, unless it is prepared
+ * to use user registered shapes.
+ * Because the built-in shape (see `getBuiltInShape`) will be registered by
+ * `registerShape` by default. That enables users to get both built-in
+ * shapes as well as the shapes belonging to themsleves. But users can overwrite
+ * the built-in shapes by using names like 'circle', 'rect' via calling
+ * `registerShape`. So the echarts inner featrues should not fetch shapes from here
+ * in case that it is overwritten by users, except that some features, like
+ * `custom series`, `graphic component`, do it deliberately.
+ *
+ * (2) In the features like `custom series`, `graphic component`, the user input
+ * `{tpye: 'xxx'}` does not only specify shapes but also specify other graphic
+ * elements like `'group'`, `'text'`, `'image'` or event `'path'`. Those names
+ * are reserved names, that is, if some user registers a shape named `'image'`,
+ * the shape will not be used. If we intending to add some more reserved names
+ * in feature, that might bring break changes (disable some existing user shape
+ * names). But that case probably rarely happens. So we don't make more mechanism
+ * to resolve this issue here.
+ *
+ * @param name
+ * @return The shape class. If not found, return nothing.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getShapeClass(name) {
@@ -14862,12 +15524,21 @@ function getShapeClass(name) {
     return _customShapeMap[name];
   }
 }
+<<<<<<< HEAD
 /**
  * Create a path element from path data string
  * @param pathData
  * @param opts
  * @param rect
  * @param layout 'center' or 'cover' default to be cover
+=======
+/**
+ * Create a path element from path data string
+ * @param pathData
+ * @param opts
+ * @param rect
+ * @param layout 'center' or 'cover' default to be cover
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makePath(pathData, opts, rect, layout) {
@@ -14883,12 +15554,21 @@ function makePath(pathData, opts, rect, layout) {
 
   return path;
 }
+<<<<<<< HEAD
 /**
  * Create a image element from image url
  * @param imageUrl image url
  * @param opts options
  * @param rect constrain rect
  * @param layout 'center' or 'cover'. Default to be 'cover'
+=======
+/**
+ * Create a image element from image url
+ * @param imageUrl image url
+ * @param opts options
+ * @param rect constrain rect
+ * @param layout 'center' or 'cover'. Default to be 'cover'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makeImage(imageUrl, rect, layout) {
@@ -14912,12 +15592,21 @@ function makeImage(imageUrl, rect, layout) {
   });
   return zrImg;
 }
+<<<<<<< HEAD
 /**
  * Get position of centered element in bounding box.
  *
  * @param  rect         element local bounding box
  * @param  boundingRect constraint bounding box
  * @return element position containing x, y, width, and height
+=======
+/**
+ * Get position of centered element in bounding box.
+ *
+ * @param  rect         element local bounding box
+ * @param  boundingRect constraint bounding box
+ * @return element position containing x, y, width, and height
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function centerGraphic(rect, boundingRect) {
@@ -14944,10 +15633,17 @@ function centerGraphic(rect, boundingRect) {
 }
 
 var mergePath$1 = mergePath;
+<<<<<<< HEAD
 /**
  * Resize a path to fit the rect
  * @param path
  * @param rect
+=======
+/**
+ * Resize a path to fit the rect
+ * @param path
+ * @param rect
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function resizePath(path, rect) {
@@ -14959,8 +15655,13 @@ function resizePath(path, rect) {
   var m = pathRect.calculateTransform(rect);
   path.applyTransform(m);
 }
+<<<<<<< HEAD
 /**
  * Sub pixel optimize line for canvas
+=======
+/**
+ * Sub pixel optimize line for canvas
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function subPixelOptimizeLine$1(shape, lineWidth) {
@@ -14969,14 +15670,20 @@ function subPixelOptimizeLine$1(shape, lineWidth) {
   });
   return shape;
 }
+<<<<<<< HEAD
 /**
  * Sub pixel optimize rect for canvas
+=======
+/**
+ * Sub pixel optimize rect for canvas
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function subPixelOptimizeRect$1(param) {
   subPixelOptimizeRect(param.shape, param.shape, param.style);
   return param;
 }
+<<<<<<< HEAD
 /**
  * Sub pixel optimize for canvas
  *
@@ -14993,6 +15700,24 @@ var subPixelOptimize$1 = subPixelOptimize;
  *
  * @param target
  * @param [ancestor]
+=======
+/**
+ * Sub pixel optimize for canvas
+ *
+ * @param position Coordinate, such as x, y
+ * @param lineWidth Should be nonnegative integer.
+ * @param positiveOrNegative Default false (negative).
+ * @return Optimized position.
+ */
+
+var subPixelOptimize$1 = subPixelOptimize;
+/**
+ * Get transform matrix of target (param target),
+ * in coordinate of its ancestor (param ancestor)
+ *
+ * @param target
+ * @param [ancestor]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getTransform(target, ancestor) {
@@ -15005,6 +15730,7 @@ function getTransform(target, ancestor) {
 
   return mat;
 }
+<<<<<<< HEAD
 /**
  * Apply transform to an vertex.
  * @param target [x, y]
@@ -15013,6 +15739,16 @@ function getTransform(target, ancestor) {
  *      + {position, rotation, scale}, the same as `zrender/Transformable`.
  * @param invert Whether use invert matrix.
  * @return [x, y]
+=======
+/**
+ * Apply transform to an vertex.
+ * @param target [x, y]
+ * @param transform Can be:
+ *      + Transform matrix: like [1, 0, 0, 1, 0, 0]
+ *      + {position, rotation, scale}, the same as `zrender/Transformable`.
+ * @param invert Whether use invert matrix.
+ * @return [x, y]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function applyTransform$1(target, transform, invert$1) {
@@ -15026,11 +15762,19 @@ function applyTransform$1(target, transform, invert$1) {
 
   return applyTransform([], target, transform);
 }
+<<<<<<< HEAD
 /**
  * @param direction 'left' 'right' 'top' 'bottom'
  * @param transform Transform matrix: like [1, 0, 0, 1, 0, 0]
  * @param invert Whether use invert matrix.
  * @return Transformed direction. 'left' 'right' 'top' 'bottom'
+=======
+/**
+ * @param direction 'left' 'right' 'top' 'bottom'
+ * @param transform Transform matrix: like [1, 0, 0, 1, 0, 0]
+ * @param invert Whether use invert matrix.
+ * @return Transformed direction. 'left' 'right' 'top' 'bottom'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function transformDirection(direction, transform, invert) {
@@ -15049,9 +15793,15 @@ function isNotGroup(el) {
 function isPath(el) {
   return el.shape != null;
 }
+<<<<<<< HEAD
 /**
  * Apply group transition animation from g1 to g2.
  * If no animatableModel, no animation.
+=======
+/**
+ * Apply group transition animation from g1 to g2.
+ * If no animatableModel, no animation.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -15110,8 +15860,13 @@ function clipPointsByRect(points, rect) {
     return [x, y];
   });
 }
+<<<<<<< HEAD
 /**
  * Return a new clipped rect. If rect size are negative, return undefined.
+=======
+/**
+ * Return a new clipped rect. If rect size are negative, return undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function clipRectByRect(targetRect, rect) {
@@ -15149,11 +15904,19 @@ opt, rect) {
     return iconStr.indexOf('image://') === 0 ? (style.image = iconStr.slice(8), defaults(style, rect), new ZRImage(innerOpts)) : makePath(iconStr.replace('path://', ''), innerOpts, rect, 'center');
   }
 }
+<<<<<<< HEAD
 /**
  * Return `true` if the given line (line `a`) and the given polygon
  * are intersect.
  * Note that we do not count colinear as intersect here because no
  * requirement for that. We could do that if required in future.
+=======
+/**
+ * Return `true` if the given line (line `a`) and the given polygon
+ * are intersect.
+ * Note that we do not count colinear as intersect here because no
+ * requirement for that. We could do that if required in future.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function linePolygonIntersect(a1x, a1y, a2x, a2y, points) {
@@ -15167,11 +15930,19 @@ function linePolygonIntersect(a1x, a1y, a2x, a2y, points) {
     p2 = p;
   }
 }
+<<<<<<< HEAD
 /**
  * Return `true` if the given two lines (line `a` and line `b`)
  * are intersect.
  * Note that we do not count colinear as intersect here because no
  * requirement for that. We could do that if required in future.
+=======
+/**
+ * Return `true` if the given two lines (line `a` and line `b`)
+ * are intersect.
+ * Note that we do not count colinear as intersect here because no
+ * requirement for that. We could do that if required in future.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function lineLineIntersect(a1x, a1y, a2x, a2y, b1x, b1y, b2x, b2y) {
@@ -15208,8 +15979,13 @@ function lineLineIntersect(a1x, a1y, a2x, a2y, b1x, b1y, b2x, b2y) {
 
   return true;
 }
+<<<<<<< HEAD
 /**
  * Cross product of 2-dimension vector.
+=======
+/**
+ * Cross product of 2-dimension vector.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function crossProduct2d(x1, y1, x2, y2) {
@@ -15503,8 +16279,13 @@ function getLabelStatesModels(itemModel, labelName) {
 
   return statesModels;
 }
+<<<<<<< HEAD
 /**
  * Set basic textStyle properties.
+=======
+/**
+ * Set basic textStyle properties.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createTextStyle(textStyleModel, specifiedTextStyle, // Fixed style in the code. Can't be set by model.
@@ -15549,6 +16330,7 @@ function createTextConfig(textStyleModel, opt, isNotNormal) {
   textConfig.outsideFill = textStyleModel.get('color') === 'inherit' ? opt.inheritColor || null : 'auto';
   return textConfig;
 }
+<<<<<<< HEAD
 /**
  * The uniform entry of set text style, that is, retrieve style definitions
  * from `model` and set to `textStyle` object.
@@ -15557,6 +16339,16 @@ function createTextConfig(textStyleModel, opt, isNotNormal) {
  * properties will be set. (Consider the states of normal and emphasis and
  * default value can be adopted, merge would make the logic too complicated
  * to manage.)
+=======
+/**
+ * The uniform entry of set text style, that is, retrieve style definitions
+ * from `model` and set to `textStyle` object.
+ *
+ * Never in merge mode, but in overwrite mode, that is, all of the text style
+ * properties will be set. (Consider the states of normal and emphasis and
+ * default value can be adopted, merge would make the logic too complicated
+ * to manage.)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function setTextStyleCommon(textStyle, textStyleModel, opt, isNotNormal, isAttached) {
@@ -15875,8 +16667,13 @@ var TextStyleMixin =
 /** @class */
 function () {
   function TextStyleMixin() {}
+<<<<<<< HEAD
   /**
    * Get color property or get color from option.textStyle.color
+=======
+  /**
+   * Get color property or get color from option.textStyle.color
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // TODO Callback
 
@@ -15885,9 +16682,15 @@ function () {
     var ecModel = this.ecModel;
     return this.getShallow('color') || (!isEmphasis && ecModel ? ecModel.get(PATH_COLOR) : null);
   };
+<<<<<<< HEAD
   /**
    * Create font string from fontStyle, fontWeight, fontSize, fontFamily
    * @return {string}
+=======
+  /**
+   * Create font string from fontStyle, fontWeight, fontSize, fontFamily
+   * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -15976,8 +16779,13 @@ function () {
       rest[_i - 3] = arguments[_i];
     }
   };
+<<<<<<< HEAD
   /**
    * Merge the input option to me.
+=======
+  /**
+   * Merge the input option to me.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -16022,8 +16830,13 @@ function () {
     parentModel = parentModel || this.parentModel && this.parentModel.getModel(this.resolveParentPath(pathFinal));
     return new Model(obj, parentModel, this.ecModel);
   };
+<<<<<<< HEAD
   /**
    * If model has option
+=======
+  /**
+   * If model has option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -16108,10 +16921,17 @@ mixin(Model, AreaStyleMixin);
 mixin(Model, TextStyleMixin);
 
 var base = Math.round(Math.random() * 10);
+<<<<<<< HEAD
 /**
  * @public
  * @param {string} type
  * @return {string}
+=======
+/**
+ * @public
+ * @param {string} type
+ * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getUID(type) {
@@ -16119,8 +16939,13 @@ function getUID(type) {
   // use Math.random to make id as unique as possible.
   return [type || '', base++].join('_');
 }
+<<<<<<< HEAD
 /**
  * Implements `SubTypeDefaulterManager` for `target`.
+=======
+/**
+ * Implements `SubTypeDefaulterManager` for `target`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function enableSubTypeDefaulter(target) {
@@ -16145,6 +16970,7 @@ function enableSubTypeDefaulter(target) {
     return type;
   };
 }
+<<<<<<< HEAD
 /**
  * Implements `TopologicalTravelable<any>` for `entity`.
  *
@@ -16161,6 +16987,24 @@ function enableTopologicalTravel(entity, dependencyGetter) {
    * @param fullNameList By which we can build dependency graph.
    * @param callback Params: componentType, dependencies.
    * @param context Scope of callback.
+=======
+/**
+ * Implements `TopologicalTravelable<any>` for `entity`.
+ *
+ * Topological travel on Activity Network (Activity On Vertices).
+ * Dependencies is defined in Model.prototype.dependencies, like ['xAxis', 'yAxis'].
+ * If 'xAxis' or 'yAxis' is absent in componentTypeList, just ignore it in topology.
+ * If there is circular dependencey, Error will be thrown.
+ */
+
+function enableTopologicalTravel(entity, dependencyGetter) {
+  /**
+   * @param targetNameList Target Component type list.
+   *                       Can be ['aa', 'bb', 'aa.xx']
+   * @param fullNameList By which we can build dependency graph.
+   * @param callback Params: componentType, dependencies.
+   * @param context Scope of callback.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   entity.topologicalTravel = function (targetNameList, fullNameList, callback, context) {
     if (!targetNameList.length) {
@@ -16297,6 +17141,7 @@ function inheritDefaultOption(superOption, subOption) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -16318,6 +17163,29 @@ function inheritDefaultOption(superOption, subOption) {
 
 /**
  * Language: English.
+=======
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+/**
+ * Language: English.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 var langEN = {
   time: {
@@ -16453,6 +17321,7 @@ var langEN = {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -16470,6 +17339,25 @@ var langEN = {
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
+=======
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 var langZH = {
   time: {
@@ -16887,8 +17775,13 @@ function getTextRect(text, font, align, verticalAlign, padding, rich, truncate, 
   return textEl.getBoundingRect();
 }
 
+<<<<<<< HEAD
 /**
  * Add a comma each three digit.
+=======
+/**
+ * Add a comma each three digit.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function addCommas(x) {
@@ -16911,12 +17804,21 @@ function toCamelCase(str, upperCaseFirst) {
   return str;
 }
 var normalizeCssArray$1 = normalizeCssArray;
+<<<<<<< HEAD
 /**
  * Make value user readable for tooltip and label.
  * "User readable":
  *     Try to not print programmer-specific text like NaN, Infinity, null, undefined.
  *     Avoid to display an empty string, which users can not recognize there is
  *     a value and it might look like a bug.
+=======
+/**
+ * Make value user readable for tooltip and label.
+ * "User readable":
+ *     Try to not print programmer-specific text like NaN, Infinity, null, undefined.
+ *     Avoid to display an empty string, which users can not recognize there is
+ *     a value and it might look like a bug.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makeValueReadable(value, valueType, useUTC) {
@@ -16957,9 +17859,15 @@ var TPL_VAR_ALIAS = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 var wrapVar = function (varName, seriesIdx) {
   return '{' + varName + (seriesIdx == null ? '' : seriesIdx) + '}';
 };
+<<<<<<< HEAD
 /**
  * Template formatter
  * @param {Array.<Object>|Object} paramsList
+=======
+/**
+ * Template formatter
+ * @param {Array.<Object>|Object} paramsList
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -16990,8 +17898,13 @@ function formatTpl(tpl, paramsList, encode) {
 
   return tpl;
 }
+<<<<<<< HEAD
 /**
  * simple Template formatter
+=======
+/**
+ * simple Template formatter
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function formatTplSimple(tpl, param, encode) {
@@ -17040,6 +17953,7 @@ function getTooltipMarker(inOpt, extraCssText) {
     };
   }
 }
+<<<<<<< HEAD
 /**
  * @deprecated Use `time/format` instead.
  * ISO Date format
@@ -17049,6 +17963,17 @@ function getTooltipMarker(inOpt, extraCssText) {
  *           see `module:echarts/scale/Time`
  *           and `module:echarts/util/number#parseDate`.
  * @inner
+=======
+/**
+ * @deprecated Use `time/format` instead.
+ * ISO Date format
+ * @param {string} tpl
+ * @param {number} value
+ * @param {boolean} [isUTC=false] Default in local time.
+ *           see `module:echarts/scale/Time`
+ *           and `module:echarts/util/number#parseDate`.
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function formatTime(tpl, value, isUTC) {
@@ -17072,27 +17997,46 @@ function formatTime(tpl, value, isUTC) {
   tpl = tpl.replace('MM', pad(M, 2)).replace('M', M).replace('yyyy', y).replace('yy', pad(y % 100 + '', 2)).replace('dd', pad(d, 2)).replace('d', d).replace('hh', pad(h, 2)).replace('h', h).replace('mm', pad(m, 2)).replace('m', m).replace('ss', pad(s, 2)).replace('s', s).replace('SSS', pad(S, 3));
   return tpl;
 }
+<<<<<<< HEAD
 /**
  * Capital first
  * @param {string} str
  * @return {string}
+=======
+/**
+ * Capital first
+ * @param {string} str
+ * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function capitalFirst(str) {
   return str ? str.charAt(0).toUpperCase() + str.substr(1) : str;
 }
+<<<<<<< HEAD
 /**
  * @return Never be null/undefined.
+=======
+/**
+ * @return Never be null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function convertToColorString(color, defaultColor) {
   defaultColor = defaultColor || 'transparent';
   return isString(color) ? color : isObject(color) ? color.colorStops && (color.colorStops[0] || {}).color || defaultColor : defaultColor;
 }
+<<<<<<< HEAD
 /**
  * open new tab
  * @param link url
  * @param target blank or self
+=======
+/**
+ * open new tab
+ * @param link url
+ * @param target blank or self
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function windowOpen(link, target) {
@@ -17107,6 +18051,7 @@ function windowOpen(link, target) {
 }
 
 var each$1 = each;
+<<<<<<< HEAD
 /**
  * @public
  */
@@ -17114,6 +18059,15 @@ var each$1 = each;
 var LOCATION_PARAMS = ['left', 'right', 'top', 'bottom', 'width', 'height'];
 /**
  * @public
+=======
+/**
+ * @public
+ */
+
+var LOCATION_PARAMS = ['left', 'right', 'top', 'bottom', 'width', 'height'];
+/**
+ * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var HV_NAMES = [['width', 'left', 'right'], ['height', 'top', 'bottom']];
@@ -17176,6 +18130,7 @@ function boxLayout(orient, group, gap, maxWidth, maxHeight) {
     orient === 'horizontal' ? x = nextX + gap : y = nextY + gap;
   });
 }
+<<<<<<< HEAD
 /**
  * VBox or HBox layouting
  * @param {string} orient
@@ -17183,10 +18138,20 @@ function boxLayout(orient, group, gap, maxWidth, maxHeight) {
  * @param {number} gap
  * @param {number} [width=Infinity]
  * @param {number} [height=Infinity]
+=======
+/**
+ * VBox or HBox layouting
+ * @param {string} orient
+ * @param {module:zrender/graphic/Group} group
+ * @param {number} gap
+ * @param {number} [width=Infinity]
+ * @param {number} [height=Infinity]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
 var box = boxLayout;
+<<<<<<< HEAD
 /**
  * VBox layouting
  * @param {module:zrender/graphic/Group} group
@@ -17210,6 +18175,31 @@ var hbox = curry(boxLayout, 'horizontal');
  * the width would be as long as possible.
  * If y or y2 is not specified or 'middle' 'top' 'bottom',
  * the height would be as long as possible.
+=======
+/**
+ * VBox layouting
+ * @param {module:zrender/graphic/Group} group
+ * @param {number} gap
+ * @param {number} [width=Infinity]
+ * @param {number} [height=Infinity]
+ */
+
+var vbox = curry(boxLayout, 'vertical');
+/**
+ * HBox layouting
+ * @param {module:zrender/graphic/Group} group
+ * @param {number} gap
+ * @param {number} [width=Infinity]
+ * @param {number} [height=Infinity]
+ */
+
+var hbox = curry(boxLayout, 'horizontal');
+/**
+ * If x or x2 is not specified or 'center' 'left' 'right',
+ * the width would be as long as possible.
+ * If y or y2 is not specified or 'middle' 'top' 'bottom',
+ * the height would be as long as possible.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getAvailableSize(positionInfo, containerRect, margin) {
@@ -17229,8 +18219,13 @@ function getAvailableSize(positionInfo, containerRect, margin) {
     height: Math.max(y2 - y - margin[0] - margin[2], 0)
   };
 }
+<<<<<<< HEAD
 /**
  * Parse position info.
+=======
+/**
+ * Parse position info.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getLayoutRect(positionInfo, containerRect, margin) {
@@ -17330,6 +18325,7 @@ function getLayoutRect(positionInfo, containerRect, margin) {
   rect.margin = margin;
   return rect;
 }
+<<<<<<< HEAD
 /**
  * Position a zr element in viewport
  *  Group position is specified by either
@@ -17369,6 +18365,47 @@ function getLayoutRect(positionInfo, containerRect, margin) {
  *               This mode is useful when you want a element can overflow its
  *               container. (Consider a rotated circle needs to be located in a corner.)
  *               In this mode positionInfo.width/height can only be number.
+=======
+/**
+ * Position a zr element in viewport
+ *  Group position is specified by either
+ *  {left, top}, {right, bottom}
+ *  If all properties exists, right and bottom will be igonred.
+ *
+ * Logic:
+ *     1. Scale (against origin point in parent coord)
+ *     2. Rotate (against origin point in parent coord)
+ *     3. Translate (with el.position by this method)
+ * So this method only fixes the last step 'Translate', which does not affect
+ * scaling and rotating.
+ *
+ * If be called repeatedly with the same input el, the same result will be gotten.
+ *
+ * Return true if the layout happened.
+ *
+ * @param el Should have `getBoundingRect` method.
+ * @param positionInfo
+ * @param positionInfo.left
+ * @param positionInfo.top
+ * @param positionInfo.right
+ * @param positionInfo.bottom
+ * @param positionInfo.width Only for opt.boundingModel: 'raw'
+ * @param positionInfo.height Only for opt.boundingModel: 'raw'
+ * @param containerRect
+ * @param margin
+ * @param opt
+ * @param opt.hv Only horizontal or only vertical. Default to be [1, 1]
+ * @param opt.boundingMode
+ *        Specify how to calculate boundingRect when locating.
+ *        'all': Position the boundingRect that is transformed and uioned
+ *               both itself and its descendants.
+ *               This mode simplies confine the elements in the bounding
+ *               of their container (e.g., using 'right: 0').
+ *        'raw': Position the boundingRect that is not transformed and only itself.
+ *               This mode is useful when you want a element can overflow its
+ *               container. (Consider a rotated circle needs to be located in a corner.)
+ *               In this mode positionInfo.width/height can only be number.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function positionElement(el, positionInfo, containerRect, margin, opt, out) {
@@ -17424,9 +18461,15 @@ function positionElement(el, positionInfo, containerRect, margin, opt, out) {
 
   return true;
 }
+<<<<<<< HEAD
 /**
  * @param option Contains some of the properties in HV_NAMES.
  * @param hvIdx 0: horizontal; 1: vertical.
+=======
+/**
+ * @param option Contains some of the properties in HV_NAMES.
+ * @param hvIdx 0: horizontal; 1: vertical.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function sizeCalculable(option, hvIdx) {
@@ -17438,6 +18481,7 @@ function fetchLayoutMode(ins) {
     type: layoutMode
   } : null;
 }
+<<<<<<< HEAD
 /**
  * Consider Case:
  * When default option has {left: 0, width: 100}, and we set {right: 0}
@@ -17460,6 +18504,30 @@ function fetchLayoutMode(ins) {
  * @param targetOption
  * @param newOption
  * @param opt
+=======
+/**
+ * Consider Case:
+ * When default option has {left: 0, width: 100}, and we set {right: 0}
+ * through setOption or media query, using normal zrUtil.merge will cause
+ * {right: 0} does not take effect.
+ *
+ * @example
+ * ComponentModel.extend({
+ *     init: function () {
+ *         ...
+ *         let inputPositionParams = layout.getLayoutParams(option);
+ *         this.mergeOption(inputPositionParams);
+ *     },
+ *     mergeOption: function (newOption) {
+ *         newOption && zrUtil.merge(thisOption, newOption, true);
+ *         layout.mergeLayoutParam(thisOption, newOption);
+ *     }
+ * });
+ *
+ * @param targetOption
+ * @param newOption
+ * @param opt
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function mergeLayoutParam(targetOption, newOption, opt) {
@@ -17538,17 +18606,29 @@ function mergeLayoutParam(targetOption, newOption, opt) {
     });
   }
 }
+<<<<<<< HEAD
 /**
  * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
+=======
+/**
+ * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getLayoutParams(source) {
   return copyLayoutParams({}, source);
 }
+<<<<<<< HEAD
 /**
  * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
  * @param {Object} source
  * @return {Object} Result contains those props.
+=======
+/**
+ * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
+ * @param {Object} source
+ * @return {Object} Result contains those props.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function copyLayoutParams(target, source) {
@@ -17596,12 +18676,18 @@ function (_super) {
       mergeLayoutParam(this.option, option, layoutMode);
     }
   };
+<<<<<<< HEAD
   /**
    * Called immediately after `init` or `mergeOption` of this instance called.
+=======
+  /**
+   * Called immediately after `init` or `mergeOption` of this instance called.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ComponentModel.prototype.optionUpdated = function (newCptOption, isInit) {};
+<<<<<<< HEAD
   /**
    * [How to declare defaultOption]:
    *
@@ -17655,6 +18741,61 @@ function (_super) {
    *     }
    * })
    * ```
+=======
+  /**
+   * [How to declare defaultOption]:
+   *
+   * (A) If using class declaration in typescript (since echarts 5):
+   * ```ts
+   * import {ComponentOption} from '../model/option.js';
+   * export interface XxxOption extends ComponentOption {
+   *     aaa: number
+   * }
+   * export class XxxModel extends Component {
+   *     static type = 'xxx';
+   *     static defaultOption: XxxOption = {
+   *         aaa: 123
+   *     }
+   * }
+   * Component.registerClass(XxxModel);
+   * ```
+   * ```ts
+   * import {inheritDefaultOption} from '../util/component.js';
+   * import {XxxModel, XxxOption} from './XxxModel.js';
+   * export interface XxxSubOption extends XxxOption {
+   *     bbb: number
+   * }
+   * class XxxSubModel extends XxxModel {
+   *     static defaultOption: XxxSubOption = inheritDefaultOption(XxxModel.defaultOption, {
+   *         bbb: 456
+   *     })
+   *     fn() {
+   *         let opt = this.getDefaultOption();
+   *         // opt is {aaa: 123, bbb: 456}
+   *     }
+   * }
+   * ```
+   *
+   * (B) If using class extend (previous approach in echarts 3 & 4):
+   * ```js
+   * let XxxComponent = Component.extend({
+   *     defaultOption: {
+   *         xx: 123
+   *     }
+   * })
+   * ```
+   * ```js
+   * let XxxSubComponent = XxxComponent.extend({
+   *     defaultOption: {
+   *         yy: 456
+   *     },
+   *     fn: function () {
+   *         let opt = this.getDefaultOption();
+   *         // opt is {xx: 123, yy: 456}
+   *     }
+   * })
+   * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -17692,6 +18833,7 @@ function (_super) {
 
     return fields.defaultOption;
   };
+<<<<<<< HEAD
   /**
    * Notice: always force to input param `useDefault` in case that forget to consider it.
    * The same behavior as `modelUtil.parseFinder`.
@@ -17699,6 +18841,15 @@ function (_super) {
    * @param useDefault In many cases like series refer axis and axis refer grid,
    *        If axis index / axis id not specified, use the first target as default.
    *        In other cases like dataZoom refer axis, if not specified, measn no refer.
+=======
+  /**
+   * Notice: always force to input param `useDefault` in case that forget to consider it.
+   * The same behavior as `modelUtil.parseFinder`.
+   *
+   * @param useDefault In many cases like series refer axis and axis refer grid,
+   *        If axis index / axis id not specified, use the first target as default.
+   *        In other cases like dataZoom refer axis, if not specified, measn no refer.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -17723,10 +18874,17 @@ function (_super) {
       height: boxLayoutModel.get('height')
     };
   };
+<<<<<<< HEAD
   /**
    * Get key for zlevel.
    * If developers don't configure zlevel. We will assign zlevel to series based on the key.
    * For example, lines with trail effect and progressive series will in an individual zlevel.
+=======
+  /**
+   * Get key for zlevel.
+   * If developers don't configure zlevel. We will assign zlevel to series based on the key.
+   * For example, lines with trail effect and progressive series will in an individual zlevel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -17797,6 +18955,7 @@ function getDependencies(componentType) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -17814,6 +18973,25 @@ function getDependencies(componentType) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var platform = ''; // Navigator not exists in node
 
@@ -17922,14 +19100,20 @@ var BE_ORDINAL = {
 
 };
 var innerGlobalModel = makeInner();
+<<<<<<< HEAD
 /**
  * MUST be called before mergeOption of all series.
+=======
+/**
+ * MUST be called before mergeOption of all series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function resetSourceDefaulter(ecModel) {
   // `datasetMap` is used to make default encode.
   innerGlobalModel(ecModel).datasetMap = createHashMap();
 }
+<<<<<<< HEAD
 /**
  * [The strategy of the arrengment of data dimensions for dataset]:
  * "value way": all axes are non-category axes. So series one by one take
@@ -17944,6 +19128,22 @@ function resetSourceDefaulter(ecModel) {
  *     | ser_shared_x | ser0_y | ser1_y | ser2_y |
  *
  * @return encode Never be `null/undefined`.
+=======
+/**
+ * [The strategy of the arrengment of data dimensions for dataset]:
+ * "value way": all axes are non-category axes. So series one by one take
+ *     several (the number is coordSysDims.length) dimensions from dataset.
+ *     The result of data arrengment of data dimensions like:
+ *     | ser0_x | ser0_y | ser1_x | ser1_y | ser2_x | ser2_y |
+ * "category way": at least one axis is category axis. So the the first data
+ *     dimension is always mapped to the first category axis and shared by
+ *     all of the series. The other data dimensions are taken by series like
+ *     "value way" does.
+ *     The result of data arrengment of data dimensions like:
+ *     | ser_shared_x | ser0_y | ser1_y | ser2_y |
+ *
+ * @return encode Never be `null/undefined`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makeSeriesEncodeForAxisCoordSys(coordDimensions, seriesModel, source) {
@@ -18022,10 +19222,17 @@ function makeSeriesEncodeForAxisCoordSys(coordDimensions, seriesModel, source) {
   encodeSeriesName.length && (encode.seriesName = encodeSeriesName);
   return encode;
 }
+<<<<<<< HEAD
 /**
  * Work for data like [{name: ..., value: ...}, ...].
  *
  * @return encode Never be `null/undefined`.
+=======
+/**
+ * Work for data like [{name: ..., value: ...}, ...].
+ *
+ * @return encode Never be `null/undefined`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makeSeriesEncodeForNameBased(seriesModel, source, dimCount) {
@@ -18108,8 +19315,13 @@ function makeSeriesEncodeForNameBased(seriesModel, source, dimCount) {
 
   return encode;
 }
+<<<<<<< HEAD
 /**
  * @return If return null/undefined, indicate that should not use datasetModel.
+=======
+/**
+ * @return If return null/undefined, indicate that should not use datasetModel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function querySeriesUpstreamDatasetModel(seriesModel) {
@@ -18127,8 +19339,13 @@ function querySeriesUpstreamDatasetModel(seriesModel) {
     }, SINGLE_REFERRING).models[0];
   }
 }
+<<<<<<< HEAD
 /**
  * @return Always return an array event empty.
+=======
+/**
+ * @return Always return an array event empty.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function queryDatasetUpstreamDatasetModels(datasetModel) {
@@ -18143,10 +19360,17 @@ function queryDatasetUpstreamDatasetModels(datasetModel) {
     id: datasetModel.get('fromDatasetId', true)
   }, SINGLE_REFERRING).models;
 }
+<<<<<<< HEAD
 /**
  * The rule should not be complex, otherwise user might not
  * be able to known where the data is wrong.
  * The code is ugly, but how to make it neat?
+=======
+/**
+ * The rule should not be complex, otherwise user might not
+ * be able to known where the data is wrong.
+ * The code is ugly, but how to make it neat?
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function guessOrdinal(source, dimIndex) {
@@ -18330,11 +19554,19 @@ function getNearestPalette(palettes, requestColorNum) {
 
   return palettes[paletteNum - 1];
 }
+<<<<<<< HEAD
 /**
  * @param name MUST NOT be null/undefined. Otherwise call this function
  *             twise with the same parameters will get different result.
  * @param scope default this.
  * @return Can be null/undefined
+=======
+/**
+ * @param name MUST NOT be null/undefined. Otherwise call this function
+ *             twise with the same parameters will get different result.
+ * @param scope default this.
+ * @return Can be null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -18476,12 +19708,21 @@ function (_super) {
 
     this._resetOption(null, innerOpt);
   };
+<<<<<<< HEAD
   /**
    * @param type null/undefined: reset all.
    *        'recreate': force recreate all.
    *        'timeline': only reset timeline option
    *        'media': only reset media query option
    * @return Whether option changed.
+=======
+  /**
+   * @param type null/undefined: reset all.
+   *        'recreate': force recreate all.
+   *        'timeline': only reset timeline option
+   *        'media': only reset media query option
+   * @return Whether option changed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18716,8 +19957,13 @@ function (_super) {
       reCreateSeriesIndices(this);
     }
   };
+<<<<<<< HEAD
   /**
    * Get option for output (cloned option and inner info removed)
+=======
+  /**
+   * Get option for output (cloned option and inner info removed)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18765,8 +20011,13 @@ function (_super) {
   GlobalModel.prototype.getUpdatePayload = function () {
     return this._payload;
   };
+<<<<<<< HEAD
   /**
    * @param idx If not specified, return the first one.
+=======
+  /**
+   * @param idx If not specified, return the first one.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18787,8 +20038,13 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * @return Never be null/undefined.
+=======
+  /**
+   * @return Never be null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18829,6 +20085,7 @@ function (_super) {
 
     return filterBySubType(result, condition);
   };
+<<<<<<< HEAD
   /**
    * The interface is different from queryComponents,
    * which is convenient for inner usage.
@@ -18845,6 +20102,24 @@ function (_super) {
    *     filter: function (model, index) {...}}
    * );
    * // result like [component0, componnet1, ...]
+=======
+  /**
+   * The interface is different from queryComponents,
+   * which is convenient for inner usage.
+   *
+   * @usage
+   * let result = findComponents(
+   *     {mainType: 'dataZoom', query: {dataZoomId: 'abc'}}
+   * );
+   * let result = findComponents(
+   *     {mainType: 'series', subType: 'pie', query: {seriesName: 'uio'}}
+   * );
+   * let result = findComponents(
+   *     {mainType: 'series',
+   *     filter: function (model, index) {...}}
+   * );
+   * // result like [component0, componnet1, ...]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18897,8 +20172,13 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Get series list before filtered by name.
+=======
+  /**
+   * Get series list before filtered by name.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18908,17 +20188,28 @@ function (_super) {
       return !!oneSeries && nameStr != null && oneSeries.name === nameStr;
     });
   };
+<<<<<<< HEAD
   /**
    * Get series list before filtered by index.
+=======
+  /**
+   * Get series list before filtered by index.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   GlobalModel.prototype.getSeriesByIndex = function (seriesIndex) {
     return this._componentsMap.get('series')[seriesIndex];
   };
+<<<<<<< HEAD
   /**
    * Get series list before filtered by type.
    * FIXME: rename to getRawSeriesByType?
+=======
+  /**
+   * Get series list before filtered by type.
+   * FIXME: rename to getRawSeriesByType?
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18927,8 +20218,13 @@ function (_super) {
       return !!oneSeries && oneSeries.subType === subType;
     });
   };
+<<<<<<< HEAD
   /**
    * Get all series before filtered.
+=======
+  /**
+   * Get all series before filtered.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18937,17 +20233,28 @@ function (_super) {
       return !!oneSeries;
     });
   };
+<<<<<<< HEAD
   /**
    * Count series before filtered.
+=======
+  /**
+   * Count series before filtered.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   GlobalModel.prototype.getSeriesCount = function () {
     return this._componentsCount.get('series');
   };
+<<<<<<< HEAD
   /**
    * After filtering, series may be different
    * from raw series.
+=======
+  /**
+   * After filtering, series may be different
+   * from raw series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18959,11 +20266,19 @@ function (_super) {
       cb.call(context, series, rawSeriesIndex);
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Iterate raw series before filtered.
    *
    * @param {Function} cb
    * @param {*} context
+=======
+  /**
+   * Iterate raw series before filtered.
+   *
+   * @param {Function} cb
+   * @param {*} context
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18972,9 +20287,15 @@ function (_super) {
       series && cb.call(context, series, series.componentIndex);
     });
   };
+<<<<<<< HEAD
   /**
    * After filtering, series may be different.
    * from raw series.
+=======
+  /**
+   * After filtering, series may be different.
+   * from raw series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -18988,8 +20309,13 @@ function (_super) {
       }
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Iterate raw series before filtered of given type.
+=======
+  /**
+   * Iterate raw series before filtered of given type.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -19223,9 +20549,15 @@ function () {
 var QUERY_REG = /^(min|max)?(.+)$/; // Key: mainType
 // type FakeComponentsMap = HashMap<(MappingExistingItem & { subType: string })[]>;
 
+<<<<<<< HEAD
 /**
  * TERM EXPLANATIONS:
  * See `ECOption` and `ECUnitOption` in `src/util/types.ts`.
+=======
+/**
+ * TERM EXPLANATIONS:
+ * See `ECOption` and `ECUnitOption` in `src/util/types.ts`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var OptionManager =
@@ -19242,9 +20574,15 @@ function () {
   function OptionManager(api) {
     this._timelineOptions = [];
     this._mediaList = [];
+<<<<<<< HEAD
     /**
      * -1, means default.
      * empty means no media.
+=======
+    /**
+     * -1, means default.
+     * empty means no media.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this._currentMediaIndices = [];
@@ -19379,6 +20717,7 @@ function () {
 
   return OptionManager;
 }();
+<<<<<<< HEAD
 /**
  * [RAW_OPTION_PATTERNS]
  * (Note: "series: []" represents all other props in `ECUnitOption`)
@@ -19439,6 +20778,68 @@ function () {
  *     media: []
  * };
  * ```
+=======
+/**
+ * [RAW_OPTION_PATTERNS]
+ * (Note: "series: []" represents all other props in `ECUnitOption`)
+ *
+ * (1) No prop "baseOption" declared:
+ * Root option is used as "baseOption" (except prop "options" and "media").
+ * ```js
+ * option = {
+ *     series: [],
+ *     timeline: {},
+ *     options: [],
+ * };
+ * option = {
+ *     series: [],
+ *     media: {},
+ * };
+ * option = {
+ *     series: [],
+ *     timeline: {},
+ *     options: [],
+ *     media: {},
+ * }
+ * ```
+ *
+ * (2) Prop "baseOption" declared:
+ * If "baseOption" declared, `ECUnitOption` props can only be declared
+ * inside "baseOption" except prop "timeline" (compat ec2).
+ * ```js
+ * option = {
+ *     baseOption: {
+ *         timeline: {},
+ *         series: [],
+ *     },
+ *     options: []
+ * };
+ * option = {
+ *     baseOption: {
+ *         series: [],
+ *     },
+ *     media: []
+ * };
+ * option = {
+ *     baseOption: {
+ *         timeline: {},
+ *         series: [],
+ *     },
+ *     options: []
+ *     media: []
+ * };
+ * option = {
+ *     // ec3 compat ec2: allow (only) `timeline` declared
+ *     // outside baseOption. Keep this setting for compat.
+ *     timeline: {},
+ *     baseOption: {
+ *         series: [],
+ *     },
+ *     options: [],
+ *     media: []
+ * };
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -19519,10 +20920,17 @@ rawOption, optionPreprocessorFuncs, isNew) {
     mediaList: mediaList
   };
 }
+<<<<<<< HEAD
 /**
  * @see <http://www.w3.org/TR/css3-mediaqueries/#media1>
  * Support: width, height, aspectRatio
  * Can use max or min as prefix.
+=======
+/**
+ * @see <http://www.w3.org/TR/css3-mediaqueries/#media1>
+ * Support: width, height, aspectRatio
+ * Can use max or min as prefix.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -20288,9 +21696,15 @@ function () {
 function isSourceInstance(val) {
   return val instanceof SourceImpl;
 }
+<<<<<<< HEAD
 /**
  * Create a source from option.
  * NOTE: Created source is immutable. Don't change any properties in it.
+=======
+/**
+ * Create a source from option.
+ * NOTE: Created source is immutable. Don't change any properties in it.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createSource(sourceData, thisMetaRawOption, // can be null. If not provided, auto detect it from `sourceData`.
@@ -20309,8 +21723,13 @@ sourceFormat) {
   });
   return source;
 }
+<<<<<<< HEAD
 /**
  * Wrap original series data for some compatibility cases.
+=======
+/**
+ * Wrap original series data for some compatibility cases.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createSourceFromSeriesDataOption(data) {
@@ -20319,8 +21738,13 @@ function createSourceFromSeriesDataOption(data) {
     sourceFormat: isTypedArray(data) ? SOURCE_FORMAT_TYPED_ARRAY : SOURCE_FORMAT_ORIGINAL
   });
 }
+<<<<<<< HEAD
 /**
  * Clone source but excludes source data.
+=======
+/**
+ * Clone source but excludes source data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function cloneSourceShallow(source) {
@@ -20333,8 +21757,13 @@ function cloneSourceShallow(source) {
     dimensionsDetectedCount: source.dimensionsDetectedCount
   });
 }
+<<<<<<< HEAD
 /**
  * Note: An empty array will be detected as `SOURCE_FORMAT_ARRAY_ROWS`.
+=======
+/**
+ * Note: An empty array will be detected as `SOURCE_FORMAT_ARRAY_ROWS`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function detectSourceFormat(data) {
@@ -20372,9 +21801,15 @@ function detectSourceFormat(data) {
 
   return sourceFormat;
 }
+<<<<<<< HEAD
 /**
  * Determine the source definitions from data standalone dimensions definitions
  * are not specified.
+=======
+/**
+ * Determine the source definitions from data standalone dimensions definitions
+ * are not specified.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function determineSourceDimensions(data, sourceFormat, seriesLayoutBy, sourceHeader, // standalone raw dimensions definition, like:
@@ -20561,6 +21996,7 @@ function shouldRetrieveDataByName(source) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -20578,13 +22014,38 @@ function shouldRetrieveDataByName(source) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var _a, _b, _c; // TODO
 var providerMethods;
 var mountMethods;
+<<<<<<< HEAD
 /**
  * If normal array used, mutable chunk size is supported.
  * If typed array used, chunk size must be fixed.
+=======
+/**
+ * If normal array used, mutable chunk size is supported.
+ * If typed array used, chunk size must be fixed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var DefaultDataProvider =
@@ -20906,8 +22367,13 @@ var DataFormatMixin =
 /** @class */
 function () {
   function DataFormatMixin() {}
+<<<<<<< HEAD
   /**
    * Get params for formatter
+=======
+  /**
+   * Get params for formatter
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -20944,6 +22410,7 @@ function () {
       $vars: ['seriesName', 'name', 'value']
     };
   };
+<<<<<<< HEAD
   /**
    * Format label
    * @param dataIndex
@@ -20953,6 +22420,17 @@ function () {
    *        use formatter in different dimensions, like radar.
    * @param formatter Formatter given outside.
    * @return return null/undefined if no formatter
+=======
+  /**
+   * Format label
+   * @param dataIndex
+   * @param status 'normal' by default
+   * @param dataType
+   * @param labelDimIndex Only used in some chart that
+   *        use formatter in different dimensions, like radar.
+   * @param formatter Formatter given outside.
+   * @return return null/undefined if no formatter
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -21011,19 +22489,32 @@ function () {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * Get raw value in option
+=======
+  /**
+   * Get raw value in option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   DataFormatMixin.prototype.getRawValue = function (idx, dataType) {
     return retrieveRawValue(this.getData(dataType), idx);
   };
+<<<<<<< HEAD
   /**
    * Should be implemented.
    * @param {number} dataIndex
    * @param {boolean} [multipleSeries=false]
    * @param {string} [dataType]
+=======
+  /**
+   * Should be implemented.
+   * @param {number} dataIndex
+   * @param {boolean} [multipleSeries=false]
+   * @param {string} [dataType]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -21044,8 +22535,13 @@ function () {
 //     markers: Dictionary<ColorString>;
 // };
 
+<<<<<<< HEAD
 /**
  * For backward compat, normalize the return from `formatTooltip`.
+=======
+/**
+ * For backward compat, normalize the return from `formatTooltip`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function normalizeTooltipFormatResult(result) {
@@ -21079,9 +22575,15 @@ function normalizeTooltipFormatResult(result) {
   };
 }
 
+<<<<<<< HEAD
 /**
  * @param {Object} define
  * @return See the return of `createTask`.
+=======
+/**
+ * @param {Object} define
+ * @return See the return of `createTask`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createTask(define) {
@@ -21099,12 +22601,21 @@ function () {
     this._onDirty = define.onDirty;
     this._dirty = true;
   }
+<<<<<<< HEAD
   /**
    * @param step Specified step.
    * @param skip Skip customer perform call.
    * @param modBy Sampling window size.
    * @param modDataCount Sampling count.
    * @return whether unfinished.
+=======
+  /**
+   * @param step Specified step.
+   * @param skip Skip customer perform call.
+   * @param modBy Sampling window size.
+   * @param modDataCount Sampling count.
+   * @return whether unfinished.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -21258,9 +22769,15 @@ function () {
   Task.prototype.unfinished = function () {
     return this._progress && this._dueIndex < this._dueEnd;
   };
+<<<<<<< HEAD
   /**
    * @param downTask The downstream task.
    * @return The downstream task.
+=======
+  /**
+   * @param downTask The downstream task.
+   * @return The downstream task.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -21423,6 +22940,7 @@ var iterator = function () {
 //     }
 // };
 
+<<<<<<< HEAD
 /**
  * Convert raw the value in to inner value in List.
  *
@@ -21430,6 +22948,15 @@ var iterator = function () {
  *
  * [Caution]: this is the key logic of user value parser.
  * For backward compatibility, do not modify it until you have to!
+=======
+/**
+ * Convert raw the value in to inner value in List.
+ *
+ * [Performance sensitive]
+ *
+ * [Caution]: this is the key logic of user value parser.
+ * For backward compatibility, do not modify it until you have to!
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function parseDataValue(value, // For high performance, do not omit the second param.
@@ -21519,11 +23046,19 @@ function () {
 var SortOrderComparator =
 /** @class */
 function () {
+<<<<<<< HEAD
   /**
    * @param order by default: 'asc'
    * @param incomparable by default: Always on the tail.
    *        That is, if 'asc' => 'max', if 'desc' => 'min'
    *        See the definition of "incomparable" in [SORT_COMPARISON_RULE].
+=======
+  /**
+   * @param order by default: 'asc'
+   * @param incomparable by default: Always on the tail.
+   *        That is, if 'asc' => 'max', if 'desc' => 'min'
+   *        See the definition of "incomparable" in [SORT_COMPARISON_RULE].
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   function SortOrderComparator(order, incomparable) {
     var isDesc = order === 'desc';
@@ -21599,6 +23134,7 @@ function () {
 
   return FilterEqualityComparator;
 }();
+<<<<<<< HEAD
 /**
  * [FILTER_COMPARISON_RULE]
  * `lt`|`lte`|`gt`|`gte`:
@@ -21639,6 +23175,48 @@ function () {
  *   See `util/number.ts#numericToNumber`.
  *
  * @return If `op` is not `RelationalOperator`, return null;
+=======
+/**
+ * [FILTER_COMPARISON_RULE]
+ * `lt`|`lte`|`gt`|`gte`:
+ * + rval must be a number. And lval will be converted to number (`numericToNumber`) to compare.
+ * `eq`:
+ * + If same type, compare with `===`.
+ * + If there is one number, convert to number (`numericToNumber`) to compare.
+ * + Else return `false`.
+ * `ne`:
+ * + Not `eq`.
+ *
+ *
+ * [SORT_COMPARISON_RULE]
+ * All the values are grouped into three categories:
+ * + "numeric" (number and numeric string)
+ * + "non-numeric-string" (string that excluding numeric string)
+ * + "others"
+ * "numeric" vs "numeric": values are ordered by number order.
+ * "non-numeric-string" vs "non-numeric-string": values are ordered by ES spec (#sec-abstract-relational-comparison).
+ * "others" vs "others": do not change order (always return 0).
+ * "numeric" vs "non-numeric-string": "non-numeric-string" is treated as "incomparable".
+ * "number" vs "others": "others" is treated as "incomparable".
+ * "non-numeric-string" vs "others": "others" is treated as "incomparable".
+ * "incomparable" will be seen as -Infinity or Infinity (depends on the settings).
+ * MEMO:
+ *   Non-numeric string sort makes sense when we need to put the items with the same tag together.
+ *   But if we support string sort, we still need to avoid the misleading like `'2' > '12'`,
+ *   So we treat "numeric-string" sorted by number order rather than string comparison.
+ *
+ *
+ * [CHECK_LIST_OF_THE_RULE_DESIGN]
+ * + Do not support string comparison until required. And also need to
+ *   avoid the misleading of "2" > "12".
+ * + Should avoid the misleading case:
+ *   `" 22 " gte "22"` is `true` but `" 22 " eq "22"` is `false`.
+ * + JS bad case should be avoided: null <= 0, [] <= 0, ' ' <= 0, ...
+ * + Only "numeric" can be converted to comparable number, otherwise converted to NaN.
+ *   See `util/number.ts#numericToNumber`.
+ *
+ * @return If `op` is not `RelationalOperator`, return null;
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -21646,9 +23224,15 @@ function createFilterComparator(op, rval) {
   return op === 'eq' || op === 'ne' ? new FilterEqualityComparator(op === 'eq', rval) : hasOwn(ORDER_COMPARISON_OP_MAP, op) ? new FilterOrderComparator(op, rval) : null;
 }
 
+<<<<<<< HEAD
 /**
  * TODO: disable writable.
  * This structure will be exposed to users.
+=======
+/**
+ * TODO: disable writable.
+ * This structure will be exposed to users.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var ExternalSource =
@@ -21669,14 +23253,20 @@ function () {
   ExternalSource.prototype.cloneRawData = function () {
     return;
   };
+<<<<<<< HEAD
   /**
    * @return If dimension not found, return null/undefined.
+=======
+  /**
+   * @return If dimension not found, return null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ExternalSource.prototype.getDimensionInfo = function (dim) {
     return;
   };
+<<<<<<< HEAD
   /**
    * dimensions defined if and only if either:
    * (a) dataset.dimensions are declared.
@@ -21685,6 +23275,16 @@ function () {
    * the defined dimensions.
    * Otherwise, `dimensionInfoAll` is determined by data columns.
    * @return Always return an array (even empty array).
+=======
+  /**
+   * dimensions defined if and only if either:
+   * (a) dataset.dimensions are declared.
+   * (b) dataset data include dimensions definitions in data (detected or via specified `sourceHeader`).
+   * If dimensions are defined, `dimensionInfoAll` is corresponding to
+   * the defined dimensions.
+   * Otherwise, `dimensionInfoAll` is determined by data columns.
+   * @return Always return an array (even empty array).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -21695,10 +23295,17 @@ function () {
   ExternalSource.prototype.count = function () {
     return;
   };
+<<<<<<< HEAD
   /**
    * Only support by dimension index.
    * No need to support by dimension name in transform function,
    * because transform function is not case-specific, no need to use name literally.
+=======
+  /**
+   * Only support by dimension index.
+   * No need to support by dimension name in transform function,
+   * because transform function is not case-specific, no need to use name literally.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22036,6 +23643,7 @@ pipeIndex) {
 
     var resultMetaRawOption;
     var firstUpSource = upSourceList[0];
+<<<<<<< HEAD
     /**
      * Intuitively, the end users known the content of the original `dataset.source`,
      * calucating the transform result in mind.
@@ -22057,6 +23665,29 @@ pipeIndex) {
      * dimensions in transformers.
      *
      * See also [DIMENSION_INHERIT_RULE] in `sourceManager.ts`.
+=======
+    /**
+     * Intuitively, the end users known the content of the original `dataset.source`,
+     * calucating the transform result in mind.
+     * Suppose the original `dataset.source` is:
+     * ```js
+     * [
+     *     ['product', '2012', '2013', '2014', '2015'],
+     *     ['AAA', 41.1, 30.4, 65.1, 53.3],
+     *     ['BBB', 86.5, 92.1, 85.7, 83.1],
+     *     ['CCC', 24.1, 67.2, 79.5, 86.4]
+     * ]
+     * ```
+     * The dimension info have to be detected from the source data.
+     * Some of the transformers (like filter, sort) will follow the dimension info
+     * of upstream, while others use new dimensions (like aggregate).
+     * Transformer can output a field `dimensions` to define the its own output dimensions.
+     * We also allow transformers to ignore the output `dimensions` field, and
+     * inherit the upstream dimensions definition. It can reduce the burden of handling
+     * dimensions in transformers.
+     *
+     * See also [DIMENSION_INHERIT_RULE] in `sourceManager.ts`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     if (firstUpSource && resultIndex === 0 // If transformer returns `dimensions`, it means that the transformer has different
@@ -22103,8 +23734,13 @@ var CtorUint32Array = typeof Uint32Array === UNDEFINED ? Array : Uint32Array;
 var CtorUint16Array = typeof Uint16Array === UNDEFINED ? Array : Uint16Array;
 var CtorInt32Array = typeof Int32Array === UNDEFINED ? Array : Int32Array;
 var CtorFloat64Array = typeof Float64Array === UNDEFINED ? Array : Float64Array;
+<<<<<<< HEAD
 /**
  * Multi dimensional data store
+=======
+/**
+ * Multi dimensional data store
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var dataCtors = {
@@ -22153,8 +23789,13 @@ function prepareStore(store, dimIdx, dimType, end, append) {
     store[dimIdx] = new DataCtor(end);
   }
 }
+<<<<<<< HEAD
 /**
  * Basically, DataStore API keep immutable.
+=======
+/**
+ * Basically, DataStore API keep immutable.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var DataStore =
@@ -22169,8 +23810,13 @@ function () {
     this._rawCount = 0;
     this._calcDimNameToIdx = createHashMap();
   }
+<<<<<<< HEAD
   /**
    * Initialize from data
+=======
+  /**
+   * Initialize from data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22211,20 +23857,34 @@ function () {
   DataStore.prototype.getProvider = function () {
     return this._provider;
   };
+<<<<<<< HEAD
   /**
    * Caution: even when a `source` instance owned by a series, the created data store
    * may still be shared by different sereis (the source hash does not use all `source`
    * props, see `sourceManager`). In this case, the `source` props that are not used in
    * hash (like `source.dimensionDefine`) probably only belongs to a certain series and
    * thus should not be fetch here.
+=======
+  /**
+   * Caution: even when a `source` instance owned by a series, the created data store
+   * may still be shared by different sereis (the source hash does not use all `source`
+   * props, see `sourceManager`). In this case, the `source` props that are not used in
+   * hash (like `source.dimensionDefine`) probably only belongs to a certain series and
+   * thus should not be fetch here.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   DataStore.prototype.getSource = function () {
     return this._provider.getSource();
   };
+<<<<<<< HEAD
   /**
    * @caution Only used in dataStack.
+=======
+  /**
+   * @caution Only used in dataStack.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22289,8 +23949,13 @@ function () {
     var item = this._dimensions[dimIndex];
     return item && item.property;
   };
+<<<<<<< HEAD
   /**
    * Caution: Can be only called on raw data (before `this._indices` created).
+=======
+  /**
+   * Caution: Can be only called on raw data (before `this._indices` created).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22411,8 +24076,13 @@ function () {
   DataStore.prototype.count = function () {
     return this._count;
   };
+<<<<<<< HEAD
   /**
    * Get value. Return NaN if idx is out of range.
+=======
+  /**
+   * Get value. Return NaN if idx is out of range.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22447,8 +24117,13 @@ function () {
 
     return values;
   };
+<<<<<<< HEAD
   /**
    * @param dim concrete dim
+=======
+  /**
+   * @param dim concrete dim
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22460,8 +24135,13 @@ function () {
     var dimStore = this._chunks[dim];
     return dimStore ? dimStore[rawIdx] : NaN;
   };
+<<<<<<< HEAD
   /**
    * Get sum of data in one dimension
+=======
+  /**
+   * Get sum of data in one dimension
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22481,8 +24161,13 @@ function () {
 
     return sum;
   };
+<<<<<<< HEAD
   /**
    * Get median of data in one dimension
+=======
+  /**
+   * Get median of data in one dimension
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22503,8 +24188,13 @@ function () {
 
     return len === 0 ? 0 : len % 2 === 1 ? sortedDimDataArray[(len - 1) / 2] : (sortedDimDataArray[len / 2] + sortedDimDataArray[len / 2 - 1]) / 2;
   };
+<<<<<<< HEAD
   /**
    * Retrieve the index with given raw data index.
+=======
+  /**
+   * Retrieve the index with given raw data index.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22543,6 +24233,7 @@ function () {
 
     return -1;
   };
+<<<<<<< HEAD
   /**
    * Retrieve the index of nearest value.
    * @param dim
@@ -22550,6 +24241,15 @@ function () {
    * @param [maxDistance=Infinity]
    * @return If and only if multiple indices have
    *         the same value, they are put to the result.
+=======
+  /**
+   * Retrieve the index of nearest value.
+   * @param dim
+   * @param value
+   * @param [maxDistance=Infinity]
+   * @return If and only if multiple indices have
+   *         the same value, they are put to the result.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22626,8 +24326,13 @@ function () {
 
     return newIndices;
   };
+<<<<<<< HEAD
   /**
    * Data filter.
+=======
+  /**
+   * Data filter.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22684,9 +24389,15 @@ function () {
 
     return newStore;
   };
+<<<<<<< HEAD
   /**
    * Select data in range. (For optimization of filter)
    * (Manually inline code, support 5 million data filtering in data zoom.)
+=======
+  /**
+   * Select data in range. (For optimization of filter)
+   * (Manually inline code, support 5 million data filtering in data zoom.)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22812,8 +24523,13 @@ function () {
   //     return result;
   // }
 
+<<<<<<< HEAD
   /**
    * Data mapping to a new List with given dimensions
+=======
+  /**
+   * Data mapping to a new List with given dimensions
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22825,8 +24541,13 @@ function () {
 
     return target;
   };
+<<<<<<< HEAD
   /**
    * @caution Danger!! Only used in dataStack.
+=======
+  /**
+   * @caution Danger!! Only used in dataStack.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22884,10 +24605,17 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Large data down sampling using largest-triangle-three-buckets
    * @param {string} valueDimension
    * @param {number} targetCount
+=======
+  /**
+   * Large data down sampling using largest-triangle-three-buckets
+   * @param {string} valueDimension
+   * @param {number} targetCount
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -22975,9 +24703,15 @@ function () {
     target.getRawIndex = this._getRawIdx;
     return target;
   };
+<<<<<<< HEAD
   /**
    * Large data down sampling on given dimension
    * @param sampleIndex Sample index for name and id
+=======
+  /**
+   * Large data down sampling on given dimension
+   * @param sampleIndex Sample index for name and id
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23027,6 +24761,7 @@ function () {
 
     return target;
   };
+<<<<<<< HEAD
   /**
    * Data iteration
    * @param ctx default this
@@ -23034,6 +24769,15 @@ function () {
    *  list.each('x', function (x, idx) {});
    *  list.each(['x', 'y'], function (x, y, idx) {});
    *  list.each(function (idx) {})
+=======
+  /**
+   * Data iteration
+   * @param ctx default this
+   * @example
+   *  list.each('x', function (x, idx) {});
+   *  list.each(['x', 'y'], function (x, y, idx) {});
+   *  list.each(function (idx) {})
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23075,8 +24819,13 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Get extent of data in one dimension
+=======
+  /**
+   * Get extent of data in one dimension
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23122,8 +24871,13 @@ function () {
     this._extent[dim] = dimExtent;
     return dimExtent;
   };
+<<<<<<< HEAD
   /**
    * Get raw data item
+=======
+  /**
+   * Get raw data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23143,10 +24897,17 @@ function () {
       return this._provider.getItem(rawIdx);
     }
   };
+<<<<<<< HEAD
   /**
    * Clone shallow.
    *
    * @param clonedDims Determine which dims to clone. Will share the data if not specified.
+=======
+  /**
+   * Clone shallow.
+   *
+   * @param clonedDims Determine which dims to clone. Will share the data if not specified.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23254,6 +25015,7 @@ function () {
   return DataStore;
 }();
 
+<<<<<<< HEAD
 /**
  * [REQUIREMENT_MEMO]:
  * (0) `metaRawOption` means `dimensions`/`sourceHeader`/`seriesLayoutBy` in raw option.
@@ -23343,6 +25105,97 @@ function () {
  *     fromTransformResult: 1
  * }]
  * ```
+=======
+/**
+ * [REQUIREMENT_MEMO]:
+ * (0) `metaRawOption` means `dimensions`/`sourceHeader`/`seriesLayoutBy` in raw option.
+ * (1) Keep support the feature: `metaRawOption` can be specified both on `series` and
+ * `root-dataset`. Them on `series` has higher priority.
+ * (2) Do not support to set `metaRawOption` on a `non-root-dataset`, because it might
+ * confuse users: whether those props indicate how to visit the upstream source or visit
+ * the transform result source, and some transforms has nothing to do with these props,
+ * and some transforms might have multiple upstream.
+ * (3) Transforms should specify `metaRawOption` in each output, just like they can be
+ * declared in `root-dataset`.
+ * (4) At present only support visit source in `SERIES_LAYOUT_BY_COLUMN` in transforms.
+ * That is for reducing complexity in transforms.
+ * PENDING: Whether to provide transposition transform?
+ *
+ * [IMPLEMENTAION_MEMO]:
+ * "sourceVisitConfig" are calculated from `metaRawOption` and `data`.
+ * They will not be calculated until `source` is about to be visited (to prevent from
+ * duplicate calcuation). `source` is visited only in series and input to transforms.
+ *
+ * [DIMENSION_INHERIT_RULE]:
+ * By default the dimensions are inherited from ancestors, unless a transform return
+ * a new dimensions definition.
+ * Consider the case:
+ * ```js
+ * dataset: [{
+ *     source: [ ['Product', 'Sales', 'Prise'], ['Cookies', 321, 44.21], ...]
+ * }, {
+ *     transform: { type: 'filter', ... }
+ * }]
+ * dataset: [{
+ *     dimension: ['Product', 'Sales', 'Prise'],
+ *     source: [ ['Cookies', 321, 44.21], ...]
+ * }, {
+ *     transform: { type: 'filter', ... }
+ * }]
+ * ```
+ * The two types of option should have the same behavior after transform.
+ *
+ *
+ * [SCENARIO]:
+ * (1) Provide source data directly:
+ * ```js
+ * series: {
+ *     encode: {...},
+ *     dimensions: [...]
+ *     seriesLayoutBy: 'row',
+ *     data: [[...]]
+ * }
+ * ```
+ * (2) Series refer to dataset.
+ * ```js
+ * series: [{
+ *     encode: {...}
+ *     // Ignore datasetIndex means `datasetIndex: 0`
+ *     // and the dimensions defination in dataset is used
+ * }, {
+ *     encode: {...},
+ *     seriesLayoutBy: 'column',
+ *     datasetIndex: 1
+ * }]
+ * ```
+ * (3) dataset transform
+ * ```js
+ * dataset: [{
+ *     source: [...]
+ * }, {
+ *     source: [...]
+ * }, {
+ *     // By default from 0.
+ *     transform: { type: 'filter', config: {...} }
+ * }, {
+ *     // Piped.
+ *     transform: [
+ *         { type: 'filter', config: {...} },
+ *         { type: 'sort', config: {...} }
+ *     ]
+ * }, {
+ *     id: 'regressionData',
+ *     fromDatasetIndex: 1,
+ *     // Third-party transform
+ *     transform: { type: 'ecStat:regression', config: {...} }
+ * }, {
+ *     // retrieve the extra result.
+ *     id: 'regressionFormula',
+ *     fromDatasetId: 'regressionData',
+ *     fromTransformResult: 1
+ * }]
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var SourceManager =
@@ -23358,8 +25211,13 @@ function () {
     this._dirty = true;
     this._sourceHost = sourceHost;
   }
+<<<<<<< HEAD
   /**
    * Mark dirty.
+=======
+  /**
+   * Mark dirty.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23379,17 +25237,28 @@ function () {
       this._versionSignBase = 0;
     }
   };
+<<<<<<< HEAD
   /**
    * For detecting whether the upstream source is dirty, so that
    * the local cached source (in `_sourceList`) should be discarded.
+=======
+  /**
+   * For detecting whether the upstream source is dirty, so that
+   * the local cached source (in `_sourceList`) should be discarded.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SourceManager.prototype._getVersionSign = function () {
     return this._sourceHost.uid + '_' + this._versionSignBase;
   };
+<<<<<<< HEAD
   /**
    * Always return a source instance. Otherwise throw error.
+=======
+  /**
+   * Always return a source instance. Otherwise throw error.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23547,9 +25416,15 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * @param sourceIndex By default 0, means "main source".
    *                    In most cases there is only one source.
+=======
+  /**
+   * @param sourceIndex By default 0, means "main source".
+   *                    In most cases there is only one source.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23566,6 +25441,7 @@ function () {
 
     return source;
   };
+<<<<<<< HEAD
   /**
    *
    * Get a data store which can be shared across series.
@@ -23573,6 +25449,15 @@ function () {
    *
    * @param seriesDimRequest Dimensions that are generated in series.
    *        Should have been sorted by `storeDimIndex` asc.
+=======
+  /**
+   *
+   * Get a data store which can be shared across series.
+   * Only available for series.
+   *
+   * @param seriesDimRequest Dimensions that are generated in series.
+   *        Should have been sorted by `storeDimIndex` asc.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23613,9 +25498,15 @@ function () {
 
     return cachedStore;
   };
+<<<<<<< HEAD
   /**
    * PENDING: Is it fast enough?
    * If no upstream, return empty array.
+=======
+  /**
+   * PENDING: Is it fast enough?
+   * If no upstream, return empty array.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -23837,8 +25728,13 @@ function buildNameValue(ctx, fragment, topMarginForOuterGap, toolTipTextStyle) {
   return renderMode === 'richText' ? (noMarker ? '' : markerStr) + (noName ? '' : wrapInlineNameRichText(ctx, readableName, nameStyle)) // Value has commas inside, so use ' ' as delimiter for multiple values.
   + (noValue ? '' : wrapInlineValueRichText(ctx, readableValueList, valueAlignRight, valueCloseToMarker, valueStyle)) : wrapBlockHTML((noMarker ? '' : markerStr) + (noName ? '' : wrapInlineNameHTML(readableName, !noMarker, nameStyle)) + (noValue ? '' : wrapInlineValueHTML(readableValueList, valueAlignRight, valueCloseToMarker, valueStyle)), topMarginForOuterGap);
 }
+<<<<<<< HEAD
 /**
  * @return markupText. null/undefined means no content.
+=======
+/**
+ * @return markupText. null/undefined means no content.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -23912,10 +25808,17 @@ function getPaddingFromTooltipModel(model, renderMode) {
   return padding != null ? padding // We give slightly different to look pretty.
   : renderMode === 'richText' ? [8, 10] : 10;
 }
+<<<<<<< HEAD
 /**
  * The major feature is generate styles for `renderMode: 'richText'`.
  * But it also serves `renderMode: 'html'` to provide
  * "renderMode-independent" API.
+=======
+/**
+ * The major feature is generate styles for `renderMode: 'richText'`.
+ * But it also serves `renderMode: 'html'` to provide
+ * "renderMode-independent" API.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var TooltipMarkupStyleCreator =
@@ -23953,6 +25856,7 @@ function () {
       return marker.content;
     }
   };
+<<<<<<< HEAD
   /**
    * @usage
    * ```ts
@@ -23967,6 +25871,22 @@ function () {
    *     }
    * ]);
    * ```
+=======
+  /**
+   * @usage
+   * ```ts
+   * const styledText = markupStyleCreator.wrapRichTextStyle([
+   *     // The styles will be auto merged.
+   *     {
+   *         fontSize: 12,
+   *         color: 'blue'
+   *     },
+   *     {
+   *         padding: 20
+   *     }
+   * ]);
+   * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24157,8 +26077,13 @@ function (_super) {
 
     this._initSelectedMapFromData(data);
   };
+<<<<<<< HEAD
   /**
    * Util for merge default and theme to option
+=======
+  /**
+   * Util for merge default and theme to option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24223,17 +26148,28 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Init a data structure from data related option in series
    * Must be overridden.
+=======
+  /**
+   * Init a data structure from data related option in series
+   * Must be overridden.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesModel.prototype.getInitialData = function (option, ecModel) {
     return;
   };
+<<<<<<< HEAD
   /**
    * Append data to list
+=======
+  /**
+   * Append data to list
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24244,11 +26180,19 @@ function (_super) {
     var data = this.getRawData();
     data.appendData(params.data);
   };
+<<<<<<< HEAD
   /**
    * Consider some method like `filter`, `map` need make new data,
    * We should make sure that `seriesModel.getData()` get correct
    * data in the stream procedure. So we fetch data from upstream
    * each time `task.perform` called.
+=======
+  /**
+   * Consider some method like `filter`, `map` need make new data,
+   * We should make sure that `seriesModel.getData()` get correct
+   * data in the stream procedure. So we fetch data from upstream
+   * each time `task.perform` called.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24316,8 +26260,13 @@ function (_super) {
   SeriesModel.prototype.getSource = function () {
     return this.getSourceManager().getSource();
   };
+<<<<<<< HEAD
   /**
    * Get data before processed
+=======
+  /**
+   * Get data before processed
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24333,11 +26282,19 @@ function (_super) {
   SeriesModel.prototype.isColorBySeries = function () {
     return this.getColorBy() === 'series';
   };
+<<<<<<< HEAD
   /**
    * Get base axis if has coordinate system and has axis.
    * By default use coordSys.getBaseAxis();
    * Can be overridden for some chart.
    * @return {type} description
+=======
+  /**
+   * Get base axis if has coordinate system and has axis.
+   * By default use coordSys.getBaseAxis();
+   * Can be overridden for some chart.
+   * @return {type} description
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24346,6 +26303,7 @@ function (_super) {
 
     return coordSys && coordSys.getBaseAxis && coordSys.getBaseAxis();
   };
+<<<<<<< HEAD
   /**
    * Default tooltip formatter
    *
@@ -24359,6 +26317,21 @@ function (_super) {
    *        DOM operation is not supported.
    * @return formatted tooltip with `html` and `markers`
    *        Notice: The override method can also return string
+=======
+  /**
+   * Default tooltip formatter
+   *
+   * @param dataIndex
+   * @param multipleSeries
+   * @param dataType
+   * @param renderMode valid values: 'html'(by default) and 'richText'.
+   *        'html' is used for rendering tooltip in extra DOM form, and the result
+   *        string is used as DOM HTML content.
+   *        'richText' is used for rendering tooltip in rich text form, for those where
+   *        DOM operation is not supported.
+   * @return formatted tooltip with `html` and `markers`
+   *        Notice: The override method can also return string
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24404,25 +26377,41 @@ function (_super) {
 
     return color;
   };
+<<<<<<< HEAD
   /**
    * Use `data.mapDimensionsAll(coordDim)` instead.
    * @deprecated
+=======
+  /**
+   * Use `data.mapDimensionsAll(coordDim)` instead.
+   * @deprecated
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesModel.prototype.coordDimToDataDim = function (coordDim) {
     return this.getRawData().mapDimensionsAll(coordDim);
   };
+<<<<<<< HEAD
   /**
    * Get progressive rendering count each step
+=======
+  /**
+   * Get progressive rendering count each step
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesModel.prototype.getProgressive = function () {
     return this.get('progressive');
   };
+<<<<<<< HEAD
   /**
    * Get progressive rendering count each step
+=======
+  /**
+   * Get progressive rendering count each step
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24603,10 +26592,17 @@ function (_super) {
 mixin(SeriesModel, DataFormatMixin);
 mixin(SeriesModel, PaletteMixin);
 mountExtend(SeriesModel, ComponentModel);
+<<<<<<< HEAD
 /**
  * MUST be called after `prepareSource` called
  * Here we need to make auto series, especially for auto legend. But we
  * do not modify series.name in option to avoid side effects.
+=======
+/**
+ * MUST be called after `prepareSource` called
+ * Here we need to make auto series, especially for auto legend. But we
+ * do not modify series.name in option to avoid side effects.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function autoSeriesName(seriesModel) {
@@ -24708,19 +26704,33 @@ function () {
 
   ComponentView.prototype.updateVisual = function (model, ecModel, api, payload) {// Do nothing;
   };
+<<<<<<< HEAD
   /**
    * Hook for toggle blur target series.
    * Can be used in marker for blur or leave blur the markers
+=======
+  /**
+   * Hook for toggle blur target series.
+   * Can be used in marker for blur or leave blur the markers
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ComponentView.prototype.toggleBlurSeries = function (seriesModels, isBlur, ecModel) {// Do nothing;
   };
+<<<<<<< HEAD
   /**
    * Traverse the new rendered elements.
    *
    * It will traverse the new added element in progressive rendering.
    * And traverse all in normal rendering.
+=======
+  /**
+   * Traverse the new rendered elements.
+   *
+   * It will traverse the new added element in progressive rendering.
+   * And traverse all in normal rendering.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24737,8 +26747,13 @@ function () {
 enableClassExtend(ComponentView);
 enableClassManagement(ComponentView);
 
+<<<<<<< HEAD
 /**
  * @return {string} If large mode changed, return string 'reset';
+=======
+/**
+ * @return {string} If large mode changed, return string 'reset';
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createRenderPlanner() {
@@ -24782,8 +26797,13 @@ function () {
       throw new Error('render method must been implemented');
     }
   };
+<<<<<<< HEAD
   /**
    * Highlight series or specified data item.
+=======
+  /**
+   * Highlight series or specified data item.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24800,8 +26820,13 @@ function () {
 
     toggleHighlight(data, payload, 'emphasis');
   };
+<<<<<<< HEAD
   /**
    * Downplay series or specified data item.
+=======
+  /**
+   * Downplay series or specified data item.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24818,16 +26843,26 @@ function () {
 
     toggleHighlight(data, payload, 'normal');
   };
+<<<<<<< HEAD
   /**
    * Remove self.
+=======
+  /**
+   * Remove self.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ChartView.prototype.remove = function (ecModel, api) {
     this.group.removeAll();
   };
+<<<<<<< HEAD
   /**
    * Dispose self.
+=======
+  /**
+   * Dispose self.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24846,11 +26881,19 @@ function () {
   ChartView.prototype.updateVisual = function (seriesModel, ecModel, api, payload) {
     this.render(seriesModel, ecModel, api, payload);
   };
+<<<<<<< HEAD
   /**
    * Traverse the new rendered elements.
    *
    * It will traverse the new added element in progressive rendering.
    * And traverse all in normal rendering.
+=======
+  /**
+   * Traverse the new rendered elements.
+   *
+   * It will traverse the new added element in progressive rendering.
+   * And traverse all in normal rendering.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -24869,8 +26912,13 @@ function () {
 
   return ChartView;
 }();
+<<<<<<< HEAD
 /**
  * Set state of single element
+=======
+/**
+ * Set state of single element
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function elSetState(el, state, highlightDigit) {
@@ -24963,6 +27011,7 @@ var progressMethodMap = {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -24980,10 +27029,30 @@ var progressMethodMap = {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var ORIGIN_METHOD = '\0__throttleOriginMethod';
 var RATE = '\0__throttleRate';
 var THROTTLE_TYPE = '\0__throttleType';
+<<<<<<< HEAD
 /**
  * @public
  * @param {(Function)} fn
@@ -24992,6 +27061,16 @@ var THROTTLE_TYPE = '\0__throttleType';
  *        true: If call interval less than `delay`, only the last call works.
  *        false: If call interval less than `delay, call works on fixed rate.
  * @return {(Function)} throttled fn.
+=======
+/**
+ * @public
+ * @param {(Function)} fn
+ * @param {number} [delay=0] Unit: ms.
+ * @param {boolean} [debounce=false]
+ *        true: If call interval less than `delay`, only the last call works.
+ *        false: If call interval less than `delay, call works on fixed rate.
+ * @return {(Function)} throttled fn.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function throttle(fn, delay, debounce) {
@@ -25046,9 +27125,15 @@ function throttle(fn, delay, debounce) {
 
     lastCall = currCall;
   };
+<<<<<<< HEAD
   /**
    * Clear throttle.
    * @public
+=======
+  /**
+   * Clear throttle.
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -25058,8 +27143,13 @@ function throttle(fn, delay, debounce) {
       timer = null;
     }
   };
+<<<<<<< HEAD
   /**
    * Enable debounce once.
+=======
+  /**
+   * Enable debounce once.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -25069,6 +27159,7 @@ function throttle(fn, delay, debounce) {
 
   return cb;
 }
+<<<<<<< HEAD
 /**
  * Create throttle method or update throttle rate.
  *
@@ -25089,6 +27180,28 @@ function throttle(fn, delay, debounce) {
  *     throttle.clear(this, '_dispatchAction');
  * };
  *
+=======
+/**
+ * Create throttle method or update throttle rate.
+ *
+ * @example
+ * ComponentView.prototype.render = function () {
+ *     ...
+ *     throttle.createOrUpdate(
+ *         this,
+ *         '_dispatchAction',
+ *         this.model.get('throttle'),
+ *         'fixRate'
+ *     );
+ * };
+ * ComponentView.prototype.remove = function () {
+ *     throttle.clear(this, '_dispatchAction');
+ * };
+ * ComponentView.prototype.dispose = function () {
+ *     throttle.clear(this, '_dispatchAction');
+ * };
+ *
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createOrUpdate(obj, fnAttr, rate, throttleType) {
@@ -25115,8 +27228,13 @@ function createOrUpdate(obj, fnAttr, rate, throttleType) {
 
   return fn;
 }
+<<<<<<< HEAD
 /**
  * Clear throttle. Example see throttle.createOrUpdate.
+=======
+/**
+ * Clear throttle. Example see throttle.createOrUpdate.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function clear(obj, fnAttr) {
@@ -25317,6 +27435,7 @@ var dataColorPaletteTask = {
 };
 
 var PI$3 = Math.PI;
+<<<<<<< HEAD
 /**
  * @param {module:echarts/ExtensionAPI} api
  * @param {Object} [opts]
@@ -25324,6 +27443,15 @@ var PI$3 = Math.PI;
  * @param {string} [opts.color]
  * @param {string} [opts.textColor]
  * @return {module:zrender/Element}
+=======
+/**
+ * @param {module:echarts/ExtensionAPI} api
+ * @param {Object} [opts]
+ * @param {string} [opts.text]
+ * @param {string} [opts.color]
+ * @param {string} [opts.textColor]
+ * @return {module:zrender/Element}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function defaultLoading(api, opts) {
@@ -25506,12 +27634,21 @@ function () {
   Scheduler.prototype.getPipeline = function (pipelineId) {
     return this._pipelineMap.get(pipelineId);
   };
+<<<<<<< HEAD
   /**
    * Current, progressive rendering starts from visual and layout.
    * Always detect render mode in the same stage, avoiding that incorrect
    * detection caused by data filtering.
    * Caution:
    * `updateStreamModes` use `seriesModel.getData()`.
+=======
+  /**
+   * Current, progressive rendering starts from visual and layout.
+   * Always detect render mode in the same stage, avoiding that incorrect
+   * detection caused by data filtering.
+   * Caution:
+   * `updateStreamModes` use `seriesModel.getData()`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -25891,12 +28028,21 @@ function makeSeriesTaskProgress(resetDefineIdx) {
 function seriesTaskCount(context) {
   return context.data.count();
 }
+<<<<<<< HEAD
 /**
  * Only some legacy stage handlers (usually in echarts extensions) are pure function.
  * To ensure that they can work normally, they should work in block mode, that is,
  * they should not be started util the previous tasks finished. So they cause the
  * progressive rendering disabled. We try to detect the series type, to narrow down
  * the block range to only the series type they concern, but not all series.
+=======
+/**
+ * Only some legacy stage handlers (usually in echarts extensions) are pure function.
+ * To ensure that they can work normally, they should work in block mode, that is,
+ * they should not be started util the previous tasks finished. So they cause the
+ * progressive rendering disabled. We try to detect the series type, to narrow down
+ * the block range to only the series type they concern, but not all series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -25961,6 +28107,7 @@ function mockMethods(target, Clz) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -25978,6 +28125,25 @@ function mockMethods(target, Clz) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var colorAll = ['#37A2DA', '#32C5E9', '#67E0E3', '#9FE6B8', '#FFDB5C', '#ff9f7f', '#fb7293', '#E062AE', '#E690D1', '#e7bcf3', '#9d96f5', '#8378EA', '#96BFFF'];
 var lightTheme = {
@@ -26009,6 +28175,7 @@ var lightTheme = {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -26026,6 +28193,25 @@ var lightTheme = {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var contrastColor = '#B9B8CE';
 var backgroundColor = '#100C2A';
@@ -26208,6 +28394,7 @@ var theme = {
 };
 theme.categoryAxis.splitLine.show = false;
 
+<<<<<<< HEAD
 /**
  * Usage of query:
  * `chart.on('click', query, handler);`
@@ -26224,6 +28411,24 @@ theme.categoryAxis.splitLine.show = false;
  *
  * Caveat: If a prop in the `query` object is `null/undefined`, it is the
  * same as there is no such prop in the `query` object.
+=======
+/**
+ * Usage of query:
+ * `chart.on('click', query, handler);`
+ * The `query` can be:
+ * + The component type query string, only `mainType` or `mainType.subType`,
+ *   like: 'xAxis', 'series', 'xAxis.category' or 'series.line'.
+ * + The component query object, like:
+ *   `{seriesIndex: 2}`, `{seriesName: 'xx'}`, `{seriesId: 'some'}`,
+ *   `{xAxisIndex: 2}`, `{xAxisName: 'xx'}`, `{xAxisId: 'some'}`.
+ * + The data query object, like:
+ *   `{dataIndex: 123}`, `{dataType: 'link'}`, `{name: 'some'}`.
+ * + The other query object (cmponent customized query), like:
+ *   `{element: 'some'}` (only available in custom series).
+ *
+ * Caveat: If a prop in the `query` object is `null/undefined`, it is the
+ * same as there is no such prop in the `query` object.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var ECEventProcessor =
@@ -26441,6 +28646,7 @@ var dataSymbolTask = {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -26458,6 +28664,25 @@ var dataSymbolTask = {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function getItemVisualFromData(data, dataIndex, key) {
   switch (key) {
@@ -26633,6 +28858,7 @@ function handleLegacySelectEvents(messageCenter, ecIns, api) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -26650,6 +28876,25 @@ function handleLegacySelectEvents(messageCenter, ecIns, api) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function findEventDispatcher(target, det, returnFirstMatch) {
   var found;
@@ -26711,9 +28956,15 @@ var WeakMap = (function () {
     return WeakMap;
 }());
 
+<<<<<<< HEAD
 /**
  * Triangle shape
  * @inner
+=======
+/**
+ * Triangle shape
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var Triangle = Path.extend({
@@ -26735,9 +28986,15 @@ var Triangle = Path.extend({
     path.closePath();
   }
 });
+<<<<<<< HEAD
 /**
  * Diamond shape
  * @inner
+=======
+/**
+ * Diamond shape
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var Diamond = Path.extend({
@@ -26760,9 +29017,15 @@ var Diamond = Path.extend({
     path.closePath();
   }
 });
+<<<<<<< HEAD
 /**
  * Pin shape
  * @inner
+=======
+/**
+ * Pin shape
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var Pin = Path.extend({
@@ -26798,9 +29061,15 @@ var Pin = Path.extend({
     path.closePath();
   }
 });
+<<<<<<< HEAD
 /**
  * Arrow shape
  * @inner
+=======
+/**
+ * Arrow shape
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var Arrow = Path.extend({
@@ -26825,8 +29094,13 @@ var Arrow = Path.extend({
     ctx.closePath();
   }
 });
+<<<<<<< HEAD
 /**
  * Map of path constructors
+=======
+/**
+ * Map of path constructors
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 // TODO Use function to build symbol path.
 
@@ -26958,8 +29232,13 @@ function symbolPathSetColor(color, innerColor) {
     this.markRedraw();
   }
 }
+<<<<<<< HEAD
 /**
  * Create a symbol element with given symbol configuration: shape, x, y, width, height, color
+=======
+/**
+ * Create a symbol element with given symbol configuration: shape, x, y, width, height, color
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -27677,11 +29956,19 @@ function brushIncremental(ctx, el, scope) {
 var decalMap = new WeakMap();
 var decalCache = new LRU(100);
 var decalKeys = ['symbol', 'symbolSize', 'symbolKeepAspect', 'color', 'backgroundColor', 'dashArrayX', 'dashArrayY', 'maxTileWidth', 'maxTileHeight'];
+<<<<<<< HEAD
 /**
  * Create or update pattern image from decal options
  *
  * @param {InnerDecalObject | 'none'} decalObject decal options, 'none' if no decal
  * @return {Pattern} pattern with generated image, null if no decal
+=======
+/**
+ * Create or update pattern image from decal options
+ *
+ * @param {InnerDecalObject | 'none'} decalObject decal options, 'none' if no decal
+ * @return {Pattern} pattern with generated image, null if no decal
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createOrUpdatePatternFromDecal(decalObject, api) {
@@ -27787,6 +30074,7 @@ function createOrUpdatePatternFromDecal(decalObject, api) {
     pattern.svgElement = svgRoot;
     pattern.svgWidth = pSize.width;
     pattern.svgHeight = pSize.height;
+<<<<<<< HEAD
     /**
      * Get minimum length that can make a repeatable pattern.
      *
@@ -27804,6 +30092,25 @@ function createOrUpdatePatternFromDecal(decalObject, api) {
        * which is the least common multiple of `3 + 2` and `2 + 1`
        * |---  ---  ---  |---  --- ...
        * |-- -- -- -- -- |-- -- -- ...
+=======
+    /**
+     * Get minimum length that can make a repeatable pattern.
+     *
+     * @return {Object} pattern width and height
+     */
+
+    function getPatternSize() {
+      /**
+       * For example, if dash is [[3, 2], [2, 1]] for X, it looks like
+       * |---  ---  ---  ---  --- ...
+       * |-- -- -- -- -- -- -- -- ...
+       * |---  ---  ---  ---  --- ...
+       * |-- -- -- -- -- -- -- -- ...
+       * So the minimum length of X is 15,
+       * which is the least common multiple of `3 + 2` and `2 + 1`
+       * |---  ---  ---  |---  --- ...
+       * |-- -- -- -- -- |-- -- -- ...
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       var width = 1;
 
@@ -27940,11 +30247,19 @@ function createOrUpdatePatternFromDecal(decalObject, api) {
     }
   }
 }
+<<<<<<< HEAD
 /**
  * Convert symbol array into normalized array
  *
  * @param {string | (string | string[])[]} symbol symbol input
  * @return {string[][]} normolized symbol array
+=======
+/**
+ * Convert symbol array into normalized array
+ *
+ * @param {string | (string | string[])[]} symbol symbol input
+ * @return {string[][]} normolized symbol array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function normalizeSymbolArray(symbol) {
@@ -27981,11 +30296,19 @@ function normalizeSymbolArray(symbol) {
 
   return result;
 }
+<<<<<<< HEAD
 /**
  * Convert dash input into dashArray
  *
  * @param {DecalDashArrayX} dash dash input
  * @return {number[][]} normolized dash array
+=======
+/**
+ * Convert dash input into dashArray
+ *
+ * @param {DecalDashArrayX} dash dash input
+ * @return {number[][]} normolized dash array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -27998,9 +30321,15 @@ function normalizeDashArrayX(dash) {
     var dashValue = Math.ceil(dash);
     return [[dashValue, dashValue]];
   }
+<<<<<<< HEAD
   /**
    * [20, 5] should be normalized into [[20, 5]],
    * while [20, [5, 10]] should be normalized into [[20, 20], [5, 10]]
+=======
+  /**
+   * [20, 5] should be normalized into [[20, 5]],
+   * while [20, [5, 10]] should be normalized into [[20, 20], [5, 10]]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28040,11 +30369,19 @@ function normalizeDashArrayX(dash) {
 
   return result;
 }
+<<<<<<< HEAD
 /**
  * Convert dash input into dashArray
  *
  * @param {DecalDashArrayY} dash dash input
  * @return {number[]} normolized dash array
+=======
+/**
+ * Convert dash input into dashArray
+ *
+ * @param {DecalDashArrayY} dash dash input
+ * @return {number[]} normolized dash array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -28063,6 +30400,7 @@ function normalizeDashArrayY(dash) {
   });
   return dash.length % 2 ? dashValue.concat(dashValue) : dashValue;
 }
+<<<<<<< HEAD
 /**
  * Get block length of each line. A block is the length of dash line and space.
  * For example, a line with [4, 1] has a dash line of 4 and a space of 1 after
@@ -28070,6 +30408,15 @@ function normalizeDashArrayY(dash) {
  *
  * @param {number[][]} dash dash array of X or Y
  * @return {number[]} block length of each line
+=======
+/**
+ * Get block length of each line. A block is the length of dash line and space.
+ * For example, a line with [4, 1] has a dash line of 4 and a space of 1 after
+ * that, so the block length of this line is 5.
+ *
+ * @param {number[][]} dash dash array of X or Y
+ * @return {number[]} block length of each line
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -28523,8 +30870,13 @@ function (_super) {
       triggerUpdatedEvent.call(this, silent);
     }
   };
+<<<<<<< HEAD
   /**
    * @deprecated
+=======
+  /**
+   * @deprecated
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28554,9 +30906,15 @@ function (_super) {
     /* eslint-disable-next-line */
     || env.hasGlobalWindow && window.devicePixelRatio || 1;
   };
+<<<<<<< HEAD
   /**
    * Get canvas which has all thing rendered
    * @deprecated Use renderToCanvas instead.
+=======
+  /**
+   * Get canvas which has all thing rendered
+   * @deprecated Use renderToCanvas instead.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28598,8 +30956,13 @@ function (_super) {
       useViewBox: opts.useViewBox
     });
   };
+<<<<<<< HEAD
   /**
    * Get svg data url
+=======
+  /**
+   * Get svg data url
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28752,10 +31115,17 @@ function (_super) {
   ECharts.prototype.convertFromPixel = function (finder, value) {
     return doConvertPixel(this, 'convertFromPixel', finder, value);
   };
+<<<<<<< HEAD
   /**
    * Is the specified coordinate systems or components contain the given pixel point.
    * @param {Array|number} value
    * @return {boolean} result
+=======
+  /**
+   * Is the specified coordinate systems or components contain the given pixel point.
+   * @param {Array|number} value
+   * @return {boolean} result
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28793,6 +31163,7 @@ function (_super) {
     }, this);
     return !!result;
   };
+<<<<<<< HEAD
   /**
    * Get visual from series or data.
    * @param finder
@@ -28807,6 +31178,22 @@ function (_super) {
    *        If all of seriesIndex, seriesId, seriesName are not specified,
    *        visual will be fetched from first series.
    * @param visualType 'color', 'symbol', 'symbolSize'
+=======
+  /**
+   * Get visual from series or data.
+   * @param finder
+   *        If string, e.g., 'series', means {seriesIndex: 0}.
+   *        If Object, could contain some of these properties below:
+   *        {
+   *            seriesIndex / seriesId / seriesName,
+   *            dataIndex / dataIndexInside
+   *        }
+   *        If dataIndex is not specified, series visual will be fetched,
+   *        but not data item visual.
+   *        If all of seriesIndex, seriesId, seriesName are not specified,
+   *        visual will be fetched from first series.
+   * @param visualType 'color', 'symbol', 'symbolSize'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28827,16 +31214,26 @@ function (_super) {
     var dataIndexInside = parsedFinder.hasOwnProperty('dataIndexInside') ? parsedFinder.dataIndexInside : parsedFinder.hasOwnProperty('dataIndex') ? data.indexOfRawIndex(parsedFinder.dataIndex) : null;
     return dataIndexInside != null ? getItemVisualFromData(data, dataIndexInside, visualType) : getVisualFromData(data, visualType);
   };
+<<<<<<< HEAD
   /**
    * Get view of corresponding component model
+=======
+  /**
+   * Get view of corresponding component model
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ECharts.prototype.getViewOfComponentModel = function (componentModel) {
     return this._componentsMap[componentModel.__viewId];
   };
+<<<<<<< HEAD
   /**
    * Get view of corresponding series model
+=======
+  /**
+   * Get view of corresponding series model
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -28987,8 +31384,13 @@ function (_super) {
     chart._dom = chart._model = chart._chartsMap = chart._componentsMap = chart._chartsViews = chart._componentsViews = chart._scheduler = chart._api = chart._zr = chart._throttledZrFlush = chart._theme = chart._coordSysMgr = chart._messageCenter = null;
     delete instances$1[chart.id];
   };
+<<<<<<< HEAD
   /**
    * Resize the chart
+=======
+  /**
+   * Resize the chart
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -29078,8 +31480,13 @@ function (_super) {
     this._loadingFX = el;
     zr.add(el);
   };
+<<<<<<< HEAD
   /**
    * Hide loading effect
+=======
+  /**
+   * Hide loading effect
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -29098,6 +31505,7 @@ function (_super) {
     payload.type = eventActionMap[eventObj.type];
     return payload;
   };
+<<<<<<< HEAD
   /**
    * @param opt If pass boolean, means opt.silent
    * @param opt.silent Default `false`. Whether trigger events.
@@ -29106,6 +31514,16 @@ function (_super) {
    *            immediately. Caution: it might affect performance.
    *        false: Not flush.
    *        undefined: Auto decide whether perform flush.
+=======
+  /**
+   * @param opt If pass boolean, means opt.silent
+   * @param opt.silent Default `false`. Whether trigger events.
+   * @param opt.flush Default `undefined`.
+   *        true: Flush immediately, and then pixel in canvas can be fetched
+   *            immediately. Caution: it might affect performance.
+   *        false: Not flush.
+   *        undefined: Auto decide whether perform flush.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -29201,8 +31619,13 @@ function (_super) {
       prepareView(ecIns, false);
       scheduler.plan();
     };
+<<<<<<< HEAD
     /**
      * Prepare view instances of charts and components
+=======
+    /**
+     * Prepare view instances of charts and components
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -29697,6 +32120,7 @@ function (_super) {
     triggerUpdatedEvent = function (silent) {
       !silent && this.trigger('updated');
     };
+<<<<<<< HEAD
     /**
      * Event `rendered` is triggered when zr
      * rendered. It is useful for realtime
@@ -29708,6 +32132,19 @@ function (_super) {
      * (3) progressive rendering finished.
      * (4) no pending action.
      * (5) no delayed setOption needs to be processed.
+=======
+    /**
+     * Event `rendered` is triggered when zr
+     * rendered. It is useful for realtime
+     * snapshot (reflect animation).
+     *
+     * Event `finished` is triggered when:
+     * (1) zrender rendering finished.
+     * (2) initial animation finished.
+     * (3) progressive rendering finished.
+     * (4) no pending action.
+     * (5) no delayed setOption needs to be processed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -29855,8 +32292,13 @@ function (_super) {
         updateStates(componentModel, componentView);
       });
     };
+<<<<<<< HEAD
     /**
      * Render each chart and component
+=======
+    /**
+     * Render each chart and component
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -29985,8 +32427,13 @@ function (_super) {
         });
       }
     }
+<<<<<<< HEAD
     /**
      * Update chart and blend.
+=======
+    /**
+     * Update chart and blend.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function updateBlend(seriesModel, chartView) {
@@ -30255,8 +32702,13 @@ function (_super) {
 var echartsProto = ECharts.prototype;
 echartsProto.on = createRegisterEventWithLowercaseECharts('on');
 echartsProto.off = createRegisterEventWithLowercaseECharts('off');
+<<<<<<< HEAD
 /**
  * @deprecated
+=======
+/**
+ * @deprecated
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 // @ts-ignore
 
@@ -30288,8 +32740,13 @@ function disposedWarning(id) {
 }
 
 var actions = {};
+<<<<<<< HEAD
 /**
  * Map eventType to actionType
+=======
+/**
+ * Map eventType to actionType
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var eventActionMap = {};
@@ -30303,6 +32760,7 @@ var connectedGroups = {};
 var idBase = +new Date() - 0;
 var groupIdBase = +new Date() - 0;
 var DOM_ATTRIBUTE_KEY = '_echarts_instance_';
+<<<<<<< HEAD
 /**
  * @param opts.devicePixelRatio Use window.devicePixelRatio by default
  * @param opts.renderer Can choose 'canvas' or 'svg' to render the chart.
@@ -30312,6 +32770,17 @@ var DOM_ATTRIBUTE_KEY = '_echarts_instance_';
  *        Can be 'auto' (the same as null/undefined)
  * @param opts.locale Specify the locale.
  * @param opts.useDirtyRect Enable dirty rectangle rendering or not.
+=======
+/**
+ * @param opts.devicePixelRatio Use window.devicePixelRatio by default
+ * @param opts.renderer Can choose 'canvas' or 'svg' to render the chart.
+ * @param opts.width Use clientWidth of the input `dom` by default.
+ *        Can be 'auto' (the same as null/undefined)
+ * @param opts.height Use clientHeight of the input `dom` by default.
+ *        Can be 'auto' (the same as null/undefined)
+ * @param opts.locale Specify the locale.
+ * @param opts.useDirtyRect Enable dirty rectangle rendering or not.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function init$1(dom, theme, opts) {
@@ -30349,6 +32818,7 @@ function init$1(dom, theme, opts) {
   lifecycle.trigger('afterinit', chart);
   return chart;
 }
+<<<<<<< HEAD
 /**
  * @usage
  * (A)
@@ -30365,6 +32835,24 @@ function init$1(dom, theme, opts) {
  * let chart2 = echarts.init(dom2);
  * echarts.connect('xxx', [chart1, chart2]);
  * ```
+=======
+/**
+ * @usage
+ * (A)
+ * ```js
+ * let chart1 = echarts.init(dom1);
+ * let chart2 = echarts.init(dom2);
+ * chart1.group = 'xxx';
+ * chart2.group = 'xxx';
+ * echarts.connect('xxx');
+ * ```
+ * (B)
+ * ```js
+ * let chart1 = echarts.init(dom1);
+ * let chart2 = echarts.init(dom2);
+ * echarts.connect('xxx', [chart1, chart2]);
+ * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function connect(groupId) {
@@ -30390,6 +32878,7 @@ function connect(groupId) {
 function disconnect(groupId) {
   connectedGroups[groupId] = false;
 }
+<<<<<<< HEAD
 /**
  * Alias and backward compatibility
  * @deprecated
@@ -30398,6 +32887,16 @@ function disconnect(groupId) {
 var disConnect = disconnect;
 /**
  * Dispose a chart instance
+=======
+/**
+ * Alias and backward compatibility
+ * @deprecated
+ */
+
+var disConnect = disconnect;
+/**
+ * Dispose a chart instance
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function dispose$1(chart) {
@@ -30418,15 +32917,25 @@ function getInstanceByDom(dom) {
 function getInstanceById(key) {
   return instances$1[key];
 }
+<<<<<<< HEAD
 /**
  * Register theme
+=======
+/**
+ * Register theme
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function registerTheme(name, theme) {
   themeStorage[name] = theme;
 }
+<<<<<<< HEAD
 /**
  * Register option preprocessor
+=======
+/**
+ * Register option preprocessor
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function registerPreprocessor(preprocessorFunc) {
@@ -30437,17 +32946,29 @@ function registerPreprocessor(preprocessorFunc) {
 function registerProcessor(priority, processor) {
   normalizeRegister(dataProcessorFuncs, priority, processor, PRIORITY_PROCESSOR_DEFAULT);
 }
+<<<<<<< HEAD
 /**
  * Register postIniter
  * @param {Function} postInitFunc
+=======
+/**
+ * Register postIniter
+ * @param {Function} postInitFunc
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function registerPostInit(postInitFunc) {
   registerUpdateLifecycle('afterinit', postInitFunc);
 }
+<<<<<<< HEAD
 /**
  * Register postUpdater
  * @param {Function} postUpdateFunc
+=======
+/**
+ * Register postUpdater
+ * @param {Function} postUpdateFunc
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function registerPostUpdate(postUpdateFunc) {
@@ -30489,10 +33010,17 @@ function registerAction(actionInfo, eventName, action) {
 function registerCoordinateSystem(type, coordSysCreator) {
   CoordinateSystemManager.register(type, coordSysCreator);
 }
+<<<<<<< HEAD
 /**
  * Get dimensions of specified coordinate system.
  * @param {string} type
  * @return {Array.<string|Object>}
+=======
+/**
+ * Get dimensions of specified coordinate system.
+ * @param {string} type
+ * @return {Array.<string|Object>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getCoordinateSystemDimensions(type) {
@@ -30544,6 +33072,7 @@ function normalizeRegister(targetList, priority, fn, defaultPriority, visualType
 function registerLoading(name, loadingFx) {
   loadingEffects[name] = loadingFx;
 }
+<<<<<<< HEAD
 /**
  * ZRender need a canvas context to do measureText.
  * But in node environment canvas may be created by node-canvas.
@@ -30559,6 +33088,23 @@ function registerLoading(name, loadingFx) {
  *         // Small size is enough.
  *         return new Canvas(32, 32);
  *     });
+=======
+/**
+ * ZRender need a canvas context to do measureText.
+ * But in node environment canvas may be created by node-canvas.
+ * So we need to specify how to create a canvas instead of using document.createElement('canvas')
+ *
+ *
+ * @deprecated use setPlatformAPI({ createCanvas }) instead.
+ *
+ * @example
+ *     let Canvas = require('canvas');
+ *     let echarts = require('echarts');
+ *     echarts.setCanvasCreator(function () {
+ *         // Small size is enough.
+ *         return new Canvas(32, 32);
+ *     });
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function setCanvasCreator(creator) {
@@ -30570,9 +33116,15 @@ function setCanvasCreator(creator) {
     createCanvas: creator
   });
 }
+<<<<<<< HEAD
 /**
  * The parameters and usage: see `geoSourceManager.registerMap`.
  * Compatible with previous `echarts.registerMap`.
+=======
+/**
+ * The parameters and usage: see `geoSourceManager.registerMap`.
+ * Compatible with previous `echarts.registerMap`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function registerMap(mapName, geoJson, specialAreas) {
@@ -30584,8 +33136,13 @@ function getMap(mapName) {
   return getMap && getMap(mapName);
 }
 var registerTransform = registerExternalTransform;
+<<<<<<< HEAD
 /**
  * Globa dispatchAction to a specified chart instance.
+=======
+/**
+ * Globa dispatchAction to a specified chart instance.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 // export function dispatchAction(payload: { chartId: string } & Payload, opt?: Parameters<ECharts['dispatchAction']>[1]) {
 //     if (!payload || !payload.chartId) {
@@ -30729,6 +33286,7 @@ function use(ext) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -30746,6 +33304,25 @@ function use(ext) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function dataIndexMapValueLength(valNumOrArrLengthMoreThan2) {
   return valNumOrArrLengthMoreThan2 == null ? 0 : valNumOrArrLengthMoreThan2.length || 1;
@@ -30758,8 +33335,13 @@ function defaultKeyGetter(item) {
 var DataDiffer =
 /** @class */
 function () {
+<<<<<<< HEAD
   /**
    * @param context Can be visited by this.context in callback.
+=======
+  /**
+   * @param context Can be visited by this.context in callback.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   function DataDiffer(oldArr, newArr, oldKeyGetter, newKeyGetter, context, // By default: 'oneToOne'.
   diffMode) {
@@ -30771,8 +33353,13 @@ function () {
     this.context = context;
     this._diffModeMultiple = diffMode === 'multiple';
   }
+<<<<<<< HEAD
   /**
    * Callback function when add a data
+=======
+  /**
+   * Callback function when add a data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -30780,8 +33367,13 @@ function () {
     this._add = func;
     return this;
   };
+<<<<<<< HEAD
   /**
    * Callback function when update a data
+=======
+  /**
+   * Callback function when update a data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -30789,8 +33381,13 @@ function () {
     this._update = func;
     return this;
   };
+<<<<<<< HEAD
   /**
    * Callback function when update a data and only work in `cbMode: 'byKey'`.
+=======
+  /**
+   * Callback function when update a data and only work in `cbMode: 'byKey'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -30798,8 +33395,13 @@ function () {
     this._updateManyToOne = func;
     return this;
   };
+<<<<<<< HEAD
   /**
    * Callback function when update a data and only work in `cbMode: 'byKey'`.
+=======
+  /**
+   * Callback function when update a data and only work in `cbMode: 'byKey'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -30807,8 +33409,13 @@ function () {
     this._updateOneToMany = func;
     return this;
   };
+<<<<<<< HEAD
   /**
    * Callback function when update a data and only work in `cbMode: 'byKey'`.
+=======
+  /**
+   * Callback function when update a data and only work in `cbMode: 'byKey'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -30816,8 +33423,13 @@ function () {
     this._updateManyToMany = func;
     return this;
   };
+<<<<<<< HEAD
   /**
    * Callback function when remove a data
+=======
+  /**
+   * Callback function when remove a data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -30866,6 +33478,7 @@ function () {
 
     this._performRestAdd(newDataKeyArr, newDataIndexMap);
   };
+<<<<<<< HEAD
   /**
    * For example, consider the case:
    * oldData: [o0, o1, o2, o3, o4, o5, o6, o7],
@@ -30890,6 +33503,32 @@ function () {
    *     this._add(n3);
    *     this._add(n7);
    *     this._add(n8);
+=======
+  /**
+   * For example, consider the case:
+   * oldData: [o0, o1, o2, o3, o4, o5, o6, o7],
+   * newData: [n0, n1, n2, n3, n4, n5, n6, n7, n8],
+   * Where:
+   *     o0, o1, n0 has key 'a' (many to one)
+   *     o5, n4, n5, n6 has key 'b' (one to many)
+   *     o2, n1 has key 'c' (one to one)
+   *     n2, n3 has key 'd' (add)
+   *     o3, o4 has key 'e' (remove)
+   *     o6, o7, n7, n8 has key 'f' (many to many, treated as add and remove)
+   * Then:
+   *     (The order of the following directives are not ensured.)
+   *     this._updateManyToOne(n0, [o0, o1]);
+   *     this._updateOneToMany([n4, n5, n6], o5);
+   *     this._update(n1, o2);
+   *     this._remove(o3);
+   *     this._remove(o4);
+   *     this._remove(o6);
+   *     this._remove(o7);
+   *     this._add(n2);
+   *     this._add(n3);
+   *     this._add(n7);
+   *     this._add(n8);
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31011,12 +33650,21 @@ function () {
       encode: this._encode
     };
   };
+<<<<<<< HEAD
   /**
    * Get all data store dimension names.
    * Theoretically a series data store is defined both by series and used dataset (if any).
    * If some dimensions are omitted for performance reason in `this.dimensions`,
    * the dimension name may not be auto-generated if user does not specify a dimension name.
    * In this case, the dimension name is `null`/`undefined`.
+=======
+  /**
+   * Get all data store dimension names.
+   * Theoretically a series data store is defined both by series and used dataset (if any).
+   * If some dimensions are omitted for performance reason in `this.dimensions`,
+   * the dimension name may not be auto-generated if user does not specify a dimension name.
+   * In this case, the dimension name is `null`/`undefined`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31146,6 +33794,7 @@ function mayLabelDimType(dimType) {
 var SeriesDimensionDefine =
 /** @class */
 function () {
+<<<<<<< HEAD
   /**
    * @param opt All of the fields will be shallow copied.
    */
@@ -31182,6 +33831,44 @@ function () {
      * ```
      *
      * This prop should never be `null`/`undefined` after initialized.
+=======
+  /**
+   * @param opt All of the fields will be shallow copied.
+   */
+  function SeriesDimensionDefine(opt) {
+    /**
+     * The format of `otherDims` is:
+     * ```js
+     * {
+     *     tooltip?: number
+     *     label?: number
+     *     itemName?: number
+     *     seriesName?: number
+     * }
+     * ```
+     *
+     * A `series.encode` can specified these fields:
+     * ```js
+     * encode: {
+     *     // "3, 1, 5" is the index of data dimension.
+     *     tooltip: [3, 1, 5],
+     *     label: [0, 3],
+     *     ...
+     * }
+     * ```
+     * `otherDims` is the parse result of the `series.encode` above, like:
+     * ```js
+     * // Suppose the index of this data dimension is `3`.
+     * this.otherDims = {
+     *     // `3` is at the index `0` of the `encode.tooltip`
+     *     tooltip: 0,
+     *     // `3` is at the index `1` of the `encode.label`
+     *     label: 1
+     * };
+     * ```
+     *
+     * This prop should never be `null`/`undefined` after initialized.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     this.otherDims = {};
 
@@ -31201,6 +33888,7 @@ var dimTypeShort = {
   number: 'n',
   time: 't'
 };
+<<<<<<< HEAD
 /**
  * Represents the dimension requirement of a series.
  *
@@ -31211,6 +33899,18 @@ var dimTypeShort = {
  * In this case, users can only query data if and only if they have defined dimension names
  * via ec option, so we provide `getDimensionIndexFromSource`, which only query them from
  * `source` dimensions.
+=======
+/**
+ * Represents the dimension requirement of a series.
+ *
+ * NOTICE:
+ * When there are too many dimensions in dataset and many series, only the used dimensions
+ * (i.e., used by coord sys and declared in `series.encode`) are add to `dimensionDefineList`.
+ * But users may query data by other unused dimension names.
+ * In this case, users can only query data if and only if they have defined dimension names
+ * via ec option, so we provide `getDimensionIndexFromSource`, which only query them from
+ * `source` dimensions.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var SeriesDataSchema =
@@ -31240,22 +33940,38 @@ function () {
       this._dimNameMap = ensureSourceDimNameMap(this.source);
     }
   };
+<<<<<<< HEAD
   /**
    * @caution Can only be used when `dimensionOmitted: true`.
    *
    * Get index by user defined dimension name (i.e., not internal generate name).
    * That is, get index from `dimensionsDefine`.
    * If no `dimensionsDefine`, or no name get, return -1.
+=======
+  /**
+   * @caution Can only be used when `dimensionOmitted: true`.
+   *
+   * Get index by user defined dimension name (i.e., not internal generate name).
+   * That is, get index from `dimensionsDefine`.
+   * If no `dimensionsDefine`, or no name get, return -1.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesDataSchema.prototype.getSourceDimensionIndex = function (dimName) {
     return retrieve2(this._dimNameMap.get(dimName), -1);
   };
+<<<<<<< HEAD
   /**
    * @caution Can only be used when `dimensionOmitted: true`.
    *
    * Notice: may return `null`/`undefined` if user not specify dimension names.
+=======
+  /**
+   * @caution Can only be used when `dimensionOmitted: true`.
+   *
+   * Notice: may return `null`/`undefined` if user not specify dimension names.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31424,10 +34140,17 @@ var makeIdFromName;
 var SeriesData =
 /** @class */
 function () {
+<<<<<<< HEAD
   /**
    * @param dimensionsInput.dimensions
    *        For example, ['someDimName', {name: 'someDimName', type: 'someDimType'}, ...].
    *        Dimensions should be concrete names like x, y, z, lng, lat, angle, radius
+=======
+  /**
+   * @param dimensionsInput.dimensions
+   *        For example, ['someDimName', {name: 'someDimName', type: 'someDimType'}, ...].
+   *        Dimensions should be concrete names like x, y, z, lng, lat, angle, radius
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   function SeriesData(dimensionsInput, hostModel) {
     this.type = 'list';
@@ -31538,6 +34261,7 @@ function () {
       });
     }
   }
+<<<<<<< HEAD
   /**
    *
    * Get concrete dimension name by dimension name or dimension index.
@@ -31554,6 +34278,24 @@ function () {
    * ```
    *
    * @return Concrete dim name.
+=======
+  /**
+   *
+   * Get concrete dimension name by dimension name or dimension index.
+   * If input a dimension name, do not validate whether the dimension name exits.
+   *
+   * @caution
+   * @param dim Must make sure the dimension is `SeriesDimensionLoose`.
+   * Because only those dimensions will have auto-generated dimension names if not
+   * have a user-specified name, and other dimensions will get a return of null/undefined.
+   *
+   * @notice Because of this reason, should better use `getDimensionIndex` instead, for examples:
+   * ```js
+   * const val = data.getStore().get(data.getDimensionIndex(dim), dataIdx);
+   * ```
+   *
+   * @return Concrete dim name.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31584,9 +34326,15 @@ function () {
       return sourceDimDef.name;
     }
   };
+<<<<<<< HEAD
   /**
    * Get dimension index in data store. Return -1 if not found.
    * Can be used to index value from getRawValue.
+=======
+  /**
+   * Get dimension index in data store. Return -1 if not found.
+   * Can be used to index value from getRawValue.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31605,6 +34353,7 @@ function () {
 
     return dimInfo ? dimInfo.storeDimIndex : this._dimOmitted ? this._schema.getSourceDimensionIndex(dim) : -1;
   };
+<<<<<<< HEAD
   /**
    * The meanings of the input parameter `dim`:
    *
@@ -31623,6 +34372,26 @@ function () {
    *   or customized in `dimensions` property of option like `"age"`.
    *
    * @return recognized `DimensionIndex`. Otherwise return null/undefined (means that dim is `DimensionName`).
+=======
+  /**
+   * The meanings of the input parameter `dim`:
+   *
+   * + If dim is a number (e.g., `1`), it means the index of the dimension.
+   *   For example, `getDimension(0)` will return 'x' or 'lng' or 'radius'.
+   * + If dim is a number-like string (e.g., `"1"`):
+   *     + If there is the same concrete dim name defined in `series.dimensions` or `dataset.dimensions`,
+   *        it means that concrete name.
+   *     + If not, it will be converted to a number, which means the index of the dimension.
+   *        (why? because of the backward compatibility. We have been tolerating number-like string in
+   *        dimension setting, although now it seems that it is not a good idea.)
+   *     For example, `visualMap[i].dimension: "1"` is the same meaning as `visualMap[i].dimension: 1`,
+   *     if no dimension name is defined as `"1"`.
+   * + If dim is a not-number-like string, it means the concrete dim name.
+   *   For example, it can be be default name `"x"`, `"y"`, `"z"`, `"lng"`, `"lat"`, `"angle"`, `"radius"`,
+   *   or customized in `dimensions` property of option like `"age"`.
+   *
+   * @return recognized `DimensionIndex`. Otherwise return null/undefined (means that dim is `DimensionName`).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31644,11 +34413,19 @@ function () {
 
     return dimIdx;
   };
+<<<<<<< HEAD
   /**
    * Get type and calculation info of particular dimension
    * @param dim
    *        Dimension can be concrete names like x, y, z, lng, lat, angle, radius
    *        Or a ordinal number. For example getDimensionInfo(0) will return 'x' or 'lng' or 'radius'
+=======
+  /**
+   * Get type and calculation info of particular dimension
+   * @param dim
+   *        Dimension can be concrete names like x, y, z, lng, lat, angle, radius
+   *        Or a ordinal number. For example getDimensionInfo(0) will return 'x' or 'lng' or 'radius'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31665,8 +34442,13 @@ function () {
       return dimensionInfos[dimName];
     };
   };
+<<<<<<< HEAD
   /**
    * concrete dimension name list on coord.
+=======
+  /**
+   * concrete dimension name list on coord.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31694,6 +34476,7 @@ function () {
   SeriesData.prototype.getStore = function () {
     return this._store;
   };
+<<<<<<< HEAD
   /**
    * Initialize from data
    * @param data source or data or data store.
@@ -31702,6 +34485,16 @@ function () {
    *        A name can be specified in encode.itemName,
    *        or dataItem.name (only for series option data),
    *        or provided in nameList from outside.
+=======
+  /**
+   * Initialize from data
+   * @param data source or data or data store.
+   * @param nameList The name of a datum is used on data diff and
+   *        default label/tooltip.
+   *        A name can be specified in encode.itemName,
+   *        or dataItem.name (only for series option data),
+   *        or provided in nameList from outside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31740,8 +34533,13 @@ function () {
     this._dimSummary = summarizeDimensions(this, this._schema);
     this.userOutput = this._dimSummary.userOutput;
   };
+<<<<<<< HEAD
   /**
    * Caution: Can be only called on raw data (before `this._indices` created).
+=======
+  /**
+   * Caution: Can be only called on raw data (before `this._indices` created).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31750,6 +34548,7 @@ function () {
 
     this._doInit(range[0], range[1]);
   };
+<<<<<<< HEAD
   /**
    * Caution: Can be only called on raw data (before `this._indices` created).
    * This method does not modify `rawData` (`dataProvider`), but only
@@ -31764,6 +34563,22 @@ function () {
    *            ['-', 'asdf', 0]
    *        ]
    *        Each item is exactly corresponding to a dimension.
+=======
+  /**
+   * Caution: Can be only called on raw data (before `this._indices` created).
+   * This method does not modify `rawData` (`dataProvider`), but only
+   * add values to store.
+   *
+   * The final count will be increased by `Math.max(values.length, names.length)`.
+   *
+   * @param values That is the SourceType: 'arrayRows', like
+   *        [
+   *            [12, 33, 44],
+   *            [NaN, 43, 1],
+   *            ['-', 'asdf', 0]
+   *        ]
+   *        Each item is exactly corresponding to a dimension.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31864,6 +34679,7 @@ function () {
 
     prepareInvertedIndex(this);
   };
+<<<<<<< HEAD
   /**
    * PENDING: In fact currently this function is only used to short-circuit
    * the calling of `scale.unionExtentFromData` when data have been filtered by modules
@@ -31877,15 +34693,36 @@ function () {
    * Consider that if data amount is more than hundreds of thousand,
    * extent calculation will cost more than 10ms and the cache will
    * be erased because of the filtering.
+=======
+  /**
+   * PENDING: In fact currently this function is only used to short-circuit
+   * the calling of `scale.unionExtentFromData` when data have been filtered by modules
+   * like "dataZoom". `scale.unionExtentFromData` is used to calculate data extent for series on
+   * an axis, but if a "axis related data filter module" is used, the extent of the axis have
+   * been fixed and no need to calling `scale.unionExtentFromData` actually.
+   * But if we add "custom data filter" in future, which is not "axis related", this method may
+   * be still needed.
+   *
+   * Optimize for the scenario that data is filtered by a given extent.
+   * Consider that if data amount is more than hundreds of thousand,
+   * extent calculation will cost more than 10ms and the cache will
+   * be erased because of the filtering.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesData.prototype.getApproximateExtent = function (dim) {
     return this._approximateExtent[dim] || this._store.getDataExtent(this._getStoreDimIndex(dim));
   };
+<<<<<<< HEAD
   /**
    * Calculate extent on a filtered data might be time consuming.
    * Approximate extent is only used for: calculate extent of filtered data outside.
+=======
+  /**
+   * Calculate extent on a filtered data might be time consuming.
+   * Approximate extent is only used for: calculate extent of filtered data outside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31901,11 +34738,19 @@ function () {
   SeriesData.prototype.setCalculationInfo = function (key, value) {
     isObject$2(key) ? extend(this._calculationInfo, key) : this._calculationInfo[key] = value;
   };
+<<<<<<< HEAD
   /**
    * @return Never be null/undefined. `number` will be converted to string. Because:
    * In most cases, name is used in display, where returning a string is more convenient.
    * In other cases, name is used in query (see `indexOfName`), where we can keep the
    * rule that name `2` equals to name `'2'`.
+=======
+  /**
+   * @return Never be null/undefined. `number` will be converted to string. Because:
+   * In most cases, name is used in display, where returning a string is more convenient.
+   * In other cases, name is used in query (see `indexOfName`), where we can keep the
+   * rule that name `2` equals to name `'2'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31935,11 +34780,19 @@ function () {
 
     return ordinal;
   };
+<<<<<<< HEAD
   /**
    * @return Never null/undefined. `number` will be converted to string. Because:
    * In all cases having encountered at present, id is used in making diff comparison, which
    * are usually based on hash map. We can keep the rule that the internal id are always string
    * (treat `2` is the same as `'2'`) to make the related logic simple.
+=======
+  /**
+   * @return Never null/undefined. `number` will be converted to string. Because:
+   * In all cases having encountered at present, id is used in making diff comparison, which
+   * are usually based on hash map. We can keep the rule that the internal id are always string
+   * (treat `2` is the same as `'2'`) to make the related logic simple.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31950,10 +34803,17 @@ function () {
   SeriesData.prototype.count = function () {
     return this._store.count();
   };
+<<<<<<< HEAD
   /**
    * Get value. Return NaN if idx is out of range.
    *
    * @notice Should better to use `data.getStore().get(dimIndex, dataIdx)` instead.
+=======
+  /**
+   * Get value. Return NaN if idx is out of range.
+   *
+   * @notice Should better to use `data.getStore().get(dimIndex, dataIdx)` instead.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -31965,8 +34825,13 @@ function () {
       return store.get(dimInfo.storeDimIndex, idx);
     }
   };
+<<<<<<< HEAD
   /**
    * @notice Should better to use `data.getStore().getByRawIndex(dimIndex, dataIdx)` instead.
+=======
+  /**
+   * @notice Should better to use `data.getStore().getByRawIndex(dimIndex, dataIdx)` instead.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32003,9 +34868,15 @@ function () {
       return _this._getStoreDimIndex(dim);
     }), idx) : store.getValues(dimensions);
   };
+<<<<<<< HEAD
   /**
    * If value is NaN. Including '-'
    * Only check the coord dimensions.
+=======
+  /**
+   * If value is NaN. Including '-'
+   * Only check the coord dimensions.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32023,8 +34894,13 @@ function () {
 
     return true;
   };
+<<<<<<< HEAD
   /**
    * Retrieve the index with given name
+=======
+  /**
+   * Retrieve the index with given name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32045,12 +34921,21 @@ function () {
   SeriesData.prototype.indexOfRawIndex = function (rawIndex) {
     return this._store.indexOfRawIndex(rawIndex);
   };
+<<<<<<< HEAD
   /**
    * Only support the dimension which inverted index created.
    * Do not support other cases until required.
    * @param dim concrete dim
    * @param value ordinal index
    * @return rawIndex
+=======
+  /**
+   * Only support the dimension which inverted index created.
+   * Do not support other cases until required.
+   * @param dim concrete dim
+   * @param value ordinal index
+   * @return rawIndex
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32071,6 +34956,7 @@ function () {
 
     return rawIndex;
   };
+<<<<<<< HEAD
   /**
    * Retrieve the index of nearest value
    * @param dim
@@ -32078,6 +34964,15 @@ function () {
    * @param [maxDistance=Infinity]
    * @return If and only if multiple indices has
    *         the same value, they are put to the result.
+=======
+  /**
+   * Retrieve the index of nearest value
+   * @param dim
+   * @param value
+   * @param [maxDistance=Infinity]
+   * @return If and only if multiple indices has
+   *         the same value, they are put to the result.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32114,9 +35009,15 @@ function () {
     this._store = this._store.filter(dimIndices, fCtx ? bind(cb, fCtx) : cb);
     return this;
   };
+<<<<<<< HEAD
   /**
    * Select data in range. (For optimization of filter)
    * (Manually inline code, support 5 million data filtering in data zoom.)
+=======
+  /**
+   * Select data in range. (For optimization of filter)
+   * (Manually inline code, support 5 million data filtering in data zoom.)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32186,9 +35087,15 @@ function () {
 
     this._store.modify(dimIndices, fCtx ? bind(cb, fCtx) : cb);
   };
+<<<<<<< HEAD
   /**
    * Large data down sampling on given dimension
    * @param sampleIndex Sample index for name and id
+=======
+  /**
+   * Large data down sampling on given dimension
+   * @param sampleIndex Sample index for name and id
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32197,10 +35104,17 @@ function () {
     list._store = this._store.downSample(this._getStoreDimIndex(dimension), rate, sampleValue, sampleIndex);
     return list;
   };
+<<<<<<< HEAD
   /**
    * Large data down sampling using largest-triangle-three-buckets
    * @param {string} valueDimension
    * @param {number} targetCount
+=======
+  /**
+   * Large data down sampling using largest-triangle-three-buckets
+   * @param {string} valueDimension
+   * @param {number} targetCount
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32213,8 +35127,13 @@ function () {
   SeriesData.prototype.getRawDataItem = function (idx) {
     return this._store.getRawDataItem(idx);
   };
+<<<<<<< HEAD
   /**
    * Get model of one data item.
+=======
+  /**
+   * Get model of one data item.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // TODO: Type of data item
 
@@ -32224,8 +35143,13 @@ function () {
     var dataItem = this.getRawDataItem(idx);
     return new Model(dataItem, hostModel, hostModel && hostModel.ecModel);
   };
+<<<<<<< HEAD
   /**
    * Create a data differ
+=======
+  /**
+   * Create a data differ
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32237,8 +35161,13 @@ function () {
       return getId(thisList, idx);
     });
   };
+<<<<<<< HEAD
   /**
    * Get visual property.
+=======
+  /**
+   * Get visual property.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32256,8 +35185,13 @@ function () {
       this._visual[kvObj] = val;
     }
   };
+<<<<<<< HEAD
   /**
    * Get visual property of single data item
+=======
+  /**
+   * Get visual property of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // eslint-disable-next-line
 
@@ -32273,16 +35207,26 @@ function () {
 
     return val;
   };
+<<<<<<< HEAD
   /**
    * If exists visual property of single data item
+=======
+  /**
+   * If exists visual property of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesData.prototype.hasItemVisual = function () {
     return this._itemVisuals.length > 0;
   };
+<<<<<<< HEAD
   /**
    * Make sure itemVisual property is unique
+=======
+  /**
+   * Make sure itemVisual property is unique
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // TODO: use key to save visual to reduce memory.
 
@@ -32323,8 +35267,13 @@ function () {
       itemVisual[key] = value;
     }
   };
+<<<<<<< HEAD
   /**
    * Clear itemVisuals and list visual.
+=======
+  /**
+   * Clear itemVisuals and list visual.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32336,40 +35285,65 @@ function () {
   SeriesData.prototype.setLayout = function (key, val) {
     isObject$2(key) ? extend(this._layout, key) : this._layout[key] = val;
   };
+<<<<<<< HEAD
   /**
    * Get layout property.
+=======
+  /**
+   * Get layout property.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesData.prototype.getLayout = function (key) {
     return this._layout[key];
   };
+<<<<<<< HEAD
   /**
    * Get layout of single data item
+=======
+  /**
+   * Get layout of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesData.prototype.getItemLayout = function (idx) {
     return this._itemLayouts[idx];
   };
+<<<<<<< HEAD
   /**
    * Set layout of single data item
+=======
+  /**
+   * Set layout of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesData.prototype.setItemLayout = function (idx, layout, merge) {
     this._itemLayouts[idx] = merge ? extend(this._itemLayouts[idx] || {}, layout) : layout;
   };
+<<<<<<< HEAD
   /**
    * Clear all layout of single data item
+=======
+  /**
+   * Clear all layout of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SeriesData.prototype.clearItemLayouts = function () {
     this._itemLayouts.length = 0;
   };
+<<<<<<< HEAD
   /**
    * Set graphic element relative to data. It can be set as null
+=======
+  /**
+   * Set graphic element relative to data. It can be set as null
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32390,9 +35364,15 @@ function () {
       }
     });
   };
+<<<<<<< HEAD
   /**
    * Shallow clone a new list except visual and layout properties, and graph elements.
    * New list only change the indices.
+=======
+  /**
+   * Shallow clone a new list except visual and layout properties, and graph elements.
+   * New list only change the indices.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32405,8 +35385,13 @@ function () {
     list._store = this._store;
     return list;
   };
+<<<<<<< HEAD
   /**
    * Wrap some method to add more feature
+=======
+  /**
+   * Wrap some method to add more feature
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -32458,8 +35443,13 @@ function () {
     getIdNameFromStore = function (data, dimIdx, idx) {
       return convertOptionIdName(data._getCategory(dimIdx, idx), null);
     };
+<<<<<<< HEAD
     /**
      * @see the comment of `List['getId']`.
+=======
+    /**
+     * @see the comment of `List['getId']`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -32484,8 +35474,13 @@ function () {
 
       return dimensions;
     };
+<<<<<<< HEAD
     /**
      * Data in excludeDimensions is copied, otherwise transferred.
+=======
+    /**
+     * Data in excludeDimensions is copied, otherwise transferred.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -32542,13 +35537,19 @@ function () {
   return SeriesData;
 }();
 
+<<<<<<< HEAD
 /**
  * For outside usage compat (like echarts-gl are using it).
+=======
+/**
+ * For outside usage compat (like echarts-gl are using it).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createDimensions(source, opt) {
   return prepareSeriesDataSchema(source, opt).dimensions;
 }
+<<<<<<< HEAD
 /**
  * This method builds the relationship between:
  * + "what the coord sys or series requires (see `coordDimensions`)",
@@ -32560,6 +35561,19 @@ function createDimensions(source, opt) {
  * named as 'value'.
  *
  * @return The results are always sorted by `storeDimIndex` asc.
+=======
+/**
+ * This method builds the relationship between:
+ * + "what the coord sys or series requires (see `coordDimensions`)",
+ * + "what the user defines (in `encode` and `dimensions`, see `opt.dimensionsDefine` and `opt.encodeDefine`)"
+ * + "what the data source provids (see `source`)".
+ *
+ * Some guess strategy will be adapted if user does not define something.
+ * If no 'value' dimension specified, the first no-named dimension will be
+ * named as 'value'.
+ *
+ * @return The results are always sorted by `storeDimIndex` asc.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function prepareSeriesDataSchema( // TODO: TYPE completeDimensions type
@@ -32854,6 +35868,7 @@ function genCoordDimName(name, map, fromZero) {
   return name;
 }
 
+<<<<<<< HEAD
 /**
  * @class
  * For example:
@@ -32873,6 +35888,27 @@ function genCoordDimName(name, map, fromZero) {
  *     firstCategoryDimIndex: 1,
  *     // To replace user specified encode.
  * }
+=======
+/**
+ * @class
+ * For example:
+ * {
+ *     coordSysName: 'cartesian2d',
+ *     coordSysDims: ['x', 'y', ...],
+ *     axisMap: HashMap({
+ *         x: xAxisModel,
+ *         y: yAxisModel
+ *     }),
+ *     categoryAxisMap: HashMap({
+ *         x: xAxisModel,
+ *         y: undefined
+ *     }),
+ *     // The index of the first category axis in `coordSysDims`.
+ *     // `null/undefined` means no category axis exists.
+ *     firstCategoryDimIndex: 1,
+ *     // To replace user specified encode.
+ * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var CoordSysInfo =
@@ -33000,6 +36036,7 @@ function isCategory(axisModel) {
   return axisModel.get('type') === 'category';
 }
 
+<<<<<<< HEAD
 /**
  * Note that it is too complicated to support 3d stack by value
  * (have to create two-dimension inverted index), so in 3d case
@@ -33019,6 +36056,27 @@ function isCategory(axisModel) {
  *     stackedOverDimension: string
  *     stackResultDimension: string
  * }
+=======
+/**
+ * Note that it is too complicated to support 3d stack by value
+ * (have to create two-dimension inverted index), so in 3d case
+ * we just support that stacked by index.
+ *
+ * @param seriesModel
+ * @param dimensionsInput The same as the input of <module:echarts/data/SeriesData>.
+ *        The input will be modified.
+ * @param opt
+ * @param opt.stackedCoordDimension Specify a coord dimension if needed.
+ * @param opt.byIndex=false
+ * @return calculationInfo
+ * {
+ *     stackedDimension: string
+ *     stackedByDimension: string
+ *     isStackedByIndex: boolean
+ *     stackedOverDimension: string
+ *     stackResultDimension: string
+ * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function enableDataStack(seriesModel, dimensionsInput, opt) {
@@ -33207,9 +36265,15 @@ function injectOrdinalMeta(dimInfoList, createInvertedIndices, coordSysInfo) {
 
   return firstCategoryDimIndex;
 }
+<<<<<<< HEAD
 /**
  * Caution: there are side effects to `sourceManager` in this method.
  * Should better only be called in `Series['getInitialData']`.
+=======
+/**
+ * Caution: there are side effects to `sourceManager` in this method.
+ * Should better only be called in `Series['getInitialData']`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -33286,8 +36350,13 @@ function () {
   Scale.prototype.getSetting = function (name) {
     return this._setting[name];
   };
+<<<<<<< HEAD
   /**
    * Set extent from data
+=======
+  /**
+   * Set extent from data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33297,26 +36366,43 @@ function () {
     other[1] > extent[1] && (extent[1] = other[1]); // not setExtent because in log axis it may transformed to power
     // this.setExtent(extent[0], extent[1]);
   };
+<<<<<<< HEAD
   /**
    * Set extent from data
+=======
+  /**
+   * Set extent from data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Scale.prototype.unionExtentFromData = function (data, dim) {
     this.unionExtent(data.getApproximateExtent(dim));
   };
+<<<<<<< HEAD
   /**
    * Get extent
    *
    * Extent is always in increase order.
+=======
+  /**
+   * Get extent
+   *
+   * Extent is always in increase order.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Scale.prototype.getExtent = function () {
     return this._extent.slice();
   };
+<<<<<<< HEAD
   /**
    * Set extent
+=======
+  /**
+   * Set extent
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33331,26 +36417,43 @@ function () {
       thisExtent[1] = end;
     }
   };
+<<<<<<< HEAD
   /**
    * If value is in extent range
+=======
+  /**
+   * If value is in extent range
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Scale.prototype.isInExtentRange = function (value) {
     return this._extent[0] <= value && this._extent[1] >= value;
   };
+<<<<<<< HEAD
   /**
    * When axis extent depends on data and no data exists,
    * axis ticks should not be drawn, which is named 'blank'.
+=======
+  /**
+   * When axis extent depends on data and no data exists,
+   * axis ticks should not be drawn, which is named 'blank'.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Scale.prototype.isBlank = function () {
     return this._isBlank;
   };
+<<<<<<< HEAD
   /**
    * When axis extent depends on data and no data exists,
    * axis ticks should not be drawn, which is named 'blank'.
+=======
+  /**
+   * When axis extent depends on data and no data exists,
+   * axis ticks should not be drawn, which is named 'blank'.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33391,8 +36494,13 @@ function () {
     // @ts-ignore
     return this._getOrCreateMap().get(category);
   };
+<<<<<<< HEAD
   /**
    * @return The ordinal. If not found, return NaN.
+=======
+  /**
+   * @return The ordinal. If not found, return NaN.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33465,10 +36573,17 @@ function isValueNice(val) {
 function isIntervalOrLogScale(scale) {
   return scale.type === 'interval' || scale.type === 'log';
 }
+<<<<<<< HEAD
 /**
  * @param extent Both extent[0] and extent[1] should be valid number.
  *               Should be extent[0] < extent[1].
  * @param splitNumber splitNumber should be >= 1.
+=======
+/**
+ * @param extent Both extent[0] and extent[1] should be valid number.
+ *               Should be extent[0] < extent[1].
+ * @param splitNumber splitNumber should be >= 1.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function intervalScaleNiceTicks(extent, splitNumber, minInterval, maxInterval) {
@@ -33509,8 +36624,13 @@ function increaseInterval(interval) {
 
   return round(f * exp10);
 }
+<<<<<<< HEAD
 /**
  * @return interval precision
+=======
+/**
+ * @return interval precision
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getIntervalPrecision(interval) {
@@ -33592,10 +36712,17 @@ function (_super) {
     rank = this.parse(rank);
     return contain$1(rank, this._extent) && this._ordinalMeta.categories[rank] != null;
   };
+<<<<<<< HEAD
   /**
    * Normalize given rank or name to linear [0, 1]
    * @param val raw ordinal number.
    * @return normalized value in [0, 1].
+=======
+  /**
+   * Normalize given rank or name to linear [0, 1]
+   * @param val raw ordinal number.
+   * @return normalized value in [0, 1].
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33603,9 +36730,15 @@ function (_super) {
     val = this._getTickNumber(this.parse(val));
     return normalize$1(val, this._extent);
   };
+<<<<<<< HEAD
   /**
    * @param val normalized value in [0, 1].
    * @return raw ordinal number.
+=======
+  /**
+   * @param val normalized value in [0, 1].
+   * @return raw ordinal number.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33633,8 +36766,13 @@ function (_super) {
     // Not support.
     return;
   };
+<<<<<<< HEAD
   /**
    * @see `Ordinal['_ordinalNumbersByTick']`
+=======
+  /**
+   * @see `Ordinal['_ordinalNumbersByTick']`
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33675,6 +36813,7 @@ function (_super) {
 
     return ticksByOrdinalNumber && ordinal >= 0 && ordinal < ticksByOrdinalNumber.length ? ticksByOrdinalNumber[ordinal] : ordinal;
   };
+<<<<<<< HEAD
   /**
    * @usage
    * ```js
@@ -33689,6 +36828,22 @@ function (_super) {
    * ```
    *
    * @param {OrdinalNumber} tickNumber index of display
+=======
+  /**
+   * @usage
+   * ```js
+   * const ordinalNumber = ordinalScale.getRawOrdinalNumber(tickVal);
+   *
+   * // case0
+   * const rawOrdinalValue = axisModel.getCategories()[ordinalNumber];
+   * // case1
+   * const rawOrdinalValue = this._ordinalMeta.categories[ordinalNumber];
+   * // case2
+   * const coord = axis.dataToCoord(ordinalNumber);
+   * ```
+   *
+   * @param {OrdinalNumber} tickNumber index of display
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33698,8 +36853,13 @@ function (_super) {
 
     return ordinalNumbersByTick && tickNumber >= 0 && tickNumber < ordinalNumbersByTick.length ? ordinalNumbersByTick[tickNumber] : tickNumber;
   };
+<<<<<<< HEAD
   /**
    * Get item on tick
+=======
+  /**
+   * Get item on tick
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33720,9 +36880,15 @@ function (_super) {
   OrdinalScale.prototype.unionExtentFromData = function (data, dim) {
     this.unionExtent(data.getApproximateExtent(dim));
   };
+<<<<<<< HEAD
   /**
    * @override
    * If value is in extent range
+=======
+  /**
+   * @override
+   * If value is in extent range
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33809,8 +36975,13 @@ function (_super) {
     this._niceExtent = this._extent.slice();
     this._intervalPrecision = getIntervalPrecision(interval);
   };
+<<<<<<< HEAD
   /**
    * @param expandToNicedExtent Whether expand the ticks to niced extent.
+=======
+  /**
+   * @param expandToNicedExtent Whether expand the ticks to niced extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33907,9 +37078,15 @@ function (_super) {
 
     return minorTicks;
   };
+<<<<<<< HEAD
   /**
    * @param opt.precision If 'auto', use nice presision.
    * @param opt.pad returns 1.50 but not 1.5 if precision is 2.
+=======
+  /**
+   * @param opt.precision If 'auto', use nice presision.
+   * @param opt.pad returns 1.50 but not 1.5 if precision is 2.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -33932,8 +37109,13 @@ function (_super) {
     var dataNum = roundNumber(data.value, precision, true);
     return addCommas(dataNum);
   };
+<<<<<<< HEAD
   /**
    * @param splitNumber By default `5`.
+=======
+  /**
+   * @param splitNumber By default `5`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -34036,8 +37218,13 @@ function getSeriesStackId(seriesModel) {
 function getAxisKey(axis) {
   return axis.dim + axis.index;
 }
+<<<<<<< HEAD
 /**
  * @return {Object} {width, offset, offsetCenter} If axis.type is not 'category', return undefined.
+=======
+/**
+ * @return {Object} {width, offset, offsetCenter} If axis.type is not 'category', return undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -34081,6 +37268,7 @@ function prepareLayoutBarSeries(seriesType, ecModel) {
   });
   return seriesModels;
 }
+<<<<<<< HEAD
 /**
  * Map from (baseAxis.dim + '_' + baseAxis.index) to min gap of two adjacent
  * values.
@@ -34097,6 +37285,24 @@ function getValueAxesMinGaps(barSeries) {
    * {'x_0': [1495555200000, 1495641600000, 1495728000000]}.
    * Items in axisValues[x], e.g. 1495555200000, are time values of all
    * series.
+=======
+/**
+ * Map from (baseAxis.dim + '_' + baseAxis.index) to min gap of two adjacent
+ * values.
+ * This works for time axes, value axes, and log axes.
+ * For a single time axis, return value is in the form like
+ * {'x_0': [1000000]}.
+ * The value of 1000000 is in milliseconds.
+ */
+
+function getValueAxesMinGaps(barSeries) {
+  /**
+   * Map from axis.index to values.
+   * For a single time axis, axisValues is in the form like
+   * {'x_0': [1495555200000, 1495641600000, 1495728000000]}.
+   * Items in axisValues[x], e.g. 1495555200000, are time values of all
+   * series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   var axisValues = {};
   each(barSeries, function (seriesModel) {
@@ -34541,8 +37747,13 @@ function (_super) {
     _this.type = 'time';
     return _this;
   }
+<<<<<<< HEAD
   /**
    * Get label is mainly for other components like dataZoom, tooltip.
+=======
+  /**
+   * Get label is mainly for other components like dataZoom, tooltip.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -34556,8 +37767,13 @@ function (_super) {
     var lang = this.getSetting('locale');
     return leveledFormat(tick, idx, labelFormatter, lang, isUTC);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -34646,11 +37862,19 @@ function (_super) {
   TimeScale.type = 'time';
   return TimeScale;
 }(IntervalScale);
+<<<<<<< HEAD
 /**
  * This implementation was originally copied from "d3.js"
  * <https://github.com/d3/d3/blob/b516d77fb8566b576088e73410437494717ada26/src/time/scale.js>
  * with some modifications made for this program.
  * See the license statement at the head of this file.
+=======
+/**
+ * This implementation was originally copied from "d3.js"
+ * <https://github.com/d3/d3/blob/b516d77fb8566b576088e73410437494717ada26/src/time/scale.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -35074,8 +38298,13 @@ function (_super) {
     _this._interval = 0;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @param Whether expand the ticks to niced extent.
+=======
+  /**
+   * @param Whether expand the ticks to niced extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -35103,8 +38332,13 @@ function (_super) {
     end = mathLog(Math.max(0, end)) / base;
     intervalScaleProto.setExtent.call(this, start, end);
   };
+<<<<<<< HEAD
   /**
    * @return {number} end
+=======
+  /**
+   * @return {number} end
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -35135,9 +38369,15 @@ function (_super) {
     // filter value that <= 0
     this.unionExtent(data.getApproximateExtent(dim));
   };
+<<<<<<< HEAD
   /**
    * Update interval and extent of intervals for nice ticks
    * @param approxTickNum default 10 Given approx tick number
+=======
+  /**
+   * Update interval and extent of intervals for nice ticks
+   * @param approxTickNum default 10 Given approx tick number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -35213,9 +38453,15 @@ function () {
   originalExtent) {
     this._prepareParams(scale, model, originalExtent);
   }
+<<<<<<< HEAD
   /**
    * Parameters depending on outside (like model, user callback)
    * are prepared and fixed here.
+=======
+  /**
+   * Parameters depending on outside (like model, user callback)
+   * are prepared and fixed here.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -35273,11 +38519,19 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Calculate extent by prepared parameters.
    * This method has no external dependency and can be called duplicatedly,
    * getting the same result.
    * If parameters changed, should call this method to recalcuate.
+=======
+  /**
+   * Calculate extent by prepared parameters.
+   * This method has no external dependency and can be called duplicatedly,
+   * getting the same result.
+   * If parameters changed, should call this method to recalcuate.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -35391,6 +38645,7 @@ var DATA_MIN_MAX_ATTR = {
   min: '_dataMin',
   max: '_dataMax'
 };
+<<<<<<< HEAD
 /**
  * Get scale min max and related info only depends on model settings.
  * This method can be called after coordinate system created.
@@ -35405,6 +38660,22 @@ var DATA_MIN_MAX_ATTR = {
  * The code below should not be implemented repeatedly either.
  * So we cache the result in the scale instance, which will be recreated at the beginning
  * of the workflow (because `scale` instance will be recreated each round of the workflow).
+=======
+/**
+ * Get scale min max and related info only depends on model settings.
+ * This method can be called after coordinate system created.
+ * For example, in data processing stage.
+ *
+ * Scale extent info probably be required multiple times during a workflow.
+ * For example:
+ * (1) `dataZoom` depends it to get the axis extent in "100%" state.
+ * (2) `processor/extentCalculator` depends it to make sure whether axis extent is specified.
+ * (3) `coordSys.update` use it to finally decide the scale extent.
+ * But the callback of `min`/`max` should not be called multiple times.
+ * The code below should not be implemented repeatedly either.
+ * So we cache the result in the scale instance, which will be recreated at the beginning
+ * of the workflow (because `scale` instance will be recreated each round of the workflow).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function ensureScaleRawExtentInfo(scale, model, // Usually: data extent from all series on this axis.
@@ -35425,6 +38696,7 @@ function parseAxisModelMinMax(scale, minMax) {
   return minMax == null ? null : eqNaN(minMax) ? NaN : scale.parse(minMax);
 }
 
+<<<<<<< HEAD
 /**
  * Get axis scale extent before niced.
  * Item of returned array can only be number (including Infinity and NaN).
@@ -35433,6 +38705,16 @@ function parseAxisModelMinMax(scale, minMax) {
  * Precondition of calling this method:
  * The scale extent has been initialized using series data extent via
  * `scale.setExtent` or `scale.unionExtentFromData`;
+=======
+/**
+ * Get axis scale extent before niced.
+ * Item of returned array can only be number (including Infinity and NaN).
+ *
+ * Caution:
+ * Precondition of calling this method:
+ * The scale extent has been initialized using series data extent via
+ * `scale.setExtent` or `scale.unionExtentFromData`;
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getScaleExtent(scale, model) {
@@ -35552,8 +38834,13 @@ function niceScaleExtent(scale, inModel) {
     scale.setInterval && scale.setInterval(interval);
   }
 }
+<<<<<<< HEAD
 /**
  * @param axisType Default retrieve from model.type
+=======
+/**
+ * @param axisType Default retrieve from model.type
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createScaleByModel(model, axisType) {
@@ -35580,8 +38867,13 @@ function createScaleByModel(model, axisType) {
     }
   }
 }
+<<<<<<< HEAD
 /**
  * Check if the axis cross 0
+=======
+/**
+ * Check if the axis cross 0
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function ifAxisCrossZero(axis) {
@@ -35590,6 +38882,7 @@ function ifAxisCrossZero(axis) {
   var max = dataExtent[1];
   return !(min > 0 && max > 0 || min < 0 && max < 0);
 }
+<<<<<<< HEAD
 /**
  * @param axis
  * @return Label formatter function.
@@ -35597,6 +38890,15 @@ function ifAxisCrossZero(axis) {
  *         param: {number} idx, the index in all ticks.
  *                         If category axis, this param is not required.
  *         return: {string} label string.
+=======
+/**
+ * @param axis
+ * @return Label formatter function.
+ *         param: {number} tickValue,
+ *         param: {number} idx, the index in all ticks.
+ *                         If category axis, this param is not required.
+ *         return: {string} label string.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function makeLabelFormatter(axis) {
@@ -35649,9 +38951,15 @@ function getAxisRawValue(axis, tick) {
   // in category axis.
   return axis.type === 'category' ? axis.scale.getLabel(tick) : tick.value;
 }
+<<<<<<< HEAD
 /**
  * @param axis
  * @return Be null/undefined if no labels.
+=======
+/**
+ * @param axis
+ * @return Be null/undefined if no labels.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function estimateLabelUnionRect(axis) {
@@ -35704,9 +39012,15 @@ function rotateTextRect(textRect, rotate) {
   var rotatedRect = new BoundingRect(textRect.x, textRect.y, afterWidth, afterHeight);
   return rotatedRect;
 }
+<<<<<<< HEAD
 /**
  * @param model axisLabelModel or axisTickModel
  * @return {number|String} Can be null|'auto'|number|function
+=======
+/**
+ * @param model axisLabelModel or axisTickModel
+ * @return {number|String} Can be null|'auto'|number|function
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -35714,10 +39028,17 @@ function getOptionCategoryInterval(model) {
   var interval = model.get('interval');
   return interval == null ? 'auto' : interval;
 }
+<<<<<<< HEAD
 /**
  * Set `categoryInterval` as 0 implicitly indicates that
  * show all labels regardless of overlap.
  * @param {Object} axis axisModel.axis
+=======
+/**
+ * Set `categoryInterval` as 0 implicitly indicates that
+ * show all labels regardless of overlap.
+ * @param {Object} axis axisModel.axis
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function shouldShowAllLabels(axis) {
@@ -35774,6 +39095,7 @@ function unionAxisExtentFromData(dataExtent, data, axisDim) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -35791,6 +39113,25 @@ function unionAxisExtentFromData(dataExtent, data, axisDim) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 var AxisModelCommonMixin =
@@ -35802,9 +39143,15 @@ function () {
     var option = this.option;
     return !option.scale;
   };
+<<<<<<< HEAD
   /**
    * Should be implemented by each axis model if necessary.
    * @return coordinate system model
+=======
+  /**
+   * Should be implemented by each axis model if necessary.
+   * @return coordinate system model
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -35815,8 +39162,13 @@ function () {
   return AxisModelCommonMixin;
 }();
 
+<<<<<<< HEAD
 /**
  * Create a multi dimension List structure from seriesModel.
+=======
+/**
+ * Create a multi dimension List structure from seriesModel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createList(seriesModel) {
@@ -35827,11 +39179,19 @@ var dataStack$1 = {
   enableDataStack: enableDataStack,
   getStackedDimension: getStackedDimension
 };
+<<<<<<< HEAD
 /**
  * Create scale
  * @param {Array.<number>} dataExtent
  * @param {Object|module:echarts/Model} option If `optoin.type`
  *        is secified, it can only be `'value'` currently.
+=======
+/**
+ * Create scale
+ * @param {Array.<number>} dataExtent
+ * @param {Object|module:echarts/Model} option If `optoin.type`
+ *        is secified, it can only be `'value'` currently.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createScale(dataExtent, option) {
@@ -35853,6 +39213,7 @@ function createScale(dataExtent, option) {
   niceScaleExtent(scale, axisModel);
   return scale;
 }
+<<<<<<< HEAD
 /**
  * Mixin common methods to axis model,
  *
@@ -35862,6 +39223,17 @@ function createScale(dataExtent, option) {
  * `getMin(origin: boolean) => number`
  * `getMax(origin: boolean) => number`
  * `getNeedCrossZero() => boolean`
+=======
+/**
+ * Mixin common methods to axis model,
+ *
+ * Include methods
+ * `getFormattedLabels() => Array.<string>`
+ * `getCategories() => Array.<string>`
+ * `getMin(origin: boolean) => number`
+ * `getMax(origin: boolean) => number`
+ * `getNeedCrossZero() => boolean`
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function mixinAxisModelCommonMethods(Model) {
@@ -35964,10 +39336,17 @@ function () {
   Region.prototype.setCenter = function (center) {
     this._center = center;
   };
+<<<<<<< HEAD
   /**
    * Get center point in data unit. That is,
    * for GeoJSONRegion, the unit is lat/lng,
    * for GeoSVGRegion, the unit is SVG local coord.
+=======
+  /**
+   * Get center point in data unit. That is,
+   * for GeoJSONRegion, the unit is lat/lng,
+   * for GeoSVGRegion, the unit is SVG local coord.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36116,12 +39495,21 @@ function (_super) {
 
     return false;
   };
+<<<<<<< HEAD
   /**
    * Transform the raw coords to target bounding.
    * @param x
    * @param y
    * @param width
    * @param height
+=======
+  /**
+   * Transform the raw coords to target bounding.
+   * @param x
+   * @param y
+   * @param width
+   * @param height
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36424,6 +39812,7 @@ function createAxisLabels(axis) {
   // Only ordinal scale support tick interval
   return axis.type === 'category' ? makeCategoryLabels(axis) : makeRealNumberLabels(axis);
 }
+<<<<<<< HEAD
 /**
  * @param {module:echats/coord/Axis} axis
  * @param {module:echarts/model/Model} tickModel For example, can be axisTick, splitLine, splitArea.
@@ -36431,6 +39820,15 @@ function createAxisLabels(axis) {
  *     ticks: Array.<number>
  *     tickCategoryInterval: number
  * }
+=======
+/**
+ * @param {module:echats/coord/Axis} axis
+ * @param {module:echarts/model/Model} tickModel For example, can be axisTick, splitLine, splitArea.
+ * @return {Object} {
+ *     ticks: Array.<number>
+ *     tickCategoryInterval: number
+ * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createAxisTicks(axis, tickModel) {
@@ -36557,10 +39955,17 @@ function makeAutoCategoryInterval(axis) {
   var result = inner$5(axis).autoInterval;
   return result != null ? result : inner$5(axis).autoInterval = axis.calculateCategoryInterval();
 }
+<<<<<<< HEAD
 /**
  * Calculate interval for category axis ticks and labels.
  * To get precise result, at least one of `getRotate` and `isHorizontal`
  * should be implemented in axis.
+=======
+/**
+ * Calculate interval for category axis ticks and labels.
+ * To get precise result, at least one of `getRotate` and `isHorizontal`
+ * should be implemented in axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -36728,8 +40133,13 @@ function makeLabelsByCustomizedCategoryInterval(axis, categoryInterval, onlyTick
 }
 
 var NORMALIZED_EXTENT = [0, 1];
+<<<<<<< HEAD
 /**
  * Base class of Axis.
+=======
+/**
+ * Base class of Axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var Axis =
@@ -36742,8 +40152,13 @@ function () {
     this.scale = scale;
     this._extent = extent || [0, 0];
   }
+<<<<<<< HEAD
   /**
    * If axis extent contain given coord
+=======
+  /**
+   * If axis extent contain given coord
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36753,32 +40168,52 @@ function () {
     var max = Math.max(extent[0], extent[1]);
     return coord >= min && coord <= max;
   };
+<<<<<<< HEAD
   /**
    * If axis extent contain given data
+=======
+  /**
+   * If axis extent contain given data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Axis.prototype.containData = function (data) {
     return this.scale.contain(data);
   };
+<<<<<<< HEAD
   /**
    * Get coord extent.
+=======
+  /**
+   * Get coord extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Axis.prototype.getExtent = function () {
     return this._extent.slice();
   };
+<<<<<<< HEAD
   /**
    * Get precision used for formatting
+=======
+  /**
+   * Get precision used for formatting
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Axis.prototype.getPixelPrecision = function (dataExtent) {
     return getPixelPrecision(dataExtent || this.scale.getExtent(), this._extent);
   };
+<<<<<<< HEAD
   /**
    * Set coord extent
+=======
+  /**
+   * Set coord extent
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36787,8 +40222,13 @@ function () {
     extent[0] = start;
     extent[1] = end;
   };
+<<<<<<< HEAD
   /**
    * Convert data to coord. Data is the rank if it has an ordinal scale
+=======
+  /**
+   * Convert data to coord. Data is the rank if it has an ordinal scale
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36804,8 +40244,13 @@ function () {
 
     return linearMap(data, NORMALIZED_EXTENT, extent, clamp);
   };
+<<<<<<< HEAD
   /**
    * Convert coord to data. Data is the rank if it has an ordinal scale
+=======
+  /**
+   * Convert coord to data. Data is the rank if it has an ordinal scale
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36821,8 +40266,13 @@ function () {
     var t = linearMap(coord, extent, NORMALIZED_EXTENT, clamp);
     return this.scale.scale(t);
   };
+<<<<<<< HEAD
   /**
    * Convert pixel point to data in axis
+=======
+  /**
+   * Convert pixel point to data in axis
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36830,6 +40280,7 @@ function () {
     // Should be implemented in derived class if necessary.
     return;
   };
+<<<<<<< HEAD
   /**
    * Different from `zrUtil.map(axis.getTicks(), axis.dataToCoord, axis)`,
    * `axis.getTicksCoords` considers `onBand`, which is used by
@@ -36838,6 +40289,16 @@ function () {
    * @param opt.clamp If `true`, the first and the last
    *        tick must be at the axis end points. Otherwise, clip ticks
    *        that outside the axis extent.
+=======
+  /**
+   * Different from `zrUtil.map(axis.getTicks(), axis.dataToCoord, axis)`,
+   * `axis.getTicksCoords` considers `onBand`, which is used by
+   * `boundaryGap:true` of category axis and splitLine and splitArea.
+   * @param opt.tickModel default: axis.model.getModel('axisTick')
+   * @param opt.clamp If `true`, the first and the last
+   *        tick must be at the axis end points. Otherwise, clip ticks
+   *        that outside the axis extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36889,20 +40350,34 @@ function () {
   Axis.prototype.getLabelModel = function () {
     return this.model.getModel('axisLabel');
   };
+<<<<<<< HEAD
   /**
    * Notice here we only get the default tick model. For splitLine
    * or splitArea, we should pass the splitLineModel or splitAreaModel
    * manually when calling `getTicksCoords`.
    * In GL, this method may be overridden to:
    * `axisModel.getModel('axisTick', grid3DModel.getModel('axisTick'));`
+=======
+  /**
+   * Notice here we only get the default tick model. For splitLine
+   * or splitArea, we should pass the splitLineModel or splitAreaModel
+   * manually when calling `getTicksCoords`.
+   * In GL, this method may be overridden to:
+   * `axisModel.getModel('axisTick', grid3DModel.getModel('axisTick'));`
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Axis.prototype.getTickModel = function () {
     return this.model.getModel('axisTick');
   };
+<<<<<<< HEAD
   /**
    * Get width of band
+=======
+  /**
+   * Get width of band
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -36915,10 +40390,17 @@ function () {
     var size = Math.abs(axisExtent[1] - axisExtent[0]);
     return Math.abs(size) / len;
   };
+<<<<<<< HEAD
   /**
    * Only be called in category axis.
    * Can be overridden, consider other axes like in 3D.
    * @return Auto interval for cateogry axis tick and label
+=======
+  /**
+   * Only be called in category axis.
+   * Can be overridden, consider other axes like in 3D.
+   * @return Auto interval for cateogry axis tick and label
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -37173,9 +40655,15 @@ function nearestPointOnRect(pt, rect, out) {
   out.set(tmpPt[0], tmpPt[1]);
   return dist;
 }
+<<<<<<< HEAD
 /**
  * Calculate min distance corresponding point.
  * This method won't evaluate if point is in the path.
+=======
+/**
+ * Calculate min distance corresponding point.
+ * This method won't evaluate if point is in the path.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -37289,12 +40777,21 @@ var pt1 = new Point();
 var pt2 = new Point();
 var dir = new Point();
 var dir2 = new Point();
+<<<<<<< HEAD
 /**
  * Calculate a proper guide line based on the label position and graphic element definition
  * @param label
  * @param labelRect
  * @param target
  * @param targetRect
+=======
+/**
+ * Calculate a proper guide line based on the label position and graphic element definition
+ * @param label
+ * @param labelRect
+ * @param target
+ * @param targetRect
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function updateLabelLinePoints(target, labelLineModel) {
@@ -37353,10 +40850,17 @@ function updateLabelLinePoints(target, labelLineModel) {
 
 var tmpArr = [];
 var tmpProjPoint = new Point();
+<<<<<<< HEAD
 /**
  * Reduce the line segment attached to the label to limit the turn angle between two segments.
  * @param linePoints
  * @param minTurnAngle Radian of minimum turn angle. 0 - 180
+=======
+/**
+ * Reduce the line segment attached to the label to limit the turn angle between two segments.
+ * @param linePoints
+ * @param minTurnAngle Radian of minimum turn angle. 0 - 180
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function limitTurnAngle(linePoints, minTurnAngle) {
@@ -37409,9 +40913,15 @@ function limitTurnAngle(linePoints, minTurnAngle) {
     tmpProjPoint.toArray(linePoints[1]);
   }
 }
+<<<<<<< HEAD
 /**
  * Limit the angle of line and the surface
  * @param maxSurfaceAngle Radian of minimum turn angle. 0 - 180. 0 is same direction to normal. 180 is opposite
+=======
+/**
+ * Limit the angle of line and the surface
+ * @param maxSurfaceAngle Radian of minimum turn angle. 0 - 180. 0 is same direction to normal. 180 is opposite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function limitSurfaceAngle(linePoints, surfaceNormal, maxSurfaceAngle) {
@@ -37523,8 +41033,13 @@ function buildLabelLinePath(path, shape) {
     }
   }
 }
+<<<<<<< HEAD
 /**
  * Create a label line if necessary and set it's style.
+=======
+/**
+ * Create a label line if necessary and set it's style.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -37781,9 +41296,15 @@ function shiftLayout(list, xyDim, sizeDim, minBound, maxBound, balanceShift) {
       }
     }
   }
+<<<<<<< HEAD
   /**
    * Squeeze to allow overlap if there is no more space available.
    * Let other overlapping strategy like hideOverlap do the job instead of keep exceeding the bounds.
+=======
+  /**
+   * Squeeze to allow overlap if there is no more space available.
+   * Let other overlapping strategy like hideOverlap do the job instead of keep exceeding the bounds.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -37811,8 +41332,13 @@ function shiftLayout(list, xyDim, sizeDim, minBound, maxBound, balanceShift) {
 
   return adjusted;
 }
+<<<<<<< HEAD
 /**
  * Adjust labels on x direction to avoid overlap.
+=======
+/**
+ * Adjust labels on x direction to avoid overlap.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -37823,8 +41349,13 @@ function shiftLayoutOnX(list, leftBound, rightBound, // If average the shifts on
 balanceShift) {
   return shiftLayout(list, 'x', 'width', leftBound, rightBound, balanceShift);
 }
+<<<<<<< HEAD
 /**
  * Adjust labels on y direction to avoid overlap.
+=======
+/**
+ * Adjust labels on y direction to avoid overlap.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function shiftLayoutOnY(list, topBound, bottomBound, // If average the shifts on all labels and add them to 0
@@ -37968,8 +41499,13 @@ function () {
     this._labelList = [];
     this._chartViewList = [];
   };
+<<<<<<< HEAD
   /**
    * Add label to manager
+=======
+  /**
+   * Add label to manager
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -38048,8 +41584,13 @@ function () {
 
     var seriesModel = chartView.__model;
     var layoutOption = seriesModel.get('labelLayout');
+<<<<<<< HEAD
     /**
      * Ignore layouting if it's not specified anything.
+=======
+    /**
+     * Ignore layouting if it's not specified anything.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     if (!(isFunction(layoutOption) || keys(layoutOption).length)) {
@@ -38197,8 +41738,13 @@ function () {
     });
     hideOverlap(labelsNeedsHideOverlap);
   };
+<<<<<<< HEAD
   /**
    * Process all labels. Not only labels with layoutOption.
+=======
+  /**
+   * Process all labels. Not only labels with layoutOption.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -40928,8 +44474,13 @@ function (_super) {
   return LineSeriesModel;
 }(SeriesModel);
 
+<<<<<<< HEAD
 /**
  * @return label string. Not null/undefined
+=======
+/**
+ * @return label string. Not null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getDefaultLabel(data, dataIndex) {
@@ -41003,9 +44554,15 @@ function (_super) {
     this._symbolType = symbolType;
     this.add(symbolPath);
   };
+<<<<<<< HEAD
   /**
    * Stop animation
    * @param {boolean} toLastFrame
+=======
+  /**
+   * Stop animation
+   * @param {boolean} toLastFrame
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -41016,6 +44573,7 @@ function (_super) {
   Symbol.prototype.getSymbolType = function () {
     return this._symbolType;
   };
+<<<<<<< HEAD
   /**
    * FIXME:
    * Caution: This method breaks the encapsulation of this module,
@@ -41024,31 +44582,57 @@ function (_super) {
    * especially animation.
    *
    * Get symbol path element.
+=======
+  /**
+   * FIXME:
+   * Caution: This method breaks the encapsulation of this module,
+   * but it indeed brings convenience. So do not use the method
+   * unless you detailedly know all the implements of `Symbol`,
+   * especially animation.
+   *
+   * Get symbol path element.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Symbol.prototype.getSymbolPath = function () {
     return this.childAt(0);
   };
+<<<<<<< HEAD
   /**
    * Highlight symbol
+=======
+  /**
+   * Highlight symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Symbol.prototype.highlight = function () {
     enterEmphasis(this.childAt(0));
   };
+<<<<<<< HEAD
   /**
    * Downplay symbol
+=======
+  /**
+   * Downplay symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Symbol.prototype.downplay = function () {
     leaveEmphasis(this.childAt(0));
   };
+<<<<<<< HEAD
   /**
    * @param {number} zlevel
    * @param {number} z
+=======
+  /**
+   * @param {number} zlevel
+   * @param {number} z
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -41063,8 +44647,13 @@ function (_super) {
     symbolPath.draggable = draggable;
     symbolPath.cursor = !hasCursorOption && draggable ? 'move' : symbolPath.cursor;
   };
+<<<<<<< HEAD
   /**
    * Update symbol properties
+=======
+  /**
+   * Update symbol properties
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -41333,8 +44922,13 @@ function () {
     this.group = new Group();
     this._SymbolCtor = SymbolCtor || Symbol;
   }
+<<<<<<< HEAD
   /**
    * Update symbols draw by new data
+=======
+  /**
+   * Update symbols draw by new data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -41431,8 +45025,13 @@ function () {
     this._data = null;
     this.group.removeAll();
   };
+<<<<<<< HEAD
   /**
    * Update symbols draw by new data
+=======
+  /**
+   * Update symbols draw by new data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   SymbolDraw.prototype.incrementalUpdate = function (taskParams, data, opt) {
@@ -41708,10 +45307,17 @@ var mathMax$5 = Math.max;
 function isPointNull(x, y) {
   return isNaN(x) || isNaN(y);
 }
+<<<<<<< HEAD
 /**
  * Draw smoothed line in non-monotone, in may cause undesired curve in extreme
  * situations. This should be used when points are non-monotone neither in x or
  * y dimension.
+=======
+/**
+ * Draw smoothed line in non-monotone, in may cause undesired curve in extreme
+ * situations. This should be used when points are non-monotone neither in x or
+ * y dimension.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -42196,6 +45802,7 @@ function createClipPath(coordSys, hasAnimation, seriesModel, done, during) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -42213,6 +45820,25 @@ function createClipPath(coordSys, hasAnimation, seriesModel, done, during) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function isCoordinateSystemType(coordSys, type) {
   return coordSys.type === type;
@@ -42346,11 +45972,19 @@ function turnPointsIntoStep(points, coordSys, stepTurnAt, connectNulls) {
   stepPoints.push(points[i++], points[i++]);
   return stepPoints;
 }
+<<<<<<< HEAD
 /**
  * Clip color stops to edge. Avoid creating too large gradients.
  * Which may lead to blurry when GPU acceleration is enabled. See #15680
  *
  * The stops has been sorted from small to large.
+=======
+/**
+ * Clip color stops to edge. Avoid creating too large gradients.
+ * Which may lead to blurry when GPU acceleration is enabled. See #15680
+ *
+ * The stops has been sorted from small to large.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -43305,8 +46939,13 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // FIXME Two value axis
 
@@ -43780,8 +47419,13 @@ function (_super) {
       createInvertedIndices: !!this.get('realtimeSort', true) || null
     });
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -43789,8 +47433,13 @@ function (_super) {
     // Do not support progressive in normal mode.
     return this.get('large') ? this.get('progressive') : false;
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -43840,8 +47489,13 @@ function (_super) {
   return BarSeriesModel;
 }(BaseBarSeriesModel);
 
+<<<<<<< HEAD
 /**
  * Sausage: similar to sector, but have half circle on both sides
+=======
+/**
+ * Sausage: similar to sector, but have half circle on both sides
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var SausageShape =
@@ -44073,12 +47727,21 @@ function setSectorTextRotation(sector, textPosition, positionMapping, rotateType
   }
 
   var rotate = Math.PI * 1.5 - anchorAngle;
+<<<<<<< HEAD
   /**
    * TODO: labels with rotate > Math.PI / 2 should be rotate another
    * half round flipped to increase readability. However, only middle
    * position supports this for now, because in other positions, the
    * anchor point is not at the center of the text, so the positions
    * after rotating is not as expected.
+=======
+  /**
+   * TODO: labels with rotate > Math.PI / 2 should be rotate another
+   * half round flipped to increase readability. However, only middle
+   * position supports this for now, because in other positions, the
+   * anchor point is not at the center of the text, so the positions
+   * after rotating is not as expected.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   if (mappedSectorPosition === 'middle' && rotate > Math.PI / 2 && rotate < Math.PI * 1.5) {
@@ -44282,6 +47945,7 @@ function (_super) {
       var el = elementCreator[coord.type](seriesModel, data, dataIndex, layout, isHorizontalOrRadial, animationModel, baseAxis.model, false, roundCap);
 
       if (realtimeSortCfg) {
+<<<<<<< HEAD
         /**
          * Force label animation because even if the element is
          * ignored because it's clipped, it may not be clipped after
@@ -44289,6 +47953,15 @@ function (_super) {
          * the label animation was never started, in which case,
          * the label will be the final value and doesn't have label
          * animation.
+=======
+        /**
+         * Force label animation because even if the element is
+         * ignored because it's clipped, it may not be clipped after
+         * changing order. Then, if not using forceLabelAnimation,
+         * the label animation was never started, in which case,
+         * the label will be the final value and doesn't have label
+         * animation.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
         el.forceLabelAnimation = true;
       }
@@ -44373,11 +48046,19 @@ function (_super) {
           var labelInnerStore = labelInner(textEl);
 
           if (labelInnerStore.prevValue != null) {
+<<<<<<< HEAD
             /**
              * Set preValue to be value so that no new label
              * should be started, otherwise, it will take a full
              * `animationDurationUpdate` time to finish the
              * animation, which is not expected.
+=======
+            /**
+             * Set preValue to be value so that no new label
+             * should be started, otherwise, it will take a full
+             * `animationDurationUpdate` time to finish the
+             * animation, which is not expected.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
              */
             labelInnerStore.prevValue = labelInnerStore.value;
           }
@@ -44519,10 +48200,17 @@ function (_super) {
 
     return false;
   };
+<<<<<<< HEAD
   /*
    * Consider the case when A and B changed order, whose representing
    * bars are both out of sight, we don't wish to trigger reorder action
    * as long as the order in the view doesn't change.
+=======
+  /*
+   * Consider the case when A and B changed order, whose representing
+   * bars are both out of sight, we don't wish to trigger reorder action
+   * as long as the order in the view doesn't change.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -45107,6 +48795,7 @@ function install$3(registers) {
   registers.registerLayout(registers.PRIORITY.VISUAL.PROGRESSIVE_LAYOUT, createProgressiveLayout('bar')); // Down sample after filter
 
   registers.registerProcessor(registers.PRIORITY.PROCESSOR.STATISTIC, dataSample('bar'));
+<<<<<<< HEAD
   /**
    * @payload
    * @property {string} [componentType=series]
@@ -45115,6 +48804,16 @@ function install$3(registers) {
    * @property {number} [zoom]
    * @property {number} [originX]
    * @property {number} [originY]
+=======
+  /**
+   * @payload
+   * @property {string} [componentType=series]
+   * @property {number} [dx]
+   * @property {number} [dy]
+   * @property {number} [zoom]
+   * @property {number} [originX]
+   * @property {number} [originY]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   registers.registerAction({
@@ -45320,6 +49019,7 @@ function pieLayout(seriesType, ecModel, api) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -45337,6 +49037,25 @@ function pieLayout(seriesType, ecModel, api) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function dataFilter(seriesType) {
   return {
@@ -45544,6 +49263,7 @@ function avoidOverlap(labelLayoutList, cx, cy, r, viewWidth, viewHeight, viewLef
     }
   }
 }
+<<<<<<< HEAD
 /**
  * Set max width of each label, and then wrap each label to the max width.
  *
@@ -45553,6 +49273,17 @@ function avoidOverlap(labelLayoutList, cx, cy, r, viewWidth, viewHeight, viewLef
  * is smaller than `availableWidth`. This is useful when the text was previously
  * wrapped by calling `constrainTextWidth` but now `availableWidth` changed, in
  * which case, previous wrapping should be redo.
+=======
+/**
+ * Set max width of each label, and then wrap each label to the max width.
+ *
+ * @param layout label layout
+ * @param availableWidth max width for the label to display
+ * @param forceRecalculate recaculate the text layout even if the current width
+ * is smaller than `availableWidth`. This is useful when the text was previously
+ * wrapped by calling `constrainTextWidth` but now `availableWidth` changed, in
+ * which case, previous wrapping should be redo.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -45855,8 +49586,13 @@ function pieLabelLayout(seriesModel) {
   }
 }
 
+<<<<<<< HEAD
 /**
  * Piece of pie including Sector, Label, LabelLine
+=======
+/**
+ * Piece of pie including Sector, Label, LabelLine
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var PiePiece =
@@ -46116,6 +49852,7 @@ function (_super) {
   return PieView;
 }(ChartView);
 
+<<<<<<< HEAD
 /**
  * [Usage]:
  * (1)
@@ -46125,6 +49862,17 @@ function (_super) {
  *     coordDimensions: ['value'],
  *     dimensionsCount: 5
  * });
+=======
+/**
+ * [Usage]:
+ * (1)
+ * createListSimply(seriesModel, ['value']);
+ * (2)
+ * createListSimply(seriesModel, {
+ *     coordDimensions: ['value'],
+ *     dimensionsCount: 5
+ * });
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createSeriesDataSimply(seriesModel, opt, nameList) {
@@ -46164,6 +49912,7 @@ function createSeriesDataSimply(seriesModel, opt, nameList) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -46186,6 +49935,30 @@ function createSeriesDataSimply(seriesModel, opt, nameList) {
 /**
  * LegendVisualProvider is an bridge that pick encoded color from data and
  * provide to the legend component.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+/**
+ * LegendVisualProvider is an bridge that pick encoded color from data and
+ * provide to the legend component.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 var LegendVisualProvider =
 /** @class */
@@ -46240,8 +50013,13 @@ function (_super) {
   function PieSeriesModel() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
+<<<<<<< HEAD
   /**
    * @overwrite
+=======
+  /**
+   * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -46254,16 +50032,26 @@ function (_super) {
 
     this._defaultLabelLine(option);
   };
+<<<<<<< HEAD
   /**
    * @overwrite
+=======
+  /**
+   * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   PieSeriesModel.prototype.mergeOption = function () {
     _super.prototype.mergeOption.apply(this, arguments);
   };
+<<<<<<< HEAD
   /**
    * @overwrite
+=======
+  /**
+   * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -46273,8 +50061,13 @@ function (_super) {
       encodeDefaulter: curry(makeSeriesEncodeForNameBased, this)
     });
   };
+<<<<<<< HEAD
   /**
    * @overwrite
+=======
+  /**
+   * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -46715,8 +50508,13 @@ function () {
   function LargeSymbolDraw() {
     this.group = new Group();
   }
+<<<<<<< HEAD
   /**
    * Update symbols draw by new data
+=======
+  /**
+   * Update symbols draw by new data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47185,6 +50983,7 @@ var axisDefault = {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -47202,6 +51001,25 @@ var axisDefault = {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var AXIS_TYPES = {
   value: 1,
@@ -47210,9 +51028,15 @@ var AXIS_TYPES = {
   log: 1
 };
 
+<<<<<<< HEAD
 /**
  * Generate sub axis model class
  * @param axisName 'x' 'y' 'radius' 'angle' 'parallel' ...
+=======
+/**
+ * Generate sub axis model class
+ * @param axisName 'x' 'y' 'radius' 'angle' 'parallel' ...
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function axisModelCreator(registers, axisName, BaseAxisModelClass, extraDefaultOption) {
@@ -47251,9 +51075,15 @@ function axisModelCreator(registers, axisName, BaseAxisModelClass, extraDefaultO
           this.__ordinalMeta = OrdinalMeta.createByAxisModel(this);
         }
       };
+<<<<<<< HEAD
       /**
        * Should not be called before all of 'getInitailData' finished.
        * Because categories are collected during initializing data.
+=======
+      /**
+       * Should not be called before all of 'getInitailData' finished.
+       * Because categories are collected during initializing data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -47344,9 +51174,15 @@ function (_super) {
     _this.dimensions = cartesian2DDimensions;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * Calculate an affine transform matrix if two axes are time or value.
    * It's mainly for accelartion on the large time series data.
+=======
+  /**
+   * Calculate an affine transform matrix if two axes are time or value.
+   * It's mainly for accelartion on the large time series data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47378,8 +51214,13 @@ function (_super) {
     var m = this._transform = [scaleX, 0, 0, scaleY, translateX, translateY];
     this._invTransform = invert([], m);
   };
+<<<<<<< HEAD
   /**
    * Base axis will be used on stacking.
+=======
+  /**
+   * Base axis will be used on stacking.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47452,9 +51293,15 @@ function (_super) {
   Cartesian2D.prototype.getOtherAxis = function (axis) {
     return this.getAxis(axis.dim === 'x' ? 'y' : 'x');
   };
+<<<<<<< HEAD
   /**
    * Get rect area of cartesian.
    * Area will have a contain function to determine if a point is in the coordinate system.
+=======
+  /**
+   * Get rect area of cartesian.
+   * Area will have a contain function to determine if a point is in the coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47478,9 +51325,15 @@ function (_super) {
 
   function Axis2D(dim, scale, coordExtent, axisType, position) {
     var _this = _super.call(this, dim, scale, coordExtent) || this;
+<<<<<<< HEAD
     /**
      * Index of axis, can be used as key
      * Injected outside.
+=======
+    /**
+     * Index of axis, can be used as key
+     * Injected outside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -47494,6 +51347,7 @@ function (_super) {
     var position = this.position;
     return position === 'top' || position === 'bottom';
   };
+<<<<<<< HEAD
   /**
    * Each item cooresponds to this.getExtent(), which
    * means globalExtent[0] may greater than globalExtent[1],
@@ -47501,6 +51355,15 @@ function (_super) {
    *
    * @param {boolean} [asc]
    * @return {Array.<number>}
+=======
+  /**
+   * Each item cooresponds to this.getExtent(), which
+   * means globalExtent[0] may greater than globalExtent[1],
+   * unless `asc` is input.
+   *
+   * @param {boolean} [asc]
+   * @return {Array.<number>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47515,9 +51378,15 @@ function (_super) {
   Axis2D.prototype.pointToData = function (point, clamp) {
     return this.coordToData(this.toLocalCoord(point[this.dim === 'x' ? 0 : 1]), clamp);
   };
+<<<<<<< HEAD
   /**
    * Set ordinalSortInfo
    * @param info new OrdinalSortInfo
+=======
+  /**
+   * Set ordinalSortInfo
+   * @param info new OrdinalSortInfo
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47533,9 +51402,15 @@ function (_super) {
   return Axis2D;
 }(Axis);
 
+<<<<<<< HEAD
 /**
  * Can only be called after coordinate system creation stage.
  * (Can be called before coordinate system update stage).
+=======
+/**
+ * Can only be called after coordinate system creation stage.
+ * (Can be called before coordinate system update stage).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function layout$1(gridModel, axisModel, opt) {
@@ -47803,8 +51678,13 @@ function () {
 
     this.resize(this.model, api);
   };
+<<<<<<< HEAD
   /**
    * Resize the grid
+=======
+  /**
+   * Resize the grid
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47890,8 +51770,13 @@ function () {
   Grid.prototype.getCartesians = function () {
     return this._coordsList.slice();
   };
+<<<<<<< HEAD
   /**
    * @implements
+=======
+  /**
+   * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47900,8 +51785,13 @@ function () {
 
     return target.cartesian ? target.cartesian.dataToPoint(value) : target.axis ? target.axis.toGlobalCoord(target.axis.dataToCoord(value)) : null;
   };
+<<<<<<< HEAD
   /**
    * @implements
+=======
+  /**
+   * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47943,8 +51833,13 @@ function () {
       axis: axis
     };
   };
+<<<<<<< HEAD
   /**
    * @implements
+=======
+  /**
+   * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -47955,8 +51850,13 @@ function () {
       return coord.containPoint(point);
     }
   };
+<<<<<<< HEAD
   /**
    * Initialize cartesian coordinate systems
+=======
+  /**
+   * Initialize cartesian coordinate systems
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -48049,8 +51949,13 @@ function () {
       };
     }
   };
+<<<<<<< HEAD
   /**
    * Update cartesian properties from series.
+=======
+  /**
+   * Update cartesian properties from series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -48089,8 +51994,13 @@ function () {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * @param dim 'x' or 'y' or 'auto' or null/undefined
+=======
+  /**
+   * @param dim 'x' or 'y' or 'auto' or null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -48151,8 +52061,13 @@ function () {
   Grid.dimensions = cartesian2DDimensions;
   return Grid;
 }();
+<<<<<<< HEAD
 /**
  * Check if the axis is used in the specified grid.
+=======
+/**
+ * Check if the axis is used in the specified grid.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -48227,6 +52142,7 @@ function updateAxisTransform(axis, coordBase) {
 }
 
 var PI$5 = Math.PI;
+<<<<<<< HEAD
 /**
  * A final axis is translated and rotated from a "standard axis".
  * So opt.position and opt.rotation is required.
@@ -48248,6 +52164,29 @@ var PI$5 = Math.PI;
  *
  * Do not need to consider axis 'inverse', which is auto processed by
  * axis extent.
+=======
+/**
+ * A final axis is translated and rotated from a "standard axis".
+ * So opt.position and opt.rotation is required.
+ *
+ * A standard axis is and axis from [0, 0] to [0, axisExtent[1]],
+ * for example: (0, 0) ------------> (0, 50)
+ *
+ * nameDirection or tickDirection or labelDirection is 1 means tick
+ * or label is below the standard axis, whereas is -1 means above
+ * the standard axis. labelOffset means offset between label and axis,
+ * which is useful when 'onZero', where axisLabel is in the grid and
+ * label in outside grid.
+ *
+ * Tips: like always,
+ * positive rotation represents anticlockwise, and negative rotation
+ * represents clockwise.
+ * The direction of position coordinate is the same as the direction
+ * of screen coordinate.
+ *
+ * Do not need to consider axis 'inverse', which is auto processed by
+ * axis extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var AxisBuilder =
@@ -48809,6 +52748,7 @@ function buildAxisLabel(group, transformGroup, axisModel, opt) {
 
 function collect(ecModel, api) {
   var result = {
+<<<<<<< HEAD
     /**
      * key: makeKey(axis.model)
      * value: {
@@ -48822,13 +52762,34 @@ function collect(ecModel, api) {
      *      seriesModels,
      *      seriesDataCount
      * }
+=======
+    /**
+     * key: makeKey(axis.model)
+     * value: {
+     *      axis,
+     *      coordSys,
+     *      axisPointerModel,
+     *      triggerTooltip,
+     *      triggerEmphasis,
+     *      involveSeries,
+     *      snap,
+     *      seriesModels,
+     *      seriesDataCount
+     * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     axesInfo: {},
     seriesInvolved: false,
 
+<<<<<<< HEAD
     /**
      * key: makeKey(coordSys.model)
      * value: Object: key makeKey(axis.model), value: axisInfo
+=======
+    /**
+     * key: makeKey(coordSys.model)
+     * value: Object: key makeKey(axis.model), value: axisInfo
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     coordSysAxesInfo: {},
     coordSysMap: {}
@@ -48988,6 +52949,7 @@ function collectSeriesInfo(result, ecModel) {
     });
   });
 }
+<<<<<<< HEAD
 /**
  * For example:
  * {
@@ -49001,6 +52963,21 @@ function collectSeriesInfo(result, ecModel) {
  *         }]
  *     }
  * }
+=======
+/**
+ * For example:
+ * {
+ *     axisPointer: {
+ *         links: [{
+ *             xAxisIndex: [2, 4],
+ *             yAxisIndex: 'all'
+ *         }, {
+ *             xAxisId: ['a5', 'a7'],
+ *             xAxisName: 'xxx'
+ *         }]
+ *     }
+ * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -49078,9 +53055,15 @@ function getAxisPointerModel(axisModel) {
 function isHandleTrigger(axisPointerModel) {
   return !!axisPointerModel.get(['handle', 'show']);
 }
+<<<<<<< HEAD
 /**
  * @param {module:echarts/model/Model} model
  * @return {string} unique key
+=======
+/**
+ * @param {module:echarts/model/Model} model
+ * @return {string} unique key
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -49089,8 +53072,13 @@ function makeKey(model) {
 }
 
 var axisPointerClazz = {};
+<<<<<<< HEAD
 /**
  * Base class of AxisView.
+=======
+/**
+ * Base class of AxisView.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var AxisView =
@@ -49104,8 +53092,13 @@ function (_super) {
     _this.type = AxisView.type;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -49121,16 +53114,26 @@ function (_super) {
 
     this._doUpdateAxisPointerClass(axisModel, api, true);
   };
+<<<<<<< HEAD
   /**
    * Action handler.
+=======
+  /**
+   * Action handler.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   AxisView.prototype.updateAxisPointer = function (axisModel, ecModel, api, payload) {
     this._doUpdateAxisPointerClass(axisModel, api, false);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -49138,8 +53141,13 @@ function (_super) {
     var axisPointer = this._axisPointer;
     axisPointer && axisPointer.remove(api);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -49287,8 +53295,13 @@ function (_super) {
     _this.axisPointerClass = 'CartesianAxisPointer';
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -50243,9 +54256,15 @@ var Radar =
 /** @class */
 function () {
   function Radar(radarModel, ecModel, api) {
+<<<<<<< HEAD
     /**
      *
      * Radar dimensions
+=======
+    /**
+     *
+     * Radar dimensions
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     this.dimensions = [];
     this._model = radarModel;
@@ -50392,8 +54411,13 @@ function () {
     });
     return radarList;
   };
+<<<<<<< HEAD
   /**
    * Radar dimensions is based on the data
+=======
+  /**
+   * Radar dimensions is based on the data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -50448,12 +54472,21 @@ function isTaken(zr, resourceKey) {
 function getStore(zr) {
   return zr[ATTR] || (zr[ATTR] = {});
 }
+<<<<<<< HEAD
 /**
  * payload: {
  *     type: 'takeGlobalCursor',
  *     key: 'dataZoomSelect', or 'brush', or ...,
  *         If no userKey, release global cursor.
  * }
+=======
+/**
+ * payload: {
+ *     type: 'takeGlobalCursor',
+ *     key: 'dataZoomSelect', or 'brush', or ...,
+ *         If no userKey, release global cursor.
+ * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 // TODO: SELF REGISTERED.
 
@@ -50479,10 +54512,17 @@ function (_super) {
     var mouseupHandler = bind(_this._mouseupHandler, _this);
     var mousewheelHandler = bind(_this._mousewheelHandler, _this);
     var pinchHandler = bind(_this._pinchHandler, _this);
+<<<<<<< HEAD
     /**
      * Notice: only enable needed types. For example, if 'zoom'
      * is not needed, 'zoom' should not be enabled, otherwise
      * default mousewheel behaviour (scroll page) will be disabled.
+=======
+    /**
+     * Notice: only enable needed types. For example, if 'zoom'
+     * is not needed, 'zoom' should not be enabled, otherwise
+     * default mousewheel behaviour (scroll page) will be disabled.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this.enable = function (controlType, opt) {
@@ -50715,6 +54755,7 @@ function isAvailableBehavior(behaviorToCheck, e, settings) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -50736,6 +54777,29 @@ function isAvailableBehavior(behaviorToCheck, e, settings) {
 
 /**
  * For geo and graph.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+/**
+ * For geo and graph.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 function updateViewOnPan(controllerHost, dx, dy) {
   var target = controllerHost.target;
@@ -50743,8 +54807,13 @@ function updateViewOnPan(controllerHost, dx, dy) {
   target.y += dy;
   target.dirty();
 }
+<<<<<<< HEAD
 /**
  * For geo and graph.
+=======
+/**
+ * For geo and graph.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function updateViewOnZoom(controllerHost, zoomDelta, zoomX, zoomY) {
@@ -50793,6 +54862,7 @@ function updateViewOnZoom(controllerHost, zoomDelta, zoomX, zoomY) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -50810,15 +54880,40 @@ function updateViewOnZoom(controllerHost, zoomDelta, zoomX, zoomY) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var IRRELEVANT_EXCLUDES = {
   'axisPointer': 1,
   'tooltip': 1,
   'brush': 1
 };
+<<<<<<< HEAD
 /**
  * Avoid that: mouse click on a elements that is over geo or graph,
  * but roam is triggered.
+=======
+/**
+ * Avoid that: mouse click on a elements that is over geo or graph,
+ * but roam is triggered.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function onIrrelevantElement(e, api, targetCoordSysModel) {
@@ -51461,6 +55556,7 @@ function parseSVG(xml, opt) {
     return parser.parse(xml, opt);
 }
 
+<<<<<<< HEAD
 /**
  * "region available" means that: enable users to set attribute `name="xxx"` on those tags
  * to make it be a region.
@@ -51480,6 +55576,27 @@ function parseSVG(xml, opt) {
  * 2. name can be duplicated in different SVG tag. All of the tags with the same name share
  * a region option. For exampel if there are two <path> representing two lung lobes. They have
  * no common parents but both of them need to display label "lung" inside.
+=======
+/**
+ * "region available" means that: enable users to set attribute `name="xxx"` on those tags
+ * to make it be a region.
+ * 1. region styles and its label styles can be defined in echarts opton:
+ * ```js
+ * geo: {
+ *     regions: [{
+ *         name: 'xxx',
+ *         itemStyle: { ... },
+ *         label: { ... }
+ *     }, {
+ *         ...
+ *     },
+ *     ...]
+ * };
+ * ```
+ * 2. name can be duplicated in different SVG tag. All of the tags with the same name share
+ * a region option. For exampel if there are two <path> representing two lung lobes. They have
+ * no common parents but both of them need to display label "lung" inside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var REGION_AVAILABLE_SVG_TAG_MAP = createHashMap(['rect', 'circle', 'line', 'ellipse', 'polygon', 'polyline', 'path', // <text> <tspan> are also enabled because some SVG might paint text itself,
@@ -51667,6 +55784,7 @@ function () {
       named: named
     };
   };
+<<<<<<< HEAD
   /**
    * Consider:
    * (1) One graphic element can not be shared by different `geoView` running simultaneously.
@@ -51676,6 +55794,17 @@ function () {
    *     and it is called without view info.
    * So we maintain graphic elements in this module, and enables `view` to use/return these
    * graphics from/to the pool with it's uid.
+=======
+  /**
+   * Consider:
+   * (1) One graphic element can not be shared by different `geoView` running simultaneously.
+   *     Notice, also need to consider multiple echarts instances share a `mapRecord`.
+   * (2) Converting SVG to graphic elements is time consuming.
+   * (3) In the current architecture, `load` should be called frequently to get boundingRect,
+   *     and it is called without view info.
+   * So we maintain graphic elements in this module, and enables `view` to use/return these
+   * graphics from/to the pool with it's uid.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -51830,6 +55959,7 @@ function fixNanhai(mapType, regions) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -51847,6 +55977,25 @@ function fixNanhai(mapType, regions) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var coordsOffsetMap = {
   '南海诸岛': [32, 80],
@@ -51894,6 +56043,7 @@ function fixTextCoords(mapType, region) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -51911,6 +56061,25 @@ function fixTextCoords(mapType, region) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 // Fix for 钓鱼岛
 // let Region = require('../Region');
@@ -51939,9 +56108,15 @@ function () {
 
     this._geoJSON = parseInput(geoJSON);
   }
+<<<<<<< HEAD
   /**
    * @param nameMap can be null/undefined
    * @param nameProperty can be null/undefined
+=======
+  /**
+   * @param nameMap can be null/undefined
+   * @param nameProperty can be null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -52004,9 +56179,15 @@ function () {
     }, this);
     return rawRegions;
   };
+<<<<<<< HEAD
   /**
    * Only for exporting to users.
    * **MUST NOT** used internally.
+=======
+  /**
+   * Only for exporting to users.
+   * **MUST NOT** used internally.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -52042,6 +56223,7 @@ function parseInput(source) {
 
 var storage = createHashMap();
 var geoSourceManager = {
+<<<<<<< HEAD
   /**
    * Compatible with previous `echarts.registerMap`.
    *
@@ -52071,6 +56253,37 @@ var geoSourceManager = {
    * units are mapping/normalize.
    * If intending to use multiple geoJSON or SVG, we can
    * use multiple geo coordinate system.
+=======
+  /**
+   * Compatible with previous `echarts.registerMap`.
+   *
+   * @usage
+   * ```js
+   *
+   * echarts.registerMap('USA', geoJson, specialAreas);
+   *
+   * echarts.registerMap('USA', {
+   *     geoJson: geoJson,
+   *     specialAreas: {...}
+   * });
+   * echarts.registerMap('USA', {
+   *     geoJSON: geoJson,
+   *     specialAreas: {...}
+   * });
+   *
+   * echarts.registerMap('airport', {
+   *     svg: svg
+   * }
+   * ```
+   *
+   * Note:
+   * Do not support that register multiple geoJSON or SVG
+   * one map name. Because different geoJSON and SVG have
+   * different unit. It's not easy to make sure how those
+   * units are mapping/normalize.
+   * If intending to use multiple geoJSON or SVG, we can
+   * use multiple geo coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   registerMap: function (mapName, rawDef, rawSpecialAreas) {
     if (rawDef.svg) {
@@ -52098,9 +56311,15 @@ var geoSourceManager = {
     return storage.get(mapName);
   },
 
+<<<<<<< HEAD
   /**
    * Only for exporting to users.
    * **MUST NOT** used internally.
+=======
+  /**
+   * Only for exporting to users.
+   * **MUST NOT** used internally.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   getMapForUser: function (mapName) {
     var resource = storage.get(mapName); // Do not support return SVG until some real requirement come.
@@ -52122,10 +56341,17 @@ var geoSourceManager = {
   }
 };
 
+<<<<<<< HEAD
 /**
  * Only these tags enable use `itemStyle` if they are named in SVG.
  * Other tags like <text> <tspan> <image> might not suitable for `itemStyle`.
  * They will not be considered to be styled until some requirements come.
+=======
+/**
+ * Only these tags enable use `itemStyle` if they are named in SVG.
+ * Other tags like <text> <tspan> <image> might not suitable for `itemStyle`.
+ * They will not be considered to be styled until some requirements come.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var OPTION_STYLE_ENABLED_TAGS = ['rect', 'circle', 'line', 'ellipse', 'polygon', 'polyline', 'path'];
@@ -52575,6 +56801,7 @@ function () {
       return geo.containPoint([x, y]) && !onIrrelevantElement(e, api, mapOrGeoModel);
     });
   };
+<<<<<<< HEAD
   /**
    * FIXME: this is a temporarily workaround.
    * When `geoRoam` the elements need to be reset in `MapView['render']`, because the props like
@@ -52585,6 +56812,18 @@ function () {
    * `renderSeries` will cache the modified `ignore` to `el._normalState`.
    * TODO:
    * Use clone/immutable in `LabelManager`?
+=======
+  /**
+   * FIXME: this is a temporarily workaround.
+   * When `geoRoam` the elements need to be reset in `MapView['render']`, because the props like
+   * `ignore` might have been modified by `LabelManager`, and `LabelManager#addLabelsOfSeries`
+   * will subsequently cache `defaultAttr` like `ignore`. If do not do this reset, the modified
+   * props will have no chance to be restored.
+   * Note: This reset should be after `clearStates` in `renderSeries` because `useStates` in
+   * `renderSeries` will cache the modified `ignore` to `el._normalState`.
+   * TODO:
+   * Use clone/immutable in `LabelManager`?
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53033,9 +57272,15 @@ function (_super) {
     data.appendValues([], toAppendNames);
     return data;
   };
+<<<<<<< HEAD
   /**
    * If no host geo model, return null, which means using a
    * inner exclusive geo model.
+=======
+  /**
+   * If no host geo model, return null, which means using a
+   * inner exclusive geo model.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53060,8 +57305,13 @@ function (_super) {
     var data = this.getData();
     return data.get(data.mapDimension('value'), dataIndex);
   };
+<<<<<<< HEAD
   /**
    * Get model of region
+=======
+  /**
+   * Get model of region
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53069,8 +57319,13 @@ function (_super) {
     var data = this.getData();
     return data.getItemModel(data.indexOfName(regionName));
   };
+<<<<<<< HEAD
   /**
    * Map tooltip formatter
+=======
+  /**
+   * Map tooltip formatter
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53329,6 +57584,7 @@ function (_super) {
 
     _this.type = 'view';
     _this.dimensions = ['x', 'y'];
+<<<<<<< HEAD
     /**
      * Represents the transform brought by roam/zoom.
      * If `View['_viewRect']` applies roam transform,
@@ -53338,6 +57594,17 @@ function (_super) {
     _this._roamTransformable = new Transformable();
     /**
      * Represents the transform from `View['_rect']` to `View['_viewRect']`.
+=======
+    /**
+     * Represents the transform brought by roam/zoom.
+     * If `View['_viewRect']` applies roam transform,
+     * we can get the final displayed rect.
+     */
+
+    _this._roamTransformable = new Transformable();
+    /**
+     * Represents the transform from `View['_rect']` to `View['_viewRect']`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this._rawTransformable = new Transformable();
@@ -53349,8 +57616,13 @@ function (_super) {
     this._rect = new BoundingRect(x, y, width, height);
     return this._rect;
   };
+<<<<<<< HEAD
   /**
    * @return {module:zrender/core/BoundingRect}
+=======
+  /**
+   * @return {module:zrender/core/BoundingRect}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53363,8 +57635,13 @@ function (_super) {
 
     this._viewRect = new BoundingRect(x, y, width, height);
   };
+<<<<<<< HEAD
   /**
    * Transformed to particular position and size
+=======
+  /**
+   * Transformed to particular position and size
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53379,8 +57656,13 @@ function (_super) {
 
     this._updateTransform();
   };
+<<<<<<< HEAD
   /**
    * Set center of view
+=======
+  /**
+   * Set center of view
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53412,8 +57694,13 @@ function (_super) {
 
     this._updateCenterAndZoom();
   };
+<<<<<<< HEAD
   /**
    * Get default center without roam
+=======
+  /**
+   * Get default center without roam
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53436,8 +57723,13 @@ function (_super) {
   View.prototype.getRoamTransform = function () {
     return this._roamTransformable.getLocalTransform();
   };
+<<<<<<< HEAD
   /**
    * Remove roam
+=======
+  /**
+   * Remove roam
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53459,9 +57751,15 @@ function (_super) {
 
     this._updateTransform();
   };
+<<<<<<< HEAD
   /**
    * Update transform props on `this` based on the current
    * `this._roamTransformable` and `this._rawTransformable`.
+=======
+  /**
+   * Update transform props on `this` based on the current
+   * `this._roamTransformable` and `this._rawTransformable`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53506,8 +57804,13 @@ function (_super) {
   View.prototype.getViewRect = function () {
     return this._viewRect;
   };
+<<<<<<< HEAD
   /**
    * Get view rect after roam transform
+=======
+  /**
+   * Get view rect after roam transform
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53516,8 +57819,13 @@ function (_super) {
     rect.applyTransform(this.transform);
     return rect;
   };
+<<<<<<< HEAD
   /**
    * Convert a single (lon, lat) data item to (x, y) point.
+=======
+  /**
+   * Convert a single (lon, lat) data item to (x, y) point.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53526,8 +57834,13 @@ function (_super) {
     out = out || [];
     return transform ? v2ApplyTransform(out, data, transform) : copy(out, data);
   };
+<<<<<<< HEAD
   /**
    * Convert a (x, y) point to (lon, lat) data
+=======
+  /**
+   * Convert a (x, y) point to (lon, lat) data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53545,8 +57858,13 @@ function (_super) {
     var coordSys = getCoordSys(finder);
     return coordSys === this ? coordSys.pointToData(pixel) : null;
   };
+<<<<<<< HEAD
   /**
    * @implements
+=======
+  /**
+   * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53680,16 +57998,26 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Add geoCoord for indexing by name
+=======
+  /**
+   * Add geoCoord for indexing by name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Geo.prototype.addGeoCoord = function (name, geoCoord) {
     this._nameCoordMap.set(name, geoCoord);
   };
+<<<<<<< HEAD
   /**
    * Get geoCoord by name
+=======
+  /**
+   * Get geoCoord by name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53728,8 +58056,13 @@ function (_super) {
 
     return point && this.pointToProjected(point);
   };
+<<<<<<< HEAD
   /**
    * Point to projected data. Same with pointToData when projection is used.
+=======
+  /**
+   * Point to projected data. Same with pointToData when projection is used.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -53762,8 +58095,13 @@ function getCoordSys$1(finder) {
   || (seriesModel.getReferringComponents('geo', SINGLE_REFERRING).models[0] || {}).coordinateSystem : null;
 }
 
+<<<<<<< HEAD
 /**
  * Resize method bound to the geo
+=======
+/**
+ * Resize method bound to the geo
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function resizeGeo(geoModel, api) {
@@ -53949,8 +58287,13 @@ function () {
     });
     return geoList;
   };
+<<<<<<< HEAD
   /**
    * Fill given regions array
+=======
+  /**
+   * Fill given regions array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -54030,17 +58373,28 @@ function (_super) {
       option.selectedMap = selectedMap;
     }
   };
+<<<<<<< HEAD
   /**
    * Get model of region.
+=======
+  /**
+   * Get model of region.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   GeoModel.prototype.getRegionModel = function (name) {
     return this._optionModelMap.get(name) || new Model(null, this, this.ecModel);
   };
+<<<<<<< HEAD
   /**
    * Format label
    * @param name Region name
+=======
+  /**
+   * Format label
+   * @param name Region name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -54191,6 +58545,7 @@ function (_super) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -54208,6 +58563,25 @@ function (_super) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function getCenterCoord(view, point) {
   // Use projected coord as center because it's linear.
@@ -54389,6 +58763,7 @@ function install$9(registers) {
     type: 'geoUnSelect',
     event: 'geounselected'
   });
+<<<<<<< HEAD
   /**
    * @payload
    * @property {string} [componentType=series]
@@ -54397,6 +58772,16 @@ function install$9(registers) {
    * @property {number} [zoom]
    * @property {number} [originX]
    * @property {number} [originY]
+=======
+  /**
+   * @payload
+   * @property {string} [componentType=series]
+   * @property {number} [dx]
+   * @property {number} [dy]
+   * @property {number} [zoom]
+   * @property {number} [originX]
+   * @property {number} [originY]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   registers.registerAction({
@@ -54439,8 +58824,13 @@ function install$a(registers) {
   createLegacyDataSelectAction('map', registers.registerAction);
 }
 
+<<<<<<< HEAD
 /**
  * Initialize all computational message for following algorithm.
+=======
+/**
+ * Initialize all computational message for following algorithm.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function init$2(inRoot) {
@@ -54483,6 +58873,7 @@ function init$2(inRoot) {
     }
   }
 }
+<<<<<<< HEAD
 /**
  * The implementation of this function was originally copied from "d3.js"
  * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
@@ -54493,6 +58884,18 @@ function init$2(inRoot) {
  * applied recursively to the children of node, as well as the function
  * apportion(). After spacing out the children by calling executeShifts(), the
  * node is placed to the midpoint of its outermost children.
+=======
+/**
+ * The implementation of this function was originally copied from "d3.js"
+ * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+ *
+ * Computes a preliminary x coordinate for node. Before that, this function is
+ * applied recursively to the children of node, as well as the function
+ * apportion(). After spacing out the children by calling executeShifts(), the
+ * node is placed to the midpoint of its outermost children.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function firstWalk(node, separation) {
@@ -54516,6 +58919,7 @@ function firstWalk(node, separation) {
 
   node.parentNode.hierNode.defaultAncestor = apportion(node, subtreeW, node.parentNode.hierNode.defaultAncestor || siblings[0], separation);
 }
+<<<<<<< HEAD
 /**
  * The implementation of this function was originally copied from "d3.js"
  * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
@@ -54523,6 +58927,15 @@ function firstWalk(node, separation) {
  * See the license statement at the head of this file.
  *
  * Computes all real x-coordinates by summing up the modifiers recursively.
+=======
+/**
+ * The implementation of this function was originally copied from "d3.js"
+ * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+ *
+ * Computes all real x-coordinates by summing up the modifiers recursively.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function secondWalk(node) {
@@ -54535,8 +58948,13 @@ function secondWalk(node) {
 function separation(cb) {
   return arguments.length ? cb : defaultSeparation;
 }
+<<<<<<< HEAD
 /**
  * Transform the common coordinate to radial coordinate.
+=======
+/**
+ * Transform the common coordinate to radial coordinate.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function radialCoordinate(rad, r) {
@@ -54546,8 +58964,13 @@ function radialCoordinate(rad, r) {
     y: r * Math.sin(rad)
   };
 }
+<<<<<<< HEAD
 /**
  * Get the layout position of the whole view.
+=======
+/**
+ * Get the layout position of the whole view.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getViewRect$1(seriesModel, api) {
@@ -54556,6 +58979,7 @@ function getViewRect$1(seriesModel, api) {
     height: api.getHeight()
   });
 }
+<<<<<<< HEAD
 /**
  * All other shifts, applied to the smaller subtrees between w- and w+, are
  * performed by this function.
@@ -54564,6 +58988,16 @@ function getViewRect$1(seriesModel, api) {
  * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
  * with some modifications made for this program.
  * See the license statement at the head of this file.
+=======
+/**
+ * All other shifts, applied to the smaller subtrees between w- and w+, are
+ * performed by this function.
+ *
+ * The implementation of this function was originally copied from "d3.js"
+ * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function executeShifts(node) {
@@ -54580,6 +59014,7 @@ function executeShifts(node) {
     shift += child.hierNode.shift + change;
   }
 }
+<<<<<<< HEAD
 /**
  * The implementation of this function was originally copied from "d3.js"
  * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
@@ -54593,6 +59028,21 @@ function executeShifts(node) {
  * one of the greatest uncommon ancestors using the function nextAncestor()
  * and call moveSubtree() to shift the subtree and prepare the shifts of
  * smaller subtrees. Finally, we add a new thread (if necessary).
+=======
+/**
+ * The implementation of this function was originally copied from "d3.js"
+ * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+ *
+ * The core of the algorithm. Here, a new subtree is combined with the
+ * previous subtrees. Threads are used to traverse the inside and outside
+ * contours of the left and right subtree up to the highest common level.
+ * Whenever two nodes of the inside contours conflict, we compute the left
+ * one of the greatest uncommon ancestors using the function nextAncestor()
+ * and call moveSubtree() to shift the subtree and prepare the shifts of
+ * smaller subtrees. Finally, we add a new thread (if necessary).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -54639,10 +59089,17 @@ function apportion(subtreeV, subtreeW, ancestor, separation) {
 
   return ancestor;
 }
+<<<<<<< HEAD
 /**
  * This function is used to traverse the right contour of a subtree.
  * It returns the rightmost child of node or the thread of node. The function
  * returns null if and only if node is on the highest depth of its subtree.
+=======
+/**
+ * This function is used to traverse the right contour of a subtree.
+ * It returns the rightmost child of node or the thread of node. The function
+ * returns null if and only if node is on the highest depth of its subtree.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -54650,10 +59107,17 @@ function nextRight(node) {
   var children = node.children;
   return children.length && node.isExpand ? children[children.length - 1] : node.hierNode.thread;
 }
+<<<<<<< HEAD
 /**
  * This function is used to traverse the left contour of a subtree (or a subforest).
  * It returns the leftmost child of node or the thread of node. The function
  * returns null if and only if node is on the highest depth of its subtree.
+=======
+/**
+ * This function is used to traverse the left contour of a subtree (or a subforest).
+ * It returns the leftmost child of node or the thread of node. The function
+ * returns null if and only if node is on the highest depth of its subtree.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -54661,15 +59125,22 @@ function nextLeft(node) {
   var children = node.children;
   return children.length && node.isExpand ? children[0] : node.hierNode.thread;
 }
+<<<<<<< HEAD
 /**
  * If nodeInLeft’s ancestor is a sibling of node, returns nodeInLeft’s ancestor.
  * Otherwise, returns the specified ancestor.
+=======
+/**
+ * If nodeInLeft’s ancestor is a sibling of node, returns nodeInLeft’s ancestor.
+ * Otherwise, returns the specified ancestor.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
 function nextAncestor(nodeInLeft, node, ancestor) {
   return nodeInLeft.hierNode.ancestor.parentNode === node.parentNode ? nodeInLeft.hierNode.ancestor : ancestor;
 }
+<<<<<<< HEAD
 /**
  * The implementation of this function was originally copied from "d3.js"
  * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
@@ -54678,6 +59149,16 @@ function nextAncestor(nodeInLeft, node, ancestor) {
  *
  * Shifts the current subtree rooted at wr.
  * This is done by increasing prelim(w+) and modifier(w+) by shift.
+=======
+/**
+ * The implementation of this function was originally copied from "d3.js"
+ * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+ *
+ * Shifts the current subtree rooted at wr.
+ * This is done by increasing prelim(w+) and modifier(w+) by shift.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -54689,11 +59170,19 @@ function moveSubtree(wl, wr, shift) {
   wr.hierNode.prelim += shift;
   wl.hierNode.change += change;
 }
+<<<<<<< HEAD
 /**
  * The implementation of this function was originally copied from "d3.js"
  * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
  * with some modifications made for this program.
  * See the license statement at the head of this file.
+=======
+/**
+ * The implementation of this function was originally copied from "d3.js"
+ * <https://github.com/d3/d3-hierarchy/blob/4c1f038f2725d6eae2e49b61d01456400694bac4/src/tree.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -55417,11 +59906,19 @@ function cloneShallowInjection(opt, res) {
   });
   return res;
 }
+<<<<<<< HEAD
 /**
  * Supplement method to List.
  *
  * @public
  * @param [dataType] If not specified, return mainData.
+=======
+/**
+ * Supplement method to List.
+ *
+ * @public
+ * @param [dataType] If not specified, return mainData.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -55429,8 +59926,13 @@ function getLinkedData(dataType) {
   var mainData = inner$7(this).mainData;
   return dataType == null || mainData == null ? mainData : inner$7(mainData).datas[dataType];
 }
+<<<<<<< HEAD
 /**
  * Get list of all linked data
+=======
+/**
+ * Get list of all linked data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -55478,12 +59980,21 @@ function () {
   function TreeNode(name, hostTree) {
     this.depth = 0;
     this.height = 0;
+<<<<<<< HEAD
     /**
      * Reference to list item.
      * Do not persistent dataIndex outside,
      * besause it may be changed by list.
      * If dataIndex -1,
      * this node is logical deleted (filtered) in list.
+=======
+    /**
+     * Reference to list item.
+     * Do not persistent dataIndex outside,
+     * besause it may be changed by list.
+     * If dataIndex -1,
+     * this node is logical deleted (filtered) in list.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this.dataIndex = -1;
@@ -55493,8 +60004,13 @@ function () {
     this.name = name || '';
     this.hostTree = hostTree;
   }
+<<<<<<< HEAD
   /**
    * The node is removed.
+=======
+  /**
+   * The node is removed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55528,8 +60044,13 @@ function () {
 
     order === 'postorder' && cb.call(context, this);
   };
+<<<<<<< HEAD
   /**
    * Update depth and height of this subtree.
+=======
+  /**
+   * Update depth and height of this subtree.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55576,9 +60097,15 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * @param includeSelf Default false.
    * @return order: [root, child, grandchild, ...]
+=======
+  /**
+   * @param includeSelf Default false.
+   * @return order: [root, child, grandchild, ...]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55624,8 +60151,13 @@ function () {
   TreeNode.prototype.setLayout = function (layout, merge) {
     this.dataIndex >= 0 && this.hostTree.data.setItemLayout(this.dataIndex, layout, merge);
   };
+<<<<<<< HEAD
   /**
    * @return {Object} layout
+=======
+  /**
+   * @return {Object} layout
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55654,9 +60186,15 @@ function () {
   TreeNode.prototype.setVisual = function (key, value) {
     this.dataIndex >= 0 && this.hostTree.data.setItemVisual(this.dataIndex, key, value);
   };
+<<<<<<< HEAD
   /**
    * Get item visual
    * FIXME: make return type better
+=======
+  /**
+   * Get item visual
+   * FIXME: make return type better
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55671,8 +60209,13 @@ function () {
   TreeNode.prototype.getId = function () {
     return this.hostTree.data.getId(this.dataIndex);
   };
+<<<<<<< HEAD
   /**
    * index in parent's children
+=======
+  /**
+   * index in parent's children
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55691,11 +60234,19 @@ function () {
 
     return -1;
   };
+<<<<<<< HEAD
   /**
    * if this is an ancestor of another node
    *
    * @param node another node
    * @return if is ancestor
+=======
+  /**
+   * if this is an ancestor of another node
+   *
+   * @param node another node
+   * @return if is ancestor
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55712,11 +60263,19 @@ function () {
 
     return false;
   };
+<<<<<<< HEAD
   /**
    * if this is an descendant of another node
    *
    * @param node another node
    * @return if is descendant
+=======
+  /**
+   * if this is an descendant of another node
+   *
+   * @param node another node
+   * @return if is descendant
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55748,9 +60307,15 @@ function () {
   Tree.prototype.getNodeById = function (name) {
     return this.root.getNodeById(name);
   };
+<<<<<<< HEAD
   /**
    * Update item available by list,
    * when list has been performed options like 'filterSelf' or 'map'.
+=======
+  /**
+   * Update item available by list,
+   * when list has been performed options like 'filterSelf' or 'map'.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55766,14 +60331,20 @@ function () {
       nodes[data.getRawIndex(i)].dataIndex = i;
     }
   };
+<<<<<<< HEAD
   /**
    * Clear all layouts
+=======
+  /**
+   * Clear all layouts
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Tree.prototype.clearLayouts = function () {
     this.data.clearItemLayouts();
   };
+<<<<<<< HEAD
   /**
    * data node format:
    * {
@@ -55788,6 +60359,22 @@ function () {
    *         ...
    *     ]
    * }
+=======
+  /**
+   * data node format:
+   * {
+   *     name: ...
+   *     value: ...
+   *     children: [
+   *         {
+   *             name: ...
+   *             value: ...
+   *             children: ...
+   *         },
+   *         ...
+   *     ]
+   * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55834,9 +60421,15 @@ function () {
 
   return Tree;
 }();
+<<<<<<< HEAD
 /**
  * It is needed to consider the mess of 'list', 'hostModel' when creating a TreeNote,
  * so this function is not ready and not necessary to be public.
+=======
+/**
+ * It is needed to consider the mess of 'list', 'hostModel' when creating a TreeNote,
+ * so this function is not ready and not necessary to be public.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -55921,8 +60514,13 @@ function (_super) {
     _this.ignoreStyleOnData = true;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * Init a tree data structure from data in option series
+=======
+  /**
+   * Init a tree data structure from data in option series
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -55963,9 +60561,15 @@ function (_super) {
     });
     return tree.data;
   };
+<<<<<<< HEAD
   /**
    * Make the configuration 'orient' backward compatibly, with 'horizontal = LR', 'vertical = TB'.
    * @returns {string} orient
+=======
+  /**
+   * Make the configuration 'orient' backward compatibly, with 'horizontal = LR', 'vertical = TB'.
+   * @returns {string} orient
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56092,6 +60696,7 @@ function (_super) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -56113,6 +60718,29 @@ function (_super) {
 
 /**
  * Traverse the tree from bottom to top and do something
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+/**
+ * Traverse the tree from bottom to top and do something
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 function eachAfter(root, callback, separation) {
   var nodes = [root];
@@ -56139,8 +60767,13 @@ function eachAfter(root, callback, separation) {
     callback(node, separation);
   }
 }
+<<<<<<< HEAD
 /**
  * Traverse the tree from top to bottom and do something
+=======
+/**
+ * Traverse the tree from top to bottom and do something
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -56394,8 +61027,13 @@ function (_super) {
     _this.preventUsingHoverLayer = true;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56440,10 +61078,17 @@ function (_super) {
   TreemapSeriesModel.prototype.optionUpdated = function () {
     this.resetViewRoot();
   };
+<<<<<<< HEAD
   /**
    * @override
    * @param {number} dataIndex
    * @param {boolean} [mutipleSeries=false]
+=======
+  /**
+   * @override
+   * @param {number} dataIndex
+   * @param {boolean} [mutipleSeries=false]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56456,12 +61101,21 @@ function (_super) {
       value: value
     });
   };
+<<<<<<< HEAD
   /**
    * Add tree path to tooltip param
    *
    * @override
    * @param {number} dataIndex
    * @return {Object}
+=======
+  /**
+   * Add tree path to tooltip param
+   *
+   * @override
+   * @param {number} dataIndex
+   * @return {Object}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56474,6 +61128,7 @@ function (_super) {
     params.treePathInfo = params.treeAncestors;
     return params;
   };
+<<<<<<< HEAD
   /**
    * @public
    * @param {Object} layoutInfo {
@@ -56482,20 +61137,42 @@ function (_super) {
    *                                width: containerGroup width
    *                                height: containerGroup height
    *                            }
+=======
+  /**
+   * @public
+   * @param {Object} layoutInfo {
+   *                                x: containerGroup x
+   *                                y: containerGroup y
+   *                                width: containerGroup width
+   *                                height: containerGroup height
+   *                            }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   TreemapSeriesModel.prototype.setLayoutInfo = function (layoutInfo) {
+<<<<<<< HEAD
     /**
      * @readOnly
      * @type {Object}
+=======
+    /**
+     * @readOnly
+     * @type {Object}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     this.layoutInfo = this.layoutInfo || {};
     extend(this.layoutInfo, layoutInfo);
   };
+<<<<<<< HEAD
   /**
    * @param  {string} id
    * @return {number} index
+=======
+  /**
+   * @param  {string} id
+   * @return {number} index
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56508,17 +61185,29 @@ function (_super) {
     // color list at the beginning, which is useful for user
     // to adjust data-color mapping.
 
+<<<<<<< HEAD
     /**
      * @private
      * @type {Object}
+=======
+    /**
+     * @private
+     * @type {Object}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     var idIndexMap = this._idIndexMap;
 
     if (!idIndexMap) {
       idIndexMap = this._idIndexMap = createHashMap();
+<<<<<<< HEAD
       /**
        * @private
        * @type {number}
+=======
+      /**
+       * @private
+       * @type {number}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
       this._idIndexMapCount = 0;
@@ -56665,8 +61354,13 @@ function (_super) {
   };
   return TreemapSeriesModel;
 }(SeriesModel);
+<<<<<<< HEAD
 /**
  * @param {Object} dataNode
+=======
+/**
+ * @param {Object} dataNode
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -56698,8 +61392,13 @@ function completeTreeValue(dataNode) {
 
   isArray(dataNode.value) ? dataNode.value[0] = thisValue : dataNode.value = thisValue;
 }
+<<<<<<< HEAD
 /**
  * set default to level configuration
+=======
+/**
+ * set default to level configuration
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -56787,9 +61486,15 @@ function () {
 
     positionElement(thisGroup, layoutParam.pos, layoutParam.box);
   };
+<<<<<<< HEAD
   /**
    * Prepare render list and total width
    * @private
+=======
+  /**
+   * Prepare render list and total width
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56806,8 +61511,13 @@ function () {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56919,6 +61629,7 @@ function packEventData(el, seriesModel, itemNode) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -56948,6 +61659,37 @@ function packEventData(el, seriesModel, itemNode) {
  *      .add(el2, {shape: {width: 500}, style: {fill: 'red'}}, 400)
  *      .done(function () { // done })
  *      .start('cubicOut');
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+/**
+ * Animate multiple elements with a single done-callback.
+ *
+ * @example
+ *  animation
+ *      .createWrap()
+ *      .add(el1, {x: 10, y: 10})
+ *      .add(el2, {shape: {width: 500}, style: {fill: 'red'}}, 400)
+ *      .done(function () { // done })
+ *      .start('cubicOut');
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 var AnimationWrap =
 /** @class */
@@ -56956,12 +61698,21 @@ function () {
     this._storage = [];
     this._elExistsMap = {};
   }
+<<<<<<< HEAD
   /**
    * Caution: a el can only be added once, otherwise 'done'
    * might not be called. This method checks this (by el.id),
    * suppresses adding and returns false when existing el found.
    *
    * @return Whether adding succeeded.
+=======
+  /**
+   * Caution: a el can only be added once, otherwise 'done'
+   * might not be called. This method checks this (by el.id),
+   * suppresses adding and returns false when existing el found.
+   *
+   * @return Whether adding succeeded.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56982,8 +61733,13 @@ function () {
 
     return true;
   };
+<<<<<<< HEAD
   /**
    * Only execute when animation done/aborted.
+=======
+  /**
+   * Only execute when animation done/aborted.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -56991,8 +61747,13 @@ function () {
     this._finishedCallback = callback;
     return this;
   };
+<<<<<<< HEAD
   /**
    * Will stop exist animation firstly.
+=======
+  /**
+   * Will stop exist animation firstly.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -57073,8 +61834,13 @@ function (_super) {
     _this._storage = createStorage();
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -57500,8 +62266,13 @@ function (_super) {
       }
     });
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -57535,6 +62306,7 @@ function (_super) {
       targetNode: targetInfo.node
     });
   };
+<<<<<<< HEAD
   /**
    * @public
    * @param {number} x Global coord x.
@@ -57543,6 +62315,16 @@ function (_super) {
    * @return {number} info.node Target node.
    * @return {number} info.offsetX x refer to target node.
    * @return {number} info.offsetY y refer to target node.
+=======
+  /**
+   * @public
+   * @param {number} x Global coord x.
+   * @param {number} y Global coord y.
+   * @return {Object} info If not found, return undefined;
+   * @return {number} info.node Target node.
+   * @return {number} info.offsetX x refer to target node.
+   * @return {number} info.offsetY y refer to target node.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -57577,8 +62359,13 @@ function (_super) {
   TreemapView.type = 'treemap';
   return TreemapView;
 }(ChartView);
+<<<<<<< HEAD
 /**
  * @inner
+=======
+/**
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -57589,9 +62376,15 @@ function createStorage() {
     content: []
   };
 }
+<<<<<<< HEAD
 /**
  * @inner
  * @return Return undefined means do not travel further.
+=======
+/**
+ * @inner
+ * @return Return undefined means do not travel further.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -57979,11 +62772,19 @@ function () {
   VisualMapping.prototype.getNormalizer = function () {
     return bind(this._normalizeData, this);
   };
+<<<<<<< HEAD
   /**
    * List available visual types.
    *
    * @public
    * @return {Array.<string>}
+=======
+  /**
+   * List available visual types.
+   *
+   * @public
+   * @return {Array.<string>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -57996,17 +62797,28 @@ function () {
   //     visualHandlers[name] = handler;
   // }
 
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   VisualMapping.isValidType = function (visualType) {
     return VisualMapping.visualHandlers.hasOwnProperty(visualType);
   };
+<<<<<<< HEAD
   /**
    * Convenient method.
    * Visual can be Object or Array or primary type.
+=======
+  /**
+   * Convenient method.
+   * Visual can be Object or Array or primary type.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -58027,8 +62839,13 @@ function () {
     });
     return newVisual;
   };
+<<<<<<< HEAD
   /**
    * Retrieve visual properties from given object.
+=======
+  /**
+   * Retrieve visual properties from given object.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -58043,6 +62860,7 @@ function () {
     });
     return hasVisual ? ret : null;
   };
+<<<<<<< HEAD
   /**
    * Give order to visual types, considering colorSaturation, colorAlpha depends on color.
    *
@@ -58050,6 +62868,15 @@ function () {
    * @param {(Object|Array)} visualTypes If Object, like: {color: ..., colorSaturation: ...}
    *                                     IF Array, like: ['color', 'symbol', 'colorSaturation']
    * @return {Array.<string>} Sorted visual types.
+=======
+  /**
+   * Give order to visual types, considering colorSaturation, colorAlpha depends on color.
+   *
+   * @public
+   * @param {(Object|Array)} visualTypes If Object, like: {color: ..., colorSaturation: ...}
+   *                                     IF Array, like: ['color', 'symbol', 'colorSaturation']
+   * @return {Array.<string>} Sorted visual types.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -58073,21 +62900,36 @@ function () {
     });
     return visualTypes;
   };
+<<<<<<< HEAD
   /**
    * 'color', 'colorSaturation', 'colorAlpha', ... are depends on 'color'.
    * Other visuals are only depends on themself.
+=======
+  /**
+   * 'color', 'colorSaturation', 'colorAlpha', ... are depends on 'color'.
+   * Other visuals are only depends on themself.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   VisualMapping.dependsOn = function (visualType1, visualType2) {
     return visualType2 === 'color' ? !!(visualType1 && visualType1.indexOf(visualType2) === 0) : visualType1 === visualType2;
   };
+<<<<<<< HEAD
   /**
    * @param value
    * @param pieceList [{value: ..., interval: [min, max]}, ...]
    *                         Always from small to big.
    * @param findClosestWhenOutside Default to be false
    * @return index
+=======
+  /**
+   * @param value
+   * @param pieceList [{value: ..., interval: [min, max]}, ...]
+   *                         Always from small to big.
+   * @param findClosestWhenOutside Default to be false
+   * @return index
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -58350,8 +63192,13 @@ function doMapFixed() {
   // visual will be convert to array.
   return this.option.visual[0];
 }
+<<<<<<< HEAD
 /**
  * Create mapped to numeric visual
+=======
+/**
+ * Create mapped to numeric visual
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58405,8 +63252,13 @@ function setVisualToOption(thisOption, visualArr) {
 
   return visualArr;
 }
+<<<<<<< HEAD
 /**
  * Normalizers by mapping methods.
+=======
+/**
+ * Normalizers by mapping methods.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58613,8 +63465,13 @@ var PATH_BORDER_WIDTH = ['itemStyle', 'borderWidth'];
 var PATH_GAP_WIDTH = ['itemStyle', 'gapWidth'];
 var PATH_UPPER_LABEL_SHOW = ['upperLabel', 'show'];
 var PATH_UPPER_LABEL_HEIGHT = ['upperLabel', 'height'];
+<<<<<<< HEAD
 /**
  * @public
+=======
+/**
+ * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var treemapLayout = {
@@ -58691,6 +63548,7 @@ var treemapLayout = {
     new BoundingRect(-layoutInfo.x, -layoutInfo.y, ecWidth, ecHeight), viewAbovePath, viewRoot, 0);
   }
 };
+<<<<<<< HEAD
 /**
  * Layout treemap with squarify algorithm.
  * The original presentation of this algorithm
@@ -58708,6 +63566,25 @@ var treemapLayout = {
  * @param {number} options.squareRatio
  * @param {boolean} hideChildren
  * @param {number} depth
+=======
+/**
+ * Layout treemap with squarify algorithm.
+ * The original presentation of this algorithm
+ * was made by Mark Bruls, Kees Huizing, and Jarke J. van Wijk
+ * <https://graphics.ethz.ch/teaching/scivis_common/Literature/squarifiedTreeMaps.pdf>.
+ * The implementation of this algorithm was originally copied from "d3.js"
+ * <https://github.com/d3/d3/blob/9cc9a875e636a1dcf36cc1e07bdf77e1ad6e2c74/src/layout/treemap.js>
+ * with some modifications made for this program.
+ * See the license statement at the head of this file.
+ *
+ * @protected
+ * @param {module:echarts/data/Tree~TreeNode} node
+ * @param {Object} options
+ * @param {string} options.sort 'asc' or 'desc'
+ * @param {number} options.squareRatio
+ * @param {boolean} hideChildren
+ * @param {number} depth
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function squarify(node, options, hideChildren, depth) {
@@ -58790,8 +63667,13 @@ function squarify(node, options, hideChildren, depth) {
     squarify(viewChildren[i], options, hideChildren, depth + 1);
   }
 }
+<<<<<<< HEAD
 /**
  * Set area to each child, and calculate data extent for visual coding.
+=======
+/**
+ * Set area to each child, and calculate data extent for visual coding.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58844,8 +63726,13 @@ function initChildren(node, nodeModel, totalArea, options, hideChildren, depth) 
   }, true);
   return viewChildren;
 }
+<<<<<<< HEAD
 /**
  * Consider 'visibleMin'. Modify viewChildren and get new sum.
+=======
+/**
+ * Consider 'visibleMin'. Modify viewChildren and get new sum.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58871,8 +63758,13 @@ function filterByThreshold(nodeModel, totalArea, sum, orderBy, orderedChildren) 
   orderBy === 'asc' ? orderedChildren.splice(0, len - deletePoint) : orderedChildren.splice(deletePoint, len - deletePoint);
   return sum;
 }
+<<<<<<< HEAD
 /**
  * Sort
+=======
+/**
+ * Sort
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58886,8 +63778,13 @@ function sort$1(viewChildren, orderBy) {
 
   return viewChildren;
 }
+<<<<<<< HEAD
 /**
  * Statistic
+=======
+/**
+ * Statistic
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58926,9 +63823,15 @@ function statistic(nodeModel, children, orderBy) {
     dataExtent: dataExtent
   };
 }
+<<<<<<< HEAD
 /**
  * Computes the score for the specified row,
  * as the worst aspect ratio.
+=======
+/**
+ * Computes the score for the specified row,
+ * as the worst aspect ratio.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -58949,8 +63852,13 @@ function worst(row, rowFixedLength, ratio) {
   var f = rowFixedLength * rowFixedLength * ratio;
   return squareArea ? mathMax$7(f * areaMax / squareArea, squareArea / (f * areaMin)) : Infinity;
 }
+<<<<<<< HEAD
 /**
  * Positions the specified row of nodes. Modifies `rect`.
+=======
+/**
+ * Positions the specified row of nodes. Modifies `rect`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59267,20 +64175,35 @@ function graphEdgeVisual(ecModel) {
 }
 
 var KEY_DELIMITER = '-->';
+<<<<<<< HEAD
 /**
  * params handler
  * @param {module:echarts/model/SeriesModel} seriesModel
  * @returns {*}
+=======
+/**
+ * params handler
+ * @param {module:echarts/model/SeriesModel} seriesModel
+ * @returns {*}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var getAutoCurvenessParams = function (seriesModel) {
   return seriesModel.get('autoCurveness') || null;
 };
+<<<<<<< HEAD
 /**
  * Generate a list of edge curvatures, 20 is the default
  * @param {module:echarts/model/SeriesModel} seriesModel
  * @param {number} appendLength
  * @return  20 => [0, -0.2, 0.2, -0.4, 0.4, -0.6, 0.6, -0.8, 0.8, -1, 1, -1.2, 1.2, -1.4, 1.4, -1.6, 1.6, -1.8, 1.8, -2]
+=======
+/**
+ * Generate a list of edge curvatures, 20 is the default
+ * @param {module:echarts/model/SeriesModel} seriesModel
+ * @param {number} appendLength
+ * @return  20 => [0, -0.2, 0.2, -0.4, 0.4, -0.6, 0.6, -0.8, 0.8, -1, 1, -1.2, 1.2, -1.4, 1.4, -1.6, 1.6, -1.8, 1.8, -2]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59311,12 +64234,21 @@ var createCurveness = function (seriesModel, appendLength) {
 
   seriesModel.__curvenessList = curvenessList;
 };
+<<<<<<< HEAD
 /**
  * Create different cache key data in the positive and negative directions, in order to set the curvature later
  * @param {number|string|module:echarts/data/Graph.Node} n1
  * @param {number|string|module:echarts/data/Graph.Node} n2
  * @param {module:echarts/model/SeriesModel} seriesModel
  * @returns {string} key
+=======
+/**
+ * Create different cache key data in the positive and negative directions, in order to set the curvature later
+ * @param {number|string|module:echarts/data/Graph.Node} n1
+ * @param {number|string|module:echarts/data/Graph.Node} n2
+ * @param {module:echarts/model/SeriesModel} seriesModel
+ * @returns {string} key
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59325,10 +64257,17 @@ var getKeyOfEdges = function (n1, n2, seriesModel) {
   var target = [n2.id, n2.dataIndex].join('.');
   return [seriesModel.uid, source, target].join(KEY_DELIMITER);
 };
+<<<<<<< HEAD
 /**
  * get opposite key
  * @param {string} key
  * @returns {string}
+=======
+/**
+ * get opposite key
+ * @param {string} key
+ * @returns {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59336,10 +64275,17 @@ var getOppositeKey = function (key) {
   var keys = key.split(KEY_DELIMITER);
   return [keys[0], keys[2], keys[1]].join(KEY_DELIMITER);
 };
+<<<<<<< HEAD
 /**
  * get edgeMap with key
  * @param edge
  * @param {module:echarts/model/SeriesModel} seriesModel
+=======
+/**
+ * get edgeMap with key
+ * @param edge
+ * @param {module:echarts/model/SeriesModel} seriesModel
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59347,11 +64293,19 @@ var getEdgeFromMap = function (edge, seriesModel) {
   var key = getKeyOfEdges(edge.node1, edge.node2, seriesModel);
   return seriesModel.__edgeMap[key];
 };
+<<<<<<< HEAD
 /**
  * calculate all cases total length
  * @param edge
  * @param seriesModel
  * @returns {number}
+=======
+/**
+ * calculate all cases total length
+ * @param edge
+ * @param seriesModel
+ * @returns {number}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59360,9 +64314,15 @@ var getTotalLengthBetweenNodes = function (edge, seriesModel) {
   var lenV = getEdgeMapLengthWithKey(getKeyOfEdges(edge.node2, edge.node1, seriesModel), seriesModel);
   return len + lenV;
 };
+<<<<<<< HEAD
 /**
  *
  * @param key
+=======
+/**
+ *
+ * @param key
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59370,10 +64330,17 @@ var getEdgeMapLengthWithKey = function (key, seriesModel) {
   var edgeMap = seriesModel.__edgeMap;
   return edgeMap[key] ? edgeMap[key].length : 0;
 };
+<<<<<<< HEAD
 /**
  * Count the number of edges between the same two points, used to obtain the curvature table and the parity of the edge
  * @see /graph/GraphSeries.js@getInitialData
  * @param {module:echarts/model/SeriesModel} seriesModel
+=======
+/**
+ * Count the number of edges between the same two points, used to obtain the curvature table and the parity of the edge
+ * @see /graph/GraphSeries.js@getInitialData
+ * @param {module:echarts/model/SeriesModel} seriesModel
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -59387,12 +64354,21 @@ function initCurvenessList(seriesModel) {
 
   createCurveness(seriesModel);
 }
+<<<<<<< HEAD
 /**
  * set edgeMap with key
  * @param {number|string|module:echarts/data/Graph.Node} n1
  * @param {number|string|module:echarts/data/Graph.Node} n2
  * @param {module:echarts/model/SeriesModel} seriesModel
  * @param {number} index
+=======
+/**
+ * set edgeMap with key
+ * @param {number|string|module:echarts/data/Graph.Node} n1
+ * @param {number|string|module:echarts/data/Graph.Node} n2
+ * @param {module:echarts/model/SeriesModel} seriesModel
+ * @param {number} index
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createEdgeMapForCurveness(n1, n2, seriesModel, index) {
@@ -59414,11 +64390,19 @@ function createEdgeMapForCurveness(n1, n2, seriesModel, index) {
   edgeMap[key] = edgeMap[key] || [];
   edgeMap[key].push(index);
 }
+<<<<<<< HEAD
 /**
  * get curvature for edge
  * @param edge
  * @param {module:echarts/model/SeriesModel} seriesModel
  * @param index
+=======
+/**
+ * get curvature for edge
+ * @param edge
+ * @param {module:echarts/model/SeriesModel} seriesModel
+ * @param index
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getCurvenessForEdge(edge, seriesModel, index, needReverse) {
@@ -59573,6 +64557,7 @@ function graphSimpleLayout(ecModel, api) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -59590,6 +64575,25 @@ function graphSimpleLayout(ecModel, api) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function getNodeGlobalScale(seriesModel) {
   var coordSys = seriesModel.coordinateSystem;
@@ -59617,6 +64621,7 @@ function getSymbolSize(node) {
 
 var PI$6 = Math.PI;
 var _symbolRadiansHalf = [];
+<<<<<<< HEAD
 /**
  * `basedOn` can be:
  * 'value':
@@ -59635,6 +64640,26 @@ var _symbolRadiansHalf = [];
  *     FIXME
  *     If progressive rendering is applied to graph some day,
  *     probably we have to use `basedOn: 'value'`.
+=======
+/**
+ * `basedOn` can be:
+ * 'value':
+ *     This layout is not accurate and have same bad case. For example,
+ *     if the min value is very smaller than the max value, the nodes
+ *     with the min value probably overlap even though there is enough
+ *     space to layout them. So we only use this approach in the as the
+ *     init layout of the force layout.
+ *     FIXME
+ *     Probably we do not need this method any more but use
+ *     `basedOn: 'symbolSize'` in force layout if
+ *     delay its init operations to GraphView.
+ * 'symbolSize':
+ *     This approach work only if all of the symbol size calculated.
+ *     That is, the progressive rendering is not applied to graph.
+ *     FIXME
+ *     If progressive rendering is applied to graph some day,
+ *     probably we have to use `basedOn: 'value'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function circularLayout(seriesModel, basedOn, draggingNode, pointer) {
@@ -59836,25 +64861,43 @@ function forceLayout(inNodes, inEdges, opts) {
       nodes[idx].fixed = false;
     },
 
+<<<<<<< HEAD
     /**
      * Before step hook
+=======
+    /**
+     * Before step hook
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     beforeStep: function (cb) {
       beforeStepCallback = cb;
     },
 
+<<<<<<< HEAD
     /**
      * After step hook
+=======
+    /**
+     * After step hook
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     afterStep: function (cb) {
       afterStepCallback = cb;
     },
 
+<<<<<<< HEAD
     /**
      * Some formulas were originally copied from "d3.js"
      * https://github.com/d3/d3/blob/b516d77fb8566b576088e73410437494717ada26/src/layout/force.js
      * with some modifications made for this project.
      * See the license statement at the head of this file.
+=======
+    /**
+     * Some formulas were originally copied from "d3.js"
+     * https://github.com/d3/d3/blob/b516d77fb8566b576088e73410437494717ada26/src/layout/force.js
+     * with some modifications made for this project.
+     * See the license statement at the head of this file.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     step: function (cb) {
       beforeStepCallback && beforeStepCallback(nodes, edges);
@@ -60226,8 +65269,13 @@ function makeSymbolTypeValue(name, lineData, idx) {
   var symbolOffsetArr = normalizeSymbolOffset(symbolOffset || 0, symbolSizeArr);
   return symbolType + symbolSizeArr + symbolOffsetArr + (symbolRotate || '') + (symbolKeepAspect || '');
 }
+<<<<<<< HEAD
 /**
  * @inner
+=======
+/**
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -61187,24 +66235,40 @@ function () {
     this.nodes = [];
     this.edges = [];
     this._nodesMap = {};
+<<<<<<< HEAD
     /**
      * @type {Object.<string, module:echarts/data/Graph.Edge>}
      * @private
+=======
+    /**
+     * @type {Object.<string, module:echarts/data/Graph.Edge>}
+     * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this._edgesMap = {};
     this._directed = directed || false;
   }
+<<<<<<< HEAD
   /**
    * If is directed graph
+=======
+  /**
+   * If is directed graph
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Graph.prototype.isDirected = function () {
     return this._directed;
   };
+<<<<<<< HEAD
   /**
    * Add a new node
+=======
+  /**
+   * Add a new node
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.addNode = function (id, dataIndex) {
@@ -61225,23 +66289,38 @@ function () {
     nodesMap[generateNodeKey(id)] = node;
     return node;
   };
+<<<<<<< HEAD
   /**
    * Get node by data index
+=======
+  /**
+   * Get node by data index
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.getNodeByIndex = function (dataIndex) {
     var rawIdx = this.data.getRawIndex(dataIndex);
     return this.nodes[rawIdx];
   };
+<<<<<<< HEAD
   /**
    * Get node by id
+=======
+  /**
+   * Get node by id
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.getNodeById = function (id) {
     return this._nodesMap[generateNodeKey(id)];
   };
+<<<<<<< HEAD
   /**
    * Add a new edge
+=======
+  /**
+   * Add a new edge
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.addEdge = function (n1, n2, dataIndex) {
@@ -61287,16 +66366,26 @@ function () {
     edgesMap[key] = edge;
     return edge;
   };
+<<<<<<< HEAD
   /**
    * Get edge by data index
+=======
+  /**
+   * Get edge by data index
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.getEdgeByIndex = function (dataIndex) {
     var rawIdx = this.edgeData.getRawIndex(dataIndex);
     return this.edges[rawIdx];
   };
+<<<<<<< HEAD
   /**
    * Get edge by two linked nodes
+=======
+  /**
+   * Get edge by two linked nodes
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.getEdge = function (n1, n2) {
@@ -61316,8 +66405,13 @@ function () {
       return edgesMap[n1 + '-' + n2] || edgesMap[n2 + '-' + n1];
     }
   };
+<<<<<<< HEAD
   /**
    * Iterate all nodes
+=======
+  /**
+   * Iterate all nodes
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.eachNode = function (cb, context) {
@@ -61330,8 +66424,13 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Iterate all edges
+=======
+  /**
+   * Iterate all edges
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.eachEdge = function (cb, context) {
@@ -61344,9 +66443,15 @@ function () {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Breadth first traverse
    * Return true to stop traversing
+=======
+  /**
+   * Breadth first traverse
+   * Return true to stop traversing
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.breadthFirstTraverse = function (cb, startNode, direction, context) {
@@ -61423,8 +66528,13 @@ function () {
       edges[edgeData.getRawIndex(i)].dataIndex = i;
     }
   };
+<<<<<<< HEAD
   /**
    * @return {module:echarts/data/Graph}
+=======
+  /**
+   * @return {module:echarts/data/Graph}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   Graph.prototype.clone = function () {
@@ -61457,24 +66567,39 @@ function () {
     this.id = id == null ? '' : id;
     this.dataIndex = dataIndex == null ? -1 : dataIndex;
   }
+<<<<<<< HEAD
   /**
    * @return {number}
+=======
+  /**
+   * @return {number}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   GraphNode.prototype.degree = function () {
     return this.edges.length;
   };
+<<<<<<< HEAD
   /**
    * @return {number}
+=======
+  /**
+   * @return {number}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   GraphNode.prototype.inDegree = function () {
     return this.inEdges.length;
   };
+<<<<<<< HEAD
   /**
   * @return {number}
+=======
+  /**
+  * @return {number}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
   */
 
 
@@ -61633,8 +66758,13 @@ function () {
 
 function createGraphDataProxyMixin(hostName, dataName) {
   return {
+<<<<<<< HEAD
     /**
      * @param Default 'value'. can be 'a', 'b', 'c', 'd', 'e'.
+=======
+    /**
+     * @param Default 'value'. can be 'a', 'b', 'c', 'd', 'e'.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     getValue: function (dimension) {
       var data = this[hostName][dataName];
@@ -62795,8 +67925,13 @@ function install$e(registers) {
 }
 
 var opacityAccessPath = ['itemStyle', 'opacity'];
+<<<<<<< HEAD
 /**
  * Piece of pie including Sector, Label, LabelLine
+=======
+/**
+ * Piece of pie including Sector, Label, LabelLine
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var FunnelPiece =
@@ -63442,8 +68577,13 @@ function (_super) {
   ParallelView.prototype.init = function () {
     this.group.add(this._dataGroup);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -63640,10 +68780,17 @@ function (_super) {
       useEncodeDefaulter: bind(makeDefaultEncode, null, this)
     });
   };
+<<<<<<< HEAD
   /**
    * User can get data raw indices on 'axisAreaSelected' event received.
    *
    * @return Raw indices
+=======
+  /**
+   * User can get data raw indices on 'axisAreaSelected' event received.
+   *
+   * @return Raw indices
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -63737,6 +68884,7 @@ function convertDimNameToNumber(dimName) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -63754,6 +68902,25 @@ function convertDimNameToNumber(dimName) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var opacityAccessPath$1 = ['lineStyle', 'opacity'];
 var parallelVisual = {
@@ -63787,9 +68954,15 @@ function parallelPreprocessor(option) {
   createParallelIfNeeded(option);
   mergeAxisOptionFromParallel(option);
 }
+<<<<<<< HEAD
 /**
  * Create a parallel coordinate if not exists.
  * @inner
+=======
+/**
+ * Create a parallel coordinate if not exists.
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function createParallelIfNeeded(option) {
@@ -63808,9 +68981,15 @@ function createParallelIfNeeded(option) {
     option.parallel = [{}];
   }
 }
+<<<<<<< HEAD
 /**
  * Merge aixs definition from parallel option (if exists) to axis option.
  * @inner
+=======
+/**
+ * Merge aixs definition from parallel option (if exists) to axis option.
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -63865,17 +69044,28 @@ function (_super) {
     });
     this._handlers = null;
   };
+<<<<<<< HEAD
   /**
    * @internal
    * @param {Object} [opt] If null, cancel the last action triggering for debounce.
+=======
+  /**
+   * @internal
+   * @param {Object} [opt] If null, cancel the last action triggering for debounce.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ParallelView.prototype._throttledDispatchExpand = function (opt) {
     this._dispatchExpand(opt);
   };
+<<<<<<< HEAD
   /**
    * @internal
+=======
+  /**
+   * @internal
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -63967,8 +69157,13 @@ function (_super) {
 
     this._initDimensions();
   };
+<<<<<<< HEAD
   /**
    * Whether series or axis is in this coordinate system.
+=======
+  /**
+   * Whether series or axis is in this coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64076,6 +69271,7 @@ function (_super) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -64114,6 +69310,46 @@ function (_super) {
  *              the minSpan.
  * @param maxSpan The range of dataZoom can not be larger than that.
  * @return The input handleEnds.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+
+/**
+ * Calculate slider move result.
+ * Usage:
+ * (1) If both handle0 and handle1 are needed to be moved, set minSpan the same as
+ * maxSpan and the same as `Math.abs(handleEnd[1] - handleEnds[0])`.
+ * (2) If handle0 is forbidden to cross handle1, set minSpan as `0`.
+ *
+ * @param delta Move length.
+ * @param handleEnds handleEnds[0] can be bigger then handleEnds[1].
+ *              handleEnds will be modified in this method.
+ * @param extent handleEnds is restricted by extent.
+ *              extent[0] should less or equals than extent[1].
+ * @param handleIndex Can be 'all', means that both move the two handleEnds.
+ * @param minSpan The range of dataZoom can not be smaller than that.
+ *              If not set, handle0 and cross handle1. If set as a non-negative
+ *              number (including `0`), handles will push each other when reaching
+ *              the minSpan.
+ * @param maxSpan The range of dataZoom can not be larger than that.
+ * @return The input handleEnds.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 function sliderMove(delta, handleEnds, extent, handleIndex, minSpan, maxSpan) {
   delta = delta || 0;
@@ -64189,6 +69425,7 @@ var Parallel =
 function () {
   function Parallel(parallelModel, ecModel, api) {
     this.type = 'parallel';
+<<<<<<< HEAD
     /**
      * key: dimension
      */
@@ -64197,6 +69434,16 @@ function () {
     /**
      * key: dimension
      * value: {position: [], rotation, }
+=======
+    /**
+     * key: dimension
+     */
+
+    this._axesMap = createHashMap();
+    /**
+     * key: dimension
+     * value: {position: [], rotation, }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this._axesLayout = {};
@@ -64224,8 +69471,13 @@ function () {
       axis.coordinateSystem = axisModel.coordinateSystem = this;
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Update axis scale after data processed
+=======
+  /**
+   * Update axis scale after data processed
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64247,8 +69499,13 @@ function () {
   Parallel.prototype.getModel = function () {
     return this._model;
   };
+<<<<<<< HEAD
   /**
    * Update properties from series
+=======
+  /**
+   * Update properties from series
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64267,8 +69524,13 @@ function () {
       }, this);
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Resize the parallel coordinate system.
+=======
+  /**
+   * Resize the parallel coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64388,26 +69650,43 @@ function () {
       };
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Get axis by dim.
+=======
+  /**
+   * Get axis by dim.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Parallel.prototype.getAxis = function (dim) {
     return this._axesMap.get(dim);
   };
+<<<<<<< HEAD
   /**
    * Convert a dim value of a single item of series data to Point.
+=======
+  /**
+   * Convert a dim value of a single item of series data to Point.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Parallel.prototype.dataToPoint = function (value, dim) {
     return this.axisCoordToPoint(this._axesMap.get(dim).dataToCoord(value), dim);
   };
+<<<<<<< HEAD
   /**
    * Travel data for one time, get activeState of each data item.
    * @param start the start dataIndex that travel from.
    * @param end the next dataIndex of the last dataIndex will be travel.
+=======
+  /**
+   * Travel data for one time, get activeState of each data item.
+   * @param start the start dataIndex that travel from.
+   * @param end the next dataIndex of the last dataIndex will be travel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64446,8 +69725,13 @@ function () {
       callback(activeState, dataIndex);
     }
   };
+<<<<<<< HEAD
   /**
    * Whether has any activeSet.
+=======
+  /**
+   * Whether has any activeSet.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64464,9 +69748,15 @@ function () {
 
     return hasActiveSet;
   };
+<<<<<<< HEAD
   /**
    * Convert coords of each axis to Point.
    *  Return point. For example: [10, 20]
+=======
+  /**
+   * Convert coords of each axis to Point.
+   *  Return point. For example: [10, 20]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64474,16 +69764,26 @@ function () {
     var axisLayout = this._axesLayout[dim];
     return applyTransform$1([coord, 0], axisLayout.transform);
   };
+<<<<<<< HEAD
   /**
    * Get axis layout.
+=======
+  /**
+   * Get axis layout.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Parallel.prototype.getAxisLayout = function (dim) {
     return clone(this._axesLayout[dim]);
   };
+<<<<<<< HEAD
   /**
    * @return {Object} {axisExpandWindow, delta, behavior: 'jump' | 'slide' | 'none'}.
+=======
+  /**
+   * @return {Object} {axisExpandWindow, delta, behavior: 'jump' | 'slide' | 'none'}.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64624,8 +69924,13 @@ function (_super) {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.type = ParallelAxisModel.type;
+<<<<<<< HEAD
     /**
      * @readOnly
+=======
+    /**
+     * @readOnly
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this.activeIntervals = [];
@@ -64637,6 +69942,7 @@ function (_super) {
     // So do not transfer decal directly.
     ])(this.getModel('areaSelectStyle'));
   };
+<<<<<<< HEAD
   /**
    * The code of this feature is put on AxisModel but not ParallelAxis,
    * because axisModel can be alive after echarts updating but instance of
@@ -64644,6 +69950,15 @@ function (_super) {
    * when action dispatched (i.e. legend click).
    *
    * @param intervals `interval.length === 0` means set all active.
+=======
+  /**
+   * The code of this feature is put on AxisModel but not ParallelAxis,
+   * because axisModel can be alive after echarts updating but instance of
+   * ParallelAxis having been disposed. this._activeInterval should be kept
+   * when action dispatched (i.e. legend click).
+   *
+   * @param intervals `interval.length === 0` means set all active.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64656,9 +69971,15 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * @param value When only attempting detect whether 'no activeIntervals set',
    *        `value` is not needed to be input.
+=======
+  /**
+   * @param value When only attempting detect whether 'no activeIntervals set',
+   *        `value` is not needed to be input.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64731,6 +70052,7 @@ var DEFAULT_BRUSH_OPT = {
   removeOnClick: false
 };
 var baseUID = 0;
+<<<<<<< HEAD
 /**
  * params:
  *     areas: Array.<Array>, coord relates to container group,
@@ -64739,6 +70061,16 @@ var baseUID = 0;
  *         isEnd: boolean,
  *         removeOnClick: boolean
  *     }
+=======
+/**
+ * params:
+ *     areas: Array.<Array>, coord relates to container group,
+ *                             If no container specified, to global.
+ *     opt {
+ *         isEnd: boolean,
+ *         removeOnClick: boolean
+ *     }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var BrushController =
@@ -64748,14 +70080,24 @@ function (_super) {
 
   function BrushController(zr) {
     var _this = _super.call(this) || this;
+<<<<<<< HEAD
     /**
      * @internal
+=======
+    /**
+     * @internal
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
     _this._track = [];
+<<<<<<< HEAD
     /**
      * @internal
+=======
+    /**
+     * @internal
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this._covers = [];
@@ -64773,8 +70115,13 @@ function (_super) {
     }, _this);
     return _this;
   }
+<<<<<<< HEAD
   /**
    * If set to `false`, select disabled.
+=======
+  /**
+   * If set to `false`, select disabled.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64810,8 +70157,13 @@ function (_super) {
     });
     this._brushType = this._brushOption = null;
   };
+<<<<<<< HEAD
   /**
    * @param panelOpts If not pass, it is global brush.
+=======
+  /**
+   * @param panelOpts If not pass, it is global brush.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -64853,10 +70205,17 @@ function (_super) {
   //     each(this._covers, cb, context);
   // }
 
+<<<<<<< HEAD
   /**
    * Update covers.
    * @param coverConfigList
    *        If coverConfigList is null/undefined, all covers removed.
+=======
+  /**
+   * Update covers.
+   * @param coverConfigList
+   *        If coverConfigList is null/undefined, all covers removed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -65382,8 +70741,13 @@ function isOutsideZrArea(controller, x, y) {
   var zr = controller._zr;
   return x < 0 || x > zr.getWidth() || y < 0 || y > zr.getHeight();
 }
+<<<<<<< HEAD
 /**
  * key: brushType
+=======
+/**
+ * key: brushType
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -65686,6 +71050,7 @@ function getCoordSysModel(axisModel, ecModel) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -65703,6 +71068,25 @@ function getCoordSysModel(axisModel, ecModel) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var actionInfo$1 = {
   type: 'axisAreaSelect',
@@ -65718,8 +71102,13 @@ function installParallelActions(registers) {
       parallelAxisModel.axis.model.setActiveIntervals(payload.intervals);
     });
   });
+<<<<<<< HEAD
   /**
    * @payload
+=======
+  /**
+   * @payload
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   registers.registerAction('parallelAxisExpand', function (payload, ecModel) {
@@ -66016,11 +71405,19 @@ function (_super) {
   SankeyView.type = 'sankey';
   return SankeyView;
 }(ChartView);
+<<<<<<< HEAD
 /**
  * Special color, use source node color or target node color
  * @param curveProps curve's style to parse
  * @param orient direction
  * @param edge current curve data
+=======
+/**
+ * Special color, use source node color or target node color
+ * @param curveProps curve's style to parse
+ * @param orient direction
+ * @param edge current curve data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66082,8 +71479,13 @@ function (_super) {
     _this.type = SankeySeriesModel.type;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * Init a graph data structure from data in option series
+=======
+  /**
+   * Init a graph data structure from data in option series
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -66150,20 +71552,34 @@ function (_super) {
     dataItem.localX = localPosition[0];
     dataItem.localY = localPosition[1];
   };
+<<<<<<< HEAD
   /**
    * Return the graphic data structure
    *
    * @return graphic data structure
+=======
+  /**
+   * Return the graphic data structure
+   *
+   * @return graphic data structure
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   SankeySeriesModel.prototype.getGraph = function () {
     return this.getData().graph;
   };
+<<<<<<< HEAD
   /**
    * Get edge data of graphic data structure
    *
    * @return data structure of list
+=======
+  /**
+   * Get edge data of graphic data structure
+   *
+   * @return data structure of list
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -66285,8 +71701,13 @@ function sankeyLayout(ecModel, api) {
     layoutSankey(nodes, edges, nodeWidth, nodeGap, width, height, iterations, orient, nodeAlign);
   });
 }
+<<<<<<< HEAD
 /**
  * Get the layout position of the whole view
+=======
+/**
+ * Get the layout position of the whole view
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getViewRect$4(seriesModel, api) {
@@ -66301,8 +71722,13 @@ function layoutSankey(nodes, edges, nodeWidth, nodeGap, width, height, iteration
   computeNodeDepths(nodes, edges, height, width, nodeGap, iterations, orient);
   computeEdgeDepths(nodes, orient);
 }
+<<<<<<< HEAD
 /**
  * Compute the value of each node by summing the associated edge's value
+=======
+/**
+ * Compute the value of each node by summing the associated edge's value
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66317,11 +71743,19 @@ function computeNodeValues(nodes) {
     }, true);
   });
 }
+<<<<<<< HEAD
 /**
  * Compute the x-position for each node.
  *
  * Here we use Kahn algorithm to detect cycle when we traverse
  * the node to computer the initial x position.
+=======
+/**
+ * Compute the x-position for each node.
+ *
+ * Here we use Kahn algorithm to detect cycle when we traverse
+ * the node to computer the initial x position.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66448,12 +71882,21 @@ function adjustNodeWithNodeAlign(nodes, nodeAlign, orient, maxDepth) {
     moveSinksRight(nodes, maxDepth);
   }
 }
+<<<<<<< HEAD
 /**
  * All the node without outEgdes are assigned maximum x-position and
  *     be aligned in the last column.
  *
  * @param nodes.  node of sankey view.
  * @param maxDepth.  use to assign to node without outEdges as x-position.
+=======
+/**
+ * All the node without outEgdes are assigned maximum x-position and
+ *     be aligned in the last column.
+ *
+ * @param nodes.  node of sankey view.
+ * @param maxDepth.  use to assign to node without outEdges as x-position.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66466,11 +71909,19 @@ function moveSinksRight(nodes, maxDepth) {
     }
   });
 }
+<<<<<<< HEAD
 /**
  * Scale node x-position to the width
  *
  * @param nodes  node of sankey view
  * @param kx   multiple used to scale nodes
+=======
+/**
+ * Scale node x-position to the width
+ *
+ * @param nodes  node of sankey view
+ * @param kx   multiple used to scale nodes
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66484,6 +71935,7 @@ function scaleNodeBreadths(nodes, kx, orient) {
     }, true);
   });
 }
+<<<<<<< HEAD
 /**
  * Using Gauss-Seidel iterations method to compute the node depth(y-position)
  *
@@ -66493,6 +71945,17 @@ function scaleNodeBreadths(nodes, kx, orient) {
  * @param nodeGap  the vertical distance between two nodes
  *     in the same column.
  * @param iterations  the number of iterations for the algorithm
+=======
+/**
+ * Using Gauss-Seidel iterations method to compute the node depth(y-position)
+ *
+ * @param nodes  node of sankey view
+ * @param edges  edge of sankey view
+ * @param height  the whole height of the area to draw the view
+ * @param nodeGap  the vertical distance between two nodes
+ *     in the same column.
+ * @param iterations  the number of iterations for the algorithm
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66526,8 +71989,13 @@ function prepareNodesByBreadth(nodes, orient) {
   });
   return nodesByBreadth;
 }
+<<<<<<< HEAD
 /**
  * Compute the original y-position for each node
+=======
+/**
+ * Compute the original y-position for each node
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66573,8 +72041,13 @@ function initializeNodeDepth(nodesByBreadth, edges, height, width, nodeGap, orie
     }, true);
   });
 }
+<<<<<<< HEAD
 /**
  * Resolve the collision of initialized depth (y-position)
+=======
+/**
+ * Resolve the collision of initialized depth (y-position)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66638,10 +72111,17 @@ function resolveCollisions(nodesByBreadth, nodeGap, height, width, orient) {
     }
   });
 }
+<<<<<<< HEAD
 /**
  * Change the y-position of the nodes, except most the right side nodes
  * @param nodesByBreadth
  * @param alpha  parameter used to adjust the nodes y-position
+=======
+/**
+ * Change the y-position of the nodes, except most the right side nodes
+ * @param nodesByBreadth
+ * @param alpha  parameter used to adjust the nodes y-position
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66711,8 +72191,13 @@ function sum(array, cb, orient) {
 
   return sum;
 }
+<<<<<<< HEAD
 /**
  * Change the y-position of the nodes, except most the left side nodes
+=======
+/**
+ * Change the y-position of the nodes, except most the left side nodes
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66742,8 +72227,13 @@ function relaxLeftToRight(nodesByBreadth, alpha, orient) {
     });
   });
 }
+<<<<<<< HEAD
 /**
  * Compute the depth(y-position) of each edge
+=======
+/**
+ * Compute the depth(y-position) of each edge
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -66853,8 +72343,13 @@ var WhiskerBoxCommonMixin =
 /** @class */
 function () {
   function WhiskerBoxCommonMixin() {}
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -66936,9 +72431,15 @@ function () {
       encodeDefaulter: curry(makeSeriesEncodeForAxisCoordSys, coordDimensions, this)
     });
   };
+<<<<<<< HEAD
   /**
    * If horizontal, base axis is x, otherwise y.
    * @override
+=======
+  /**
+   * If horizontal, base axis is x, otherwise y.
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -66961,11 +72462,19 @@ function (_super) {
     _this.type = BoxplotSeriesModel.type; // TODO
     // box width represents group size, so dimension should have 'size'.
 
+<<<<<<< HEAD
     /**
      * @see <https://en.wikipedia.org/wiki/Box_plot>
      * The meanings of 'min' and 'max' depend on user,
      * and echarts do not need to know it.
      * @readOnly
+=======
+    /**
+     * @see <https://en.wikipedia.org/wiki/Box_plot>
+     * The meanings of 'min' and 'max' depend on user,
+     * and echarts do not need to know it.
+     * @readOnly
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this.defaultValueDimensions = [{
@@ -67185,8 +72694,13 @@ function boxplotLayout(ecModel) {
     });
   });
 }
+<<<<<<< HEAD
 /**
  * Group series by axis.
+=======
+/**
+ * Group series by axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function groupSeriesByAxis(ecModel) {
@@ -67209,8 +72723,13 @@ function groupSeriesByAxis(ecModel) {
   });
   return result;
 }
+<<<<<<< HEAD
 /**
  * Calculate offset and box width for each series.
+=======
+/**
+ * Calculate offset and box width for each series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -67253,8 +72772,13 @@ function calculateBase(groupItem) {
     boxWidthList.push(Math.min(Math.max(boxWidth, boundList[idx][0]), boundList[idx][1]));
   });
 }
+<<<<<<< HEAD
 /**
  * Calculate points location for each series.
+=======
+/**
+ * Calculate points location for each series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -67326,6 +72850,7 @@ function layoutSingleSeries(seriesModel, offset, boxWidth) {
   }
 }
 
+<<<<<<< HEAD
 /**
  * See:
  *  <https://en.wikipedia.org/wiki/Box_plot#cite_note-frigge_hoaglin_iglewicz-2>
@@ -67342,6 +72867,24 @@ function layoutSingleSeries(seriesModel, offset, boxWidth) {
  * @param opt.boundIQR=1.5 Data less than min bound is outlier.
  *      default 1.5, means Q1 - 1.5 * (Q3 - Q1).
  *      If 'none'/0 passed, min bound will not be used.
+=======
+/**
+ * See:
+ *  <https://en.wikipedia.org/wiki/Box_plot#cite_note-frigge_hoaglin_iglewicz-2>
+ *  <http://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/boxplot.stats.html>
+ *
+ * Helper method for preparing data.
+ *
+ * @param rawData like
+ *        [
+ *            [12,232,443], (raw data set for the first box)
+ *            [3843,5545,1232], (raw data set for the second box)
+ *            ...
+ *        ]
+ * @param opt.boundIQR=1.5 Data less than min bound is outlier.
+ *      default 1.5, means Q1 - 1.5 * (Q3 - Q1).
+ *      If 'none'/0 passed, min bound will not be used.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function prepareBoxplotData(rawData, opt) {
@@ -67790,9 +73333,15 @@ function (_super) {
     }];
     return _this;
   }
+<<<<<<< HEAD
   /**
    * Get dimension for shadow in dataZoom
    * @return dimension name
+=======
+  /**
+   * Get dimension for shadow in dataZoom
+   * @return dimension name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -68037,12 +73586,21 @@ var candlestickLayout = {
     }
   }
 };
+<<<<<<< HEAD
 /**
  * Get the sign of a single data.
  *
  * @returns 0 for doji with hasDojiColor: true,
  *          1 for positive,
  *          -1 for negative.
+=======
+/**
+ * Get the sign of a single data.
+ *
+ * @returns 0 for doji with hasDojiColor: true,
+ *          1 for positive,
+ *          -1 for negative.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getSign(store, dataIndex, openVal, closeVal, closeDimI, hasDojiColor) {
@@ -68152,8 +73710,13 @@ function (_super) {
 
     updateRipplePath(rippleGroup, effectCfg);
   };
+<<<<<<< HEAD
   /**
    * Update effect symbol
+=======
+  /**
+   * Update effect symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -68175,16 +73738,26 @@ function (_super) {
 
     updateRipplePath(rippleGroup, effectCfg);
   };
+<<<<<<< HEAD
   /**
    * Highlight symbol
+=======
+  /**
+   * Highlight symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   EffectSymbol.prototype.highlight = function () {
     enterEmphasis(this);
   };
+<<<<<<< HEAD
   /**
    * Downplay symbol
+=======
+  /**
+   * Downplay symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -68196,8 +73769,13 @@ function (_super) {
     var symbol = this.childAt(0);
     return symbol && symbol.getSymbolType();
   };
+<<<<<<< HEAD
   /**
    * Update symbol properties
+=======
+  /**
+   * Update symbol properties
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -68956,8 +74534,13 @@ function () {
   function LargeLineDraw() {
     this.group = new Group();
   }
+<<<<<<< HEAD
   /**
    * Update symbols draw by new data
+=======
+  /**
+   * Update symbols draw by new data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -68972,8 +74555,13 @@ function () {
 
     this._setCommon(lineEl, data);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   LargeLineDraw.prototype.incrementalPrepareUpdate = function (data) {
@@ -68981,8 +74569,13 @@ function () {
 
     this._clear();
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   LargeLineDraw.prototype.incrementalUpdate = function (taskParams, data) {
@@ -69016,8 +74609,13 @@ function () {
       lineEl.__startIndex = taskParams.start;
     }
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -69670,6 +75268,7 @@ function (_super) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -69687,6 +75286,25 @@ function (_super) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function normalize$3(a) {
   if (!(a instanceof Array)) {
@@ -69747,11 +75365,19 @@ function () {
     var canvas = platformApi.createCanvas();
     this.canvas = canvas;
   }
+<<<<<<< HEAD
   /**
    * Renders Heatmap and returns the rendered canvas
    * @param data array of data, each has x, y, value
    * @param width canvas width
    * @param height canvas height
+=======
+  /**
+   * Renders Heatmap and returns the rendered canvas
+   * @param data array of data, each has x, y, value
+   * @param width canvas width
+   * @param height canvas height
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -69816,8 +75442,13 @@ function () {
     ctx.putImageData(imageData, 0, 0);
     return canvas;
   };
+<<<<<<< HEAD
   /**
    * get canvas of a black circle brush used for canvas to draw later
+=======
+  /**
+   * get canvas of a black circle brush used for canvas to draw later
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -69845,9 +75476,15 @@ function () {
     ctx.fill();
     return brushCanvas;
   };
+<<<<<<< HEAD
   /**
    * get gradient color map
    * @private
+=======
+  /**
+   * get gradient color map
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71081,8 +76718,13 @@ function (_super) {
     _this.type = ThemeRiverSeriesModel.type;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71095,22 +76737,39 @@ function (_super) {
 
     this.legendVisualProvider = new LegendVisualProvider(bind(this.getData, this), bind(this.getRawData, this));
   };
+<<<<<<< HEAD
   /**
    * If there is no value of a certain point in the time for some event,set it value to 0.
    *
    * @param {Array} data  initial data in the option
    * @return {Array}
+=======
+  /**
+   * If there is no value of a certain point in the time for some event,set it value to 0.
+   *
+   * @param {Array} data  initial data in the option
+   * @return {Array}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   ThemeRiverSeriesModel.prototype.fixData = function (data) {
     var rawDataLength = data.length;
+<<<<<<< HEAD
     /**
      * Make sure every layer data get the same keys.
      * The value index tells which layer has visited.
      * {
      *  2014/01/01: -1
      * }
+=======
+    /**
+     * Make sure every layer data get the same keys.
+     * The value index tells which layer has visited.
+     * {
+     *  2014/01/01: -1
+     * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var timeValueKeys = {}; // grouped data by name
@@ -71150,10 +76809,17 @@ function (_super) {
 
     return data;
   };
+<<<<<<< HEAD
   /**
    * @override
    * @param  option  the initial option that user gave
    * @param  ecModel  the model object for themeRiver option
+=======
+  /**
+   * @override
+   * @param  option  the initial option that user gave
+   * @param  ecModel  the model object for themeRiver option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71201,9 +76867,15 @@ function (_super) {
     list.initData(data);
     return list;
   };
+<<<<<<< HEAD
   /**
    * The raw data is divided into multiple layers and each layer
    *     has same name.
+=======
+  /**
+   * The raw data is divided into multiple layers and each layer
+   *     has same name.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71233,8 +76905,13 @@ function (_super) {
     });
     return layerSeries;
   };
+<<<<<<< HEAD
   /**
    * Get data indices for show tooltip content
+=======
+  /**
+   * Get data indices for show tooltip content
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71338,12 +77015,21 @@ function themeRiverLayout(ecModel, api) {
     data.setLayout('layoutInfo', layoutInfo);
   });
 }
+<<<<<<< HEAD
 /**
  * The layout information about themeriver
  *
  * @param data  data in the series
  * @param seriesModel  the model object of themeRiver series
  * @param height  value used to compute every series height
+=======
+/**
+ * The layout information about themeriver
+ *
+ * @param data  data in the series
+ * @param seriesModel  the model object of themeRiver series
+ * @param height  value used to compute every series height
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function doThemeRiverLayout(data, seriesModel, height) {
@@ -71392,11 +77078,19 @@ function doThemeRiverLayout(data, seriesModel, height) {
     }
   }
 }
+<<<<<<< HEAD
 /**
  * Compute the baseLine of the rawdata
  * Inspired by Lee Byron's paper Stacked Graphs - Geometry & Aesthetics
  *
  * @param  data  the points in each layer
+=======
+/**
+ * Compute the baseLine of the rawdata
+ * Inspired by Lee Byron's paper Stacked Graphs - Geometry & Aesthetics
+ *
+ * @param  data  the points in each layer
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -71450,8 +77144,13 @@ function install$p(registers) {
 
 var DEFAULT_SECTOR_Z = 2;
 var DEFAULT_TEXT_Z = 4;
+<<<<<<< HEAD
 /**
  * Sunburstce of Sunburst including Sector, Label, LabelLine
+=======
+/**
+ * Sunburstce of Sunburst including Sector, Label, LabelLine
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var SunburstPiece =
@@ -71855,8 +77554,13 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71890,8 +77594,13 @@ function (_super) {
       });
     });
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71905,8 +77614,13 @@ function (_super) {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * @implement
+=======
+  /**
+   * @implement
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -71969,8 +77683,13 @@ function (_super) {
   SunburstSeriesModel.prototype.optionUpdated = function () {
     this.resetViewRoot();
   };
+<<<<<<< HEAD
   /*
    * @override
+=======
+  /*
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -72059,6 +77778,7 @@ function (_super) {
     animationDurationUpdate: 500,
     data: [],
 
+<<<<<<< HEAD
     /**
      * Sort order.
      *
@@ -72069,6 +77789,18 @@ function (_super) {
      * function(nodeA, nodeB) {
      *     return nodeA.getValue() - nodeB.getValue();
      * }
+=======
+    /**
+     * Sort order.
+     *
+     * Valid values: 'desc', 'asc', null, or callback function.
+     * 'desc' and 'asc' for descend and ascendant order;
+     * null for not sorting;
+     * example of callback function:
+     * function(nodeA, nodeB) {
+     *     return nodeA.getValue() - nodeB.getValue();
+     * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     sort: 'desc'
   };
@@ -72153,9 +77885,15 @@ function sunburstLayout(seriesType, ecModel, api) {
     // let valueSumLargerThanMinAngle = 0;
 
     var dir = clockwise ? 1 : -1;
+<<<<<<< HEAD
     /**
      * Render a tree
      * @return increased angle
+=======
+    /**
+     * Render a tree
+     * @return increased angle
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var renderNode = function (node, startAngle) {
@@ -72241,8 +77979,13 @@ function sunburstLayout(seriesType, ecModel, api) {
     renderNode(treeRoot, startAngle);
   });
 }
+<<<<<<< HEAD
 /**
  * Init node children by order and update visual
+=======
+/**
+ * Init node children by order and update visual
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function initChildren$1(node, sortOrder) {
@@ -72255,12 +77998,21 @@ function initChildren$1(node, sortOrder) {
     });
   }
 }
+<<<<<<< HEAD
 /**
  * Sort children nodes
  *
  * @param {TreeNode[]}               children children of node to be sorted
  * @param {string | function | null} sort sort method
  *                                   See SunburstSeries.js for details.
+=======
+/**
+ * Sort children nodes
+ *
+ * @param {TreeNode[]}               children children of node to be sorted
+ * @param {string | function | null} sort sort method
+ *                                   See SunburstSeries.js for details.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -72575,6 +78327,7 @@ function polarPrepareCustom(coordSys) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -72592,6 +78345,25 @@ function polarPrepareCustom(coordSys) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function calendarPrepareCustom(coordSys) {
   var rect = coordSys.getRect();
@@ -72621,8 +78393,13 @@ function calendarPrepareCustom(coordSys) {
 }
 
 var deprecatedLogs = {};
+<<<<<<< HEAD
 /**
  * Whether need to call `convertEC4CompatibleStyle`.
+=======
+/**
+ * Whether need to call `convertEC4CompatibleStyle`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function isEC4CompatibleStyle(style, elType, hasOwnTextContentOption, hasOwnTextConfig) {
@@ -72638,12 +78415,21 @@ function isEC4CompatibleStyle(style, elType, hasOwnTextContentOption, hasOwnText
   return style && (style.legacy || style.legacy !== false && !hasOwnTextContentOption && !hasOwnTextConfig && elType !== 'tspan' // Difficult to detect whether legacy for a "text" el.
   && (elType === 'text' || hasOwn(style, 'text')));
 }
+<<<<<<< HEAD
 /**
  * `EC4CompatibleStyle` is style that might be in echarts4 format or echarts5 format.
  * @param hostStyle The properties might be modified.
  * @return If be text el, `textContentStyle` and `textConfig` will not be returned.
  *         Otherwise a `textContentStyle` and `textConfig` will be created, whose props area
  *         retried from the `hostStyle`.
+=======
+/**
+ * `EC4CompatibleStyle` is style that might be in echarts4 format or echarts5 format.
+ * @param hostStyle The properties might be modified.
+ * @return If be text el, `textContentStyle` and `textConfig` will not be returned.
+ *         Otherwise a `textContentStyle` and `textConfig` will be created, whose props area
+ *         retried from the `hostStyle`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function convertFromEC4CompatibleStyle(hostStyle, elType, isNormal) {
@@ -72698,8 +78484,13 @@ function convertFromEC4CompatibleStyle(hostStyle, elType, isNormal) {
     textContent: textContent
   };
 }
+<<<<<<< HEAD
 /**
  * The result will be set to `out`.
+=======
+/**
+ * The result will be set to `out`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function convertEC4CompatibleRichItem(out, richItem) {
@@ -72730,6 +78521,7 @@ function convertEC4CompatibleRichItem(out, richItem) {
   hasOwn(richItem, 'textBoxShadowOffsetX') && (out.shadowOffsetX = richItem.textBoxShadowOffsetX);
   hasOwn(richItem, 'textBoxShadowOffsetY') && (out.shadowOffsetY = richItem.textBoxShadowOffsetY);
 }
+<<<<<<< HEAD
 /**
  * Convert to pure echarts4 format style.
  * `itemStyle` will be modified, added with ec4 style properties from
@@ -72737,6 +78529,15 @@ function convertEC4CompatibleRichItem(out, richItem) {
  *
  * [Caveat]: For simplicity, `insideRollback` in ec4 does not compat, where
  * `styleEmphasis: {textFill: 'red'}` will remove the normal auto added stroke.
+=======
+/**
+ * Convert to pure echarts4 format style.
+ * `itemStyle` will be modified, added with ec4 style properties from
+ * `textStyle` and `textConfig`.
+ *
+ * [Caveat]: For simplicity, `insideRollback` in ec4 does not compat, where
+ * `styleEmphasis: {textFill: 'red'}` will remove the normal auto added stroke.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -73327,9 +79128,15 @@ if ("development" !== 'production') {
 
 var getStateToRestore = makeInner();
 var KEYFRAME_EXCLUDE_KEYS = ['percent', 'easing', 'shape', 'style', 'extra'];
+<<<<<<< HEAD
 /**
  * Stop previous keyframe animation and restore the attributes.
  * Avoid new keyframe animation starts with wrong internal state when the percent: 0 is not set.
+=======
+/**
+ * Stop previous keyframe animation and restore the attributes.
+ * Avoid new keyframe animation starts with wrong internal state when the percent: 0 is not set.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function stopPreviousKeyframeAnimationAndRestore(el) {
@@ -73466,6 +79273,7 @@ var attachedTxInfoTmp = {
   blur: {},
   select: {}
 };
+<<<<<<< HEAD
 /**
  * To reduce total package size of each coordinate systems, the modules `prepareCustom`
  * of each coordinate systems are not required by each coordinate systems directly, but
@@ -73476,6 +79284,18 @@ var attachedTxInfoTmp = {
  *         coord: function (data, clamp) {}, // return point in global.
  *         size: function (dataSize, dataItem) {} // return size of each axis in coordSys.
  *     }}
+=======
+/**
+ * To reduce total package size of each coordinate systems, the modules `prepareCustom`
+ * of each coordinate systems are not required by each coordinate systems directly, but
+ * required by the module `custom`.
+ *
+ * prepareInfoForCustomSeries {Function}: optional
+ *     @return {Object} {coordSys: {...}, api: {
+ *         coord: function (data, clamp) {}, // return point in global.
+ *         size: function (dataSize, dataItem) {} // return size of each axis in coordSys.
+ *     }}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var prepareCustoms = {
@@ -73869,20 +79689,34 @@ function makeRenderItem(customSeries, data, ecModel, api) {
       actionType: payload ? payload.type : null
     }, userParams), userAPI);
   };
+<<<<<<< HEAD
   /**
    * @public
    * @param dim by default 0.
    * @param dataIndexInside by default `currDataIndexInside`.
+=======
+  /**
+   * @public
+   * @param dim by default 0.
+   * @param dataIndexInside by default `currDataIndexInside`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   function value(dim, dataIndexInside) {
     dataIndexInside == null && (dataIndexInside = currDataIndexInside);
     return data.getStore().get(data.getDimensionIndex(dim || 0), dataIndexInside);
   }
+<<<<<<< HEAD
   /**
    * @public
    * @param dim by default 0.
    * @param dataIndexInside by default `currDataIndexInside`.
+=======
+  /**
+   * @public
+   * @param dim by default 0.
+   * @param dataIndexInside by default `currDataIndexInside`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -73900,6 +79734,7 @@ function makeRenderItem(customSeries, data, ecModel, api) {
     var ordinalMeta = dimInfo && dimInfo.ordinalMeta;
     return ordinalMeta ? ordinalMeta.categories[val] : val;
   }
+<<<<<<< HEAD
   /**
    * @deprecated The original intention of `api.style` is enable to set itemStyle
    * like other series. But it is not necessary and not easy to give a strict definition
@@ -73918,6 +79753,26 @@ function makeRenderItem(customSeries, data, ecModel, api) {
    * to pulish it to doc.
    * @public
    * @param dataIndexInside by default `currDataIndexInside`.
+=======
+  /**
+   * @deprecated The original intention of `api.style` is enable to set itemStyle
+   * like other series. But it is not necessary and not easy to give a strict definition
+   * of what it returns. And since echarts5 it needs to be make compat work. So
+   * deprecates it since echarts5.
+   *
+   * By default, `visual` is applied to style (to support visualMap).
+   * `visual.color` is applied at `fill`. If user want apply visual.color on `stroke`,
+   * it can be implemented as:
+   * `api.style({stroke: api.visual('color'), fill: null})`;
+   *
+   * [Compat]: since ec5, RectText has been separated from its hosts el.
+   * so `api.style()` will only return the style from `itemStyle` but not handle `label`
+   * any more. But `series.label` config is never published in doc.
+   * We still compat it in `api.style()`. But not encourage to use it and will still not
+   * to pulish it to doc.
+   * @public
+   * @param dataIndexInside by default `currDataIndexInside`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -73949,10 +79804,17 @@ function makeRenderItem(customSeries, data, ecModel, api) {
     itemStyle.legacy = true;
     return itemStyle;
   }
+<<<<<<< HEAD
   /**
    * @deprecated The reason see `api.style()`
    * @public
    * @param dataIndexInside by default `currDataIndexInside`.
+=======
+  /**
+   * @deprecated The reason see `api.style()`
+   * @public
+   * @param dataIndexInside by default `currDataIndexInside`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -73991,9 +79853,15 @@ function makeRenderItem(customSeries, data, ecModel, api) {
       extra.textPosition && (itemStyle.textPosition = extra.textPosition);
     }
   }
+<<<<<<< HEAD
   /**
    * @public
    * @param dataIndexInside by default `currDataIndexInside`.
+=======
+  /**
+   * @public
+   * @param dataIndexInside by default `currDataIndexInside`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74011,9 +79879,15 @@ function makeRenderItem(customSeries, data, ecModel, api) {
       return data.getItemVisual(dataIndexInside, visualType);
     }
   }
+<<<<<<< HEAD
   /**
    * @public
    * @return If not support, return undefined.
+=======
+  /**
+   * @public
+   * @return If not support, return undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74025,17 +79899,28 @@ function makeRenderItem(customSeries, data, ecModel, api) {
       }, opt));
     }
   }
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   function currentSeriesIndices() {
     return ecModel.getCurrentSeriesIndices();
   }
+<<<<<<< HEAD
   /**
    * @public
    * @return font string
+=======
+  /**
+   * @public
+   * @return font string
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74424,8 +80309,13 @@ function processRemove(oldIndex) {
   var child = context.oldChildren[oldIndex];
   child && applyLeaveTransition(child, customInnerStore(child).option, context.seriesModel);
 }
+<<<<<<< HEAD
 /**
  * @return SVG Path data.
+=======
+/**
+ * @return SVG Path data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -74446,8 +80336,13 @@ function install$r(registers) {
 var inner$a = makeInner();
 var clone$3 = clone;
 var bind$1 = bind;
+<<<<<<< HEAD
 /**
  * Base axis pointer class in 2D.
+=======
+/**
+ * Base axis pointer class in 2D.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var BaseAxisPointer =
@@ -74455,15 +80350,26 @@ var BaseAxisPointer =
 function () {
   function BaseAxisPointer() {
     this._dragging = false;
+<<<<<<< HEAD
     /**
      * In px, arbitrary value. Do not set too small,
      * no animation is ok for most cases.
+=======
+    /**
+     * In px, arbitrary value. Do not set too small,
+     * no animation is ok for most cases.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this.animationThreshold = 15;
   }
+<<<<<<< HEAD
   /**
    * @implement
+=======
+  /**
+   * @implement
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74524,24 +80430,39 @@ function () {
 
     this._renderHandle(value);
   };
+<<<<<<< HEAD
   /**
    * @implement
+=======
+  /**
+   * @implement
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   BaseAxisPointer.prototype.remove = function (api) {
     this.clear(api);
   };
+<<<<<<< HEAD
   /**
    * @implement
+=======
+  /**
+   * @implement
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   BaseAxisPointer.prototype.dispose = function (api) {
     this.clear(api);
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74577,16 +80498,27 @@ function () {
 
     return animation === true;
   };
+<<<<<<< HEAD
   /**
    * add {pointer, label, graphicKey} to elOption
    * @protected
+=======
+  /**
+   * add {pointer, label, graphicKey} to elOption
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   BaseAxisPointer.prototype.makeElOption = function (elOption, value, axisModel, axisPointerModel, api) {// Should be implemenented by sub-class.
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74598,8 +80530,13 @@ function () {
       group.add(pointerEl);
     }
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74610,8 +80547,13 @@ function () {
       updateLabelShowHide(labelEl, axisPointerModel);
     }
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74625,8 +80567,13 @@ function () {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74646,8 +80593,13 @@ function () {
       updateLabelShowHide(labelEl, axisPointerModel);
     }
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74726,8 +80678,13 @@ function () {
 
     this._doDispatchAxisPointer();
   };
+<<<<<<< HEAD
   /**
    * Throttled method.
+=======
+  /**
+   * Throttled method.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74774,8 +80731,13 @@ function () {
       type: 'hideTip'
     });
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74797,8 +80759,13 @@ function () {
 
     clear(this, '_doDispatchAxisPointer');
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -74877,8 +80844,13 @@ function buildElStyle(axisPointerModel) {
 
   return style;
 }
+<<<<<<< HEAD
 /**
  * @param {Function} labelPos {align, verticalAlign, position}
+=======
+/**
+ * @param {Function} labelPos {align, verticalAlign, position}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function buildLabelElOption(elOption, axisModel, axisPointerModel, api, labelPos) {
@@ -75024,8 +80996,13 @@ function (_super) {
   function CartesianAxisPointer() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -75048,8 +81025,13 @@ function (_super) {
     buildCartesianSingleLabelElOption( // @ts-ignore
     value, elOption, layoutInfo, axisModel, axisPointerModel, api);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -75066,8 +81048,13 @@ function (_super) {
       rotation: layoutInfo.rotation + (layoutInfo.labelDirection < 0 ? Math.PI : 0)
     };
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -75205,12 +81192,21 @@ function (_super) {
 
 var inner$b = makeInner();
 var each$7 = each;
+<<<<<<< HEAD
 /**
  * @param {string} key
  * @param {module:echarts/ExtensionAPI} api
  * @param {Function} handler
  *      param: {string} currTrigger
  *      param: {Array.<number>} point
+=======
+/**
+ * @param {string} key
+ * @param {module:echarts/ExtensionAPI} api
+ * @param {Function} handler
+ *      param: {string} currTrigger
+ *      param: {Array.<number>} point
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function register(key, api, handler) {
@@ -75354,10 +81350,17 @@ function (_super) {
   return AxisPointerView;
 }(ComponentView);
 
+<<<<<<< HEAD
 /**
  * @param finder contains {seriesIndex, dataIndex, dataIndexInside}
  * @param ecModel
  * @return  {point: [x, y], el: ...} point Will not be null.
+=======
+/**
+ * @param finder contains {seriesIndex, dataIndex, dataIndexInside}
+ * @param ecModel
+ * @return  {point: [x, y], el: ...} point Will not be null.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function findPointFromSeries(finder, ecModel) {
@@ -75416,11 +81419,19 @@ function findPointFromSeries(finder, ecModel) {
 }
 
 var inner$c = makeInner();
+<<<<<<< HEAD
 /**
  * Basic logic: check all axis, if they do not demand show/highlight,
  * then hide/downplay them.
  *
  * @return content of event obj for echarts.connect.
+=======
+/**
+ * Basic logic: check all axis, if they do not demand show/highlight,
+ * then hide/downplay them.
+ *
+ * @return content of event obj for echarts.connect.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function axisTrigger(payload, ecModel, api) {
@@ -75826,8 +81837,13 @@ function (_super) {
   function PolarAxisPointer() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76043,12 +82059,21 @@ function (_super) {
   AngleAxis.prototype.pointToData = function (point, clamp) {
     return this.polar.pointToData(point, clamp)[this.dim === 'radius' ? 0 : 1];
   };
+<<<<<<< HEAD
   /**
    * Only be called in category axis.
    * Angle axis uses text height to decide interval
    *
    * @override
    * @return {number} Auto interval for cateogry axis tick and label
+=======
+  /**
+   * Only be called in category axis.
+   * Angle axis uses text height to decide interval
+   *
+   * @override
+   * @return {number} Auto interval for cateogry axis tick and label
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76111,6 +82136,7 @@ function () {
   function Polar(name) {
     this.dimensions = polarDimensions;
     this.type = 'polar';
+<<<<<<< HEAD
     /**
      * x of polar center
      */
@@ -76118,6 +82144,15 @@ function () {
     this.cx = 0;
     /**
      * y of polar center
+=======
+    /**
+     * x of polar center
+     */
+
+    this.cx = 0;
+    /**
+     * y of polar center
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this.cy = 0;
@@ -76127,8 +82162,13 @@ function () {
     this.name = name || '';
     this._radiusAxis.polar = this._angleAxis.polar = this;
   }
+<<<<<<< HEAD
   /**
    * If contain coord
+=======
+  /**
+   * If contain coord
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76136,8 +82176,13 @@ function () {
     var coord = this.pointToCoord(point);
     return this._radiusAxis.contain(coord[0]) && this._angleAxis.contain(coord[1]);
   };
+<<<<<<< HEAD
   /**
    * If contain data
+=======
+  /**
+   * If contain data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76153,8 +82198,13 @@ function () {
   Polar.prototype.getAxes = function () {
     return [this._radiusAxis, this._angleAxis];
   };
+<<<<<<< HEAD
   /**
    * Get axes by type of scale
+=======
+  /**
+   * Get axes by type of scale
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76179,9 +82229,15 @@ function () {
     var angleAxis = this._angleAxis;
     return axis === angleAxis ? this._radiusAxis : angleAxis;
   };
+<<<<<<< HEAD
   /**
    * Base axis will be used on stacking.
    *
+=======
+  /**
+   * Base axis will be used on stacking.
+   *
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76196,17 +82252,28 @@ function () {
       otherAxes: [this.getOtherAxis(baseAxis)]
     };
   };
+<<<<<<< HEAD
   /**
    * Convert a single data item to (x, y) point.
    * Parameter data is an array which the first element is radius and the second is angle
+=======
+  /**
+   * Convert a single data item to (x, y) point.
+   * Parameter data is an array which the first element is radius and the second is angle
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Polar.prototype.dataToPoint = function (data, clamp) {
     return this.coordToPoint([this._radiusAxis.dataToRadius(data[0], clamp), this._angleAxis.dataToAngle(data[1], clamp)]);
   };
+<<<<<<< HEAD
   /**
    * Convert a (x, y) point to data
+=======
+  /**
+   * Convert a (x, y) point to data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76214,8 +82281,13 @@ function () {
     var coord = this.pointToCoord(point);
     return [this._radiusAxis.radiusToData(coord[0], clamp), this._angleAxis.angleToData(coord[1], clamp)];
   };
+<<<<<<< HEAD
   /**
    * Convert a (x, y) point to (radius, angle) coord
+=======
+  /**
+   * Convert a (x, y) point to (radius, angle) coord
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76242,8 +82314,13 @@ function () {
 
     return [radius, radian];
   };
+<<<<<<< HEAD
   /**
    * Convert a (radius, angle) coord to (x, y) point
+=======
+  /**
+   * Convert a (radius, angle) coord to (x, y) point
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76255,9 +82332,15 @@ function () {
     var y = -Math.sin(radian) * radius + this.cy;
     return [x, y];
   };
+<<<<<<< HEAD
   /**
    * Get ring area of cartesian.
    * Area will have a contain function to determine if a point is in the coordinate system.
+=======
+  /**
+   * Get ring area of cartesian.
+   * Area will have a contain function to determine if a point is in the coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -76309,8 +82392,13 @@ function getCoordSys$2(finder) {
   return polarModel && polarModel.coordinateSystem || seriesModel && seriesModel.coordinateSystem;
 }
 
+<<<<<<< HEAD
 /**
  * Resize method bound to the polar
+=======
+/**
+ * Resize method bound to the polar
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function resizePolar(polar, polarModel, api) {
@@ -76333,8 +82421,13 @@ function resizePolar(polar, polarModel, api) {
   var parsedRadius = [parsePercent$1(radius[0], size), parsePercent$1(radius[1], size)];
   radiusAxis.inverse ? radiusAxis.setExtent(parsedRadius[1], parsedRadius[0]) : radiusAxis.setExtent(parsedRadius[0], parsedRadius[1]);
 }
+<<<<<<< HEAD
 /**
  * Update polar
+=======
+/**
+ * Update polar
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -76370,8 +82463,13 @@ function updatePolarScale(ecModel, api) {
 function isAngleAxisModel(axisModel) {
   return axisModel.mainType === 'angleAxis';
 }
+<<<<<<< HEAD
 /**
  * Set common axis properties
+=======
+/**
+ * Set common axis properties
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -76877,8 +82975,13 @@ var axisElementBuilders$1 = {
     }
   }
 };
+<<<<<<< HEAD
 /**
  * @inner
+=======
+/**
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function layoutAxis(polar, radiusAxisModel, axisAngle) {
@@ -77010,19 +83113,32 @@ function barLayoutPolar(seriesType, ecModel, api) {
         startAngle: -startAngle * Math.PI / 180,
         endAngle: -endAngle * Math.PI / 180,
 
+<<<<<<< HEAD
         /**
          * Keep the same logic with bar in catesion: use end value to
          * control direction. Notice that if clockwise is true (by
          * default), the sector will always draw clockwisely, no matter
          * whether endAngle is greater or less than startAngle.
+=======
+        /**
+         * Keep the same logic with bar in catesion: use end value to
+         * control direction. Notice that if clockwise is true (by
+         * default), the sector will always draw clockwisely, no matter
+         * whether endAngle is greater or less than startAngle.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
         clockwise: startAngle >= endAngle
       });
     }
   });
 }
+<<<<<<< HEAD
 /**
  * Calculate bar width and offset for radial bar charts
+=======
+/**
+ * Calculate bar width and offset for radial bar charts
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -77406,8 +83522,13 @@ function (_super) {
     _this.position = position || 'bottom';
     return _this;
   }
+<<<<<<< HEAD
   /**
    * Judge the orient of the axis.
+=======
+  /**
+   * Judge the orient of the axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77424,8 +83545,13 @@ function (_super) {
 }(Axis);
 
 var singleDimensions = ['single'];
+<<<<<<< HEAD
 /**
  * Create a single coordinates system.
+=======
+/**
+ * Create a single coordinates system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var Single =
@@ -77434,8 +83560,13 @@ function () {
   function Single(axisModel, ecModel, api) {
     this.type = 'single';
     this.dimension = 'single';
+<<<<<<< HEAD
     /**
      * Add it just for draw tooltip.
+=======
+    /**
+     * Add it just for draw tooltip.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this.dimensions = singleDimensions;
@@ -77444,8 +83575,13 @@ function () {
 
     this._init(axisModel, ecModel, api);
   }
+<<<<<<< HEAD
   /**
    * Initialize single coordinate system.
+=======
+  /**
+   * Initialize single coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77461,8 +83597,13 @@ function () {
     axis.coordinateSystem = this;
     this._axis = axis;
   };
+<<<<<<< HEAD
   /**
    * Update axis scale after data processed
+=======
+  /**
+   * Update axis scale after data processed
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77477,8 +83618,13 @@ function () {
       }
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Resize the single coordinate system.
+=======
+  /**
+   * Resize the single coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77528,16 +83674,26 @@ function () {
       return extentSum - coord + coordBase;
     };
   };
+<<<<<<< HEAD
   /**
    * Get axis.
+=======
+  /**
+   * Get axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Single.prototype.getAxis = function () {
     return this._axis;
   };
+<<<<<<< HEAD
   /**
    * Get axis, add it just for draw tooltip.
+=======
+  /**
+   * Get axis, add it just for draw tooltip.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77556,8 +83712,13 @@ function () {
       otherAxes: []
     };
   };
+<<<<<<< HEAD
   /**
    * If contain point.
+=======
+  /**
+   * If contain point.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77577,9 +83738,15 @@ function () {
     var axis = this.getAxis();
     return [axis.coordToData(axis.toLocalCoord(point[axis.orient === 'horizontal' ? 0 : 1]))];
   };
+<<<<<<< HEAD
   /**
    * Convert the series data to concrete point.
    * Can be [val] | val
+=======
+  /**
+   * Convert the series data to concrete point.
+   * Can be [val] | val
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77617,8 +83784,13 @@ function getCoordSys$3(finder) {
   return singleModel && singleModel.coordinateSystem || seriesModel && seriesModel.coordinateSystem;
 }
 
+<<<<<<< HEAD
 /**
  * Create single coordinate system and inject it into seriesModel.
+=======
+/**
+ * Create single coordinate system and inject it into seriesModel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function create$2(ecModel, api) {
@@ -77655,8 +83827,13 @@ function (_super) {
   function SingleAxisPointer() {
     return _super !== null && _super.apply(this, arguments) || this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77679,8 +83856,13 @@ function (_super) {
     buildCartesianSingleLabelElOption( // @ts-ignore
     value, elOption, layoutInfo, axisModel, axisPointerModel, api);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77697,8 +83879,13 @@ function (_super) {
       rotation: layoutInfo.rotation + (layoutInfo.labelDirection < 0 ? Math.PI : 0)
     };
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77795,8 +83982,13 @@ function (_super) {
     _this.type = CalendarModel.type;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -77807,8 +83999,13 @@ function (_super) {
 
     mergeAndNormalizeLayoutParams(option, inputPositionParams);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78372,6 +84569,7 @@ function () {
   Calendar.prototype.getOrient = function () {
     return this._orient;
   };
+<<<<<<< HEAD
   /**
    * getFirstDayOfWeek
    *
@@ -78380,15 +84578,31 @@ function () {
    *     1 : start at Monday
    *
    * @return {number}
+=======
+  /**
+   * getFirstDayOfWeek
+   *
+   * @example
+   *     0 : start at Sunday
+   *     1 : start at Monday
+   *
+   * @return {number}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   Calendar.prototype.getFirstDayOfWeek = function () {
     return this._firstDayOfWeek;
   };
+<<<<<<< HEAD
   /**
    * get date info
    * }
+=======
+  /**
+   * get date info
+   * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78461,8 +84675,13 @@ function () {
     this._sw = cellSize[0];
     this._sh = cellSize[1];
   };
+<<<<<<< HEAD
   /**
    * Convert a time data(time, value) item to (x, y) point.
+=======
+  /**
+   * Convert a time data(time, value) item to (x, y) point.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // TODO Clamp of calendar is not same with cartesian coordinate systems.
   // It will return NaN if data exceeds.
@@ -78489,8 +84708,13 @@ function () {
 
     return [this._rect.x + nthWeek * this._sw + this._sw / 2, this._rect.y + week * this._sh + this._sh / 2];
   };
+<<<<<<< HEAD
   /**
    * Convert a (x, y) point to time data
+=======
+  /**
+   * Convert a (x, y) point to time data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78498,8 +84722,13 @@ function () {
     var date = this.pointToDate(point);
     return date && date.time;
   };
+<<<<<<< HEAD
   /**
    * Convert a time date item to (x, y) four point.
+=======
+  /**
+   * Convert a time date item to (x, y) four point.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78519,11 +84748,19 @@ function () {
       bl: [point[0] - this._sw / 2, point[1] + this._sh / 2]
     };
   };
+<<<<<<< HEAD
   /**
    * Convert a (x, y) point to time date
    *
    * @param  {Array} point point
    * @return {Object}       date
+=======
+  /**
+   * Convert a (x, y) point to time date
+   *
+   * @param  {Array} point point
+   * @return {Object}       date
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78553,9 +84790,15 @@ function () {
     console.warn('Not implemented.');
     return false;
   };
+<<<<<<< HEAD
   /**
    * initRange
    * Normalize to an [start, end] array
+=======
+  /**
+   * initRange
+   * Normalize to an [start, end] array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78609,6 +84852,7 @@ function () {
 
     return normalizedRange;
   };
+<<<<<<< HEAD
   /**
    * range info
    *
@@ -78616,6 +84860,15 @@ function () {
    * @param  {Array} range range ['2017-01-01', '2017-07-08']
    *  If range[0] > range[1], they will not be reversed.
    * @return {Object}       obj
+=======
+  /**
+   * range info
+   *
+   * @private
+   * @param  {Array} range range ['2017-01-01', '2017-07-08']
+   *  If range[0] > range[1], they will not be reversed.
+   * @return {Object}       obj
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78670,6 +84923,7 @@ function () {
       lweek: parsedRange[1].day
     };
   };
+<<<<<<< HEAD
   /**
    * get date by nthWeeks and week day in range
    *
@@ -78678,6 +84932,16 @@ function () {
    * @param  {number} day   the week day
    * @param  {Array} range [d1, d2]
    * @return {Object}
+=======
+  /**
+   * get date by nthWeeks and week day in range
+   *
+   * @private
+   * @param  {number} nthWeek the week
+   * @param  {number} day   the week day
+   * @param  {Array} range [d1, d2]
+   * @return {Object}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -78900,6 +85164,7 @@ function (_super) {
       return item != null;
     });
   };
+<<<<<<< HEAD
   /**
    * Convert
    * [{
@@ -78913,6 +85178,21 @@ function (_super) {
    *  {type: 'circle', parentId: 'xx'},
    *  {type: 'polygon', parentId: 'xx'}
    * ]
+=======
+  /**
+   * Convert
+   * [{
+   *  type: 'group',
+   *  id: 'xx',
+   *  children: [{type: 'circle'}, {type: 'polygon'}]
+   * }]
+   * to
+   * [
+   *  {type: 'group', id: 'xx'},
+   *  {type: 'circle', parentId: 'xx'},
+   *  {type: 'polygon', parentId: 'xx'}
+   * ]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79005,8 +85285,13 @@ function (_super) {
 
     this._relocate(graphicModel, api);
   };
+<<<<<<< HEAD
   /**
    * Update graphic elements.
+=======
+  /**
+   * Update graphic elements.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79146,8 +85431,13 @@ function (_super) {
       }
     });
   };
+<<<<<<< HEAD
   /**
    * Locate graphic elements.
+=======
+  /**
+   * Locate graphic elements.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79227,8 +85517,13 @@ function (_super) {
       }
     }
   };
+<<<<<<< HEAD
   /**
    * Clear all elements.
+=======
+  /**
+   * Clear all elements.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79394,9 +85689,15 @@ function getAxisMainType(axisDim) {
 
   return axisDim + 'Axis';
 }
+<<<<<<< HEAD
 /**
  * If two dataZoomModels has the same axis controlled, we say that they are 'linked'.
  * This function finds all linked dataZoomModels start from the given payload.
+=======
+/**
+ * If two dataZoomModels has the same axis controlled, we say that they are 'linked'.
+ * This function finds all linked dataZoomModels start from the given payload.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function findEffectedDataZooms(ecModel, payload) {
@@ -79456,6 +85757,7 @@ function findEffectedDataZooms(ecModel, payload) {
 
   return effectedModels;
 }
+<<<<<<< HEAD
 /**
  * Find the first target coordinate system.
  * Available after model built.
@@ -79474,6 +85776,26 @@ function findEffectedDataZooms(ecModel, payload) {
  *                      {model: coord0, axisModels: [], coordIndex: 0}
  *                  ]
  *              }
+=======
+/**
+ * Find the first target coordinate system.
+ * Available after model built.
+ *
+ * @return Like {
+ *                  grid: [
+ *                      {model: coord0, axisModels: [axis1, axis3], coordIndex: 1},
+ *                      {model: coord1, axisModels: [axis0, axis2], coordIndex: 0},
+ *                      ...
+ *                  ],  // cartesians must not be null/undefined.
+ *                  polar: [
+ *                      {model: coord0, axisModels: [axis4], coordIndex: 0},
+ *                      ...
+ *                  ],  // polars must not be null/undefined.
+ *                  singleAxis: [
+ *                      {model: coord0, axisModels: [], coordIndex: 0}
+ *                  ]
+ *              }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function collectReferCoordSysModelInfo(dataZoomModel) {
@@ -79542,6 +85864,7 @@ function (_super) {
     _this.type = DataZoomModel.type;
     _this._autoThrottle = true;
     _this._noTarget = true;
+<<<<<<< HEAD
     /**
      * It is `[rangeModeForMin, rangeModeForMax]`.
      * The optional values for `rangeMode`:
@@ -79557,6 +85880,23 @@ function (_super) {
      * if in `'value`' mode, the window will be kept in a fixed value range despite how
      * data are appended, while if in `'percent'` mode, whe window range will be changed alone with
      * the appended data (suppose `axis.min` and `axis.max` are not specified).
+=======
+    /**
+     * It is `[rangeModeForMin, rangeModeForMax]`.
+     * The optional values for `rangeMode`:
+     * + `'value'` mode: the axis extent will always be determined by
+     *     `dataZoom.startValue` and `dataZoom.endValue`, despite
+     *     how data like and how `axis.min` and `axis.max` are.
+     * + `'percent'` mode: `100` represents 100% of the `[dMin, dMax]`,
+     *     where `dMin` is `axis.min` if `axis.min` specified, otherwise `data.extent[0]`,
+     *     and `dMax` is `axis.max` if `axis.max` specified, otherwise `data.extent[1]`.
+     *     Axis extent will be determined by the result of the percent of `[dMin, dMax]`.
+     *
+     * For example, when users are using dynamic data (update data periodically via `setOption`),
+     * if in `'value`' mode, the window will be kept in a fixed value range despite how
+     * data are appended, while if in `'percent'` mode, whe window range will be changed alone with
+     * the appended data (suppose `axis.min` and `axis.max` are not specified).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this._rangePropMode = ['percent', 'percent'];
@@ -79565,6 +85905,7 @@ function (_super) {
 
   DataZoomModel.prototype.init = function (option, parentModel, ecModel) {
     var inputRawOption = retrieveRawOption(option);
+<<<<<<< HEAD
     /**
      * Suppose a "main process" start at the point that model prepared (that is,
      * model initialized or merged or method called in `action`).
@@ -79585,6 +85926,28 @@ function (_super) {
      * (Step)2) click the legend to hide and show a series,
      *     where the new range is calculated by the earsed `startValue` and `endValue`,
      *     which brings incorrect result.
+=======
+    /**
+     * Suppose a "main process" start at the point that model prepared (that is,
+     * model initialized or merged or method called in `action`).
+     * We should keep the `main process` idempotent, that is, given a set of values
+     * on `option`, we get the same result.
+     *
+     * But sometimes, values on `option` will be updated for providing users
+     * a "final calculated value" (`dataZoomProcessor` will do that). Those value
+     * should not be the base/input of the `main process`.
+     *
+     * So in that case we should save and keep the input of the `main process`
+     * separately, called `settledOption`.
+     *
+     * For example, consider the case:
+     * (Step_1) brush zoom the grid by `toolbox.dataZoom`,
+     *     where the original input `option.startValue`, `option.endValue` are earsed by
+     *     calculated value.
+     * (Step)2) click the legend to hide and show a series,
+     *     where the new range is calculated by the earsed `startValue` and `endValue`,
+     *     which brings incorrect result.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this.settledOption = inputRawOption;
@@ -79791,8 +86154,13 @@ function (_super) {
     }, this);
     return firstAxisModel;
   };
+<<<<<<< HEAD
   /**
    * @param {Function} callback param: axisModel, dimNames, axisIndex, dataZoomModel, ecModel
+=======
+  /**
+   * @param {Function} callback param: axisModel, dimNames, axisIndex, dataZoomModel, ecModel
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79803,8 +86171,13 @@ function (_super) {
       });
     });
   };
+<<<<<<< HEAD
   /**
    * @return If not found, return null/undefined.
+=======
+  /**
+   * @return If not found, return null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79815,8 +86188,13 @@ function (_super) {
       return axisModel.__dzAxisProxy;
     }
   };
+<<<<<<< HEAD
   /**
    * @return If not found, return null/undefined.
+=======
+  /**
+   * @return If not found, return null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79831,8 +86209,13 @@ function (_super) {
       return this.ecModel.getComponent(getAxisMainType(axisDim), axisIndex);
     }
   };
+<<<<<<< HEAD
   /**
    * If not specified, set to undefined.
+=======
+  /**
+   * If not specified, set to undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79872,10 +86255,17 @@ function (_super) {
       return axisProxy.getDataPercentWindow();
     }
   };
+<<<<<<< HEAD
   /**
    * For example, chart.getModel().getComponent('dataZoom').getValueRange('y', 0);
    *
    * @return [startValue, endValue] value can only be '-' or finite number.
+=======
+  /**
+   * For example, chart.getModel().getComponent('dataZoom').getValueRange('y', 0);
+   *
+   * @return [startValue, endValue] value can only be '-' or finite number.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79890,9 +86280,15 @@ function (_super) {
       return this.getAxisProxy(axisDim, axisIndex).getDataValueWindow();
     }
   };
+<<<<<<< HEAD
   /**
    * @param axisModel If axisModel given, find axisProxy
    *      corresponding to the axisModel
+=======
+  /**
+   * @param axisModel If axisModel given, find axisProxy
+   *      corresponding to the axisModel
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -79954,10 +86350,17 @@ function (_super) {
   };
   return DataZoomModel;
 }(ComponentModel);
+<<<<<<< HEAD
 /**
  * Retrieve those raw params from option, which will be cached separately,
  * because they will be overwritten by normalized/calculated values in the main
  * process.
+=======
+/**
+ * Retrieve those raw params from option, which will be cached separately,
+ * because they will be overwritten by normalized/calculated values in the main
+ * process.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -80025,12 +86428,21 @@ function (_super) {
 
 var each$8 = each;
 var asc$1 = asc;
+<<<<<<< HEAD
 /**
  * Operate single axis.
  * One axis can only operated by one axis operator.
  * Different dataZoomModels may be defined to operate the same axis.
  * (i.e. 'inside' data zoom and 'slider' data zoom components)
  * So dataZoomModels share one axisProxy in that case.
+=======
+/**
+ * Operate single axis.
+ * One axis can only operated by one axis operator.
+ * Different dataZoomModels may be defined to operate the same axis.
+ * (i.e. 'inside' data zoom and 'slider' data zoom components)
+ * So dataZoomModels share one axisProxy in that case.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var AxisProxy =
@@ -80046,24 +86458,39 @@ function () {
     //  */
     // this.hasSeriesStacked;
   }
+<<<<<<< HEAD
   /**
    * Whether the axisProxy is hosted by dataZoomModel.
+=======
+  /**
+   * Whether the axisProxy is hosted by dataZoomModel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   AxisProxy.prototype.hostedBy = function (dataZoomModel) {
     return this._dataZoomModel === dataZoomModel;
   };
+<<<<<<< HEAD
   /**
    * @return Value can only be NaN or finite value.
+=======
+  /**
+   * @return Value can only be NaN or finite value.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   AxisProxy.prototype.getDataValueWindow = function () {
     return this._valueWindow.slice();
   };
+<<<<<<< HEAD
   /**
    * @return {Array.<number>}
+=======
+  /**
+   * @return {Array.<number>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -80093,8 +86520,13 @@ function () {
   AxisProxy.prototype.getMinMaxSpan = function () {
     return clone(this._minMaxSpan);
   };
+<<<<<<< HEAD
   /**
    * Only calculate by given range and this._dataExtent, do not change anything.
+=======
+  /**
+   * Only calculate by given range and this._dataExtent, do not change anything.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -80169,10 +86601,17 @@ function () {
       percentWindow: percentWindow
     };
   };
+<<<<<<< HEAD
   /**
    * Notice: reset should not be called before series.restoreData() is called,
    * so it is recommended to be called in "process stage" but not "model init
    * stage".
+=======
+  /**
+   * Notice: reset should not be called before series.restoreData() is called,
+   * so it is recommended to be called in "process stage" but not "model init
+   * stage".
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -80589,12 +87028,21 @@ function (_super) {
   return ToolboxModel;
 }(ComponentModel);
 
+<<<<<<< HEAD
 /**
  * Layout list like component.
  * It will box layout each items in group of component and then position the whole group in the viewport
  * @param {module:zrender/group/Group} group
  * @param {module:echarts/model/Component} componentModel
  * @param {module:echarts/ExtensionAPI}
+=======
+/**
+ * Layout list like component.
+ * It will box layout each items in group of component and then position the whole group in the viewport
+ * @param {module:zrender/group/Group} group
+ * @param {module:echarts/model/Component} componentModel
+ * @param {module:echarts/ExtensionAPI}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function layout$3(group, componentModel, api) {
@@ -81190,10 +87638,17 @@ registerAction({
 
 var BLOCK_SPLITER = new Array(60).join('-');
 var ITEM_SPLITER = '\t';
+<<<<<<< HEAD
 /**
  * Group series into two types
  *  1. on category axis, like line, bar
  *  2. others, like scatter, pie
+=======
+/**
+ * Group series into two types
+ *  1. on category axis, like line, bar
+ *  2. others, like scatter, pie
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function groupSeries(ecModel) {
@@ -81236,9 +87691,15 @@ function groupSeries(ecModel) {
     meta: meta
   };
 }
+<<<<<<< HEAD
 /**
  * Assemble content of series on cateogory axis
  * @inner
+=======
+/**
+ * Assemble content of series on cateogory axis
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -81276,8 +87737,13 @@ function assembleSeriesWithCategoryAxis(groups) {
   });
   return tables.join('\n\n' + BLOCK_SPLITER + '\n\n');
 }
+<<<<<<< HEAD
 /**
  * Assemble content of other series
+=======
+/**
+ * Assemble content of other series
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -81314,8 +87780,13 @@ function getContentFromModel(ecModel) {
 function trim$1(str) {
   return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 }
+<<<<<<< HEAD
 /**
  * If a block is tsv format
+=======
+/**
+ * If a block is tsv format
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -81329,9 +87800,15 @@ function isTSVFormat(block) {
 }
 
 var itemSplitRegex = new RegExp('[' + ITEM_SPLITER + ']+', 'g');
+<<<<<<< HEAD
 /**
  * @param {string} tsv
  * @return {Object}
+=======
+/**
+ * @param {string} tsv
+ * @return {Object}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function parseTSVContents(tsv) {
@@ -81588,8 +88065,13 @@ function (_super) {
 
   return DataView;
 }(ToolboxFeature);
+<<<<<<< HEAD
 /**
  * @inner
+=======
+/**
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -81650,9 +88132,15 @@ registerAction({
 
 var each$9 = each;
 var inner$f = makeInner();
+<<<<<<< HEAD
 /**
  * @param ecModel
  * @param newSnapshot key is dataZoomId
+=======
+/**
+ * @param ecModel
+ * @param newSnapshot key is dataZoomId
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function push(ecModel, newSnapshot) {
@@ -81714,9 +88202,15 @@ function clear$1(ecModel) {
 function count(ecModel) {
   return getStoreSnapshots(ecModel).length;
 }
+<<<<<<< HEAD
 /**
  * History length of each dataZoom may be different.
  * this._history[0] is used to store origin range.
+=======
+/**
+ * History length of each dataZoom may be different.
+ * this._history[0] is used to store origin range.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getStoreSnapshots(ecModel) {
@@ -81775,10 +88269,17 @@ var INCLUDE_FINDER_MAIN_TYPES = ['grid', 'xAxis', 'yAxis', 'geo', 'graph', 'pola
 var BrushTargetManager =
 /** @class */
 function () {
+<<<<<<< HEAD
   /**
    * @param finder contains Index/Id/Name of xAxis/yAxis/geo/grid
    *        Each can be {number|Array.<number>}. like: {xAxisIndex: [3, 4]}
    * @param opt.include include coordinate system types.
+=======
+  /**
+   * @param finder contains Index/Id/Name of xAxis/yAxis/geo/grid
+   *        Each can be {number|Array.<number>}. like: {xAxisIndex: [3, 4]}
+   * @param opt.include include coordinate system types.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   function BrushTargetManager(finder, ecModel, opt) {
     var _this = this;
@@ -81825,10 +88326,17 @@ function () {
       }
     }, this);
   };
+<<<<<<< HEAD
   /**
    * the `areas` is `BrushModel.areas`.
    * Called in layout stage.
    * convert `area.coordRange` to global range and set panelId to `area.range`.
+=======
+  /**
+   * the `areas` is `BrushModel.areas`.
+   * Called in layout stage.
+   * convert `area.coordRange` to global range and set panelId to `area.range`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -81877,10 +88385,17 @@ function () {
     var targetInfo = this.findTargetInfo(area, ecModel);
     return targetInfo === true || targetInfo && indexOf(targetInfo.coordSyses, seriesModel.coordinateSystem) >= 0;
   };
+<<<<<<< HEAD
   /**
    * If return Object, a coord found.
    * If return true, global found.
    * Otherwise nothing found.
+=======
+  /**
+   * If return Object, a coord found.
+   * If return true, global found.
+   * Otherwise nothing found.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -82534,10 +89049,17 @@ function assembleTransform(x, y, toString) {
   var translate = "translate" + (is3d ? '3d' : '') + "(" + x0 + "," + y0 + (is3d ? ',0' : '') + ")";
   return toString ? 'top:0;left:0;' + CSS_TRANSFORM_VENDOR + ':' + translate + ';' : [['top', 0], ['left', 0], [TRANSFORM_VENDOR, translate]];
 }
+<<<<<<< HEAD
 /**
  * @param {Object} textStyle
  * @return {string}
  * @inner
+=======
+/**
+ * @param {Object} textStyle
+ * @return {string}
+ * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -82699,8 +89221,13 @@ function () {
       }
     };
   }
+<<<<<<< HEAD
   /**
    * Update when tooltip is rendered
+=======
+  /**
+   * Update when tooltip is rendered
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -82812,9 +89339,15 @@ function () {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * when `alwaysShowContent` is true,
    * move the tooltip after chart resized
+=======
+  /**
+   * when `alwaysShowContent` is true,
+   * move the tooltip after chart resized
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -82874,8 +89407,13 @@ function () {
     this._zr = api.getZr();
     makeStyleCoord$1(this._styleCoord, this._zr, api.getWidth() / 2, api.getHeight() / 2);
   }
+<<<<<<< HEAD
   /**
    * Update when tooltip is rendered
+=======
+  /**
+   * Update when tooltip is rendered
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -82894,8 +89432,13 @@ function () {
     this.el.show();
     this._show = true;
   };
+<<<<<<< HEAD
   /**
    * Set tooltip content
+=======
+  /**
+   * Set tooltip content
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -82986,9 +89529,15 @@ function () {
       el.markRedraw();
     }
   };
+<<<<<<< HEAD
   /**
    * when `alwaysShowContent` is true,
    * move the tooltip after chart resized
+=======
+  /**
+   * when `alwaysShowContent` is true,
+   * move the tooltip after chart resized
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -83158,6 +89707,7 @@ function (_super) {
       });
     }
   };
+<<<<<<< HEAD
   /**
    * Show tip manually by
    * dispatchAction({
@@ -83173,6 +89723,23 @@ function (_super) {
    * });
    *
    *  TODO Batch
+=======
+  /**
+   * Show tip manually by
+   * dispatchAction({
+   *     type: 'showTip',
+   *     x: 10,
+   *     y: 10
+   * });
+   * Or
+   * dispatchAction({
+   *      type: 'showTip',
+   *      seriesIndex: 0,
+   *      dataIndex or dataIndexInside or name
+   * });
+   *
+   *  TODO Batch
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -83760,8 +90327,13 @@ function (_super) {
   TooltipView.type = 'tooltip';
   return TooltipView;
 }(ComponentView);
+<<<<<<< HEAD
 /**
  * From top to bottom. (the last one should be globalTooltipModel);
+=======
+/**
+ * From top to bottom. (the last one should be globalTooltipModel);
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -83889,6 +90461,7 @@ function calcTooltipPosition(position, rect, contentSize, borderWidth) {
 function isCenterAlign(align) {
   return align === 'center' || align === 'middle';
 }
+<<<<<<< HEAD
 /**
  * Find target component by payload like:
  * ```js
@@ -83899,6 +90472,18 @@ function isCenterAlign(align) {
  * PENDING: at present only
  *
  * If not found, return null/undefined.
+=======
+/**
+ * Find target component by payload like:
+ * ```js
+ * { legendId: 'some_id', name: 'xxx' }
+ * { toolboxIndex: 1, name: 'xxx' }
+ * { geoName: 'some_name', name: 'xxx' }
+ * ```
+ * PENDING: at present only
+ *
+ * If not found, return null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -83945,6 +90530,7 @@ function install$A(registers) {
   use(install$s);
   registers.registerComponentModel(TooltipModel);
   registers.registerComponentView(TooltipView);
+<<<<<<< HEAD
   /**
    * @action
    * @property {string} type
@@ -83952,6 +90538,15 @@ function install$A(registers) {
    * @property {number} dataIndex
    * @property {number} [x]
    * @property {number} [y]
+=======
+  /**
+   * @action
+   * @property {string} type
+   * @property {number} seriesIndex
+   * @property {number} dataIndex
+   * @property {number} [x]
+   * @property {number} [y]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   registers.registerAction({
@@ -84084,6 +90679,7 @@ function replaceVisualOption(thisOption, newOption, keys) {
     }
   });
 }
+<<<<<<< HEAD
 /**
  * @param stateList
  * @param visualMappings
@@ -84091,6 +90687,15 @@ function replaceVisualOption(thisOption, newOption, keys) {
  * @param getValueState param: valueOrIndex, return: state.
  * @param scope Scope for getValueState
  * @param dimension Concrete dimension, if used.
+=======
+/**
+ * @param stateList
+ * @param visualMappings
+ * @param list
+ * @param getValueState param: valueOrIndex, return: state.
+ * @param scope Scope for getValueState
+ * @param dimension Concrete dimension, if used.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 // ???! handle brush?
 
@@ -84136,12 +90741,21 @@ function applyVisual(stateList, visualMappings, data, getValueState, scope, dime
     }
   }
 }
+<<<<<<< HEAD
 /**
  * @param data
  * @param stateList
  * @param visualMappings <state, Object.<visualType, module:echarts/visual/VisualMapping>>
  * @param getValueState param: valueOrIndex, return: state.
  * @param dim dimension or dimension index.
+=======
+/**
+ * @param data
+ * @param stateList
+ * @param visualMappings <state, Object.<visualType, module:echarts/visual/VisualMapping>>
+ * @param getValueState param: valueOrIndex, return: state.
+ * @param dim dimension or dimension index.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function incrementalApplyVisual(stateList, visualMappings, getValueState, dim) {
@@ -84276,8 +90890,13 @@ function layoutCovers(ecModel) {
     brushTargetManager.setInputRanges(brushModel.areas, ecModel);
   });
 }
+<<<<<<< HEAD
 /**
  * Register the visual encoding if this modules required.
+=======
+/**
+ * Register the visual encoding if this modules required.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function brushVisual(ecModel, api, payload) {
@@ -84343,6 +90962,7 @@ function brushVisual(ecModel, api, payload) {
     function brushed(rangeInfoList) {
       return !!rangeInfoList.length;
     }
+<<<<<<< HEAD
     /**
      * Logic for each series: (If the logic has to be modified one day, do it carefully!)
      *
@@ -84354,6 +90974,19 @@ function brushVisual(ecModel, api, payload) {
      * ( brushed ┬ &&                     !linkOthers ) => StepA:  nothing,  StepB: ┬visualByCheck.
      *   !brushed┘                                                                  └nothing.
      * ( !brushed  &&                     !linkOthers ) => StepA:  nothing,  StepB:  nothing.
+=======
+    /**
+     * Logic for each series: (If the logic has to be modified one day, do it carefully!)
+     *
+     * ( brushed ┬ && ┬hasBrushExist ┬ && linkOthers  ) => StepA: ┬record, ┬ StepB: ┬visualByRecord.
+     *   !brushed┘    ├hasBrushExist ┤                            └nothing,┘        ├visualByRecord.
+     *                └!hasBrushExist┘                                              └nothing.
+     * ( !brushed  && ┬hasBrushExist ┬ && linkOthers  ) => StepA:  nothing,  StepB: ┬visualByRecord.
+     *                └!hasBrushExist┘                                              └nothing.
+     * ( brushed ┬ &&                     !linkOthers ) => StepA:  nothing,  StepB: ┬visualByCheck.
+     *   !brushed┘                                                                  └nothing.
+     * ( !brushed  &&                     !linkOthers ) => StepA:  nothing,  StepB:  nothing.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     // Step A
 
@@ -84587,6 +91220,7 @@ function (_super) {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.type = BrushModel.type;
+<<<<<<< HEAD
     /**
      * @readOnly
      */
@@ -84595,6 +91229,16 @@ function (_super) {
     /**
      * Current brush painting area settings.
      * @readOnly
+=======
+    /**
+     * @readOnly
+     */
+
+    _this.areas = [];
+    /**
+     * Current brush painting area settings.
+     * @readOnly
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this.brushOption = {};
@@ -84616,8 +91260,13 @@ function (_super) {
       inBrush.liftZ = 5;
     }
   };
+<<<<<<< HEAD
   /**
    * If `areas` is null/undefined, range state remain.
+=======
+  /**
+   * If `areas` is null/undefined, range state remain.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -84640,8 +91289,13 @@ function (_super) {
       return generateBrushOption(this.option, area);
     }, this);
   };
+<<<<<<< HEAD
   /**
    * Set the current painting brush option.
+=======
+  /**
+   * Set the current painting brush option.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -84796,6 +91450,7 @@ function install$B(registers) {
       brushModel.setAreas(payload.areas);
     });
   });
+<<<<<<< HEAD
   /**
    * payload: {
    *      brushComponents: [
@@ -84816,6 +91471,28 @@ function install$B(registers) {
    *          ...
    *      ]
    * }
+=======
+  /**
+   * payload: {
+   *      brushComponents: [
+   *          {
+   *              brushId,
+   *              brushIndex,
+   *              brushName,
+   *              series: [
+   *                  {
+   *                      seriesId,
+   *                      seriesIndex,
+   *                      seriesName,
+   *                      rawIndices: [21, 34, ...]
+   *                  },
+   *                  ...
+   *              ]
+   *          },
+   *          ...
+   *      ]
+   * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   registers.registerAction({
@@ -85040,8 +91717,13 @@ function (_super) {
     _this.layoutMode = 'box';
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85050,8 +91732,13 @@ function (_super) {
 
     this._initData();
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85077,40 +91764,65 @@ function (_super) {
 
     this.option.currentIndex = currentIndex;
   };
+<<<<<<< HEAD
   /**
    * @return {number} currentIndex
+=======
+  /**
+   * @return {number} currentIndex
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   TimelineModel.prototype.getCurrentIndex = function () {
     return this.option.currentIndex;
   };
+<<<<<<< HEAD
   /**
    * @return {boolean}
+=======
+  /**
+   * @return {boolean}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   TimelineModel.prototype.isIndexMax = function () {
     return this.getCurrentIndex() >= this._data.count() - 1;
   };
+<<<<<<< HEAD
   /**
    * @param {boolean} state true: play, false: stop
+=======
+  /**
+   * @param {boolean} state true: play, false: stop
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   TimelineModel.prototype.setPlayState = function (state) {
     this.option.autoPlay = !!state;
   };
+<<<<<<< HEAD
   /**
    * @return {boolean} true: play, false: stop
+=======
+  /**
+   * @return {boolean} true: play, false: stop
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   TimelineModel.prototype.getPlayState = function () {
     return !!this.option.autoPlay;
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85156,9 +91868,15 @@ function (_super) {
   TimelineModel.prototype.getData = function () {
     return this._data;
   };
+<<<<<<< HEAD
   /**
    * @public
    * @return {Array.<string>} categoreis
+=======
+  /**
+   * @public
+   * @return {Array.<string>} categoreis
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85169,8 +91887,13 @@ function (_super) {
   };
 
   TimelineModel.type = 'timeline';
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   TimelineModel.defaultOption = {
@@ -85214,8 +91937,13 @@ function (_super) {
   }
 
   SliderTimelineModel.type = 'timeline.slider';
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   SliderTimelineModel.defaultOption = inheritDefaultOption(TimelineModel.defaultOption, {
@@ -85335,8 +92063,13 @@ function (_super) {
   return TimelineView;
 }(ComponentView);
 
+<<<<<<< HEAD
 /**
  * Extend axis 2d
+=======
+/**
+ * Extend axis 2d
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var TimelineAxis =
@@ -85350,8 +92083,13 @@ function (_super) {
     _this.type = axisType || 'value';
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85359,8 +92097,13 @@ function (_super) {
     // Force override
     return this.model.getModel('label');
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85389,8 +92132,13 @@ function (_super) {
   SliderTimelineView.prototype.init = function (ecModel, api) {
     this.api = api;
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85432,8 +92180,13 @@ function (_super) {
 
     this._updateTicksStatus();
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85442,8 +92195,13 @@ function (_super) {
 
     this.group.removeAll();
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -85975,9 +92733,15 @@ function makeControlIcon(timelineModel, objPath, rect, opts) {
 
   return icon;
 }
+<<<<<<< HEAD
 /**
  * Create symbol or update symbol
  * opt: basic position and event handlers
+=======
+/**
+ * Create symbol or update symbol
+ * opt: basic position and event handlers
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -86233,15 +92997,25 @@ function (_super) {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.type = MarkerModel.type;
+<<<<<<< HEAD
     /**
      * If marker model is created by self from series
+=======
+    /**
+     * If marker model is created by self from series
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this.createdBySelf = false;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @overrite
+=======
+  /**
+   * @overrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -86265,8 +93039,13 @@ function (_super) {
     var hostSeries = this.__hostSeries;
     return this.getShallow('animation') && hostSeries && hostSeries.isAnimationEnabled();
   };
+<<<<<<< HEAD
   /**
    * @overrite
+=======
+  /**
+   * @overrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -86439,10 +93218,17 @@ var markerTypeCalculator = {
   average: curry(markerTypeCalculatorWithExtent, 'average'),
   median: curry(markerTypeCalculatorWithExtent, 'median')
 };
+<<<<<<< HEAD
 /**
  * Transform markPoint data item to format used in List by do the following
  * 1. Calculate statistic like `max`, `min`, `average`
  * 2. Convert `item.xAxis`, `item.yAxis` to `item.coord` array
+=======
+/**
+ * Transform markPoint data item to format used in List by do the following
+ * 1. Calculate statistic like `max`, `min`, `average`
+ * 2. Convert `item.xAxis`, `item.yAxis` to `item.coord` array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function dataTransform(seriesModel, item) {
@@ -86515,9 +93301,15 @@ function dataDimToCoordDim(seriesModel, dataDim) {
   var dimItem = seriesModel.getData().getDimensionInfo(dataDim);
   return dimItem && dimItem.coordDim;
 }
+<<<<<<< HEAD
 /**
  * Filter data which is out of coordinateSystem range
  * [dataFilter description]
+=======
+/**
+ * Filter data which is out of coordinateSystem range
+ * [dataFilter description]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -87722,9 +94514,15 @@ function (_super) {
         potentialData.push(seriesModel.name);
       }
     });
+<<<<<<< HEAD
     /**
      * @type {Array.<string>}
      * @private
+=======
+    /**
+     * @type {Array.<string>}
+     * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this._availableNames = availableNames; // If legend.data is not specified in option, use availableNames as data,
@@ -87748,9 +94546,15 @@ function (_super) {
       legendNameMap.set(dataItem.name, true);
       return new Model(dataItem, this, this.ecModel);
     }, this);
+<<<<<<< HEAD
     /**
      * @type {Array.<module:echarts/model/Model>}
      * @private
+=======
+    /**
+     * @type {Array.<module:echarts/model/Model>}
+     * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     this._data = filter(legendData, function (item) {
@@ -87930,24 +94734,39 @@ function (_super) {
     this.group.add(this._selectorGroup = new Group$2());
     this._isFirstRender = true;
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   LegendView.prototype.getContentGroup = function () {
     return this._contentGroup;
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   LegendView.prototype.getSelectorGroup = function () {
     return this._selectorGroup;
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88035,9 +94854,15 @@ function (_super) {
         var data = seriesModel.getData();
         var lineVisualStyle = data.getVisual('legendLineStyle') || {};
         var legendIcon = data.getVisual('legendIcon');
+<<<<<<< HEAD
         /**
          * `data.getVisual('style')` may be the color from the register
          * in series. For example, for line series,
+=======
+        /**
+         * `data.getVisual('style')` may be the color from the register
+         * in series. For example, for line series,
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
         var style = data.getVisual('style');
@@ -88267,8 +95092,13 @@ function (_super) {
       return this.group.getBoundingRect();
     }
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88282,9 +95112,15 @@ function (_super) {
 }(ComponentView);
 
 function getLegendStyle(iconType, legendItemModel, lineVisualStyle, itemVisualStyle, drawType, isSelected, api) {
+<<<<<<< HEAD
   /**
    * Use series style if is inherit;
    * elsewise, use legend style
+=======
+  /**
+   * Use series style if is inherit;
+   * elsewise, use legend style
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   function handleCommonProps(style, visualStyle) {
     // If lineStyle.width is 'auto', it is set to be 2 if series has border
@@ -88305,24 +95141,41 @@ function getLegendStyle(iconType, legendItemModel, lineVisualStyle, itemVisualSt
   itemStyle.decal = !decalStyle || decalStyle === 'inherit' ? itemVisualStyle.decal : createOrUpdatePatternFromDecal(decalStyle, api);
 
   if (itemStyle.fill === 'inherit') {
+<<<<<<< HEAD
     /**
      * Series with visualDrawType as 'stroke' should have
      * series stroke as legend fill
+=======
+    /**
+     * Series with visualDrawType as 'stroke' should have
+     * series stroke as legend fill
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     itemStyle.fill = itemVisualStyle[drawType];
   }
 
   if (itemStyle.stroke === 'inherit') {
+<<<<<<< HEAD
     /**
      * icon type with "emptyXXX" should use fill color
      * in visual style
+=======
+    /**
+     * icon type with "emptyXXX" should use fill color
+     * in visual style
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     itemStyle.stroke = itemVisualStyle[iconBrushType];
   }
 
   if (itemStyle.opacity === 'inherit') {
+<<<<<<< HEAD
     /**
      * Use lineStyle.opacity if drawType is stroke
+=======
+    /**
+     * Use lineStyle.opacity if drawType is stroke
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     itemStyle.opacity = (drawType === 'fill' ? itemVisualStyle : lineVisualStyle).opacity;
   }
@@ -88339,10 +95192,17 @@ function getLegendStyle(iconType, legendItemModel, lineVisualStyle, itemVisualSt
 
   if (!isSelected) {
     var borderWidth = legendItemModel.get('inactiveBorderWidth');
+<<<<<<< HEAD
     /**
      * Since stroke is set to be inactiveBorderColor, it may occur that
      * there is no border in series but border in legend, so we need to
      * use border only when series has border if is set to be auto
+=======
+    /**
+     * Since stroke is set to be inactiveBorderColor, it may occur that
+     * there is no border in series but border in legend, so we need to
+     * use border only when series has border if is set to be auto
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var visualHasBorder = itemStyle[iconBrushType];
@@ -88448,6 +95308,7 @@ function dispatchDownplayAction(seriesName, dataName, api, excludeSeriesId) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -88465,6 +95326,25 @@ function dispatchDownplayAction(seriesName, dataName, api, excludeSeriesId) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 function legendFilter(ecModel) {
   var legendModels = ecModel.findComponents({
@@ -88533,16 +95413,26 @@ function legendSelectActionHandler(methodName, payload, ecModel) {
 }
 
 function installLegendAction(registers) {
+<<<<<<< HEAD
   /**
    * @event legendToggleSelect
    * @type {Object}
    * @property {string} type 'legendToggleSelect'
    * @property {string} [from]
    * @property {string} name Series name or data item name
+=======
+  /**
+   * @event legendToggleSelect
+   * @type {Object}
+   * @property {string} type 'legendToggleSelect'
+   * @property {string} [from]
+   * @property {string} name Series name or data item name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   registers.registerAction('legendToggleSelect', 'legendselectchanged', curry(legendSelectActionHandler, 'toggleSelected'));
   registers.registerAction('legendAllSelect', 'legendselectall', curry(legendSelectActionHandler, 'allSelect'));
   registers.registerAction('legendInverseSelect', 'legendinverseselect', curry(legendSelectActionHandler, 'inverseSelect'));
+<<<<<<< HEAD
   /**
    * @event legendSelect
    * @type {Object}
@@ -88556,6 +95446,21 @@ function installLegendAction(registers) {
    * @type {Object}
    * @property {string} type 'legendUnSelect'
    * @property {string} name Series name or data item name
+=======
+  /**
+   * @event legendSelect
+   * @type {Object}
+   * @property {string} type 'legendSelect'
+   * @property {string} name Series name or data item name
+   */
+
+  registers.registerAction('legendSelect', 'legendselected', curry(legendSelectActionHandler, 'select'));
+  /**
+   * @event legendUnSelect
+   * @type {Object}
+   * @property {string} type 'legendUnSelect'
+   * @property {string} name Series name or data item name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
   registers.registerAction('legendUnSelect', 'legendunselected', curry(legendSelectActionHandler, 'unSelect'));
@@ -88582,8 +95487,13 @@ function (_super) {
     _this.type = ScrollableLegendModel.type;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @param {number} scrollDataIndex
+=======
+  /**
+   * @param {number} scrollDataIndex
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88598,8 +95508,13 @@ function (_super) {
 
     mergeAndNormalizeLayoutParams$1(this, option, inputPositionParams);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88668,8 +95583,13 @@ function (_super) {
 
     this.group.add(this._controllerGroup = new Group$3());
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88682,8 +95602,13 @@ function (_super) {
 
     this._containerGroup.__rectSize = null;
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88729,8 +95654,13 @@ function (_super) {
       controllerGroup.add(icon);
     }
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -88897,6 +95827,7 @@ function (_super) {
       total: total
     }));
   };
+<<<<<<< HEAD
   /**
    *  contentPosition: Array.<number>, null when data item not found.
    *  pageIndex: number, null when data item not found.
@@ -88904,6 +95835,15 @@ function (_super) {
    *  pagePrevDataIndex: number, null when no previous page.
    *  pageNextDataIndex: number, null when no next page.
    * }
+=======
+  /**
+   *  contentPosition: Array.<number>, null when data item not found.
+   *  pageIndex: number, null when data item not found.
+   *  pageCount: number, always be a number, can be 0.
+   *  pagePrevDataIndex: number, null when no previous page.
+   *  pageNextDataIndex: number, null when no next page.
+   * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -89065,6 +96005,7 @@ function (_super) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -89089,6 +96030,32 @@ function installScrollableLegendAction(registers) {
    * @type {Object}
    * @property {string} type 'legendScroll'
    * @property {string} scrollDataIndex
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
+function installScrollableLegendAction(registers) {
+  /**
+   * @event legendScroll
+   * @type {Object}
+   * @property {string} type 'legendScroll'
+   * @property {string} scrollDataIndex
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   registers.registerAction('legendScroll', 'legendscroll', function (payload, ecModel) {
     var scrollDataIndex = payload.scrollDataIndex;
@@ -89215,8 +96182,13 @@ function createCoordSysRecord(api, coordSysModel) {
   });
   return coordSysRecord;
 }
+<<<<<<< HEAD
 /**
  * This action will be throttled.
+=======
+/**
+ * This action will be throttled.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -89236,8 +96208,13 @@ function dispatchAction$1(api, batch) {
 function containsPoint(coordSysModel, e, x, y) {
   return coordSysModel.coordinateSystem.containPoint([x, y]);
 }
+<<<<<<< HEAD
 /**
  * Merge roamController settings when multiple dataZooms share one roamController.
+=======
+/**
+ * Merge roamController settings when multiple dataZooms share one roamController.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 
@@ -90273,8 +97250,13 @@ function (_super) {
     : value.toFixed(Math.min(labelPrecision, 20));
     return isFunction(labelFormatter) ? labelFormatter(value, valueStr) : isString(labelFormatter) ? labelFormatter.replace('{value}', valueStr) : valueStr;
   };
+<<<<<<< HEAD
   /**
    * @param showOrHide true: show, false: hide
+=======
+  /**
+   * @param showOrHide true: show, false: hide
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90415,8 +97397,13 @@ function (_super) {
       height: size[1]
     });
   };
+<<<<<<< HEAD
   /**
    * This action will be throttled.
+=======
+  /**
+   * This action will be throttled.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90489,8 +97476,13 @@ function install$M(registers) {
 }
 
 var visualDefault = {
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   get: function (visualType, key, isCategory) {
     var value = clone((defaultOption$1[visualType] || {})[key]);
@@ -90554,8 +97546,13 @@ function (_super) {
       type: 'box',
       ignoreSize: true
     };
+<<<<<<< HEAD
     /**
      * [lowerBound, upperBound]
+=======
+    /**
+     * [lowerBound, upperBound]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this.dataBound = [-Infinity, Infinity];
@@ -90567,8 +97564,13 @@ function (_super) {
   VisualMapModel.prototype.init = function (option, parentModel, ecModel) {
     this.mergeDefaultAndTheme(option, ecModel);
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90579,8 +97581,13 @@ function (_super) {
     this.resetItemSize();
     this.completeVisualOption();
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90590,17 +97597,28 @@ function (_super) {
     this.controllerVisuals = createVisualMappings(this.option.controller, stateList, supplementVisualOption);
     this.targetVisuals = createVisualMappings(this.option.target, stateList, supplementVisualOption);
   };
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   VisualMapModel.prototype.getItemSymbol = function () {
     return null;
   };
+<<<<<<< HEAD
   /**
    * @protected
    * @return {Array.<number>} An array of series indices.
+=======
+  /**
+   * @protected
+   * @return {Array.<number>} An array of series indices.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90618,8 +97636,13 @@ function (_super) {
 
     return seriesIndices;
   };
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90632,8 +97655,13 @@ function (_super) {
       }
     }, this);
   };
+<<<<<<< HEAD
   /**
    * @pubilc
+=======
+  /**
+   * @pubilc
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90644,6 +97672,7 @@ function (_super) {
     });
     return is;
   };
+<<<<<<< HEAD
   /**
    * @example
    * this.formatValueText(someVal); // format single numeric value to text.
@@ -90656,6 +97685,20 @@ function (_super) {
    * @param isCategory Only available when value is number.
    * @param edgeSymbols Open-close symbol when value is interval.
    * @protected
+=======
+  /**
+   * @example
+   * this.formatValueText(someVal); // format single numeric value to text.
+   * this.formatValueText(someVal, true); // format single category value to text.
+   * this.formatValueText([min, max]); // format numeric min-max to text.
+   * this.formatValueText([this.dataBound[0], max]); // using data lower bound.
+   * this.formatValueText([min, this.dataBound[1]]); // using data upper bound.
+   *
+   * @param value Real value, or this.dataBound[0 or 1].
+   * @param isCategory Only available when value is number.
+   * @param edgeSymbols Open-close symbol when value is interval.
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90698,8 +97741,13 @@ function (_super) {
       return val === dataBound[0] ? 'min' : val === dataBound[1] ? 'max' : (+val).toFixed(Math.min(precision, 20));
     }
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90711,11 +97759,19 @@ function (_super) {
     var extent = asc$2([thisOption.min, thisOption.max]);
     this._dataExtent = extent;
   };
+<<<<<<< HEAD
   /**
    * PENDING:
    * delete this method if no outer usage.
    *
    * Return  Concrete dimension. If null/undefined is returned, no dimension is used.
+=======
+  /**
+   * PENDING:
+   * delete this method if no outer usage.
+   *
+   * Return  Concrete dimension. If null/undefined is returned, no dimension is used.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
   // getDataDimension(data: SeriesData) {
   //     const optDim = this.option.dimension;
@@ -90880,9 +97936,15 @@ function (_super) {
   VisualMapModel.prototype.isCategory = function () {
     return !!this.option.categories;
   };
+<<<<<<< HEAD
   /**
    * @public
    * @abstract
+=======
+  /**
+   * @public
+   * @abstract
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90891,15 +97953,22 @@ function (_super) {
   VisualMapModel.prototype.getSelected = function () {
     return null;
   };
+<<<<<<< HEAD
   /**
    * @public
    * @abstract
+=======
+  /**
+   * @public
+   * @abstract
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   VisualMapModel.prototype.getValueState = function (value) {
     return null;
   };
+<<<<<<< HEAD
   /**
    * FIXME
    * Do not publish to thirt-part-dev temporarily
@@ -90914,6 +97983,22 @@ function (_super) {
    * @return {Object} visualMeta
    *        should includes {stops, outerColors}
    *        outerColor means [colorBeyondMinValue, colorBeyondMaxValue]
+=======
+  /**
+   * FIXME
+   * Do not publish to thirt-part-dev temporarily
+   * util the interface is stable. (Should it return
+   * a function but not visual meta?)
+   *
+   * @pubilc
+   * @abstract
+   * @param getColorVisual
+   *        params: value, valueState
+   *        return: color
+   * @return {Object} visualMeta
+   *        should includes {stops, outerColors}
+   *        outerColor means [colorBeyondMinValue, colorBeyondMaxValue]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90968,8 +98053,13 @@ function (_super) {
     _this.type = ContinuousModel.type;
     return _this;
   }
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90984,9 +98074,15 @@ function (_super) {
 
     this._resetRange();
   };
+<<<<<<< HEAD
   /**
    * @protected
    * @override
+=======
+  /**
+   * @protected
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -90997,8 +98093,13 @@ function (_super) {
     (itemSize[0] == null || isNaN(itemSize[0])) && (itemSize[0] = DEFAULT_BAR_BOUND[0]);
     (itemSize[1] == null || isNaN(itemSize[1])) && (itemSize[1] = DEFAULT_BAR_BOUND[1]);
   };
+<<<<<<< HEAD
   /**
    * @private
+=======
+  /**
+   * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91020,9 +98121,15 @@ function (_super) {
       range[1] = Math.min(range[1], dataExtent[1]);
     }
   };
+<<<<<<< HEAD
   /**
    * @protected
    * @override
+=======
+  /**
+   * @protected
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91037,8 +98144,13 @@ function (_super) {
       }
     }, this);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91047,8 +98159,13 @@ function (_super) {
 
     this._resetRange();
   };
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91062,8 +98179,13 @@ function (_super) {
     dataInterval[1] < dataExtent[0] && (dataInterval[1] = dataExtent[0]);
     return dataInterval;
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91090,8 +98212,13 @@ function (_super) {
     }, this);
     return result;
   };
+<<<<<<< HEAD
   /**
    * @implement
+=======
+  /**
+   * @implement
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91225,8 +98352,13 @@ function (_super) {
     this.ecModel = ecModel;
     this.api = api;
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91241,8 +98373,13 @@ function (_super) {
 
     this.doRender(visualMapModel, ecModel, api, payload);
   };
+<<<<<<< HEAD
   /**
    * @protected
+=======
+  /**
+   * @protected
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91266,6 +98403,7 @@ function (_super) {
       }
     }));
   };
+<<<<<<< HEAD
   /**
    * @protected
    * @param targetValue can be Infinity or -Infinity
@@ -91274,6 +98412,16 @@ function (_super) {
    * @param opts.forceState Specify state, instead of using getValueState method.
    * @param opts.convertOpacityToAlpha For color gradient in controller widget.
    * @return {*} Visual value.
+=======
+  /**
+   * @protected
+   * @param targetValue can be Infinity or -Infinity
+   * @param visualCluster Only can be 'color' 'opacity' 'symbol' 'symbolSize'
+   * @param opts
+   * @param opts.forceState Specify state, instead of using getValueState method.
+   * @param opts.convertOpacityToAlpha For color gradient in controller widget.
+   * @return {*} Visual value.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -91329,11 +98477,19 @@ function (_super) {
 }(ComponentView);
 
 var paramsSet = [['left', 'right', 'width'], ['top', 'bottom', 'height']];
+<<<<<<< HEAD
 /**
  * @param visualMapModel
  * @param api
  * @param itemSize always [short, long]
  * @return {string} 'left' or 'right' or 'top' or 'bottom'
+=======
+/**
+ * @param visualMapModel
+ * @param api
+ * @param itemSize always [short, long]
+ * @return {string} 'left' or 'right' or 'top' or 'bottom'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 function getItemAlign(visualMapModel, api, itemSize) {
@@ -91363,9 +98519,15 @@ function getItemAlign(visualMapModel, api, itemSize) {
   var rect = getLayoutRect(layoutInput, ecSize, modelOption.padding);
   return reals[(rect.margin[rParam[2]] || 0) + rect[rParam[0]] + rect[rParam[1]] * 0.5 < ecSize[rParam[1]] * 0.5 ? 0 : 1];
 }
+<<<<<<< HEAD
 /**
  * Prepare dataIndex for outside usage, where dataIndex means rawIndex, and
  * dataIndexInside means filtered index.
+=======
+/**
+ * Prepare dataIndex for outside usage, where dataIndex means rawIndex, and
+ * dataIndexInside means filtered index.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 // TODO: TYPE more specified payload types.
 
@@ -91675,11 +98837,19 @@ function (_super) {
     var sizeExtent = [0, visualMapModel.itemSize[1]];
     this._handleEnds = [linearMap$2(dataInterval[0], dataExtent, sizeExtent, true), linearMap$2(dataInterval[1], dataExtent, sizeExtent, true)];
   };
+<<<<<<< HEAD
   /**
    * @private
    * @param {(number|string)} handleIndex 0 or 1 or 'all'
    * @param {number} dx
    * @param {number} dy
+=======
+  /**
+   * @private
+   * @param {(number|string)} handleIndex 0 or 1 or 'all'
+   * @param {number} dx
+   * @param {number} dy
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92067,8 +99237,13 @@ function (_super) {
       batch: batch
     });
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92077,8 +99252,13 @@ function (_super) {
 
     this._clearHoverLinkToSeries();
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92152,6 +99332,7 @@ function getCursor$1(orient) {
  * AUTO-GENERATED FILE. DO NOT MODIFY.
  */
 
+<<<<<<< HEAD
 /*
 * Licensed to the Apache Software Foundation (ASF) under one
 * or more contributor license agreements.  See the NOTICE file
@@ -92169,6 +99350,25 @@ function getCursor$1(orient) {
 * KIND, either express or implied.  See the License for the
 * specific language governing permissions and limitations
 * under the License.
+=======
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
 */
 var visualMapActionInfo = {
   type: 'selectDataRange',
@@ -92327,9 +99527,15 @@ function (_super) {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
     _this.type = PiecewiseModel.type;
+<<<<<<< HEAD
     /**
      * The order is always [low, ..., high].
      * [{text: string, interval: Array.<number>}, ...]
+=======
+    /**
+     * The order is always [low, ..., high].
+     * [{text: string, interval: Array.<number>}, ...]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     _this._pieceList = [];
@@ -92371,9 +99577,15 @@ function (_super) {
       }
     });
   };
+<<<<<<< HEAD
   /**
    * @protected
    * @override
+=======
+  /**
+   * @protected
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92441,32 +99653,52 @@ function (_super) {
     } // thisOption.selectedMode === 'multiple', default: all selected.
 
   };
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   PiecewiseModel.prototype.getItemSymbol = function () {
     return this.get('itemSymbol');
   };
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   PiecewiseModel.prototype.getSelectedMapKey = function (piece) {
     return this._mode === 'categories' ? piece.value + '' : piece.index + '';
   };
+<<<<<<< HEAD
   /**
    * @public
+=======
+  /**
+   * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   PiecewiseModel.prototype.getPieceList = function () {
     return this._pieceList;
   };
+<<<<<<< HEAD
   /**
    * @return {string}
+=======
+  /**
+   * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92474,16 +99706,26 @@ function (_super) {
     var option = this.option;
     return option.pieces && option.pieces.length > 0 ? 'pieces' : this.option.categories ? 'categories' : 'splitNumber';
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
   PiecewiseModel.prototype.setSelected = function (selected) {
     this.option.selected = clone(selected);
   };
+<<<<<<< HEAD
   /**
    * @override
+=======
+  /**
+   * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92491,9 +99733,15 @@ function (_super) {
     var index = VisualMapping.findPieceIndex(value, this._pieceList);
     return index != null ? this.option.selected[this.getSelectedMapKey(this._pieceList[index])] ? 'inRange' : 'outOfRange' : 'outOfRange';
   };
+<<<<<<< HEAD
   /**
    * @public
    * @param pieceIndex piece index in visualMapModel.getPieceList()
+=======
+  /**
+   * @public
+   * @param pieceIndex piece index in visualMapModel.getPieceList()
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92515,10 +99763,17 @@ function (_super) {
     }, this);
     return result;
   };
+<<<<<<< HEAD
   /**
    * @private
    * @param piece piece.value or piece.interval is required.
    * @return  Can be Infinity or -Infinity
+=======
+  /**
+   * @private
+   * @param piece piece.value or piece.interval is required.
+   * @return  Can be Infinity or -Infinity
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 
@@ -92629,10 +99884,17 @@ function (_super) {
   });
   return PiecewiseModel;
 }(VisualMapModel);
+<<<<<<< HEAD
 /**
  * Key is this._mode
  * @type {Object}
  * @this {module:echarts/component/viusalMap/PiecewiseMode}
+=======
+/**
+ * Key is this._mode
+ * @type {Object}
+ * @this {module:echarts/component/viusalMap/PiecewiseMode}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
  */
 
 var resetMethods = {
@@ -92896,9 +100158,15 @@ function (_super) {
     }));
     group.add(itemGroup);
   };
+<<<<<<< HEAD
   /**
    * @private
    * @return {Object} {peiceList, endsText} The order is the same as screen pixel order.
+=======
+  /**
+   * @private
+   * @return {Object} {peiceList, endsText} The order is the same as screen pixel order.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
    */
 
 

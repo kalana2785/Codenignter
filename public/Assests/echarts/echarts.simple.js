@@ -24,6 +24,7 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.echarts = {}));
 }(this, (function (exports) { 'use strict';
 
+<<<<<<< HEAD
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
 
@@ -53,6 +54,37 @@
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+=======
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+    /* global Reflect, Promise */
+
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+
+    function __extends(d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     }
 
     var Browser = (function () {
@@ -7154,12 +7186,21 @@
     function _trim(str) {
       return str.replace(/^\s+|\s+$/g, '');
     }
+<<<<<<< HEAD
     /**
      * Linear mapping a value from domain to range
      * @param  val
      * @param  domain Domain extent domain[0] can be bigger than domain[1]
      * @param  range  Range extent range[0] can be bigger than range[1]
      * @param  clamp Default to be false
+=======
+    /**
+     * Linear mapping a value from domain to range
+     * @param  val
+     * @param  domain Domain extent domain[0] can be bigger than domain[1]
+     * @param  range  Range extent range[0] can be bigger than range[1]
+     * @param  clamp Default to be false
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -7206,9 +7247,15 @@
 
       return (val - d0) / subDomain * subRange + r0;
     }
+<<<<<<< HEAD
     /**
      * Convert a percent string to absolute number.
      * Returns NaN if percent is not a valid string or number
+=======
+    /**
+     * Convert a percent string to absolute number.
+     * Returns NaN if percent is not a valid string or number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function parsePercent$1(percent, all) {
@@ -7250,9 +7297,15 @@
       x = (+x).toFixed(precision);
       return returnStr ? x : +x;
     }
+<<<<<<< HEAD
     /**
      * Inplacd asc sort arr.
      * The input arr will be modified.
+=======
+    /**
+     * Inplacd asc sort arr.
+     * The input arr will be modified.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function asc(arr) {
@@ -7261,8 +7314,13 @@
       });
       return arr;
     }
+<<<<<<< HEAD
     /**
      * Get precision.
+=======
+    /**
+     * Get precision.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getPrecision(val) {
@@ -7293,8 +7351,13 @@
 
       return getPrecisionSafe(val);
     }
+<<<<<<< HEAD
     /**
      * Get precision with slow but safe method
+=======
+    /**
+     * Get precision with slow but safe method
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getPrecisionSafe(val) {
@@ -7308,8 +7371,13 @@
       var decimalPartLen = dotIndex < 0 ? 0 : significandPartLen - 1 - dotIndex;
       return Math.max(0, decimalPartLen - exp);
     }
+<<<<<<< HEAD
     /**
      * Minimal dicernible data precisioin according to a single pixel.
+=======
+    /**
+     * Minimal dicernible data precisioin according to a single pixel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getPixelPrecision(dataExtent, pixelExtent) {
@@ -7321,6 +7389,7 @@
       var precision = Math.min(Math.max(-dataQuantity + sizeQuantity, 0), 20);
       return !isFinite(precision) ? 20 : precision;
     }
+<<<<<<< HEAD
     /**
      * Get a data of given precision, assuring the sum of percentages
      * in valueList is 1.
@@ -7331,6 +7400,18 @@
      * @param idx index of the data to be processed in valueList
      * @param precision integer number showing digits of precision
      * @return percent ranging from 0 to 100
+=======
+    /**
+     * Get a data of given precision, assuring the sum of percentages
+     * in valueList is 1.
+     * The largest remainder method is used.
+     * https://en.wikipedia.org/wiki/Largest_remainder_method
+     *
+     * @param valueList a list of all data
+     * @param idx index of the data to be processed in valueList
+     * @param precision integer number showing digits of precision
+     * @return percent ranging from 0 to 100
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getPercentWithPrecision(valueList, idx, precision) {
@@ -7341,6 +7422,7 @@
       var seats = getPercentSeats(valueList, precision);
       return seats[idx] || 0;
     }
+<<<<<<< HEAD
     /**
      * Get a data of given precision, assuring the sum of percentages
      * in valueList is 1.
@@ -7350,6 +7432,17 @@
      * @param valueList a list of all data
      * @param precision integer number showing digits of precision
      * @return {Array<number>}
+=======
+    /**
+     * Get a data of given precision, assuring the sum of percentages
+     * in valueList is 1.
+     * The largest remainder method is used.
+     * https://en.wikipedia.org/wiki/Largest_remainder_method
+     *
+     * @param valueList a list of all data
+     * @param precision integer number showing digits of precision
+     * @return {Array<number>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getPercentSeats(valueList, precision) {
@@ -7399,9 +7492,15 @@
         return seat / digits;
       });
     }
+<<<<<<< HEAD
     /**
      * Solve the floating point adding problem like 0.1 + 0.2 === 0.30000000000000004
      * See <http://0.30000000000000004.com/>
+=======
+    /**
+     * Solve the floating point adding problem like 0.1 + 0.2 === 0.30000000000000004
+     * See <http://0.30000000000000004.com/>
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function addSafe(val0, val1) {
@@ -7414,17 +7513,28 @@
     } // Number.MAX_SAFE_INTEGER, ie do not support.
 
     var MAX_SAFE_INTEGER = 9007199254740991;
+<<<<<<< HEAD
     /**
      * To 0 - 2 * PI, considering negative radian.
+=======
+    /**
+     * To 0 - 2 * PI, considering negative radian.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function remRadian(radian) {
       var pi2 = Math.PI * 2;
       return (radian % pi2 + pi2) % pi2;
     }
+<<<<<<< HEAD
     /**
      * @param {type} radian
      * @return {boolean}
+=======
+    /**
+     * @param {type} radian
+     * @return {boolean}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function isRadianAroundZero(val) {
@@ -7433,6 +7543,7 @@
 
     var TIME_REG = /^(?:(\d{4})(?:[-\/](\d{1,2})(?:[-\/](\d{1,2})(?:[T ](\d{1,2})(?::(\d{1,2})(?::(\d{1,2})(?:[.,](\d+))?)?)?(Z|[\+\-]\d\d:?\d\d)?)?)?)?)?$/; // jshint ignore:line
 
+<<<<<<< HEAD
     /**
      * @param value valid type: number | string | Date, otherwise return `new Date(NaN)`
      *   These values can be accepted:
@@ -7448,6 +7559,23 @@
      *     '2009/6/12 2:00', '2009/6/12 2:05:08', '2009/6/12 2:05:08.123'
      *   + a timestamp, which represent a time in UTC.
      * @return date Never be null/undefined. If invalid, return `new Date(NaN)`.
+=======
+    /**
+     * @param value valid type: number | string | Date, otherwise return `new Date(NaN)`
+     *   These values can be accepted:
+     *   + An instance of Date, represent a time in its own time zone.
+     *   + Or string in a subset of ISO 8601, only including:
+     *     + only year, month, date: '2012-03', '2012-03-01', '2012-03-01 05', '2012-03-01 05:06',
+     *     + separated with T or space: '2012-03-01T12:22:33.123', '2012-03-01 12:22:33.123',
+     *     + time zone: '2012-03-01T12:22:33Z', '2012-03-01T12:22:33+8000', '2012-03-01T12:22:33-05:00',
+     *     all of which will be treated as local time if time zone is not specified
+     *     (see <https://momentjs.com/>).
+     *   + Or other string format, including (all of which will be treated as local time):
+     *     '2012', '2012-3-1', '2012/3/1', '2012/03/01',
+     *     '2009/6/12 2:00', '2009/6/12 2:05:08', '2009/6/12 2:05:08.123'
+     *   + a timestamp, which represent a time in UTC.
+     * @return date Never be null/undefined. If invalid, return `new Date(NaN)`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function parseDate(value) {
@@ -7493,22 +7621,39 @@
 
       return new Date(Math.round(value));
     }
+<<<<<<< HEAD
     /**
      * Quantity of a number. e.g. 0.1, 1, 10, 100
      *
      * @param val
      * @return
+=======
+    /**
+     * Quantity of a number. e.g. 0.1, 1, 10, 100
+     *
+     * @param val
+     * @return
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function quantity(val) {
       return Math.pow(10, quantityExponent(val));
     }
+<<<<<<< HEAD
     /**
      * Exponent of the quantity of a number
      * e.g., 1234 equals to 1.234*10^3, so quantityExponent(1234) is 3
      *
      * @param val non-negative value
      * @return
+=======
+    /**
+     * Exponent of the quantity of a number
+     * e.g., 1234 equals to 1.234*10^3, so quantityExponent(1234) is 3
+     *
+     * @param val non-negative value
+     * @return
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function quantityExponent(val) {
@@ -7517,10 +7662,17 @@
       }
 
       var exp = Math.floor(Math.log(val) / Math.LN10);
+<<<<<<< HEAD
       /**
        * exp is expected to be the rounded-down result of the base-10 log of val.
        * But due to the precision loss with Math.log(val), we need to restore it
        * using 10^exp to make sure we can get val back from exp. #11249
+=======
+      /**
+       * exp is expected to be the rounded-down result of the base-10 log of val.
+       * But due to the precision loss with Math.log(val), we need to restore it
+       * using 10^exp to make sure we can get val back from exp. #11249
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
       if (val / Math.pow(10, exp) >= 10) {
@@ -7529,6 +7681,7 @@
 
       return exp;
     }
+<<<<<<< HEAD
     /**
      * find a “nice” number approximately equal to x. Round the number if round = true,
      * take ceiling if round = false. The primary observation is that the “nicest”
@@ -7539,6 +7692,18 @@
      * @param  val Non-negative value.
      * @param  round
      * @return Niced number
+=======
+    /**
+     * find a “nice” number approximately equal to x. Round the number if round = true,
+     * take ceiling if round = false. The primary observation is that the “nicest”
+     * numbers in decimal are 1, 2, and 5, and all power-of-ten multiples of these numbers.
+     *
+     * See "Nice Numbers for Graph Labels" of Graphic Gems.
+     *
+     * @param  val Non-negative value.
+     * @param  round
+     * @return Niced number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function nice(val, round) {
@@ -7579,11 +7744,19 @@
 
       return exponent >= -20 ? +val.toFixed(exponent < 0 ? -exponent : 0) : val;
     }
+<<<<<<< HEAD
     /**
      * This code was copied from "d3.js"
      * <https://github.com/d3/d3/blob/9cc9a875e636a1dcf36cc1e07bdf77e1ad6e2c74/src/arrays/quantile.js>.
      * See the license statement at the head of this file.
      * @param ascArr
+=======
+    /**
+     * This code was copied from "d3.js"
+     * <https://github.com/d3/d3/blob/9cc9a875e636a1dcf36cc1e07bdf77e1ad6e2c74/src/arrays/quantile.js>.
+     * See the license statement at the head of this file.
+     * @param ascArr
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function quantile(ascArr, p) {
@@ -7593,6 +7766,7 @@
       var e = H - h;
       return e ? v + e * (ascArr[h] - v) : v;
     }
+<<<<<<< HEAD
     /**
      * Order intervals asc, and split them when overlap.
      * expect(numberUtil.reformIntervals([
@@ -7614,6 +7788,29 @@
      * @param list, where `close` mean open or close
      *        of the interval, and Infinity can be used.
      * @return The origin list, which has been reformed.
+=======
+    /**
+     * Order intervals asc, and split them when overlap.
+     * expect(numberUtil.reformIntervals([
+     *     {interval: [18, 62], close: [1, 1]},
+     *     {interval: [-Infinity, -70], close: [0, 0]},
+     *     {interval: [-70, -26], close: [1, 1]},
+     *     {interval: [-26, 18], close: [1, 1]},
+     *     {interval: [62, 150], close: [1, 1]},
+     *     {interval: [106, 150], close: [1, 1]},
+     *     {interval: [150, Infinity], close: [0, 0]}
+     * ])).toEqual([
+     *     {interval: [-Infinity, -70], close: [0, 0]},
+     *     {interval: [-70, -26], close: [1, 1]},
+     *     {interval: [-26, 18], close: [0, 1]},
+     *     {interval: [18, 62], close: [0, 1]},
+     *     {interval: [62, 150], close: [0, 1]},
+     *     {interval: [150, Infinity], close: [0, 0]}
+     * ]);
+     * @param list, where `close` mean open or close
+     *        of the interval, and Infinity can be used.
+     * @return The origin list, which has been reformed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function reformIntervals(list) {
@@ -7650,6 +7847,7 @@
         return a.interval[lg] < b.interval[lg] || a.interval[lg] === b.interval[lg] && (a.close[lg] - b.close[lg] === (!lg ? 1 : -1) || !lg && littleThan(a, b, 1));
       }
     }
+<<<<<<< HEAD
     /**
      * [Numeric is defined as]:
      *     `parseFloat(val) == val`
@@ -7665,6 +7863,23 @@
      *
      * @test See full test cases in `test/ut/spec/util/number.js`.
      * @return Must be a typeof number. If not numeric, return NaN.
+=======
+    /**
+     * [Numeric is defined as]:
+     *     `parseFloat(val) == val`
+     * For example:
+     * numeric:
+     *     typeof number except NaN, '-123', '123', '2e3', '-2e3', '011', 'Infinity', Infinity,
+     *     and they rounded by white-spaces or line-terminal like ' -123 \n ' (see es spec)
+     * not-numeric:
+     *     null, undefined, [], {}, true, false, 'NaN', NaN, '123ab',
+     *     empty string, string with only white-spaces or line-terminal (see es spec),
+     *     0x12, '0x12', '-0x12', 012, '012', '-012',
+     *     non-string, ...
+     *
+     * @test See full test cases in `test/ut/spec/util/number.js`.
+     * @return Must be a typeof number. If not numeric, return NaN.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function numericToNumber(val) {
@@ -7673,27 +7888,47 @@
       && (valFloat !== 0 || !isString(val) || val.indexOf('x') <= 0) // For case ' 0x0 '.
       ? valFloat : NaN;
     }
+<<<<<<< HEAD
     /**
      * Definition of "numeric": see `numericToNumber`.
+=======
+    /**
+     * Definition of "numeric": see `numericToNumber`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function isNumeric(val) {
       return !isNaN(numericToNumber(val));
     }
+<<<<<<< HEAD
     /**
      * Use random base to prevent users hard code depending on
      * this auto generated marker id.
      * @return An positive integer.
+=======
+    /**
+     * Use random base to prevent users hard code depending on
+     * this auto generated marker id.
+     * @return An positive integer.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getRandomIdBase() {
       return Math.round(Math.random() * 9);
     }
+<<<<<<< HEAD
     /**
      * Get the greatest common divisor.
      *
      * @param {number} a one number
      * @param {number} b the other number
+=======
+    /**
+     * Get the greatest common divisor.
+     *
+     * @param {number} a one number
+     * @param {number} b the other number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getGreatestCommonDividor(a, b) {
@@ -7703,11 +7938,19 @@
 
       return getGreatestCommonDividor(b, a % b);
     }
+<<<<<<< HEAD
     /**
      * Get the least common multiple.
      *
      * @param {number} a one number
      * @param {number} b the other number
+=======
+    /**
+     * Get the least common multiple.
+     *
+     * @param {number} a one number
+     * @param {number} b the other number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getLeastCommonMultiple(a, b) {
@@ -7762,6 +8005,7 @@
         deprecateLog((scope ? "[" + scope + "]" : '') + (oldOpt + " is deprecated, use " + newOpt + " instead."));
       }
     }
+<<<<<<< HEAD
     /**
      * If in __DEV__ environment, get console printable message for users hint.
      * Parameters are separated by ' '.
@@ -7770,6 +8014,16 @@
      *
      * @param hintInfo anything about the current execution context to hint users.
      * @throws Error
+=======
+    /**
+     * If in __DEV__ environment, get console printable message for users hint.
+     * Parameters are separated by ' '.
+     * @usage
+     * makePrintable('This is an error on', someVar, someObj);
+     *
+     * @param hintInfo anything about the current execution context to hint users.
+     * @throws Error
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makePrintable() {
@@ -7815,8 +8069,13 @@
 
       return msg;
     }
+<<<<<<< HEAD
     /**
      * @throws Error
+=======
+    /**
+     * @throws Error
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function throwError(msg) {
@@ -7826,24 +8085,39 @@
     function interpolateNumber$1(p0, p1, percent) {
       return (p1 - p0) * percent + p0;
     }
+<<<<<<< HEAD
     /**
      * Make the name displayable. But we should
      * make sure it is not duplicated with user
      * specified name, so use '\0';
+=======
+    /**
+     * Make the name displayable. But we should
+     * make sure it is not duplicated with user
+     * specified name, so use '\0';
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
     var DUMMY_COMPONENT_NAME_PREFIX = 'series\0';
     var INTERNAL_COMPONENT_ID_PREFIX = '\0_ec_\0';
+<<<<<<< HEAD
     /**
      * If value is not array, then translate it to array.
      * @param  {*} value
      * @return {Array} [value] or value
+=======
+    /**
+     * If value is not array, then translate it to array.
+     * @param  {*} value
+     * @return {Array} [value] or value
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function normalizeToArray(value) {
       return value instanceof Array ? value : value == null ? [] : [value];
     }
+<<<<<<< HEAD
     /**
      * Sync default option between normal and emphasis like `position` and `show`
      * In case some one will write code like
@@ -7855,6 +8129,19 @@
      *     emphasis: {
      *          label: { show: true }
      *     }
+=======
+    /**
+     * Sync default option between normal and emphasis like `position` and `show`
+     * In case some one will write code like
+     *     label: {
+     *          show: false,
+     *          position: 'outside',
+     *          fontSize: 18
+     *     },
+     *     emphasis: {
+     *          label: { show: true }
+     *     }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function defaultEmphasis(opt, key, subOpts) {
@@ -7880,24 +8167,38 @@
     //     'textStyle'
     // ]);
 
+<<<<<<< HEAD
     /**
      * The method does not ensure performance.
      * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
      * This helper method retrieves value from data.
+=======
+    /**
+     * The method does not ensure performance.
+     * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
+     * This helper method retrieves value from data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getDataItemValue(dataItem) {
       return isObject(dataItem) && !isArray(dataItem) && !(dataItem instanceof Date) ? dataItem.value : dataItem;
     }
+<<<<<<< HEAD
     /**
      * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
      * This helper method determine if dataItem has extra option besides value
+=======
+    /**
+     * data could be [12, 2323, {value: 223}, [1221, 23], {value: [2, 23]}]
+     * This helper method determine if dataItem has extra option besides value
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function isDataItemOption(dataItem) {
       return isObject(dataItem) && !(dataItem instanceof Array); // // markLine data can be array
       // && !(dataItem[0] && isObject(dataItem[0]) && !(dataItem[0] instanceof Array));
     }
+<<<<<<< HEAD
     /**
      * Mapping to existings for merge.
      *
@@ -7926,6 +8227,36 @@
      *     PENDING: This is an experimental mode yet.
      *
      * @return See the comment of <MappingResult>.
+=======
+    /**
+     * Mapping to existings for merge.
+     *
+     * Mode "normalMege":
+     *     The mapping result (merge result) will keep the order of the existing
+     *     component, rather than the order of new option. Because we should ensure
+     *     some specified index reference (like xAxisIndex) keep work.
+     *     And in most cases, "merge option" is used to update partial option but not
+     *     be expected to change the order.
+     *
+     * Mode "replaceMege":
+     *     (1) Only the id mapped components will be merged.
+     *     (2) Other existing components (except internal components) will be removed.
+     *     (3) Other new options will be used to create new component.
+     *     (4) The index of the existing components will not be modified.
+     *     That means their might be "hole" after the removal.
+     *     The new components are created first at those available index.
+     *
+     * Mode "replaceAll":
+     *     This mode try to support that reproduce an echarts instance from another
+     *     echarts instance (via `getOption`) in some simple cases.
+     *     In this scenario, the `result` index are exactly the consistent with the `newCmptOptions`,
+     *     which ensures the component index referring (like `xAxisIndex: ?`) corrent. That is,
+     *     the "hole" in `newCmptOptions` will also be kept.
+     *     On the contrary, other modes try best to eliminate holes.
+     *     PENDING: This is an experimental mode yet.
+     *
+     * @return See the comment of <MappingResult>.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function mappingToExists(existings, newCmptOptions, mode) {
@@ -8101,9 +8432,15 @@
         });
       });
     }
+<<<<<<< HEAD
     /**
      * Make id and name for mapping result (result of mappingToExists)
      * into `keyInfo` field.
+=======
+    /**
+     * Make id and name for mapping result (result of mappingToExists)
+     * into `keyInfo` field.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -8174,8 +8511,13 @@
 
       return key1 != null && key2 != null && key1 === key2;
     }
+<<<<<<< HEAD
     /**
      * @return return null if not exist.
+=======
+    /**
+     * @return return null if not exist.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -8212,10 +8554,17 @@
 
       return !!(name && name.indexOf(DUMMY_COMPONENT_NAME_PREFIX));
     }
+<<<<<<< HEAD
     /**
      * @public
      * @param {Object} cmptOption
      * @return {boolean}
+=======
+    /**
+     * @public
+     * @param {Object} cmptOption
+     * @return {boolean}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function isComponentIdInternal(cmptOption) {
@@ -8239,10 +8588,17 @@
 
       return subType;
     }
+<<<<<<< HEAD
     /**
      * @param payload Contains dataIndex (means rawIndex) / dataIndexInside / name
      *                         each of which can be Array or primary type.
      * @return dataIndex If not found, return undefined/null.
+=======
+    /**
+     * @param payload Contains dataIndex (means rawIndex) / dataIndexInside / name
+     *                         each of which can be Array or primary type.
+     * @return dataIndex If not found, return undefined/null.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function queryDataIndex(data, payload) {
@@ -8258,6 +8614,7 @@
         }) : data.indexOfName(payload.name);
       }
     }
+<<<<<<< HEAD
     /**
      * Enable property storage to any host object.
      * Notice: Serialization is not supported.
@@ -8277,6 +8634,27 @@
      * }
      *
      * @return {Function}
+=======
+    /**
+     * Enable property storage to any host object.
+     * Notice: Serialization is not supported.
+     *
+     * For example:
+     * let inner = zrUitl.makeInner();
+     *
+     * function some1(hostObj) {
+     *      inner(hostObj).someProperty = 1212;
+     *      ...
+     * }
+     * function some2() {
+     *      let fields = inner(this);
+     *      fields.someProperty1 = 1212;
+     *      fields.someProperty2 = 'xx';
+     *      ...
+     * }
+     *
+     * @return {Function}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makeInner() {
@@ -8286,8 +8664,13 @@
       };
     }
     var innerUniqueIndex = getRandomIdBase();
+<<<<<<< HEAD
     /**
      * The same behavior as `component.getReferringComponents`.
+=======
+    /**
+     * The same behavior as `component.getReferringComponents`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function parseFinder(ecModel, finderInput, opt) {
@@ -8402,6 +8785,7 @@
     function getAttribute(dom, key) {
       return dom.getAttribute ? dom.getAttribute(key) : dom[key];
     }
+<<<<<<< HEAD
     /**
      * Interpolate raw values of a series with percent
      *
@@ -8415,6 +8799,21 @@
      *                     If `sourceValue` and `targetValue` are `string`, return `string`.
      *                     If `sourceValue` and `targetValue` are `(string | number)[]`, return `(string | number)[]`.
      *                     Other cases do not supported.
+=======
+    /**
+     * Interpolate raw values of a series with percent
+     *
+     * @param data         data
+     * @param labelModel   label model of the text element
+     * @param sourceValue  start value. May be null/undefined when init.
+     * @param targetValue  end value
+     * @param percent      0~1 percentage; 0 uses start value while 1 uses end value
+     * @return             interpolated values
+     *                     If `sourceValue` and `targetValue` are `number`, return `number`.
+     *                     If `sourceValue` and `targetValue` are `string`, return `string`.
+     *                     If `sourceValue` and `targetValue` are `(string | number)[]`, return `(string | number)[]`.
+     *                     Other cases do not supported.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function interpolateRawValues(data, precision, sourceValue, targetValue, percent) {
@@ -8456,9 +8855,15 @@
     var TYPE_DELIMITER = '.';
     var IS_CONTAINER = '___EC__COMPONENT__CONTAINER___';
     var IS_EXTENDED_CLASS = '___EC__EXTENDED_CLASS___';
+<<<<<<< HEAD
     /**
      * Notice, parseClassType('') should returns {main: '', sub: ''}
      * @public
+=======
+    /**
+     * Notice, parseClassType('') should returns {main: '', sub: ''}
+     * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function parseClassType(componentType) {
@@ -8475,8 +8880,13 @@
 
       return ret;
     }
+<<<<<<< HEAD
     /**
      * @public
+=======
+    /**
+     * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function checkClassType(componentType) {
@@ -8486,6 +8896,7 @@
     function isExtendedClass(clz) {
       return !!(clz && clz[IS_EXTENDED_CLASS]);
     }
+<<<<<<< HEAD
     /**
      * Implements `ExtendableConstructor` for `rootClz`.
      *
@@ -8495,6 +8906,17 @@
      * type XxxConstructor = typeof Xxx & ExtendableConstructor
      * enableClassExtend(Xxx as XxxConstructor);
      * ```
+=======
+    /**
+     * Implements `ExtendableConstructor` for `rootClz`.
+     *
+     * @usage
+     * ```ts
+     * class Xxx {}
+     * type XxxConstructor = typeof Xxx & ExtendableConstructor
+     * enableClassExtend(Xxx as XxxConstructor);
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function enableClassExtend(rootClz, mandatoryMethods) {
@@ -8552,6 +8974,7 @@
     function isESClass(fn) {
       return isFunction(fn) && /^class\s/.test(Function.prototype.toString.call(fn));
     }
+<<<<<<< HEAD
     /**
      * A work around to both support ts extend and this extend mechanism.
      * on sub-class.
@@ -8565,6 +8988,21 @@
      * // Without calling `markExtend`, `registerWhenExtend` will not work.
      * Component.markExtend(Series);
      * ```
+=======
+    /**
+     * A work around to both support ts extend and this extend mechanism.
+     * on sub-class.
+     * @usage
+     * ```ts
+     * class Component { ... }
+     * classUtil.enableClassExtend(Component);
+     * classUtil.enableClassManagement(Component, {registerWhenExtend: true});
+     *
+     * class Series extends Component { ... }
+     * // Without calling `markExtend`, `registerWhenExtend` will not work.
+     * Component.markExtend(Series);
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -8573,6 +9011,7 @@
     } // A random offset.
 
     var classBase = Math.round(Math.random() * 10);
+<<<<<<< HEAD
     /**
      * Implements `CheckableConstructor` for `target`.
      * Can not use instanceof, consider different scope by
@@ -8585,6 +9024,20 @@
      * type XxxConstructor = typeof Xxx & CheckableConstructor;
      * enableClassCheck(Xxx as XxxConstructor)
      * ```
+=======
+    /**
+     * Implements `CheckableConstructor` for `target`.
+     * Can not use instanceof, consider different scope by
+     * cross domain or es module import in ec extensions.
+     * Mount a method "isInstance()" to Clz.
+     *
+     * @usage
+     * ```ts
+     * class Xxx {}
+     * type XxxConstructor = typeof Xxx & CheckableConstructor;
+     * enableClassCheck(Xxx as XxxConstructor)
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function enableClassCheck(target) {
@@ -8618,6 +9071,7 @@
     function superApply(context, methodName, args) {
       return this.superClass.prototype[methodName].apply(context, args);
     }
+<<<<<<< HEAD
     /**
      * Implements `ClassManager` for `target`
      *
@@ -8627,16 +9081,36 @@
      * type XxxConstructor = typeof Xxx & ClassManager
      * enableClassManagement(Xxx as XxxConstructor);
      * ```
+=======
+    /**
+     * Implements `ClassManager` for `target`
+     *
+     * @usage
+     * ```ts
+     * class Xxx {}
+     * type XxxConstructor = typeof Xxx & ClassManager
+     * enableClassManagement(Xxx as XxxConstructor);
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
     function enableClassManagement(target) {
+<<<<<<< HEAD
       /**
        * Component model classes
        * key: componentType,
        * value:
        *     componentClass, when componentType is 'a'
        *     or Object.<subKey, componentClass>, when componentType is 'a.b'
+=======
+      /**
+       * Component model classes
+       * key: componentType,
+       * value:
+       *     componentClass, when componentType is 'a'
+       *     or Object.<subKey, componentClass>, when componentType is 'a.b'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       var storage = {};
 
@@ -8706,8 +9180,13 @@
         var componentTypeInfo = parseClassType(componentType);
         return !!storage[componentTypeInfo.main];
       };
+<<<<<<< HEAD
       /**
        * @return Like ['aa', 'bb'], but can not be ['aa.xx']
+=======
+      /**
+       * @return Like ['aa', 'bb'], but can not be ['aa.xx']
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -8718,8 +9197,13 @@
         });
         return types;
       };
+<<<<<<< HEAD
       /**
        * If a main type is container and has sub types
+=======
+      /**
+       * If a main type is container and has sub types
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -12363,10 +12847,17 @@
 
       return state;
     }
+<<<<<<< HEAD
     /**
      * Set hover style (namely "emphasis style") of element.
      * @param el Should not be `zrender/graphic/Group`.
      * @param focus 'self' | 'selfInSeries' | 'series'
+=======
+    /**
+     * Set hover style (namely "emphasis style") of element.
+     * @param el Should not be `zrender/graphic/Group`.
+     * @param focus 'self' | 'selfInSeries' | 'series'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -12730,12 +13221,21 @@
       });
       return ret;
     }
+<<<<<<< HEAD
     /**
      * Enable the function that mouseover will trigger the emphasis state.
      *
      * NOTE:
      * This function should be used on the element with dataIndex, seriesIndex.
      *
+=======
+    /**
+     * Enable the function that mouseover will trigger the emphasis state.
+     *
+     * NOTE:
+     * This function should be used on the element with dataIndex, seriesIndex.
+     *
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function enableHoverEmphasis(el, focus, blurScope) {
@@ -12772,8 +13272,13 @@
       lineStyle: 'getLineStyle',
       areaStyle: 'getAreaStyle'
     };
+<<<<<<< HEAD
     /**
      * Set emphasis/blur/selected states of element.
+=======
+    /**
+     * Set emphasis/blur/selected states of element.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function setStatesStylesFromModel(el, itemModel, styleType, // default itemStyle
@@ -12788,6 +13293,7 @@
         state.style = getter ? getter(model) : model[defaultStyleGetterMap[styleType]]();
       }
     }
+<<<<<<< HEAD
     /**
      *
      * Set element as highlight / downplay dispatcher.
@@ -12806,6 +13312,26 @@
      *        In this case, `highDownSilentOnTouch` should be used to disable
      *        hover-highlight on touch device.
      * @param asDispatcher If `false`, do not set as "highDownDispatcher".
+=======
+    /**
+     *
+     * Set element as highlight / downplay dispatcher.
+     * It will be checked when element received mouseover event or from highlight action.
+     * It's in change of all highlight/downplay behavior of it's children.
+     *
+     * @param el
+     * @param el.highDownSilentOnTouch
+     *        In touch device, mouseover event will be trigger on touchstart event
+     *        (see module:zrender/dom/HandlerProxy). By this mechanism, we can
+     *        conveniently use hoverStyle when tap on touch screen without additional
+     *        code for compatibility.
+     *        But if the chart/component has select feature, which usually also use
+     *        hoverStyle, there might be conflict between 'select-highlight' and
+     *        'hover-highlight' especially when roam is enabled (see geo for example).
+     *        In this case, `highDownSilentOnTouch` should be used to disable
+     *        hover-highlight on touch device.
+     * @param asDispatcher If `false`, do not set as "highDownDispatcher".
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function setAsHighDownDispatcher(el, asDispatcher) {
@@ -12830,6 +13356,7 @@
     function isHighDownDispatcher(el) {
       return !!(el && el.__highDownDispatcher);
     }
+<<<<<<< HEAD
     /**
      * Support highlight/downplay record on each elements.
      * For the case: hover highlight/downplay (legend, visualMap, ...) and
@@ -12837,6 +13364,15 @@
      * Only all of the highlightDigit cleared, return to normal.
      * @param {string} highlightKey
      * @return {number} highlightDigit
+=======
+    /**
+     * Support highlight/downplay record on each elements.
+     * For the case: hover highlight/downplay (legend, visualMap, ...) and
+     * user triggered highlight/downplay should not conflict.
+     * Only all of the highlightDigit cleared, return to normal.
+     * @param {string} highlightKey
+     * @return {number} highlightDigit
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getHighlightDigit(highlightKey) {
@@ -14292,8 +14828,13 @@
     }(Displayable));
 
     var transitionStore = makeInner();
+<<<<<<< HEAD
     /**
      * Return null if animation is disabled.
+=======
+    /**
+     * Return null if animation is disabled.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getAnimationConfig(animationType, animatableModel, dataIndex, // Extra opts can override the option in animatable model.
@@ -14403,6 +14944,7 @@
         cb && cb();
       }
     }
+<<<<<<< HEAD
     /**
      * Update graphic element properties with or without animation according to the
      * configuration in series.
@@ -14418,6 +14960,23 @@
      *     graphic.updateProps(el, {
      *         position: [100, 100]
      *     }, seriesModel, function () { console.log('Animation done!'); });
+=======
+    /**
+     * Update graphic element properties with or without animation according to the
+     * configuration in series.
+     *
+     * Caution: this method will stop previous animation.
+     * So do not use this method to one element twice before
+     * animation starts, unless you know what you are doing.
+     * @example
+     *     graphic.updateProps(el, {
+     *         position: [100, 100]
+     *     }, seriesModel, dataIndex, function () { console.log('Animation done!'); });
+     *     // Or
+     *     graphic.updateProps(el, {
+     *         position: [100, 100]
+     *     }, seriesModel, function () { console.log('Animation done!'); });
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -14425,6 +14984,7 @@
     animatableModel, dataIndex, cb, during) {
       animateOrSetProps('update', el, props, animatableModel, dataIndex, cb, during);
     }
+<<<<<<< HEAD
     /**
      * Init graphic element properties with or without animation according to the
      * configuration in series.
@@ -14432,14 +14992,29 @@
      * Caution: this method will stop previous animation.
      * So do not use this method to one element twice before
      * animation starts, unless you know what you are doing.
+=======
+    /**
+     * Init graphic element properties with or without animation according to the
+     * configuration in series.
+     *
+     * Caution: this method will stop previous animation.
+     * So do not use this method to one element twice before
+     * animation starts, unless you know what you are doing.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function initProps(el, props, animatableModel, dataIndex, cb, during) {
       animateOrSetProps('enter', el, props, animatableModel, dataIndex, cb, during);
     }
+<<<<<<< HEAD
     /**
      * If element is removed.
      * It can determine if element is having remove animation.
+=======
+    /**
+     * If element is removed.
+     * It can determine if element is having remove animation.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function isElementRemoved(el) {
@@ -14457,8 +15032,13 @@
 
       return false;
     }
+<<<<<<< HEAD
     /**
      * Remove graphic element
+=======
+    /**
+     * Remove graphic element
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function removeElement(el, props, animatableModel, dataIndex, cb, during) {
@@ -14498,11 +15078,19 @@
         });
       }
     }
+<<<<<<< HEAD
     /**
      * Save old style for style transition in universalTransition module.
      * It's used when element will be reused in each render.
      * For chart like map, heatmap, which will always create new element.
      * We don't need to save this because universalTransition can get old style from the old element
+=======
+    /**
+     * Save old style for style transition in universalTransition module.
+     * It's used when element will be reused in each render.
+     * For chart like map, heatmap, which will always create new element.
+     * We don't need to save this because universalTransition can get old style from the old element
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function saveOldStyle(el) {
@@ -14512,21 +15100,32 @@
     var mathMax$4 = Math.max;
     var mathMin$4 = Math.min;
     var _customShapeMap = {};
+<<<<<<< HEAD
     /**
      * Extend shape with parameters
+=======
+    /**
+     * Extend shape with parameters
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function extendShape(opts) {
       return Path.extend(opts);
     }
     var extendPathFromString = extendFromString;
+<<<<<<< HEAD
     /**
      * Extend path
+=======
+    /**
+     * Extend path
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function extendPath(pathData, opts) {
       return extendPathFromString(pathData, opts);
     }
+<<<<<<< HEAD
     /**
      * Register a user defined shape.
      * The shape class can be fetched by `getShapeClass`
@@ -14537,11 +15136,24 @@
      *
      * @param name
      * @param ShapeClass Can be generated by `extendShape`.
+=======
+    /**
+     * Register a user defined shape.
+     * The shape class can be fetched by `getShapeClass`
+     * This method will overwrite the registered shapes, including
+     * the registered built-in shapes, if using the same `name`.
+     * The shape can be used in `custom series` and
+     * `graphic component` by declaring `{type: name}`.
+     *
+     * @param name
+     * @param ShapeClass Can be generated by `extendShape`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function registerShape(name, ShapeClass) {
       _customShapeMap[name] = ShapeClass;
     }
+<<<<<<< HEAD
     /**
      * Find shape class registered by `registerShape`. Usually used in
      * fetching user defined shape.
@@ -14568,6 +15180,34 @@
      *
      * @param name
      * @return The shape class. If not found, return nothing.
+=======
+    /**
+     * Find shape class registered by `registerShape`. Usually used in
+     * fetching user defined shape.
+     *
+     * [Caution]:
+     * (1) This method **MUST NOT be used inside echarts !!!**, unless it is prepared
+     * to use user registered shapes.
+     * Because the built-in shape (see `getBuiltInShape`) will be registered by
+     * `registerShape` by default. That enables users to get both built-in
+     * shapes as well as the shapes belonging to themsleves. But users can overwrite
+     * the built-in shapes by using names like 'circle', 'rect' via calling
+     * `registerShape`. So the echarts inner featrues should not fetch shapes from here
+     * in case that it is overwritten by users, except that some features, like
+     * `custom series`, `graphic component`, do it deliberately.
+     *
+     * (2) In the features like `custom series`, `graphic component`, the user input
+     * `{tpye: 'xxx'}` does not only specify shapes but also specify other graphic
+     * elements like `'group'`, `'text'`, `'image'` or event `'path'`. Those names
+     * are reserved names, that is, if some user registers a shape named `'image'`,
+     * the shape will not be used. If we intending to add some more reserved names
+     * in feature, that might bring break changes (disable some existing user shape
+     * names). But that case probably rarely happens. So we don't make more mechanism
+     * to resolve this issue here.
+     *
+     * @param name
+     * @return The shape class. If not found, return nothing.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getShapeClass(name) {
@@ -14575,12 +15215,21 @@
         return _customShapeMap[name];
       }
     }
+<<<<<<< HEAD
     /**
      * Create a path element from path data string
      * @param pathData
      * @param opts
      * @param rect
      * @param layout 'center' or 'cover' default to be cover
+=======
+    /**
+     * Create a path element from path data string
+     * @param pathData
+     * @param opts
+     * @param rect
+     * @param layout 'center' or 'cover' default to be cover
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makePath(pathData, opts, rect, layout) {
@@ -14596,12 +15245,21 @@
 
       return path;
     }
+<<<<<<< HEAD
     /**
      * Create a image element from image url
      * @param imageUrl image url
      * @param opts options
      * @param rect constrain rect
      * @param layout 'center' or 'cover'. Default to be 'cover'
+=======
+    /**
+     * Create a image element from image url
+     * @param imageUrl image url
+     * @param opts options
+     * @param rect constrain rect
+     * @param layout 'center' or 'cover'. Default to be 'cover'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makeImage(imageUrl, rect, layout) {
@@ -14625,12 +15283,21 @@
       });
       return zrImg;
     }
+<<<<<<< HEAD
     /**
      * Get position of centered element in bounding box.
      *
      * @param  rect         element local bounding box
      * @param  boundingRect constraint bounding box
      * @return element position containing x, y, width, and height
+=======
+    /**
+     * Get position of centered element in bounding box.
+     *
+     * @param  rect         element local bounding box
+     * @param  boundingRect constraint bounding box
+     * @return element position containing x, y, width, and height
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function centerGraphic(rect, boundingRect) {
@@ -14657,10 +15324,17 @@
     }
 
     var mergePath$1 = mergePath;
+<<<<<<< HEAD
     /**
      * Resize a path to fit the rect
      * @param path
      * @param rect
+=======
+    /**
+     * Resize a path to fit the rect
+     * @param path
+     * @param rect
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function resizePath(path, rect) {
@@ -14672,8 +15346,13 @@
       var m = pathRect.calculateTransform(rect);
       path.applyTransform(m);
     }
+<<<<<<< HEAD
     /**
      * Sub pixel optimize line for canvas
+=======
+    /**
+     * Sub pixel optimize line for canvas
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function subPixelOptimizeLine$1(shape, lineWidth) {
@@ -14682,12 +15361,21 @@
       });
       return shape;
     }
+<<<<<<< HEAD
     /**
      * Get transform matrix of target (param target),
      * in coordinate of its ancestor (param ancestor)
      *
      * @param target
      * @param [ancestor]
+=======
+    /**
+     * Get transform matrix of target (param target),
+     * in coordinate of its ancestor (param ancestor)
+     *
+     * @param target
+     * @param [ancestor]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getTransform(target, ancestor) {
@@ -14708,9 +15396,15 @@
     function isPath(el) {
       return el.shape != null;
     }
+<<<<<<< HEAD
     /**
      * Apply group transition animation from g1 to g2.
      * If no animatableModel, no animation.
+=======
+    /**
+     * Apply group transition animation from g1 to g2.
+     * If no animatableModel, no animation.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -14769,8 +15463,13 @@
         return [x, y];
       });
     }
+<<<<<<< HEAD
     /**
      * Return a new clipped rect. If rect size are negative, return undefined.
+=======
+    /**
+     * Return a new clipped rect. If rect size are negative, return undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function clipRectByRect(targetRect, rect) {
@@ -15040,8 +15739,13 @@
 
       return statesModels;
     }
+<<<<<<< HEAD
     /**
      * Set basic textStyle properties.
+=======
+    /**
+     * Set basic textStyle properties.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createTextStyle(textStyleModel, specifiedTextStyle, // Fixed style in the code. Can't be set by model.
@@ -15086,6 +15790,7 @@
       textConfig.outsideFill = textStyleModel.get('color') === 'inherit' ? opt.inheritColor || null : 'auto';
       return textConfig;
     }
+<<<<<<< HEAD
     /**
      * The uniform entry of set text style, that is, retrieve style definitions
      * from `model` and set to `textStyle` object.
@@ -15094,6 +15799,16 @@
      * properties will be set. (Consider the states of normal and emphasis and
      * default value can be adopted, merge would make the logic too complicated
      * to manage.)
+=======
+    /**
+     * The uniform entry of set text style, that is, retrieve style definitions
+     * from `model` and set to `textStyle` object.
+     *
+     * Never in merge mode, but in overwrite mode, that is, all of the text style
+     * properties will be set. (Consider the states of normal and emphasis and
+     * default value can be adopted, merge would make the logic too complicated
+     * to manage.)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function setTextStyleCommon(textStyle, textStyleModel, opt, isNotNormal, isAttached) {
@@ -15381,8 +16096,13 @@
     /** @class */
     function () {
       function TextStyleMixin() {}
+<<<<<<< HEAD
       /**
        * Get color property or get color from option.textStyle.color
+=======
+      /**
+       * Get color property or get color from option.textStyle.color
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       // TODO Callback
 
@@ -15391,9 +16111,15 @@
         var ecModel = this.ecModel;
         return this.getShallow('color') || (!isEmphasis && ecModel ? ecModel.get(PATH_COLOR) : null);
       };
+<<<<<<< HEAD
       /**
        * Create font string from fontStyle, fontWeight, fontSize, fontFamily
        * @return {string}
+=======
+      /**
+       * Create font string from fontStyle, fontWeight, fontSize, fontFamily
+       * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -15482,8 +16208,13 @@
           rest[_i - 3] = arguments[_i];
         }
       };
+<<<<<<< HEAD
       /**
        * Merge the input option to me.
+=======
+      /**
+       * Merge the input option to me.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -15528,8 +16259,13 @@
         parentModel = parentModel || this.parentModel && this.parentModel.getModel(this.resolveParentPath(pathFinal));
         return new Model(obj, parentModel, this.ecModel);
       };
+<<<<<<< HEAD
       /**
        * If model has option
+=======
+      /**
+       * If model has option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -15614,10 +16350,17 @@
     mixin(Model, TextStyleMixin);
 
     var base = Math.round(Math.random() * 10);
+<<<<<<< HEAD
     /**
      * @public
      * @param {string} type
      * @return {string}
+=======
+    /**
+     * @public
+     * @param {string} type
+     * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getUID(type) {
@@ -15625,8 +16368,13 @@
       // use Math.random to make id as unique as possible.
       return [type || '', base++].join('_');
     }
+<<<<<<< HEAD
     /**
      * Implements `SubTypeDefaulterManager` for `target`.
+=======
+    /**
+     * Implements `SubTypeDefaulterManager` for `target`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function enableSubTypeDefaulter(target) {
@@ -15651,6 +16399,7 @@
         return type;
       };
     }
+<<<<<<< HEAD
     /**
      * Implements `TopologicalTravelable<any>` for `entity`.
      *
@@ -15667,6 +16416,24 @@
        * @param fullNameList By which we can build dependency graph.
        * @param callback Params: componentType, dependencies.
        * @param context Scope of callback.
+=======
+    /**
+     * Implements `TopologicalTravelable<any>` for `entity`.
+     *
+     * Topological travel on Activity Network (Activity On Vertices).
+     * Dependencies is defined in Model.prototype.dependencies, like ['xAxis', 'yAxis'].
+     * If 'xAxis' or 'yAxis' is absent in componentTypeList, just ignore it in topology.
+     * If there is circular dependencey, Error will be thrown.
+     */
+
+    function enableTopologicalTravel(entity, dependencyGetter) {
+      /**
+       * @param targetNameList Target Component type list.
+       *                       Can be ['aa', 'bb', 'aa.xx']
+       * @param fullNameList By which we can build dependency graph.
+       * @param callback Params: componentType, dependencies.
+       * @param context Scope of callback.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       entity.topologicalTravel = function (targetNameList, fullNameList, callback, context) {
         if (!targetNameList.length) {
@@ -15803,6 +16570,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
      * Licensed to the Apache Software Foundation (ASF) under one
      * or more contributor license agreements.  See the NOTICE file
@@ -15824,6 +16592,29 @@
 
     /**
      * Language: English.
+=======
+    /*
+     * Licensed to the Apache Software Foundation (ASF) under one
+     * or more contributor license agreements.  See the NOTICE file
+     * distributed with this work for additional information
+     * regarding copyright ownership.  The ASF licenses this file
+     * to you under the Apache License, Version 2.0 (the
+     * "License"); you may not use this file except in compliance
+     * with the License.  You may obtain a copy of the License at
+     *
+     *   http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing,
+     * software distributed under the License is distributed on an
+     * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     * KIND, either express or implied.  See the License for the
+     * specific language governing permissions and limitations
+     * under the License.
+     */
+
+    /**
+     * Language: English.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     var langEN = {
       time: {
@@ -15959,6 +16750,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
      * Licensed to the Apache Software Foundation (ASF) under one
      * or more contributor license agreements.  See the NOTICE file
@@ -15976,6 +16768,25 @@
      * KIND, either express or implied.  See the License for the
      * specific language governing permissions and limitations
      * under the License.
+=======
+    /*
+     * Licensed to the Apache Software Foundation (ASF) under one
+     * or more contributor license agreements.  See the NOTICE file
+     * distributed with this work for additional information
+     * regarding copyright ownership.  The ASF licenses this file
+     * to you under the Apache License, Version 2.0 (the
+     * "License"); you may not use this file except in compliance
+     * with the License.  You may obtain a copy of the License at
+     *
+     *   http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing,
+     * software distributed under the License is distributed on an
+     * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     * KIND, either express or implied.  See the License for the
+     * specific language governing permissions and limitations
+     * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     var langZH = {
       time: {
@@ -16393,8 +17204,13 @@
       return textEl.getBoundingRect();
     }
 
+<<<<<<< HEAD
     /**
      * Add a comma each three digit.
+=======
+    /**
+     * Add a comma each three digit.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function addCommas(x) {
@@ -16422,9 +17238,15 @@
     var wrapVar = function (varName, seriesIdx) {
       return '{' + varName + (seriesIdx == null ? '' : seriesIdx) + '}';
     };
+<<<<<<< HEAD
     /**
      * Template formatter
      * @param {Array.<Object>|Object} paramsList
+=======
+    /**
+     * Template formatter
+     * @param {Array.<Object>|Object} paramsList
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -16495,6 +17317,7 @@
         };
       }
     }
+<<<<<<< HEAD
     /**
      * @deprecated Use `time/format` instead.
      * ISO Date format
@@ -16504,6 +17327,17 @@
      *           see `module:echarts/scale/Time`
      *           and `module:echarts/util/number#parseDate`.
      * @inner
+=======
+    /**
+     * @deprecated Use `time/format` instead.
+     * ISO Date format
+     * @param {string} tpl
+     * @param {number} value
+     * @param {boolean} [isUTC=false] Default in local time.
+     *           see `module:echarts/scale/Time`
+     *           and `module:echarts/util/number#parseDate`.
+     * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function formatTime(tpl, value, isUTC) {
@@ -16527,17 +17361,29 @@
       tpl = tpl.replace('MM', pad(M, 2)).replace('M', M).replace('yyyy', y).replace('yy', pad(y % 100 + '', 2)).replace('dd', pad(d, 2)).replace('d', d).replace('hh', pad(h, 2)).replace('h', h).replace('mm', pad(m, 2)).replace('m', m).replace('ss', pad(s, 2)).replace('s', s).replace('SSS', pad(S, 3));
       return tpl;
     }
+<<<<<<< HEAD
     /**
      * Capital first
      * @param {string} str
      * @return {string}
+=======
+    /**
+     * Capital first
+     * @param {string} str
+     * @return {string}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function capitalFirst(str) {
       return str ? str.charAt(0).toUpperCase() + str.substr(1) : str;
     }
+<<<<<<< HEAD
     /**
      * @return Never be null/undefined.
+=======
+    /**
+     * @return Never be null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function convertToColorString(color, defaultColor) {
@@ -16546,6 +17392,7 @@
     }
 
     var each$1 = each;
+<<<<<<< HEAD
     /**
      * @public
      */
@@ -16553,6 +17400,15 @@
     var LOCATION_PARAMS = ['left', 'right', 'top', 'bottom', 'width', 'height'];
     /**
      * @public
+=======
+    /**
+     * @public
+     */
+
+    var LOCATION_PARAMS = ['left', 'right', 'top', 'bottom', 'width', 'height'];
+    /**
+     * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var HV_NAMES = [['width', 'left', 'right'], ['height', 'top', 'bottom']];
@@ -16615,6 +17471,7 @@
         orient === 'horizontal' ? x = nextX + gap : y = nextY + gap;
       });
     }
+<<<<<<< HEAD
     /**
      * VBox layouting
      * @param {module:zrender/graphic/Group} group
@@ -16635,6 +17492,28 @@
     var hbox = curry(boxLayout, 'horizontal');
     /**
      * Parse position info.
+=======
+    /**
+     * VBox layouting
+     * @param {module:zrender/graphic/Group} group
+     * @param {number} gap
+     * @param {number} [width=Infinity]
+     * @param {number} [height=Infinity]
+     */
+
+    var vbox = curry(boxLayout, 'vertical');
+    /**
+     * HBox layouting
+     * @param {module:zrender/graphic/Group} group
+     * @param {number} gap
+     * @param {number} [width=Infinity]
+     * @param {number} [height=Infinity]
+     */
+
+    var hbox = curry(boxLayout, 'horizontal');
+    /**
+     * Parse position info.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getLayoutRect(positionInfo, containerRect, margin) {
@@ -16740,6 +17619,7 @@
         type: layoutMode
       } : null;
     }
+<<<<<<< HEAD
     /**
      * Consider Case:
      * When default option has {left: 0, width: 100}, and we set {right: 0}
@@ -16762,6 +17642,30 @@
      * @param targetOption
      * @param newOption
      * @param opt
+=======
+    /**
+     * Consider Case:
+     * When default option has {left: 0, width: 100}, and we set {right: 0}
+     * through setOption or media query, using normal zrUtil.merge will cause
+     * {right: 0} does not take effect.
+     *
+     * @example
+     * ComponentModel.extend({
+     *     init: function () {
+     *         ...
+     *         let inputPositionParams = layout.getLayoutParams(option);
+     *         this.mergeOption(inputPositionParams);
+     *     },
+     *     mergeOption: function (newOption) {
+     *         newOption && zrUtil.merge(thisOption, newOption, true);
+     *         layout.mergeLayoutParam(thisOption, newOption);
+     *     }
+     * });
+     *
+     * @param targetOption
+     * @param newOption
+     * @param opt
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function mergeLayoutParam(targetOption, newOption, opt) {
@@ -16840,17 +17744,29 @@
         });
       }
     }
+<<<<<<< HEAD
     /**
      * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
+=======
+    /**
+     * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getLayoutParams(source) {
       return copyLayoutParams({}, source);
     }
+<<<<<<< HEAD
     /**
      * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
      * @param {Object} source
      * @return {Object} Result contains those props.
+=======
+    /**
+     * Retrieve 'left', 'right', 'top', 'bottom', 'width', 'height' from object.
+     * @param {Object} source
+     * @return {Object} Result contains those props.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function copyLayoutParams(target, source) {
@@ -16898,12 +17814,18 @@
           mergeLayoutParam(this.option, option, layoutMode);
         }
       };
+<<<<<<< HEAD
       /**
        * Called immediately after `init` or `mergeOption` of this instance called.
+=======
+      /**
+       * Called immediately after `init` or `mergeOption` of this instance called.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       ComponentModel.prototype.optionUpdated = function (newCptOption, isInit) {};
+<<<<<<< HEAD
       /**
        * [How to declare defaultOption]:
        *
@@ -16957,6 +17879,61 @@
        *     }
        * })
        * ```
+=======
+      /**
+       * [How to declare defaultOption]:
+       *
+       * (A) If using class declaration in typescript (since echarts 5):
+       * ```ts
+       * import {ComponentOption} from '../model/option.js';
+       * export interface XxxOption extends ComponentOption {
+       *     aaa: number
+       * }
+       * export class XxxModel extends Component {
+       *     static type = 'xxx';
+       *     static defaultOption: XxxOption = {
+       *         aaa: 123
+       *     }
+       * }
+       * Component.registerClass(XxxModel);
+       * ```
+       * ```ts
+       * import {inheritDefaultOption} from '../util/component.js';
+       * import {XxxModel, XxxOption} from './XxxModel.js';
+       * export interface XxxSubOption extends XxxOption {
+       *     bbb: number
+       * }
+       * class XxxSubModel extends XxxModel {
+       *     static defaultOption: XxxSubOption = inheritDefaultOption(XxxModel.defaultOption, {
+       *         bbb: 456
+       *     })
+       *     fn() {
+       *         let opt = this.getDefaultOption();
+       *         // opt is {aaa: 123, bbb: 456}
+       *     }
+       * }
+       * ```
+       *
+       * (B) If using class extend (previous approach in echarts 3 & 4):
+       * ```js
+       * let XxxComponent = Component.extend({
+       *     defaultOption: {
+       *         xx: 123
+       *     }
+       * })
+       * ```
+       * ```js
+       * let XxxSubComponent = XxxComponent.extend({
+       *     defaultOption: {
+       *         yy: 456
+       *     },
+       *     fn: function () {
+       *         let opt = this.getDefaultOption();
+       *         // opt is {xx: 123, yy: 456}
+       *     }
+       * })
+       * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -16994,6 +17971,7 @@
 
         return fields.defaultOption;
       };
+<<<<<<< HEAD
       /**
        * Notice: always force to input param `useDefault` in case that forget to consider it.
        * The same behavior as `modelUtil.parseFinder`.
@@ -17001,6 +17979,15 @@
        * @param useDefault In many cases like series refer axis and axis refer grid,
        *        If axis index / axis id not specified, use the first target as default.
        *        In other cases like dataZoom refer axis, if not specified, measn no refer.
+=======
+      /**
+       * Notice: always force to input param `useDefault` in case that forget to consider it.
+       * The same behavior as `modelUtil.parseFinder`.
+       *
+       * @param useDefault In many cases like series refer axis and axis refer grid,
+       *        If axis index / axis id not specified, use the first target as default.
+       *        In other cases like dataZoom refer axis, if not specified, measn no refer.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -17025,10 +18012,17 @@
           height: boxLayoutModel.get('height')
         };
       };
+<<<<<<< HEAD
       /**
        * Get key for zlevel.
        * If developers don't configure zlevel. We will assign zlevel to series based on the key.
        * For example, lines with trail effect and progressive series will in an individual zlevel.
+=======
+      /**
+       * Get key for zlevel.
+       * If developers don't configure zlevel. We will assign zlevel to series based on the key.
+       * For example, lines with trail effect and progressive series will in an individual zlevel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -17099,6 +18093,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -17116,6 +18111,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     var platform = ''; // Navigator not exists in node
 
@@ -17224,14 +18238,20 @@
 
     };
     var innerGlobalModel = makeInner();
+<<<<<<< HEAD
     /**
      * MUST be called before mergeOption of all series.
+=======
+    /**
+     * MUST be called before mergeOption of all series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function resetSourceDefaulter(ecModel) {
       // `datasetMap` is used to make default encode.
       innerGlobalModel(ecModel).datasetMap = createHashMap();
     }
+<<<<<<< HEAD
     /**
      * [The strategy of the arrengment of data dimensions for dataset]:
      * "value way": all axes are non-category axes. So series one by one take
@@ -17246,6 +18266,22 @@
      *     | ser_shared_x | ser0_y | ser1_y | ser2_y |
      *
      * @return encode Never be `null/undefined`.
+=======
+    /**
+     * [The strategy of the arrengment of data dimensions for dataset]:
+     * "value way": all axes are non-category axes. So series one by one take
+     *     several (the number is coordSysDims.length) dimensions from dataset.
+     *     The result of data arrengment of data dimensions like:
+     *     | ser0_x | ser0_y | ser1_x | ser1_y | ser2_x | ser2_y |
+     * "category way": at least one axis is category axis. So the the first data
+     *     dimension is always mapped to the first category axis and shared by
+     *     all of the series. The other data dimensions are taken by series like
+     *     "value way" does.
+     *     The result of data arrengment of data dimensions like:
+     *     | ser_shared_x | ser0_y | ser1_y | ser2_y |
+     *
+     * @return encode Never be `null/undefined`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makeSeriesEncodeForAxisCoordSys(coordDimensions, seriesModel, source) {
@@ -17324,10 +18360,17 @@
       encodeSeriesName.length && (encode.seriesName = encodeSeriesName);
       return encode;
     }
+<<<<<<< HEAD
     /**
      * Work for data like [{name: ..., value: ...}, ...].
      *
      * @return encode Never be `null/undefined`.
+=======
+    /**
+     * Work for data like [{name: ..., value: ...}, ...].
+     *
+     * @return encode Never be `null/undefined`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makeSeriesEncodeForNameBased(seriesModel, source, dimCount) {
@@ -17410,8 +18453,13 @@
 
       return encode;
     }
+<<<<<<< HEAD
     /**
      * @return If return null/undefined, indicate that should not use datasetModel.
+=======
+    /**
+     * @return If return null/undefined, indicate that should not use datasetModel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function querySeriesUpstreamDatasetModel(seriesModel) {
@@ -17429,8 +18477,13 @@
         }, SINGLE_REFERRING).models[0];
       }
     }
+<<<<<<< HEAD
     /**
      * @return Always return an array event empty.
+=======
+    /**
+     * @return Always return an array event empty.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function queryDatasetUpstreamDatasetModels(datasetModel) {
@@ -17445,10 +18498,17 @@
         id: datasetModel.get('fromDatasetId', true)
       }, SINGLE_REFERRING).models;
     }
+<<<<<<< HEAD
     /**
      * The rule should not be complex, otherwise user might not
      * be able to known where the data is wrong.
      * The code is ugly, but how to make it neat?
+=======
+    /**
+     * The rule should not be complex, otherwise user might not
+     * be able to known where the data is wrong.
+     * The code is ugly, but how to make it neat?
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function guessOrdinal(source, dimIndex) {
@@ -17628,11 +18688,19 @@
 
       return palettes[paletteNum - 1];
     }
+<<<<<<< HEAD
     /**
      * @param name MUST NOT be null/undefined. Otherwise call this function
      *             twise with the same parameters will get different result.
      * @param scope default this.
      * @return Can be null/undefined
+=======
+    /**
+     * @param name MUST NOT be null/undefined. Otherwise call this function
+     *             twise with the same parameters will get different result.
+     * @param scope default this.
+     * @return Can be null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -17774,12 +18842,21 @@
 
         this._resetOption(null, innerOpt);
       };
+<<<<<<< HEAD
       /**
        * @param type null/undefined: reset all.
        *        'recreate': force recreate all.
        *        'timeline': only reset timeline option
        *        'media': only reset media query option
        * @return Whether option changed.
+=======
+      /**
+       * @param type null/undefined: reset all.
+       *        'recreate': force recreate all.
+       *        'timeline': only reset timeline option
+       *        'media': only reset media query option
+       * @return Whether option changed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18014,8 +19091,13 @@
           reCreateSeriesIndices(this);
         }
       };
+<<<<<<< HEAD
       /**
        * Get option for output (cloned option and inner info removed)
+=======
+      /**
+       * Get option for output (cloned option and inner info removed)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18063,8 +19145,13 @@
       GlobalModel.prototype.getUpdatePayload = function () {
         return this._payload;
       };
+<<<<<<< HEAD
       /**
        * @param idx If not specified, return the first one.
+=======
+      /**
+       * @param idx If not specified, return the first one.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18085,8 +19172,13 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * @return Never be null/undefined.
+=======
+      /**
+       * @return Never be null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18127,6 +19219,7 @@
 
         return filterBySubType(result, condition);
       };
+<<<<<<< HEAD
       /**
        * The interface is different from queryComponents,
        * which is convenient for inner usage.
@@ -18143,6 +19236,24 @@
        *     filter: function (model, index) {...}}
        * );
        * // result like [component0, componnet1, ...]
+=======
+      /**
+       * The interface is different from queryComponents,
+       * which is convenient for inner usage.
+       *
+       * @usage
+       * let result = findComponents(
+       *     {mainType: 'dataZoom', query: {dataZoomId: 'abc'}}
+       * );
+       * let result = findComponents(
+       *     {mainType: 'series', subType: 'pie', query: {seriesName: 'uio'}}
+       * );
+       * let result = findComponents(
+       *     {mainType: 'series',
+       *     filter: function (model, index) {...}}
+       * );
+       * // result like [component0, componnet1, ...]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18195,8 +19306,13 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * Get series list before filtered by name.
+=======
+      /**
+       * Get series list before filtered by name.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18206,17 +19322,28 @@
           return !!oneSeries && nameStr != null && oneSeries.name === nameStr;
         });
       };
+<<<<<<< HEAD
       /**
        * Get series list before filtered by index.
+=======
+      /**
+       * Get series list before filtered by index.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       GlobalModel.prototype.getSeriesByIndex = function (seriesIndex) {
         return this._componentsMap.get('series')[seriesIndex];
       };
+<<<<<<< HEAD
       /**
        * Get series list before filtered by type.
        * FIXME: rename to getRawSeriesByType?
+=======
+      /**
+       * Get series list before filtered by type.
+       * FIXME: rename to getRawSeriesByType?
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18225,8 +19352,13 @@
           return !!oneSeries && oneSeries.subType === subType;
         });
       };
+<<<<<<< HEAD
       /**
        * Get all series before filtered.
+=======
+      /**
+       * Get all series before filtered.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18235,17 +19367,28 @@
           return !!oneSeries;
         });
       };
+<<<<<<< HEAD
       /**
        * Count series before filtered.
+=======
+      /**
+       * Count series before filtered.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       GlobalModel.prototype.getSeriesCount = function () {
         return this._componentsCount.get('series');
       };
+<<<<<<< HEAD
       /**
        * After filtering, series may be different
        * from raw series.
+=======
+      /**
+       * After filtering, series may be different
+       * from raw series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18257,11 +19400,19 @@
           cb.call(context, series, rawSeriesIndex);
         }, this);
       };
+<<<<<<< HEAD
       /**
        * Iterate raw series before filtered.
        *
        * @param {Function} cb
        * @param {*} context
+=======
+      /**
+       * Iterate raw series before filtered.
+       *
+       * @param {Function} cb
+       * @param {*} context
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18270,9 +19421,15 @@
           series && cb.call(context, series, series.componentIndex);
         });
       };
+<<<<<<< HEAD
       /**
        * After filtering, series may be different.
        * from raw series.
+=======
+      /**
+       * After filtering, series may be different.
+       * from raw series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18286,8 +19443,13 @@
           }
         }, this);
       };
+<<<<<<< HEAD
       /**
        * Iterate raw series before filtered of given type.
+=======
+      /**
+       * Iterate raw series before filtered of given type.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -18521,9 +19683,15 @@
     var QUERY_REG = /^(min|max)?(.+)$/; // Key: mainType
     // type FakeComponentsMap = HashMap<(MappingExistingItem & { subType: string })[]>;
 
+<<<<<<< HEAD
     /**
      * TERM EXPLANATIONS:
      * See `ECOption` and `ECUnitOption` in `src/util/types.ts`.
+=======
+    /**
+     * TERM EXPLANATIONS:
+     * See `ECOption` and `ECUnitOption` in `src/util/types.ts`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var OptionManager =
@@ -18540,9 +19708,15 @@
       function OptionManager(api) {
         this._timelineOptions = [];
         this._mediaList = [];
+<<<<<<< HEAD
         /**
          * -1, means default.
          * empty means no media.
+=======
+        /**
+         * -1, means default.
+         * empty means no media.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
         this._currentMediaIndices = [];
@@ -18677,6 +19851,7 @@
 
       return OptionManager;
     }();
+<<<<<<< HEAD
     /**
      * [RAW_OPTION_PATTERNS]
      * (Note: "series: []" represents all other props in `ECUnitOption`)
@@ -18737,6 +19912,68 @@
      *     media: []
      * };
      * ```
+=======
+    /**
+     * [RAW_OPTION_PATTERNS]
+     * (Note: "series: []" represents all other props in `ECUnitOption`)
+     *
+     * (1) No prop "baseOption" declared:
+     * Root option is used as "baseOption" (except prop "options" and "media").
+     * ```js
+     * option = {
+     *     series: [],
+     *     timeline: {},
+     *     options: [],
+     * };
+     * option = {
+     *     series: [],
+     *     media: {},
+     * };
+     * option = {
+     *     series: [],
+     *     timeline: {},
+     *     options: [],
+     *     media: {},
+     * }
+     * ```
+     *
+     * (2) Prop "baseOption" declared:
+     * If "baseOption" declared, `ECUnitOption` props can only be declared
+     * inside "baseOption" except prop "timeline" (compat ec2).
+     * ```js
+     * option = {
+     *     baseOption: {
+     *         timeline: {},
+     *         series: [],
+     *     },
+     *     options: []
+     * };
+     * option = {
+     *     baseOption: {
+     *         series: [],
+     *     },
+     *     media: []
+     * };
+     * option = {
+     *     baseOption: {
+     *         timeline: {},
+     *         series: [],
+     *     },
+     *     options: []
+     *     media: []
+     * };
+     * option = {
+     *     // ec3 compat ec2: allow (only) `timeline` declared
+     *     // outside baseOption. Keep this setting for compat.
+     *     timeline: {},
+     *     baseOption: {
+     *         series: [],
+     *     },
+     *     options: [],
+     *     media: []
+     * };
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -18817,10 +20054,17 @@
         mediaList: mediaList
       };
     }
+<<<<<<< HEAD
     /**
      * @see <http://www.w3.org/TR/css3-mediaqueries/#media1>
      * Support: width, height, aspectRatio
      * Can use max or min as prefix.
+=======
+    /**
+     * @see <http://www.w3.org/TR/css3-mediaqueries/#media1>
+     * Support: width, height, aspectRatio
+     * Can use max or min as prefix.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -19586,9 +20830,15 @@
     function isSourceInstance(val) {
       return val instanceof SourceImpl;
     }
+<<<<<<< HEAD
     /**
      * Create a source from option.
      * NOTE: Created source is immutable. Don't change any properties in it.
+=======
+    /**
+     * Create a source from option.
+     * NOTE: Created source is immutable. Don't change any properties in it.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createSource(sourceData, thisMetaRawOption, // can be null. If not provided, auto detect it from `sourceData`.
@@ -19607,8 +20857,13 @@
       });
       return source;
     }
+<<<<<<< HEAD
     /**
      * Wrap original series data for some compatibility cases.
+=======
+    /**
+     * Wrap original series data for some compatibility cases.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createSourceFromSeriesDataOption(data) {
@@ -19617,8 +20872,13 @@
         sourceFormat: isTypedArray(data) ? SOURCE_FORMAT_TYPED_ARRAY : SOURCE_FORMAT_ORIGINAL
       });
     }
+<<<<<<< HEAD
     /**
      * Clone source but excludes source data.
+=======
+    /**
+     * Clone source but excludes source data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function cloneSourceShallow(source) {
@@ -19631,8 +20891,13 @@
         dimensionsDetectedCount: source.dimensionsDetectedCount
       });
     }
+<<<<<<< HEAD
     /**
      * Note: An empty array will be detected as `SOURCE_FORMAT_ARRAY_ROWS`.
+=======
+    /**
+     * Note: An empty array will be detected as `SOURCE_FORMAT_ARRAY_ROWS`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function detectSourceFormat(data) {
@@ -19670,9 +20935,15 @@
 
       return sourceFormat;
     }
+<<<<<<< HEAD
     /**
      * Determine the source definitions from data standalone dimensions definitions
      * are not specified.
+=======
+    /**
+     * Determine the source definitions from data standalone dimensions definitions
+     * are not specified.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function determineSourceDimensions(data, sourceFormat, seriesLayoutBy, sourceHeader, // standalone raw dimensions definition, like:
@@ -19859,6 +21130,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -19876,13 +21148,38 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     var _a, _b, _c; // TODO
     var providerMethods;
     var mountMethods;
+<<<<<<< HEAD
     /**
      * If normal array used, mutable chunk size is supported.
      * If typed array used, chunk size must be fixed.
+=======
+    /**
+     * If normal array used, mutable chunk size is supported.
+     * If typed array used, chunk size must be fixed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var DefaultDataProvider =
@@ -20204,8 +21501,13 @@
     /** @class */
     function () {
       function DataFormatMixin() {}
+<<<<<<< HEAD
       /**
        * Get params for formatter
+=======
+      /**
+       * Get params for formatter
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -20242,6 +21544,7 @@
           $vars: ['seriesName', 'name', 'value']
         };
       };
+<<<<<<< HEAD
       /**
        * Format label
        * @param dataIndex
@@ -20251,6 +21554,17 @@
        *        use formatter in different dimensions, like radar.
        * @param formatter Formatter given outside.
        * @return return null/undefined if no formatter
+=======
+      /**
+       * Format label
+       * @param dataIndex
+       * @param status 'normal' by default
+       * @param dataType
+       * @param labelDimIndex Only used in some chart that
+       *        use formatter in different dimensions, like radar.
+       * @param formatter Formatter given outside.
+       * @return return null/undefined if no formatter
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -20309,19 +21623,32 @@
           });
         }
       };
+<<<<<<< HEAD
       /**
        * Get raw value in option
+=======
+      /**
+       * Get raw value in option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       DataFormatMixin.prototype.getRawValue = function (idx, dataType) {
         return retrieveRawValue(this.getData(dataType), idx);
       };
+<<<<<<< HEAD
       /**
        * Should be implemented.
        * @param {number} dataIndex
        * @param {boolean} [multipleSeries=false]
        * @param {string} [dataType]
+=======
+      /**
+       * Should be implemented.
+       * @param {number} dataIndex
+       * @param {boolean} [multipleSeries=false]
+       * @param {string} [dataType]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -20333,9 +21660,15 @@
       return DataFormatMixin;
     }();
 
+<<<<<<< HEAD
     /**
      * @param {Object} define
      * @return See the return of `createTask`.
+=======
+    /**
+     * @param {Object} define
+     * @return See the return of `createTask`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createTask(define) {
@@ -20353,12 +21686,21 @@
         this._onDirty = define.onDirty;
         this._dirty = true;
       }
+<<<<<<< HEAD
       /**
        * @param step Specified step.
        * @param skip Skip customer perform call.
        * @param modBy Sampling window size.
        * @param modDataCount Sampling count.
        * @return whether unfinished.
+=======
+      /**
+       * @param step Specified step.
+       * @param skip Skip customer perform call.
+       * @param modBy Sampling window size.
+       * @param modDataCount Sampling count.
+       * @return whether unfinished.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -20512,9 +21854,15 @@
       Task.prototype.unfinished = function () {
         return this._progress && this._dueIndex < this._dueEnd;
       };
+<<<<<<< HEAD
       /**
        * @param downTask The downstream task.
        * @return The downstream task.
+=======
+      /**
+       * @param downTask The downstream task.
+       * @return The downstream task.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -20677,6 +22025,7 @@
     //     }
     // };
 
+<<<<<<< HEAD
     /**
      * Convert raw the value in to inner value in List.
      *
@@ -20684,6 +22033,15 @@
      *
      * [Caution]: this is the key logic of user value parser.
      * For backward compatibility, do not modify it until you have to!
+=======
+    /**
+     * Convert raw the value in to inner value in List.
+     *
+     * [Performance sensitive]
+     *
+     * [Caution]: this is the key logic of user value parser.
+     * For backward compatibility, do not modify it until you have to!
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function parseDataValue(value, // For high performance, do not omit the second param.
@@ -20726,9 +22084,15 @@
       }
     });
 
+<<<<<<< HEAD
     /**
      * TODO: disable writable.
      * This structure will be exposed to users.
+=======
+    /**
+     * TODO: disable writable.
+     * This structure will be exposed to users.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var ExternalSource =
@@ -20749,14 +22113,20 @@
       ExternalSource.prototype.cloneRawData = function () {
         return;
       };
+<<<<<<< HEAD
       /**
        * @return If dimension not found, return null/undefined.
+=======
+      /**
+       * @return If dimension not found, return null/undefined.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       ExternalSource.prototype.getDimensionInfo = function (dim) {
         return;
       };
+<<<<<<< HEAD
       /**
        * dimensions defined if and only if either:
        * (a) dataset.dimensions are declared.
@@ -20765,6 +22135,16 @@
        * the defined dimensions.
        * Otherwise, `dimensionInfoAll` is determined by data columns.
        * @return Always return an array (even empty array).
+=======
+      /**
+       * dimensions defined if and only if either:
+       * (a) dataset.dimensions are declared.
+       * (b) dataset data include dimensions definitions in data (detected or via specified `sourceHeader`).
+       * If dimensions are defined, `dimensionInfoAll` is corresponding to
+       * the defined dimensions.
+       * Otherwise, `dimensionInfoAll` is determined by data columns.
+       * @return Always return an array (even empty array).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -20775,10 +22155,17 @@
       ExternalSource.prototype.count = function () {
         return;
       };
+<<<<<<< HEAD
       /**
        * Only support by dimension index.
        * No need to support by dimension name in transform function,
        * because transform function is not case-specific, no need to use name literally.
+=======
+      /**
+       * Only support by dimension index.
+       * No need to support by dimension name in transform function,
+       * because transform function is not case-specific, no need to use name literally.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21116,6 +22503,7 @@
 
         var resultMetaRawOption;
         var firstUpSource = upSourceList[0];
+<<<<<<< HEAD
         /**
          * Intuitively, the end users known the content of the original `dataset.source`,
          * calucating the transform result in mind.
@@ -21137,6 +22525,29 @@
          * dimensions in transformers.
          *
          * See also [DIMENSION_INHERIT_RULE] in `sourceManager.ts`.
+=======
+        /**
+         * Intuitively, the end users known the content of the original `dataset.source`,
+         * calucating the transform result in mind.
+         * Suppose the original `dataset.source` is:
+         * ```js
+         * [
+         *     ['product', '2012', '2013', '2014', '2015'],
+         *     ['AAA', 41.1, 30.4, 65.1, 53.3],
+         *     ['BBB', 86.5, 92.1, 85.7, 83.1],
+         *     ['CCC', 24.1, 67.2, 79.5, 86.4]
+         * ]
+         * ```
+         * The dimension info have to be detected from the source data.
+         * Some of the transformers (like filter, sort) will follow the dimension info
+         * of upstream, while others use new dimensions (like aggregate).
+         * Transformer can output a field `dimensions` to define the its own output dimensions.
+         * We also allow transformers to ignore the output `dimensions` field, and
+         * inherit the upstream dimensions definition. It can reduce the burden of handling
+         * dimensions in transformers.
+         *
+         * See also [DIMENSION_INHERIT_RULE] in `sourceManager.ts`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
         if (firstUpSource && resultIndex === 0 // If transformer returns `dimensions`, it means that the transformer has different
@@ -21183,8 +22594,13 @@
     var CtorUint16Array = typeof Uint16Array === UNDEFINED ? Array : Uint16Array;
     var CtorInt32Array = typeof Int32Array === UNDEFINED ? Array : Int32Array;
     var CtorFloat64Array = typeof Float64Array === UNDEFINED ? Array : Float64Array;
+<<<<<<< HEAD
     /**
      * Multi dimensional data store
+=======
+    /**
+     * Multi dimensional data store
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var dataCtors = {
@@ -21233,8 +22649,13 @@
         store[dimIdx] = new DataCtor(end);
       }
     }
+<<<<<<< HEAD
     /**
      * Basically, DataStore API keep immutable.
+=======
+    /**
+     * Basically, DataStore API keep immutable.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var DataStore =
@@ -21249,8 +22670,13 @@
         this._rawCount = 0;
         this._calcDimNameToIdx = createHashMap();
       }
+<<<<<<< HEAD
       /**
        * Initialize from data
+=======
+      /**
+       * Initialize from data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21291,20 +22717,34 @@
       DataStore.prototype.getProvider = function () {
         return this._provider;
       };
+<<<<<<< HEAD
       /**
        * Caution: even when a `source` instance owned by a series, the created data store
        * may still be shared by different sereis (the source hash does not use all `source`
        * props, see `sourceManager`). In this case, the `source` props that are not used in
        * hash (like `source.dimensionDefine`) probably only belongs to a certain series and
        * thus should not be fetch here.
+=======
+      /**
+       * Caution: even when a `source` instance owned by a series, the created data store
+       * may still be shared by different sereis (the source hash does not use all `source`
+       * props, see `sourceManager`). In this case, the `source` props that are not used in
+       * hash (like `source.dimensionDefine`) probably only belongs to a certain series and
+       * thus should not be fetch here.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       DataStore.prototype.getSource = function () {
         return this._provider.getSource();
       };
+<<<<<<< HEAD
       /**
        * @caution Only used in dataStack.
+=======
+      /**
+       * @caution Only used in dataStack.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21369,8 +22809,13 @@
         var item = this._dimensions[dimIndex];
         return item && item.property;
       };
+<<<<<<< HEAD
       /**
        * Caution: Can be only called on raw data (before `this._indices` created).
+=======
+      /**
+       * Caution: Can be only called on raw data (before `this._indices` created).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21491,8 +22936,13 @@
       DataStore.prototype.count = function () {
         return this._count;
       };
+<<<<<<< HEAD
       /**
        * Get value. Return NaN if idx is out of range.
+=======
+      /**
+       * Get value. Return NaN if idx is out of range.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21527,8 +22977,13 @@
 
         return values;
       };
+<<<<<<< HEAD
       /**
        * @param dim concrete dim
+=======
+      /**
+       * @param dim concrete dim
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21540,8 +22995,13 @@
         var dimStore = this._chunks[dim];
         return dimStore ? dimStore[rawIdx] : NaN;
       };
+<<<<<<< HEAD
       /**
        * Get sum of data in one dimension
+=======
+      /**
+       * Get sum of data in one dimension
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21561,8 +23021,13 @@
 
         return sum;
       };
+<<<<<<< HEAD
       /**
        * Get median of data in one dimension
+=======
+      /**
+       * Get median of data in one dimension
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21583,8 +23048,13 @@
 
         return len === 0 ? 0 : len % 2 === 1 ? sortedDimDataArray[(len - 1) / 2] : (sortedDimDataArray[len / 2] + sortedDimDataArray[len / 2 - 1]) / 2;
       };
+<<<<<<< HEAD
       /**
        * Retrieve the index with given raw data index.
+=======
+      /**
+       * Retrieve the index with given raw data index.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21623,6 +23093,7 @@
 
         return -1;
       };
+<<<<<<< HEAD
       /**
        * Retrieve the index of nearest value.
        * @param dim
@@ -21630,6 +23101,15 @@
        * @param [maxDistance=Infinity]
        * @return If and only if multiple indices have
        *         the same value, they are put to the result.
+=======
+      /**
+       * Retrieve the index of nearest value.
+       * @param dim
+       * @param value
+       * @param [maxDistance=Infinity]
+       * @return If and only if multiple indices have
+       *         the same value, they are put to the result.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21706,8 +23186,13 @@
 
         return newIndices;
       };
+<<<<<<< HEAD
       /**
        * Data filter.
+=======
+      /**
+       * Data filter.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21764,9 +23249,15 @@
 
         return newStore;
       };
+<<<<<<< HEAD
       /**
        * Select data in range. (For optimization of filter)
        * (Manually inline code, support 5 million data filtering in data zoom.)
+=======
+      /**
+       * Select data in range. (For optimization of filter)
+       * (Manually inline code, support 5 million data filtering in data zoom.)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21892,8 +23383,13 @@
       //     return result;
       // }
 
+<<<<<<< HEAD
       /**
        * Data mapping to a new List with given dimensions
+=======
+      /**
+       * Data mapping to a new List with given dimensions
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21905,8 +23401,13 @@
 
         return target;
       };
+<<<<<<< HEAD
       /**
        * @caution Danger!! Only used in dataStack.
+=======
+      /**
+       * @caution Danger!! Only used in dataStack.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -21964,10 +23465,17 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * Large data down sampling using largest-triangle-three-buckets
        * @param {string} valueDimension
        * @param {number} targetCount
+=======
+      /**
+       * Large data down sampling using largest-triangle-three-buckets
+       * @param {string} valueDimension
+       * @param {number} targetCount
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22055,9 +23563,15 @@
         target.getRawIndex = this._getRawIdx;
         return target;
       };
+<<<<<<< HEAD
       /**
        * Large data down sampling on given dimension
        * @param sampleIndex Sample index for name and id
+=======
+      /**
+       * Large data down sampling on given dimension
+       * @param sampleIndex Sample index for name and id
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22107,6 +23621,7 @@
 
         return target;
       };
+<<<<<<< HEAD
       /**
        * Data iteration
        * @param ctx default this
@@ -22114,6 +23629,15 @@
        *  list.each('x', function (x, idx) {});
        *  list.each(['x', 'y'], function (x, y, idx) {});
        *  list.each(function (idx) {})
+=======
+      /**
+       * Data iteration
+       * @param ctx default this
+       * @example
+       *  list.each('x', function (x, idx) {});
+       *  list.each(['x', 'y'], function (x, y, idx) {});
+       *  list.each(function (idx) {})
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22155,8 +23679,13 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * Get extent of data in one dimension
+=======
+      /**
+       * Get extent of data in one dimension
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22202,8 +23731,13 @@
         this._extent[dim] = dimExtent;
         return dimExtent;
       };
+<<<<<<< HEAD
       /**
        * Get raw data item
+=======
+      /**
+       * Get raw data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22223,10 +23757,17 @@
           return this._provider.getItem(rawIdx);
         }
       };
+<<<<<<< HEAD
       /**
        * Clone shallow.
        *
        * @param clonedDims Determine which dims to clone. Will share the data if not specified.
+=======
+      /**
+       * Clone shallow.
+       *
+       * @param clonedDims Determine which dims to clone. Will share the data if not specified.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22334,6 +23875,7 @@
       return DataStore;
     }();
 
+<<<<<<< HEAD
     /**
      * [REQUIREMENT_MEMO]:
      * (0) `metaRawOption` means `dimensions`/`sourceHeader`/`seriesLayoutBy` in raw option.
@@ -22423,6 +23965,97 @@
      *     fromTransformResult: 1
      * }]
      * ```
+=======
+    /**
+     * [REQUIREMENT_MEMO]:
+     * (0) `metaRawOption` means `dimensions`/`sourceHeader`/`seriesLayoutBy` in raw option.
+     * (1) Keep support the feature: `metaRawOption` can be specified both on `series` and
+     * `root-dataset`. Them on `series` has higher priority.
+     * (2) Do not support to set `metaRawOption` on a `non-root-dataset`, because it might
+     * confuse users: whether those props indicate how to visit the upstream source or visit
+     * the transform result source, and some transforms has nothing to do with these props,
+     * and some transforms might have multiple upstream.
+     * (3) Transforms should specify `metaRawOption` in each output, just like they can be
+     * declared in `root-dataset`.
+     * (4) At present only support visit source in `SERIES_LAYOUT_BY_COLUMN` in transforms.
+     * That is for reducing complexity in transforms.
+     * PENDING: Whether to provide transposition transform?
+     *
+     * [IMPLEMENTAION_MEMO]:
+     * "sourceVisitConfig" are calculated from `metaRawOption` and `data`.
+     * They will not be calculated until `source` is about to be visited (to prevent from
+     * duplicate calcuation). `source` is visited only in series and input to transforms.
+     *
+     * [DIMENSION_INHERIT_RULE]:
+     * By default the dimensions are inherited from ancestors, unless a transform return
+     * a new dimensions definition.
+     * Consider the case:
+     * ```js
+     * dataset: [{
+     *     source: [ ['Product', 'Sales', 'Prise'], ['Cookies', 321, 44.21], ...]
+     * }, {
+     *     transform: { type: 'filter', ... }
+     * }]
+     * dataset: [{
+     *     dimension: ['Product', 'Sales', 'Prise'],
+     *     source: [ ['Cookies', 321, 44.21], ...]
+     * }, {
+     *     transform: { type: 'filter', ... }
+     * }]
+     * ```
+     * The two types of option should have the same behavior after transform.
+     *
+     *
+     * [SCENARIO]:
+     * (1) Provide source data directly:
+     * ```js
+     * series: {
+     *     encode: {...},
+     *     dimensions: [...]
+     *     seriesLayoutBy: 'row',
+     *     data: [[...]]
+     * }
+     * ```
+     * (2) Series refer to dataset.
+     * ```js
+     * series: [{
+     *     encode: {...}
+     *     // Ignore datasetIndex means `datasetIndex: 0`
+     *     // and the dimensions defination in dataset is used
+     * }, {
+     *     encode: {...},
+     *     seriesLayoutBy: 'column',
+     *     datasetIndex: 1
+     * }]
+     * ```
+     * (3) dataset transform
+     * ```js
+     * dataset: [{
+     *     source: [...]
+     * }, {
+     *     source: [...]
+     * }, {
+     *     // By default from 0.
+     *     transform: { type: 'filter', config: {...} }
+     * }, {
+     *     // Piped.
+     *     transform: [
+     *         { type: 'filter', config: {...} },
+     *         { type: 'sort', config: {...} }
+     *     ]
+     * }, {
+     *     id: 'regressionData',
+     *     fromDatasetIndex: 1,
+     *     // Third-party transform
+     *     transform: { type: 'ecStat:regression', config: {...} }
+     * }, {
+     *     // retrieve the extra result.
+     *     id: 'regressionFormula',
+     *     fromDatasetId: 'regressionData',
+     *     fromTransformResult: 1
+     * }]
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var SourceManager =
@@ -22438,8 +24071,13 @@
         this._dirty = true;
         this._sourceHost = sourceHost;
       }
+<<<<<<< HEAD
       /**
        * Mark dirty.
+=======
+      /**
+       * Mark dirty.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22459,17 +24097,28 @@
           this._versionSignBase = 0;
         }
       };
+<<<<<<< HEAD
       /**
        * For detecting whether the upstream source is dirty, so that
        * the local cached source (in `_sourceList`) should be discarded.
+=======
+      /**
+       * For detecting whether the upstream source is dirty, so that
+       * the local cached source (in `_sourceList`) should be discarded.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SourceManager.prototype._getVersionSign = function () {
         return this._sourceHost.uid + '_' + this._versionSignBase;
       };
+<<<<<<< HEAD
       /**
        * Always return a source instance. Otherwise throw error.
+=======
+      /**
+       * Always return a source instance. Otherwise throw error.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22627,9 +24276,15 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * @param sourceIndex By default 0, means "main source".
        *                    In most cases there is only one source.
+=======
+      /**
+       * @param sourceIndex By default 0, means "main source".
+       *                    In most cases there is only one source.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22646,6 +24301,7 @@
 
         return source;
       };
+<<<<<<< HEAD
       /**
        *
        * Get a data store which can be shared across series.
@@ -22653,6 +24309,15 @@
        *
        * @param seriesDimRequest Dimensions that are generated in series.
        *        Should have been sorted by `storeDimIndex` asc.
+=======
+      /**
+       *
+       * Get a data store which can be shared across series.
+       * Only available for series.
+       *
+       * @param seriesDimRequest Dimensions that are generated in series.
+       *        Should have been sorted by `storeDimIndex` asc.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22693,9 +24358,15 @@
 
         return cachedStore;
       };
+<<<<<<< HEAD
       /**
        * PENDING: Is it fast enough?
        * If no upstream, return empty array.
+=======
+      /**
+       * PENDING: Is it fast enough?
+       * If no upstream, return empty array.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -22936,8 +24607,13 @@
 
         this._initSelectedMapFromData(data);
       };
+<<<<<<< HEAD
       /**
        * Util for merge default and theme to option
+=======
+      /**
+       * Util for merge default and theme to option
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23002,17 +24678,28 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * Init a data structure from data related option in series
        * Must be overridden.
+=======
+      /**
+       * Init a data structure from data related option in series
+       * Must be overridden.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesModel.prototype.getInitialData = function (option, ecModel) {
         return;
       };
+<<<<<<< HEAD
       /**
        * Append data to list
+=======
+      /**
+       * Append data to list
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23023,11 +24710,19 @@
         var data = this.getRawData();
         data.appendData(params.data);
       };
+<<<<<<< HEAD
       /**
        * Consider some method like `filter`, `map` need make new data,
        * We should make sure that `seriesModel.getData()` get correct
        * data in the stream procedure. So we fetch data from upstream
        * each time `task.perform` called.
+=======
+      /**
+       * Consider some method like `filter`, `map` need make new data,
+       * We should make sure that `seriesModel.getData()` get correct
+       * data in the stream procedure. So we fetch data from upstream
+       * each time `task.perform` called.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23095,8 +24790,13 @@
       SeriesModel.prototype.getSource = function () {
         return this.getSourceManager().getSource();
       };
+<<<<<<< HEAD
       /**
        * Get data before processed
+=======
+      /**
+       * Get data before processed
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23112,11 +24812,19 @@
       SeriesModel.prototype.isColorBySeries = function () {
         return this.getColorBy() === 'series';
       };
+<<<<<<< HEAD
       /**
        * Get base axis if has coordinate system and has axis.
        * By default use coordSys.getBaseAxis();
        * Can be overridden for some chart.
        * @return {type} description
+=======
+      /**
+       * Get base axis if has coordinate system and has axis.
+       * By default use coordSys.getBaseAxis();
+       * Can be overridden for some chart.
+       * @return {type} description
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23125,6 +24833,7 @@
 
         return coordSys && coordSys.getBaseAxis && coordSys.getBaseAxis();
       };
+<<<<<<< HEAD
       /**
        * Default tooltip formatter
        *
@@ -23138,6 +24847,21 @@
        *        DOM operation is not supported.
        * @return formatted tooltip with `html` and `markers`
        *        Notice: The override method can also return string
+=======
+      /**
+       * Default tooltip formatter
+       *
+       * @param dataIndex
+       * @param multipleSeries
+       * @param dataType
+       * @param renderMode valid values: 'html'(by default) and 'richText'.
+       *        'html' is used for rendering tooltip in extra DOM form, and the result
+       *        string is used as DOM HTML content.
+       *        'richText' is used for rendering tooltip in rich text form, for those where
+       *        DOM operation is not supported.
+       * @return formatted tooltip with `html` and `markers`
+       *        Notice: The override method can also return string
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23183,25 +24907,41 @@
 
         return color;
       };
+<<<<<<< HEAD
       /**
        * Use `data.mapDimensionsAll(coordDim)` instead.
        * @deprecated
+=======
+      /**
+       * Use `data.mapDimensionsAll(coordDim)` instead.
+       * @deprecated
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesModel.prototype.coordDimToDataDim = function (coordDim) {
         return this.getRawData().mapDimensionsAll(coordDim);
       };
+<<<<<<< HEAD
       /**
        * Get progressive rendering count each step
+=======
+      /**
+       * Get progressive rendering count each step
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesModel.prototype.getProgressive = function () {
         return this.get('progressive');
       };
+<<<<<<< HEAD
       /**
        * Get progressive rendering count each step
+=======
+      /**
+       * Get progressive rendering count each step
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23382,10 +25122,17 @@
     mixin(SeriesModel, DataFormatMixin);
     mixin(SeriesModel, PaletteMixin);
     mountExtend(SeriesModel, ComponentModel);
+<<<<<<< HEAD
     /**
      * MUST be called after `prepareSource` called
      * Here we need to make auto series, especially for auto legend. But we
      * do not modify series.name in option to avoid side effects.
+=======
+    /**
+     * MUST be called after `prepareSource` called
+     * Here we need to make auto series, especially for auto legend. But we
+     * do not modify series.name in option to avoid side effects.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function autoSeriesName(seriesModel) {
@@ -23487,19 +25234,33 @@
 
       ComponentView.prototype.updateVisual = function (model, ecModel, api, payload) {// Do nothing;
       };
+<<<<<<< HEAD
       /**
        * Hook for toggle blur target series.
        * Can be used in marker for blur or leave blur the markers
+=======
+      /**
+       * Hook for toggle blur target series.
+       * Can be used in marker for blur or leave blur the markers
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       ComponentView.prototype.toggleBlurSeries = function (seriesModels, isBlur, ecModel) {// Do nothing;
       };
+<<<<<<< HEAD
       /**
        * Traverse the new rendered elements.
        *
        * It will traverse the new added element in progressive rendering.
        * And traverse all in normal rendering.
+=======
+      /**
+       * Traverse the new rendered elements.
+       *
+       * It will traverse the new added element in progressive rendering.
+       * And traverse all in normal rendering.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23516,8 +25277,13 @@
     enableClassExtend(ComponentView);
     enableClassManagement(ComponentView);
 
+<<<<<<< HEAD
     /**
      * @return {string} If large mode changed, return string 'reset';
+=======
+    /**
+     * @return {string} If large mode changed, return string 'reset';
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createRenderPlanner() {
@@ -23561,8 +25327,13 @@
           throw new Error('render method must been implemented');
         }
       };
+<<<<<<< HEAD
       /**
        * Highlight series or specified data item.
+=======
+      /**
+       * Highlight series or specified data item.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23579,8 +25350,13 @@
 
         toggleHighlight(data, payload, 'emphasis');
       };
+<<<<<<< HEAD
       /**
        * Downplay series or specified data item.
+=======
+      /**
+       * Downplay series or specified data item.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23597,16 +25373,26 @@
 
         toggleHighlight(data, payload, 'normal');
       };
+<<<<<<< HEAD
       /**
        * Remove self.
+=======
+      /**
+       * Remove self.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       ChartView.prototype.remove = function (ecModel, api) {
         this.group.removeAll();
       };
+<<<<<<< HEAD
       /**
        * Dispose self.
+=======
+      /**
+       * Dispose self.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23625,11 +25411,19 @@
       ChartView.prototype.updateVisual = function (seriesModel, ecModel, api, payload) {
         this.render(seriesModel, ecModel, api, payload);
       };
+<<<<<<< HEAD
       /**
        * Traverse the new rendered elements.
        *
        * It will traverse the new added element in progressive rendering.
        * And traverse all in normal rendering.
+=======
+      /**
+       * Traverse the new rendered elements.
+       *
+       * It will traverse the new added element in progressive rendering.
+       * And traverse all in normal rendering.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23648,8 +25442,13 @@
 
       return ChartView;
     }();
+<<<<<<< HEAD
     /**
      * Set state of single element
+=======
+    /**
+     * Set state of single element
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function elSetState(el, state, highlightDigit) {
@@ -23718,6 +25517,7 @@
       }
     };
 
+<<<<<<< HEAD
     /**
      * @public
      * @param {(Function)} fn
@@ -23726,6 +25526,16 @@
      *        true: If call interval less than `delay`, only the last call works.
      *        false: If call interval less than `delay, call works on fixed rate.
      * @return {(Function)} throttled fn.
+=======
+    /**
+     * @public
+     * @param {(Function)} fn
+     * @param {number} [delay=0] Unit: ms.
+     * @param {boolean} [debounce=false]
+     *        true: If call interval less than `delay`, only the last call works.
+     *        false: If call interval less than `delay, call works on fixed rate.
+     * @return {(Function)} throttled fn.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function throttle(fn, delay, debounce) {
@@ -23780,9 +25590,15 @@
 
         lastCall = currCall;
       };
+<<<<<<< HEAD
       /**
        * Clear throttle.
        * @public
+=======
+      /**
+       * Clear throttle.
+       * @public
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23792,8 +25608,13 @@
           timer = null;
         }
       };
+<<<<<<< HEAD
       /**
        * Enable debounce once.
+=======
+      /**
+       * Enable debounce once.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -23992,6 +25813,7 @@
     };
 
     var PI$3 = Math.PI;
+<<<<<<< HEAD
     /**
      * @param {module:echarts/ExtensionAPI} api
      * @param {Object} [opts]
@@ -23999,6 +25821,15 @@
      * @param {string} [opts.color]
      * @param {string} [opts.textColor]
      * @return {module:zrender/Element}
+=======
+    /**
+     * @param {module:echarts/ExtensionAPI} api
+     * @param {Object} [opts]
+     * @param {string} [opts.text]
+     * @param {string} [opts.color]
+     * @param {string} [opts.textColor]
+     * @return {module:zrender/Element}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function defaultLoading(api, opts) {
@@ -24181,12 +26012,21 @@
       Scheduler.prototype.getPipeline = function (pipelineId) {
         return this._pipelineMap.get(pipelineId);
       };
+<<<<<<< HEAD
       /**
        * Current, progressive rendering starts from visual and layout.
        * Always detect render mode in the same stage, avoiding that incorrect
        * detection caused by data filtering.
        * Caution:
        * `updateStreamModes` use `seriesModel.getData()`.
+=======
+      /**
+       * Current, progressive rendering starts from visual and layout.
+       * Always detect render mode in the same stage, avoiding that incorrect
+       * detection caused by data filtering.
+       * Caution:
+       * `updateStreamModes` use `seriesModel.getData()`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -24566,12 +26406,21 @@
     function seriesTaskCount(context) {
       return context.data.count();
     }
+<<<<<<< HEAD
     /**
      * Only some legacy stage handlers (usually in echarts extensions) are pure function.
      * To ensure that they can work normally, they should work in block mode, that is,
      * they should not be started util the previous tasks finished. So they cause the
      * progressive rendering disabled. We try to detect the series type, to narrow down
      * the block range to only the series type they concern, but not all series.
+=======
+    /**
+     * Only some legacy stage handlers (usually in echarts extensions) are pure function.
+     * To ensure that they can work normally, they should work in block mode, that is,
+     * they should not be started util the previous tasks finished. So they cause the
+     * progressive rendering disabled. We try to detect the series type, to narrow down
+     * the block range to only the series type they concern, but not all series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -24636,6 +26485,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -24653,6 +26503,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     var colorAll = ['#37A2DA', '#32C5E9', '#67E0E3', '#9FE6B8', '#FFDB5C', '#ff9f7f', '#fb7293', '#E062AE', '#E690D1', '#e7bcf3', '#9d96f5', '#8378EA', '#96BFFF'];
     var lightTheme = {
@@ -24684,6 +26553,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -24701,6 +26571,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     var contrastColor = '#B9B8CE';
     var backgroundColor = '#100C2A';
@@ -24883,6 +26772,7 @@
     };
     theme.categoryAxis.splitLine.show = false;
 
+<<<<<<< HEAD
     /**
      * Usage of query:
      * `chart.on('click', query, handler);`
@@ -24899,6 +26789,24 @@
      *
      * Caveat: If a prop in the `query` object is `null/undefined`, it is the
      * same as there is no such prop in the `query` object.
+=======
+    /**
+     * Usage of query:
+     * `chart.on('click', query, handler);`
+     * The `query` can be:
+     * + The component type query string, only `mainType` or `mainType.subType`,
+     *   like: 'xAxis', 'series', 'xAxis.category' or 'series.line'.
+     * + The component query object, like:
+     *   `{seriesIndex: 2}`, `{seriesName: 'xx'}`, `{seriesId: 'some'}`,
+     *   `{xAxisIndex: 2}`, `{xAxisName: 'xx'}`, `{xAxisId: 'some'}`.
+     * + The data query object, like:
+     *   `{dataIndex: 123}`, `{dataType: 'link'}`, `{name: 'some'}`.
+     * + The other query object (cmponent customized query), like:
+     *   `{element: 'some'}` (only available in custom series).
+     *
+     * Caveat: If a prop in the `query` object is `null/undefined`, it is the
+     * same as there is no such prop in the `query` object.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var ECEventProcessor =
@@ -25116,6 +27024,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -25133,6 +27042,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     function getItemVisualFromData(data, dataIndex, key) {
       switch (key) {
@@ -25281,6 +27209,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -25298,6 +27227,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     function findEventDispatcher(target, det, returnFirstMatch) {
       var found;
@@ -25359,9 +27307,15 @@
         return WeakMap;
     }());
 
+<<<<<<< HEAD
     /**
      * Triangle shape
      * @inner
+=======
+    /**
+     * Triangle shape
+     * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var Triangle = Path.extend({
@@ -25383,9 +27337,15 @@
         path.closePath();
       }
     });
+<<<<<<< HEAD
     /**
      * Diamond shape
      * @inner
+=======
+    /**
+     * Diamond shape
+     * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var Diamond = Path.extend({
@@ -25408,9 +27368,15 @@
         path.closePath();
       }
     });
+<<<<<<< HEAD
     /**
      * Pin shape
      * @inner
+=======
+    /**
+     * Pin shape
+     * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var Pin = Path.extend({
@@ -25446,9 +27412,15 @@
         path.closePath();
       }
     });
+<<<<<<< HEAD
     /**
      * Arrow shape
      * @inner
+=======
+    /**
+     * Arrow shape
+     * @inner
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var Arrow = Path.extend({
@@ -25473,8 +27445,13 @@
         ctx.closePath();
       }
     });
+<<<<<<< HEAD
     /**
      * Map of path constructors
+=======
+    /**
+     * Map of path constructors
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     // TODO Use function to build symbol path.
 
@@ -25606,8 +27583,13 @@
         this.markRedraw();
       }
     }
+<<<<<<< HEAD
     /**
      * Create a symbol element with given symbol configuration: shape, x, y, width, height, color
+=======
+    /**
+     * Create a symbol element with given symbol configuration: shape, x, y, width, height, color
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -26325,11 +28307,19 @@
     var decalMap = new WeakMap();
     var decalCache = new LRU(100);
     var decalKeys = ['symbol', 'symbolSize', 'symbolKeepAspect', 'color', 'backgroundColor', 'dashArrayX', 'dashArrayY', 'maxTileWidth', 'maxTileHeight'];
+<<<<<<< HEAD
     /**
      * Create or update pattern image from decal options
      *
      * @param {InnerDecalObject | 'none'} decalObject decal options, 'none' if no decal
      * @return {Pattern} pattern with generated image, null if no decal
+=======
+    /**
+     * Create or update pattern image from decal options
+     *
+     * @param {InnerDecalObject | 'none'} decalObject decal options, 'none' if no decal
+     * @return {Pattern} pattern with generated image, null if no decal
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createOrUpdatePatternFromDecal(decalObject, api) {
@@ -26435,6 +28425,7 @@
         pattern.svgElement = svgRoot;
         pattern.svgWidth = pSize.width;
         pattern.svgHeight = pSize.height;
+<<<<<<< HEAD
         /**
          * Get minimum length that can make a repeatable pattern.
          *
@@ -26452,6 +28443,25 @@
            * which is the least common multiple of `3 + 2` and `2 + 1`
            * |---  ---  ---  |---  --- ...
            * |-- -- -- -- -- |-- -- -- ...
+=======
+        /**
+         * Get minimum length that can make a repeatable pattern.
+         *
+         * @return {Object} pattern width and height
+         */
+
+        function getPatternSize() {
+          /**
+           * For example, if dash is [[3, 2], [2, 1]] for X, it looks like
+           * |---  ---  ---  ---  --- ...
+           * |-- -- -- -- -- -- -- -- ...
+           * |---  ---  ---  ---  --- ...
+           * |-- -- -- -- -- -- -- -- ...
+           * So the minimum length of X is 15,
+           * which is the least common multiple of `3 + 2` and `2 + 1`
+           * |---  ---  ---  |---  --- ...
+           * |-- -- -- -- -- |-- -- -- ...
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
            */
           var width = 1;
 
@@ -26588,11 +28598,19 @@
         }
       }
     }
+<<<<<<< HEAD
     /**
      * Convert symbol array into normalized array
      *
      * @param {string | (string | string[])[]} symbol symbol input
      * @return {string[][]} normolized symbol array
+=======
+    /**
+     * Convert symbol array into normalized array
+     *
+     * @param {string | (string | string[])[]} symbol symbol input
+     * @return {string[][]} normolized symbol array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function normalizeSymbolArray(symbol) {
@@ -26629,11 +28647,19 @@
 
       return result;
     }
+<<<<<<< HEAD
     /**
      * Convert dash input into dashArray
      *
      * @param {DecalDashArrayX} dash dash input
      * @return {number[][]} normolized dash array
+=======
+    /**
+     * Convert dash input into dashArray
+     *
+     * @param {DecalDashArrayX} dash dash input
+     * @return {number[][]} normolized dash array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -26646,9 +28672,15 @@
         var dashValue = Math.ceil(dash);
         return [[dashValue, dashValue]];
       }
+<<<<<<< HEAD
       /**
        * [20, 5] should be normalized into [[20, 5]],
        * while [20, [5, 10]] should be normalized into [[20, 20], [5, 10]]
+=======
+      /**
+       * [20, 5] should be normalized into [[20, 5]],
+       * while [20, [5, 10]] should be normalized into [[20, 20], [5, 10]]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -26688,11 +28720,19 @@
 
       return result;
     }
+<<<<<<< HEAD
     /**
      * Convert dash input into dashArray
      *
      * @param {DecalDashArrayY} dash dash input
      * @return {number[]} normolized dash array
+=======
+    /**
+     * Convert dash input into dashArray
+     *
+     * @param {DecalDashArrayY} dash dash input
+     * @return {number[]} normolized dash array
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -26711,6 +28751,7 @@
       });
       return dash.length % 2 ? dashValue.concat(dashValue) : dashValue;
     }
+<<<<<<< HEAD
     /**
      * Get block length of each line. A block is the length of dash line and space.
      * For example, a line with [4, 1] has a dash line of 4 and a space of 1 after
@@ -26718,6 +28759,15 @@
      *
      * @param {number[][]} dash dash array of X or Y
      * @return {number[]} block length of each line
+=======
+    /**
+     * Get block length of each line. A block is the length of dash line and space.
+     * For example, a line with [4, 1] has a dash line of 4 and a space of 1 after
+     * that, so the block length of this line is 5.
+     *
+     * @param {number[][]} dash dash array of X or Y
+     * @return {number[]} block length of each line
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -27171,8 +29221,13 @@
           triggerUpdatedEvent.call(this, silent);
         }
       };
+<<<<<<< HEAD
       /**
        * @deprecated
+=======
+      /**
+       * @deprecated
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27202,9 +29257,15 @@
         /* eslint-disable-next-line */
         || env.hasGlobalWindow && window.devicePixelRatio || 1;
       };
+<<<<<<< HEAD
       /**
        * Get canvas which has all thing rendered
        * @deprecated Use renderToCanvas instead.
+=======
+      /**
+       * Get canvas which has all thing rendered
+       * @deprecated Use renderToCanvas instead.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27246,8 +29307,13 @@
           useViewBox: opts.useViewBox
         });
       };
+<<<<<<< HEAD
       /**
        * Get svg data url
+=======
+      /**
+       * Get svg data url
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27400,10 +29466,17 @@
       ECharts.prototype.convertFromPixel = function (finder, value) {
         return doConvertPixel(this, 'convertFromPixel', finder, value);
       };
+<<<<<<< HEAD
       /**
        * Is the specified coordinate systems or components contain the given pixel point.
        * @param {Array|number} value
        * @return {boolean} result
+=======
+      /**
+       * Is the specified coordinate systems or components contain the given pixel point.
+       * @param {Array|number} value
+       * @return {boolean} result
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27441,6 +29514,7 @@
         }, this);
         return !!result;
       };
+<<<<<<< HEAD
       /**
        * Get visual from series or data.
        * @param finder
@@ -27455,6 +29529,22 @@
        *        If all of seriesIndex, seriesId, seriesName are not specified,
        *        visual will be fetched from first series.
        * @param visualType 'color', 'symbol', 'symbolSize'
+=======
+      /**
+       * Get visual from series or data.
+       * @param finder
+       *        If string, e.g., 'series', means {seriesIndex: 0}.
+       *        If Object, could contain some of these properties below:
+       *        {
+       *            seriesIndex / seriesId / seriesName,
+       *            dataIndex / dataIndexInside
+       *        }
+       *        If dataIndex is not specified, series visual will be fetched,
+       *        but not data item visual.
+       *        If all of seriesIndex, seriesId, seriesName are not specified,
+       *        visual will be fetched from first series.
+       * @param visualType 'color', 'symbol', 'symbolSize'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27475,16 +29565,26 @@
         var dataIndexInside = parsedFinder.hasOwnProperty('dataIndexInside') ? parsedFinder.dataIndexInside : parsedFinder.hasOwnProperty('dataIndex') ? data.indexOfRawIndex(parsedFinder.dataIndex) : null;
         return dataIndexInside != null ? getItemVisualFromData(data, dataIndexInside, visualType) : getVisualFromData(data, visualType);
       };
+<<<<<<< HEAD
       /**
        * Get view of corresponding component model
+=======
+      /**
+       * Get view of corresponding component model
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       ECharts.prototype.getViewOfComponentModel = function (componentModel) {
         return this._componentsMap[componentModel.__viewId];
       };
+<<<<<<< HEAD
       /**
        * Get view of corresponding series model
+=======
+      /**
+       * Get view of corresponding series model
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27635,8 +29735,13 @@
         chart._dom = chart._model = chart._chartsMap = chart._componentsMap = chart._chartsViews = chart._componentsViews = chart._scheduler = chart._api = chart._zr = chart._throttledZrFlush = chart._theme = chart._coordSysMgr = chart._messageCenter = null;
         delete instances$1[chart.id];
       };
+<<<<<<< HEAD
       /**
        * Resize the chart
+=======
+      /**
+       * Resize the chart
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27726,8 +29831,13 @@
         this._loadingFX = el;
         zr.add(el);
       };
+<<<<<<< HEAD
       /**
        * Hide loading effect
+=======
+      /**
+       * Hide loading effect
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27746,6 +29856,7 @@
         payload.type = eventActionMap[eventObj.type];
         return payload;
       };
+<<<<<<< HEAD
       /**
        * @param opt If pass boolean, means opt.silent
        * @param opt.silent Default `false`. Whether trigger events.
@@ -27754,6 +29865,16 @@
        *            immediately. Caution: it might affect performance.
        *        false: Not flush.
        *        undefined: Auto decide whether perform flush.
+=======
+      /**
+       * @param opt If pass boolean, means opt.silent
+       * @param opt.silent Default `false`. Whether trigger events.
+       * @param opt.flush Default `undefined`.
+       *        true: Flush immediately, and then pixel in canvas can be fetched
+       *            immediately. Caution: it might affect performance.
+       *        false: Not flush.
+       *        undefined: Auto decide whether perform flush.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -27849,8 +29970,13 @@
           prepareView(ecIns, false);
           scheduler.plan();
         };
+<<<<<<< HEAD
         /**
          * Prepare view instances of charts and components
+=======
+        /**
+         * Prepare view instances of charts and components
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
 
@@ -28345,6 +30471,7 @@
         triggerUpdatedEvent = function (silent) {
           !silent && this.trigger('updated');
         };
+<<<<<<< HEAD
         /**
          * Event `rendered` is triggered when zr
          * rendered. It is useful for realtime
@@ -28356,6 +30483,19 @@
          * (3) progressive rendering finished.
          * (4) no pending action.
          * (5) no delayed setOption needs to be processed.
+=======
+        /**
+         * Event `rendered` is triggered when zr
+         * rendered. It is useful for realtime
+         * snapshot (reflect animation).
+         *
+         * Event `finished` is triggered when:
+         * (1) zrender rendering finished.
+         * (2) initial animation finished.
+         * (3) progressive rendering finished.
+         * (4) no pending action.
+         * (5) no delayed setOption needs to be processed.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
 
@@ -28503,8 +30643,13 @@
             updateStates(componentModel, componentView);
           });
         };
+<<<<<<< HEAD
         /**
          * Render each chart and component
+=======
+        /**
+         * Render each chart and component
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
 
@@ -28633,8 +30778,13 @@
             });
           }
         }
+<<<<<<< HEAD
         /**
          * Update chart and blend.
+=======
+        /**
+         * Update chart and blend.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
         function updateBlend(seriesModel, chartView) {
@@ -28903,8 +31053,13 @@
     var echartsProto = ECharts.prototype;
     echartsProto.on = createRegisterEventWithLowercaseECharts('on');
     echartsProto.off = createRegisterEventWithLowercaseECharts('off');
+<<<<<<< HEAD
     /**
      * @deprecated
+=======
+    /**
+     * @deprecated
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     // @ts-ignore
 
@@ -28936,8 +31091,13 @@
     }
 
     var actions = {};
+<<<<<<< HEAD
     /**
      * Map eventType to actionType
+=======
+    /**
+     * Map eventType to actionType
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var eventActionMap = {};
@@ -28951,6 +31111,7 @@
     var idBase = +new Date() - 0;
     var groupIdBase = +new Date() - 0;
     var DOM_ATTRIBUTE_KEY = '_echarts_instance_';
+<<<<<<< HEAD
     /**
      * @param opts.devicePixelRatio Use window.devicePixelRatio by default
      * @param opts.renderer Can choose 'canvas' or 'svg' to render the chart.
@@ -28960,6 +31121,17 @@
      *        Can be 'auto' (the same as null/undefined)
      * @param opts.locale Specify the locale.
      * @param opts.useDirtyRect Enable dirty rectangle rendering or not.
+=======
+    /**
+     * @param opts.devicePixelRatio Use window.devicePixelRatio by default
+     * @param opts.renderer Can choose 'canvas' or 'svg' to render the chart.
+     * @param opts.width Use clientWidth of the input `dom` by default.
+     *        Can be 'auto' (the same as null/undefined)
+     * @param opts.height Use clientHeight of the input `dom` by default.
+     *        Can be 'auto' (the same as null/undefined)
+     * @param opts.locale Specify the locale.
+     * @param opts.useDirtyRect Enable dirty rectangle rendering or not.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function init$1(dom, theme, opts) {
@@ -28997,6 +31169,7 @@
       lifecycle.trigger('afterinit', chart);
       return chart;
     }
+<<<<<<< HEAD
     /**
      * @usage
      * (A)
@@ -29013,6 +31186,24 @@
      * let chart2 = echarts.init(dom2);
      * echarts.connect('xxx', [chart1, chart2]);
      * ```
+=======
+    /**
+     * @usage
+     * (A)
+     * ```js
+     * let chart1 = echarts.init(dom1);
+     * let chart2 = echarts.init(dom2);
+     * chart1.group = 'xxx';
+     * chart2.group = 'xxx';
+     * echarts.connect('xxx');
+     * ```
+     * (B)
+     * ```js
+     * let chart1 = echarts.init(dom1);
+     * let chart2 = echarts.init(dom2);
+     * echarts.connect('xxx', [chart1, chart2]);
+     * ```
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function connect(groupId) {
@@ -29038,6 +31229,7 @@
     function disconnect(groupId) {
       connectedGroups[groupId] = false;
     }
+<<<<<<< HEAD
     /**
      * Alias and backward compatibility
      * @deprecated
@@ -29046,6 +31238,16 @@
     var disConnect = disconnect;
     /**
      * Dispose a chart instance
+=======
+    /**
+     * Alias and backward compatibility
+     * @deprecated
+     */
+
+    var disConnect = disconnect;
+    /**
+     * Dispose a chart instance
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function dispose$1(chart) {
@@ -29066,15 +31268,25 @@
     function getInstanceById(key) {
       return instances$1[key];
     }
+<<<<<<< HEAD
     /**
      * Register theme
+=======
+    /**
+     * Register theme
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function registerTheme(name, theme) {
       themeStorage[name] = theme;
     }
+<<<<<<< HEAD
     /**
      * Register option preprocessor
+=======
+    /**
+     * Register option preprocessor
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function registerPreprocessor(preprocessorFunc) {
@@ -29085,17 +31297,29 @@
     function registerProcessor(priority, processor) {
       normalizeRegister(dataProcessorFuncs, priority, processor, PRIORITY_PROCESSOR_DEFAULT);
     }
+<<<<<<< HEAD
     /**
      * Register postIniter
      * @param {Function} postInitFunc
+=======
+    /**
+     * Register postIniter
+     * @param {Function} postInitFunc
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function registerPostInit(postInitFunc) {
       registerUpdateLifecycle('afterinit', postInitFunc);
     }
+<<<<<<< HEAD
     /**
      * Register postUpdater
      * @param {Function} postUpdateFunc
+=======
+    /**
+     * Register postUpdater
+     * @param {Function} postUpdateFunc
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function registerPostUpdate(postUpdateFunc) {
@@ -29137,10 +31361,17 @@
     function registerCoordinateSystem(type, coordSysCreator) {
       CoordinateSystemManager.register(type, coordSysCreator);
     }
+<<<<<<< HEAD
     /**
      * Get dimensions of specified coordinate system.
      * @param {string} type
      * @return {Array.<string|Object>}
+=======
+    /**
+     * Get dimensions of specified coordinate system.
+     * @param {string} type
+     * @return {Array.<string|Object>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getCoordinateSystemDimensions(type) {
@@ -29192,6 +31423,7 @@
     function registerLoading(name, loadingFx) {
       loadingEffects[name] = loadingFx;
     }
+<<<<<<< HEAD
     /**
      * ZRender need a canvas context to do measureText.
      * But in node environment canvas may be created by node-canvas.
@@ -29207,6 +31439,23 @@
      *         // Small size is enough.
      *         return new Canvas(32, 32);
      *     });
+=======
+    /**
+     * ZRender need a canvas context to do measureText.
+     * But in node environment canvas may be created by node-canvas.
+     * So we need to specify how to create a canvas instead of using document.createElement('canvas')
+     *
+     *
+     * @deprecated use setPlatformAPI({ createCanvas }) instead.
+     *
+     * @example
+     *     let Canvas = require('canvas');
+     *     let echarts = require('echarts');
+     *     echarts.setCanvasCreator(function () {
+     *         // Small size is enough.
+     *         return new Canvas(32, 32);
+     *     });
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function setCanvasCreator(creator) {
@@ -29218,9 +31467,15 @@
         createCanvas: creator
       });
     }
+<<<<<<< HEAD
     /**
      * The parameters and usage: see `geoSourceManager.registerMap`.
      * Compatible with previous `echarts.registerMap`.
+=======
+    /**
+     * The parameters and usage: see `geoSourceManager.registerMap`.
+     * Compatible with previous `echarts.registerMap`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function registerMap(mapName, geoJson, specialAreas) {
@@ -29232,8 +31487,13 @@
       return getMap && getMap(mapName);
     }
     var registerTransform = registerExternalTransform;
+<<<<<<< HEAD
     /**
      * Globa dispatchAction to a specified chart instance.
+=======
+    /**
+     * Globa dispatchAction to a specified chart instance.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     // export function dispatchAction(payload: { chartId: string } & Payload, opt?: Parameters<ECharts['dispatchAction']>[1]) {
     //     if (!payload || !payload.chartId) {
@@ -29377,6 +31637,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -29394,6 +31655,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     function dataIndexMapValueLength(valNumOrArrLengthMoreThan2) {
       return valNumOrArrLengthMoreThan2 == null ? 0 : valNumOrArrLengthMoreThan2.length || 1;
@@ -29406,8 +31686,13 @@
     var DataDiffer =
     /** @class */
     function () {
+<<<<<<< HEAD
       /**
        * @param context Can be visited by this.context in callback.
+=======
+      /**
+       * @param context Can be visited by this.context in callback.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       function DataDiffer(oldArr, newArr, oldKeyGetter, newKeyGetter, context, // By default: 'oneToOne'.
       diffMode) {
@@ -29419,8 +31704,13 @@
         this.context = context;
         this._diffModeMultiple = diffMode === 'multiple';
       }
+<<<<<<< HEAD
       /**
        * Callback function when add a data
+=======
+      /**
+       * Callback function when add a data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29428,8 +31718,13 @@
         this._add = func;
         return this;
       };
+<<<<<<< HEAD
       /**
        * Callback function when update a data
+=======
+      /**
+       * Callback function when update a data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29437,8 +31732,13 @@
         this._update = func;
         return this;
       };
+<<<<<<< HEAD
       /**
        * Callback function when update a data and only work in `cbMode: 'byKey'`.
+=======
+      /**
+       * Callback function when update a data and only work in `cbMode: 'byKey'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29446,8 +31746,13 @@
         this._updateManyToOne = func;
         return this;
       };
+<<<<<<< HEAD
       /**
        * Callback function when update a data and only work in `cbMode: 'byKey'`.
+=======
+      /**
+       * Callback function when update a data and only work in `cbMode: 'byKey'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29455,8 +31760,13 @@
         this._updateOneToMany = func;
         return this;
       };
+<<<<<<< HEAD
       /**
        * Callback function when update a data and only work in `cbMode: 'byKey'`.
+=======
+      /**
+       * Callback function when update a data and only work in `cbMode: 'byKey'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29464,8 +31774,13 @@
         this._updateManyToMany = func;
         return this;
       };
+<<<<<<< HEAD
       /**
        * Callback function when remove a data
+=======
+      /**
+       * Callback function when remove a data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29514,6 +31829,7 @@
 
         this._performRestAdd(newDataKeyArr, newDataIndexMap);
       };
+<<<<<<< HEAD
       /**
        * For example, consider the case:
        * oldData: [o0, o1, o2, o3, o4, o5, o6, o7],
@@ -29538,6 +31854,32 @@
        *     this._add(n3);
        *     this._add(n7);
        *     this._add(n8);
+=======
+      /**
+       * For example, consider the case:
+       * oldData: [o0, o1, o2, o3, o4, o5, o6, o7],
+       * newData: [n0, n1, n2, n3, n4, n5, n6, n7, n8],
+       * Where:
+       *     o0, o1, n0 has key 'a' (many to one)
+       *     o5, n4, n5, n6 has key 'b' (one to many)
+       *     o2, n1 has key 'c' (one to one)
+       *     n2, n3 has key 'd' (add)
+       *     o3, o4 has key 'e' (remove)
+       *     o6, o7, n7, n8 has key 'f' (many to many, treated as add and remove)
+       * Then:
+       *     (The order of the following directives are not ensured.)
+       *     this._updateManyToOne(n0, [o0, o1]);
+       *     this._updateOneToMany([n4, n5, n6], o5);
+       *     this._update(n1, o2);
+       *     this._remove(o3);
+       *     this._remove(o4);
+       *     this._remove(o6);
+       *     this._remove(o7);
+       *     this._add(n2);
+       *     this._add(n3);
+       *     this._add(n7);
+       *     this._add(n8);
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29659,12 +32001,21 @@
           encode: this._encode
         };
       };
+<<<<<<< HEAD
       /**
        * Get all data store dimension names.
        * Theoretically a series data store is defined both by series and used dataset (if any).
        * If some dimensions are omitted for performance reason in `this.dimensions`,
        * the dimension name may not be auto-generated if user does not specify a dimension name.
        * In this case, the dimension name is `null`/`undefined`.
+=======
+      /**
+       * Get all data store dimension names.
+       * Theoretically a series data store is defined both by series and used dataset (if any).
+       * If some dimensions are omitted for performance reason in `this.dimensions`,
+       * the dimension name may not be auto-generated if user does not specify a dimension name.
+       * In this case, the dimension name is `null`/`undefined`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -29794,6 +32145,7 @@
     var SeriesDimensionDefine =
     /** @class */
     function () {
+<<<<<<< HEAD
       /**
        * @param opt All of the fields will be shallow copied.
        */
@@ -29830,6 +32182,44 @@
          * ```
          *
          * This prop should never be `null`/`undefined` after initialized.
+=======
+      /**
+       * @param opt All of the fields will be shallow copied.
+       */
+      function SeriesDimensionDefine(opt) {
+        /**
+         * The format of `otherDims` is:
+         * ```js
+         * {
+         *     tooltip?: number
+         *     label?: number
+         *     itemName?: number
+         *     seriesName?: number
+         * }
+         * ```
+         *
+         * A `series.encode` can specified these fields:
+         * ```js
+         * encode: {
+         *     // "3, 1, 5" is the index of data dimension.
+         *     tooltip: [3, 1, 5],
+         *     label: [0, 3],
+         *     ...
+         * }
+         * ```
+         * `otherDims` is the parse result of the `series.encode` above, like:
+         * ```js
+         * // Suppose the index of this data dimension is `3`.
+         * this.otherDims = {
+         *     // `3` is at the index `0` of the `encode.tooltip`
+         *     tooltip: 0,
+         *     // `3` is at the index `1` of the `encode.label`
+         *     label: 1
+         * };
+         * ```
+         *
+         * This prop should never be `null`/`undefined` after initialized.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
         this.otherDims = {};
 
@@ -29849,6 +32239,7 @@
       number: 'n',
       time: 't'
     };
+<<<<<<< HEAD
     /**
      * Represents the dimension requirement of a series.
      *
@@ -29859,6 +32250,18 @@
      * In this case, users can only query data if and only if they have defined dimension names
      * via ec option, so we provide `getDimensionIndexFromSource`, which only query them from
      * `source` dimensions.
+=======
+    /**
+     * Represents the dimension requirement of a series.
+     *
+     * NOTICE:
+     * When there are too many dimensions in dataset and many series, only the used dimensions
+     * (i.e., used by coord sys and declared in `series.encode`) are add to `dimensionDefineList`.
+     * But users may query data by other unused dimension names.
+     * In this case, users can only query data if and only if they have defined dimension names
+     * via ec option, so we provide `getDimensionIndexFromSource`, which only query them from
+     * `source` dimensions.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var SeriesDataSchema =
@@ -29888,22 +32291,38 @@
           this._dimNameMap = ensureSourceDimNameMap(this.source);
         }
       };
+<<<<<<< HEAD
       /**
        * @caution Can only be used when `dimensionOmitted: true`.
        *
        * Get index by user defined dimension name (i.e., not internal generate name).
        * That is, get index from `dimensionsDefine`.
        * If no `dimensionsDefine`, or no name get, return -1.
+=======
+      /**
+       * @caution Can only be used when `dimensionOmitted: true`.
+       *
+       * Get index by user defined dimension name (i.e., not internal generate name).
+       * That is, get index from `dimensionsDefine`.
+       * If no `dimensionsDefine`, or no name get, return -1.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesDataSchema.prototype.getSourceDimensionIndex = function (dimName) {
         return retrieve2(this._dimNameMap.get(dimName), -1);
       };
+<<<<<<< HEAD
       /**
        * @caution Can only be used when `dimensionOmitted: true`.
        *
        * Notice: may return `null`/`undefined` if user not specify dimension names.
+=======
+      /**
+       * @caution Can only be used when `dimensionOmitted: true`.
+       *
+       * Notice: may return `null`/`undefined` if user not specify dimension names.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30072,10 +32491,17 @@
     var SeriesData =
     /** @class */
     function () {
+<<<<<<< HEAD
       /**
        * @param dimensionsInput.dimensions
        *        For example, ['someDimName', {name: 'someDimName', type: 'someDimType'}, ...].
        *        Dimensions should be concrete names like x, y, z, lng, lat, angle, radius
+=======
+      /**
+       * @param dimensionsInput.dimensions
+       *        For example, ['someDimName', {name: 'someDimName', type: 'someDimType'}, ...].
+       *        Dimensions should be concrete names like x, y, z, lng, lat, angle, radius
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       function SeriesData(dimensionsInput, hostModel) {
         this.type = 'list';
@@ -30186,6 +32612,7 @@
           });
         }
       }
+<<<<<<< HEAD
       /**
        *
        * Get concrete dimension name by dimension name or dimension index.
@@ -30202,6 +32629,24 @@
        * ```
        *
        * @return Concrete dim name.
+=======
+      /**
+       *
+       * Get concrete dimension name by dimension name or dimension index.
+       * If input a dimension name, do not validate whether the dimension name exits.
+       *
+       * @caution
+       * @param dim Must make sure the dimension is `SeriesDimensionLoose`.
+       * Because only those dimensions will have auto-generated dimension names if not
+       * have a user-specified name, and other dimensions will get a return of null/undefined.
+       *
+       * @notice Because of this reason, should better use `getDimensionIndex` instead, for examples:
+       * ```js
+       * const val = data.getStore().get(data.getDimensionIndex(dim), dataIdx);
+       * ```
+       *
+       * @return Concrete dim name.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30232,9 +32677,15 @@
           return sourceDimDef.name;
         }
       };
+<<<<<<< HEAD
       /**
        * Get dimension index in data store. Return -1 if not found.
        * Can be used to index value from getRawValue.
+=======
+      /**
+       * Get dimension index in data store. Return -1 if not found.
+       * Can be used to index value from getRawValue.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30253,6 +32704,7 @@
 
         return dimInfo ? dimInfo.storeDimIndex : this._dimOmitted ? this._schema.getSourceDimensionIndex(dim) : -1;
       };
+<<<<<<< HEAD
       /**
        * The meanings of the input parameter `dim`:
        *
@@ -30271,6 +32723,26 @@
        *   or customized in `dimensions` property of option like `"age"`.
        *
        * @return recognized `DimensionIndex`. Otherwise return null/undefined (means that dim is `DimensionName`).
+=======
+      /**
+       * The meanings of the input parameter `dim`:
+       *
+       * + If dim is a number (e.g., `1`), it means the index of the dimension.
+       *   For example, `getDimension(0)` will return 'x' or 'lng' or 'radius'.
+       * + If dim is a number-like string (e.g., `"1"`):
+       *     + If there is the same concrete dim name defined in `series.dimensions` or `dataset.dimensions`,
+       *        it means that concrete name.
+       *     + If not, it will be converted to a number, which means the index of the dimension.
+       *        (why? because of the backward compatibility. We have been tolerating number-like string in
+       *        dimension setting, although now it seems that it is not a good idea.)
+       *     For example, `visualMap[i].dimension: "1"` is the same meaning as `visualMap[i].dimension: 1`,
+       *     if no dimension name is defined as `"1"`.
+       * + If dim is a not-number-like string, it means the concrete dim name.
+       *   For example, it can be be default name `"x"`, `"y"`, `"z"`, `"lng"`, `"lat"`, `"angle"`, `"radius"`,
+       *   or customized in `dimensions` property of option like `"age"`.
+       *
+       * @return recognized `DimensionIndex`. Otherwise return null/undefined (means that dim is `DimensionName`).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30292,11 +32764,19 @@
 
         return dimIdx;
       };
+<<<<<<< HEAD
       /**
        * Get type and calculation info of particular dimension
        * @param dim
        *        Dimension can be concrete names like x, y, z, lng, lat, angle, radius
        *        Or a ordinal number. For example getDimensionInfo(0) will return 'x' or 'lng' or 'radius'
+=======
+      /**
+       * Get type and calculation info of particular dimension
+       * @param dim
+       *        Dimension can be concrete names like x, y, z, lng, lat, angle, radius
+       *        Or a ordinal number. For example getDimensionInfo(0) will return 'x' or 'lng' or 'radius'
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30313,8 +32793,13 @@
           return dimensionInfos[dimName];
         };
       };
+<<<<<<< HEAD
       /**
        * concrete dimension name list on coord.
+=======
+      /**
+       * concrete dimension name list on coord.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30342,6 +32827,7 @@
       SeriesData.prototype.getStore = function () {
         return this._store;
       };
+<<<<<<< HEAD
       /**
        * Initialize from data
        * @param data source or data or data store.
@@ -30350,6 +32836,16 @@
        *        A name can be specified in encode.itemName,
        *        or dataItem.name (only for series option data),
        *        or provided in nameList from outside.
+=======
+      /**
+       * Initialize from data
+       * @param data source or data or data store.
+       * @param nameList The name of a datum is used on data diff and
+       *        default label/tooltip.
+       *        A name can be specified in encode.itemName,
+       *        or dataItem.name (only for series option data),
+       *        or provided in nameList from outside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30388,8 +32884,13 @@
         this._dimSummary = summarizeDimensions(this, this._schema);
         this.userOutput = this._dimSummary.userOutput;
       };
+<<<<<<< HEAD
       /**
        * Caution: Can be only called on raw data (before `this._indices` created).
+=======
+      /**
+       * Caution: Can be only called on raw data (before `this._indices` created).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30398,6 +32899,7 @@
 
         this._doInit(range[0], range[1]);
       };
+<<<<<<< HEAD
       /**
        * Caution: Can be only called on raw data (before `this._indices` created).
        * This method does not modify `rawData` (`dataProvider`), but only
@@ -30412,6 +32914,22 @@
        *            ['-', 'asdf', 0]
        *        ]
        *        Each item is exactly corresponding to a dimension.
+=======
+      /**
+       * Caution: Can be only called on raw data (before `this._indices` created).
+       * This method does not modify `rawData` (`dataProvider`), but only
+       * add values to store.
+       *
+       * The final count will be increased by `Math.max(values.length, names.length)`.
+       *
+       * @param values That is the SourceType: 'arrayRows', like
+       *        [
+       *            [12, 33, 44],
+       *            [NaN, 43, 1],
+       *            ['-', 'asdf', 0]
+       *        ]
+       *        Each item is exactly corresponding to a dimension.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30512,6 +33030,7 @@
 
         prepareInvertedIndex(this);
       };
+<<<<<<< HEAD
       /**
        * PENDING: In fact currently this function is only used to short-circuit
        * the calling of `scale.unionExtentFromData` when data have been filtered by modules
@@ -30525,15 +33044,36 @@
        * Consider that if data amount is more than hundreds of thousand,
        * extent calculation will cost more than 10ms and the cache will
        * be erased because of the filtering.
+=======
+      /**
+       * PENDING: In fact currently this function is only used to short-circuit
+       * the calling of `scale.unionExtentFromData` when data have been filtered by modules
+       * like "dataZoom". `scale.unionExtentFromData` is used to calculate data extent for series on
+       * an axis, but if a "axis related data filter module" is used, the extent of the axis have
+       * been fixed and no need to calling `scale.unionExtentFromData` actually.
+       * But if we add "custom data filter" in future, which is not "axis related", this method may
+       * be still needed.
+       *
+       * Optimize for the scenario that data is filtered by a given extent.
+       * Consider that if data amount is more than hundreds of thousand,
+       * extent calculation will cost more than 10ms and the cache will
+       * be erased because of the filtering.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesData.prototype.getApproximateExtent = function (dim) {
         return this._approximateExtent[dim] || this._store.getDataExtent(this._getStoreDimIndex(dim));
       };
+<<<<<<< HEAD
       /**
        * Calculate extent on a filtered data might be time consuming.
        * Approximate extent is only used for: calculate extent of filtered data outside.
+=======
+      /**
+       * Calculate extent on a filtered data might be time consuming.
+       * Approximate extent is only used for: calculate extent of filtered data outside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30549,11 +33089,19 @@
       SeriesData.prototype.setCalculationInfo = function (key, value) {
         isObject$2(key) ? extend(this._calculationInfo, key) : this._calculationInfo[key] = value;
       };
+<<<<<<< HEAD
       /**
        * @return Never be null/undefined. `number` will be converted to string. Because:
        * In most cases, name is used in display, where returning a string is more convenient.
        * In other cases, name is used in query (see `indexOfName`), where we can keep the
        * rule that name `2` equals to name `'2'`.
+=======
+      /**
+       * @return Never be null/undefined. `number` will be converted to string. Because:
+       * In most cases, name is used in display, where returning a string is more convenient.
+       * In other cases, name is used in query (see `indexOfName`), where we can keep the
+       * rule that name `2` equals to name `'2'`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30583,11 +33131,19 @@
 
         return ordinal;
       };
+<<<<<<< HEAD
       /**
        * @return Never null/undefined. `number` will be converted to string. Because:
        * In all cases having encountered at present, id is used in making diff comparison, which
        * are usually based on hash map. We can keep the rule that the internal id are always string
        * (treat `2` is the same as `'2'`) to make the related logic simple.
+=======
+      /**
+       * @return Never null/undefined. `number` will be converted to string. Because:
+       * In all cases having encountered at present, id is used in making diff comparison, which
+       * are usually based on hash map. We can keep the rule that the internal id are always string
+       * (treat `2` is the same as `'2'`) to make the related logic simple.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30598,10 +33154,17 @@
       SeriesData.prototype.count = function () {
         return this._store.count();
       };
+<<<<<<< HEAD
       /**
        * Get value. Return NaN if idx is out of range.
        *
        * @notice Should better to use `data.getStore().get(dimIndex, dataIdx)` instead.
+=======
+      /**
+       * Get value. Return NaN if idx is out of range.
+       *
+       * @notice Should better to use `data.getStore().get(dimIndex, dataIdx)` instead.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30613,8 +33176,13 @@
           return store.get(dimInfo.storeDimIndex, idx);
         }
       };
+<<<<<<< HEAD
       /**
        * @notice Should better to use `data.getStore().getByRawIndex(dimIndex, dataIdx)` instead.
+=======
+      /**
+       * @notice Should better to use `data.getStore().getByRawIndex(dimIndex, dataIdx)` instead.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30651,9 +33219,15 @@
           return _this._getStoreDimIndex(dim);
         }), idx) : store.getValues(dimensions);
       };
+<<<<<<< HEAD
       /**
        * If value is NaN. Including '-'
        * Only check the coord dimensions.
+=======
+      /**
+       * If value is NaN. Including '-'
+       * Only check the coord dimensions.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30671,8 +33245,13 @@
 
         return true;
       };
+<<<<<<< HEAD
       /**
        * Retrieve the index with given name
+=======
+      /**
+       * Retrieve the index with given name
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30693,12 +33272,21 @@
       SeriesData.prototype.indexOfRawIndex = function (rawIndex) {
         return this._store.indexOfRawIndex(rawIndex);
       };
+<<<<<<< HEAD
       /**
        * Only support the dimension which inverted index created.
        * Do not support other cases until required.
        * @param dim concrete dim
        * @param value ordinal index
        * @return rawIndex
+=======
+      /**
+       * Only support the dimension which inverted index created.
+       * Do not support other cases until required.
+       * @param dim concrete dim
+       * @param value ordinal index
+       * @return rawIndex
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30719,6 +33307,7 @@
 
         return rawIndex;
       };
+<<<<<<< HEAD
       /**
        * Retrieve the index of nearest value
        * @param dim
@@ -30726,6 +33315,15 @@
        * @param [maxDistance=Infinity]
        * @return If and only if multiple indices has
        *         the same value, they are put to the result.
+=======
+      /**
+       * Retrieve the index of nearest value
+       * @param dim
+       * @param value
+       * @param [maxDistance=Infinity]
+       * @return If and only if multiple indices has
+       *         the same value, they are put to the result.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30762,9 +33360,15 @@
         this._store = this._store.filter(dimIndices, fCtx ? bind(cb, fCtx) : cb);
         return this;
       };
+<<<<<<< HEAD
       /**
        * Select data in range. (For optimization of filter)
        * (Manually inline code, support 5 million data filtering in data zoom.)
+=======
+      /**
+       * Select data in range. (For optimization of filter)
+       * (Manually inline code, support 5 million data filtering in data zoom.)
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30834,9 +33438,15 @@
 
         this._store.modify(dimIndices, fCtx ? bind(cb, fCtx) : cb);
       };
+<<<<<<< HEAD
       /**
        * Large data down sampling on given dimension
        * @param sampleIndex Sample index for name and id
+=======
+      /**
+       * Large data down sampling on given dimension
+       * @param sampleIndex Sample index for name and id
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30845,10 +33455,17 @@
         list._store = this._store.downSample(this._getStoreDimIndex(dimension), rate, sampleValue, sampleIndex);
         return list;
       };
+<<<<<<< HEAD
       /**
        * Large data down sampling using largest-triangle-three-buckets
        * @param {string} valueDimension
        * @param {number} targetCount
+=======
+      /**
+       * Large data down sampling using largest-triangle-three-buckets
+       * @param {string} valueDimension
+       * @param {number} targetCount
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30861,8 +33478,13 @@
       SeriesData.prototype.getRawDataItem = function (idx) {
         return this._store.getRawDataItem(idx);
       };
+<<<<<<< HEAD
       /**
        * Get model of one data item.
+=======
+      /**
+       * Get model of one data item.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       // TODO: Type of data item
 
@@ -30872,8 +33494,13 @@
         var dataItem = this.getRawDataItem(idx);
         return new Model(dataItem, hostModel, hostModel && hostModel.ecModel);
       };
+<<<<<<< HEAD
       /**
        * Create a data differ
+=======
+      /**
+       * Create a data differ
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30885,8 +33512,13 @@
           return getId(thisList, idx);
         });
       };
+<<<<<<< HEAD
       /**
        * Get visual property.
+=======
+      /**
+       * Get visual property.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30904,8 +33536,13 @@
           this._visual[kvObj] = val;
         }
       };
+<<<<<<< HEAD
       /**
        * Get visual property of single data item
+=======
+      /**
+       * Get visual property of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       // eslint-disable-next-line
 
@@ -30921,16 +33558,26 @@
 
         return val;
       };
+<<<<<<< HEAD
       /**
        * If exists visual property of single data item
+=======
+      /**
+       * If exists visual property of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesData.prototype.hasItemVisual = function () {
         return this._itemVisuals.length > 0;
       };
+<<<<<<< HEAD
       /**
        * Make sure itemVisual property is unique
+=======
+      /**
+       * Make sure itemVisual property is unique
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       // TODO: use key to save visual to reduce memory.
 
@@ -30971,8 +33618,13 @@
           itemVisual[key] = value;
         }
       };
+<<<<<<< HEAD
       /**
        * Clear itemVisuals and list visual.
+=======
+      /**
+       * Clear itemVisuals and list visual.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -30984,40 +33636,65 @@
       SeriesData.prototype.setLayout = function (key, val) {
         isObject$2(key) ? extend(this._layout, key) : this._layout[key] = val;
       };
+<<<<<<< HEAD
       /**
        * Get layout property.
+=======
+      /**
+       * Get layout property.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesData.prototype.getLayout = function (key) {
         return this._layout[key];
       };
+<<<<<<< HEAD
       /**
        * Get layout of single data item
+=======
+      /**
+       * Get layout of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesData.prototype.getItemLayout = function (idx) {
         return this._itemLayouts[idx];
       };
+<<<<<<< HEAD
       /**
        * Set layout of single data item
+=======
+      /**
+       * Set layout of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesData.prototype.setItemLayout = function (idx, layout, merge) {
         this._itemLayouts[idx] = merge ? extend(this._itemLayouts[idx] || {}, layout) : layout;
       };
+<<<<<<< HEAD
       /**
        * Clear all layout of single data item
+=======
+      /**
+       * Clear all layout of single data item
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       SeriesData.prototype.clearItemLayouts = function () {
         this._itemLayouts.length = 0;
       };
+<<<<<<< HEAD
       /**
        * Set graphic element relative to data. It can be set as null
+=======
+      /**
+       * Set graphic element relative to data. It can be set as null
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -31038,9 +33715,15 @@
           }
         });
       };
+<<<<<<< HEAD
       /**
        * Shallow clone a new list except visual and layout properties, and graph elements.
        * New list only change the indices.
+=======
+      /**
+       * Shallow clone a new list except visual and layout properties, and graph elements.
+       * New list only change the indices.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -31053,8 +33736,13 @@
         list._store = this._store;
         return list;
       };
+<<<<<<< HEAD
       /**
        * Wrap some method to add more feature
+=======
+      /**
+       * Wrap some method to add more feature
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -31106,8 +33794,13 @@
         getIdNameFromStore = function (data, dimIdx, idx) {
           return convertOptionIdName(data._getCategory(dimIdx, idx), null);
         };
+<<<<<<< HEAD
         /**
          * @see the comment of `List['getId']`.
+=======
+        /**
+         * @see the comment of `List['getId']`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
 
@@ -31132,8 +33825,13 @@
 
           return dimensions;
         };
+<<<<<<< HEAD
         /**
          * Data in excludeDimensions is copied, otherwise transferred.
+=======
+        /**
+         * Data in excludeDimensions is copied, otherwise transferred.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
 
@@ -31190,13 +33888,19 @@
       return SeriesData;
     }();
 
+<<<<<<< HEAD
     /**
      * For outside usage compat (like echarts-gl are using it).
+=======
+    /**
+     * For outside usage compat (like echarts-gl are using it).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createDimensions(source, opt) {
       return prepareSeriesDataSchema(source, opt).dimensions;
     }
+<<<<<<< HEAD
     /**
      * This method builds the relationship between:
      * + "what the coord sys or series requires (see `coordDimensions`)",
@@ -31208,6 +33912,19 @@
      * named as 'value'.
      *
      * @return The results are always sorted by `storeDimIndex` asc.
+=======
+    /**
+     * This method builds the relationship between:
+     * + "what the coord sys or series requires (see `coordDimensions`)",
+     * + "what the user defines (in `encode` and `dimensions`, see `opt.dimensionsDefine` and `opt.encodeDefine`)"
+     * + "what the data source provids (see `source`)".
+     *
+     * Some guess strategy will be adapted if user does not define something.
+     * If no 'value' dimension specified, the first no-named dimension will be
+     * named as 'value'.
+     *
+     * @return The results are always sorted by `storeDimIndex` asc.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function prepareSeriesDataSchema( // TODO: TYPE completeDimensions type
@@ -31502,6 +34219,7 @@
       return name;
     }
 
+<<<<<<< HEAD
     /**
      * @class
      * For example:
@@ -31521,6 +34239,27 @@
      *     firstCategoryDimIndex: 1,
      *     // To replace user specified encode.
      * }
+=======
+    /**
+     * @class
+     * For example:
+     * {
+     *     coordSysName: 'cartesian2d',
+     *     coordSysDims: ['x', 'y', ...],
+     *     axisMap: HashMap({
+     *         x: xAxisModel,
+     *         y: yAxisModel
+     *     }),
+     *     categoryAxisMap: HashMap({
+     *         x: xAxisModel,
+     *         y: undefined
+     *     }),
+     *     // The index of the first category axis in `coordSysDims`.
+     *     // `null/undefined` means no category axis exists.
+     *     firstCategoryDimIndex: 1,
+     *     // To replace user specified encode.
+     * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var CoordSysInfo =
@@ -31648,6 +34387,7 @@
       return axisModel.get('type') === 'category';
     }
 
+<<<<<<< HEAD
     /**
      * Note that it is too complicated to support 3d stack by value
      * (have to create two-dimension inverted index), so in 3d case
@@ -31667,6 +34407,27 @@
      *     stackedOverDimension: string
      *     stackResultDimension: string
      * }
+=======
+    /**
+     * Note that it is too complicated to support 3d stack by value
+     * (have to create two-dimension inverted index), so in 3d case
+     * we just support that stacked by index.
+     *
+     * @param seriesModel
+     * @param dimensionsInput The same as the input of <module:echarts/data/SeriesData>.
+     *        The input will be modified.
+     * @param opt
+     * @param opt.stackedCoordDimension Specify a coord dimension if needed.
+     * @param opt.byIndex=false
+     * @return calculationInfo
+     * {
+     *     stackedDimension: string
+     *     stackedByDimension: string
+     *     isStackedByIndex: boolean
+     *     stackedOverDimension: string
+     *     stackResultDimension: string
+     * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function enableDataStack(seriesModel, dimensionsInput, opt) {
@@ -31855,9 +34616,15 @@
 
       return firstCategoryDimIndex;
     }
+<<<<<<< HEAD
     /**
      * Caution: there are side effects to `sourceManager` in this method.
      * Should better only be called in `Series['getInitialData']`.
+=======
+    /**
+     * Caution: there are side effects to `sourceManager` in this method.
+     * Should better only be called in `Series['getInitialData']`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -31934,8 +34701,13 @@
       Scale.prototype.getSetting = function (name) {
         return this._setting[name];
       };
+<<<<<<< HEAD
       /**
        * Set extent from data
+=======
+      /**
+       * Set extent from data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -31945,26 +34717,43 @@
         other[1] > extent[1] && (extent[1] = other[1]); // not setExtent because in log axis it may transformed to power
         // this.setExtent(extent[0], extent[1]);
       };
+<<<<<<< HEAD
       /**
        * Set extent from data
+=======
+      /**
+       * Set extent from data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Scale.prototype.unionExtentFromData = function (data, dim) {
         this.unionExtent(data.getApproximateExtent(dim));
       };
+<<<<<<< HEAD
       /**
        * Get extent
        *
        * Extent is always in increase order.
+=======
+      /**
+       * Get extent
+       *
+       * Extent is always in increase order.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Scale.prototype.getExtent = function () {
         return this._extent.slice();
       };
+<<<<<<< HEAD
       /**
        * Set extent
+=======
+      /**
+       * Set extent
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -31979,26 +34768,43 @@
           thisExtent[1] = end;
         }
       };
+<<<<<<< HEAD
       /**
        * If value is in extent range
+=======
+      /**
+       * If value is in extent range
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Scale.prototype.isInExtentRange = function (value) {
         return this._extent[0] <= value && this._extent[1] >= value;
       };
+<<<<<<< HEAD
       /**
        * When axis extent depends on data and no data exists,
        * axis ticks should not be drawn, which is named 'blank'.
+=======
+      /**
+       * When axis extent depends on data and no data exists,
+       * axis ticks should not be drawn, which is named 'blank'.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Scale.prototype.isBlank = function () {
         return this._isBlank;
       };
+<<<<<<< HEAD
       /**
        * When axis extent depends on data and no data exists,
        * axis ticks should not be drawn, which is named 'blank'.
+=======
+      /**
+       * When axis extent depends on data and no data exists,
+       * axis ticks should not be drawn, which is named 'blank'.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32039,8 +34845,13 @@
         // @ts-ignore
         return this._getOrCreateMap().get(category);
       };
+<<<<<<< HEAD
       /**
        * @return The ordinal. If not found, return NaN.
+=======
+      /**
+       * @return The ordinal. If not found, return NaN.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32113,10 +34924,17 @@
     function isIntervalOrLogScale(scale) {
       return scale.type === 'interval' || scale.type === 'log';
     }
+<<<<<<< HEAD
     /**
      * @param extent Both extent[0] and extent[1] should be valid number.
      *               Should be extent[0] < extent[1].
      * @param splitNumber splitNumber should be >= 1.
+=======
+    /**
+     * @param extent Both extent[0] and extent[1] should be valid number.
+     *               Should be extent[0] < extent[1].
+     * @param splitNumber splitNumber should be >= 1.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function intervalScaleNiceTicks(extent, splitNumber, minInterval, maxInterval) {
@@ -32157,8 +34975,13 @@
 
       return round(f * exp10);
     }
+<<<<<<< HEAD
     /**
      * @return interval precision
+=======
+    /**
+     * @return interval precision
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getIntervalPrecision(interval) {
@@ -32240,10 +35063,17 @@
         rank = this.parse(rank);
         return contain$1(rank, this._extent) && this._ordinalMeta.categories[rank] != null;
       };
+<<<<<<< HEAD
       /**
        * Normalize given rank or name to linear [0, 1]
        * @param val raw ordinal number.
        * @return normalized value in [0, 1].
+=======
+      /**
+       * Normalize given rank or name to linear [0, 1]
+       * @param val raw ordinal number.
+       * @return normalized value in [0, 1].
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32251,9 +35081,15 @@
         val = this._getTickNumber(this.parse(val));
         return normalize$1(val, this._extent);
       };
+<<<<<<< HEAD
       /**
        * @param val normalized value in [0, 1].
        * @return raw ordinal number.
+=======
+      /**
+       * @param val normalized value in [0, 1].
+       * @return raw ordinal number.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32281,8 +35117,13 @@
         // Not support.
         return;
       };
+<<<<<<< HEAD
       /**
        * @see `Ordinal['_ordinalNumbersByTick']`
+=======
+      /**
+       * @see `Ordinal['_ordinalNumbersByTick']`
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32323,6 +35164,7 @@
 
         return ticksByOrdinalNumber && ordinal >= 0 && ordinal < ticksByOrdinalNumber.length ? ticksByOrdinalNumber[ordinal] : ordinal;
       };
+<<<<<<< HEAD
       /**
        * @usage
        * ```js
@@ -32337,6 +35179,22 @@
        * ```
        *
        * @param {OrdinalNumber} tickNumber index of display
+=======
+      /**
+       * @usage
+       * ```js
+       * const ordinalNumber = ordinalScale.getRawOrdinalNumber(tickVal);
+       *
+       * // case0
+       * const rawOrdinalValue = axisModel.getCategories()[ordinalNumber];
+       * // case1
+       * const rawOrdinalValue = this._ordinalMeta.categories[ordinalNumber];
+       * // case2
+       * const coord = axis.dataToCoord(ordinalNumber);
+       * ```
+       *
+       * @param {OrdinalNumber} tickNumber index of display
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32346,8 +35204,13 @@
 
         return ordinalNumbersByTick && tickNumber >= 0 && tickNumber < ordinalNumbersByTick.length ? ordinalNumbersByTick[tickNumber] : tickNumber;
       };
+<<<<<<< HEAD
       /**
        * Get item on tick
+=======
+      /**
+       * Get item on tick
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32368,9 +35231,15 @@
       OrdinalScale.prototype.unionExtentFromData = function (data, dim) {
         this.unionExtent(data.getApproximateExtent(dim));
       };
+<<<<<<< HEAD
       /**
        * @override
        * If value is in extent range
+=======
+      /**
+       * @override
+       * If value is in extent range
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32457,8 +35326,13 @@
         this._niceExtent = this._extent.slice();
         this._intervalPrecision = getIntervalPrecision(interval);
       };
+<<<<<<< HEAD
       /**
        * @param expandToNicedExtent Whether expand the ticks to niced extent.
+=======
+      /**
+       * @param expandToNicedExtent Whether expand the ticks to niced extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32555,9 +35429,15 @@
 
         return minorTicks;
       };
+<<<<<<< HEAD
       /**
        * @param opt.precision If 'auto', use nice presision.
        * @param opt.pad returns 1.50 but not 1.5 if precision is 2.
+=======
+      /**
+       * @param opt.precision If 'auto', use nice presision.
+       * @param opt.pad returns 1.50 but not 1.5 if precision is 2.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32580,8 +35460,13 @@
         var dataNum = roundNumber(data.value, precision, true);
         return addCommas(dataNum);
       };
+<<<<<<< HEAD
       /**
        * @param splitNumber By default `5`.
+=======
+      /**
+       * @param splitNumber By default `5`.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -32694,6 +35579,7 @@
       });
       return seriesModels;
     }
+<<<<<<< HEAD
     /**
      * Map from (baseAxis.dim + '_' + baseAxis.index) to min gap of two adjacent
      * values.
@@ -32710,6 +35596,24 @@
        * {'x_0': [1495555200000, 1495641600000, 1495728000000]}.
        * Items in axisValues[x], e.g. 1495555200000, are time values of all
        * series.
+=======
+    /**
+     * Map from (baseAxis.dim + '_' + baseAxis.index) to min gap of two adjacent
+     * values.
+     * This works for time axes, value axes, and log axes.
+     * For a single time axis, return value is in the form like
+     * {'x_0': [1000000]}.
+     * The value of 1000000 is in milliseconds.
+     */
+
+    function getValueAxesMinGaps(barSeries) {
+      /**
+       * Map from axis.index to values.
+       * For a single time axis, axisValues is in the form like
+       * {'x_0': [1495555200000, 1495641600000, 1495728000000]}.
+       * Items in axisValues[x], e.g. 1495555200000, are time values of all
+       * series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       var axisValues = {};
       each(barSeries, function (seriesModel) {
@@ -33154,8 +36058,13 @@
         _this.type = 'time';
         return _this;
       }
+<<<<<<< HEAD
       /**
        * Get label is mainly for other components like dataZoom, tooltip.
+=======
+      /**
+       * Get label is mainly for other components like dataZoom, tooltip.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -33169,8 +36078,13 @@
         var lang = this.getSetting('locale');
         return leveledFormat(tick, idx, labelFormatter, lang, isUTC);
       };
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -33259,11 +36173,19 @@
       TimeScale.type = 'time';
       return TimeScale;
     }(IntervalScale);
+<<<<<<< HEAD
     /**
      * This implementation was originally copied from "d3.js"
      * <https://github.com/d3/d3/blob/b516d77fb8566b576088e73410437494717ada26/src/time/scale.js>
      * with some modifications made for this program.
      * See the license statement at the head of this file.
+=======
+    /**
+     * This implementation was originally copied from "d3.js"
+     * <https://github.com/d3/d3/blob/b516d77fb8566b576088e73410437494717ada26/src/time/scale.js>
+     * with some modifications made for this program.
+     * See the license statement at the head of this file.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -33687,8 +36609,13 @@
         _this._interval = 0;
         return _this;
       }
+<<<<<<< HEAD
       /**
        * @param Whether expand the ticks to niced extent.
+=======
+      /**
+       * @param Whether expand the ticks to niced extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -33716,8 +36643,13 @@
         end = mathLog(Math.max(0, end)) / base;
         intervalScaleProto.setExtent.call(this, start, end);
       };
+<<<<<<< HEAD
       /**
        * @return {number} end
+=======
+      /**
+       * @return {number} end
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -33748,9 +36680,15 @@
         // filter value that <= 0
         this.unionExtent(data.getApproximateExtent(dim));
       };
+<<<<<<< HEAD
       /**
        * Update interval and extent of intervals for nice ticks
        * @param approxTickNum default 10 Given approx tick number
+=======
+      /**
+       * Update interval and extent of intervals for nice ticks
+       * @param approxTickNum default 10 Given approx tick number
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -33826,9 +36764,15 @@
       originalExtent) {
         this._prepareParams(scale, model, originalExtent);
       }
+<<<<<<< HEAD
       /**
        * Parameters depending on outside (like model, user callback)
        * are prepared and fixed here.
+=======
+      /**
+       * Parameters depending on outside (like model, user callback)
+       * are prepared and fixed here.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -33886,11 +36830,19 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * Calculate extent by prepared parameters.
        * This method has no external dependency and can be called duplicatedly,
        * getting the same result.
        * If parameters changed, should call this method to recalcuate.
+=======
+      /**
+       * Calculate extent by prepared parameters.
+       * This method has no external dependency and can be called duplicatedly,
+       * getting the same result.
+       * If parameters changed, should call this method to recalcuate.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -34004,6 +36956,7 @@
       min: '_dataMin',
       max: '_dataMax'
     };
+<<<<<<< HEAD
     /**
      * Get scale min max and related info only depends on model settings.
      * This method can be called after coordinate system created.
@@ -34018,6 +36971,22 @@
      * The code below should not be implemented repeatedly either.
      * So we cache the result in the scale instance, which will be recreated at the beginning
      * of the workflow (because `scale` instance will be recreated each round of the workflow).
+=======
+    /**
+     * Get scale min max and related info only depends on model settings.
+     * This method can be called after coordinate system created.
+     * For example, in data processing stage.
+     *
+     * Scale extent info probably be required multiple times during a workflow.
+     * For example:
+     * (1) `dataZoom` depends it to get the axis extent in "100%" state.
+     * (2) `processor/extentCalculator` depends it to make sure whether axis extent is specified.
+     * (3) `coordSys.update` use it to finally decide the scale extent.
+     * But the callback of `min`/`max` should not be called multiple times.
+     * The code below should not be implemented repeatedly either.
+     * So we cache the result in the scale instance, which will be recreated at the beginning
+     * of the workflow (because `scale` instance will be recreated each round of the workflow).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function ensureScaleRawExtentInfo(scale, model, // Usually: data extent from all series on this axis.
@@ -34038,6 +37007,7 @@
       return minMax == null ? null : eqNaN(minMax) ? NaN : scale.parse(minMax);
     }
 
+<<<<<<< HEAD
     /**
      * Get axis scale extent before niced.
      * Item of returned array can only be number (including Infinity and NaN).
@@ -34046,6 +37016,16 @@
      * Precondition of calling this method:
      * The scale extent has been initialized using series data extent via
      * `scale.setExtent` or `scale.unionExtentFromData`;
+=======
+    /**
+     * Get axis scale extent before niced.
+     * Item of returned array can only be number (including Infinity and NaN).
+     *
+     * Caution:
+     * Precondition of calling this method:
+     * The scale extent has been initialized using series data extent via
+     * `scale.setExtent` or `scale.unionExtentFromData`;
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getScaleExtent(scale, model) {
@@ -34165,8 +37145,13 @@
         scale.setInterval && scale.setInterval(interval);
       }
     }
+<<<<<<< HEAD
     /**
      * @param axisType Default retrieve from model.type
+=======
+    /**
+     * @param axisType Default retrieve from model.type
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createScaleByModel(model, axisType) {
@@ -34193,8 +37178,13 @@
         }
       }
     }
+<<<<<<< HEAD
     /**
      * Check if the axis cross 0
+=======
+    /**
+     * Check if the axis cross 0
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function ifAxisCrossZero(axis) {
@@ -34203,6 +37193,7 @@
       var max = dataExtent[1];
       return !(min > 0 && max > 0 || min < 0 && max < 0);
     }
+<<<<<<< HEAD
     /**
      * @param axis
      * @return Label formatter function.
@@ -34210,6 +37201,15 @@
      *         param: {number} idx, the index in all ticks.
      *                         If category axis, this param is not required.
      *         return: {string} label string.
+=======
+    /**
+     * @param axis
+     * @return Label formatter function.
+     *         param: {number} tickValue,
+     *         param: {number} idx, the index in all ticks.
+     *                         If category axis, this param is not required.
+     *         return: {string} label string.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function makeLabelFormatter(axis) {
@@ -34262,9 +37262,15 @@
       // in category axis.
       return axis.type === 'category' ? axis.scale.getLabel(tick) : tick.value;
     }
+<<<<<<< HEAD
     /**
      * @param axis
      * @return Be null/undefined if no labels.
+=======
+    /**
+     * @param axis
+     * @return Be null/undefined if no labels.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function estimateLabelUnionRect(axis) {
@@ -34317,9 +37323,15 @@
       var rotatedRect = new BoundingRect(textRect.x, textRect.y, afterWidth, afterHeight);
       return rotatedRect;
     }
+<<<<<<< HEAD
     /**
      * @param model axisLabelModel or axisTickModel
      * @return {number|String} Can be null|'auto'|number|function
+=======
+    /**
+     * @param model axisLabelModel or axisTickModel
+     * @return {number|String} Can be null|'auto'|number|function
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -34327,10 +37339,17 @@
       var interval = model.get('interval');
       return interval == null ? 'auto' : interval;
     }
+<<<<<<< HEAD
     /**
      * Set `categoryInterval` as 0 implicitly indicates that
      * show all labels regardless of overlap.
      * @param {Object} axis axisModel.axis
+=======
+    /**
+     * Set `categoryInterval` as 0 implicitly indicates that
+     * show all labels regardless of overlap.
+     * @param {Object} axis axisModel.axis
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function shouldShowAllLabels(axis) {
@@ -34378,6 +37397,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -34395,6 +37415,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     var AxisModelCommonMixin =
@@ -34406,9 +37445,15 @@
         var option = this.option;
         return !option.scale;
       };
+<<<<<<< HEAD
       /**
        * Should be implemented by each axis model if necessary.
        * @return coordinate system model
+=======
+      /**
+       * Should be implemented by each axis model if necessary.
+       * @return coordinate system model
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -34419,8 +37464,13 @@
       return AxisModelCommonMixin;
     }();
 
+<<<<<<< HEAD
     /**
      * Create a multi dimension List structure from seriesModel.
+=======
+    /**
+     * Create a multi dimension List structure from seriesModel.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createList(seriesModel) {
@@ -34431,11 +37481,19 @@
       enableDataStack: enableDataStack,
       getStackedDimension: getStackedDimension
     };
+<<<<<<< HEAD
     /**
      * Create scale
      * @param {Array.<number>} dataExtent
      * @param {Object|module:echarts/Model} option If `optoin.type`
      *        is secified, it can only be `'value'` currently.
+=======
+    /**
+     * Create scale
+     * @param {Array.<number>} dataExtent
+     * @param {Object|module:echarts/Model} option If `optoin.type`
+     *        is secified, it can only be `'value'` currently.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createScale(dataExtent, option) {
@@ -34457,6 +37515,7 @@
       niceScaleExtent(scale, axisModel);
       return scale;
     }
+<<<<<<< HEAD
     /**
      * Mixin common methods to axis model,
      *
@@ -34466,6 +37525,17 @@
      * `getMin(origin: boolean) => number`
      * `getMax(origin: boolean) => number`
      * `getNeedCrossZero() => boolean`
+=======
+    /**
+     * Mixin common methods to axis model,
+     *
+     * Include methods
+     * `getFormattedLabels() => Array.<string>`
+     * `getCategories() => Array.<string>`
+     * `getMin(origin: boolean) => number`
+     * `getMax(origin: boolean) => number`
+     * `getNeedCrossZero() => boolean`
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function mixinAxisModelCommonMethods(Model) {
@@ -34568,10 +37638,17 @@
       Region.prototype.setCenter = function (center) {
         this._center = center;
       };
+<<<<<<< HEAD
       /**
        * Get center point in data unit. That is,
        * for GeoJSONRegion, the unit is lat/lng,
        * for GeoSVGRegion, the unit is SVG local coord.
+=======
+      /**
+       * Get center point in data unit. That is,
+       * for GeoJSONRegion, the unit is lat/lng,
+       * for GeoSVGRegion, the unit is SVG local coord.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -34720,12 +37797,21 @@
 
         return false;
       };
+<<<<<<< HEAD
       /**
        * Transform the raw coords to target bounding.
        * @param x
        * @param y
        * @param width
        * @param height
+=======
+      /**
+       * Transform the raw coords to target bounding.
+       * @param x
+       * @param y
+       * @param width
+       * @param height
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35028,6 +38114,7 @@
       // Only ordinal scale support tick interval
       return axis.type === 'category' ? makeCategoryLabels(axis) : makeRealNumberLabels(axis);
     }
+<<<<<<< HEAD
     /**
      * @param {module:echats/coord/Axis} axis
      * @param {module:echarts/model/Model} tickModel For example, can be axisTick, splitLine, splitArea.
@@ -35035,6 +38122,15 @@
      *     ticks: Array.<number>
      *     tickCategoryInterval: number
      * }
+=======
+    /**
+     * @param {module:echats/coord/Axis} axis
+     * @param {module:echarts/model/Model} tickModel For example, can be axisTick, splitLine, splitArea.
+     * @return {Object} {
+     *     ticks: Array.<number>
+     *     tickCategoryInterval: number
+     * }
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createAxisTicks(axis, tickModel) {
@@ -35161,10 +38257,17 @@
       var result = inner$5(axis).autoInterval;
       return result != null ? result : inner$5(axis).autoInterval = axis.calculateCategoryInterval();
     }
+<<<<<<< HEAD
     /**
      * Calculate interval for category axis ticks and labels.
      * To get precise result, at least one of `getRotate` and `isHorizontal`
      * should be implemented in axis.
+=======
+    /**
+     * Calculate interval for category axis ticks and labels.
+     * To get precise result, at least one of `getRotate` and `isHorizontal`
+     * should be implemented in axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -35332,8 +38435,13 @@
     }
 
     var NORMALIZED_EXTENT = [0, 1];
+<<<<<<< HEAD
     /**
      * Base class of Axis.
+=======
+    /**
+     * Base class of Axis.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var Axis =
@@ -35346,8 +38454,13 @@
         this.scale = scale;
         this._extent = extent || [0, 0];
       }
+<<<<<<< HEAD
       /**
        * If axis extent contain given coord
+=======
+      /**
+       * If axis extent contain given coord
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35357,32 +38470,52 @@
         var max = Math.max(extent[0], extent[1]);
         return coord >= min && coord <= max;
       };
+<<<<<<< HEAD
       /**
        * If axis extent contain given data
+=======
+      /**
+       * If axis extent contain given data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Axis.prototype.containData = function (data) {
         return this.scale.contain(data);
       };
+<<<<<<< HEAD
       /**
        * Get coord extent.
+=======
+      /**
+       * Get coord extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Axis.prototype.getExtent = function () {
         return this._extent.slice();
       };
+<<<<<<< HEAD
       /**
        * Get precision used for formatting
+=======
+      /**
+       * Get precision used for formatting
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Axis.prototype.getPixelPrecision = function (dataExtent) {
         return getPixelPrecision(dataExtent || this.scale.getExtent(), this._extent);
       };
+<<<<<<< HEAD
       /**
        * Set coord extent
+=======
+      /**
+       * Set coord extent
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35391,8 +38524,13 @@
         extent[0] = start;
         extent[1] = end;
       };
+<<<<<<< HEAD
       /**
        * Convert data to coord. Data is the rank if it has an ordinal scale
+=======
+      /**
+       * Convert data to coord. Data is the rank if it has an ordinal scale
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35408,8 +38546,13 @@
 
         return linearMap(data, NORMALIZED_EXTENT, extent, clamp);
       };
+<<<<<<< HEAD
       /**
        * Convert coord to data. Data is the rank if it has an ordinal scale
+=======
+      /**
+       * Convert coord to data. Data is the rank if it has an ordinal scale
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35425,8 +38568,13 @@
         var t = linearMap(coord, extent, NORMALIZED_EXTENT, clamp);
         return this.scale.scale(t);
       };
+<<<<<<< HEAD
       /**
        * Convert pixel point to data in axis
+=======
+      /**
+       * Convert pixel point to data in axis
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35434,6 +38582,7 @@
         // Should be implemented in derived class if necessary.
         return;
       };
+<<<<<<< HEAD
       /**
        * Different from `zrUtil.map(axis.getTicks(), axis.dataToCoord, axis)`,
        * `axis.getTicksCoords` considers `onBand`, which is used by
@@ -35442,6 +38591,16 @@
        * @param opt.clamp If `true`, the first and the last
        *        tick must be at the axis end points. Otherwise, clip ticks
        *        that outside the axis extent.
+=======
+      /**
+       * Different from `zrUtil.map(axis.getTicks(), axis.dataToCoord, axis)`,
+       * `axis.getTicksCoords` considers `onBand`, which is used by
+       * `boundaryGap:true` of category axis and splitLine and splitArea.
+       * @param opt.tickModel default: axis.model.getModel('axisTick')
+       * @param opt.clamp If `true`, the first and the last
+       *        tick must be at the axis end points. Otherwise, clip ticks
+       *        that outside the axis extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35493,20 +38652,34 @@
       Axis.prototype.getLabelModel = function () {
         return this.model.getModel('axisLabel');
       };
+<<<<<<< HEAD
       /**
        * Notice here we only get the default tick model. For splitLine
        * or splitArea, we should pass the splitLineModel or splitAreaModel
        * manually when calling `getTicksCoords`.
        * In GL, this method may be overridden to:
        * `axisModel.getModel('axisTick', grid3DModel.getModel('axisTick'));`
+=======
+      /**
+       * Notice here we only get the default tick model. For splitLine
+       * or splitArea, we should pass the splitLineModel or splitAreaModel
+       * manually when calling `getTicksCoords`.
+       * In GL, this method may be overridden to:
+       * `axisModel.getModel('axisTick', grid3DModel.getModel('axisTick'));`
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Axis.prototype.getTickModel = function () {
         return this.model.getModel('axisTick');
       };
+<<<<<<< HEAD
       /**
        * Get width of band
+=======
+      /**
+       * Get width of band
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35519,10 +38692,17 @@
         var size = Math.abs(axisExtent[1] - axisExtent[0]);
         return Math.abs(size) / len;
       };
+<<<<<<< HEAD
       /**
        * Only be called in category axis.
        * Can be overridden, consider other axes like in 3D.
        * @return Auto interval for cateogry axis tick and label
+=======
+      /**
+       * Only be called in category axis.
+       * Can be overridden, consider other axes like in 3D.
+       * @return Auto interval for cateogry axis tick and label
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -35669,10 +38849,17 @@
 
     var tmpArr = [];
     var tmpProjPoint = new Point();
+<<<<<<< HEAD
     /**
      * Reduce the line segment attached to the label to limit the turn angle between two segments.
      * @param linePoints
      * @param minTurnAngle Radian of minimum turn angle. 0 - 180
+=======
+    /**
+     * Reduce the line segment attached to the label to limit the turn angle between two segments.
+     * @param linePoints
+     * @param minTurnAngle Radian of minimum turn angle. 0 - 180
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function limitTurnAngle(linePoints, minTurnAngle) {
@@ -35725,9 +38912,15 @@
         tmpProjPoint.toArray(linePoints[1]);
       }
     }
+<<<<<<< HEAD
     /**
      * Limit the angle of line and the surface
      * @param maxSurfaceAngle Radian of minimum turn angle. 0 - 180. 0 is same direction to normal. 180 is opposite
+=======
+    /**
+     * Limit the angle of line and the surface
+     * @param maxSurfaceAngle Radian of minimum turn angle. 0 - 180. 0 is same direction to normal. 180 is opposite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function limitSurfaceAngle(linePoints, surfaceNormal, maxSurfaceAngle) {
@@ -35839,8 +39032,13 @@
         }
       }
     }
+<<<<<<< HEAD
     /**
      * Create a label line if necessary and set it's style.
+=======
+    /**
+     * Create a label line if necessary and set it's style.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -36097,9 +39295,15 @@
           }
         }
       }
+<<<<<<< HEAD
       /**
        * Squeeze to allow overlap if there is no more space available.
        * Let other overlapping strategy like hideOverlap do the job instead of keep exceeding the bounds.
+=======
+      /**
+       * Squeeze to allow overlap if there is no more space available.
+       * Let other overlapping strategy like hideOverlap do the job instead of keep exceeding the bounds.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -36127,8 +39331,13 @@
 
       return adjusted;
     }
+<<<<<<< HEAD
     /**
      * Adjust labels on y direction to avoid overlap.
+=======
+    /**
+     * Adjust labels on y direction to avoid overlap.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function shiftLayoutOnY(list, topBound, bottomBound, // If average the shifts on all labels and add them to 0
@@ -37250,8 +40459,13 @@
       return LineSeriesModel;
     }(SeriesModel);
 
+<<<<<<< HEAD
     /**
      * @return label string. Not null/undefined
+=======
+    /**
+     * @return label string. Not null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function getDefaultLabel(data, dataIndex) {
@@ -37325,9 +40539,15 @@
         this._symbolType = symbolType;
         this.add(symbolPath);
       };
+<<<<<<< HEAD
       /**
        * Stop animation
        * @param {boolean} toLastFrame
+=======
+      /**
+       * Stop animation
+       * @param {boolean} toLastFrame
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -37338,6 +40558,7 @@
       Symbol.prototype.getSymbolType = function () {
         return this._symbolType;
       };
+<<<<<<< HEAD
       /**
        * FIXME:
        * Caution: This method breaks the encapsulation of this module,
@@ -37346,31 +40567,57 @@
        * especially animation.
        *
        * Get symbol path element.
+=======
+      /**
+       * FIXME:
+       * Caution: This method breaks the encapsulation of this module,
+       * but it indeed brings convenience. So do not use the method
+       * unless you detailedly know all the implements of `Symbol`,
+       * especially animation.
+       *
+       * Get symbol path element.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Symbol.prototype.getSymbolPath = function () {
         return this.childAt(0);
       };
+<<<<<<< HEAD
       /**
        * Highlight symbol
+=======
+      /**
+       * Highlight symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Symbol.prototype.highlight = function () {
         enterEmphasis(this.childAt(0));
       };
+<<<<<<< HEAD
       /**
        * Downplay symbol
+=======
+      /**
+       * Downplay symbol
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       Symbol.prototype.downplay = function () {
         leaveEmphasis(this.childAt(0));
       };
+<<<<<<< HEAD
       /**
        * @param {number} zlevel
        * @param {number} z
+=======
+      /**
+       * @param {number} zlevel
+       * @param {number} z
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -37385,8 +40632,13 @@
         symbolPath.draggable = draggable;
         symbolPath.cursor = !hasCursorOption && draggable ? 'move' : symbolPath.cursor;
       };
+<<<<<<< HEAD
       /**
        * Update symbol properties
+=======
+      /**
+       * Update symbol properties
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -37655,8 +40907,13 @@
         this.group = new Group();
         this._SymbolCtor = SymbolCtor || Symbol;
       }
+<<<<<<< HEAD
       /**
        * Update symbols draw by new data
+=======
+      /**
+       * Update symbols draw by new data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -37753,8 +41010,13 @@
         this._data = null;
         this.group.removeAll();
       };
+<<<<<<< HEAD
       /**
        * Update symbols draw by new data
+=======
+      /**
+       * Update symbols draw by new data
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
       SymbolDraw.prototype.incrementalUpdate = function (taskParams, data, opt) {
@@ -38030,10 +41292,17 @@
     function isPointNull(x, y) {
       return isNaN(x) || isNaN(y);
     }
+<<<<<<< HEAD
     /**
      * Draw smoothed line in non-monotone, in may cause undesired curve in extreme
      * situations. This should be used when points are non-monotone neither in x or
      * y dimension.
+=======
+    /**
+     * Draw smoothed line in non-monotone, in may cause undesired curve in extreme
+     * situations. This should be used when points are non-monotone neither in x or
+     * y dimension.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -38518,6 +41787,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -38535,6 +41805,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     function isCoordinateSystemType(coordSys, type) {
       return coordSys.type === type;
@@ -38668,11 +41957,19 @@
       stepPoints.push(points[i++], points[i++]);
       return stepPoints;
     }
+<<<<<<< HEAD
     /**
      * Clip color stops to edge. Avoid creating too large gradients.
      * Which may lead to blurry when GPU acceleration is enabled. See #15680
      *
      * The stops has been sorted from small to large.
+=======
+    /**
+     * Clip color stops to edge. Avoid creating too large gradients.
+     * Which may lead to blurry when GPU acceleration is enabled. See #15680
+     *
+     * The stops has been sorted from small to large.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -39627,8 +42924,13 @@
           }
         }
       };
+<<<<<<< HEAD
       /**
        * @private
+=======
+      /**
+       * @private
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
       // FIXME Two value axis
 
@@ -40102,8 +43404,13 @@
           createInvertedIndices: !!this.get('realtimeSort', true) || null
         });
       };
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -40111,8 +43418,13 @@
         // Do not support progressive in normal mode.
         return this.get('large') ? this.get('progressive') : false;
       };
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -40162,8 +43474,13 @@
       return BarSeriesModel;
     }(BaseBarSeriesModel);
 
+<<<<<<< HEAD
     /**
      * Sausage: similar to sector, but have half circle on both sides
+=======
+    /**
+     * Sausage: similar to sector, but have half circle on both sides
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var SausageShape =
@@ -40395,12 +43712,21 @@
       }
 
       var rotate = Math.PI * 1.5 - anchorAngle;
+<<<<<<< HEAD
       /**
        * TODO: labels with rotate > Math.PI / 2 should be rotate another
        * half round flipped to increase readability. However, only middle
        * position supports this for now, because in other positions, the
        * anchor point is not at the center of the text, so the positions
        * after rotating is not as expected.
+=======
+      /**
+       * TODO: labels with rotate > Math.PI / 2 should be rotate another
+       * half round flipped to increase readability. However, only middle
+       * position supports this for now, because in other positions, the
+       * anchor point is not at the center of the text, so the positions
+       * after rotating is not as expected.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
       if (mappedSectorPosition === 'middle' && rotate > Math.PI / 2 && rotate < Math.PI * 1.5) {
@@ -40604,6 +43930,7 @@
           var el = elementCreator[coord.type](seriesModel, data, dataIndex, layout, isHorizontalOrRadial, animationModel, baseAxis.model, false, roundCap);
 
           if (realtimeSortCfg) {
+<<<<<<< HEAD
             /**
              * Force label animation because even if the element is
              * ignored because it's clipped, it may not be clipped after
@@ -40611,6 +43938,15 @@
              * the label animation was never started, in which case,
              * the label will be the final value and doesn't have label
              * animation.
+=======
+            /**
+             * Force label animation because even if the element is
+             * ignored because it's clipped, it may not be clipped after
+             * changing order. Then, if not using forceLabelAnimation,
+             * the label animation was never started, in which case,
+             * the label will be the final value and doesn't have label
+             * animation.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
              */
             el.forceLabelAnimation = true;
           }
@@ -40695,11 +44031,19 @@
               var labelInnerStore = labelInner(textEl);
 
               if (labelInnerStore.prevValue != null) {
+<<<<<<< HEAD
                 /**
                  * Set preValue to be value so that no new label
                  * should be started, otherwise, it will take a full
                  * `animationDurationUpdate` time to finish the
                  * animation, which is not expected.
+=======
+                /**
+                 * Set preValue to be value so that no new label
+                 * should be started, otherwise, it will take a full
+                 * `animationDurationUpdate` time to finish the
+                 * animation, which is not expected.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
                  */
                 labelInnerStore.prevValue = labelInnerStore.value;
               }
@@ -40841,10 +44185,17 @@
 
         return false;
       };
+<<<<<<< HEAD
       /*
        * Consider the case when A and B changed order, whose representing
        * bars are both out of sight, we don't wish to trigger reorder action
        * as long as the order in the view doesn't change.
+=======
+      /*
+       * Consider the case when A and B changed order, whose representing
+       * bars are both out of sight, we don't wish to trigger reorder action
+       * as long as the order in the view doesn't change.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -41429,6 +44780,7 @@
       registers.registerLayout(registers.PRIORITY.VISUAL.PROGRESSIVE_LAYOUT, createProgressiveLayout('bar')); // Down sample after filter
 
       registers.registerProcessor(registers.PRIORITY.PROCESSOR.STATISTIC, dataSample('bar'));
+<<<<<<< HEAD
       /**
        * @payload
        * @property {string} [componentType=series]
@@ -41437,6 +44789,16 @@
        * @property {number} [zoom]
        * @property {number} [originX]
        * @property {number} [originY]
+=======
+      /**
+       * @payload
+       * @property {string} [componentType=series]
+       * @property {number} [dx]
+       * @property {number} [dy]
+       * @property {number} [zoom]
+       * @property {number} [originX]
+       * @property {number} [originY]
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
       registers.registerAction({
@@ -41642,6 +45004,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -41659,6 +45022,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     function dataFilter(seriesType) {
       return {
@@ -41866,6 +45248,7 @@
         }
       }
     }
+<<<<<<< HEAD
     /**
      * Set max width of each label, and then wrap each label to the max width.
      *
@@ -41875,6 +45258,17 @@
      * is smaller than `availableWidth`. This is useful when the text was previously
      * wrapped by calling `constrainTextWidth` but now `availableWidth` changed, in
      * which case, previous wrapping should be redo.
+=======
+    /**
+     * Set max width of each label, and then wrap each label to the max width.
+     *
+     * @param layout label layout
+     * @param availableWidth max width for the label to display
+     * @param forceRecalculate recaculate the text layout even if the current width
+     * is smaller than `availableWidth`. This is useful when the text was previously
+     * wrapped by calling `constrainTextWidth` but now `availableWidth` changed, in
+     * which case, previous wrapping should be redo.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -42177,8 +45571,13 @@
       }
     }
 
+<<<<<<< HEAD
     /**
      * Piece of pie including Sector, Label, LabelLine
+=======
+    /**
+     * Piece of pie including Sector, Label, LabelLine
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var PiePiece =
@@ -42438,6 +45837,7 @@
       return PieView;
     }(ChartView);
 
+<<<<<<< HEAD
     /**
      * [Usage]:
      * (1)
@@ -42447,6 +45847,17 @@
      *     coordDimensions: ['value'],
      *     dimensionsCount: 5
      * });
+=======
+    /**
+     * [Usage]:
+     * (1)
+     * createListSimply(seriesModel, ['value']);
+     * (2)
+     * createListSimply(seriesModel, {
+     *     coordDimensions: ['value'],
+     *     dimensionsCount: 5
+     * });
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function createSeriesDataSimply(seriesModel, opt, nameList) {
@@ -42486,6 +45897,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -42508,6 +45920,30 @@
     /**
      * LegendVisualProvider is an bridge that pick encoded color from data and
      * provide to the legend component.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+    */
+
+    /**
+     * LegendVisualProvider is an bridge that pick encoded color from data and
+     * provide to the legend component.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
     var LegendVisualProvider =
     /** @class */
@@ -42562,8 +45998,13 @@
       function PieSeriesModel() {
         return _super !== null && _super.apply(this, arguments) || this;
       }
+<<<<<<< HEAD
       /**
        * @overwrite
+=======
+      /**
+       * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -42576,16 +46017,26 @@
 
         this._defaultLabelLine(option);
       };
+<<<<<<< HEAD
       /**
        * @overwrite
+=======
+      /**
+       * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       PieSeriesModel.prototype.mergeOption = function () {
         _super.prototype.mergeOption.apply(this, arguments);
       };
+<<<<<<< HEAD
       /**
        * @overwrite
+=======
+      /**
+       * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -42595,8 +46046,13 @@
           encodeDefaulter: curry(makeSeriesEncodeForNameBased, this)
         });
       };
+<<<<<<< HEAD
       /**
        * @overwrite
+=======
+      /**
+       * @overwrite
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -42993,6 +46449,7 @@
      * AUTO-GENERATED FILE. DO NOT MODIFY.
      */
 
+<<<<<<< HEAD
     /*
     * Licensed to the Apache Software Foundation (ASF) under one
     * or more contributor license agreements.  See the NOTICE file
@@ -43010,6 +46467,25 @@
     * KIND, either express or implied.  See the License for the
     * specific language governing permissions and limitations
     * under the License.
+=======
+    /*
+    * Licensed to the Apache Software Foundation (ASF) under one
+    * or more contributor license agreements.  See the NOTICE file
+    * distributed with this work for additional information
+    * regarding copyright ownership.  The ASF licenses this file
+    * to you under the Apache License, Version 2.0 (the
+    * "License"); you may not use this file except in compliance
+    * with the License.  You may obtain a copy of the License at
+    *
+    *   http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing,
+    * software distributed under the License is distributed on an
+    * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    * KIND, either express or implied.  See the License for the
+    * specific language governing permissions and limitations
+    * under the License.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
     */
     var AXIS_TYPES = {
       value: 1,
@@ -43018,9 +46494,15 @@
       log: 1
     };
 
+<<<<<<< HEAD
     /**
      * Generate sub axis model class
      * @param axisName 'x' 'y' 'radius' 'angle' 'parallel' ...
+=======
+    /**
+     * Generate sub axis model class
+     * @param axisName 'x' 'y' 'radius' 'angle' 'parallel' ...
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function axisModelCreator(registers, axisName, BaseAxisModelClass, extraDefaultOption) {
@@ -43059,9 +46541,15 @@
               this.__ordinalMeta = OrdinalMeta.createByAxisModel(this);
             }
           };
+<<<<<<< HEAD
           /**
            * Should not be called before all of 'getInitailData' finished.
            * Because categories are collected during initializing data.
+=======
+          /**
+           * Should not be called before all of 'getInitailData' finished.
+           * Because categories are collected during initializing data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
            */
 
 
@@ -43152,9 +46640,15 @@
         _this.dimensions = cartesian2DDimensions;
         return _this;
       }
+<<<<<<< HEAD
       /**
        * Calculate an affine transform matrix if two axes are time or value.
        * It's mainly for accelartion on the large time series data.
+=======
+      /**
+       * Calculate an affine transform matrix if two axes are time or value.
+       * It's mainly for accelartion on the large time series data.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43186,8 +46680,13 @@
         var m = this._transform = [scaleX, 0, 0, scaleY, translateX, translateY];
         this._invTransform = invert([], m);
       };
+<<<<<<< HEAD
       /**
        * Base axis will be used on stacking.
+=======
+      /**
+       * Base axis will be used on stacking.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43260,9 +46759,15 @@
       Cartesian2D.prototype.getOtherAxis = function (axis) {
         return this.getAxis(axis.dim === 'x' ? 'y' : 'x');
       };
+<<<<<<< HEAD
       /**
        * Get rect area of cartesian.
        * Area will have a contain function to determine if a point is in the coordinate system.
+=======
+      /**
+       * Get rect area of cartesian.
+       * Area will have a contain function to determine if a point is in the coordinate system.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43286,9 +46791,15 @@
 
       function Axis2D(dim, scale, coordExtent, axisType, position) {
         var _this = _super.call(this, dim, scale, coordExtent) || this;
+<<<<<<< HEAD
         /**
          * Index of axis, can be used as key
          * Injected outside.
+=======
+        /**
+         * Index of axis, can be used as key
+         * Injected outside.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
          */
 
 
@@ -43302,6 +46813,7 @@
         var position = this.position;
         return position === 'top' || position === 'bottom';
       };
+<<<<<<< HEAD
       /**
        * Each item cooresponds to this.getExtent(), which
        * means globalExtent[0] may greater than globalExtent[1],
@@ -43309,6 +46821,15 @@
        *
        * @param {boolean} [asc]
        * @return {Array.<number>}
+=======
+      /**
+       * Each item cooresponds to this.getExtent(), which
+       * means globalExtent[0] may greater than globalExtent[1],
+       * unless `asc` is input.
+       *
+       * @param {boolean} [asc]
+       * @return {Array.<number>}
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43323,9 +46844,15 @@
       Axis2D.prototype.pointToData = function (point, clamp) {
         return this.coordToData(this.toLocalCoord(point[this.dim === 'x' ? 0 : 1]), clamp);
       };
+<<<<<<< HEAD
       /**
        * Set ordinalSortInfo
        * @param info new OrdinalSortInfo
+=======
+      /**
+       * Set ordinalSortInfo
+       * @param info new OrdinalSortInfo
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43341,9 +46868,15 @@
       return Axis2D;
     }(Axis);
 
+<<<<<<< HEAD
     /**
      * Can only be called after coordinate system creation stage.
      * (Can be called before coordinate system update stage).
+=======
+    /**
+     * Can only be called after coordinate system creation stage.
+     * (Can be called before coordinate system update stage).
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     function layout$1(gridModel, axisModel, opt) {
@@ -43611,8 +47144,13 @@
 
         this.resize(this.model, api);
       };
+<<<<<<< HEAD
       /**
        * Resize the grid
+=======
+      /**
+       * Resize the grid
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43698,8 +47236,13 @@
       Grid.prototype.getCartesians = function () {
         return this._coordsList.slice();
       };
+<<<<<<< HEAD
       /**
        * @implements
+=======
+      /**
+       * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43708,8 +47251,13 @@
 
         return target.cartesian ? target.cartesian.dataToPoint(value) : target.axis ? target.axis.toGlobalCoord(target.axis.dataToCoord(value)) : null;
       };
+<<<<<<< HEAD
       /**
        * @implements
+=======
+      /**
+       * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43751,8 +47299,13 @@
           axis: axis
         };
       };
+<<<<<<< HEAD
       /**
        * @implements
+=======
+      /**
+       * @implements
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43763,8 +47316,13 @@
           return coord.containPoint(point);
         }
       };
+<<<<<<< HEAD
       /**
        * Initialize cartesian coordinate systems
+=======
+      /**
+       * Initialize cartesian coordinate systems
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43857,8 +47415,13 @@
           };
         }
       };
+<<<<<<< HEAD
       /**
        * Update cartesian properties from series.
+=======
+      /**
+       * Update cartesian properties from series.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43897,8 +47460,13 @@
           });
         }
       };
+<<<<<<< HEAD
       /**
        * @param dim 'x' or 'y' or 'auto' or null/undefined
+=======
+      /**
+       * @param dim 'x' or 'y' or 'auto' or null/undefined
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -43959,8 +47527,13 @@
       Grid.dimensions = cartesian2DDimensions;
       return Grid;
     }();
+<<<<<<< HEAD
     /**
      * Check if the axis is used in the specified grid.
+=======
+    /**
+     * Check if the axis is used in the specified grid.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -44035,6 +47608,7 @@
     }
 
     var PI$4 = Math.PI;
+<<<<<<< HEAD
     /**
      * A final axis is translated and rotated from a "standard axis".
      * So opt.position and opt.rotation is required.
@@ -44056,6 +47630,29 @@
      *
      * Do not need to consider axis 'inverse', which is auto processed by
      * axis extent.
+=======
+    /**
+     * A final axis is translated and rotated from a "standard axis".
+     * So opt.position and opt.rotation is required.
+     *
+     * A standard axis is and axis from [0, 0] to [0, axisExtent[1]],
+     * for example: (0, 0) ------------> (0, 50)
+     *
+     * nameDirection or tickDirection or labelDirection is 1 means tick
+     * or label is below the standard axis, whereas is -1 means above
+     * the standard axis. labelOffset means offset between label and axis,
+     * which is useful when 'onZero', where axisLabel is in the grid and
+     * label in outside grid.
+     *
+     * Tips: like always,
+     * positive rotation represents anticlockwise, and negative rotation
+     * represents clockwise.
+     * The direction of position coordinate is the same as the direction
+     * of screen coordinate.
+     *
+     * Do not need to consider axis 'inverse', which is auto processed by
+     * axis extent.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var AxisBuilder =
@@ -44670,9 +48267,15 @@
     function isHandleTrigger(axisPointerModel) {
       return !!axisPointerModel.get(['handle', 'show']);
     }
+<<<<<<< HEAD
     /**
      * @param {module:echarts/model/Model} model
      * @return {string} unique key
+=======
+    /**
+     * @param {module:echarts/model/Model} model
+     * @return {string} unique key
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
 
@@ -44681,8 +48284,13 @@
     }
 
     var axisPointerClazz = {};
+<<<<<<< HEAD
     /**
      * Base class of AxisView.
+=======
+    /**
+     * Base class of AxisView.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
      */
 
     var AxisView =
@@ -44696,8 +48304,13 @@
         _this.type = AxisView.type;
         return _this;
       }
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -44713,16 +48326,26 @@
 
         this._doUpdateAxisPointerClass(axisModel, api, true);
       };
+<<<<<<< HEAD
       /**
        * Action handler.
+=======
+      /**
+       * Action handler.
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
       AxisView.prototype.updateAxisPointer = function (axisModel, ecModel, api, payload) {
         this._doUpdateAxisPointerClass(axisModel, api, false);
       };
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -44730,8 +48353,13 @@
         var axisPointer = this._axisPointer;
         axisPointer && axisPointer.remove(api);
       };
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
@@ -44879,8 +48507,13 @@
         _this.axisPointerClass = 'CartesianAxisPointer';
         return _this;
       }
+<<<<<<< HEAD
       /**
        * @override
+=======
+      /**
+       * @override
+>>>>>>> a46408bbb8a6599c64a5fad8560fcd3aeadfb626
        */
 
 
