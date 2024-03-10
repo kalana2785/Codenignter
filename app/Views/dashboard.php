@@ -37,6 +37,7 @@
       <th scope="col">Id</th>
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
+      <th scope="col">Type Name</th>
       <th scope="col">Quntity</th>
       <th scope="col">Last Update</th>
     </tr>
@@ -48,6 +49,7 @@
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['category_name']; ?></td>
+                <td><?php echo $row['type_name']; ?></td>  
                 <td><?php echo $row['quntity']; ?></td>
                 <td><?php echo $row['Date']; ?></td>
             </tr>

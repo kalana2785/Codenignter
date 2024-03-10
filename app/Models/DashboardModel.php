@@ -12,7 +12,8 @@ class DashboardModel extends Model
    [
        'item_name',
        'catogory',
-       'quntity'
+       'quntity',
+       'type_name'
   
 
    ];
@@ -21,14 +22,22 @@ class DashboardModel extends Model
    {
        
        $this->join('category', 'items.catogory = category.Cid');
-       $query = $this->select('items.id, items.`item_name` as item_name, items.catogory, items.quntity, items.Date, category.Cid, category.`Category_Name` as category_name');
+       $this->join('type', 'category.Cid = type.Cid', 'left'); 
+       $query = $this->select('items.id, items.`item_name` as item_name, items.catogory, items.quntity, items.Date, category.Cid, category.`Category_Name` as category_name,type.type_id, type.type_name');
        return $query->findAll();
    }
 
    // DashboardModel.php
-// ...
+/*
 
-
+public function getDashboardData()
+{
+    $this->join('category', 'items.catogory = category.Cid');
+    $this->join('type', 'category.Cid = type.Cid', 'left'); // Adjust the join condition as needed
+    $query = $this->select('items.id, items.item_name, items.catogory, items.quntity, items.Date, category.Cid, category.Category_Name, type.type_id, type.type_name');
+    return $query->findAll();
+}
+*/
 // ...
 
 }
