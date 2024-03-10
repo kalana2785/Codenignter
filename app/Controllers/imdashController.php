@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Models\DashboardModel;
 use App\Models\CategoryModel;
+use App\Models\TypeModel;
 
 class imdashController extends BaseController
 {
@@ -52,6 +53,21 @@ class imdashController extends BaseController
 
        
 
+    }
+
+    public function action()
+    {
+        if($this->request->getVar('action'))
+        {
+            $action = $this->request->getVar('action');
+            if($action == 'get_ty')
+            {
+                $typeModel = new TypeModel();
+                $typedata= $typeModel->where('Cid',$this->request->getVar('Cid'))->findAll();
+                echo json_encode($typedata);
+            }
+        }       
+        
     }
    
 

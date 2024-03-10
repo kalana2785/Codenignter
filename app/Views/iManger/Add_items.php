@@ -11,6 +11,7 @@
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+
 </head>
 
 
@@ -49,7 +50,17 @@
                   </select>
                   </div>
                 </div>
-                
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Items Type</label>
+                  <div class="col-sm-10">
+                  <select name="ty" id="ty" class="form-control input-lg">
+
+                    <option value="">Select Type</option>
+                    
+
+                  </select>
+                  </div>
+                </div>
              
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Quntity</label>
@@ -78,3 +89,33 @@
 
 
 </html>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+<script>
+        $(document).ready(function(){
+            $('#ca').change(function(){
+                var Cid = $('#ca').val();
+                var action = 'get_ty';
+                if (Cid != '') {
+                    $.ajax({
+                      url: "<?php echo base_url('/imdashController/action'); ?>",
+                      method: "POST",
+                        data: {Cid: Cid, action: action},
+                        dataType: "JSON",
+                        success: function(data) {
+                            var html = '<option value ="">Select Type </option>';
+                            for (var count = 0; count < data.length; count++) {
+                                html += '<option value ="'+data[count].type_id+ '">'+data[count].type_name+'</option>';
+                            }
+                            $('#ty').html(html);
+                        }
+                    });
+                } else {
+                    $('#ty').val('');
+                }
+            });
+        });
+    </script>
+
+

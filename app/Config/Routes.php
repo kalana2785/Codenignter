@@ -13,3 +13,5 @@ $routes->get('/Imanger/Add', 'imdashController::AddForm' );
 $routes->get('/test', 'imdashController::testveiw' );
 
 $routes->post('/Imanger/Additems', 'imdashController::store');
+
+$routes->post('imdashController/action', 'imdashController::action');
