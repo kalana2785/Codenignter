@@ -21,9 +21,16 @@ class DashboardModel extends Model
    {
        
        $this->join('category', 'items.catogory = category.Cid');
-       $query = $this->select('items.id, items.`item_name` as item_name, items.catogory, items.quntity, items.Date, category.Cid, category.`Category Name` as category_name');
+       $query = $this->select('items.id, items.`item_name` as item_name, items.catogory, items.quntity, items.Date, category.Cid, category.`Category_Name` as category_name');
        return $query->findAll();
    }
+
+   // DashboardModel.php
+// ...
+
+
+// ...
+
 }
 
 ?>

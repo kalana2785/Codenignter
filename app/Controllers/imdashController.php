@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 
 use App\Models\DashboardModel;
+use App\Models\CategoryModel;
 
 class imdashController extends BaseController
 {
@@ -14,8 +15,13 @@ class imdashController extends BaseController
         return view('dashboard.php', $data);
     }
     public function AddForm()
-    {
-        return view('iManger/Add_items.php');
+
+    {     
+        $catogoryModel = new CategoryModel();
+        $data['catogory'] = $catogoryModel->orderby('Category_Name','ASC')->findAll();
+        return view('iManger/Add_items.php', $data);
+
+       
     }
      
 
@@ -47,5 +53,6 @@ class imdashController extends BaseController
        
 
     }
+   
 
 }

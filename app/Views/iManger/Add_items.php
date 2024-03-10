@@ -36,7 +36,17 @@
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Select</label>
                   <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputText" name="ca">
+                  <select name="ca" id="ca" class="form-control input-lg">
+
+                    <option value="">Select Catogory</option>
+                    <?php
+                      foreach($catogory as $row)
+                      {
+                        echo '<option value="'.$row["Cid"].'">'.$row["Category_Name"].'</option>';
+                      }
+                    ?>
+
+                  </select>
                   </div>
                 </div>
                 
