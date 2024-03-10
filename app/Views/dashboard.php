@@ -30,6 +30,8 @@
 <?php
   }
    ?>
+<!-- Check if there is an error message and display it -->
+
 
 <table class="table">
   <thead>
@@ -40,6 +42,7 @@
       <th scope="col">Type Name</th>
       <th scope="col">Quntity</th>
       <th scope="col">Last Update</th>
+      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -52,6 +55,16 @@
                 <td><?php echo $row['type_name']; ?></td>  
                 <td><?php echo $row['quntity']; ?></td>
                 <td><?php echo $row['Date']; ?></td>
+                <td>
+
+                <a href="<?php echo base_url('your_edit_page/' . $row['id']); ?>" title="Edit">
+                 
+                 
+                <i class="bi bi-pencil-square"></i>
+                </a>
+               
+
+                </td>
             </tr>
         <?php endforeach;?> 
     <?php endif;?>

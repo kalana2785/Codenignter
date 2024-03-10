@@ -15,6 +15,7 @@ class imdashController extends BaseController
         $data['dashboards'] = $dashboardModel->getDashboardData();
         return view('dashboard.php', $data);
     }
+    // Apper item Add Form
     public function AddForm()
 
     {     
@@ -25,22 +26,35 @@ class imdashController extends BaseController
        
     }
      
-
+   // Add Form Controller
     public function store()
     {
-        $dashboardModels= new DashboardModel();
+        $dashboardModel = new DashboardModel();
+    
+        // Check the table items already exists
+        $existingItem = $dashboardModel->where([
+            'item_name' => $this->request->getPost('item_name'),
+            'catogory' => $this->request->getPost('ca')
+        ])->first();
+    
+        if ($existingItem) {
+            
+            return redirect()->back()->with('error', 'Item already exists.');
+        }
+    
+        
         $data = [
             'item_name' => $this->request->getPost('item_name'),
-            'catogory'  => $this->request->getPost('ca'),
-            'quntity'  => $this->request->getPost('quantity'),
+            'catogory' => $this->request->getPost('ca'),
+            'quntity' => $this->request->getPost('quantity'),
             'type_name' => $this->request->getPost('ty')
         ];
-        
-        $dashboardModels->save($data);
-        return redirect('dashboard')->with ('status','Item Inserted Successfully');
-
+    
+        $dashboardModel->save($data);
+        return redirect('dashboard')->with('status', 'Item Inserted Successfully');
     }
     
+    // this is testing Conroller
     public function testveiw()
     {
         $dashboardModel= new DashboardModel();
@@ -55,7 +69,7 @@ class imdashController extends BaseController
        
 
     }
-
+// Fetch the item type
     public function action()
     {
         if($this->request->getVar('action'))
