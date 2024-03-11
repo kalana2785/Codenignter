@@ -76,8 +76,14 @@
                   </div>
                 </div>
                
-                
+                <div class="row mb-3" id="additionalInputRow" style="display:none;">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">BN Number</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="additionalInput" name="BN">
+                  </div>
+              </div>
 
+ 
 
               
               <div class="text-center">
@@ -99,29 +105,42 @@
 
 
 <script>
-        $(document).ready(function(){
-            $('#ca').change(function(){
-                var Cid = $('#ca').val();
-                var action = 'get_ty';
-                if (Cid != '') {
-                    $.ajax({
-                      url: "<?php echo base_url('/imdashController/action'); ?>",
-                      method: "POST",
-                        data: {Cid: Cid, action: action},
-                        dataType: "JSON",
-                        success: function(data) {
-                            var html = '<option value ="">Select Type </option>';
-                            for (var count = 0; count < data.length; count++) {
-                                html += '<option value ="'+data[count].type_id+ '">'+data[count].type_name+'</option>';
-                            }
-                            $('#ty').html(html);
+    $(document).ready(function(){
+        $('#ca').change(function(){
+            var Cid = $('#ca').val();
+            var action = 'get_ty';
+
+            if (Cid != '') {
+                $.ajax({
+                    url: "<?php echo base_url('/imdashController/action'); ?>",
+                    method: "POST",
+                    data: {Cid: Cid, action: action},
+                    dataType: "JSON",
+                    success: function(data) {
+                        var html = '<option value ="">Select Type </option>';
+                        for (var count = 0; count < data.length; count++) {
+                            html += '<option value ="'+data[count].type_id+ '">'+data[count].type_name+'</option>';
                         }
-                    });
-                } else {
-                    $('#ty').val('');
-                }
-            });
+                        $('#ty').html(html);
+
+                        // Check if the selected category value is 2
+                        if (Cid == 2) {
+                            // Show the additional input box
+                            $('#additionalInputRow').show();
+                        } else {
+                            // Hide the additional input box
+                            $('#additionalInputRow').hide();
+                        }
+                    }
+                });
+            } else {
+                $('#ty').val('');
+                // Hide the additional input box if no category is selected
+                $('#additionalInputRow').hide();
+            }
         });
-    </script>
+    });
+</script>
+
 
 

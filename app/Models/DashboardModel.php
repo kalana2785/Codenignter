@@ -13,7 +13,8 @@ class DashboardModel extends Model
        'item_name',
        'catogory',
        'quntity',
-       'type_name'
+       'type_name',
+       'BN_number'
   
 
    ];
