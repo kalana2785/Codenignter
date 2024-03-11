@@ -57,10 +57,10 @@
                 <td><?php echo $row['Date']; ?></td>
                 <td>
 
-                <a href="<?php echo base_url('your_edit_page/' . $row['id']); ?>" title="Edit">
+                <a href="<?php echo base_url('Imanger/edit/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
                  
                  
-                <i class="bi bi-pencil-square"></i>
+                
                 </a>
                
 

@@ -28,16 +28,7 @@ class DashboardModel extends Model
    }
 
    // DashboardModel.php
-/*
 
-public function getDashboardData()
-{
-    $this->join('category', 'items.catogory = category.Cid');
-    $this->join('type', 'category.Cid = type.Cid', 'left'); // Adjust the join condition as needed
-    $query = $this->select('items.id, items.item_name, items.catogory, items.quntity, items.Date, category.Cid, category.Category_Name, type.type_id, type.type_name');
-    return $query->findAll();
-}
-*/
 // ...
 
 }

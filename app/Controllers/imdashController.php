@@ -22,7 +22,7 @@ class imdashController extends BaseController
         $catogoryModel = new CategoryModel();
         $data['catogory'] = $catogoryModel->orderby('Category_Name','ASC')->findAll();
         return view('iManger/Add_items.php', $data);
-
+       
        
     }
      
@@ -84,6 +84,27 @@ class imdashController extends BaseController
         }       
         
     }
-   
 
+    //Update Items page
+    //redirct edit.php
+   public function edit($id = null)
+   {
+    $dashboardModel = new DashboardModel();
+    $data['dashboard'] = $dashboardModel->find($id);
+   
+    return view('iManger/edit_items',$data);
+
+   }
+
+   // afftr click edit,php update button
+   public function update($id = null)
+   {
+    $dashboardModel = new DashboardModel();
+    $data =[
+        'item_name' => $this->request->getPost('item_name')
+    ];
+    $dashboardModel->update($id,$data);
+    return redirect()->to(base_url('dashboard')) ->with('status', 'Item Update Successfully');
+
+   }
 }

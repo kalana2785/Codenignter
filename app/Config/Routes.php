@@ -15,3 +15,7 @@ $routes->get('/test', 'imdashController::testveiw' );
 $routes->post('/Imanger/Additems', 'imdashController::store');
 
 $routes->post('imdashController/action', 'imdashController::action');
+
+$routes->get('Imanger/edit/(:num)','imdashController::edit/$1');
+
+$routes->put('Imanger/update/(:num)','imdashController::update/$1');
