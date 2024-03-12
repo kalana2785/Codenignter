@@ -9,16 +9,18 @@ use App\Models\TypeModel;
 
 class imdashController extends BaseController
 {
+    // display data
     public function index()
     {
         $dashboardModel = new DashboardModel();
 
-        // Get all dashboard data
+        // Filter all
         $data['dashboards'] = $dashboardModel->getDashboardData();
 
-        // Get data with category filter (category = 1)
+        // Sugical items
         $data['sugicals'] = $dashboardModel->getDashboardData('1');
 
+        // General items
         $data['general'] = $dashboardModel->getDashboardData('2');
         return view('dashboard.php', $data);
     }

@@ -116,8 +116,7 @@
       <th scope="col">Items Name</th>
       <th scope="col">Type Name</th>
       <th scope="col">SN number</th>
-      <th scope="col">Warrenty Start</th>
-      <th scope="col">Warrenty End</th>
+      <th scope="col">Warranty Period </th>
       <th scope="col">Quntity</th>
       <th scope="col"></th>
       <th> </th>
@@ -131,12 +130,17 @@
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>
                 <td><?php echo $row['Sn_number']; ?></td>
-               
-                <td><?php echo $row['W_start']; ?></td>
-                <td><?php echo $row['W_end']; ?></td>
+               <td>  
+                         <!-- Calulate warrenty period-->
+                          <?php
+                        
+                          $startDate = new DateTime($row['W_start']);
+                          $endDate = new DateTime($row['W_end']);
+                          $dateDifference = $startDate->diff($endDate);
+                          echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
+                          ?>
+                </td> 
                 <td><?php echo $row['quntity']; ?></td>
-
-                
                
             </tr>
         <?php endforeach;?> 
