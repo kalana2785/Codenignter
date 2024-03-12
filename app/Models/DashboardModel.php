@@ -14,7 +14,13 @@ class DashboardModel extends Model
        'catogory',
        'quntity',
        'type_name',
-       'BN_number'
+       'Sn_number',
+       'BN_number',
+       'Med_date',
+       'Exp_date',
+       'W_start',
+       'W_end'
+
   
 
    ];

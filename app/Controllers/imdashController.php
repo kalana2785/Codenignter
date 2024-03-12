@@ -48,7 +48,13 @@ class imdashController extends BaseController
             'catogory' => $this->request->getPost('ca'),
             'quntity' => $this->request->getPost('quantity'),
             'type_name' => $this->request->getPost('ty'),
-            'BN_number' => $this->request->getPost('BN')
+            'Sn_number' => $this->request->getPost('sn'),
+            'BN_number' => $this->request->getPost('BN'),
+            'Med_date' => $this->request->getPost('Med'),
+            'Exp_date' => $this->request->getPost('Exp'),
+            'W_start' => $this->request->getPost('ws'),
+            'W_end' => $this->request->getPost('we')
+            
         ];
     
         $dashboardModel->save($data);
