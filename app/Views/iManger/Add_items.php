@@ -156,13 +156,13 @@
                         }
                         $('#ty').html(html);
 
-                        // Check if the selected category value is 2
+                        // Check if the selected category value is 1
                         if (Cid == 1) {
-                            // Show the additional input box
+                           
                             $('#additionalInputRow').show();
                             $('#generalItems').hide();
                         } if(Cid == 2) {
-                            // Hide the additional input box
+                           
                            $('#generalItems').show(); 
                             $('#additionalInputRow').hide();
                            

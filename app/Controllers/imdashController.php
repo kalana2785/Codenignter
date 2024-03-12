@@ -12,10 +12,17 @@ class imdashController extends BaseController
     public function index()
     {
         $dashboardModel = new DashboardModel();
+
+        // Get all dashboard data
         $data['dashboards'] = $dashboardModel->getDashboardData();
+
+        // Get data with category filter (category = 1)
+        $data['sugicals'] = $dashboardModel->getDashboardData('1');
+
+        $data['general'] = $dashboardModel->getDashboardData('2');
         return view('dashboard.php', $data);
     }
-    // Apper item Add Form
+    // Apper items in Add Form
     public function AddForm()
 
     {     
@@ -26,7 +33,7 @@ class imdashController extends BaseController
        
     }
      
-   // Add Form Controller
+   // item add processing Form Controller
     public function store()
     {
         $dashboardModel = new DashboardModel();
@@ -76,7 +83,7 @@ class imdashController extends BaseController
        
 
     }
-// Fetch the item type
+// Fetch the item type(jquery)
     public function action()
     {
         if($this->request->getVar('action'))

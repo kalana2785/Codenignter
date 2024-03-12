@@ -25,13 +25,21 @@ class DashboardModel extends Model
 
    ];
    // join the catogory table and items table
-   public function getDashboardData()
-   {
-       $this->join('category category ', 'items.catogory = category.Cid');
-       $this->join('type type', 'items.type_name = type.type_id');
-       $query = $this->select('items.id, items.item_name, category.Category_Name AS category_name, type.type_name, items.quntity, items.Date');
-       return $query->findAll();
-   }
+   public function getDashboardData($category = null)
+    {
+        // Start with the base query
+        $query = $this->select('*')
+            ->join('category', 'items.catogory = category.Cid')
+            ->join('type', 'items.type_name = type.type_id');
+
+        // Apply the category filter if provided
+        if ($category !== null) {
+            $query->where('items.catogory', $category);
+        }
+
+        // Execute the query and return the result
+        return $query->findAll();
+    }
    
 
    // DashboardModel.php

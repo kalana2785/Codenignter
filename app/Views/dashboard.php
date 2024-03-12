@@ -33,7 +33,7 @@
 <!-- Check if there is an error message and display it -->
 
 
-<table class="table">
+<table class="table" name="All">
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -51,7 +51,7 @@
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['item_name']; ?></td>
-                <td><?php echo $row['category_name']; ?></td>
+                <td><?php echo $row['Category_Name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>  
                 <td><?php echo $row['quntity']; ?></td>
                 <td><?php echo $row['Date']; ?></td>
@@ -65,6 +65,79 @@
                
 
                 </td>
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
+</tbody>
+</table>
+
+<!--sugical items-->
+<table class="table" name="Sugical">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Items Name</th>
+      <th scope="col">Type Name</th>
+      <th scope="col">SN number</th>
+      <th scope="col">Batch Number</th>
+      <th scope="col">Med Date</th>
+      <th scope="col">Exp Date</th>
+      <th scope="col">Quntity</th>
+      <th scope="col"></th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if ($sugicals):?>
+        <?php foreach($sugicals as $row) : ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['type_name']; ?></td>
+                <td><?php echo $row['Sn_number']; ?></td>
+                <td><?php echo $row['BN_number']; ?></td>
+                <td><?php echo $row['Med_date']; ?></td>
+                <td><?php echo $row['Exp_date']; ?></td>
+                <td><?php echo $row['quntity']; ?></td>
+               
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
+</tbody>
+</table>
+
+
+<!-- General items-->
+<table class="table" name="General">
+  
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Items Name</th>
+      <th scope="col">Type Name</th>
+      <th scope="col">SN number</th>
+      <th scope="col">Warrenty Start</th>
+      <th scope="col">Warrenty End</th>
+      <th scope="col">Quntity</th>
+      <th scope="col"></th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if ($general):?>
+        <?php foreach($general as $row) : ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['type_name']; ?></td>
+                <td><?php echo $row['Sn_number']; ?></td>
+               
+                <td><?php echo $row['W_start']; ?></td>
+                <td><?php echo $row['W_end']; ?></td>
+                <td><?php echo $row['quntity']; ?></td>
+
+                
+               
             </tr>
         <?php endforeach;?> 
     <?php endif;?>
