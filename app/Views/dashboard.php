@@ -32,9 +32,38 @@
 <body>
 
 <?= $this->include('Layout/header.php') ?>
-<?= $this->include('Layout/floter.php') ?>
+<?=
+ $this->include('Layout/floter.php') ?>
 
+<!-- veiw pop up msg-->
+<script>
+$(document).on('click', '.view_btn', function () {
+    // Get the row data
+    var id = $(this).closest('tr').find('td:eq(0)').text();
+      var itemName = $(this).closest('tr').find('td:eq(1)').text();
+      var categoryName = $(this).closest('tr').find('td:eq(2)').text();
+      var typeName = $(this).closest('tr').find('td:eq(3)').text();
+      var quantity = $(this).closest('tr').find('td:eq(4)').text();
+      var date = $(this).closest('tr').find('td:eq(5)').text();
 
+      // Build the content for the modal
+      var modalContent = `
+        <p><strong>ID:</strong> ${id}</p>
+        <p><strong>Item Name:</strong> ${itemName}</p>
+        <p><strong>Category Name:</strong> ${categoryName}</p>
+        <p><strong>Type Name:</strong> ${typeName}</p>
+        <p><strong>Quantity:</strong> ${quantity}</p>
+        <p><strong>Date:</strong> ${date}</p>
+      `;
+
+      // Set the content in the modal
+      $('#itemDetailsContent').html(modalContent);
+
+      // Show the modal
+      $('#itemDetailsModal').modal('show');
+    });
+ 
+</script>
 <br><br><br><br><br><br>
 <main id="main" class="main">
 
@@ -87,11 +116,12 @@
                 <td>
 
                 <a href="<?php echo base_url('Imanger/edit/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
-                 
+               
+
                  
                 
                 </a>
-               
+                <a href="#"  class="btn btn-primary view_btn">View</a>
 
                 </td>
             </tr>
@@ -181,6 +211,26 @@
 </table>
 </div>
 
+<!-- view Modal  -->
+<div class="modal fade" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="itemDetailsModalLabel">Item Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     
+        <div id="itemDetailsContent"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </main>
@@ -194,7 +244,11 @@
       // Show the selected table
       document.getElementById('table' + tableNumber).classList.add('active-table');
     }
+
   </script>
+
+
+
 
 </body>
 </html>
