@@ -9,8 +9,24 @@
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
 
 
+
+<script src="<?= base_url('Assests/js/bootstrap.bundle.min.js');?>" ></script>
+
+<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
+
+<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
+<style>
+    .table-container {
+      display: none;
+    }
+    .active-table {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,8 +47,21 @@
   }
    ?>
 <!-- Check if there is an error message and display it -->
+<ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" onclick="showTable(1)">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="showTable(2)">Sugical</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="showTable(3)">General</a>
+      </li>
+    </ul>
 
 
+
+<div id="table1" class="table-container active-table" >
 <table class="table" name="All">
   <thead>
     <tr>
@@ -70,7 +99,9 @@
     <?php endif;?>
 </tbody>
 </table>
+</div>
 
+<div id="table2" class="table-container">
 <!--sugical items-->
 <table class="table" name="Sugical">
   <thead>
@@ -105,9 +136,10 @@
     <?php endif;?>
 </tbody>
 </table>
-
+</div>
 
 <!-- General items-->
+<div id="table3" class="table-container">
 <table class="table" name="General">
   
   <thead>
@@ -147,16 +179,22 @@
     <?php endif;?>
 </tbody>
 </table>
+</div>
 
 
 
 </main>
+<script>
+    function showTable(tableNumber) {
+      // Hide all tables
+      document.querySelectorAll('.table-container').forEach(function(table) {
+        table.classList.remove('active-table');
+      });
 
-
-<script src="<?= base_url('Assests/js/jquery-3.7.1.js');?>" ></script>
-
-<script src="<?= base_url('Assests/js/bootstrap.min.js');?>" ></script>
-<script src="<?= base_url('Assests/js/popper.min.js');?>" ></script>
+      // Show the selected table
+      document.getElementById('table' + tableNumber).classList.add('active-table');
+    }
+  </script>
 
 </body>
 </html>
