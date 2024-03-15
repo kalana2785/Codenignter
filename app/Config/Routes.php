@@ -23,3 +23,7 @@ $routes->put('Imanger/update/(:num)','imdashController::update/$1');
 $routes->get('Imanger/editq/(:num)','imdashController::quntity/$1');
 
 $routes->put('Imanger/updatet/(:num)','imdashController::updatetotal/$1');
+
+
+//Admin Pannel
+$routes->get('/Admin', 'AdminController::index');
