@@ -19,3 +19,7 @@ $routes->post('imdashController/action', 'imdashController::action');
 $routes->get('Imanger/edit/(:num)','imdashController::edit/$1');
 
 $routes->put('Imanger/update/(:num)','imdashController::update/$1');
+
+$routes->get('Imanger/editq/(:num)','imdashController::quntity/$1');
+
+$routes->put('Imanger/updatet/(:num)','imdashController::updatetotal/$1');

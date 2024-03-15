@@ -1,0 +1,1933 @@
+CRITICAL - 2024-03-14 11:05:04 --> ErrorException: Undefined array key "overstock_value"
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 APPPATH\Views\iManger\Edit_qu.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "overstock_value"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('12')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:05:33 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 APPPATH\Views\iManger\Edit_qu.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('12')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:05:35 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 APPPATH\Views\iManger\Edit_qu.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('12')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:06:15 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 APPPATH\Views\iManger\Edit_qu.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('12')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:06:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 APPPATH\Views\iManger\Edit_qu.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:08:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 APPPATH\Views\iManger\Edit_qu.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 56)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:09:12 --> Error: Cannot use object of type App\Models\DemandModel as array
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 4 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:14:09 --> Error: Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 4 APPPATH\Controllers\imdashController.php(139): view('iManger/Edit_qu.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:14:53 --> Error: Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\iManger\Edit_qu.php on line 56.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 4 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:19:23 --> ErrorException: Undefined variable $data
+in APPPATH\Views\iManger\Edit_qu.php on line 59.
+ 1 APPPATH\Views\iManger\Edit_qu.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:19:57 --> ErrorException: Undefined variable $data
+in APPPATH\Views\iManger\Edit_qu.php on line 59.
+ 1 APPPATH\Views\iManger\Edit_qu.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:20:13 --> ErrorException: Undefined variable $data
+in APPPATH\Views\iManger\Edit_qu.php on line 59.
+ 1 APPPATH\Views\iManger\Edit_qu.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:28:36 --> ErrorException: Undefined array key "overstock_value"
+in APPPATH\Views\iManger\Edit_qu.php on line 62.
+ 1 APPPATH\Views\iManger\Edit_qu.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "overstock_value"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:29:32 --> ErrorException: Undefined array key "overstock_value"
+in APPPATH\Views\iManger\Edit_qu.php on line 62.
+ 1 APPPATH\Views\iManger\Edit_qu.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "overstock_value"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:29:34 --> ErrorException: Undefined array key "overstock_value"
+in APPPATH\Views\iManger\Edit_qu.php on line 62.
+ 1 APPPATH\Views\iManger\Edit_qu.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "overstock_value"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:30:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 62.
+ 1 APPPATH\Views\iManger\Edit_qu.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 62)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:07 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:13 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:36 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:37 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:37 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:55 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:56 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:56 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:56 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:31:56 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:32:26 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:32:41 --> ErrorException: Undefined variable $dashboard
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dashboard', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:40:39 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu.php', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:41:18 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(140): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:41:54 --> mysqli_sql_exception: Not unique table/alias: 'demand' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:41:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:41:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:41:54 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:41:55 --> mysqli_sql_exception: Not unique table/alias: 'demand' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:41:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:41:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:41:55 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:42:57 --> mysqli_sql_exception: Not unique table/alias: 'demand' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:42:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:42:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:42:57 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:42:58 --> mysqli_sql_exception: Not unique table/alias: 'demand' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:42:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:42:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:42:58 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:43:03 --> mysqli_sql_exception: Not unique table/alias: 'demand' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:43:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:43:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:43:03 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'demand'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `demand`
+JOIN `demand` ON `items`.`id` = `demand`.`Items_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\imdashController.php(135): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:49:05 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:49:06 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:49:12 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:49:29 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:52 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:53 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:53 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:54 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:54 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:54 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:51:55 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 35.
+ 1 APPPATH\Views\iManger\Edit_qu.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(135): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:55:41 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:55:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = :demand.Demand_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:55:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = :demand.Demand_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:55:41 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Demand_id` = :demand.Demand_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:56:39 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:56:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:39 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:56:40 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:56:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:40 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:56:40 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:56:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:40 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:56:40 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:56:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:56:40 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:57:01 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:57:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:57:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:57:01 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-14 11:57:33 --> mysqli_sql_exception: Unknown column 'items.quantity' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-14 11:57:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:57:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 11:57:33 --> [Caused by] mysqli_sql_exception: Unknown column 'items.quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = \'18\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `demand`.*, `items`.`item_name`, `items`.`quantity`
+FROM `demand`
+JOIN `items` ON `items`.`id` = `demand`.`Items_id`
+WHERE `demand`.`Items_id` = :demand.Items_id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\DemandModel.php(24): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\imdashController.php(132): App\Models\DemandModel->joinData('18')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 12:04:36 --> ErrorException: Undefined array key "quantity"
+in APPPATH\Views\iManger\Edit_qu.php on line 7.
+ 1 APPPATH\Views\iManger\Edit_qu.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "quantity"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 12:04:41 --> ErrorException: Undefined array key "quantity"
+in APPPATH\Views\iManger\Edit_qu.php on line 7.
+ 1 APPPATH\Views\iManger\Edit_qu.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "quantity"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 12:24:29 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 12:25:13 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 12:25:14 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 12:25:14 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:15:34 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:15:35 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:15:36 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:15:36 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:15:36 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(134): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:23:29 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:23:30 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:24:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:24:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:24:18 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\iManger\Edit_qu.php on line 4.
+ 1 APPPATH\Views\iManger\Edit_qu.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:29:27 --> ErrorException: Undefined variable $demand
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $demand', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:30:49 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:30:50 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:30:50 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:30:50 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:31:14 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:31:14 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:31:15 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:32:50 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:32:51 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:32:51 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:32:51 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:33:21 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:33:21 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:33:22 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:33:22 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:34:59 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:34:59 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:34:59 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:35:00 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:35:00 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-14 13:35:00 --> ErrorException: Undefined array key "Demand_id"
+in APPPATH\Views\iManger\Edit_qu.php on line 10.
+ 1 APPPATH\Views\iManger\Edit_qu.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Demand_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Edit_qu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Edit_qu', [], true)
+ 5 APPPATH\Controllers\imdashController.php(133): view('iManger/Edit_qu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->quntity('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

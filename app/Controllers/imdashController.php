@@ -5,6 +5,7 @@ namespace App\Controllers;
 
 use App\Models\DashboardModel;
 use App\Models\CategoryModel;
+use App\Models\DemandModel;
 use App\Models\TypeModel;
 
 class imdashController extends BaseController
@@ -123,4 +124,40 @@ class imdashController extends BaseController
     return redirect()->to(base_url('dashboard')) ->with('status', 'Item Update Successfully');
 
    }
+
+   // edit quntity using join tables
+   public function quntity($id = null)
+{
+    
+    $dashboardModel = new DashboardModel();
+    $demandModel = new DemandModel();
+
+    $data['items']=$dashboardModel->join('demand','items.id =demand.Items_id ')->find($id);
+
+    return view('iManger/Edit_qu',$data);
+
+        
+ 
+}
+
+// items update drugs edit form
+public function  updatetotal($id= null)
+{
+
+    $dashboardModel = new DashboardModel();
+    if(  $this->request->getPost('At')<=  $this->request->getPost('uq'))
+    {
+        return redirect()->back()->with('error', 'Quntity high please reduces.');
+    }
+
+    $data =[
+        
+        'quntity' => $this->request->getPost('uq')+$this->request->getPost('Avaliable_total')
+    ];
+    $dashboardModel->update($id,$data);
+    return redirect()->to(base_url('dashboard')) ->with('status', 'Item quntity Update Successfully');
+}
+
+   
+   
 }

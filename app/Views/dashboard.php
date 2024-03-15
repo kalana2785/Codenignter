@@ -160,7 +160,18 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $row['Med_date']; ?></td>
                 <td><?php echo $row['Exp_date']; ?></td>
                 <td><?php echo $row['quntity']; ?></td>
+                
+               <td>
+               <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
                
+
+                 
+                
+               </a>
+
+
+
+               </td>
             </tr>
         <?php endforeach;?> 
     <?php endif;?>

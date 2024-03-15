@@ -31,7 +31,7 @@ class DashboardModel extends Model
         $query = $this->select('*')
             ->join('category', 'items.catogory = category.Cid')
             ->join('type', 'items.type_name = type.type_id');
-
+           
        
         if ($category !== null) {
             $query->where('items.catogory', $category);
@@ -42,6 +42,7 @@ class DashboardModel extends Model
     }
    
 
+   
    // DashboardModel.php
   /*
    public function getDashboardData()

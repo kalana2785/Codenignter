@@ -32,18 +32,44 @@
     </div>
 <?php endif; ?>
            edit
-          <form action="<?= base_url('Imanger/update/'.$dashboard['id']) ?>" method="post">
+          <form action="<?= base_url('Imanger/updatet/'.$items['id']) ?>" method="post">
           <input type="hidden" name="_method" value="PUT">
 
           <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Item Name</label>
                   <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputText" name="item_name" value="<?= $demand['item_name']; ?>">
+                  <input type="text" class="form-control" id="inputText" name="item_name" value="<?= $items['item_name']; ?>" readonly>
                   </div>
                 </div>
                 
                 
-                
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Avaliable Quntity</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="Avaliable_total" value="<?= $items['quntity']; ?>" readonly>
+                  </div>
+                </div>
+                <?php
+                    $Actual_Total= $items['overstock_value']-$items['quntity'];
+
+                ?>
+                <div class="alert alert-warning" role="alert">
+                   You can update only  <?php echo $Actual_Total; ?>
+                  </div>
+                 
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="At" value="<?= $Actual_Total ?>" hidden>
+                  </div>
+                </div>
+
+
+
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Upadate Quntity</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="uq"  >
+                  </div>
+                </div>
 
 
               
