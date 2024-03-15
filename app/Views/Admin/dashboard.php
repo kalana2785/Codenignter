@@ -98,8 +98,8 @@ $(document).on('click', '.view_btn', function () {
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
       <th scope="col">Type Name</th>
-      <th scope="col">Quntity</th>
-      <th scope="col">Last Update</th>
+      <th scope="col">Avaliable Quntity</th>
+      <th scope="col">Status</th>
       <th> </th>
     </tr>
   </thead>
@@ -112,7 +112,74 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $row['Category_Name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>  
                 <td><?php echo $row['quntity']; ?></td>
-                <td><?php echo $row['Date']; ?></td>
+                <?php
+                     $Actual_quntity= $row['quntity'];
+                     $Total_quntity= $row['overstock_value'];
+
+                     $low_capacity=$Actual_quntity/$Total_quntity*100
+
+
+                ?>
+                <td><?php 
+
+                if($low_capacity<=10)
+                
+                {?>
+                                    
+                <div class="alert alert-danger" role="alert">
+                           Items in low stock
+                </div>
+                <?php 
+                    
+                }
+                
+                elseif($low_capacity<=30)
+                
+                {
+                    ?>
+                                    
+                   <div class="alert alert-warning" role="alert">
+                             Items in Emagancy Level
+                   </div>
+                    <?php 
+                }
+                elseif($low_capacity<=50)
+                
+                {
+                    ?>
+                                    
+                      <div class="alert alert-primary" role="alert">
+                               Items in Medium Level
+                        </div>
+                             
+                 
+                    <?php 
+                }
+                elseif($low_capacity<=90)
+                
+                {
+                    ?>
+                                    
+                    <div class="alert alert-success" role="alert">
+                                Items in Safe Level
+                    </div>
+                           
+               
+                  <?php 
+                }
+                
+                else{
+
+                    ?>
+                    <div class="alert alert-dark" role="alert">
+                             Items in OverStock
+                  </div>
+
+                  <?php
+                }
+                
+                
+                ?></td>
                 <td>
 
                 <a href="<?php echo base_url('Imanger/edit/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit

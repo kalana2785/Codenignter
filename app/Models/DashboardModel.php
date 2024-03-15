@@ -31,6 +31,7 @@ class DashboardModel extends Model
         $query = $this->select('*')
             ->join('category', 'items.catogory = category.Cid')
             ->join('type', 'items.type_name = type.type_id');
+            
            
        
         if ($category !== null) {
@@ -41,7 +42,23 @@ class DashboardModel extends Model
         return $query->findAll();
     }
    
+    public function getAdminDashboardData($category = null)
+    {
+       
+        $query = $this->select('*')
+            ->join('category', 'items.catogory = category.Cid')
+            ->join('type', 'items.type_name = type.type_id')
+            ->join('demand','items.id = demand.Items_id');
+            
+           
+       
+        if ($category !== null) {
+            $query->where('items.catogory', $category);
+        }
 
+       
+        return $query->findAll();
+    }
    
    // DashboardModel.php
   /*

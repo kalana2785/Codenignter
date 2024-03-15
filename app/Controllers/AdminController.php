@@ -5,7 +5,7 @@ namespace App\Controllers;
 
 use App\Models\DashboardModel;
 use App\Models\CategoryModel;
-
+use App\Models\DemandModel;
 use App\Models\TypeModel;
 
 class AdminController extends BaseController
@@ -15,13 +15,13 @@ class AdminController extends BaseController
         $dashboardModel = new DashboardModel();
 
         // Filter all
-        $data['dashboards'] = $dashboardModel->getDashboardData();
+        $data['dashboards'] = $dashboardModel->getAdminDashboardData();
 
         // Sugical items
-        $data['sugicals'] = $dashboardModel->getDashboardData('1');
+        $data['sugicals'] = $dashboardModel->getAdminDashboardData('1');
 
         // General items
-        $data['general'] = $dashboardModel->getDashboardData('2');
+        $data['general'] = $dashboardModel->getAdminDashboardData('2');
        
 
         return view('Admin/dashboard',$data);
