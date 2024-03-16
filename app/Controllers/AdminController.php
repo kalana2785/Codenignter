@@ -34,7 +34,7 @@ class AdminController extends BaseController
         $dashboardModel->Delete($id);
         return redirect()->back()->with('statusd', 'Item Deleted Successfully');
 
-       // return redirect('dashboard')->with('statusd', 'Item Deleted Successfully');
+       
 
     }
 }

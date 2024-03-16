@@ -10,10 +10,12 @@
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
 <link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 
 
 
-<script src="<?= base_url('Assests/js/bootstrap.bundle.min.js');?>" ></script>
+
+<script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
 
 <script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
 
