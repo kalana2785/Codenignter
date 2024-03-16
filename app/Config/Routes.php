@@ -26,4 +26,7 @@ $routes->put('Imanger/updatet/(:num)','imdashController::updatetotal/$1');
 
 
 //Admin Pannel
+
 $routes->get('/Admin', 'AdminController::index');
+
+$routes->get('Admin/delete/(:num)','AdminController::delete/$1');

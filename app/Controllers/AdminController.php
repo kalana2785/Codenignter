@@ -26,4 +26,15 @@ class AdminController extends BaseController
 
         return view('Admin/dashboard',$data);
     }
+
+    //delete items
+    public function delete($id = null)
+    {
+        $dashboardModel = new DashboardModel();
+        $dashboardModel->Delete($id);
+        return redirect()->back()->with('statusd', 'Item Deleted Successfully');
+
+       // return redirect('dashboard')->with('statusd', 'Item Deleted Successfully');
+
+    }
 }

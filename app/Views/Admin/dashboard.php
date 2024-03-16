@@ -75,6 +75,18 @@ $(document).on('click', '.view_btn', function () {
 <?php
   }
    ?>
+
+
+<?php
+  if(session()->getFlashdata('statusd')){ ?>
+   <div class="alert alert-danger" role="alert">
+    <strong>Hello </strong> <?= session()->getFlashdata('statusd'); ?>
+ </div>
+<?php
+  }
+   ?>
+
+
 <!-- Check if there is an error message and display it -->
      <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
@@ -188,8 +200,14 @@ $(document).on('click', '.view_btn', function () {
                  
                 
                 </a>
-                <a href="#"  class="btn btn-primary view_btn">View</a>
+                <a href="#"  class="btn btn-info view_btn">View</a>
+                
+                <a href="<?php echo base_url('Admin/delete/' . $row['id']); ?>"  class="btn btn-danger btn-sm">Delete
+               
 
+                 
+                
+               </a>
                 </td>
             </tr>
         <?php endforeach;?> 
