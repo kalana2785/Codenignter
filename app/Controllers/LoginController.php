@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 
-class LoginController  extends BaseController
+class LoginController extends BaseController
 {
     public $session; 
 
@@ -16,45 +16,40 @@ class LoginController  extends BaseController
     public function index()
     {
         $data = [];
+        $userModel = new UserModel();
 
-
-        $usermodel = new UserModel();
-
-        if($this->request->getMethod() == 'post')
-        {
-            $rules =[
+        if ($this->request->getMethod() == 'post') {
+            $rules = [
                 'email' => 'required|valid_email',
                 'password'=> 'required|min_length[6]|max_length[16]',
             ];
-            if($this->validate($rules))
-            { 
+
+            if ($this->validate($rules)) { 
                 $email = $this->request->getVar('email');
                 $password = $this->request->getVar('password');
 
-               $userdata=$usermodel->verifyEmail($email);
-               if($userdata)
-               {
-                  if(password_verify($password,$userdata['Password']))
-                  {
-                      
-                  }
-                  else
-                  {
-                    return redirect()->back()->with('errormessage', 'Sorry! Wrong Password Enter for that Account');
-                  }
-               }
-               else
-               {
+                $userData = $userModel->verifyEmail($email);
+
+                if ($userData) {
                 
-                 return redirect()->back()->with('errormessage', 'Sorry! Email does not exist');
-               }
-            }
-            else
-            {
-              $data['validation'] = $this->validator;
+                    if ($password == $userData['Password']) {
+                        $this->session->set('logged_user',$userData['User_id']);
+                        return redirect()->to(base_url().'dashboard');
+                       
+                    } else {
+                       
+                        return redirect()->back()->with('errormessage', 'Sorry! Wrong Password Entered for that Account');
+                    }
+                } else {
+                    
+                    return redirect()->back()->with('errormessage', 'Sorry! Email does not exist');
+                }
+            } else {
+               
+                $data['validation'] = $this->validator;
             }
         }
 
-        
+        return view('index', $data);
     }
 }
