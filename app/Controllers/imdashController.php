@@ -12,18 +12,25 @@ class imdashController extends BaseController
 {
     // display data
     public function index()
+    
     {
-        $dashboardModel = new DashboardModel();
-
-        // Filter all
-        $data['dashboards'] = $dashboardModel->getDashboardData();
-
-        // Sugical items
-        $data['sugicals'] = $dashboardModel->getDashboardData('1');
-
-        // General items
-        $data['general'] = $dashboardModel->getDashboardData('2');
-        return view('dashboard.php', $data);
+        if (!session()->has('logged_user')) {
+            return redirect()->to(route_to('index'));
+        } else {
+            $dashboardModel = new DashboardModel();
+        
+            // Filter all
+            $data['dashboards'] = $dashboardModel->getDashboardData();
+        
+            // Surgical items
+            $data['sugicals'] = $dashboardModel->getDashboardData('1');
+        
+            // General items
+            $data['general'] = $dashboardModel->getDashboardData('2');
+            
+            return view('dashboard.php', $data);
+        }
+        
     }
     // Apper items in Add Form
     public function AddForm()

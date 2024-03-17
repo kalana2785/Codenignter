@@ -12,6 +12,8 @@ $routes->get('/', 'Home::index');
 
 $routes->post('user/login','LoginController::index');
 
+
+// inventory Manger
 $routes->get('/dashboard', 'imdashController::index' );
 
 $routes->get('/Imanger/Add', 'imdashController::AddForm' );
