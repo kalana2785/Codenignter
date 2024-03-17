@@ -5,7 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
 $routes->get('/', 'Home::index');
+
+// user login
+
+$routes->post('user/login','LoginController::index');
 
 $routes->get('/dashboard', 'imdashController::index' );
 
