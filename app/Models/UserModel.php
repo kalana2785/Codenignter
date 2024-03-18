@@ -12,7 +12,8 @@ class UserModel extends Model{
     [
         'Username', 
         'Email',
-        'Password'
+        'Password',
+        'usergroup_id'
    
  
     ];
@@ -20,7 +21,7 @@ class UserModel extends Model{
     public function verifyEmail($email)
     {
         $ve = $this->db->table('user');
-        $ve->select("User_id,Username,Password");
+        $ve->select("User_id,Username,Password,usergroup_id");
         $ve->where('Email',$email);
         $result = $ve->get();
         if(count($result->getResultArray())==1)

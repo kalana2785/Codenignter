@@ -33,9 +33,20 @@ class LoginController extends BaseController
                 if ($userData) {
                 
                     if ($password == $userData['Password']) {
+
+                        if($userData['usergroup_id']== 1){
                         $this->session->set('logged_user',$userData['User_id']);
-                        return redirect()->to(base_url().'dashboard');
-                       
+                        return redirect()->to(base_url().'/Admin');
+
+                        }
+                        else if($userData['usergroup_id']== 2)
+                        {
+                            $this->session->set('logged_user',$userData['User_id']);
+                            return redirect()->to(base_url().'dashboard');
+                        }
+                       else{
+                        return redirect()->back()->with('errormessage', 'Sorry! you not assign any usergroup');
+                       }
                     } else {
                        
                         return redirect()->back()->with('errormessage', 'Sorry! Wrong Password Entered for that Account');
