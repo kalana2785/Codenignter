@@ -37,3 +37,7 @@ $routes->put('Imanger/updatet/(:num)','imdashController::updatetotal/$1');
 $routes->get('/Admin', 'AdminController::index');
 
 $routes->get('Admin/delete/(:num)','AdminController::delete/$1');
+
+$routes->get('Admin/Add-user', 'AdminController::Adduser');
+
+$routes->post('Admin/Addnewuser', 'AdminController::saveuser');

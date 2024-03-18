@@ -36,7 +36,7 @@
 
 <?= $this->include('Layout/header.php') ?>
 <?=
- $this->include('Layout/floter.php') ?>
+ $this->include('Layout/Admin/floter.php') ?>
 
 <!-- veiw pop up msg-->
 <script>
