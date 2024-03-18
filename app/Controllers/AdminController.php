@@ -53,7 +53,7 @@ class AdminController extends BaseController
      {
        
         $usermodel = new UserModel();
-        // Check the table items already exists
+        
         $existinguser = $usermodel->where([
             'Email' => $this->request->getPost('email')
             
@@ -63,18 +63,29 @@ class AdminController extends BaseController
             
             return redirect()->back()->with('error', 'User already exists.');
         }
+        $password = $this->request->getPost('password');
+
+        if (is_string($password)) {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
+
         
         $data = [
             'Username' => $this->request->getPost('username'),
             'Email' => $this->request->getPost('email'),
-            'Password' => $this->request->getPost('password'),
+            'Password' =>$hashedPassword,
             'usergroup_id' => $this->request->getPost('ug')
             
         ];
     
         $usermodel->save($data);
         return redirect()->back()->with('status', 'User Inserted Successfully');
+
+
+        } else {
+    
+            return redirect()->back()->withInput()->with('error', 'Invalid password');
+        }
      }
   
 

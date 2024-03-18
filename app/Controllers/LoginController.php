@@ -32,7 +32,7 @@ class LoginController extends BaseController
 
                 if ($userData) {
                 
-                    if ($password == $userData['Password']) {
+                    if (password_verify($password, $userData['Password'])) {
 
                         if($userData['usergroup_id']== 1){
                         $this->session->set('logged_user',$userData['User_id']);
@@ -47,7 +47,8 @@ class LoginController extends BaseController
                        else{
                         return redirect()->back()->with('errormessage', 'Sorry! you not assign any usergroup');
                        }
-                    } else {
+                    }
+                     else {
                        
                         return redirect()->back()->with('errormessage', 'Sorry! Wrong Password Entered for that Account');
                     }
