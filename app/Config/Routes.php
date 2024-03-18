@@ -11,7 +11,7 @@ $routes->get('/', 'Home::index');
 // user login
 
 $routes->post('user/login','LoginController::index');
-
+$routes->get('user/logout','LoginController::logout');
 
 // inventory Manger
 $routes->get('/dashboard', 'imdashController::index' );

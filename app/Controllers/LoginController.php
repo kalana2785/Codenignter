@@ -52,4 +52,11 @@ class LoginController extends BaseController
 
         return view('index', $data);
     }
+
+    public function logout()
+    {
+        session()->remove('logged_user');
+        session()->destroy();
+        return redirect()->to(route_to('index'));
+    }
 }
