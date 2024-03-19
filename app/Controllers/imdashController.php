@@ -7,9 +7,10 @@ use App\Models\DashboardModel;
 use App\Models\CategoryModel;
 use App\Models\DemandModel;
 use App\Models\TypeModel;
+use App\Models\UserModel;
 
 class imdashController extends BaseController
-{
+{ 
     // display data
     public function index()
     
@@ -18,6 +19,7 @@ class imdashController extends BaseController
             return redirect()->to(route_to('index'));
         } else {
             $dashboardModel = new DashboardModel();
+            $usermodel= new UserModel();
         
             // Filter all
             $data['dashboards'] = $dashboardModel->getDashboardData();
@@ -27,7 +29,12 @@ class imdashController extends BaseController
         
             // General items
             $data['general'] = $dashboardModel->getDashboardData('2');
+
+            // filter Session
+            $Userid = session()->get('logged_user');
+       
             
+            $data['userdata']=$usermodel->getlogindata($Userid);
             return view('dashboard.php', $data);
         }
         

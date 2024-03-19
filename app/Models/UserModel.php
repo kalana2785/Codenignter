@@ -32,8 +32,25 @@ class UserModel extends Model{
        {
          return false;
        }
+
+      
+
     }
-  
+  public function getlogindata($id)
+      {
+        $ui=$this->db->table('user');
+        
+        $ui->where('User_id',$id);
+        $result = $ui->get();
+        if(count($result->getResultArray())==1)
+        {
+         return $result->getRow();
+        }
+        else
+        {
+          return false;
+        }
+      }
 
 
  

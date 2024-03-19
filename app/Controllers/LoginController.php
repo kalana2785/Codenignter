@@ -7,16 +7,17 @@ use App\Models\UserModel;
 class LoginController extends BaseController
 {
     public $session; 
-
+    public $dbmodel;
     public function __construct()
     {
         $this->session = session(); 
+        $this->dbmodel = new UserModel();
     }
 
     public function index()
     {
         $data = [];
-        $userModel = new UserModel();
+        //$this->dbmodel = new UserModel();
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
@@ -28,7 +29,7 @@ class LoginController extends BaseController
                 $email = $this->request->getVar('email');
                 $password = $this->request->getVar('password');
 
-                $userData = $userModel->verifyEmail($email);
+                $userData = $this->dbmodel->verifyEmail($email);
 
                 if ($userData) {
                 
@@ -41,8 +42,12 @@ class LoginController extends BaseController
                         }
                         else if($userData['usergroup_id']== 2)
                         {
-                            $this->session->set('logged_user',$userData['User_id']);
+                          
+                            
+                           $this->session->set('logged_user',$userData['User_id']);
+                       
                             return redirect()->to(base_url().'dashboard');
+
                         }
                        else{
                         return redirect()->back()->with('errormessage', 'Sorry! you not assign any usergroup');

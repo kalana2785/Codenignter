@@ -32,7 +32,6 @@
 </head>
 
 <body>
-
 <?= $this->include('Layout/header.php') ?>
 <?=
  $this->include('Layout/floter.php') ?>
@@ -68,7 +67,7 @@ $(document).on('click', '.view_btn', function () {
 </script>
 <br><br><br><br><br><br>
 <main id="main" class="main">
-
+  <h1>welcome to <?= $userdata->Username ;?></h1>
 <?php
   if(session()->getFlashdata('status')){ ?>
    <div class="alert alert-success" role="alert">
