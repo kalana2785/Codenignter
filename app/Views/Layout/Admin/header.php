@@ -175,7 +175,7 @@
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
         <li class="dropdown-header">
           <h6><?= $userdata->Username ;?></h6>
-          <span>Inventory Manger</span>
+          <span>Admin</span>
         </li>
         <li>
           <hr class="dropdown-divider">

@@ -13,9 +13,11 @@ use App\Models\UsergroupModel;
 class AdminController extends BaseController
 {
     public function index(): string
-    {   
+    {      if (!session()->has('logged_user')) {
+        return redirect()->to(route_to('index'));
+    } else {
         $dashboardModel = new DashboardModel();
-
+        $usermodel= new UserModel();
         // Filter all
         $data['dashboards'] = $dashboardModel->getAdminDashboardData();
 
@@ -25,8 +27,15 @@ class AdminController extends BaseController
         // General items
         $data['general'] = $dashboardModel->getAdminDashboardData('2');
        
-
+        
+        $Userid = session()->get('logged_user');
+       
+            
+        $data['userdata']=$usermodel->getlogindata($Userid);
+  
         return view('Admin/dashboard',$data);
+
+    }
     }
 
     //delete items
