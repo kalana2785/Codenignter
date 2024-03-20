@@ -11,43 +11,51 @@ use App\Models\UserModel;
 
 class imdashController extends BaseController
 { 
-    // display data
-    public function index()
+
     
+    // Apper items in Add Form
+    private $userData;
+
+    public function __construct()
     {
+        
+
+       
         if (!session()->has('logged_user')) {
             return redirect()->to(route_to('index'));
         } else {
-            $dashboardModel = new DashboardModel();
-            $usermodel= new UserModel();
-        
-            // Filter all
-            $data['dashboards'] = $dashboardModel->getDashboardData();
-        
-            // Surgical items
-            $data['sugicals'] = $dashboardModel->getDashboardData('1');
-        
-            // General items
-            $data['general'] = $dashboardModel->getDashboardData('2');
-
-            // filter Session
-            $Userid = session()->get('logged_user');
-       
-            
-            $data['userdata']=$usermodel->getlogindata($Userid);
-            return view('dashboard.php', $data);
+          
+            $userId = session()->get('logged_user');
+            $userModel = new UserModel();
+            $this->userData = $userModel->getlogindata($userId);
         }
-        
     }
-    // Apper items in Add Form
-    public function AddForm()
 
-    {     
+    public function index()
+    {
+        $dashboardModel = new DashboardModel();
+        
+        // Filter all
+        $data['dashboards'] = $dashboardModel->getDashboardData();
+        
+        // Surgical items
+        $data['sugicals'] = $dashboardModel->getDashboardData('1');
+        
+        // General items
+        $data['general'] = $dashboardModel->getDashboardData('2');
+
+        $data['userdata'] = $this->userData;
+        
+        return view('dashboard.php', $data);
+    }
+
+    public function AddForm()
+    {
         $catogoryModel = new CategoryModel();
-        $data['catogory'] = $catogoryModel->orderby('Category_Name','ASC')->findAll();
+        $data['catogory'] = $catogoryModel->orderby('Category_Name', 'ASC')->findAll();
+        $data['userdata'] = $this->userData;
+        
         return view('iManger/Add_items.php', $data);
-       
-       
     }
      
    // item add processing Form Controller
@@ -121,8 +129,9 @@ class imdashController extends BaseController
    public function edit($id = null)
    {
     $dashboardModel = new DashboardModel();
-    $data['dashboard'] = $dashboardModel->find($id);
-   
+     
+      $data['dashboard'] = $dashboardModel->find($id);
+      $data['userdata'] = $this->userData;
     return view('iManger/edit_items',$data);
 
    }
@@ -147,7 +156,7 @@ class imdashController extends BaseController
     $demandModel = new DemandModel();
 
     $data['items']=$dashboardModel->join('demand','items.id =demand.Items_id ')->find($id);
-
+    $data['userdata'] = $this->userData;
     return view('iManger/Edit_qu',$data);
 
         
