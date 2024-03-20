@@ -36,6 +36,25 @@ class LoginController extends BaseController
                     if (password_verify($password, $userData['Password'])) {
 
                         if($userData['usergroup_id']== 1){
+                         
+                         $loginInfo =[
+
+                            'User_id' => $userData['User_id'],
+                             'Agent'  =>$this->getUserAgentInfo(),
+                              'Ip'    =>$this->request->getIPAddress(),
+                           'Login_time' => date('y-m-d h:i:s'),
+
+                         ];
+                                    
+                         $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
+                         
+                         if($la_id)
+                         {
+                            $this->session->set('logged_info',$la_id);
+
+                         }
+
+
                         $this->session->set('logged_user',$userData['User_id']);
                         return redirect()->to(base_url().'/Admin');
 
@@ -43,6 +62,26 @@ class LoginController extends BaseController
                         else if($userData['usergroup_id']== 2)
                         {
                           
+
+                              
+                         $loginInfo =[
+
+                            'User_id' => $userData['User_id'],
+                             'Agent'  =>$this->getUserAgentInfo(),
+                              'Ip'    =>$this->request->getIPAddress(),
+                           'Login_time' => date('y-m-d h:i:s'),
+
+                         ];
+                                    
+                         $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
+                         
+                         if($la_id)
+                         {
+                            $this->session->set('logged_info',$la_id);
+
+                         }
+
+
                             
                            $this->session->set('logged_user',$userData['User_id']);
                        
@@ -76,4 +115,30 @@ class LoginController extends BaseController
         session()->destroy();
         return redirect()->to(route_to('index'));
     }
+
+    public function getUserAgentInfo()
+    {
+        $agent = $this->request->getUserAgent();
+        if($agent -> isBrowser())
+        {
+            $currentAgent = $agent->getBrowser();
+        }
+        elseif($agent -> isRobot())
+        {
+            $currentAgent =$this-> $agent->robot();
+        }
+        elseif($agent -> isMobile())
+        {
+            $currentAgent = $agent->getMobile();
+        }
+        else
+        {
+            $currentAgent='unidentified User Agent';
+        }
+
+        return $currentAgent;
+
+    }
+
+
 }

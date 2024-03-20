@@ -52,7 +52,21 @@ class UserModel extends Model{
         }
       }
 
+  public function saveLoginInfo($data)
+  {
+    $ui=$this->db->table('user_access');
+        
+    $ui->insert($data);
 
+    if($this->db->affectedRows()==1)
+    {
+      return $this->db->insertID();
+    }
+    else
+    {
+      return false;
+    }
+  }
  
 }
 
