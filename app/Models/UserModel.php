@@ -52,6 +52,7 @@ class UserModel extends Model{
         }
       }
 
+      // save login info
   public function saveLoginInfo($data)
   {
     $ui=$this->db->table('user_access');
@@ -66,6 +67,21 @@ class UserModel extends Model{
     {
       return false;
     }
+  }
+// save logout info
+  public function updateLogoutTime($id)
+  {
+    $ui=$this->db->table('user_access');
+        
+    $ui->where('id',$id);
+
+    $ui->update(['Logout_time'=>date('y-m-d h:i:s')]);
+
+    if($this->db->affectedRows()==1)
+    {
+      return true;
+    }
+   
   }
  
 }

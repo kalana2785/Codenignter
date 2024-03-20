@@ -34,7 +34,8 @@ class LoginController extends BaseController
                 if ($userData) {
                 
                     if (password_verify($password, $userData['Password'])) {
-
+                       
+                         // collect the user login info
                         if($userData['usergroup_id']== 1){
                          
                          $loginInfo =[
@@ -54,7 +55,7 @@ class LoginController extends BaseController
 
                          }
 
-
+                        // redirct Path 
                         $this->session->set('logged_user',$userData['User_id']);
                         return redirect()->to(base_url().'/Admin');
 
@@ -63,7 +64,7 @@ class LoginController extends BaseController
                         {
                           
 
-                              
+                             // collect the user login info   
                          $loginInfo =[
 
                             'User_id' => $userData['User_id'],
@@ -80,7 +81,8 @@ class LoginController extends BaseController
                             $this->session->set('logged_info',$la_id);
 
                          }
-
+                          
+                         // redirct Path in inventory Manger
 
                             
                            $this->session->set('logged_user',$userData['User_id']);
@@ -111,11 +113,22 @@ class LoginController extends BaseController
 
     public function logout()
     {
+        // Save Logout time
+         if(session()->has('logged_info'))
+         {
+            $la_id = session()->get('logged_info');
+            $this->dbmodel->updateLogoutTime($la_id);
+         }
+
+     
+        // Session destroy
         session()->remove('logged_user');
         session()->destroy();
         return redirect()->to(route_to('index'));
     }
 
+
+     // find browser or agent 
     public function getUserAgentInfo()
     {
         $agent = $this->request->getUserAgent();
