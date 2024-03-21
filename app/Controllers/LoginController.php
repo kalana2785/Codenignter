@@ -154,4 +154,78 @@ class LoginController extends BaseController
     }
 
 
+   public function forgotview()
+   {
+       
+       return view('forgot');
+   }
+
+   
+   public function Forgotpassword()
+{
+    if ($this->request->getMethod() == 'post') {
+        // Validation rules for the email field
+        $rules = [
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email',
+                'errors' => [
+                    'required' => '{field} field required',
+                    'valid_email' => 'Valid {field} required',
+                ]
+            ],
+        ];
+
+        // Validate the input data
+        if ($this->validate($rules)) {
+            // Get the email from the request
+            $useremail = $this->request->getPost('email');
+
+            // Verify if the email exists in the database
+            $userData = $this->dbmodel->verifyEmail($useremail);
+            if ($userData) {
+                // Update the timestamp of password reset
+                if ($this->dbmodel->updateAt($userData['User_id'])) {
+                    // Prepare email data
+                    $to = $useremail;
+                    $subject = 'Reset Password Link';
+                    $token = $userData['User_id'];
+                    $message = 'Hello ' . $userData['User_id'] . '<br><br>'
+                             . '<a href="' . base_url() . '/LoginController/forgotview/' . $token . '">Click me</a>';
+
+                    // Load the email library
+                    $email = \Config\Services::email();
+
+                    // Set email parameters
+                    $email->setTo($to);
+                    $email->setFrom('info@hhims.in', 'HHIMS');
+                    $email->setSubject($subject);
+                    $email->setMessage($message);
+
+                    // Send the email
+                    if ($email->send()) {
+                        return redirect()->back()->with('status', 'Password reset link sent successfully');
+                    } else {
+
+                         $data = $email->printDebugger(['header']);
+                         print_r($data);
+
+                    }
+                } else {
+                    // Handle database update failure
+                    return redirect()->back()->with('errormessage', 'Failed to update password reset information');
+                }
+            } else {
+                // Email does not exist in the database
+                return redirect()->back()->with('errormessage', 'Sorry! Email does not exist');
+            }
+        } else {
+            // Validation failed
+            return redirect()->back()->withInput()->with('errormessage', $this->validator->listErrors());
+        }
+    }
+}
+
+
+
 }

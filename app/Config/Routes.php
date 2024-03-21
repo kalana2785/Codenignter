@@ -12,7 +12,8 @@ $routes->get('/', 'Home::index');
 
 $routes->post('user/login','LoginController::index');
 $routes->get('user/logout','LoginController::logout');
-
+$routes->get('/forgot','LoginController::forgotview');
+$routes->post('user/forgot','LoginController::Forgotpassword');
 // inventory Manger
 $routes->get('/dashboard', 'imdashController::index' );
 
@@ -41,3 +42,7 @@ $routes->get('Admin/delete/(:num)','AdminController::delete/$1');
 $routes->get('Admin/Add-user', 'AdminController::Adduser');
 
 $routes->post('Admin/Addnewuser', 'AdminController::saveuser');
+
+
+
+

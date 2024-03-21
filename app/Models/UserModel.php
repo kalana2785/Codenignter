@@ -13,7 +13,8 @@ class UserModel extends Model{
         'Username', 
         'Email',
         'Password',
-        'usergroup_id'
+        'usergroup_id',
+        'update_at'
    
  
     ];
@@ -82,6 +83,23 @@ class UserModel extends Model{
       return true;
     }
    
+  }
+  public function updateAt($id)
+  {
+    $ui=$this->db->table('user');
+        
+    $ui->where('User_id',$id);
+
+    $ui->update(['update_at'=>date('y-m-d h:i:s')]);
+
+    if($this->db->affectedRows()==1)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
  
 }
