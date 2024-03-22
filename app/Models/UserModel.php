@@ -101,7 +101,27 @@ class UserModel extends Model{
       return false;
     }
   }
- 
+
+
+
+  public function verifytoken($token)
+  {
+      $ve = $this->db->table('user');
+      $ve->select("User_id,Username,update_at");
+      $ve->where('User_id',$token);
+      $result = $ve->get();
+      if(count($result->getResultArray())==1)
+     {
+      return $result->getRowArray();
+     }
+     else
+     {
+       return false;
+     }
+
+    }
+
+
 }
 
 ?>

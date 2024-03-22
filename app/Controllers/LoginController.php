@@ -153,14 +153,14 @@ class LoginController extends BaseController
 
     }
 
-
+// recrtive Froget password form
    public function forgotview()
    {
        
        return view('forgot');
    }
 
-   
+// reset link   
    public function Forgotpassword()
 {
     if ($this->request->getMethod() == 'post') {
@@ -178,25 +178,26 @@ class LoginController extends BaseController
 
         // Validate the input data
         if ($this->validate($rules)) {
-            // Get the email from the request
+           
             $useremail = $this->request->getPost('email');
 
-            // Verify if the email exists in the database
+            
             $userData = $this->dbmodel->verifyEmail($useremail);
             if ($userData) {
-                // Update the timestamp of password reset
+               
                 if ($this->dbmodel->updateAt($userData['User_id'])) {
                     // Prepare email data
                     $to = $useremail;
                     $subject = 'Reset Password Link';
                     $token = $userData['User_id'];
-                    $message = 'Hello ' . $userData['User_id'] . '<br><br>'
-                             . '<a href="' . base_url() . '/LoginController/forgotview/' . $token . '">Click me</a>';
+                   $message = 'Hello ' . $userData['User_id'] . '<br><br>'
+               . '<a href="' . base_url() . 'reset/' . $token . '">Click me</a>';
+ 
 
-                    // Load the email library
+                 
                     $email = \Config\Services::email();
 
-                    // Set email parameters
+               
                     $email->setTo($to);
                     $email->setFrom('info@hhims.in', 'HHIMS');
                     $email->setSubject($subject);
@@ -227,5 +228,56 @@ class LoginController extends BaseController
 }
 
 
+  
+  
+    public function resetpassword($token = null)
+    {
+        if (!empty($token)) {
+            $userData = $this->dbmodel->verifytoken($token);
+            if (!empty($userData)) {
+                if ($this->cheakexpirydata($userData['update_at'])) {
+                        
+                    $data['token']=$userData['User_id'];
+                    return view('reset_password',$data);
+
+
+                } else {
+                    $data['error'] = 'Reset Password Link has expired.';
+                }
+            } else {
+                $data['error'] = 'Unable to find account.';
+            }
+        } else {
+            $data['error'] = 'Sorry! Unauthorized Access.';
+        }
+    
+        // Load view with data
+        return view('reset_password', $data);
+    }
+    
+
+
+// validate link time 
+public function cheakexpirydata($time)
+{
+
+  $timediffent=strtotime(date("y-m-d h:i:s"))- strtotime($time);
+  if($timediffent<900)
+  {
+    return true;
+  } 
+  else
+  {
+     return false;
+  }
+}
+
+
+
+public function updatepassword()
+{
+   
+
+}
 
 }
