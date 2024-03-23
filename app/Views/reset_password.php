@@ -37,8 +37,7 @@
     </div>
 <?php endif; ?>
        
-
-<form action="<?= base_url('user/reset');?>" method="post">
+<form action="<?= base_url('resetpassword/' . $token) ?>" method="post">
 
 <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Forgot Password</label>
@@ -47,7 +46,7 @@
 <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">New Password</label>
     <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputText" name="Npassword">
+        <input type="password" class="form-control" id="inputText" name="NPassword">
     </div>
 </div>
 
@@ -65,6 +64,7 @@
     <input type="submit" class="btn btn-primary" value="Submit">
 </div>
 </form>
+
 
 
  

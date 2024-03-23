@@ -1,0 +1,3 @@
+CRITICAL - 2024-03-23 22:40:24 --> ErrorException: Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Email\Email.php on line 2114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

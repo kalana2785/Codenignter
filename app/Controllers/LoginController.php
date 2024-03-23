@@ -191,7 +191,8 @@ class LoginController extends BaseController
                     $subject = 'Reset Password Link';
                     $token = $userData['User_id'];
                    $message = 'Hello ' . $userData['User_id'] . '<br><br>'
-               . '<a href="' . base_url() . 'reset/' . $token . '">Click me</a>';
+               . '<a href="' . base_url('LoginController/resetpassword/' . $token) . '">Click me</a>';
+
  
 
                  
@@ -229,31 +230,45 @@ class LoginController extends BaseController
 
 
   
-  
-    public function resetpassword($token = null)
-    {
-        if (!empty($token)) {
-            $userData = $this->dbmodel->verifytoken($token);
-            if (!empty($userData)) {
-                if ($this->cheakexpirydata($userData['update_at'])) {
-                        
-                    $data['token']=$userData['User_id'];
-                    return view('reset_password',$data);
+public function resetpassword($token = null)
+{
+    $data = []; // Initialize data array
 
+    if (!empty($token)) {
+        $userData = $this->dbmodel->verifytoken($token); 
+        if (!empty($userData)) {
+            if ($this->cheakexpirydata($userData['update_at'])) {
+                // Check if form is submitted
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    // Retrieve new password and confirm password from the form
+                    $newPassword = $_POST['NPassword'];
+                    $confirmPassword = $_POST['CPassword'];
 
-                } else {
-                    $data['error'] = 'Reset Password Link has expired.';
+                    // Validate if new password and confirm password match
+                    if ($newPassword === $confirmPassword) {
+                        // Update password in the database
+                        $this->dbmodel->updatePassword($userData['User_id'], $newPassword);
+
+                        // Optionally, you can redirect the user to a success page
+                        return redirect()->to('password_reset_success')->with('success', 'Password updated successfully.');
+                    } else {
+                        $data['error'] = 'New Password and Confirm Password do not match.';
+                    }
                 }
             } else {
-                $data['error'] = 'Unable to find account.';
+                $data['error'] = 'Reset Password Link has expired.';
             }
         } else {
-            $data['error'] = 'Sorry! Unauthorized Access.';
+            $data['error'] = 'Unable to find account.';
         }
-    
-        // Load view with data
-        return view('reset_password', $data);
+    } else {
+        $data['error'] = 'Sorry! Unauthorized Access.';
     }
+
+ 
+    return view('reset_password', $data);
+}
+
     
 
 
@@ -273,11 +288,5 @@ public function cheakexpirydata($time)
 }
 
 
-
-public function updatepassword()
-{
-   
-
-}
 
 }

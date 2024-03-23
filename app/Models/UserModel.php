@@ -107,7 +107,7 @@ class UserModel extends Model{
   public function verifytoken($token)
   {
       $ve = $this->db->table('user');
-      $ve->select("User_id,Username,update_at");
+      $ve->select("User_id,Username,Password,update_at");
       $ve->where('User_id',$token);
       $result = $ve->get();
       if(count($result->getResultArray())==1)
@@ -121,7 +121,18 @@ class UserModel extends Model{
 
     }
 
-
+    public function updatePassword($userId, $newPassword)
+    {
+        $data = [
+            'Password' => password_hash($newPassword, PASSWORD_DEFAULT) 
+        ];
+    
+        $this->where('User_id', $userId)
+             ->set($data)
+             ->update();
+    
+        return $this->db->affectedRows() > 0; 
+    }
 }
 
 ?>

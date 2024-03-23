@@ -14,8 +14,12 @@ $routes->post('user/login','LoginController::index');
 $routes->get('user/logout','LoginController::logout');
 $routes->get('/forgot','LoginController::forgotview');
 $routes->post('user/forgot','LoginController::Forgotpassword');
-$routes->get('reset/(:any)', 'LoginController::resetpassword/$1');
-$routes->put('user/reset(:num)','LoginController::updatepassword/$1');
+// routes.php or app/Routes.php
+
+$routes->get('resetpassword/(:any)', 'LoginController::resetpassword/$1');
+
+
+$routes->get('resetp','LoginController::updatepassword');
 
 // inventory Manger
 $routes->get('/dashboard', 'imdashController::index' );
