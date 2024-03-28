@@ -12,6 +12,7 @@ class LoginController extends BaseController
     {
         $this->session = session(); 
         $this->dbmodel = new UserModel();
+
     }
 
     public function index()
@@ -88,6 +89,39 @@ class LoginController extends BaseController
                            $this->session->set('logged_user',$userData['User_id']);
                        
                             return redirect()->to(base_url().'dashboard');
+
+                        }
+                        else if($userData['usergroup_id']== 3)
+                        {
+                          
+
+                             // collect the user login info   
+                         $loginInfo =[
+
+                            'User_id' => $userData['User_id'],
+                             'Agent'  =>$this->getUserAgentInfo(),
+                              'Ip'    =>$this->request->getIPAddress(),
+                           'Login_time' => date('y-m-d h:i:s'),
+
+                         ];
+                                    
+                         $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
+                         
+                         if($la_id)
+                         {
+                            $this->session->set('logged_info',$la_id);
+
+                         }
+                          
+                         // redirct Path in inventory Manger
+
+                            
+                           $this->session->set('logged_user',$userData['User_id']);
+
+                           //unit usermodel function call
+                           $data['unit'] = $this->dbmodel->verifyunit();
+                          
+                           return view('/unit', $data);
 
                         }
                        else{

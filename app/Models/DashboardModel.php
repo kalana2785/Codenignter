@@ -71,6 +71,23 @@ class DashboardModel extends Model
    }
 // ...
 */
+   public function  getunitDashboardData($id=null)
+   {
+    $query = $this->select('*')
+            ->join('category', 'items.catogory = category.Cid')
+            ->join('type', 'items.type_name = type.type_id')
+            ->join('unit_inventory','items.id = unit_inventory.items_id')
+            ;
+            
+           
+       
+        if ($id !== null) {
+            $query->where('items.id', $id);
+        }
+
+       
+        return $query->findAll();
+   }
 }
 
 ?>

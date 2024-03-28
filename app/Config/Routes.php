@@ -14,10 +14,7 @@ $routes->post('user/login','LoginController::index');
 $routes->get('user/logout','LoginController::logout');
 $routes->get('/forgot','LoginController::forgotview');
 $routes->post('user/forgot','LoginController::Forgotpassword');
-// routes.php or app/Routes.php
-
-$routes->get('resetpassword/(:any)', 'LoginController::resetpassword/$1');
-
+$route['LoginController/resetpassword/(:any)'] = 'LoginController/resetpassword/$1';
 
 $routes->get('resetp','LoginController::updatepassword');
 
@@ -51,5 +48,7 @@ $routes->get('Admin/Add-user', 'AdminController::Adduser');
 $routes->post('Admin/Addnewuser', 'AdminController::saveuser');
 
 
+// unit user 
 
+$routes->get('/unit/(:num)', 'UnitController::index/$1');
 
