@@ -8,3 +8,53 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-28 20:24:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/unit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/unit.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('/unit', [], true)
+ 3 APPPATH\Controllers\LoginController.php(124): view('/unit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoginController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-28 20:35:30 --> ErrorException: Undefined array key "Unit_id"
+in APPPATH\Controllers\LoginController.php on line 120.
+ 1 APPPATH\Controllers\LoginController.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Unit_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\LoginController.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoginController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-28 20:35:40 --> ErrorException: Undefined array key "Unit_id"
+in APPPATH\Controllers\LoginController.php on line 120.
+ 1 APPPATH\Controllers\LoginController.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Unit_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\LoginController.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoginController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-28 20:37:27 --> ErrorException: Undefined array key "Unit_id"
+in APPPATH\Controllers\LoginController.php on line 120.
+ 1 APPPATH\Controllers\LoginController.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Unit_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\LoginController.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoginController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-28 20:42:53 --> ErrorException: Undefined array key "Unit_id"
+in APPPATH\Controllers\LoginController.php on line 120.
+ 1 APPPATH\Controllers\LoginController.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Unit_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\LoginController.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoginController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-28 20:50:15 --> ErrorException: Undefined array key "Unit_id"
+in APPPATH\Controllers\LoginController.php on line 113.
+ 1 APPPATH\Controllers\LoginController.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Unit_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\LoginController.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoginController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

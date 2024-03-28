@@ -135,21 +135,22 @@ class UserModel extends Model{
         return $this->db->affectedRows() > 0; 
     }
     public function verifyunit($unitid=null)
-    {
-        $query = $this->select('*')
-            ->join('unit', 'user.Unit_id = unit.Unit_id');
-    
-        if ($unitid !== null) {
-            $query->where('user.Unit_id', $unitid);
-        }
-    
-        $results = $query->get()->getResultArray();
+{
+    $query = $this->select('*')
+        ->join('unit', 'user.Unit_id = unit.Unit_id');
 
-        // Extracting 'Unit_id' values from the result array
-        $unitIds = array_column($results, 'Unit_id');
-    
-        return $unitIds;
+    if ($unitid !== null) {
+        $query->where('user.Unit_id', $unitid);
     }
+
+    $results = $query->get()->getResultArray();
+
+    // Extracting 'Unit_id' values from the result array
+    $unitIds = array_column($results, 'Unit_id');
+
+    return $unitIds;
+}
+
     
 }
 
