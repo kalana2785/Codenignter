@@ -151,6 +151,18 @@ class UserModel extends Model{
     return $unitIds;
 }
 
+public function getUserIdsByUnitId($unitId) {
+  $query = $this->db->table('user')
+                    ->select('Unit_id')
+                    ->where('User_id ', $unitId)
+                    ->get()
+                    ->getResultArray();
+
+  $userIds = array_column($query, 'Unit_id');
+
+  return $userIds;
+}
+
     
 }
 

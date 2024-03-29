@@ -1,0 +1,2058 @@
+CRITICAL - 2024-03-29 18:27:17 --> ErrorException: Undefined variable $unitItems
+in APPPATH\Views\Unit\dashboard.php on line 16.
+ 1 APPPATH\Views\Unit\dashboard.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unitItems', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(16): view('Unit/dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:23:26 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:23:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:23:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:23:26 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:25:50 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:25:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:25:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:25:50 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:28:19 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:28:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:28:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:28:19 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:28:29 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:28:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:28:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:28:29 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:29:03 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:29:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:29:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:29:03 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:15 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:15 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:16 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:16 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:16 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:16 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:16 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:16 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:17 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:17 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:17 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:17 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:44 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:44 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:45 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:45 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:45 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:45 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:45 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:45 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:54 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:54 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:55 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:55 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:31:55 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:31:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:31:55 --> [Caused by] mysqli_sql_exception: Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = (\'2\',\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:44:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:44:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:44:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:44:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:44:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:44:40 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:44:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:44:40 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:45:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData(Array)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-29 19:45:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:45:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData(Array)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-29 19:45:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:45:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData(Array)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-29 19:45:26 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:26 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:45:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData(Array)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-29 19:45:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:45:33 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*, `unit`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_inventory`.`Unit_id` = `unit`.`Unit_id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(28): App\Models\UnitinventoryModel->getUnitDashboardData([])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:46:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:46:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:46:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:46:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:46:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:46:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:46:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:46:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:46:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:46:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-03-29 19:46:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3 in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata(Array)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-03-29 19:46:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 2 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 4 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-03-29 19:46:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `user`
+WHERE `User_id` = ()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `User_id` = ()')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `User_id` = :User_id:', [...], false)
+ 5 APPPATH\Models\UserModel.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UnitController.php(25): App\Models\UserModel->getlogindata([])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

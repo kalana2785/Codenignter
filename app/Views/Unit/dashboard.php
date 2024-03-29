@@ -12,10 +12,7 @@
 
     <div>
         <h2>Unit Items</h2>
-        <ul>
-            <?php foreach ($unitItems as $item): ?>
-                <li><?php echo $item['name']; ?></li>
-            <?php endforeach; ?>
+     
         </ul>
     </div>
 
