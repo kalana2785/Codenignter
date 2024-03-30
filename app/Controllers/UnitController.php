@@ -18,18 +18,17 @@ class UnitController extends BaseController
         $userinventory = new UnitinventoryModel();
         // Filter all
 // Fetch User_id based on Unit_id
+
 $userIds = session()->get('logged_user');
-//$unitid = $usermodel->getUserIdsByUnitId($userIds);
+$userData = [];
 
-// Get user data
-$data['userIds'] = $userIds;
-//$data['unitid'] = $unitid;
+foreach ($userIds as $unitId) {
+    $userData[] = $userinventory->where('Unit_id', $unitId)->findAll();
+}
 
+$data['userData'] = $userData;
 
-
-
-return view('Unit/dashboard',$data);
-
+return view('Unit/dashboard', $data);
     }
 
 
