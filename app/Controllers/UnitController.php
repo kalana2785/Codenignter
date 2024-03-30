@@ -18,26 +18,18 @@ class UnitController extends BaseController
         $userinventory = new UnitinventoryModel();
         // Filter all
 // Fetch User_id based on Unit_id
-$unitId = session()->get('logged_unit');
-$userIds = $usermodel->getUserIdsByUnitId($unitId);
+$userIds = session()->get('logged_user');
+//$unitid = $usermodel->getUserIdsByUnitId($userIds);
 
 // Get user data
-//$data['userdata'] = $usermodel->getlogindata($userIds);
-
-// Get dashboard data for the fetched User_ids
-$data['dashboards'] = $userinventory->getUnitDashboardData($userIds);
-
-// Surgical items
-$data['sugicals'] = $userinventory->getUnitDashboardData($userIds, '1');
-
-// General items
-$data['general'] = $userinventory->getUnitDashboardData($userIds, '2');
+$data['userIds'] = $userIds;
+//$data['unitid'] = $unitid;
 
 
 
-                
 
-        return view('Unit/dashboard.php',$data);
+return view('Unit/dashboard',$data);
+
     }
 
 

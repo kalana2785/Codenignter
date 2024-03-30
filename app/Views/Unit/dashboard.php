@@ -12,7 +12,14 @@
 
     <div>
         <h2>Unit Items</h2>
-     
+       <!-- Display userIds -->
+<h2>UserIds:</h2>
+<pre><?php print_r($userIds); ?></pre>
+
+<!-- Display unitid -->
+<h2>UnitId:</h2>
+<pre><?php //print_r($unitid); ?></pre>
+
         </ul>
     </div>
 

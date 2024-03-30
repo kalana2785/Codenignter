@@ -14,7 +14,7 @@ class UserModel extends Model{
         'Email',
         'Password',
         'usergroup_id',
-        '	Unit_id',
+        'Unit_id',
         'update_at'
    
  
@@ -38,21 +38,20 @@ class UserModel extends Model{
       
 
     }
-  public function getlogindata($id)
-      {
-        $ui=$this->db->table('user');
-        
-        $ui->where('User_id',$id);
+  
+    public function getlogindata($id)
+    {
+        $ui = $this->db->table('user');
+        $ui->where('User_id', $id);
         $result = $ui->get();
-        if(count($result->getResultArray())==1)
-        {
-         return $result->getRow();
+    
+        if ($result->getNumRows() == 1) {
+            return $result->getRow();
+        } else {
+            return false;
         }
-        else
-        {
-          return false;
-        }
-      }
+    }
+    
 
       // save login info
   public function saveLoginInfo($data)
@@ -151,17 +150,19 @@ class UserModel extends Model{
     return $unitIds;
 }
 
-public function getUserIdsByUnitId($unitId) {
-  $query = $this->db->table('user')
+
+public function getUnitIdByUserId($unitId)
+    {
+        $query = $this->db->table('user')
                     ->select('Unit_id')
-                    ->where('User_id ', $unitId)
+                    ->where('User_id', $unitId)
                     ->get()
                     ->getResultArray();
 
-  $userIds = array_column($query, 'Unit_id');
+        $userIds = array_column($query, 'Unit_id');
 
-  return $userIds;
-}
+        return $userIds;
+    }
 
     
 }

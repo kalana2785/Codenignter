@@ -92,32 +92,27 @@ class LoginController extends BaseController
 
                         }
                         elseif ($userData['usergroup_id'] == 3) {
-                            $loginInfo =[
-
+                            $loginInfo = [
                                 'User_id' => $userData['User_id'],
-                                 'Agent'  =>$this->getUserAgentInfo(),
-                                  'Ip'    =>$this->request->getIPAddress(),
-                               'Login_time' => date('y-m-d h:i:s'),
-    
-                             ];
-                                        
-                             $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
-                             
-                             if($la_id)
-                             {
-                                $this->session->set('logged_info',$la_id);
-    
-                             }
-                              
-                             // redirct Path in inventory Manger
-    
-                                
-                               $this->session->set('logged_user',$userData['User_id']);
-                           
-                                return redirect()->to(base_url().'/Unit');
-    
-                           
-                        } 
+                                'Agent'   => $this->getUserAgentInfo(),
+                                'Ip'      => $this->request->getIPAddress(),
+                                'Login_time' => date('y-m-d h:i:s'),
+                            ];
+                        
+                            $la_id = $this->dbmodel->saveLoginInfo($loginInfo);
+                        
+                            if ($la_id) {
+                                $this->session->set('logged_info', $la_id);
+                            }
+                        
+                            // Fetch Unit_id based on User_id
+                            $unitId = $this->dbmodel->getUnitIdByUserId($userData['User_id']);
+                        
+                            // Set logged_user session with Unit_id
+                            $this->session->set('logged_user', $unitId);
+                        
+                            return redirect()->to(base_url().'/Unit');
+                        }
                 
                         
                        else{
