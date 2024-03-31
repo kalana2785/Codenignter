@@ -21,7 +21,7 @@
                 <?php foreach ($userList as $user): ?>
                     <tr>
                         <td><?= $user['Unit_id'] ?></td>
-                        <td><?= $user['item_id'] ?></td>
+                        <td><?= $user['item_name'] ?></td>
                         <!-- Display more user data columns as needed -->
                     </tr>
                 <?php endforeach; ?>

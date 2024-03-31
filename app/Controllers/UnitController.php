@@ -23,7 +23,7 @@ $userIds = session()->get('logged_user');
 $userData = [];
 
 foreach ($userIds as $unitId) {
-    $userData[] = $userinventory->where('Unit_id', $unitId)->findAll();
+    $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')->where('Unit_id', $unitId)->findAll();
 }
 
 $data['userData'] = $userData;
