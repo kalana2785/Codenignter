@@ -12,7 +12,8 @@ class UnitinventoryModel extends Model
    [
        'item_id',
        'Unit_id',
-       'Quntity'
+       'Quntity',
+       'issue_date'
        
 
   
