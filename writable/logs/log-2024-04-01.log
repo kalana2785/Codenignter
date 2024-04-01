@@ -14,3 +14,1240 @@ in APPPATH\Views\Layout\Unit\header.php on line 177.
 12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:38:00 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(57): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:38:21 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(55): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:41:37 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(48): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:44:34 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(48): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:46:01 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:46:02 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:46:02 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:46:02 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:46:03 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 15:49:36 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 15:49:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:49:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 15:49:36 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:06:55 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:06:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:06:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:06:55 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(38): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:10:45 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:10:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:45 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:10:46 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:10:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:46 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:10:46 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:10:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:46 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:10:47 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:10:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:47 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:10:47 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:10:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:47 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:10:47 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:10:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:10:47 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:11:09 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:11:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:11:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:11:09 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(45): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:13:13 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:13:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:13:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:13:13 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:13:14 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:13:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:13:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:13:14 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:13:42 --> mysqli_sql_exception: Unknown column 'items.category' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:13:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:13:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:13:42 --> [Caused by] mysqli_sql_exception: Unknown column 'items.category' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = \'1\'
+AND `items`.`category` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`Unit_id` = :unit_inventory.Unit_id:
+AND `items`.`category` = :items.category:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:17:31 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(58): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:17:33 --> ErrorException: Undefined variable $SugicalData
+in APPPATH\Views\Unit\dashboard.php on line 161.
+ 1 APPPATH\Views\Unit\dashboard.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SugicalData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 161)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(58): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-01 16:25:10 --> mysqli_sql_exception: Not unique table/alias: 'unit_inventory' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-01 16:25:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'unit_inventory'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = :Unit_id:
+AND `C_id` = :C_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:25:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'unit_inventory'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = \'1\'
+AND `C_id` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = \'1\'
+AND `C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = :Unit_id:
+AND `C_id` = :C_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-01 16:25:10 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'unit_inventory'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = \'1\'
+AND `C_id` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = \'1\'
+AND `C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = \'1\'
+AND `C_id` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `unit_inventory` ON `items`.`id` = `unit_inventory`.`item_id`
+WHERE `Unit_id` = :Unit_id:
+AND `C_id` = :C_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\UnitController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

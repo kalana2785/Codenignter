@@ -11,6 +11,7 @@ class UnitinventoryModel extends Model
    protected $allowedFields =
    [
        'item_id',
+       'C_id',
        'Unit_id',
        'Quntity',
        'issue_date'

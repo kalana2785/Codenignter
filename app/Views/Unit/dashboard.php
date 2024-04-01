@@ -76,17 +76,29 @@ $(document).on('click', '.view_btn', function () {
   }
    ?>
 <!-- Check if there is an error message and display it -->
-     <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" onclick="showTable(1)">All</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="showTable(2)">Sugical</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="showTable(3)">General</a>
-      </li>
-    </ul>
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" onclick="showTable(1)">All</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" onclick="showTable(2)">Sugical</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" onclick="showTable(3)">General</a>
+  </li>
+</ul>
+
+
+
+<script>
+    function showTable(tabIndex) {
+      $('.table-container').removeClass('active-table');
+      $('#table' + tabIndex).addClass('active-table');
+    }
+</script>
+
+
+
 
 
 
@@ -131,7 +143,46 @@ $(document).on('click', '.view_btn', function () {
 
 
 
-<!-- General items-->
+<div id="table2" class="table-container">
+<!--sugical items-->
+        <table class="table" name="Sugical">
+          <thead>
+          <tr>
+    
+                <th scope="col">Items Name</th>
+                <th scope="col">Catogory</th>
+                
+                <th scope="col">Quntity</th>
+                <th scope="col">Issue Update</th>
+                <th> </th>
+          </tr>
+          </thead>
+          <tbody>
+          <?php foreach ($SugicalData as $userList): ?>
+                <?php foreach ($userList as $user): ?>
+                  <tr>
+                <td><?php echo $user['item_name']; ?></td>
+                <td><?php echo $user['type_name']; ?></td>  
+                <td><?php echo $user['Quntity']; ?></td>
+                <td><?php echo $user['issue_date']; ?></td>
+                <td>
+
+                <a href="<?php echo base_url('Imanger/edit/' . $user['id']); ?>"  class="btn btn-primary btn-sm">Edit
+               
+
+                 
+                
+                </a>
+                <a href="#"  class="btn btn-primary view_btn">View</a>
+
+                </td>
+            </tr>
+                <?php endforeach;?> 
+            <?php endforeach;?>
+        </tbody>
+        </table>
+</div>
+
 
 
 
