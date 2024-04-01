@@ -104,7 +104,8 @@ class LoginController extends BaseController
                             if ($la_id) {
                                 $this->session->set('logged_info', $la_id);
                             }
-                        
+                           
+                            $this->session->set('login_user',$userData['User_id']);
                             // Fetch Unit_id based on User_id
                             $unitId = $this->dbmodel->getUnitIdByUserId($userData['User_id']);
                         

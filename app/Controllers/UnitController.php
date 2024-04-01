@@ -9,6 +9,9 @@ use App\Models\UnitinventoryModel;
 
 class UnitController extends BaseController
 {
+
+
+    private $userData;
     public function index(): string
     {      if (!session()->has('logged_user')) {
         return redirect()->to(route_to('index'));
@@ -16,7 +19,7 @@ class UnitController extends BaseController
         $dashboardModel = new DashboardModel();
         $usermodel= new UserModel();
         $userinventory = new UnitinventoryModel();
-        // Filter all
+        
 // Fetch User_id based on Unit_id
 
 $userIds = session()->get('logged_user');
@@ -28,13 +31,20 @@ foreach ($userIds as $unitId) {
 
 $data['userData'] = $userData;
 
+// create user session
+$Unituserid = session()->get('login_user');
+       
+            
+$this->userData =$usermodel->getlogindata($Unituserid);
+$data['unituserdata'] = $this->userData;
+
+
 return view('Unit/dashboard', $data);
     }
 
 
     
   }
-  // Assuming you have defined the getUserIdsByUnitId() method in your UserModel
 
 
 }

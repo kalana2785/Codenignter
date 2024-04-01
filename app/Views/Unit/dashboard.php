@@ -32,7 +32,7 @@
 </head>
 
 <body>
-
+<?= $unituserdata->Username ;?>
 
 <!-- veiw pop up msg-->
 <script>
@@ -95,7 +95,7 @@ $(document).on('click', '.view_btn', function () {
     
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
-      h>
+      
       <th scope="col">Quntity</th>
       <th scope="col">Issue Update</th>
       <th> </th>
