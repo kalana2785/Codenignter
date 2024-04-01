@@ -32,7 +32,9 @@
 </head>
 
 <body>
-<?= $unituserdata->Username ;?>
+<?= $this->include('Layout/Unit/header.php') ?>
+<?=
+ $this->include('Layout/Unit/Unit_slidebar.php') ?>
 
 <!-- veiw pop up msg-->
 <script>

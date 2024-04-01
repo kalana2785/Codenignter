@@ -169,13 +169,13 @@
 
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
        
-        <span class="d-none d-md-block dropdown-toggle ps-2"><?= $userdata->Username ;?></span>
+        <span class="d-none d-md-block dropdown-toggle ps-2"><?= $unituserdata->Username ;?></span>
       </a><!-- End Profile Iamge Icon -->
 
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
         <li class="dropdown-header">
-          <h6><?= $userdata->Username ;?></h6>
-          <span>Inventory Manger</span>
+          <h6><<?= $unituserdata->Username ;?>></h6>
+          <span>Unit-In-charger</span>
         </li>
         <li>
           <hr class="dropdown-divider">
