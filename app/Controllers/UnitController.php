@@ -9,7 +9,7 @@ use App\Models\UnitinventoryModel;
 
 class UnitController extends BaseController
 {
-
+   
 
     private $userData;
     public function index(): string
@@ -57,6 +57,21 @@ return view('Unit/dashboard', $data);
 
 
     
+  }
+
+// display distributed items request page
+  public function Add_disreq()
+  {
+
+    $userinventory = new UnitinventoryModel();
+    $data['items'] = $userinventory->join('items','unit_inventory.item_id = items.id')
+                                   ->orderby('Item_id', 'ASC')->findAll();
+
+
+     return view('Unit/Add_disreq.php',$data);
+
+
+
   }
 
 
