@@ -20,15 +20,16 @@ class UnitinventoryModel extends Model
   
 
    ];
+
+
    public function getUnitDashboardData($userIds, int $categoryId = null)
    {  
-       $query = $this->select('unit_inventory.*, items.*, unit.*')
+       $query = $this->select('unit_inventory.*, items.*')
                      ->join('items', 'unit_inventory.item_id = items.id')
-                     ->join('unit', 'unit_inventory.Unit_id = unit.Unit_id')
-                     ->whereIn('unit_inventory.User_id', $userIds);
+                     ->whereIn('unit_inventory.Unit_id', $userIds);
    
        if ($categoryId !== null) {
-           $query->where('unit_inventory.catogory', $categoryId);
+           $query->where('unit_inventory.C_id', $categoryId);
        }
    
        return $query->findAll();

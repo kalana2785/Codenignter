@@ -1,0 +1,544 @@
+CRITICAL - 2024-04-02 18:32:42 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:33:45 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:33:46 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:33:46 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:33:47 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:33:47 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:34:22 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:34:25 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:34:46 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:34:47 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:37:53 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:37:54 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:37:55 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:37:55 --> TypeError: App\Controllers\UnitController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\UnitController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 18:46:07 --> ParseError: syntax error, unexpected token "endforeach"
+in APPPATH\Views\Unit\dashboard.php on line 187.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 3 APPPATH\Controllers\UnitController.php(55): view('Unit/dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:04:06 --> ErrorException: Undefined variable $userData
+in APPPATH\Views\Unit\dashboard.php on line 119.
+ 1 APPPATH\Views\Unit\dashboard.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 119)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:04:22 --> ErrorException: Undefined variable $userData
+in APPPATH\Views\Unit\dashboard.php on line 119.
+ 1 APPPATH\Views\Unit\dashboard.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 119)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-02 19:09:03 --> mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData(Array, 2)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-02 19:09:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:03 --> [Caused by] mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-02 19:09:05 --> mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData(Array, 2)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-02 19:09:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:05 --> [Caused by] mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-02 19:09:05 --> mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData(Array, 2)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-02 19:09:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:05 --> [Caused by] mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-02 19:09:19 --> mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_in...', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_in...')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_in...')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_in...', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData(Array, 2)
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\UnitController->index()
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-04-02 19:09:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:09:19 --> [Caused by] mysqli_sql_exception: Unknown column 'unit_inventory.User_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN (\'1\')
+AND `unit_inventory`.`C_id` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `unit_inventory`.*, `items`.*
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`User_id` IN :unit_inventory.User_id:
+AND `unit_inventory`.`C_id` = :unit_inventory.C_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\UnitinventoryModel.php(35): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\UnitController.php(33): App\Models\UnitinventoryModel->getUnitDashboardData([...], 2)
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:11:09 --> ErrorException: Attempt to read property "Username" on array
+in APPPATH\Views\Layout\Unit\header.php on line 172.
+ 1 APPPATH\Views\Layout\Unit\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on array', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\Unit\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\Unit\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/Unit/header.php', null, true)
+ 5 APPPATH\Views\Unit\dashboard.php(35): CodeIgniter\View\View->include('Layout/Unit/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 9 APPPATH\Controllers\UnitController.php(50): view('Unit/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:11:21 --> ErrorException: Attempt to read property "Username" on array
+in APPPATH\Views\Layout\Unit\header.php on line 172.
+ 1 APPPATH\Views\Layout\Unit\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on array', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\Unit\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\Unit\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/Unit/header.php', null, true)
+ 5 APPPATH\Views\Unit\dashboard.php(35): CodeIgniter\View\View->include('Layout/Unit/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 9 APPPATH\Controllers\UnitController.php(50): view('Unit/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:13:17 --> ErrorException: Undefined variable $userData
+in APPPATH\Views\Unit\dashboard.php on line 119.
+ 1 APPPATH\Views\Unit\dashboard.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 119)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(35): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-02 19:14:05 --> ErrorException: Undefined variable $userData
+in APPPATH\Views\Unit\dashboard.php on line 119.
+ 1 APPPATH\Views\Unit\dashboard.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userData', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php', 119)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Unit\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/dashboard', [], true)
+ 5 APPPATH\Controllers\UnitController.php(49): view('Unit/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

@@ -27,12 +27,11 @@ $userData = [];
 
 foreach ($userIds as $unitId) {
     $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')->where('Unit_id', $unitId)->findAll();
-
-
-
 }
 
 $data['userData'] = $userData;
+
+
 $catogory=2;
 $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')
                              ->where('Unit_id', $unitId)
@@ -42,6 +41,8 @@ $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')
 
 
 $data['SugicalData'] = $userData;
+
+
 
 // create user session
 $Unituserid = session()->get('login_user');

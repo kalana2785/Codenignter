@@ -159,7 +159,11 @@ $(document).on('click', '.view_btn', function () {
           </thead>
           <tbody>
           <?php foreach ($SugicalData as $userList): ?>
+            
                 <?php foreach ($userList as $user): ?>
+
+                  <?php if ($user['C_id'] == 2): ?>
+
                   <tr>
                 <td><?php echo $user['item_name']; ?></td>
                 <td><?php echo $user['type_name']; ?></td>  
@@ -177,6 +181,7 @@ $(document).on('click', '.view_btn', function () {
 
                 </td>
             </tr>
+            <?php endif; ?>
                 <?php endforeach;?> 
             <?php endforeach;?>
         </tbody>
