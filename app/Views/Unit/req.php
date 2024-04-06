@@ -37,7 +37,7 @@
         <label for="inputEmail3" class="col-sm-2 col-form-label">Item Name</label>
         <div class="col-sm-10">
             <!-- Assuming item_name is a field in your database, replace it with the correct field name -->
-            <input type="text" class="form-control" id="inputText" name="item_name" value="<?= $unititems['item_id'] ?>">
+            <input type="text" class="form-control" id="inputText" name="item_name" value="<?= $unititems['item_name'] ?>">
         </div>
     </div>
 
