@@ -66,9 +66,14 @@ public function req($id = null)
 {
 
     $userinventory = new UnitinventoryModel();
+    $usermodel= new UserModel();
  
     $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')->find($id);
-    
+    $Unituserid = session()->get('login_user');
+       
+            
+     $this->userData =$usermodel->getlogindata($Unituserid);
+     $data['unituserdata'] = $this->userData;
    
     return view('Unit/req.php', $data);
 }
