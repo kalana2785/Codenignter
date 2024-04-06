@@ -24,14 +24,21 @@
 <main id="main" class="main">
  
 <!-- Check if there is an error message and display it -->
+<?php if (session()->has('status')): ?>
+    <div class="alert alert-success" role="alert">
+        <?= session('status') ?>
+    </div>
+<?php endif; ?>
+        
 <?php if (session()->has('error')): ?>
     <div class="alert alert-danger" role="alert">
         <?= session('error') ?>
     </div>
-<?php endif; ?>
-           edit
-           <form action="<?= base_url('Imanger/update/'.$unititems['item_id']) ?>" method="post">
-    <input type="hidden" name="_method" value="PUT">
+<?php endif; ?>     
+
+           <form action="<?= base_url('unit/request');?>" method="post">
+
+
 
     <div class="row mb-3">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Item Name</label>
@@ -41,8 +48,18 @@
         </div>
     </div>
 
+    <input type="text" class="form-control" id="inputText" name="item_id" value="<?= $unititems['item_id'] ?>" hidden>
+    <input type="text" class="form-control" id="inputText" name="unit" value="<?= $unititems['Unit_id'] ?>" hidden>
+
+    <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Request Quntity</label>
+        <div class="col-sm-10">
+            <!-- Assuming item_name is a field in your database, replace it with the correct field name -->
+            <input type="text" class="form-control" id="inputText" name="Quntity" >
+        </div>
+    </div>
     <div class="text-center">
-        <input type="submit" class="btn btn-primary" value="Update">
+        <input type="submit" class="btn btn-primary" value="Request">
     </div>
 </form>
 

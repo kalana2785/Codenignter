@@ -6,6 +6,7 @@ namespace App\Controllers;
 use App\Models\DashboardModel;
 use App\Models\UserModel;
 use App\Models\UnitinventoryModel;
+use App\Models\UnitrequestModel;
 
 class UnitController extends BaseController
 {
@@ -71,5 +72,40 @@ public function req($id = null)
    
     return view('Unit/req.php', $data);
 }
+
+
+
+
+public function request()
+{
+
+  $unitrequest = new UnitrequestModel(); 
+
+  $existingItem = $unitrequest->where([
+    'item_id' => $this->request->getPost('item_id'),
+    'req_unit' => $this->request->getPost('unit')
+])->first();
+
+if ($existingItem) {
+    
+    return redirect()->back()->with('error', 'Item request already exists.');
+}
+
+else{
+
+$data = [
+    'item_id' => $this->request->getPost('item_id'),
+    'req_unit' => $this->request->getPost('unit'),
+    'req_quntity' => $this->request->getPost('Quntity')
+
+  
+];
+
+$unitrequest->save($data);
+return redirect()->back()->withInput()->with('status', 'Item Request Successfully');
+
+}
+}
+
 
 }
