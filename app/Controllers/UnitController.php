@@ -59,23 +59,18 @@ return view('Unit/dashboard', $data);
     
   }
 
-// display distributed items request page
-  public function Add_disreq()
-  {
+// items request page
+
+public function req($id = null)
+{
 
     $userinventory = new UnitinventoryModel();
-    $unitIds = session()->get('logged_user'); // Renamed to $unitIds for clarity
-    $data['items'] = $userinventory->join('items', 'unit_inventory.item_id = items.id')
-                                    ->where('Unit_id', $unitIds)
-                                    ->orderBy('item_id', 'ASC') // Changed to orderBy() method
-                                    ->findAll();
+ 
+    $data['unititems'] = $userinventory->find($id);
     
-    return view('Unit/Add_disreq.php', $data);
+   
     
-
-
-
-  }
-
+    return view('Unit/req.php', $data);
+}
 
 }

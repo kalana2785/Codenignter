@@ -125,7 +125,7 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $user['issue_date']; ?></td>
                 <td>
 
-                <a href="<?php echo base_url('Imanger/edit/' . $user['id']); ?>"  class="btn btn-primary btn-sm">Edit
+                <a href="<?php echo base_url('unit/req/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Request
                
 
                  

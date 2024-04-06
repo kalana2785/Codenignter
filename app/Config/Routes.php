@@ -51,6 +51,6 @@ $routes->post('Admin/Addnewuser', 'AdminController::saveuser');
 // unit user 
 
 $routes->get('/Unit', 'UnitController::index');
-$routes->get('/unit/disreq', 'UnitController::Add_disreq');
+$routes->get('unit/req/(:num)', 'UnitController::req/$1');
 
 
