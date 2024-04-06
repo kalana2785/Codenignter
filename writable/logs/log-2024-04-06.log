@@ -233,3 +233,389 @@ JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`', [], false)
 10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:16:00 --> ErrorException: Attempt to read property "Username" on null
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\iManger\req_table.php(20): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 9 APPPATH\Controllers\imdashController.php(194): view('iManger/req_table', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:16:46 --> ErrorException: Attempt to read property "Username" on null
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\iManger\req_table.php(20): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 9 APPPATH\Controllers\imdashController.php(194): view('iManger/req_table', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:17:14 --> ErrorException: Attempt to read property "Username" on null
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\iManger\req_table.php(20): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 9 APPPATH\Controllers\imdashController.php(194): view('iManger/req_table', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:17:16 --> ErrorException: Attempt to read property "Username" on null
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\iManger\req_table.php(20): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 9 APPPATH\Controllers\imdashController.php(194): view('iManger/req_table', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:17:21 --> ErrorException: Attempt to read property "Username" on null
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\dashboard.php(35): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard.php', [], true)
+ 9 APPPATH\Controllers\imdashController.php(50): view('dashboard.php', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:17:23 --> ErrorException: Attempt to read property "Username" on null
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on null', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\dashboard.php(35): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard.php', [], true)
+ 9 APPPATH\Controllers\imdashController.php(50): view('dashboard.php', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:23:14 --> ErrorException: Undefined variable $itemCounts
+in APPPATH\Views\iManger\req_table.php on line 55.
+ 1 APPPATH\Views\iManger\req_table.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $itemCounts', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 55)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(194): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-06 15:41:17 --> mysqli_sql_exception: Unknown column 'items.item_id' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-06 15:41:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.item_id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:41:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.item_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:41:17 --> [Caused by] mysqli_sql_exception: Unknown column 'items.item_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+ERROR - 2024-04-06 15:41:29 --> mysqli_sql_exception: Unknown column 'items.item_id' in 'field list' in C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`....', 0)
+#1 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`....')
+#2 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`....')
+#3 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`....', Array, false)
+#4 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\app\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+#8 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+#9 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\HIMSP\HIMS\Codenignter\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-04-06 15:41:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.item_id' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:41:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'items.item_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:41:29 --> [Caused by] mysqli_sql_exception: Unknown column 'items.item_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `items`.`item_id`, `items`.`item_name`, `unit_request`.`req_quntity`, `unit_request`.`Date`, COUNT(*) AS item_count
+FROM `unit_request`
+JOIN `items` ON `unit_request`.`item_id` = `items`.`id`
+JOIN `unit` ON `unit_request`.`req_unit` = `unit`.`Unit_id`
+GROUP BY `items`.`item_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\imdashController.php(193): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:44:44 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:44:44 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:44:45 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:44:45 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:47:16 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:47:17 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:47:17 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 50.
+ 1 APPPATH\Views\iManger\req_table.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:47:47 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 49.
+ 1 APPPATH\Views\iManger\req_table.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-06 15:47:48 --> ErrorException: Undefined array key "item_name"
+in APPPATH\Views\iManger\req_table.php on line 49.
+ 1 APPPATH\Views\iManger\req_table.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "item_name"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\req_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/req_table', [], true)
+ 5 APPPATH\Controllers\imdashController.php(196): view('iManger/req_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Requesttable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

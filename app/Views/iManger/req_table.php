@@ -36,28 +36,33 @@
 <table class="table" name="All">
   <thead>
     <tr>
-      <th scope="col">item</th>
-      <th scope="col">Request Unit</th>
-      <th scope="col">Quntity</th>
-      <th scope="col">Request Date</th>
-  
+      
+      <th scope="col">Items Name</th>
+      <th scope="col">Numbers of Requsets</th>
       
       <th> </th>
     </tr>
   </thead>
   <tbody>
-    <?php if ($request):?>
-        <?php foreach($request as $row) : ?>
+  <?php foreach ($request as $row): ?>
             <tr>
+               
                 <td><?php echo $row['item_name']; ?></td>
-                <td><?php echo $row['Unit_name']; ?></td>
-                <td><?php echo $row['req_quntity']; ?></td>
-                
-                <td><?php echo $row['Date']; ?></td>
-              
+               
+                <td><?php echo $row['item_count']; ?></td>
+                <td>
+                      <a href="<?php echo base_url('Imanger/request_items/' . $row['item_id']); ?>"  class="btn btn-primary btn-sm">View
+                      
+
+                        
+                        
+                      </a>
+
+
+
+                  </td>
             </tr>
-        <?php endforeach;?> 
-    <?php endif;?>
+        <?php endforeach; ?>
 </tbody>
 </table>
 </div>

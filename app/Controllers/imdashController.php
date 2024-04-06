@@ -186,11 +186,15 @@ public function  updatetotal($id= null)
 public function Requesttable ()
 {
     $unitrequest = new UnitrequestModel();
-    $data['request'] = $unitrequest->join('items','unit_request.item_id = items.id')
-                                    ->join('unit','unit_request.req_unit = unit.Unit_id')
-                                   ->findAll();
+    $data['request'] = $unitrequest->select('unit_request.item_id, items.item_name, unit_request.req_quntity, unit_request.Date, COUNT(*) AS item_count')
+    ->join('items', 'unit_request.item_id = items.id')
+    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+    ->groupBy('unit_request.item_id') // Group by item_id
+    ->findAll();
+
     
-     $data['userdata'] = $this->userData;
-    return view('iManger/req_table',$data);
+    $data['userdata'] = $this->userData;
+    return view('iManger/req_table', $data);
+    
 }
 }
