@@ -8,6 +8,7 @@ use App\Models\CategoryModel;
 use App\Models\DemandModel;
 use App\Models\TypeModel;
 use App\Models\UserModel;
+use App\Models\UnitrequestModel;
 
 class imdashController extends BaseController
 { 
@@ -181,6 +182,15 @@ public function  updatetotal($id= null)
     return redirect()->to(base_url('dashboard')) ->with('status', 'Item quntity Update Successfully');
 }
 
-   
-   
+
+public function Requesttable ()
+{
+    $unitrequest = new UnitrequestModel();
+    $data['request'] = $unitrequest->join('items','unit_request.item_id = items.id')
+                                    ->join('unit','unit_request.req_unit = unit.Unit_id')
+                                   ->findAll();
+    
+     $data['userdata'] = $this->userData;
+    return view('iManger/req_table',$data);
+}
 }

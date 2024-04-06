@@ -95,8 +95,8 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span> Tables</span>
+             <a href="<?= base_url('Imanger/Requset');?>">
+              <i class="bi bi-circle"></i><span>Unit Requset Tables</span>
             </a>
           </li>
           <li>
