@@ -13,6 +13,8 @@ class UnitrequestModel extends Model
        'item_id',
        'req_unit',
        'req_quntity',
+       'ima_quntity',
+       'ada_quntity',
        'status',
        'Date'
      

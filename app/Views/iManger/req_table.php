@@ -38,7 +38,7 @@
     <tr>
       
       <th scope="col">Items Name</th>
-      <th scope="col">Numbers of Requsets</th>
+      <th scope="col">Requsets Unit</th>
       
       <th> </th>
     </tr>
@@ -48,10 +48,10 @@
             <tr>
                
                 <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['Unit_name']; ?></td>
                
-                <td><?php echo $row['item_count']; ?></td>
                 <td>
-                      <a href="<?php echo base_url('Imanger/request_items/' . $row['item_id']); ?>"  class="btn btn-primary btn-sm">View
+                      <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no']); ?>"  class="btn btn-primary btn-sm">View
                       
 
                         

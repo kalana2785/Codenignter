@@ -186,10 +186,9 @@ public function  updatetotal($id= null)
 public function Requesttable ()
 {
     $unitrequest = new UnitrequestModel();
-    $data['request'] = $unitrequest->select('unit_request.item_id, items.item_name, unit_request.req_quntity, unit_request.Date, COUNT(*) AS item_count')
+    $data['request'] = $unitrequest
     ->join('items', 'unit_request.item_id = items.id')
     ->join('unit', 'unit_request.req_unit = unit.Unit_id')
-    ->groupBy('unit_request.item_id') // Group by item_id
     ->findAll();
 
     
@@ -197,4 +196,38 @@ public function Requesttable ()
     return view('iManger/req_table', $data);
     
 }
+// apper each request items details
+public function Requestitems($id = null)
+{
+    $unitrequest = new UnitrequestModel();
+     
+    $data['req'] = $unitrequest
+    ->join('items', 'unit_request.item_id = items.id')
+    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+    ->find($id);
+
+
+    
+ 
+    return view('iManger/view_request', $data);
+}
+
+public function updaterequest($reqNo)
+{
+    $unitrequest = new UnitrequestModel();
+    if(  $this->request->getPost('Avqu')<=  $this->request->getPost('AddQu'))
+    {
+        return redirect()->back()->with('error', 'Quntity high please reduces.');
+    }
+
+    $data =[
+        
+        'ima_quntity' => $this->request->getPost('AddQu')
+    ];
+    $unitrequest->update($reqNo,$data);
+    
+    return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
+}
+
+
 }

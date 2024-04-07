@@ -38,6 +38,9 @@ $routes->put('Imanger/updatet/(:num)','imdashController::updatetotal/$1');
 
 
 $routes->get('Imanger/Requset', 'imdashController::Requesttable' );
+$routes->get('Imanger/requestitems/(:num)', 'imdashController::Requestitems/$1' );
+$routes->put('Imanger/reupdate/(:num)', 'ImdashController::updaterequest/$1');
+
 
 
 //Admin Pannel
