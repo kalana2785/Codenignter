@@ -18,7 +18,8 @@
 <body>
 
 
-
+<?= $this->include('Layout/header.php') ?>
+<?= $this->include('Layout/floter.php') ?>
 
 <main id="main" class="main">
  

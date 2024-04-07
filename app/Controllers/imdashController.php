@@ -206,7 +206,8 @@ public function Requestitems($id = null)
     ->join('unit', 'unit_request.req_unit = unit.Unit_id')
     ->find($id);
 
-
+ 
+    $data['userdata'] = $this->userData;
     
  
     return view('iManger/view_request', $data);
@@ -222,7 +223,9 @@ public function updaterequest($reqNo)
 
     $data =[
         
-        'ima_quntity' => $this->request->getPost('AddQu')
+        'ima_quntity' => $this->request->getPost('AddQu'),
+        'status' => 2
+        
     ];
     $unitrequest->update($reqNo,$data);
     

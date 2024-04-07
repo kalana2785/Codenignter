@@ -49,7 +49,22 @@
                
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Unit_name']; ?></td>
-               
+                <td><?php if( $row['status'] ==1){?>
+              
+                  <div class="alert alert-warning" role="alert">
+                   
+                         No  Send the Approval
+                  </div>      
+
+              <?php } ?>
+              
+                  <?php if( $row['status'] ==2){?>
+                    <div class="alert alert-warning" role="alert">
+                      
+                      Send the Approval
+                </div>   
+                <?php } ?>
+              </td>
                 <td>
                       <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no']); ?>"  class="btn btn-primary btn-sm">View
                       

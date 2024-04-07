@@ -15,6 +15,7 @@ class UnitrequestModel extends Model
        'req_quntity',
        'ima_quntity',
        'ada_quntity',
+       'current_avilable',
        'status',
        'Date'
      
