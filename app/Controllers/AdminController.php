@@ -114,7 +114,7 @@ class AdminController extends BaseController
   {
     $unitrequest = new UnitrequestModel();
 
-    $data['requests']=$unitrequest
+    $data['requestview']=$unitrequest
                    ->join('items', 'unit_request.item_id = items.id')
                    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
                    ->find($id);

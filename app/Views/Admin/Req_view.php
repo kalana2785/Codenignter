@@ -19,7 +19,7 @@
 
 
 
-<?= $this->include('Layout/Admin/floter.php') ?>
+
 
 
 
@@ -49,32 +49,64 @@
     </tr>
   </thead>
   <tbody>
-    <?php if ($requests):?>
-        <?php foreach($requests as $row) : ?>
-            <tr>
-                <td><?php echo $row['req_no']; ?></td>
-                <td><?php echo $row['item_name']; ?></td>
-                <td><?php echo $row['Unit_name']; ?></td>
-                <td>
-                      <a href="<?php echo base_url('Admin/editq/' . $row['item_id']); ?>"  class="btn btn-primary btn-sm">view
-                      
-
-                        
-                        
-                      </a>
-
-
-
-                      </td>
-            </tr>
-        <?php endforeach;?> 
-    <?php endif;?>
-</tbody>
+   
 </table>
 </div>
 
- 
+<div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Request Form</h5>
 
+              
+              <form class="row g-3">
+                <div class="col-md-12">
+                <label for="inputName5" class="form-label">Items Name</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['item_name']; ?>" readonly>
+                </div>
+                <div class="col-md-4">
+                <label for="inputName5" class="form-label">Req Unit Name</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['Unit_name']; ?>" readonly>
+                </div>
+                <div class="col-md-4">
+                <label for="inputName5" class="form-label">Req Quntity</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['req_quntity']; ?>" readonly>
+                </div>
+                <div class="col-md-4">
+                <label for="inputName5" class="form-label">Req Date/Time</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
+                </div>
+                <div class="col-6">
+                <label for="inputName5" class="form-label">Approval Quntity</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['ima_quntity']; ?>" readonly>
+                </div>
+                <div class="col-6">
+                <label for="inputName5" class="form-label">Approval Date/Time</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
+                </div>
+
+
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="City">
+                </div>
+                <div class="col-md-4">
+                  <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <input type="text" class="form-control" placeholder="Zip">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </form><!-- End No Labels Form -->
+
+            </div>
+          </div
+ 
+<input type="text" class="form-control" id="inputText" name="item_name" value="<?= $requestview['item_name']; ?>" readonly>
 
 </main>
 
