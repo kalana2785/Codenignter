@@ -43,10 +43,11 @@
 <div class="card">
             <div class="card-body">
               <h5 class="card-title">Request Form</h5>
-
+           
               
-              <form class="row g-3">
-                <div class="col-md-12">
+              <form class="row g-3" action="<?= base_url('Admin/updatet/' . $requestview['req_no'] . '/' . $requestview['item_id']); ?>" method="post">
+              <input type="hidden" name="_method" value="PUT">
+              <div class="col-md-12">
                 <label for="inputName5" class="form-label">Items Name</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['item_name']; ?>" readonly>
                 </div>
@@ -77,7 +78,7 @@
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Quntity Add">
+                  <input type="number" class="form-control" placeholder="Quntity Add" name="Adminq">
                 </div>
 
                
@@ -118,15 +119,7 @@
 
             </div>
 </div>
- 
-<?php if ($requestviewall):?>
-        <?php foreach($requestviewall as $row) : ?>
-            <tr>
-                <td><?php echo $row['req_no']; ?></td>
-               
-            </tr>
-        <?php endforeach;?> 
-    <?php endif;?>
+
 
 </main>
 

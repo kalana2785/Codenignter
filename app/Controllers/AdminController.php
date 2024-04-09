@@ -131,5 +131,20 @@ class AdminController extends BaseController
    
     return view('Admin/Req_view',$data);
   }
+  public function updatereq($req_no, $item_id)
+  {
+    $unitrequest = new UnitrequestModel();
+    $data =[
+        
+        'ada_quntity' => $this->request->getPost('Adminq'),
+        'status' => 3
+    ];
+    $unitrequest->update($req_no,$data);
 
+    return redirect()->back()->with('status', 'Item Request Approval Successfully');
+
+
+
+
+  }
 }
