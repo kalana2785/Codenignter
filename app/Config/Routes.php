@@ -55,7 +55,9 @@ $routes->post('Admin/Addnewuser', 'AdminController::saveuser');
 
 $routes->get('Admin/Drequset', 'AdminController::Reqtable' );
 
-$routes->get('Admin/editq/(:num)','AdminController::viewreq/$1');
+$routes->get('Admin/editq/(:num)/(:num)', 'AdminController::viewreq/$1/$2');
+
+
 // unit user 
 
 $routes->get('/Unit', 'UnitController::index');

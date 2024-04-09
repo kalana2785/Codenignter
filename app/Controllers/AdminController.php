@@ -110,14 +110,24 @@ class AdminController extends BaseController
     
     return view('Admin/Adminview_request', $data);
 }
-  public function viewreq($id=null)
+  public function viewreq($id, $req_no)
   {
     $unitrequest = new UnitrequestModel();
 
     $data['requestview']=$unitrequest
                    ->join('items', 'unit_request.item_id = items.id')
                    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
-                   ->find($id);
+                   ->find($req_no);
+
+  // anthour request display                  
+ $data['requestviewall'] = $unitrequest
+                    ->join('items', 'unit_request.item_id = items.id')
+                    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+                   ->where('item_id', $id)
+                   ->where('req_no !=', $req_no)
+                   ->findAll();
+               
+                   
    
     return view('Admin/Req_view',$data);
   }

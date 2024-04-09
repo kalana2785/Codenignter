@@ -38,20 +38,7 @@
 <?php endif; ?>
 
 
-<div id="table1" class="table-container active-table" >
-<table class="table" name="All">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Items Name</th>
-       <th>Unit Name</th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-   
-</table>
-</div>
+
 
 <div class="card">
             <div class="card-body">
@@ -84,29 +71,62 @@
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
                 </div>
 
+                <div class="col-6">
+                <label for="inputName5" class="form-label">Stock Avaliable</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['quntity']; ?>" readonly>
+                </div>
 
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="City">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Quntity Add">
                 </div>
-                <div class="col-md-4">
-                  <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="col-md-2">
-                  <input type="text" class="form-control" placeholder="Zip">
-                </div>
+
+               
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
+            
+                <label for="inputName5" class="form-label">Anthor Request</label>
+                <div id="table1" class="table-container active-table" >
+                    <table class="table" name="All">
+                    <thead>
+                        <tr>
+                      
+                        
+                        <th>Unit Name</th>
+                        <th>Quntity </th>
+                        </tr>
+
+                        <?php if ($requestviewall):?>
+                                <?php foreach($requestviewall as $row) : ?>
+                                    <tr>
+                                        <td><?php echo $row['Unit_name']; ?></td>
+                                        <td><?php echo $row['req_quntity']; ?></td>
+                                    </tr>
+                                <?php endforeach;?> 
+                     <?php endif;?>
+
+
+                    </thead>
+                    <tbody>
+                    
+                    </table>
+                </div>
+
+
               </form><!-- End No Labels Form -->
 
             </div>
-          </div
+</div>
  
-<input type="text" class="form-control" id="inputText" name="item_name" value="<?= $requestview['item_name']; ?>" readonly>
+<?php if ($requestviewall):?>
+        <?php foreach($requestviewall as $row) : ?>
+            <tr>
+                <td><?php echo $row['req_no']; ?></td>
+               
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
 
 </main>
 

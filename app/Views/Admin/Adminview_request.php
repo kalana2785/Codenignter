@@ -56,7 +56,7 @@
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Unit_name']; ?></td>
                 <td>
-                      <a href="<?php echo base_url('Admin/editq/' . $row['req_no']); ?>"  class="btn btn-primary btn-sm">view
+                <a href="<?= base_url('Admin/editq/' . $row['id'] . '/' . $row['req_no']); ?>" class="btn btn-primary btn-sm">View</a>
                       
 
                         
