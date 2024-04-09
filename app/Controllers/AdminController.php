@@ -138,7 +138,10 @@ class AdminController extends BaseController
     
 
     $dashboardModel = new DashboardModel();
-
+    if(  $this->request->getPost('quntity')<=  $this->request->getPost('Adminq'))
+    {
+        return redirect()->back()->with('error', 'Quntity high please reduces.');
+    }
     $unitrequest = new UnitrequestModel();
     $data =[
         
