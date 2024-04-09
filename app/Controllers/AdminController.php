@@ -9,6 +9,7 @@ use App\Models\DemandModel;
 use App\Models\TypeModel;
 use App\Models\UserModel;
 use App\Models\UsergroupModel;
+use App\Models\UnitrequestModel;
 
 class AdminController extends BaseController
 {
@@ -97,5 +98,28 @@ class AdminController extends BaseController
         }
      }
   
+
+
+     public function Reqtable()
+{
+    $unitrequest = new UnitrequestModel();
+    $data['requests'] = $unitrequest
+                    ->join('items', 'unit_request.item_id = items.id')
+                    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+                    ->findAll(); // Fetching all records
+    
+    return view('Admin/Adminview_request', $data);
+}
+  public function viewreq($id=null)
+  {
+    $unitrequest = new UnitrequestModel();
+
+    $data['requests']=$unitrequest
+                   ->join('items', 'unit_request.item_id = items.id')
+                   ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+                   ->find($id);
+   
+    return view('Admin/Req_view',$data);
+  }
 
 }

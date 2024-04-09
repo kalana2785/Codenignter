@@ -95,8 +95,8 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span> Tables</span>
+          <a href="<?= base_url('Admin/Drequset');?>">
+              <i class="bi bi-circle"></i><span>Approval Table</span>
             </a>
           </li>
           <li>
