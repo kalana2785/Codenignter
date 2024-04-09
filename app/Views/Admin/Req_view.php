@@ -74,7 +74,7 @@
 
                 <div class="col-6">
                 <label for="inputName5" class="form-label">Stock Avaliable</label>
-                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['quntity']; ?>" readonly>
+                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['quntity']; ?>" name="quntity" readonly >
                 </div>
 
                 <div class="col-md-12">

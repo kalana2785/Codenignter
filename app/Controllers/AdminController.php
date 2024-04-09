@@ -133,6 +133,12 @@ class AdminController extends BaseController
   }
   public function updatereq($req_no, $item_id)
   {
+
+
+    
+
+    $dashboardModel = new DashboardModel();
+
     $unitrequest = new UnitrequestModel();
     $data =[
         
@@ -140,6 +146,15 @@ class AdminController extends BaseController
         'status' => 3
     ];
     $unitrequest->update($req_no,$data);
+
+    $data =[
+        
+        'quntity' => $this->request->getPost('quntity')-$this->request->getPost('Adminq')
+        
+    ];
+    $dashboardModel->update($item_id,$data);
+
+
 
     return redirect()->back()->with('status', 'Item Request Approval Successfully');
 
