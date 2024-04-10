@@ -35,6 +35,23 @@ class UnitinventoryModel extends Model
        return $query->findAll();
    }
    
-  
+   public function updateByUnitAndItem($unitId, $itemId, $data)
+   {
+       $builder = $this->db->table($this->table);
+       $builder->where('Unit_id', $unitId);
+       $builder->where('item_id', $itemId);
+ 
+       if ($builder->update($data)) {
+        // Return true if update was successful
+        return true;
+    } else {
+        // Return false or an error message if update failed
+        return 'Failed to update quantity.';
+    }
+
+
+
+       
+   } 
 }
 ?>

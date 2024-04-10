@@ -10,6 +10,7 @@ use App\Models\TypeModel;
 use App\Models\UserModel;
 use App\Models\UsergroupModel;
 use App\Models\UnitrequestModel;
+use App\Models\UnitinventoryModel;
 
 class AdminController extends BaseController
 {
@@ -106,6 +107,7 @@ class AdminController extends BaseController
     $data['requests'] = $unitrequest
                     ->join('items', 'unit_request.item_id = items.id')
                     ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+                    ->where('status =',2 )
                     ->findAll(); // Fetching all records
     
     return view('Admin/Adminview_request', $data);
@@ -125,44 +127,63 @@ class AdminController extends BaseController
                     ->join('unit', 'unit_request.req_unit = unit.Unit_id')
                    ->where('item_id', $id)
                    ->where('req_no !=', $req_no)
+                   ->where('status =',2 )
                    ->findAll();
                
                    
    
     return view('Admin/Req_view',$data);
   }
-  public function updatereq($req_no, $item_id)
-  {
-
-
-    
-
-    $dashboardModel = new DashboardModel();
-    if(  $this->request->getPost('quntity')<=  $this->request->getPost('Adminq'))
+  
+  public function updatereq($req_no, $item_id, $unit_no)
     {
-        return redirect()->back()->with('error', 'Quntity high please reduces.');
+        // Get input data from the form
+        $adminq = $this->request->getPost('Adminq');
+        $quntity = $this->request->getPost('quntity');
+
+        // Validate input: admin quantity should not exceed available quantity
+        if ($adminq > $quntity) {
+            return redirect()->back()->with('error', 'Requested quantity exceeds available quantity.');
+        }
+
+        // Perform update operations
+        $dashboardModel = new DashboardModel();
+        $unitrequest = new UnitrequestModel();
+        $unitinventory = new UnitinventoryModel();
+
+        // Update unit request with admin-approved quantity and set status to 3 (approved)
+        $unitRequestData = [
+            'ada_quntity' => $adminq,
+            'status' => 3
+        ];
+        $unitrequest->update($req_no, $unitRequestData);
+
+        // Update main inventory quantity by subtracting admin-approved quantity
+        $newQuantity = $quntity - $adminq;
+        $inventoryData = [
+            'quntity' => $newQuantity
+        ];
+        $dashboardModel->update($item_id, $inventoryData);
+
+        // Update unit inventory with admin-approved quantity
+        $unitInventoryData = [
+            'Quntity' => $adminq
+        ];
+      
+       
+        $builder = $unitinventory->builder();
+        $builder->where('Unit_id', $unit_no);
+        $builder->where('item_id', $item_id);
+        
+        if ($builder->update($unitInventoryData)) {
+            // Update successful, redirect with success message
+            return redirect()->back()->with('status', 'Quantity updated successfully.');
+        } else {
+            // Update failed, redirect with error message
+            return redirect()->back()->with('error', 'Failed to update quantity.');
+        }
+       
     }
-    $unitrequest = new UnitrequestModel();
-    $data =[
-        
-        'ada_quntity' => $this->request->getPost('Adminq'),
-        'status' => 3
-    ];
-    $unitrequest->update($req_no,$data);
-
-    $data =[
-        
-        'quntity' => $this->request->getPost('quntity')-$this->request->getPost('Adminq')
-        
-    ];
-    $dashboardModel->update($item_id,$data);
-
-
-
-    return redirect()->back()->with('status', 'Item Request Approval Successfully');
-
-
-
-
-  }
+  
+ 
 }

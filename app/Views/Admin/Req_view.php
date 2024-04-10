@@ -45,9 +45,9 @@
               <h5 class="card-title">Request Form</h5>
            
               
-              <form class="row g-3" action="<?= base_url('Admin/updatet/' . $requestview['req_no'] . '/' . $requestview['item_id']); ?>" method="post">
+              <form class="row g-3" action="<?= base_url('Admin/updatet/' . $requestview['req_no'] . '/' . $requestview['item_id']. '/' . $requestview['req_unit']); ?>" method="post">
               <input type="hidden" name="_method" value="PUT">
-              <div class="col-md-12">
+              <div class="col-md-12"> 
                 <label for="inputName5" class="form-label">Items Name</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['item_name']; ?>" readonly>
                 </div>
@@ -76,6 +76,13 @@
                 <label for="inputName5" class="form-label">Stock Avaliable</label>
                   <input type="number" class="form-control" placeholder="" value="<?= $requestview['quntity']; ?>" name="quntity" readonly >
                 </div>
+                 
+                
+                <div class="col-6">
+                <label for="inputName5" class="form-label">Stock Avaliable</label>
+                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['req_unit']; ?>" name="unit" readonly >
+                </div>
+
 
                 <div class="col-md-12">
                   <input type="number" class="form-control" placeholder="Quntity Add" name="Adminq">
