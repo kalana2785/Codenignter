@@ -49,9 +49,30 @@ class UnitinventoryModel extends Model
         return 'Failed to update quantity.';
     }
 
-
+  
 
        
    } 
+
+      public function getUnitData ($category = null,$unitId = null)
+    {
+       
+        $query = $this->select('*')
+        ->join('items','unit_inventory.item_id = items.id');
+            
+           
+       
+        if ($category !== null) {
+            
+            $query->where('unit_inventory.C_id', $category);
+            $query->where('unit_inventory. Unit_id', $unitId);
+       
+
+        }
+
+       
+        return $query->findAll();
+    }
+   
 }
 ?>

@@ -14,14 +14,10 @@
         <i class="bi bi-file-earmark-plus-fill"></i><span>Request Section</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        
           <li>
-            <a href="<?= base_url('unit/disreq');?>">
-              <span>Request items</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Accordion</span>
+            <a href="<?= base_url('unit/repairtable');?>">
+              <span>Request Repair</span>
             </a>
           </li>
           <li>

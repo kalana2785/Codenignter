@@ -66,6 +66,6 @@ $routes->put('Admin/updatet/(:num)/(:num)/(:num)', 'AdminController::updatereq/$
 $routes->get('/Unit', 'UnitController::index');
 $routes->get('unit/req/(:num)', 'UnitController::req/$1');
 $routes->post('/unit/request', 'UnitController::request');
-
+$routes->get('unit/repairtable', 'UnitController::repairtab');
 
 

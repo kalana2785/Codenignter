@@ -1,0 +1,72 @@
+CRITICAL - 2024-04-14 20:03:27 --> ErrorException: Attempt to read property "Username" on bool
+in APPPATH\Views\Layout\header.php on line 172.
+ 1 APPPATH\Views\Layout\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Username" on bool', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php', 172)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/header.php', null, true)
+ 5 APPPATH\Views\dashboard.php(35): CodeIgniter\View\View->include('Layout/header.php')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard.php', [], true)
+ 9 APPPATH\Controllers\imdashController.php(50): view('dashboard.php', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-14 20:20:11 --> Error: Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 333.
+ 1 SYSTEMPATH\Database\Query.php(333): strtr('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`C_id` = :unit_inventory.C_id:
+AND `unit_inventory`. `Unit_id` = :unit_inventory. Unit_id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(308): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`C_id` = :unit_inventory.C_id:
+AND `unit_inventory`. `Unit_id` = :unit_inventory. Unit_id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`C_id` = :unit_inventory.C_id:
+AND `unit_inventory`. `Unit_id` = :unit_inventory. Unit_id:', [...], false)
+ 6 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 8 APPPATH\Models\UnitinventoryModel.php(74): CodeIgniter\BaseModel->findAll()
+ 9 APPPATH\Controllers\UnitController.php(129): App\Models\UnitinventoryModel->getUnitData('1', Object(stdClass))
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->repairtab()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-14 20:20:19 --> Error: Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 333.
+ 1 SYSTEMPATH\Database\Query.php(333): strtr('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`C_id` = :unit_inventory.C_id:
+AND `unit_inventory`. `Unit_id` = :unit_inventory. Unit_id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(308): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`C_id` = :unit_inventory.C_id:
+AND `unit_inventory`. `Unit_id` = :unit_inventory. Unit_id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_inventory`
+JOIN `items` ON `unit_inventory`.`item_id` = `items`.`id`
+WHERE `unit_inventory`.`C_id` = :unit_inventory.C_id:
+AND `unit_inventory`. `Unit_id` = :unit_inventory. Unit_id:', [...], false)
+ 6 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 8 APPPATH\Models\UnitinventoryModel.php(74): CodeIgniter\BaseModel->findAll()
+ 9 APPPATH\Controllers\UnitController.php(129): App\Models\UnitinventoryModel->getUnitData('1', Object(stdClass))
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->repairtab()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
