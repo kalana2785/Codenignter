@@ -112,30 +112,19 @@ return redirect()->back()->withInput()->with('status', 'Item Request Successfull
 }
 }
 
-public function repairtab()
+public function reqre($id = null)
 {
-    
-
-    $dashboardModel = new DashboardModel();
-    $userinventory = new UnitinventoryModel(); 
+    $userinventory = new UnitinventoryModel();
     $usermodel= new UserModel();
-    $Unituserid = session()->get('login_user');       
-     $unitId= $this->userData =$usermodel->getlogindata($Unituserid);
+ 
+    $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')->find($id);
+    $Unituserid = session()->get('login_user');
+       
+            
+     $this->userData =$usermodel->getlogindata($Unituserid);
+     $data['unituserdata'] = $this->userData;
    
-    // Filter all
-    $data['unit'] = $userinventory->getUnitData();
-    
-    // Surgical items
-    $data['unitsu'] = $userinventory->getUnitData('1',$unitId);
-    
-    // General items
-    $data['unitge'] = $userinventory->getUnitData('2',$unitId);
-
-    $data['userdata'] = $this->userData;
-    
-    return view('Unit/RepairR.php', $data);
-
-    
+    return view('Unit/reqre.php', $data); 
 }
 
 

@@ -131,6 +131,17 @@ $(document).on('click', '.view_btn', function () {
                  
                 
                 </a>
+                </td>
+                <td>
+
+                  <a href="<?php echo base_url('unit/reqre/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Repair Request
+
+
+                  
+
+                  </a>
+                </td>
+                <td>
                 <a href="#"  class="btn btn-primary view_btn">View</a>
 
                 </td>
