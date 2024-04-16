@@ -7,6 +7,7 @@ use App\Models\DashboardModel;
 use App\Models\UserModel;
 use App\Models\UnitinventoryModel;
 use App\Models\UnitrequestModel;
+use App\Models\RepairModel;
 
 class UnitController extends BaseController
 {
@@ -127,5 +128,34 @@ public function reqre($id = null)
     return view('Unit/reqre.php', $data); 
 }
 
+public function requestre()
+{
 
+  $repairrequest = new RepairModel(); 
+
+  $existingItem = $repairrequest->where([
+    'item_id' => $this->request->getPost('item_id'),
+    'Unit_id' => $this->request->getPost('unit')
+])->first();
+
+if ($existingItem) {
+    
+    return redirect()->back()->with('error', 'Item Repair request already Process.');
+}
+
+else{
+
+$data = [
+    'item_id' => $this->request->getPost('item_id'),
+    'Unit_id' => $this->request->getPost('unit'),
+    'Comment' => $this->request->getPost('RepairD'),
+    'status_id'=> 1
+  
+];
+
+$repairrequest->save($data);
+return redirect()->back()->withInput()->with('status', 'Item Repair Request Successfully');
+
+}
+}
 }

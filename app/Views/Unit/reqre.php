@@ -38,7 +38,7 @@
     </div>
 <?php endif; ?>     
 
-           <form action="<?= base_url('unit/request');?>" method="post">
+           <form action="<?= base_url('unit/requestre');?>" method="post">
 
 
 
@@ -57,7 +57,7 @@
         <label for="inputEmail3" class="col-sm-2 col-form-label">Comment</label>
         <div class="col-sm-10">
             <!-- Assuming item_name is a field in your database, replace it with the correct field name -->
-            <input type="text" class="form-control" id="inputText" name="Quntity" >
+            <input type="text" class="form-control" id="inputText" name="RepairD" >
         </div>
     </div>
     <div class="text-center">

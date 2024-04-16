@@ -68,5 +68,6 @@ $routes->get('unit/req/(:num)', 'UnitController::req/$1');
 $routes->post('/unit/request', 'UnitController::request');
 //$routes->get('unit/repairtable', 'UnitController::repairtab');
 $routes->get('unit/reqre/(:num)', 'UnitController::reqre/$1');
+$routes->post('/unit/requestre', 'UnitController::requestre');
 
 
