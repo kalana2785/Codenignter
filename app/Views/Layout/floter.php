@@ -100,8 +100,8 @@
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
+              <a href="<?= base_url('Imanger/Requsetre');?>">
+              <i class="bi bi-circle"></i><span>Request Repair</span>
             </a>
           </li>
         </ul>

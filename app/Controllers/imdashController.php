@@ -9,6 +9,8 @@ use App\Models\DemandModel;
 use App\Models\TypeModel;
 use App\Models\UserModel;
 use App\Models\UnitrequestModel;
+use App\Models\RepairModel;
+
 
 class imdashController extends BaseController
 { 
@@ -232,5 +234,18 @@ public function updaterequest($reqNo)
     return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
 }
 
+public function Requestrepairtable()
+{
+    $repairrequest = new RepairModel(); 
+    $data['request'] = $repairrequest
+    ->join('items', 'repair.item_id = items.id')
+    ->join('unit', 'repair.Unit_id = unit.Unit_id')
+    ->findAll();
+
+    
+    $data['userdata'] = $this->userData;
+    return view('iManger/reqre_table', $data);
+    
+}
 
 }
