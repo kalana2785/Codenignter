@@ -47,6 +47,7 @@
         <td><?php echo $row['Unit_name']; ?></td>
         <td>
             <a href="<?php echo base_url('Imanger/requestrepair/' . $row['Re_id']); ?>" class="btn btn-primary btn-sm">Add</a>
+           
         </td>
     </tr>
     <tr>

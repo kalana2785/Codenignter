@@ -10,7 +10,7 @@ use App\Models\TypeModel;
 use App\Models\UserModel;
 use App\Models\UnitrequestModel;
 use App\Models\RepairModel;
-
+use App\Models\RepairstageModel;
 
 class imdashController extends BaseController
 { 
@@ -246,6 +246,21 @@ public function Requestrepairtable()
     $data['userdata'] = $this->userData;
     return view('iManger/reqre_table', $data);
     
+}
+
+public function Requestrepiritems($id = null)
+{
+    $repairrequest = new RepairModel(); 
+    $repairstage = new RepairstageModel();
+     
+    $data['reqre'] = $repairrequest->find($id);
+                 
+    $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
+ 
+    $data['userdata'] = $this->userData;
+    
+ 
+    return view('iManger/view_requestrepair', $data);
 }
 
 }
