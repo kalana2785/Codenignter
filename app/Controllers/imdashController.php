@@ -259,6 +259,22 @@ public function Requestrepiritems($id = null)
                  
     $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
  
+    $stages = array("Stage 1", "Stage 2", "in the Company process", "Stage 4");
+
+   
+    $current_stage = $data['reqre']['Stage']; 
+    $progress = array_search($current_stage, $stages) + 1; 
+    $total_stages = count($stages);
+
+  
+    $data['progress'] = $progress;
+    $data['total_stages'] = $total_stages;
+    $data['stages'] = $stages;
+
+
+
+
+
     $data['userdata'] = $this->userData;
     
  

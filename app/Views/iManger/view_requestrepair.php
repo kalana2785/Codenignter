@@ -14,6 +14,47 @@
 
 </head>
 
+<style >
+.vertical-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.progress-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progress-step .step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.progress-step.completed .step-number {
+    background-color: #28a745; /* Green color for completed steps */
+    color: white;
+}
+
+.progress-step .step-label {
+    margin-left: 10px;
+}
+
+
+.progress-step:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+</style>
 
 <body>
 
@@ -67,8 +108,14 @@
                   </div>
                 </div>
                 
-               
-               
+                <div class="vertical-progress">
+                    <?php foreach ($stages as $index => $stage): ?>
+                        <div class="progress-step <?= ($index < $progress) ? 'completed' : ''; ?>">
+                            <div class="step-number"><?= $index + 1; ?></div>
+                            <div class="step-label"><?= $stage; ?></div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
                 
 
               <div class="text-center">
