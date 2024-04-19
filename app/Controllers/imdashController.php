@@ -253,7 +253,9 @@ public function Requestrepiritems($id = null)
     $repairrequest = new RepairModel(); 
     $repairstage = new RepairstageModel();
      
-    $data['reqre'] = $repairrequest->find($id);
+    $data['reqre'] = $repairrequest
+                    ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+                    ->find($id);
                  
     $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
  

@@ -61,7 +61,11 @@
                 </div>
 
              
-               
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="" value="<?= $reqre['Stage']; ?>" >
+                  </div>
+                </div>
                 
                
                
