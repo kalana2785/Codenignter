@@ -33,11 +33,10 @@
     </div>
 <?php endif; ?>
           
-          <form action="<?= base_url('Imanger/reupdate/'.$reqre['Re_id']) ?>" method="post">
+          <form action="<?= base_url('Imanger/repairupdate/'.$reqre['Re_id']) ?>" method="post">
           <input type="hidden" name="_method" value="PUT">
         
           <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Request Item Name</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="" value="<?= $reqre['Re_id']; ?>" hidden>
                   </div>
@@ -45,9 +44,9 @@
 
 
                 <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Select</label>
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Repair Stage</label>
                   <div class="col-sm-10">
-                  <select name="ca" id="ca" class="form-control input-lg">
+                  <select name="rs" id="rs" class="form-control input-lg">
 
                     <option value="">Select Repir Step</option>
                     <?php
@@ -62,19 +61,14 @@
                 </div>
 
              
-                <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Add Comment</label>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px"></textarea>
-                  </div>
-                </div> 
+               
                 
                
                
                 
 
               <div class="text-center">
-                  <input type="submit" class="btn btn-primary" value="Request">
+                  <input type="submit" class="btn btn-primary" value="Update">
                  
                 </div>
            </form>

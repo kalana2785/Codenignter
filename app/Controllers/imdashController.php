@@ -263,4 +263,19 @@ public function Requestrepiritems($id = null)
     return view('iManger/view_requestrepair', $data);
 }
 
+
+public function repairupdate($id =null)
+{
+    
+    $repairrequest = new RepairModel();
+    
+    $data =[
+        
+        'status_id' => $this->request->getPost('rs')
+    ];
+    $repairrequest->update($id,$data);
+    return redirect()->back()->with('status', 'Repair Status Updated');
+
+}
+
 }
