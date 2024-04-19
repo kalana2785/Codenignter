@@ -250,35 +250,39 @@ public function Requestrepairtable()
 
 public function Requestrepiritems($id = null)
 {
-    $repairrequest = new RepairModel(); 
-    $repairstage = new RepairstageModel();
-     
-    $data['reqre'] = $repairrequest
-                    ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
-                    ->find($id);
-                 
-    $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
- 
-    $stages = array("Stage 1", "Stage 2", "in the Company process", "Stage 4");
+            $repairrequest = new RepairModel(); 
+            $repairstage = new RepairstageModel();
+            
+            $data['reqre'] = $repairrequest
+                            ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+                            ->find($id);
+                        
+            $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
 
-   
-    $current_stage = $data['reqre']['Stage']; 
-    $progress = array_search($current_stage, $stages) + 1; 
-    $total_stages = count($stages);
+            $stages = $repairstage->findAll(); 
 
-  
-    $data['progress'] = $progress;
-    $data['total_stages'] = $total_stages;
-    $data['stages'] = $stages;
+         
+            if (!empty($stages)) {
+                $stages = array_column($stages, 'Stage'); 
+            } else {
+                
+                $stages = array("Stage 1", "Stage 2", "in the Company process", "Stage 4");
+            }
 
+           
+            $current_stage = $data['reqre']['Stage']; 
+            $progress = array_search($current_stage, $stages) + 1; 
+            $total_stages = count($stages);
 
+            
+            $data['progress'] = $progress;
+            $data['total_stages'] = $total_stages;
+            $data['stages'] = $stages;
 
+            $data['userdata'] = $this->userData;
 
+            return view('iManger/view_requestrepair', $data);
 
-    $data['userdata'] = $this->userData;
-    
- 
-    return view('iManger/view_requestrepair', $data);
 }
 
 

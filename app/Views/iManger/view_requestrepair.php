@@ -102,12 +102,11 @@
                 </div>
 
              
-                <div class="row mb-3">
-                  <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputText" name="" value="<?= $reqre['Stage']; ?>" >
-                  </div>
-                </div>
                 
+                <div class="text-center">
+                  <input type="submit" class="btn btn-primary" value="Update">
+                 
+                </div>
                 <div class="vertical-progress">
                     <?php foreach ($stages as $index => $stage): ?>
                         <div class="progress-step <?= ($index < $progress) ? 'completed' : ''; ?>">
@@ -118,10 +117,7 @@
                 </div>
                 
 
-              <div class="text-center">
-                  <input type="submit" class="btn btn-primary" value="Update">
-                 
-                </div>
+             
            </form>
 
  
