@@ -62,6 +62,9 @@ $routes->get('Admin/editq/(:num)/(:num)', 'AdminController::viewreq/$1/$2');
 
 $routes->put('Admin/updatet/(:num)/(:num)/(:num)', 'AdminController::updatereq/$1/$2/$3');
 
+$routes->get('Admin/Repair', 'AdminController::Reqreptable' );
+
+$routes->get('Admin/requestrepair/(:num)', 'AdminController::Requestrepiritems/$1' );
 
 
 // unit user 

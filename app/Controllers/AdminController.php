@@ -11,6 +11,8 @@ use App\Models\UserModel;
 use App\Models\UsergroupModel;
 use App\Models\UnitrequestModel;
 use App\Models\UnitinventoryModel;
+use App\Models\RepairModel;
+use App\Models\RepairstageModel;
 
 class AdminController extends BaseController
 {
@@ -184,6 +186,60 @@ class AdminController extends BaseController
         }
        
     }
-  
+  public function Reqreptable()
+  {
+    $repairrequest = new RepairModel(); 
+    $repairstage = new RepairstageModel();
+
+    $data['request'] = $repairrequest
+    ->join('items', 'repair.item_id = items.id')
+    ->join('unit', 'repair.Unit_id = unit.Unit_id')
+    ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+    ->findAll();
+
+
+
+
+      return view('Admin/Adminrepair_table', $data);
+
+
+  }
+
+  public function Requestrepiritems($id = null)
+{
+            $repairrequest = new RepairModel(); 
+            $repairstage = new RepairstageModel();
+            
+            $data['reqre'] = $repairrequest
+                            ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+                            ->find($id);
+                        
+            $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
+
+            $stages = $repairstage->findAll(); 
+
+         
+            if (!empty($stages)) {
+                $stages = array_column($stages, 'Stage'); 
+            } else {
+                
+                $stages = array("Stage 1", "Stage 2", "in the Company process", "Stage 4");
+            }
+
+           
+            $current_stage = $data['reqre']['Stage']; 
+            $progress = array_search($current_stage, $stages) + 1; 
+            $total_stages = count($stages);
+
+            
+            $data['progress'] = $progress;
+            $data['total_stages'] = $total_stages;
+            $data['stages'] = $stages;
+
+            
+
+            return view('Admin/view_requestrepair', $data);
+
+}
  
 }

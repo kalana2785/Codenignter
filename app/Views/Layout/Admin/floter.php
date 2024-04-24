@@ -100,8 +100,8 @@
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
+            <a a href="<?= base_url('Admin/Repair');?>">
+              <i class="bi bi-circle"></i><span>Repair Table</span>
             </a>
           </li>
         </ul>

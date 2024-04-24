@@ -122,3 +122,95 @@ in APPPATH\Controllers\UnitController.php on line 183.
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:09:55 --> ErrorException: Undefined array key "reqre"
+in APPPATH\Controllers\AdminController.php on line 215.
+ 1 APPPATH\Controllers\AdminController.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reqre"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 215)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:13:41 --> ErrorException: Undefined array key "reqre"
+in APPPATH\Controllers\AdminController.php on line 215.
+ 1 APPPATH\Controllers\AdminController.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reqre"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 215)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:14:21 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\AdminController.php on line 194.
+ 1 APPPATH\Controllers\AdminController.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:14:26 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\AdminController.php on line 194.
+ 1 APPPATH\Controllers\AdminController.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:16:51 --> ErrorException: Undefined array key "Stage"
+in APPPATH\Controllers\AdminController.php on line 209.
+ 1 APPPATH\Controllers\AdminController.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Stage"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 209)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:17:15 --> ErrorException: Undefined array key "Stage"
+in APPPATH\Controllers\AdminController.php on line 209.
+ 1 APPPATH\Controllers\AdminController.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Stage"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 209)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:18:12 --> ErrorException: Undefined array key "Stage"
+in APPPATH\Controllers\AdminController.php on line 208.
+ 1 APPPATH\Controllers\AdminController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Stage"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:18:12 --> ErrorException: Undefined array key "Stage"
+in APPPATH\Controllers\AdminController.php on line 208.
+ 1 APPPATH\Controllers\AdminController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Stage"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:18:13 --> ErrorException: Undefined array key "Stage"
+in APPPATH\Controllers\AdminController.php on line 208.
+ 1 APPPATH\Controllers\AdminController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Stage"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:18:36 --> ErrorException: Undefined array key "requests"
+in APPPATH\Controllers\AdminController.php on line 209.
+ 1 APPPATH\Controllers\AdminController.php(209): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "requests"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\AdminController.php', 209)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-24 11:19:47 --> ErrorException: Undefined array key "Stage"
+in APPPATH\Views\Admin\Adminrepair_table.php on line 87.
+ 1 APPPATH\Views\Admin\Adminrepair_table.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Stage"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Admin\\Adminrepair_table.php', 87)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Admin\\Adminrepair_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/Adminrepair_table', [], true)
+ 5 APPPATH\Controllers\AdminController.php(203): view('Admin/Adminrepair_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->Reqreptable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
