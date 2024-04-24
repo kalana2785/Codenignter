@@ -5,15 +5,15 @@
 
  <title>Add Items</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
- <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
-<script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
+
 </head>
+
 <style >
 .vertical-progress {
     display: flex;
@@ -52,12 +52,11 @@
 .progress-step:not(:last-child) {
     margin-bottom: 20px;
 }
+
+
 </style>
 
 <body>
-
-
-
 
 <main id="main" class="main">
  
@@ -69,41 +68,50 @@
 <?php endif; ?>
 
 
-<div id="table1" class="table-container active-table" >
-<table class="table" name="All">
-  <thead>
-  <tr>
-    <th scope="col">Items Name</th>
-  
-    <th scope="col">Repair Status</th>
-    <th> </th>
-</tr>
-</thead>
-<tbody>
-    <?php foreach ($request as $row): ?>
-    <tr>
-        <td><?php echo $row['item_name']; ?></td>
-       
-        <td><?php echo $row['Stage']; ?></td>
-        <td>
-            <a href="<?php echo base_url('unit/requestrepair/' . $row['Re_id']); ?>" class="btn btn-primary btn-sm">Full Details</a>
-           
-        </td>
-    </tr>
-    <tr>
-       
-    </tr>
-    <?php endforeach; ?>
-</tbody>
+<?php if (session()->has('status')): ?>
+    <div class="alert alert-success" role="alert">
+        <?= session('status') ?>
+    </div>
+<?php endif; ?>
+          
+          <form action="<?= base_url('Imanger/repairupdate/'.$reqre['Re_id']) ?>" method="post">
+          <input type="hidden" name="_method" value="PUT">
+        
+          <div class="row mb-3">
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="" value="<?= $reqre['Re_id']; ?>" hidden>
+                  </div>
+                </div>
 
-</tbody>
-</table>
-</div>
+
+               
+             
+                
+              
+                <div class="vertical-progress">
+                    <?php foreach ($stages as $index => $stage): ?>
+                        <div class="progress-step <?= ($index < $progress) ? 'completed' : ''; ?>">
+                            <div class="step-number"><?= $index + 1; ?></div>
+                            <div class="step-label"><?= $stage; ?></div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                
+
+             
+           </form>
+
+ 
 
 
 </main>
 
 </body>
-</html>         
+
+
+</html>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
 
 
