@@ -162,22 +162,34 @@ return redirect()->back()->withInput()->with('status', 'Item Repair Request Succ
 
 public function repairtab()
 {
-
-$repairrequest = new RepairModel(); 
-$repairstage = new RepairstageModel();
-
-$data['request'] = $repairrequest
-    ->join('items', 'repair.item_id = items.id')
-    ->join('unit', 'repair.Unit_id = unit.Unit_id')
-    ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
-    ->findAll();
+   
 
 
-
-return view('Unit/repairreq_table', $data);
+    $repairrequest = new RepairModel(); 
+    $repairstage = new RepairstageModel();
+    
+    $userIds = session()->get('logged_user');
+    
+    $data['request'] = $repairrequest 
+               ->join('items', 'repair.item_id = items.id')
+               ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+                ->whereIn('Unit_id', $userIds)
+                ->findAll();
 
     
+    return view('Unit/repairreq_table', $data);
+    
+
+                
+                   
+                    
+          
+
+            
+         
+    
 }
+
 public function Requestrepiritems($id = null)
 {
             $repairrequest = new RepairModel(); 
