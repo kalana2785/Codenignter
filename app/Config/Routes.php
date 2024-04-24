@@ -40,7 +40,7 @@ $routes->put('Imanger/updatet/(:num)','imdashController::updatetotal/$1');
 $routes->get('Imanger/Requset', 'imdashController::Requesttable' );
 $routes->get('Imanger/requestitems/(:num)', 'imdashController::Requestitems/$1' );
 $routes->put('Imanger/reupdate/(:num)', 'ImdashController::updaterequest/$1');
-$routes->get('Imanger/Requsetre', 'imdashController::Requestrepairtable' );
+$routes->get('Imanger/Requsetre', 'imdashController::Requestrepairtable' );// repair
 $routes->get('Imanger/requestrepair/(:num)', 'imdashController::Requestrepiritems/$1' );
 $routes->put('Imanger/repairupdate/(:num)', 'ImdashController::repairupdate/$1');
 
@@ -69,7 +69,7 @@ $routes->put('Admin/updatet/(:num)/(:num)/(:num)', 'AdminController::updatereq/$
 $routes->get('/Unit', 'UnitController::index');
 $routes->get('unit/req/(:num)', 'UnitController::req/$1');
 $routes->post('/unit/request', 'UnitController::request');
-//$routes->get('unit/repairtable', 'UnitController::repairtab');
+$routes->get('unit/repairtable', 'UnitController::repairtab');
 $routes->get('unit/reqre/(:num)', 'UnitController::reqre/$1');
 $routes->post('/unit/requestre', 'UnitController::requestre');
 

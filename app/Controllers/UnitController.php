@@ -8,6 +8,7 @@ use App\Models\UserModel;
 use App\Models\UnitinventoryModel;
 use App\Models\UnitrequestModel;
 use App\Models\RepairModel;
+use App\Models\RepairstageModel;
 
 class UnitController extends BaseController
 {
@@ -158,4 +159,26 @@ return redirect()->back()->withInput()->with('status', 'Item Repair Request Succ
 
 }
 }
+
+public function repairtab()
+{
+
+$repairrequest = new RepairModel(); 
+$repairstage = new RepairstageModel();
+
+$data['request'] = $repairrequest
+    ->join('items', 'repair.item_id = items.id')
+    ->join('unit', 'repair.Unit_id = unit.Unit_id')
+    ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+    ->findAll();
+
+
+
+return view('Unit/repairreq_table', $data);
+
+    
+}
+
+
+
 }
