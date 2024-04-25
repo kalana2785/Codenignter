@@ -47,7 +47,7 @@
                 <td><?php echo $row['item_name']; ?></td>
               
                 <td>
-                      <a href="<?php echo base_url('Imanger/requestitems/' . $row['id']); ?>"  class="btn btn-primary btn-sm">View Full Details
+                      <a href="<?php echo base_url('Imanger/Itemsusage/' . $row['id']); ?>"  class="btn btn-primary btn-sm">View Full Details
 
                         
                         

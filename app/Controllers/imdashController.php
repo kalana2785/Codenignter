@@ -11,6 +11,7 @@ use App\Models\UserModel;
 use App\Models\UnitrequestModel;
 use App\Models\RepairModel;
 use App\Models\RepairstageModel;
+use App\Models\UnitinventoryModel;
 
 class imdashController extends BaseController
 { 
@@ -310,6 +311,21 @@ public function Purchmentview()
     $data['userdata'] = $this->userData;
 
     return view('iManger/Usageview',$data);
+}
+
+
+public function itemsusage($id=null)
+{
+    $unitinventory = new UnitinventoryModel();
+  
+    $data['inventory'] = $unitinventory
+    ->join('items', 'unit_inventory.item_id = items.id')
+    ->join('unit', 'unit_inventory.Unit_id = unit.Unit_id')
+    ->where('item_id',$id)
+    ->findAll();
+
+    $data['userdata'] = $this->userData;
+    return view('iManger/Purchment_view',$data);
 }
 
 }
