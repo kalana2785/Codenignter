@@ -17,13 +17,6 @@
     <?= $this->include('Layout/floter.php') ?>
 
     <main id="main" class="main">
-        <!-- Check if there is an error message and display it -->
-        <?php if (session()->has('error')): ?>
-            <div class="alert alert-danger" role="alert">
-                <?= session('error') ?>
-            </div>
-        <?php endif; ?>
-
         <div id="table1" class="table-container active-table">
             <table class="table" name="All">
                 <thead>
@@ -35,18 +28,43 @@
                 </thead>
                 <tbody>
                     <?php
+                    $totalQuantity = 0; 
                     $unitNames = []; // Array to store unit names
                     $quantities = []; // Array to store quantities
                     foreach ($inventory as $row):
-                        $unitNames[] = $row['Unit_name']; // Store unit name
-                        $quantities[] = $row['Quntity']; // Store quantity
+                        // Store unit name and quantity for chart
+                        $unitNames[] = $row['Unit_name'];
+                        $quantities[] = $row['Quntity'];
+                        ?>
+                        <tr>
+                            <td><?php echo $row['Unit_name']; ?></td>
+                            <td><?php echo $row['Quntity']; ?></td>
+                            <td><?php echo $row['issue_date']; ?></td>
+                        </tr>
+                    <?php
+                        $totalQuantity += $row['Quntity']; // Sum up the quantity
+                        $avaliabletotl = $row['quntity'];
+                        // padridation calculation
+                        $padition = $totalQuantity / 10 * 12;
+                    endforeach;
                     ?>
                     <tr>
-                        <td><?php echo $row['Unit_name']; ?></td>
-                        <td><?php echo $row['Quntity']; ?></td>
-                        <td><?php echo $row['issue_date']; ?></td>
+                        <td colspan="3">Distributed Quantity: <?php echo $totalQuantity; ?></td>
+                        <td colspan="3">Inventory Available Quantity: <?php echo $avaliabletotl; ?></td>
+                        <td colspan="3">Annual Peditation: <?php echo $padition; ?></td>
+                        <td colspan="3">Annual Peditation: <?php 
+                        
+                        if($padition == $avaliabletotl)
+                        {
+                            echo "not order this year";
+                        }
+                        else
+                        {
+                            echo "order".$orderquntity=$padition-$avaliabletotl;
+                        }
+                        ?>
+                        </td>
                     </tr>
-                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -57,8 +75,8 @@
 
     <script>
         // Get data from PHP and pass it to JavaScript
-        var unitNames = <?php echo json_encode($unitNames); ?>;
-        var quantities = <?php echo json_encode($quantities); ?>;
+        var unitNames = <?= json_encode($unitNames) ?>;
+        var quantities = <?= json_encode($quantities) ?>;
 
         // Create a bar chart
         var ctx = document.getElementById('myChart').getContext('2d');
