@@ -43,7 +43,7 @@ $routes->put('Imanger/reupdate/(:num)', 'ImdashController::updaterequest/$1');
 $routes->get('Imanger/Requsetre', 'imdashController::Requestrepairtable' );// repair
 $routes->get('Imanger/requestrepair/(:num)', 'imdashController::Requestrepiritems/$1' );
 $routes->put('Imanger/repairupdate/(:num)', 'ImdashController::repairupdate/$1');
-
+$routes->get('Imanger/Purchmentview', 'imdashController::Purchmentview' );
 
 
 //Admin Pannel

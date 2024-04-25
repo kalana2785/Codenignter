@@ -20,8 +20,8 @@
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Accordion</span>
+            <a href="<?= base_url('Imanger/Purchmentview');?>">
+              <span>Add Purchcement</span>
             </a>
           </li>
           <li>

@@ -300,4 +300,16 @@ public function repairupdate($id =null)
 
 }
 
+public function Purchmentview()
+{ 
+    $dashboardModel = new DashboardModel();
+        
+    // Filter all
+    $data['dashboards'] = $dashboardModel->getDashboardData();
+    
+    $data['userdata'] = $this->userData;
+
+    return view('iManger/Usageview',$data);
+}
+
 }

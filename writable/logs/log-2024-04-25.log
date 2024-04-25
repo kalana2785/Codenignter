@@ -1,0 +1,22 @@
+CRITICAL - 2024-04-25 19:14:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Usageview.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Usageview.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Usageview', [], true)
+ 3 APPPATH\Controllers\imdashController.php(305): view('Usageview')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Purchmentview()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-04-25 19:24:25 --> ErrorException: Undefined array key "req_no"
+in APPPATH\Views\iManger\Usageview.php on line 50.
+ 1 APPPATH\Views\iManger\Usageview.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "req_no"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Usageview.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\Usageview.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/Usageview', [], true)
+ 5 APPPATH\Controllers\imdashController.php(312): view('iManger/Usageview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->Purchmentview()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
