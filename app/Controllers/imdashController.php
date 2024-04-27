@@ -332,12 +332,25 @@ public function itemsusage($id=null)
 public function Purchmentorder()
 {
     $dashboardModel = new DashboardModel();
-        
-    // Filter all
+    $catogoryModel = new CategoryModel();
+
+    // Fetch all items
     $data['dashboards'] = $dashboardModel->getDashboardData();
-    
+
+    // Fetch Surgical items
+    $data['sugicals'] = $dashboardModel->getDashboardData('1');
+            
+    // Fetch General items
+    $data['general'] = $dashboardModel->getDashboardData('2');
+
+   
+
     $data['userdata'] = $this->userData;
 
-    return view('iManger/Purchmentorderview',$data);
+    // Load the view with the data
+    return view('iManger/Purchmentorderview', $data);
 }
+
+
+
 }

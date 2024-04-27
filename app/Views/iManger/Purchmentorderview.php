@@ -1,38 +1,91 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Create Purchcement Order</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Purchase Order</title>
+
     <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
-    <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-    <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-    <link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
-    <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
-    <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-    <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+    <!-- Include other CSS files here -->
 </head>
 <body>
-    <?= $this->include('Layout/header.php') ?>
-    <?= $this->include('Layout/floter.php') ?>
 
-    <main id="main" class="main">
+<main id="main" class="main container mt-5">
 
-        <?php if (session()->has('error')): ?>
-            <div class="alert alert-danger" role="alert">
-                <?= session('error') ?>
-            </div>
-        <?php endif; ?>
-
-        <div id="item-list" class="item-list-container">
-            <ul class="list-group">
-                <?php foreach ($dashboards as $row): ?>
-                    <li class="list-group-item">
-                        <label>
-                            <input type="checkbox" name="item[]" value="<?= $row['id'] ?>">
-                            <?= $row['item_name'] ?>
-                        </label>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+    <?php if (session()->has('error')): ?>
+        <div class="alert alert-danger" role="alert">
+            <?= session('error') ?>
         </div>
-    </main>
+    <?php endif; ?>
+    
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#surgicalTab" onclick="showTab('surgicalTab')">Surgical</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#generalTab" onclick="showTab('generalTab')">General</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="surgicalTab" class="tab-pane active">
+            <br>
+            <div id="surgicalItems" class="item-list-container">
+                <!-- Surgical items will be loaded here -->
+                <ul class="list-group">
+                    <?php foreach ($sugicals as $row): ?>
+                        <li class="list-group-item">
+                            <label>
+                                <input type="checkbox" name="item[]" value="<?= $row['id'] ?>">
+                                <?= $row['item_name'] ?>
+                            </label>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+        <div id="generalTab" class="tab-pane fade">
+            <br>
+            <div id="generalItems" class="item-list-container">
+                <!-- General items will be loaded here -->
+                <ul class="list-group">
+                    <?php foreach ($general as $row): ?>
+                        <li class="list-group-item">
+                            <label>
+                                <input type="checkbox" name="item[]" value="<?= $row['id'] ?>">
+                                <?= $row['item_name'] ?>
+                            </label>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap JS and jQuery should be included at the bottom of the body -->
+<script src="<?= base_url('Assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+
+<script>
+    function showTab(tabId) {
+        // Hide all tab contents
+        var tabContents = document.querySelectorAll('.tab-content > .tab-pane');
+        tabContents.forEach(function(tabContent) {
+            tabContent.classList.remove('active');
+        });
+
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+
 </body>
 </html>
