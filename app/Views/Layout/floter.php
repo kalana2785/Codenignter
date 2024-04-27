@@ -25,10 +25,11 @@
             </a>
           </li>
           <li>
-            <a href="components-badges.html">
-              <i class="bi bi-circle"></i><span>Badges</span>
-            </a>
+            <a href="<?= base_url('imanger/Purchmentorderview');?>">
+             <span>Add Purchcement Order</span>
+             </a>
           </li>
+
           <li>
             <a href="components-breadcrumbs.html">
               <i class="bi bi-circle"></i><span>Breadcrumbs</span>

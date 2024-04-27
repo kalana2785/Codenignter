@@ -328,4 +328,16 @@ public function itemsusage($id=null)
     return view('iManger/Purchment_view',$data);
 }
 
+
+public function Purchmentorder()
+{
+    $dashboardModel = new DashboardModel();
+        
+    // Filter all
+    $data['dashboards'] = $dashboardModel->getDashboardData();
+    
+    $data['userdata'] = $this->userData;
+
+    return view('iManger/Purchmentorderview',$data);
+}
 }
