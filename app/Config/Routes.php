@@ -47,6 +47,8 @@ $routes->get('Imanger/Purchmentview', 'imdashController::Purchmentview' );
 $routes->get('Imanger/Itemsusage/(:num)', 'imdashController::Itemsusage/$1' );
 $routes->get('imanger/Purchmentorderview', 'imdashController::Purchmentorder');
 
+$routes->post('Imanger/submit_order', 'imdashController::submitOrder');
+
 
 
 //Admin Pannel

@@ -12,6 +12,7 @@ use App\Models\UnitrequestModel;
 use App\Models\RepairModel;
 use App\Models\RepairstageModel;
 use App\Models\UnitinventoryModel;
+use App\Models\PurchaseOrderModel;
 
 class imdashController extends BaseController
 { 
@@ -350,6 +351,42 @@ public function Purchmentorder()
     // Load the view with the data
     return view('iManger/Purchmentorderview', $data);
 }
+public function submitOrder()
+{
+    $selectedItems = $this->request->getPost('selected_items');
+    if (!empty($selectedItems)) {
+      
+        $prefix = 'PURREQ';
+        $uniqueId = uniqid();
+        $numericId = hexdec(substr($uniqueId, strrpos($uniqueId, '.') + 1)); // Convert hexadecimal to decimal
+        $purchaseId = $prefix . $numericId;
+        
+        $purchaseOrderModel = new PurchaseOrderModel();
+        
+        // Array to store inserted items
+        $insertedItems = [];
+    
+        foreach ($selectedItems as $itemId) {
+            $data = [
+                'purchase_id' => $purchaseId, // Insert common purchase ID
+                'item_id' => $itemId,
+            ];
+           
+            if ($purchaseOrderModel->save($data)) {
+                $insertedItems[] = $itemId; // Store inserted item ID
+            }
+        }
+
+        if (!empty($insertedItems)) {
+            return redirect()->back()->with('status', 'Purchase Ordered with ID: ' . $purchaseId);
+        } else {
+            return redirect()->back()->with('status', 'Not inserted');
+        }
+    }
+    
+    return redirect()->back()->with('status', 'No items selected');
+}
+
 
 
 

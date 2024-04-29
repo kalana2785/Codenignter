@@ -30,9 +30,9 @@
 <main id="main" class="main container mt-5">
 
     <!-- Display error message if available -->
-    <?php if (session()->has('error')): ?>
+    <?php if (session()->has('status')): ?>
         <div class="alert alert-danger" role="alert">
-            <?= session('error') ?>
+            <?= session('status') ?>
         </div>
     <?php endif; ?>
     
@@ -46,18 +46,18 @@
         </li>
     </ul>
 
-    <!-- Tab panes -->
+    <form method="post" action="<?= base_url('Imanger/submit_order') ?>">
     <div class="tab-content">
-        <!-- Surgical items tab -->
+      
         <div id="surgicalTab" class="tab-pane active">
             <br>
             <div id="surgicalItems" class="item-list-container">
-                <!-- Surgical items will be loaded here -->
+              
                 <ul class="list-group">
                     <?php foreach ($sugicals as $row): ?>
                         <li class="list-group-item">
                             <label>
-                                <input type="checkbox" name="item[]" value="<?= $row['id'] ?>">
+                                <input type="checkbox" name="selected_items[]" value="<?= $row['id'] ?>">
                                 <?= $row['item_name'] ?>
                             </label>
                         </li>
@@ -66,16 +66,16 @@
             </div>
         </div>
         <!-- General items tab -->
-       <!-- General items tab -->
+      
         <div id="generalTab" class="tab-pane">
             <br>
             <div id="generalItems" class="item-list-container">
-                <!-- General items will be loaded here -->
+               
                 <ul class="list-group">
                     <?php foreach ($general as $row): ?>
                         <li class="list-group-item">
                             <label>
-                                <input type="checkbox" name="item[]" value="<?= $row['id'] ?>">
+                                <input type="checkbox" name="selected_items[]" value="<?= $row['id'] ?>">
                                 <?= $row['item_name'] ?>
                             </label>
                         </li>
@@ -83,10 +83,11 @@
                 </ul>
             </div>
         </div>
-
+        <button type="submit">Submit Order</button>
+</form>
 </main>
 
-<!-- Include Bootstrap JS at the bottom of the body -->
+
 <script src="<?= base_url('Assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
 </body>
