@@ -12,12 +12,24 @@
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
-    <!-- Include other CSS files here -->
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            var tabContents = document.querySelectorAll('.tab-content > .tab-pane');
+            tabContents.forEach(function(tabContent) {
+                tabContent.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </head>
 <body>
 
 <main id="main" class="main container mt-5">
 
+    <!-- Display error message if available -->
     <?php if (session()->has('error')): ?>
         <div class="alert alert-danger" role="alert">
             <?= session('error') ?>
@@ -36,6 +48,7 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
+        <!-- Surgical items tab -->
         <div id="surgicalTab" class="tab-pane active">
             <br>
             <div id="surgicalItems" class="item-list-container">
@@ -52,7 +65,9 @@
                 </ul>
             </div>
         </div>
-        <div id="generalTab" class="tab-pane fade">
+        <!-- General items tab -->
+       <!-- General items tab -->
+        <div id="generalTab" class="tab-pane">
             <br>
             <div id="generalItems" class="item-list-container">
                 <!-- General items will be loaded here -->
@@ -68,24 +83,11 @@
                 </ul>
             </div>
         </div>
-    </div>
+
 </main>
 
-<!-- Bootstrap JS and jQuery should be included at the bottom of the body -->
+<!-- Include Bootstrap JS at the bottom of the body -->
 <script src="<?= base_url('Assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
-
-<script>
-    function showTab(tabId) {
-        // Hide all tab contents
-        var tabContents = document.querySelectorAll('.tab-content > .tab-pane');
-        tabContents.forEach(function(tabContent) {
-            tabContent.classList.remove('active');
-        });
-
-        // Show the selected tab content
-        document.getElementById(tabId).classList.add('active');
-    }
-</script>
 
 </body>
 </html>
