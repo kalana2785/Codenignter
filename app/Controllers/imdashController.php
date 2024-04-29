@@ -363,7 +363,7 @@ public function submitOrder()
         
         $purchaseOrderModel = new PurchaseOrderModel();
         
-        // Array to store inserted items
+ 
         $insertedItems = [];
     
         foreach ($selectedItems as $itemId) {
@@ -373,7 +373,7 @@ public function submitOrder()
             ];
            
             if ($purchaseOrderModel->save($data)) {
-                $insertedItems[] = $itemId; // Store inserted item ID
+                $insertedItems[] = $itemId; 
             }
         }
 
@@ -388,6 +388,22 @@ public function submitOrder()
 }
 
 
+public function Requestpurchtable()
+{
+    $purchaseOrderModel = new PurchaseOrderModel();
+    
+    // Retrieve distinct purchase IDs
+    $distinctRequests = $purchaseOrderModel->distinct('purchase_id')->findAll();
+
+    // Convert the result to an associative array with purchase IDs as keys
+    $data['requests'] = [];
+    foreach ($distinctRequests as $request) {
+        $data['requests'][$request['purchase_id']] = $request;
+    }
+
+    $data['userdata'] = $this->userData;
+    return view('iManger/pur_table', $data);
+}
 
 
 }

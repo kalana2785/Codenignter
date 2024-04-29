@@ -105,6 +105,11 @@
               <i class="bi bi-circle"></i><span>Request Repair</span>
             </a>
           </li>
+          <li>
+              <a href="<?= base_url('Imanger/Prequset');?>">
+              <i class="bi bi-circle"></i><span>Purchment Request </span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Tables Nav -->
 
