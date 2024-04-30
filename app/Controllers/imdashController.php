@@ -405,5 +405,16 @@ public function Requestpurchtable()
     return view('iManger/pur_table', $data);
 }
 
+public function Viewp($id = null)
+{
+  
+  
 
+   return view('iManger/Purchmentprint');
+}
+
+public function newtest($id = null)
+{
+    
+}
 }

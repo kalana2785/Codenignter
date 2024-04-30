@@ -30,6 +30,18 @@
                     <?php foreach ($requests as $purchaseId => $row): ?>
                         <tr>
                             <td><?= $purchaseId; ?></td>
+                            <td>
+                            <a href="<?php echo base_url('Imanger/viewpurchment/' . $purchaseId); ?>" class="btn btn-primary btn-sm">View</a>
+                                
+
+                                    
+                                    
+                                
+
+
+
+                           </td>
+
                             <!-- Display other columns related to each purchase ID -->
                         </tr>
                     <?php endforeach; ?>

@@ -49,7 +49,7 @@ $routes->get('imanger/Purchmentorderview', 'imdashController::Purchmentorder');
 
 $routes->post('Imanger/submit_order', 'imdashController::submitOrder');
 $routes->get('Imanger/Prequset', 'imdashController::Requestpurchtable' );// purchmentt
-
+$routes->get('Imanger/viewpurchment/(:any)', 'imdashController::Viewp/$1');
 
 
 //Admin Pannel
