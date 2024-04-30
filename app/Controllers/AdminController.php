@@ -13,6 +13,7 @@ use App\Models\UnitrequestModel;
 use App\Models\UnitinventoryModel;
 use App\Models\RepairModel;
 use App\Models\RepairstageModel;
+use App\Models\PurchaseOrderModel;
 
 class AdminController extends BaseController
 {
@@ -242,4 +243,30 @@ class AdminController extends BaseController
 
 }
  
+public function Requestpurchtable()
+{
+    $purchaseOrderModel = new PurchaseOrderModel();
+    
+    // Retrieve distinct purchase IDs
+    $data['requests'] = $purchaseOrderModel->findAll();
+
+    // Convert the result to an associative array with purchase IDs as keys
+  
+    return view('Admin/pur_table', $data);
+}
+
+public function Viewp($id)
+{
+    // Load PurchaseOrderModel
+    $purchaseOrderModel = new PurchaseOrderModel();
+
+    // Fetch data from the database
+    $data['reqpu'] = $purchaseOrderModel
+        ->where('purchase_id', $id);
+        
+    // Pass data to the view and load it
+    return view('Admin/Purchmentprint', $data);
+}
+
+
 }

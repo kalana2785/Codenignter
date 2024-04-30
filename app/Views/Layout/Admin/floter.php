@@ -104,6 +104,11 @@
               <i class="bi bi-circle"></i><span>Repair Table</span>
             </a>
           </li>
+          <li>
+            <a a href="<?= base_url('Admin/purchment');?>">
+              <i class="bi bi-circle"></i><span>Purchment Order Table</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Tables Nav -->
 

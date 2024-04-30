@@ -72,6 +72,9 @@ $routes->get('Admin/Repair', 'AdminController::Reqreptable' );
 
 $routes->get('Admin/requestrepair/(:num)', 'AdminController::Requestrepiritems/$1' );
 
+$routes->get('Admin/purchment', 'AdminController::Requestpurchtable' );
+
+$routes->get('Admin/viewpurchment/(:num)', 'AdminController::Viewp/$1');
 
 // unit user 
 
