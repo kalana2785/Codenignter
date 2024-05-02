@@ -248,25 +248,32 @@ public function Requestpurchtable()
 {
     $purchaseOrderModel = new PurchaseOrderModel();
     
-    // Retrieve distinct purchase IDs
-    $data['requests'] = $purchaseOrderModel->findAll();
+    $distinctRequests = $purchaseOrderModel->distinct('purchase_id')->findAll();
 
     // Convert the result to an associative array with purchase IDs as keys
+    $data['requests'] = [];
+    foreach ($distinctRequests as $request) {
+        $data['requests'][$request['purchase_id']] = $request;
+    }
+
+
+  
   
     return view('Admin/pur_table', $data);
 }
 
 public function Viewp($id = null)
 {
-    // Load PurchaseOrderModel
+ 
     $Purchment = new PurchaseOrderModel();
 
-    // Fetch data from the database
+  
     $data['reqpu'] = $Purchment
+         ->join('items', 'purchase_order_items.item_id = items.id')
         ->where('purchase_id', $id)
-        ->findAll(); // Assuming you want to fetch a single record
+        ->findAll(); 
 
-    // Pass data to the view and load it
+   
     return view('Admin/Purchmentprint', $data);
 }
 
