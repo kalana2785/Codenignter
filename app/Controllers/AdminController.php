@@ -277,6 +277,20 @@ public function Viewp($id = null)
     return view('Admin/Purchmentprint', $data);
 }
 
+public function Approvalpuc($purshmentId)
+{
+    $Purchment = new PurchaseOrderModel();
+  
 
+    $data =[
+        
+       
+        'Pu_status' => 2
+        
+    ];
+    $Purchment->save($data);
+    
+    return redirect()->back()->with('status', 'Item Successfully  Approval');
+}
 
 }

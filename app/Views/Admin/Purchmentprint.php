@@ -14,11 +14,20 @@
 </head>
 <body>
     <main id="main" class="main">
+    <?php if (session()->has('status')): ?>
+    <div class="alert alert-success" role="alert">
+        <?= session('status') ?>
+    </div>
+<?php endif; ?>
+
         <?php if (!empty($reqpu)): ?>
         <div class="container">
             <div class="row">
                 <?php foreach ($reqpu as $row): ?>
-                                        <div class="col-md-6">
+
+                    <form action="<?= base_url('Admin/approvep/'.$row['purchase_id']) ?>" method="post">
+                   <input type="hidden" name="_method" value="PUT">
+                    <div class="col-md-6">
                         <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Purchase Details</h5>

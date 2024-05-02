@@ -76,6 +76,8 @@ $routes->get('Admin/purchment', 'AdminController::Requestpurchtable' );
 
 $routes->get('Admin/viewpurchment/(:num)', 'AdminController::Viewp/$1');
 
+$routes->put('Admin/approvep/(:num)', 'AdminController::Approvalpuc/$1');
+
 
 // unit user 
 

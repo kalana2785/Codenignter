@@ -7,5 +7,5 @@ class PurchaseOrderModel extends Model
 {
     protected $table = 'purchase_order_items';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['item_id', 'purchase_id'];
+    protected $allowedFields = ['item_id', 'purchase_id','Pu_status'];
 }
