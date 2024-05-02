@@ -32,10 +32,7 @@
                             <td><?php echo $row['purchase_id']; ?></td>
                             <td>
                             <a href="<?php echo base_url('Admin/viewpurchment/' . $row['purchase_id']); ?>" class="btn btn-primary btn-sm">View</a>
-                                
 
-                                    
-                                    
                                 
 
 

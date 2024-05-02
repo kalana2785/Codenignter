@@ -14,6 +14,7 @@ use App\Models\UnitinventoryModel;
 use App\Models\RepairModel;
 use App\Models\RepairstageModel;
 use App\Models\PurchaseOrderModel;
+use App\Models\PurchmentRequestModel;
 
 class AdminController extends BaseController
 {
@@ -255,18 +256,20 @@ public function Requestpurchtable()
     return view('Admin/pur_table', $data);
 }
 
-public function Viewp($id)
+public function Viewp($id = null)
 {
     // Load PurchaseOrderModel
-    $purchaseOrderModel = new PurchaseOrderModel();
+    $Purchment = new PurchaseOrderModel();
 
     // Fetch data from the database
-    $data['reqpu'] = $purchaseOrderModel
-        ->where('purchase_id', $id);
-        
+    $data['reqpu'] = $Purchment
+        ->where('purchase_id', $id)
+        ->findAll(); // Assuming you want to fetch a single record
+
     // Pass data to the view and load it
     return view('Admin/Purchmentprint', $data);
 }
+
 
 
 }
