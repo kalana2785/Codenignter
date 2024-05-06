@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="<?= base_url('/dashboard');?>">
+        <a class="nav-link " href="<?= base_url('/Unit');?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
