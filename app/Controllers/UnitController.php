@@ -29,7 +29,10 @@ $userIds = session()->get('logged_user');
 $userData = [];
 
 foreach ($userIds as $unitId) {
-    $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')->where('Unit_id', $unitId)->findAll();
+    $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')
+                                ->join('category','unit_inventory.C_id = category.Cid')
+                                ->where('Unit_id', $unitId)
+                                ->findAll();
 }
 
 $data['userData'] = $userData;
@@ -37,6 +40,7 @@ $data['userData'] = $userData;
 
 $catogory=2;
 $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')
+                            ->join('category','unit_inventory.C_id = category.Cid')
                              ->where('Unit_id', $unitId)
                              ->where('C_id', $catogory)
                              ->findAll();
@@ -70,7 +74,9 @@ public function req($id = null)
     $userinventory = new UnitinventoryModel();
     $usermodel= new UserModel();
  
-    $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')->find($id);
+    $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')
+
+                                       ->find($id);
     $Unituserid = session()->get('login_user');
        
             

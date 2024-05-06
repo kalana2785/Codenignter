@@ -37,34 +37,7 @@
  $this->include('Layout/Unit/Unit_slidebar.php') ?>
 
 <!-- veiw pop up msg-->
-<script>
-$(document).on('click', '.view_btn', function () {
-    // Get the row data
-    var id = $(this).closest('tr').find('td:eq(0)').text();
-      var itemName = $(this).closest('tr').find('td:eq(1)').text();
-      var categoryName = $(this).closest('tr').find('td:eq(2)').text();
-      var typeName = $(this).closest('tr').find('td:eq(3)').text();
-      var quantity = $(this).closest('tr').find('td:eq(4)').text();
-      var date = $(this).closest('tr').find('td:eq(5)').text();
 
-      // Build the content for the modal
-      var modalContent = `
-        <p><strong>ID:</strong> ${id}</p>
-        <p><strong>Item Name:</strong> ${itemName}</p>
-        <p><strong>Category Name:</strong> ${categoryName}</p>
-        <p><strong>Type Name:</strong> ${typeName}</p>
-        <p><strong>Quantity:</strong> ${quantity}</p>
-        <p><strong>Date:</strong> ${date}</p>
-      `;
-
-      // Set the content in the modal
-      $('#itemDetailsContent').html(modalContent);
-
-      // Show the modal
-      $('#itemDetailsModal').modal('show');
-    });
- 
-</script>
 <br><br><br><br><br><br>
 <main id="main" class="main">
 <?php
@@ -110,7 +83,7 @@ $(document).on('click', '.view_btn', function () {
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
       
-      <th scope="col">Quntity</th>
+      <th scope="col">Avalible Quntity</th>
       <th scope="col">Issue Update</th>
       <th> </th>
     </tr>
@@ -120,12 +93,12 @@ $(document).on('click', '.view_btn', function () {
                 <?php foreach ($userList as $user): ?>
             <tr>
                 <td><?php echo $user['item_name']; ?></td>
-                <td><?php echo $user['type_name']; ?></td>  
+                <td><?php echo $user['Category_Name']; ?></td>  
                 <td><?php echo $user['Quntity']; ?></td>
                 <td><?php echo $user['issue_date']; ?></td>
                 <td>
 
-                <a href="<?php echo base_url('unit/req/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Request
+                <a href="<?php echo base_url('unit/req/' . $user['Uni_id']); ?>"  class="btn btn-success btn-sm">Request Quntity
                
 
                  
@@ -134,17 +107,14 @@ $(document).on('click', '.view_btn', function () {
                 </td>
                 <td>
 
-                  <a href="<?php echo base_url('unit/reqre/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Repair Request
+                  <a href="<?php echo base_url('unit/reqre/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Request Repair 
 
 
                   
 
                   </a>
                 </td>
-                <td>
-                <a href="#"  class="btn btn-primary view_btn">View</a>
-
-                </td>
+              
             </tr>
         <?php endforeach;?> 
     <?php endforeach;?>
