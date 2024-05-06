@@ -288,7 +288,7 @@ public function Approvalpuc($purshmentId)
         'Pu_status' => 2
         
     ];
-    $Purchment->save($data);
+    $Purchment->where('purchase_id', $purshmentId)->update($data);
     
     return redirect()->back()->with('status', 'Item Successfully  Approval');
 }
