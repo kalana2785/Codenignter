@@ -73,6 +73,24 @@ class UnitinventoryModel extends Model
        
         return $query->findAll();
     }
+
+    public function getDashboardData($category , $unitId )
+    {
+        $query = $this->join('items', 'unit_inventory.item_id = items.id');
+                
+        if ($category !== null && $unitId !== null) {
+            $query->where('unit_inventory.Unit_id', $unitId);
+            $query->where('unit_inventory.C_id', $category);
+        }
+    
+        return $query->findAll();
+    }
+    
+   
+
+
+
+
    
 }
 ?>

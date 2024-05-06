@@ -38,17 +38,10 @@ foreach ($userIds as $unitId) {
 $data['userData'] = $userData;
 
 
-$catogory=2;
-$userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')
-                            ->join('category','unit_inventory.C_id = category.Cid')
-                             ->where('Unit_id', $unitId)
-                             ->where('C_id', $catogory)
-                             ->findAll();
+foreach ($userIds as $unitId) {
+$data['S'] = $userinventory->getDashboardData('1', $unitId);
 
-
-
-$data['SugicalData'] = $userData;
-
+}
 
 
 // create user session

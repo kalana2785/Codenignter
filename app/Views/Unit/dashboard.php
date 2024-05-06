@@ -124,50 +124,7 @@
 
 
 
-<div id="table2" class="table-container">
-<!--sugical items-->
-        <table class="table" name="Sugical">
-          <thead>
-          <tr>
-    
-                <th scope="col">Items Name</th>
-                <th scope="col">Catogory</th>
-                
-                <th scope="col">Quntity</th>
-                <th scope="col">Issue Update</th>
-                <th> </th>
-          </tr>
-          </thead>
-          <tbody>
-          <?php foreach ($SugicalData as $userList): ?>
-            
-                <?php foreach ($userList as $user): ?>
 
-                  <?php if ($user['C_id'] == 2): ?>
-
-                  <tr>
-                <td><?php echo $user['item_name']; ?></td>
-                <td><?php echo $user['type_name']; ?></td>  
-                <td><?php echo $user['Quntity']; ?></td>
-                <td><?php echo $user['issue_date']; ?></td>
-                <td>
-
-                <a href="<?php echo base_url('Imanger/edit/' . $user['id']); ?>"  class="btn btn-primary btn-sm">Edit
-               
-
-                 
-                
-                </a>
-                <a href="#"  class="btn btn-primary view_btn">View</a>
-
-                </td>
-            </tr>
-            <?php endif; ?>
-                <?php endforeach;?> 
-            <?php endforeach;?>
-        </tbody>
-        </table>
-</div>
 
 
 
