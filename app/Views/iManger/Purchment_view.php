@@ -14,7 +14,7 @@
 </head>
 <body>
     <?= $this->include('Layout/header.php') ?>
-    <?= $this->include('Layout/floter.php') ?>
+
 
     <main id="main" class="main">
         <div id="table1" class="table-container active-table">
