@@ -41,13 +41,13 @@ class imdashController extends BaseController
         $dashboardModel = new DashboardModel();
         
         // Filter all
-        $data['dashboards'] = $dashboardModel->getDashboardData();
+        $data['dashboards'] = $dashboardModel->getDashboardDataIMAll();
         
         // Surgical items
-        $data['sugicals'] = $dashboardModel->getDashboardData('1');
+        $data['sugicals'] = $dashboardModel->getDashboardDataIM('1');
         
         // General items
-        $data['general'] = $dashboardModel->getDashboardData('2');
+        $data['general'] = $dashboardModel->getDashboardDataIM('2');
 
         $data['userdata'] = $this->userData;
         

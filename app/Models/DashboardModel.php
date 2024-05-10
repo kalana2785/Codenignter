@@ -60,6 +60,42 @@ class DashboardModel extends Model
         return $query->findAll();
     }
    
+
+
+
+    public function getDashboardDataIM($category = null)
+    {
+       
+        $query = $this->select('*')
+            ->join('category', 'items.catogory = category.Cid')
+            ->join('type', 'items.type_name = type.type_id');
+            
+           
+       
+        if ($category !== null) {
+            $query->where(['items.catogory' => $category, 'items.Approval_status' => 2]);
+
+        }
+
+       
+        return $query->findAll();
+    }
+
+    public function getDashboardDataIMAll()
+    {
+       
+        $query = $this->select('*')
+            ->join('category', 'items.catogory = category.Cid')
+            ->join('type', 'items.type_name = type.type_id')
+            ->where('items.Approval_status', 2);
+   
+            
+
+        
+
+       
+        return $query->findAll();
+    }
    // DashboardModel.php
   /*
    public function getDashboardData()

@@ -14,7 +14,9 @@
         "ext-intl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "dompdf/dompdf": "*",
         "laminas/laminas-escaper": "^2.9",
+        "mpdf/mpdf": "*",
         "psr/log": "^1.1"
     },
     "require-dev": {
