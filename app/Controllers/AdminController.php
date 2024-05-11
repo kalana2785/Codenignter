@@ -15,6 +15,7 @@ use App\Models\RepairModel;
 use App\Models\RepairstageModel;
 use App\Models\PurchaseOrderModel;
 use App\Models\PurchmentRequestModel;
+use  App\Models\InventoryModel;
 
 class AdminController extends BaseController
 {
@@ -43,6 +44,30 @@ class AdminController extends BaseController
 
     }
     }
+   
+    // inventory Manger request inventory request 
+
+    public function Additemsrequest()
+    {   
+        // Load the model through dependency injection or autoload
+        $inventoryModel = new InventoryModel();
+    
+        // Fetch data using a join operation
+        $data['dashboards'] = $inventoryModel
+                                    ->join('items', 'inventory_items.item_id = items.id')
+                                    ->where('Approval_status', 1)
+                                    ->findAll(); 
+          
+        // Load the view and pass data to it
+        return view('Admin/Inventory_request.php', $data);
+    }
+    
+
+
+
+
+
+
 
     //delete items
     public function delete($id = null)

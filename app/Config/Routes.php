@@ -83,6 +83,8 @@ $routes->get('Admin/viewpurchment/(:num)', 'AdminController::Viewp/$1');
 
 $routes->put('Admin/approvep/(:num)', 'AdminController::Approvalpuc/$1');
 
+$routes->get('Admin/Inreq', 'AdminController::Additemsrequest' );
+
 
 // unit user 
 
