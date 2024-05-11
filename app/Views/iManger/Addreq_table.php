@@ -49,7 +49,7 @@
     <tr>
       
       <th scope="col">Items Name</th>
-      <th scope="col">Requset Date</th>
+      <th scope="col">BN Number</th>
       
       <th> </th>
     </tr>
@@ -60,7 +60,7 @@
     <tr>
                 <td><?= $dashboard['item_name'] ?></td>
                 <td><?= $dashboard['BN_number'] ?></td>
-                <td><?= $dashboard['Date'] ?></td>
+               
               
             </tr>
           

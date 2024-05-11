@@ -222,8 +222,10 @@ public function Requesttable ()
 
 public function Additemsrequest ()
 {
-    $dashboardModel = new DashboardModel();
-    $data['dashboards'] = $dashboardModel->where('Approval_status', 1)->findAll(); 
+    $inventoryModel = new InventoryModel();
+    $data['dashboards'] = $inventoryModel
+                        ->join('items', 'inventory_items.item_id = items.id')
+                         ->where('Approval_status', 1)->findAll(); 
     $data['userdata'] = $this->userData;
     return view('iManger/Addreq_table', $data);
 }
