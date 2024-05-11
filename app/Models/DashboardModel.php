@@ -12,7 +12,6 @@ class DashboardModel extends Model
    [
        'item_name',
        'catogory',
-       'quntity',
        'type_name',
        'Sn_number',
        'BN_number',
@@ -20,6 +19,8 @@ class DashboardModel extends Model
        'Exp_date',
        'W_start',
        'W_end',
+       'quntity',
+       'Re_quntity',
        'Approval_status'
 
   

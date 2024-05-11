@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<title>My Dashboard</title>
+<title>Admin Dashboard</title>
 
 <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">

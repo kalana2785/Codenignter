@@ -3,7 +3,7 @@
 
 <head>
 
- <title>Request Table-Distribution</title>
+ <title>Request Table-Inventory</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
@@ -54,12 +54,22 @@
     </tr>
   </thead>
   <tbody>
-  <?php foreach ($dashboards as $dashboard): ?>
+  <?php foreach ($Inventory as $row): ?>
 
               <tr>
-              <td><?= $dashboard['item_name'] ?></td>
-              <td><?= $dashboard['BN_number'] ?></td>
-              <td><?= $dashboard['Sn_number'] ?></td>
+              <td><?= $row['item_name'] ?></td>
+              <td><?= $row['BN_number'] ?></td>
+              <td><?= $row['Sn_number'] ?></td>
+     
+              <td>
+                            <a href="<?php echo base_url('Admin/viewinventoryreq/' . $row['Inventory_id']); ?>" class="btn btn-primary btn-sm">Cheack</a>
+
+                                
+
+
+
+              </td>
+
               
              </tr>
           

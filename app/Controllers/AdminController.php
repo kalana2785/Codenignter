@@ -49,24 +49,80 @@ class AdminController extends BaseController
 
     public function Additemsrequest()
     {   
-        // Load the model through dependency injection or autoload
+      
         $inventoryModel = new InventoryModel();
     
-        // Fetch data using a join operation
-        $data['dashboards'] = $inventoryModel
+       
+        $data['Inventory'] = $inventoryModel
                                     ->join('items', 'inventory_items.item_id = items.id')
                                     ->where('Approval_status', 1)
                                     ->findAll(); 
           
-        // Load the view and pass data to it
+      
         return view('Admin/Inventory_request.php', $data);
     }
     
 
+    // inventory req view form
+ 
+    public function Inventoryreqview($id=null)
+    {
+
+        $inventoryModel = new InventoryModel();  
+        $data['Inventory'] = $inventoryModel
+                                    ->join('items', 'inventory_items.item_id = items.id')
+                                    ->join('demand','inventory_items.item_id =demand.Items_id')
+                                    ->find($id);
+                                   
+                              
+    
+          return view('Admin/inventroy_reqview',$data);
 
 
 
+    }
 
+    // update inventory(after approval inventory req)
+
+ 
+    public function Inventoryupdate($id=null)
+    {
+       
+        $inventoryModel = new InventoryModel();
+        $dashboardModel = new DashboardModel();
+       
+         $inv_id= $this->request->getPost('Inv_id');
+
+        if(  $this->request->getPost('Overstock_value')<=  $this->request->getPost('Total_request'))
+        {
+            return redirect()->back()->with('error', 'This Request not match Inventory level.');
+        }
+    
+        $data =[
+            
+           
+            'Approval_status' => 2
+
+            
+        ];
+
+      
+
+        
+        $inventoryModel->update($inv_id,$data);
+
+
+        $data =[
+            
+           
+            'quntity' => $this->request->getPost('Total_request'),
+            'Re_quntity'=> $this->request->getPost('Total_request')
+            
+        ];
+        $dashboardModel->update($id,$data);
+        
+        return redirect()->back()->with('status', 'Item Successfully Add Inventory');
+    }
 
 
     //delete items

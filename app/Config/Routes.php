@@ -85,6 +85,13 @@ $routes->put('Admin/approvep/(:num)', 'AdminController::Approvalpuc/$1');
 
 $routes->get('Admin/Inreq', 'AdminController::Additemsrequest' );
 
+$routes->get('Admin/viewinventoryreq/(:num)', 'AdminController::Inventoryreqview/$1' );
+
+$routes->put('Admin/Approvalinv/(:num)', 'AdminController::Inventoryupdate/$1');
+
+
+
+
 
 // unit user 
 

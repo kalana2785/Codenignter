@@ -196,7 +196,7 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>
-                <td><?php echo $row['Sn_number']; ?></td>
+              
                <td>  
                          <!-- Calulate warrenty period-->
                           <?php
