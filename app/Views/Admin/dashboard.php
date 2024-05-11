@@ -244,8 +244,7 @@ $(document).on('click', '.view_btn', function () {
                         <td><?php echo $row['type_name']; ?></td>
                      
                         
-                        <td><?php echo $row['Med_date']; ?></td>
-                        <td><?php echo $row['Exp_date']; ?></td>
+                     
                         <td><?php echo $row['quntity']; ?></td>
                         
                       <td>

@@ -40,12 +40,13 @@ class imdashController extends BaseController
     public function index()
     {
         $dashboardModel = new DashboardModel();
+        $inventoryModel = new InventoryModel();
         
         // Filter all
         $data['dashboards'] = $dashboardModel->getDashboardData();
         
         // Surgical items
-        $data['sugicals'] = $dashboardModel->getDashboardData('1');
+        $data['sugicals'] = $inventoryModel->getDashboardData('1');
         
         // General items
         $data['general'] = $dashboardModel->getDashboardData('2');

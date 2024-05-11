@@ -51,14 +51,21 @@ class AdminController extends BaseController
     {   
       
         $inventoryModel = new InventoryModel();
-    
+        $usermodel= new UserModel();
        
         $data['Inventory'] = $inventoryModel
                                     ->join('items', 'inventory_items.item_id = items.id')
                                     ->where('Approval_status', 1)
                                     ->findAll(); 
-          
-      
+                                   
+
+        $Userid = session()->get('logged_user');
+       
+            
+        $data['userdata']=$usermodel->getlogindata($Userid);
+
+
+
         return view('Admin/Inventory_request.php', $data);
     }
     
@@ -68,13 +75,17 @@ class AdminController extends BaseController
     public function Inventoryreqview($id=null)
     {
 
-        $inventoryModel = new InventoryModel();  
+        $inventoryModel = new InventoryModel(); 
+        $usermodel= new UserModel(); 
         $data['Inventory'] = $inventoryModel
                                     ->join('items', 'inventory_items.item_id = items.id')
                                     ->join('demand','inventory_items.item_id =demand.Items_id')
                                     ->find($id);
                                    
-                              
+         $Userid = session()->get('logged_user');
+       
+            
+         $data['userdata']=$usermodel->getlogindata($Userid);                     
     
           return view('Admin/inventroy_reqview',$data);
 

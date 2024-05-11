@@ -38,6 +38,7 @@ class DashboardModel extends Model
        
         if ($category !== null) {
             $query->where('items.catogory', $category);
+            
         }
 
        

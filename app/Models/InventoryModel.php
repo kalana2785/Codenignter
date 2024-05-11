@@ -11,7 +11,7 @@ class InventoryModel extends Model
    protected $allowedFields =
    [
        'item_id',
-    
+        'C_id',
        'Sn_number',
        'BN_number',
        'Med_date',
@@ -25,5 +25,20 @@ class InventoryModel extends Model
 
    ];
 
+   public function getDashboardData($category = null)
+   {
+      
+       $query = $this->select('*')
+       ->join('items', 'inventory_items.item_id = items.id');
+           
+          
+      
+       if ($category !== null) {
+           $query->where('inventory_items.C_id', $category);
+           
+       }
 
+      
+       return $query->findAll();
+   }
 }
