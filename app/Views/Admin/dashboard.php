@@ -211,6 +211,7 @@ $(document).on('click', '.view_btn', function () {
                 
                </a>
                 </td>
+                
             </tr>
         <?php endforeach;?> 
     <?php endif;?>

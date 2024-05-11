@@ -118,6 +118,17 @@ $(document).on('click', '.view_btn', function () {
                 <a href="#"  class="btn btn-primary view_btn">View</a>
 
                 </td>
+                <td>
+                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Drop Inventory
+                      
+
+                        
+                        
+                      </a>
+
+
+
+                 </td>
             </tr>
         <?php endforeach;?> 
     <?php endif;?>
