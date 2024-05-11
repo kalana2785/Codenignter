@@ -80,55 +80,15 @@
                   </div>
                 </div>
              
-                <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Quntity</label>
-                  <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail" name="quantity">
-
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Serial Number</label>
-                  <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail" name="sn">
-
-                  </div>
-                </div>
-
-
-
-                <div class="row mb-3" id="additionalInputRow" style="display:none;">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">BN Number</label>
-                  <div class="col-sm-10">
-                      <input type="text" class="form-control" id="additionalInput" name="BN">
-                  </div>
-                  <br><br>
-                  <div class="col-md-6">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">MED Date</label>
-                  <input type="date" class="form-control" name="Med">
-                </div>
-                <div class="col-md-6">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">EXP Date</label>
-                  <input type="date" class="form-control" name="Exp">
-                </div>
+             
 
 
 
 
-              </div>
-              <div class="row mb-3" id="generalItems" style="display:none;">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Warrenty Period</label>
-                  <div class="col-md-6">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Start Date</label>
-                  <input type="date" class="form-control" name="ws">
-                </div>
-                <div class="col-md-6">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">End Date</label>
-                  <input type="date" class="form-control" name="we">
-                </div>
-              
-               </div>
- 
+
+
+           
+            
 
               
               <div class="text-center">

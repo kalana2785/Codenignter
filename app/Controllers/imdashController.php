@@ -13,6 +13,7 @@ use App\Models\RepairModel;
 use App\Models\RepairstageModel;
 use App\Models\UnitinventoryModel;
 use App\Models\PurchaseOrderModel;
+use  App\Models\InventoryModel;
 
 class imdashController extends BaseController
 { 
@@ -41,13 +42,13 @@ class imdashController extends BaseController
         $dashboardModel = new DashboardModel();
         
         // Filter all
-        $data['dashboards'] = $dashboardModel->getDashboardDataIMAll();
+        $data['dashboards'] = $dashboardModel->getDashboardData();
         
         // Surgical items
-        $data['sugicals'] = $dashboardModel->getDashboardDataIM('1');
+        $data['sugicals'] = $dashboardModel->getDashboardData('1');
         
         // General items
-        $data['general'] = $dashboardModel->getDashboardDataIM('2');
+        $data['general'] = $dashboardModel->getDashboardData('2');
 
         $data['userdata'] = $this->userData;
         
@@ -90,7 +91,8 @@ class imdashController extends BaseController
             'Med_date' => $this->request->getPost('Med'),
             'Exp_date' => $this->request->getPost('Exp'),
             'W_start' => $this->request->getPost('ws'),
-            'W_end' => $this->request->getPost('we')
+            'W_end' => $this->request->getPost('we'),
+            'Approval_status' => 1
             
         ];
     
@@ -98,21 +100,7 @@ class imdashController extends BaseController
         return redirect('dashboard')->with('status', 'Item Inserted Successfully');
     }
     
-    // this is testing Conroller
-    public function testveiw()
-    {
-        $dashboardModel= new DashboardModel();
-        $data = [
-            'item_name' => $this->request->getPost('item_name'),
-            'catogory'  => $this->request->getPost('ca'),
-            'quntity'  => $this->request->getPost('quantity')
-        ];
-        
-        $dashboardModel->save($data);
-
-       
-
-    }
+   
 // Fetch the item type(jquery)
     public function action()
     {
@@ -173,18 +161,51 @@ public function  updatetotal($id= null)
 {
 
     $dashboardModel = new DashboardModel();
+    $inventoryModel = new InventoryModel();
+
+
+
     if(  $this->request->getPost('At')<=  $this->request->getPost('uq'))
     {
         return redirect()->back()->with('error', 'Quntity high please reduces.');
     }
 
+    $existingItem = $inventoryModel->where([
+        'BN_number' => $this->request->getPost('BN')
+       
+    ])->first();
+
+    if ($existingItem) {
+        
+        return redirect()->back()->with('error', 'This Item already exists in Inventory.');
+    }
+
+
+
+
     $data =[
         
-        'quntity' => $this->request->getPost('uq')+$this->request->getPost('Avaliable_total')
+        'item_id' => $this->request->getPost('item_id'),
+        'BN_number' => $this->request->getPost('BN'),
+        'Med_date' => $this->request->getPost('Med'),
+        'Exp_date' => $this->request->getPost('Exp'),
+        'In_quntity' => $this->request->getPost('uq')+$this->request->getPost('Avaliable_total'),
+        'Approval_status' => 1
+    ];
+    $inventoryModel->save($data);
+    
+    $data =[
+        
+      
+        'quntity' => $this->request->getPost('uq')+$this->request->getPost('Avaliable_total'),
+   
     ];
     $dashboardModel->update($id,$data);
-    return redirect()->to(base_url('dashboard')) ->with('status', 'Item quntity Update Successfully');
+
+
+    return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');
 }
+
 
 
 public function Requesttable ()
@@ -200,6 +221,22 @@ public function Requesttable ()
     return view('iManger/req_table', $data);
     
 }
+
+// add items-request table(before Approval Admin)
+
+
+public function Additemsrequest ()
+{
+    $dashboardModel = new DashboardModel();
+    $data['dashboards'] = $dashboardModel->where('Approval_status', 1)->findAll(); 
+    $data['userdata'] = $this->userData;
+    return view('iManger/Addreq_table', $data);
+}
+
+
+
+
+
 // apper each request items details
 public function Requestitems($id = null)
 {
@@ -216,6 +253,8 @@ public function Requestitems($id = null)
  
     return view('iManger/view_request', $data);
 }
+
+
 
 public function updaterequest($reqNo)
 {
@@ -236,6 +275,8 @@ public function updaterequest($reqNo)
     return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
 }
 
+
+
 public function Requestrepairtable()
 {
     $repairrequest = new RepairModel(); 
@@ -249,6 +290,8 @@ public function Requestrepairtable()
     return view('iManger/reqre_table', $data);
     
 }
+
+
 
 public function Requestrepiritems($id = null)
 {
@@ -286,6 +329,7 @@ public function Requestrepiritems($id = null)
             return view('iManger/view_requestrepair', $data);
 
 }
+
 
 
 public function repairupdate($id =null)

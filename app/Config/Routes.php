@@ -26,6 +26,11 @@ $routes->get('/test', 'imdashController::testveiw' );
 
 $routes->post('/Imanger/Additems', 'imdashController::store');
 
+$routes->get('/Imanger/Add', 'imdashController::Additemsrequest' );
+
+$routes->get('/Imanger/Additems', 'imdashController::Additemsrequest' );
+
+
 $routes->post('imdashController/action', 'imdashController::action');
 
 $routes->get('Imanger/edit/(:num)','imdashController::edit/$1');

@@ -95,12 +95,11 @@ $(document).on('click', '.view_btn', function () {
 <table class="table" name="All">
   <thead>
     <tr>
-      <th scope="col">Id</th>
+     
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
       <th scope="col">Type Name</th>
-      <th scope="col">Quntity</th>
-      <th scope="col">Last Update</th>
+    
       <th> </th>
     </tr>
   </thead>
@@ -108,20 +107,14 @@ $(document).on('click', '.view_btn', function () {
     <?php if ($dashboards):?>
         <?php foreach($dashboards as $row) : ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+               
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Category_Name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>  
-                <td><?php echo $row['quntity']; ?></td>
-                <td><?php echo $row['Date']; ?></td>
+               
                 <td>
 
-                <a href="<?php echo base_url('Imanger/edit/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
-               
-
-                 
-                
-                </a>
+             
                 <a href="#"  class="btn btn-primary view_btn">View</a>
 
                 </td>

@@ -19,7 +19,8 @@ class DashboardModel extends Model
        'Med_date',
        'Exp_date',
        'W_start',
-       'W_end'
+       'W_end',
+       'Approval_status'
 
   
 
