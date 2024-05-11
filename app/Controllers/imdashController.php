@@ -189,18 +189,12 @@ public function  updatetotal($id= null)
         'BN_number' => $this->request->getPost('BN'),
         'Med_date' => $this->request->getPost('Med'),
         'Exp_date' => $this->request->getPost('Exp'),
-        'In_quntity' => $this->request->getPost('uq')+$this->request->getPost('Avaliable_total'),
+        'In_quntity' => $this->request->getPost('uq'),
         'Approval_status' => 1
     ];
     $inventoryModel->save($data);
     
-    $data =[
-        
-      
-        'quntity' => $this->request->getPost('uq')+$this->request->getPost('Avaliable_total'),
-   
-    ];
-    $dashboardModel->update($id,$data);
+  
 
 
     return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');

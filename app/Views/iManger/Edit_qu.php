@@ -71,12 +71,7 @@
                 </div>
                 </div>
 
-                <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Avaliable Quntity</label>
-                  <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputText" name="Avaliable_total" value="<?= $items['quntity']; ?>" readonly>
-                  </div>
-                </div>
+               
                 <?php
                     $Actual_Total= $items['overstock_value']-$items['quntity'];
 
