@@ -62,3 +62,17 @@ in APPPATH\Controllers\LoginController.php on line 90.
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-12 09:49:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Layout/Generalim/floter.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layout/Generalim/floter.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/Generalim/floter.php', null, true)
+ 3 APPPATH\Views\iManger\General\dashboard.php(37): CodeIgniter\View\View->include('Layout/Generalim/floter.php')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\iManger\\General\\dashboard.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('iManger/General/dashboard.php', [], true)
+ 7 APPPATH\Controllers\imgeneralController.php(50): view('iManger/General/dashboard.php', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imgeneralController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imgeneralController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

@@ -39,14 +39,11 @@ class imgeneralController extends BaseController
         $dashboardModel = new DashboardModel();
         $inventoryModel = new InventoryModel();
         
-        // Filter all
+        // Filter all genral
         $data['dashboards'] = $dashboardModel->getDashboardData('2');
         
-        // Surgical items
-        $data['sugicals'] = $inventoryModel->getDashboardData('1');
-        
-        // General items
-        $data['general'] = $dashboardModel->getDashboardData('2');
+       // General items in inventory 
+        $data['general'] = $inventoryModel->getDashboardData('2');
 
         $data['userdata'] = $this->userData;
         

@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<title>My Dashboard</title>
+<title>My Dashboard-general</title>
 <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
@@ -32,9 +32,9 @@
 </head>
 
 <body>
-<?= $this->include('Layout/header.php') ?>
+<?= $this->include('Layout/Generalim/header.php') ?>
 <?=
- $this->include('Layout/floter.php') ?>
+ $this->include('Layout/Generalim/usersldebar.php') ?>
 
 <!-- veiw pop up msg-->
 <script>
@@ -81,9 +81,7 @@ $(document).on('click', '.view_btn', function () {
       <li class="nav-item">
         <a class="nav-link active" onclick="showTable(1)">All</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" onclick="showTable(2)">Sugical</a>
-      </li>
+   
       <li class="nav-item">
         <a class="nav-link" onclick="showTable(3)">General</a>
       </li>
@@ -99,6 +97,7 @@ $(document).on('click', '.view_btn', function () {
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
       <th scope="col">Type Name</th>
+      <th scope="col">Quntity</th>
     
       <th> </th>
     </tr>
@@ -111,6 +110,7 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Category_Name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>  
+                <td><?php echo $row['quntity']; ?></td> 
                
                 <td>
 
@@ -136,52 +136,7 @@ $(document).on('click', '.view_btn', function () {
 </table>
 </div>
 
-<div id="table2" class="table-container">
-<!--sugical items-->
-        <table class="table" name="Sugical">
-          <thead>
-            <tr>
-             
-              <th scope="col">Items Name</th>
-            
-              <th scope="col">Batch Number</th>
-              <th scope="col">Med Date</th>
-              <th scope="col">Exp Date</th>
-              <th scope="col">Quntity</th>
-              <th scope="col"></th>
-              <th> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php if ($sugicals):?>
-                <?php foreach($sugicals as $row) : ?>
-                    <tr>
-                      
-                        <td><?php echo $row['item_name']; ?></td>
-                       
-                        <td><?php echo $row['BN_number']; ?></td>
-                     
-                        <td><?php echo $row['Med_date']; ?></td>
-                        <td><?php echo $row['Exp_date']; ?></td>
-                        <td><?php echo $row['In_quntity']; ?></td>
-                        
-                      <td>
-                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
-                      
 
-                        
-                        
-                      </a>
-
-
-
-                      </td>
-                    </tr>
-                <?php endforeach;?> 
-            <?php endif;?>
-        </tbody>
-        </table>
-</div>
 
 <!-- General items-->
 <div id="table3" class="table-container">
