@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="<?= base_url('/dashboard');?>">
+        <a class="nav-link " href="<?= base_url('/generalim');?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -15,7 +15,7 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="<?= base_url('Imanger/Add');?>">
+            <a href="<?= base_url('Igmanger/Add');?>">
               <span>Add items</span>
             </a>
           </li>

@@ -46,10 +46,17 @@ class imdashController extends BaseController
         $data['dashboards'] = $dashboardModel->getDashboardData();
         
         // Surgical items
-        $data['sugicals'] = $inventoryModel->getDashboardData('1');
+        $data['sugicals'] = $dashboardModel->getDashboardData('1');
         
         // General items
         $data['general'] = $dashboardModel->getDashboardData('2');
+
+         
+        $data['sugicalsinventory'] = $inventoryModel->getDashboardData('1');
+        
+        // General items
+        $data['generalinventory'] = $inventoryModel->getDashboardData('2');
+
 
         $data['userdata'] = $this->userData;
         

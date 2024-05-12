@@ -116,39 +116,6 @@ class LoginController extends BaseController
                         
                             return redirect()->to(base_url().'/Unit');
                         }
-
-                        else if($userData['usergroup_id']== 4)
-                        {
-                          
-
-                                        // collect the user login info   
-                                    $loginInfo =[
-
-                                        'User_id' => $userData['User_id'],
-                                        'Agent'  =>$this->getUserAgentInfo(),
-                                        'Ip'    =>$this->request->getIPAddress(),
-                                    'Login_time' => date('y-m-d h:i:s'),
-
-                                    ];
-                                                
-                                    $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
-                                    
-                                    if($la_id)
-                                    {
-                                        $this->session->set('logged_info',$la_id);
-
-                                    }
-                                    
-
-
-
-                                    // redirct Path in inventory Manger
-
-                                    $this->session->set('logged_user',$userData['User_id']);
-                                
-                                        return redirect()->to(base_url().'/generalim');
-
-                         }
                         
                        else{
                         return redirect()->back()->with('errormessage', 'Sorry! you not assign any usergroup');

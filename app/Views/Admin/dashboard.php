@@ -133,7 +133,7 @@ $(document).on('click', '.view_btn', function () {
                      $low_capacity=$Actual_quntity/$Total_quntity*100
 
 
-                ?>
+                ?>  
                 <td><?php 
 
                 if($low_capacity<=10)

@@ -32,7 +32,8 @@ class DashboardModel extends Model
        
         $query = $this->select('*')
             ->join('category', 'items.catogory = category.Cid')
-            ->join('type', 'items.type_name = type.type_id');
+            ->join('type', 'items.type_name = type.type_id')
+            ->join('demand','items.id = demand.Items_id');
             
            
        

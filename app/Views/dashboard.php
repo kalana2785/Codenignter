@@ -87,6 +87,12 @@ $(document).on('click', '.view_btn', function () {
       <li class="nav-item">
         <a class="nav-link" onclick="showTable(3)">General</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="showTable(4)">Sugical-inventory</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="showTable(5)">General-inventory</a>
+      </li>
     </ul>
 
 
@@ -111,9 +117,77 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Category_Name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>  
-               
                 <td>
+                <?php
+                     $Actual_quntity= $row['quntity'];
+                     $Total_quntity= $row['overstock_value'];
 
+                     $low_capacity=$Actual_quntity/$Total_quntity*100
+
+
+                ?>  
+                <td><?php 
+
+                if($low_capacity<=10)
+                
+                {?>
+                                    
+                <div class="alert alert-danger" role="alert">
+                           Items in low stock
+                </div>
+                <?php 
+                    
+                }
+                
+                elseif($low_capacity<=30)
+                
+                {
+                    ?>
+                                    
+                   <div class="alert alert-warning" role="alert">
+                             Items in Emagancy Level
+                   </div>
+                    <?php 
+                }
+                elseif($low_capacity<=50)
+                
+                {
+                    ?>
+                                    
+                      <div class="alert alert-primary" role="alert">
+                               Items in Medium Level
+                        </div>
+                             
+                 
+                    <?php 
+                }
+                elseif($low_capacity<=90)
+                
+                {
+                    ?>
+                                    
+                    <div class="alert alert-success" role="alert">
+                                Items in Safe Level
+                    </div>
+                           
+               
+                  <?php 
+                }
+                
+                else{
+
+                    ?>
+                    <div class="alert alert-dark" role="alert">
+                             Items in OverStock
+                  </div>
+
+                  <?php
+                }
+                
+                
+                ?></td>
+                <td>
+          
              
                 <a href="#"  class="btn btn-primary view_btn">View</a>
 
@@ -144,11 +218,8 @@ $(document).on('click', '.view_btn', function () {
              
               <th scope="col">Items Name</th>
             
-              <th scope="col">Batch Number</th>
-              <th scope="col">Med Date</th>
-              <th scope="col">Exp Date</th>
-              <th scope="col">Quntity</th>
-              <th scope="col"></th>
+              <th scope="col">Type Name</th>
+             
               <th> </th>
             </tr>
           </thead>
@@ -158,15 +229,14 @@ $(document).on('click', '.view_btn', function () {
                     <tr>
                       
                         <td><?php echo $row['item_name']; ?></td>
-                       
-                        <td><?php echo $row['BN_number']; ?></td>
-                     
-                        <td><?php echo $row['Med_date']; ?></td>
-                        <td><?php echo $row['Exp_date']; ?></td>
-                        <td><?php echo $row['In_quntity']; ?></td>
-                        
+                        <td><?php echo $row['type_name']; ?></td>
+                    
+                    
+
+
+
                       <td>
-                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
+                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Drop Inventory
                       
 
                         
@@ -175,7 +245,7 @@ $(document).on('click', '.view_btn', function () {
 
 
 
-                      </td>
+                    </td>
                     </tr>
                 <?php endforeach;?> 
             <?php endif;?>
@@ -225,6 +295,87 @@ $(document).on('click', '.view_btn', function () {
 </tbody>
 </table>
 </div>
+
+<!-- Sugical inventory items-->
+<div id="table4" class="table-container">
+<table class="table" name="Sugical-inventory">
+  
+  <thead>
+    <tr>
+    
+      <th scope="col">Items Name</th>
+    
+      <th scope="col">BN number</th>
+      <th scope="col">Med Date </th>
+      <th scope="col">EXp Date</th>
+      <th scope="col">Avaliable Quntity</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+            <?php if ($sugicalsinventory):?>
+                <?php foreach($sugicalsinventory as $row) : ?>
+                    <tr>
+                      
+                        <td><?php echo $row['item_name']; ?></td>
+                       
+                        <td><?php echo $row['BN_number']; ?></td>
+                     
+                        <td><?php echo $row['Med_date']; ?></td>
+                        <td><?php echo $row['Exp_date']; ?></td>
+                        <td><?php echo $row['In_quntity']; ?></td>
+                        
+                   
+                    </tr>
+                <?php endforeach;?> 
+            <?php endif;?>
+   </tbody>
+</table>
+</div>
+
+<!-- General inventory items-->
+<div id="table5" class="table-container">
+<table class="table" name=">General-inventory">
+  
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Items Name</th>
+      <th scope="col">Type Name</th>
+      <th scope="col">SN number</th>
+      <th scope="col">Warranty Period </th>
+      <th scope="col">Quntity</th>
+      <th scope="col"></th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if ($general):?>
+        <?php foreach($general as $row) : ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['type_name']; ?></td>
+              
+               <td>  
+                         <!-- Calulate warrenty period-->
+                          <?php
+                        
+                          $startDate = new DateTime($row['W_start']);
+                          $endDate = new DateTime($row['W_end']);
+                          $dateDifference = $startDate->diff($endDate);
+                          echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
+                          ?>
+                </td> 
+                <td><?php echo $row['quntity']; ?></td>
+               
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
+</tbody>
+</table>
+</div>
+
 
 <!-- view Modal  -->
 <div class="modal fade" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
