@@ -14,6 +14,7 @@ class UserModel extends Model{
         'Email',
         'Password',
         'usergroup_id',
+        'User_type',
         'Unit_id',
         'update_at'
    

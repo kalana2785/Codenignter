@@ -57,6 +57,20 @@ $routes->get('Imanger/Prequset', 'imdashController::Requestpurchtable' );// purc
 $routes->get('Imanger/viewpurchment/(:any)', 'imdashController::Viewp/$1');
 
 
+// general inventory Manger
+
+
+$routes->get('/generalim', 'imgeneralController::index' );
+
+
+
+
+
+
+
+
+
+
 //Admin Pannel
 
 $routes->get('/Admin', 'AdminController::index');

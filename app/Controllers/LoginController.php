@@ -39,56 +39,58 @@ class LoginController extends BaseController
                          // collect the user login info
                         if($userData['usergroup_id']== 1){
                          
-                         $loginInfo =[
+                                $loginInfo =[
 
-                            'User_id' => $userData['User_id'],
-                             'Agent'  =>$this->getUserAgentInfo(),
-                              'Ip'    =>$this->request->getIPAddress(),
-                           'Login_time' => date('y-m-d h:i:s'),
+                                    'User_id' => $userData['User_id'],
+                                    'Agent'  =>$this->getUserAgentInfo(),
+                                    'Ip'    =>$this->request->getIPAddress(),
+                                'Login_time' => date('y-m-d h:i:s'),
 
-                         ];
-                                    
-                         $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
-                         
-                         if($la_id)
-                         {
-                            $this->session->set('logged_info',$la_id);
+                                ];
+                                            
+                                $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
+                                
+                                if($la_id)
+                                {
+                                    $this->session->set('logged_info',$la_id);
 
-                         }
+                                }
 
-                        // redirct Path 
-                        $this->session->set('logged_user',$userData['User_id']);
-                        return redirect()->to(base_url().'/Admin');
+                                // redirct Path 
+                                $this->session->set('logged_user',$userData['User_id']);
+                                return redirect()->to(base_url().'/Admin');
 
                         }
                         else if($userData['usergroup_id']== 2)
                         {
                           
 
-                             // collect the user login info   
-                         $loginInfo =[
+                                        // collect the user login info   
+                                    $loginInfo =[
 
-                            'User_id' => $userData['User_id'],
-                             'Agent'  =>$this->getUserAgentInfo(),
-                              'Ip'    =>$this->request->getIPAddress(),
-                           'Login_time' => date('y-m-d h:i:s'),
+                                        'User_id' => $userData['User_id'],
+                                        'Agent'  =>$this->getUserAgentInfo(),
+                                        'Ip'    =>$this->request->getIPAddress(),
+                                    'Login_time' => date('y-m-d h:i:s'),
 
-                         ];
+                                    ];
+                                                
+                                    $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
                                     
-                         $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
-                         
-                         if($la_id)
-                         {
-                            $this->session->set('logged_info',$la_id);
+                                    if($la_id)
+                                    {
+                                        $this->session->set('logged_info',$la_id);
 
-                         }
-                          
-                         // redirct Path in inventory Manger
+                                    }
+                                    
 
-                            
-                           $this->session->set('logged_user',$userData['User_id']);
-                       
-                            return redirect()->to(base_url().'dashboard');
+
+
+                                    // redirct Path in inventory Manger
+
+                                    $this->session->set('logged_user',$userData['User_id']);
+                                
+                                        return redirect()->to(base_url().'dashboard');
 
                         }
                         elseif ($userData['usergroup_id'] == 3) {
@@ -114,13 +116,45 @@ class LoginController extends BaseController
                         
                             return redirect()->to(base_url().'/Unit');
                         }
-                
+
+                        else if($userData['usergroup_id']== 4)
+                        {
+                          
+
+                                        // collect the user login info   
+                                    $loginInfo =[
+
+                                        'User_id' => $userData['User_id'],
+                                        'Agent'  =>$this->getUserAgentInfo(),
+                                        'Ip'    =>$this->request->getIPAddress(),
+                                    'Login_time' => date('y-m-d h:i:s'),
+
+                                    ];
+                                                
+                                    $la_id= $this->dbmodel->saveLoginInfo($loginInfo);
+                                    
+                                    if($la_id)
+                                    {
+                                        $this->session->set('logged_info',$la_id);
+
+                                    }
+                                    
+
+
+
+                                    // redirct Path in inventory Manger
+
+                                    $this->session->set('logged_user',$userData['User_id']);
+                                
+                                        return redirect()->to(base_url().'/generalim');
+
+                         }
                         
                        else{
                         return redirect()->back()->with('errormessage', 'Sorry! you not assign any usergroup');
-                       }
+                          }
                     }
-                     else {
+                      else {
                        
                         return redirect()->back()->with('errormessage', 'Sorry! Wrong Password Entered for that Account');
                     }
