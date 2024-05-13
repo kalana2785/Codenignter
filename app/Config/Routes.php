@@ -57,6 +57,7 @@ $routes->get('Imanger/Prequset', 'imdashController::Requestpurchtable' );// purc
 $routes->get('Imanger/viewpurchment/(:any)', 'imdashController::Viewp/$1');
 $routes->get('Imanger/addinventoryg/(:num)','imdashController::addgeneralinventory/$1');
 
+$routes->post('Imanger/addginventory','imdashController::storegeneralinventory');
 
 
 

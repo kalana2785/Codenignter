@@ -3,7 +3,7 @@
 
 <head>
 
- <title>Add Inventory-Sugical</title>
+ <title>Add Inventory-General</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
@@ -31,9 +31,9 @@
         <?= session('error') ?>
     </div>
 <?php endif; ?>
-           edit
-          <form action="<?= base_url('Imanger/updatet/'.$items['id']) ?>" method="post">
-          <input type="hidden" name="_method" value="PUT">
+          
+          <form action="<?= base_url('Imanger/addginventory') ?>" method="post">
+        
 
          
           <div class="row mb-3">

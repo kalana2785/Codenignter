@@ -201,7 +201,7 @@ public function  updatetotal($id= null)
     return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');
 }
 
-// add general item in inventory
+// display each general item  form from inventory
 
 public function addgeneralinventory ($id= null)
 {
@@ -214,6 +214,51 @@ public function addgeneralinventory ($id= null)
     return view('iManger/G_inventory',$data);
 
 }
+
+// add general item in main inventory
+
+public function  storegeneralinventory()
+{
+    $dashboardModel = new DashboardModel();
+    $inventoryModel = new InventoryModel();
+
+
+
+  
+
+    $existingItem = $inventoryModel->where([
+        'Sn_number' => $this->request->getPost('Sn_number')
+       
+    ])->first();
+
+    if ($existingItem) {
+        
+        return redirect()->back()->with('error', 'This Item already exists in Inventory.');
+    }
+
+
+
+
+    $data =[
+        
+        'item_id' => $this->request->getPost('item_id'),
+        'Sn_number' => $this->request->getPost('Sn_number'),
+        'W_start' => $this->request->getPost('ws'),
+        'W_end' => $this->request->getPost('we'),
+        'In_quntity' => 1,
+        'Approval_status' => 1
+    ];
+    $inventoryModel->save($data);
+
+    return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');
+    
+}
+
+
+
+
+
+
 
 
 public function Requesttable ()
