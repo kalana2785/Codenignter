@@ -405,10 +405,13 @@ public function repairupdate($id =null)
 
 public function Purchmentview()
 { 
-    $dashboardModel = new DashboardModel();
+    $unitinventory = new UnitinventoryModel();
         
     // Filter all
-    $data['dashboards'] = $dashboardModel->getDashboardData();
+    $data['dashboards'] = $unitinventory
+                        ->select('DISTINCT(unit_inventory.item_id), items.*') // Use DISTINCT to select unique item_id
+                        ->join('items', 'unit_inventory.item_id = items.id')
+                        ->findAll();
     
     $data['userdata'] = $this->userData;
 
@@ -416,7 +419,7 @@ public function Purchmentview()
 }
 
 
-public function itemsusage($id=null)
+public function Itemsusage($id=null) 
 {
     $unitinventory = new UnitinventoryModel();
   

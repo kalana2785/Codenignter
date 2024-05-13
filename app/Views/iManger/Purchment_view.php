@@ -31,6 +31,7 @@
                     $totalQuantity = 0; 
                     $unitNames = []; // Array to store unit names
                     $quantities = []; // Array to store quantities
+                    
                     foreach ($inventory as $row):
                         // Store unit name and quantity for chart
                         $unitNames[] = $row['Unit_name'];
