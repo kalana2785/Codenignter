@@ -55,6 +55,9 @@ $routes->get('imanger/Purchmentorderview', 'imdashController::Purchmentorder');
 $routes->post('Imanger/submit_order', 'imdashController::submitOrder');
 $routes->get('Imanger/Prequset', 'imdashController::Requestpurchtable' );// purchmentt
 $routes->get('Imanger/viewpurchment/(:any)', 'imdashController::Viewp/$1');
+$routes->get('Imanger/addinventoryg/(:num)','imdashController::addgeneralinventory/$1');
+
+
 
 
 // general inventory Manger
@@ -102,6 +105,10 @@ $routes->get('Admin/Inreq', 'AdminController::Additemsrequest' );
 $routes->get('Admin/viewinventoryreq/(:num)', 'AdminController::Inventoryreqview/$1' );
 
 $routes->put('Admin/Approvalinv/(:num)', 'AdminController::Inventoryupdate/$1');
+
+$routes->get('Admin/addreq', 'AdminController::Addreqtable' );
+
+$routes->post('Admin/adddemandform', 'AdminController::viewdemandform' );
 
 
 

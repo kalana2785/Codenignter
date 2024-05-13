@@ -69,6 +69,49 @@ class AdminController extends BaseController
         return view('Admin/Inventory_request.php', $data);
     }
     
+    // inventory Manger Add request view table
+    public function Addreqtable()
+    {
+        $dashboardModel = new DashboardModel();
+      
+        $data['Inventory'] = $dashboardModel->where('Approval_status', 1)->findAll();
+        
+        return view('Admin/Additem_req', $data);
+    }
+
+  // view update demand quntity
+
+   public function viewdemandform()
+   {
+    $demandmodel= new DemandModel();
+    $dashboardModel = new DashboardModel();
+    $id=$this->request->getPost('id');
+    $data =[
+            
+        'Items_id' => $id , 
+        'overstock_value' => $this->request->getPost('demandQ')
+
+        
+    ];
+    $demandmodel->Save($data);
+
+    $data =[
+            
+        'Approval_status' => 2 
+        
+
+        
+    ];
+    $dashboardModel->update($id,$data);
+    
+    
+    return redirect()->back()->with('status', 'Item Successfully Add Demand Quntity');
+   }
+
+
+
+
+
 
     // inventory req view form
  

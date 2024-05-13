@@ -94,7 +94,11 @@
         <i class="bi bi-table"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-
+        <li>
+            <a a href="<?= base_url('Admin/addreq');?>">
+              <i class="bi bi-circle"></i><span>Add-items Request</span>
+            </a>
+          </li>
         <li>
             <a a href="<?= base_url('Admin/Inreq');?>">
               <i class="bi bi-circle"></i><span>Inventory Request</span>

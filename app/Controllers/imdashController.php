@@ -92,15 +92,8 @@ class imdashController extends BaseController
         $data = [
             'item_name' => $this->request->getPost('item_name'),
             'catogory' => $this->request->getPost('ca'),
-            'quntity' => $this->request->getPost('quantity'),
             'type_name' => $this->request->getPost('ty'),
-            'Sn_number' => $this->request->getPost('sn'),
-            'BN_number' => $this->request->getPost('BN'),
-            'Med_date' => $this->request->getPost('Med'),
-            'Exp_date' => $this->request->getPost('Exp'),
-            'W_start' => $this->request->getPost('ws'),
-            'W_end' => $this->request->getPost('we'),
-            'Approval_status' => 1
+            'Approval_status'=>1
             
         ];
     
@@ -208,6 +201,19 @@ public function  updatetotal($id= null)
     return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');
 }
 
+// add general item in inventory
+
+public function addgeneralinventory ($id= null)
+{
+       
+    $dashboardModel = new DashboardModel();
+    $demandModel = new DemandModel();
+
+    $data['items']=$dashboardModel->join('demand','items.id =demand.Items_id ')->find($id);
+    $data['userdata'] = $this->userData;
+    return view('iManger/G_inventory',$data);
+
+}
 
 
 public function Requesttable ()

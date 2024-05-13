@@ -192,17 +192,7 @@ $(document).on('click', '.view_btn', function () {
                 <a href="#"  class="btn btn-primary view_btn">View</a>
 
                 </td>
-                <td>
-                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Drop Inventory
-                      
-
-                        
-                        
-                      </a>
-
-
-
-                 </td>
+          
             </tr>
         <?php endforeach;?> 
     <?php endif;?>
@@ -259,12 +249,11 @@ $(document).on('click', '.view_btn', function () {
   
   <thead>
     <tr>
-      <th scope="col">Id</th>
+     
       <th scope="col">Items Name</th>
       <th scope="col">Type Name</th>
-      <th scope="col">SN number</th>
-      <th scope="col">Warranty Period </th>
-      <th scope="col">Quntity</th>
+      
+ 
       <th scope="col"></th>
       <th> </th>
     </tr>
@@ -273,22 +262,22 @@ $(document).on('click', '.view_btn', function () {
     <?php if ($general):?>
         <?php foreach($general as $row) : ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+             
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>
-              
-               <td>  
-                         <!-- Calulate warrenty period-->
-                          <?php
+             
+                
+                <td>
+                      <a href="<?php echo base_url('Imanger/addinventoryg/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Drop Inventory
+                      
+
                         
-                          $startDate = new DateTime($row['W_start']);
-                          $endDate = new DateTime($row['W_end']);
-                          $dateDifference = $startDate->diff($endDate);
-                          echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
-                          ?>
-                </td> 
-                <td><?php echo $row['quntity']; ?></td>
-               
+                        
+                      </a>
+
+
+
+                </td>
             </tr>
         <?php endforeach;?> 
     <?php endif;?>

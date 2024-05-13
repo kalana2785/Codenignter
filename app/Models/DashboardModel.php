@@ -13,15 +13,10 @@ class DashboardModel extends Model
        'item_name',
        'catogory',
        'type_name',
-       'Sn_number',
-       'BN_number',
-       'Med_date',
-       'Exp_date',
-       'W_start',
-       'W_end',
        'quntity',
+       'Approval_status',
        'Re_quntity',
-       'Approval_status'
+    
 
   
 
