@@ -55,7 +55,7 @@ class AdminController extends BaseController
        
         $data['Inventory'] = $inventoryModel
                                     ->join('items', 'inventory_items.item_id = items.id')
-                                    ->where('Approval_status', 1)
+                                    ->where('inventory_items.Approval_status', 1)
                                     ->findAll(); 
                                    
 
