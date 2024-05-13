@@ -42,7 +42,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-              <a href="<?= base_url('Imanger/Additems');?>">
+              <a href="<?= base_url('Imanger/Additemreq');?>">
               <i class="bi bi-circle"></i><span>Add items Request </span>
             </a>
           </li>

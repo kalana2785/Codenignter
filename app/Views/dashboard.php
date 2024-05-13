@@ -328,21 +328,21 @@ $(document).on('click', '.view_btn', function () {
   
   <thead>
     <tr>
-      <th scope="col">Id</th>
+     
       <th scope="col">Items Name</th>
-      <th scope="col">Type Name</th>
+      
       <th scope="col">SN number</th>
       <th scope="col">Warranty Period </th>
-      <th scope="col">Quntity</th>
+     
       <th scope="col"></th>
       <th> </th>
     </tr>
   </thead>
   <tbody>
-    <?php if ($general):?>
-        <?php foreach($general as $row) : ?>
+    <?php if ($generalinventory):?>
+        <?php foreach($generalinventory as $row) : ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+               
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>
               
@@ -356,7 +356,7 @@ $(document).on('click', '.view_btn', function () {
                           echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
                           ?>
                 </td> 
-                <td><?php echo $row['quntity']; ?></td>
+              
                
             </tr>
         <?php endforeach;?> 

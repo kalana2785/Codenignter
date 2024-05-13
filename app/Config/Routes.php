@@ -28,7 +28,7 @@ $routes->post('/Imanger/Additems', 'imdashController::store');
 
 $routes->get('/Imanger/Add', 'imdashController::Additemsrequest' );
 
-$routes->get('/Imanger/Additems', 'imdashController::Additemsrequest' );
+$routes->get('/Imanger/Additemreq', 'imdashController::Additemsrequesttable' );
 
 
 $routes->post('imdashController/action', 'imdashController::action');

@@ -33,6 +33,7 @@
 
 
 
+
 <main id="main" class="main">
  
 <!-- Check if there is an error message and display it -->
@@ -55,17 +56,14 @@
     </tr>
   </thead>
   <tbody>
-  <?php foreach ($dashboards as $dashboard): ?>
-
-    <tr>
-                <td><?= $dashboard['item_name'] ?></td>
-                <td><?= $dashboard['BN_number'] ?></td>
-               
-              
-            </tr>
-          
-<?php endforeach; ?>
+    <?php foreach ($dashboards as $dashboard): ?>
+        <tr>
+            <td><?= $dashboard['item_name'] ?></td>
+            <td><?= $dashboard['BN_number'] ?></td>
+        </tr>
+    <?php endforeach; ?>
 </tbody>
+
 </table>
 </div>
 
