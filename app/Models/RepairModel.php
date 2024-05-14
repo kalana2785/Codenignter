@@ -11,6 +11,7 @@ class RepairModel extends Model
    protected $allowedFields =
    [
        'item_id',
+       'repair_snnum',
        'Unit_id',
        'Comment',
        'status_id'

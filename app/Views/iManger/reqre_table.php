@@ -3,7 +3,7 @@
 
 <head>
 
- <title>Add Items</title>
+ <title>Repair Request</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
  <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
@@ -61,24 +61,35 @@
                     </h2>
                     <div id="flush-collapse<?php echo $row['Re_id']; ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?php echo $row['Re_id']; ?>" data-bs-parent="#accordionFlushExample<?php echo $row['Re_id']; ?>">
                         <div class="accordion-body">
+                         
+                        <p><b>item Sn number</b><br>
+                        <?php echo $row['repair_snnum']; ?>
+                       </p>
+
+
+
 
                         <p><b>Unit-In-charge Comment </b><br>
                         <?php echo $row['Comment']; ?>
                        </p>
-                        <p><b>Warranty Start Date -</b><?php echo $row['W_start']; ?></p>
-                        <p><b>Warranty End Date -</b><?php echo $row['W_end']; ?></p>     
+
+
+                        <p><b>Warranty Start Date -</b><?php ?></p>
+                        <p><b>Warranty End Date -</b><?php  ?></p>     
                          <p >
                              
                                <b>Warranty Avaliable duration</b> <br><br>
                               
                                <?php
-                        
-                        $startDate = new DateTime($row['W_start']);
-                        $endDate = new DateTime($row['W_end']);
-                        $dateDifference = $startDate->diff($endDate);
-                        echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
-                        ?>
+                    
+                        //$startDate = new DateTime($row['W_start']);
+                        //$endDate = new DateTime($row['W_end']);
+                        //$dateDifference = $startDate->diff($endDate);
+                        //echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
 
+                        
+                        ?>
+                  
 
                          </p>
                         </div>

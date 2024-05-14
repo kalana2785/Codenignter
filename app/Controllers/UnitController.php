@@ -146,8 +146,11 @@ else{
 
 $data = [
     'item_id' => $this->request->getPost('item_id'),
+    'repair_snnum'=>$this->request->getPost('Sn_number'),
     'Unit_id' => $this->request->getPost('unit'),
     'Comment' => $this->request->getPost('RepairD'),
+
+    
     'status_id'=> 1
   
 ];

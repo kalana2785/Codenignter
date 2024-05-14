@@ -290,16 +290,7 @@ $(document).on('click', '.view_btn', function () {
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>
         
-               <td>  
-                         <!-- Calulate warrenty period-->
-                          <?php
-                        
-                          $startDate = new DateTime($row['W_start']);
-                          $endDate = new DateTime($row['W_end']);
-                          $dateDifference = $startDate->diff($endDate);
-                          echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
-                          ?>
-                </td> 
+             
                 <td><?php echo $row['quntity']; ?></td>
                
             </tr>

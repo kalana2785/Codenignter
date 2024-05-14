@@ -61,9 +61,16 @@
         <div class="col-sm-10">
             <!-- Assuming item_name is a field in your database, replace it with the correct field name -->
             <input type="text" class="form-control" id="inputText" name="item_name" value="<?= $unititems['item_name'] ?>">
+    
         </div>
     </div>
-
+    <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Item Sn number</label>
+        <div class="col-sm-10">
+        
+            <input type="text" class="form-control" id="inputText" name="Sn_number" value="<?= $unititems['itembox_name'] ?>">
+        </div>
+    </div>
     <input type="text" class="form-control" id="inputText" name="item_id" value="<?= $unititems['item_id'] ?>" hidden>
     <input type="text" class="form-control" id="inputText" name="unit" value="<?= $unititems['Unit_id'] ?>" hidden>
 

@@ -368,20 +368,19 @@ public function updaterequest($reqNo)
 }
 
 
-
 public function Requestrepairtable()
 {
     $repairrequest = new RepairModel(); 
     $data['request'] = $repairrequest
-    ->join('items', 'repair.item_id = items.id')
-    ->join('unit', 'repair.Unit_id = unit.Unit_id')
-    ->findAll();
+       
+        ->join('items', 'repair.item_id = items.id')
+        ->join('unit', 'repair.Unit_id = unit.Unit_id')
+        ->findAll();
 
-    
     $data['userdata'] = $this->userData;
     return view('iManger/reqre_table', $data);
-    
 }
+
 
 
 
