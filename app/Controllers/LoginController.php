@@ -23,7 +23,7 @@ class LoginController extends BaseController
         if ($this->request->getMethod() == 'post') {
             $rules = [
                 'email' => 'required|valid_email',
-                'password'=> 'required|min_length[6]|max_length[16]',
+                
             ];
 
             if ($this->validate($rules)) { 
@@ -123,11 +123,11 @@ class LoginController extends BaseController
                     }
                       else {
                        
-                        return redirect()->back()->with('errormessage', 'Sorry! Wrong Password Entered for that Account');
+                        return redirect()->to('/')->with('errormessage', 'Sorry! Wrong Password Entered for that Account');
                     }
                 } else {
                     
-                    return redirect()->back()->with('errormessage', 'Sorry! Email does not exist');
+                    return redirect()->to('/')->with('errormessage', 'Sorry! Email does not exist');
                 }
             } else {
                
@@ -138,6 +138,9 @@ class LoginController extends BaseController
         return view('index', $data);
     }
 
+
+
+    
     public function logout()
     {
         // Save Logout time
