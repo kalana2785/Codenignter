@@ -16,6 +16,7 @@ use App\Models\RepairstageModel;
 use App\Models\PurchaseOrderModel;
 use App\Models\PurchmentRequestModel;
 use  App\Models\InventoryModel;
+use App\Models\UnitModel;
 
 class AdminController extends BaseController
 {
@@ -198,6 +199,8 @@ class AdminController extends BaseController
         $data['user'] = $usergroup->orderby('Usergroup_name','ASC')->findAll();
         return view('Admin/Add_user',$data);
      }
+
+     
      
      public function saveuser()
      {
@@ -238,12 +241,140 @@ class AdminController extends BaseController
         }
      }
   
+    // view add item type form
+
+    public function Addtype()
+    {
+       $usermodel = new UserModel();
+       $usergroup = new UsergroupModel();
+       $catogoryModel = new CategoryModel();
+       $usermodel->join('user_group','user.usergroup_id =user_group.ugroup_id');
+       $data['catogory'] = $catogoryModel->orderby('Category_Name','ASC')->findAll();
+
+       $Userid = session()->get('logged_user');
+       
+            
+       $data['userdata']=$usermodel->getlogindata($Userid);
+
+       return view('Admin/Add_type',$data);
+    }
 
 
-     public function Reqtable()
+  // store Item type
+  public function savetype()
+  {
+     $typemodel = new TypeModel();
+      
+    $existinguser = $typemodel->where([
+        'type_name' => $this->request->getPost('type_name')
+        
+    ])->first();
+
+    if ($existinguser) {
+        
+        return redirect()->back()->with('error', 'This Items-type already exists.');
+    }
+
+    $data = [
+        'Cid' => $this->request->getPost('Ca'),
+        'type_name' => $this->request->getPost('type_name')
+      
+        
+    ];
+
+     $typemodel->save($data);
+     return redirect()->to('Admin/itemtypetable')->with('status', 'Item type Inserted Successfully');
+
+
+  }
+
+  
+
+
+ public function itemtypetable() 
+ {
+    $typemodel = new TypeModel();
+    $usermodel = new UserModel();
+    $data['item_type'] = $typemodel
+                    ->join('category', 'type.Cid = category.Cid')
+                     ->findAll(); 
+
+    $Userid = session()->get('logged_user');
+       
+            
+    $data['userdata']=$usermodel->getlogindata($Userid);                
+    return view('Admin/itemtype_table', $data);
+}
+
+// view Add unit form
+
+public function Addunit()
 {
-    $unitrequest = new UnitrequestModel();
-    $data['requests'] = $unitrequest
+    $usermodel = new UserModel();
+    $Userid = session()->get('logged_user');
+       
+            
+    $data['userdata']=$usermodel->getlogindata($Userid);  
+   return view('Admin/Add_unit',$data);
+}
+
+
+
+   // store Item type
+   public function saveunit()
+   {
+      $unitmodel = new UnitModel();
+       
+     $existinguser = $unitmodel->where([
+       'Unit_name' => $this->request->getPost('unit_name')
+         
+     ])->first();
+ 
+     if ($existinguser) {
+         
+         return redirect()->back()->with('error', 'This Unit already exists.');
+     }
+ 
+     $data = [
+        'Unit_name' => $this->request->getPost('unit_name')
+         
+         
+     ];
+ 
+      $unitmodel->save($data);
+      return redirect()->to('Admin/unittable')->with('status', 'Unit Inserted Successfully');
+ 
+ 
+   }
+
+
+   // unit table
+
+   public function unittable() 
+   {
+     
+      $unitmodel = new UnitModel();
+      $usermodel = new UserModel();
+      $data['unit'] = $unitmodel->findAll(); 
+  
+      $Userid = session()->get('logged_user');
+         
+              
+      $data['userdata']=$usermodel->getlogindata($Userid);                
+      return view('Admin/unit_table', $data);
+  }
+
+
+
+
+
+
+
+
+ public function Reqtable()
+{
+    $typemodel = new TypeModel();
+    $data['item_type'] = $typemodel
                     ->join('items', 'unit_request.item_id = items.id')
                     ->join('unit', 'unit_request.req_unit = unit.Unit_id')
                     ->where('status =',2 )
@@ -251,6 +382,9 @@ class AdminController extends BaseController
     
     return view('Admin/Adminview_request', $data);
 }
+
+
+
   public function viewreq($id, $req_no)
   {
     $unitrequest = new UnitrequestModel();

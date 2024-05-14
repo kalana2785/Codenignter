@@ -24,7 +24,16 @@
               <span>Add User</span>
             </a>
           </li>
-          
+          <li>
+            <a href="<?= base_url('Admin/Add-type');?>">
+              <span>Add Item Type</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?= base_url('Admin/Add-unit');?>">
+              <span>Add Unit</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Components Nav -->
 
@@ -32,7 +41,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-table"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        <i class="bi bi-table"></i><span>Request Tables</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
@@ -42,7 +51,7 @@
           </li>
         <li>
             <a a href="<?= base_url('Admin/Inreq');?>">
-              <i class="bi bi-circle"></i><span>Inventory Request Table</span>
+              <i class="bi bi-circle"></i><span>Inventory Request </span>
             </a>
           </li>
           <li>
@@ -63,7 +72,24 @@
         </ul>
       </li><!-- End Tables Nav -->
 
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-table"></i><span>View Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+            <a a href="<?= base_url('Admin/itemtypetable');?>">
+              <i class="bi bi-circle"></i><span>Items Type Table</span>
+            </a>
+          </li>
+          <li>
+            <a a href="<?= base_url('Admin/unittable');?>">
+              <i class="bi bi-circle"></i><span>Unit Table</span>
+            </a>
+          </li>
+        
+        </ul>
+      </li>
 
     </ul>
 

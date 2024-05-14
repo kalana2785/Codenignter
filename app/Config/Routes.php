@@ -91,6 +91,18 @@ $routes->get('Admin/delete/(:num)','AdminController::delete/$1');
 
 $routes->get('Admin/Add-user', 'AdminController::Adduser');
 
+$routes->get('Admin/Add-type', 'AdminController::Addtype');
+
+$routes->post('Admin/Addnewtype', 'AdminController::savetype');
+
+$routes->get('Admin/Add-unit', 'AdminController::Addunit');
+
+$routes->post('Admin/Addunittype', 'AdminController::saveunit');
+
+$routes->get('Admin/itemtypetable', 'AdminController::itemtypetable');
+
+$routes->get('Admin/unittable', 'AdminController::unittable');
+
 $routes->post('Admin/Addnewuser', 'AdminController::saveuser');
 
 $routes->get('Admin/Drequset', 'AdminController::Reqtable' );
