@@ -94,10 +94,10 @@
                       <div class="row mb-3">
                           <label for="inputEmail3" class="col-sm-2 col-form-label">Select SN number for Distributed</label>
                           <div class="col-sm-10">
-                              <select name="itemboxname" id="SN" class="form-control input-lg" require>
+                              <select name="itemboxname" id="" class="form-control input-lg" require>
                                   <option value="">Select SN Number</option>
-                                  <?php if (!empty($snNumbers)): ?>
-                                      <?php foreach ($snNumbers as $item): ?>
+                                  <?php if (!empty($Snnumber)): ?>
+                                      <?php foreach ($Snnumber as $item): ?>
                                           <option value="<?= $item['Sn_number']; ?>"><?= $item['Sn_number']; ?></option>
                                       <?php endforeach; ?>
                                   <?php endif; ?>
@@ -119,14 +119,14 @@
 
 
 
- 
+                  <?php if($req['catogory'] == 1): ?>
                   <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Add Quntity</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="AddQu" value="">
                   </div>
                 </div>
-
+                <?php endif; ?>
 
               <div class="text-center">
                   <input type="submit" class="btn btn-primary" value="Request">

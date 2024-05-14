@@ -355,7 +355,7 @@ public function updaterequest($reqNo)
     {
         return redirect()->back()->with('error', 'Quntity high please reduces.');
     }
-
+    
     $data =[
         'itembox_name' => $this->request->getPost('itemboxname'),
         'ima_quntity' => $this->request->getPost('AddQu'),

@@ -111,6 +111,7 @@ else{
 $data = [
     'item_id' => $this->request->getPost('item_id'),
     'req_unit' => $this->request->getPost('unit'),
+    'itembox_name'=>'SID000',
     'req_quntity' => $this->request->getPost('Quntity')
 
   
