@@ -82,7 +82,7 @@
     
       <th scope="col">Items Name</th>
       <th scope="col">Catogory</th>
-      
+      <th>Sn number/Bn number</th>
       <th scope="col">Avalible Quntity</th>
       <th scope="col">Issue Update</th>
       <th> </th>
@@ -93,7 +93,8 @@
                 <?php foreach ($userList as $user): ?>
             <tr>
                 <td><?php echo $user['item_name']; ?></td>
-                <td><?php echo $user['Category_Name']; ?></td>  
+                <td><?php echo $user['Category_Name']; ?></td> 
+                   <td><?php echo $user['itembox_name']; ?></td> 
                 <td><?php echo $user['Quntity']; ?></td>
                 <td><?php echo $user['issue_date']; ?></td>
                
