@@ -9,6 +9,7 @@ use App\Models\UnitinventoryModel;
 use App\Models\UnitrequestModel;
 use App\Models\RepairModel;
 use App\Models\RepairstageModel;
+use App\Models\CategoryModel;
 
 class UnitController extends BaseController
 {
@@ -61,18 +62,26 @@ return view('Unit/dashboard', $data);
 
 // items request page
 
-public function req($id = null)
+public function req()
 {
 
-    $userinventory = new UnitinventoryModel();
+    $dashboardModel = new DashboardModel();
     $usermodel= new UserModel();
- 
-    $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')
+    $catogoryModel= new CategoryModel();
+    $userinventory = new UnitinventoryModel();
+   
 
-                                       ->find($id);
-    $Unituserid = session()->get('login_user');
-       
-            
+    $data['inventory'] = $catogoryModel->orderBy('Category_Name', 'ASC')
+                                         ->findAll();
+  
+
+
+
+    // filter unit-id
+      $Unituserid = session()->get('login_user');
+      $data['unitid'] = $usermodel->find($Unituserid);
+           
+      
      $this->userData =$usermodel->getlogindata($Unituserid);
      $data['unituserdata'] = $this->userData;
    

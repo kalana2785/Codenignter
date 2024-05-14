@@ -118,6 +118,28 @@ class imdashController extends BaseController
         
     }
 
+// fetch bn number quntity 
+  
+public function actionquntity()
+{
+    if($this->request->getVar('action'))
+    {
+        $action = $this->request->getVar('action');
+        if($action == 'get_ty')
+        {
+            $dashboardModel = new DashboardModel();
+            $typedata= $dashboardModel->where('catogory',$this->request->getVar('Cid'))->findAll();
+            echo json_encode($typedata);
+        }
+    }       
+    
+}
+
+
+
+
+
+
     //Update Items page
     //redirct edit.php
    public function edit($id = null)
@@ -521,4 +543,25 @@ public function newtest($id = null)
 {
     
 }
+
+// sugical distributed form
+public function viewsugicaldistribute($id)
+{
+    $inventoryModel = new InventoryModel();
+        
+    // Fetch a single record based on the provided $id
+    $data['inventory'] = $inventoryModel
+                        ->join('items', 'inventory_items.item_id = items.id')
+                        ->where('inventory_items.item_id', $id) // Replace 'your_column_name' with the actual column name
+                        ->orderBy('BN_number', 'ASC')
+                        ->findAll();
+                    
+
+
+    $data['userdata'] = $this->userData;
+
+    return view('iManger/S_distibute', $data);
+}
+
+
 }

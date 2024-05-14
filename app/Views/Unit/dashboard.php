@@ -96,15 +96,7 @@
                 <td><?php echo $user['Category_Name']; ?></td>  
                 <td><?php echo $user['Quntity']; ?></td>
                 <td><?php echo $user['issue_date']; ?></td>
-                <td>
-
-                <a href="<?php echo base_url('unit/req/' . $user['Uni_id']); ?>"  class="btn btn-success btn-sm">Request Quntity
                
-
-                 
-                
-                </a>
-                </td>
                 <td>
 
                   <a href="<?php echo base_url('unit/reqre/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Request Repair 

@@ -15,6 +15,15 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         
+        <li>
+            <a href="<?= base_url('unit/req');?>">
+              <span>Request item</span>
+            </a>
+          </li>
+
+
+
+
           <li>
             <a href="<?= base_url('unit/repairtable');?>">
               <span>Request Repair</span>

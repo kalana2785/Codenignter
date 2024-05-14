@@ -236,6 +236,20 @@ $(document).on('click', '.view_btn', function () {
 
 
                     </td>
+
+                    <td>
+                      <a href="<?php echo base_url('Imanger/Sdistribute/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Distribute option
+                      
+
+                        
+                        
+                      </a>
+
+
+
+                    </td>
+
+
                     </tr>
                 <?php endforeach;?> 
             <?php endif;?>

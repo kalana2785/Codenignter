@@ -33,6 +33,10 @@ $routes->get('/Imanger/Additemreq', 'imdashController::Additemsrequesttable' );
 
 $routes->post('imdashController/action', 'imdashController::action');
 
+
+
+$routes->post('imdashController/actionquntity', 'imdashController::actionquntity');
+
 $routes->get('Imanger/edit/(:num)','imdashController::edit/$1');
 
 $routes->put('Imanger/update/(:num)','imdashController::update/$1');
@@ -58,6 +62,10 @@ $routes->get('Imanger/viewpurchment/(:any)', 'imdashController::Viewp/$1');
 $routes->get('Imanger/addinventoryg/(:num)','imdashController::addgeneralinventory/$1');
 
 $routes->post('Imanger/addginventory','imdashController::storegeneralinventory');
+
+$routes->get('Imanger/Sdistribute/(:num)','imdashController::viewsugicaldistribute/$1');
+
+
 
 
 
@@ -118,8 +126,8 @@ $routes->post('Admin/adddemandform', 'AdminController::viewdemandform' );
 // unit user 
 
 $routes->get('/Unit', 'UnitController::index');
-$routes->get('unit/req/(:num)', 'UnitController::req/$1');
-$routes->post('/unit/request', 'UnitController::request');
+$routes->get('unit/req', 'UnitController::req');
+$routes->post('unit/request', 'UnitController::request');
 $routes->get('unit/repairtable', 'UnitController::repairtab');
 $routes->get('unit/reqre/(:num)', 'UnitController::reqre/$1');
 $routes->post('/unit/requestre', 'UnitController::requestre');
