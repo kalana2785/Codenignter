@@ -304,23 +304,53 @@ class AdminController extends BaseController
         ];
         $dashboardModel->update($item_id, $inventoryData);
 
-        // Update unit inventory with admin-approved quantity
-        $unitInventoryData = [
-            'Quntity' => $adminq
-        ];
-      
-       
-        $builder = $unitinventory->builder();
-        $builder->where('Unit_id', $unit_no);
-        $builder->where('item_id', $item_id);
+        $existingItem = $unitinventory->where([
+            'item_id' => $item_id,
+            'Unit_id' =>$unit_no
+        ])->first();
         
-        if ($builder->update($unitInventoryData)) {
-            // Update successful, redirect with success message
-            return redirect()->back()->with('status', 'Quantity updated successfully.');
-        } else {
-            // Update failed, redirect with error message
-            return redirect()->back()->with('error', 'Failed to update quantity.');
+        // upadate quntity if avaliable in inventory
+        if ($existingItem && $existingItem['item_id'] == $item_id && $existingItem['Unit_id'] == $unit_no) {
+            $unitInventoryData = [
+                'Quntity' => $adminq
+            ];
+            
+            $builder = $unitinventory->builder();
+            $builder->where('Unit_id', $unit_no);
+            $builder->where('item_id', $item_id);
+            
+            if ($builder->update($unitInventoryData)) {
+                // Update successful, redirect with success message
+                return redirect()->back()->with('status', 'Quantity updated successfully.');
+            } else {
+                // Update failed, redirect with error message
+                return redirect()->back()->with('error', 'Failed to update quantity.');
+            }
         }
+
+        // add the new inventory request
+        else
+        {
+               
+        $data = [
+            'item_id' => $item_id,
+            'Unit_id' =>$unit_no,
+            'Quntity' => $adminq
+            
+            
+        ];
+    
+        $unitinventory->save($data);
+
+         
+        return redirect()->back()->with('status', 'Quantity Added successfully.');
+
+
+        }
+        
+       
+      
+        
        
     }
   public function Reqreptable()
