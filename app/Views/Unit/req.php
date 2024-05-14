@@ -83,6 +83,7 @@
                   </div>
                 </div>
    
+                <div class="row mb-3" id="additionalInputRow" style="display:none;">
 
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Request Quntity</label>
@@ -91,8 +92,11 @@
                         <input type="text" class="form-control" id="inputText" name="Quntity" >
                     </div>
                 </div>
+                </div>
 
-
+              
+              
+               </div>
                 <input type="text" class="form-control" id="inputText" name="unit" value="<?= $unitid['Unit_id'] ?>" hidden>
 
                 <div class="text-center">

@@ -96,17 +96,6 @@ public function request()
 
   $unitrequest = new UnitrequestModel(); 
 
-  $existingItem = $unitrequest->where([
-    'item_id' => $this->request->getPost('item_id'),
-    'req_unit' => $this->request->getPost('unit')
-])->first();
-
-if ($existingItem) {
-    
-    return redirect()->back()->with('error', 'Item request already exists.');
-}
-
-else{
 
 $data = [
     'item_id' => $this->request->getPost('item_id'),
@@ -120,7 +109,7 @@ $data = [
 $unitrequest->save($data);
 return redirect()->back()->withInput()->with('status', 'Item Request Successfully');
 
-}
+
 }
 
 public function reqre($id = null)
