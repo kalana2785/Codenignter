@@ -317,14 +317,27 @@ public function Additemsrequesttable()
 
 
 // apper each request items details
-public function Requestitems($id = null)
+public function Requestitems($id ,$itemId )
 {
     $unitrequest = new UnitrequestModel();
-     
+    $inventoryModel = new InventoryModel();
+
     $data['req'] = $unitrequest
     ->join('items', 'unit_request.item_id = items.id')
     ->join('unit', 'unit_request.req_unit = unit.Unit_id')
     ->find($id);
+ 
+        
+    $data['inventory'] = $inventoryModel
+                        ->where('inventory_items.item_id', $itemId)
+                        ->orderBy('BN_number', 'ASC')
+                        ->findAll();
+                    
+
+ $data['Snnumber'] = $inventoryModel
+                        ->where('inventory_items.item_id', $itemId)
+                        ->orderBy('Sn_number', 'ASC')
+                        ->findAll();
 
  
     $data['userdata'] = $this->userData;
@@ -344,7 +357,7 @@ public function updaterequest($reqNo)
     }
 
     $data =[
-        
+        'itembox_name' => $this->request->getPost('itemboxname'),
         'ima_quntity' => $this->request->getPost('AddQu'),
         'status' => 2
         

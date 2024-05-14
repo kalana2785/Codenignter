@@ -312,6 +312,7 @@ class AdminController extends BaseController
         // upadate quntity if avaliable in inventory
         if ($existingItem && $existingItem['item_id'] == $item_id && $existingItem['Unit_id'] == $unit_no) {
             $unitInventoryData = [
+                'itembox_name'=>$this->request->getPost('itembox_name'),
                 'Quntity' => $adminq
             ];
             
@@ -334,10 +335,13 @@ class AdminController extends BaseController
                
         $data = [
             'item_id' => $item_id,
-            'Unit_id' =>$unit_no,
+            'C_id'=>$this->request->getPost('cid'),
+            'Unit_id' =>$unit_no, 
+            'itembox_name'=>$this->request->getPost('itembox_name'),
+           
             'Quntity' => $adminq
-            
-            
+           
+           
         ];
     
         $unitinventory->save($data);

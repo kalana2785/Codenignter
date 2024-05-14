@@ -12,7 +12,9 @@ class UnitinventoryModel extends Model
    [
        'item_id',
        'C_id',
+       'itembox_name',
        'Unit_id',
+       
        'Quntity',
        'issue_date'
        

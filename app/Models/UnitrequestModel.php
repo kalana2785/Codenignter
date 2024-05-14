@@ -12,6 +12,7 @@ class UnitrequestModel extends Model
    [
        'item_id',
        'req_unit',
+       'itembox_name',
        'req_quntity',
        'ima_quntity',
        'ada_quntity',

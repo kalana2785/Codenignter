@@ -56,6 +56,7 @@
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Request Item Name</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="" value="<?= $req['item_name']; ?>" readonly>
+                  <input type="text" class="form-control" id="inputText" name="" value="<?= $req['catogory']; ?>" readonly>
                   </div>
                 </div>
                 
@@ -72,6 +73,41 @@
                   <input type="text" class="form-control" id="inputText" name="" value="<?= $req['req_quntity']; ?>" readonly>
                   </div>
                 </div>
+       
+                <?php if($req['catogory'] == 1): ?>
+                      <div class="row mb-3">
+                          <label for="inputEmail3" class="col-sm-2 col-form-label">Select BN number for Distributed</label>
+                          <div class="col-sm-10">
+                              <select name="itemboxname" id="" class="form-control input-lg" require>
+                                  <option value="">Select BN Number</option>
+                                  <?php if (!empty($inventory)): ?>
+                                      <?php foreach ($inventory as $item): ?>
+                                          <option value="<?= $item['BN_number']; ?>"><?= $item['BN_number']; ?></option>
+                                      <?php endforeach; ?>
+                                  <?php endif; ?>
+                              </select>
+                          </div>
+                      </div>
+                  <?php endif; ?>
+
+                  <?php if($req['catogory'] == 2): ?>
+                      <div class="row mb-3">
+                          <label for="inputEmail3" class="col-sm-2 col-form-label">Select SN number for Distributed</label>
+                          <div class="col-sm-10">
+                              <select name="itemboxname" id="SN" class="form-control input-lg" require>
+                                  <option value="">Select SN Number</option>
+                                  <?php if (!empty($snNumbers)): ?>
+                                      <?php foreach ($snNumbers as $item): ?>
+                                          <option value="<?= $item['Sn_number']; ?>"><?= $item['Sn_number']; ?></option>
+                                      <?php endforeach; ?>
+                                  <?php endif; ?>
+                              </select>
+                          </div>
+                      </div>
+                  <?php endif; ?>
+
+
+
 
                
                 <div class="alert alert-warning" role="alert">

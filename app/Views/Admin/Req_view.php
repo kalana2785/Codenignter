@@ -63,14 +63,21 @@
                 <label for="inputName5" class="form-label">Req Date/Time</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
                 </div>
-                <div class="col-6">
+                <div class="col-3">
                 <label for="inputName5" class="form-label">Approval Quntity</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['ima_quntity']; ?>" readonly>
                 </div>
-                <div class="col-6">
+                <div class="col-3">
                 <label for="inputName5" class="form-label">Approval Date/Time</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
                 </div>
+
+                <div class="col-3">
+                <label for="inputName5" class="form-label"> SN number / BN number</label>
+                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['itembox_name']; ?>" name="itembox_name" readonly >
+                </div>
+
+
 
                 <div class="col-6">
                 <label for="inputName5" class="form-label">Stock Avaliable</label>
@@ -79,8 +86,13 @@
                  
                 
                 <div class="col-6">
-                <label for="inputName5" class="form-label">Stock Avaliable</label>
-                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['req_unit']; ?>" name="unit" readonly >
+               
+                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['req_unit']; ?>" name="unit" readonly hidden>
+                </div>
+
+                <div class="col-6">
+               
+                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['catogory']; ?>" name="cid" readonly >
                 </div>
 
 
