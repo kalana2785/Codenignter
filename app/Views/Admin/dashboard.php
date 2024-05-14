@@ -66,13 +66,13 @@ $(document).on('click', '.view_btn', function () {
     });
  
 </script>
-<br><br><br><br><br><br>
+
 <main id="main" class="main">
 
 <?php
   if(session()->getFlashdata('status')){ ?>
    <div class="alert alert-success" role="alert">
-    <strong>Hello </strong> <?= session()->getFlashdata('status'); ?>
+    <strong></strong> <?= session()->getFlashdata('status'); ?>
  </div>
 <?php
   }
@@ -82,7 +82,7 @@ $(document).on('click', '.view_btn', function () {
 <?php
   if(session()->getFlashdata('statusd')){ ?>
    <div class="alert alert-danger" role="alert">
-    <strong>Hello </strong> <?= session()->getFlashdata('statusd'); ?>
+    <strong></strong> <?= session()->getFlashdata('statusd'); ?>
  </div>
 <?php
   }
@@ -92,13 +92,13 @@ $(document).on('click', '.view_btn', function () {
 <!-- Check if there is an error message and display it -->
      <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" onclick="showTable(1)">All</a>
+        <a class="nav-link active" onclick="showTable(1)">All-Items</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="showTable(2)">Sugical</a>
+        <a class="nav-link" onclick="showTable(2)">Surgical-Items</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="showTable(3)">General</a>
+        <a class="nav-link" onclick="showTable(3)">General-Items</a>
       </li>
     </ul>
 
@@ -108,20 +108,20 @@ $(document).on('click', '.view_btn', function () {
 <table class="table" name="All">
   <thead>
     <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Items Name</th>
-      <th scope="col">Catogory</th>
-      <th scope="col">Type Name</th>
-      <th scope="col">Avaliable Quntity</th>
-      <th scope="col">Status</th>
-      <th> </th>
+  
+    <th scope="col">Item Name</th>
+    <th scope="col">Category</th>
+    <th scope="col">Type</th>
+    <th scope="col">Available Quantity</th>
+    <th scope="col">Inventory Status</th>
+    <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <?php if ($dashboards):?>
         <?php foreach($dashboards as $row) : ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+              
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Category_Name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>  
@@ -141,7 +141,7 @@ $(document).on('click', '.view_btn', function () {
                 {?>
                                     
                 <div class="alert alert-danger" role="alert">
-                           Items in low stock
+                              Low Stock
                 </div>
                 <?php 
                     
@@ -153,7 +153,7 @@ $(document).on('click', '.view_btn', function () {
                     ?>
                                     
                    <div class="alert alert-warning" role="alert">
-                             Items in Emagancy Level
+                              Urgent Replenishment
                    </div>
                     <?php 
                 }
@@ -163,7 +163,7 @@ $(document).on('click', '.view_btn', function () {
                     ?>
                                     
                       <div class="alert alert-primary" role="alert">
-                               Items in Medium Level
+                             Moderate Stock
                         </div>
                              
                  
@@ -175,7 +175,7 @@ $(document).on('click', '.view_btn', function () {
                     ?>
                                     
                     <div class="alert alert-success" role="alert">
-                                Items in Safe Level
+                                Adequate Stock
                     </div>
                            
                
@@ -186,7 +186,7 @@ $(document).on('click', '.view_btn', function () {
 
                     ?>
                     <div class="alert alert-dark" role="alert">
-                             Items in OverStock
+                                Overstocked
                   </div>
 
                   <?php
@@ -227,8 +227,7 @@ $(document).on('click', '.view_btn', function () {
               <th scope="col">Id</th>
               <th scope="col">Items Name</th>
               <th scope="col">Type Name</th>
-              <th scope="col">SN number</th>
-              <th scope="col">Batch Number</th>
+              <th scope="col">BN Number</th>
               <th scope="col">Med Date</th>
               <th scope="col">Exp Date</th>
               <th scope="col">Quntity</th>
@@ -240,12 +239,9 @@ $(document).on('click', '.view_btn', function () {
             <?php if ($sugicals):?>
                 <?php foreach($sugicals as $row) : ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
+                      
                         <td><?php echo $row['item_name']; ?></td>
                         <td><?php echo $row['type_name']; ?></td>
-                     
-                        
-                     
                         <td><?php echo $row['quntity']; ?></td>
                         
                       <td>
@@ -272,7 +268,7 @@ $(document).on('click', '.view_btn', function () {
   
   <thead>
     <tr>
-      <th scope="col">Id</th>
+      
       <th scope="col">Items Name</th>
       <th scope="col">Type Name</th>
       <th scope="col">SN number</th>
@@ -286,11 +282,9 @@ $(document).on('click', '.view_btn', function () {
     <?php if ($general):?>
         <?php foreach($general as $row) : ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+                
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['type_name']; ?></td>
-        
-             
                 <td><?php echo $row['quntity']; ?></td>
                
             </tr>

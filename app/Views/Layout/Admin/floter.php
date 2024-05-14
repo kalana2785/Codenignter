@@ -16,12 +16,12 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="<?= base_url('Imanger/Add');?>">
-              <span>Add items</span>
+              <span>Add Items</span>
             </a>
           </li>
           <li>
             <a href="<?= base_url('Admin/Add-user');?>">
-              <i class="bi bi-circle"></i><span>Add user</span>
+              <span>Add User</span>
             </a>
           </li>
           
@@ -42,7 +42,7 @@
           </li>
         <li>
             <a a href="<?= base_url('Admin/Inreq');?>">
-              <i class="bi bi-circle"></i><span>Inventory Request</span>
+              <i class="bi bi-circle"></i><span>Inventory Request Table</span>
             </a>
           </li>
           <li>
@@ -52,7 +52,7 @@
           </li>
           <li>
             <a a href="<?= base_url('Admin/Repair');?>">
-              <i class="bi bi-circle"></i><span>Repair Table</span>
+              <i class="bi bi-circle"></i><span>Repair Management Table</span>
             </a>
           </li>
           <li>
@@ -63,26 +63,7 @@
         </ul>
       </li><!-- End Tables Nav -->
 
-  
 
-      <li class="nav-heading">Pages</li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= base_url('user/logout');?>">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Log out</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <!-- End Blank Page Nav -->
 
     </ul>
 
