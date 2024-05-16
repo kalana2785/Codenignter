@@ -15,7 +15,9 @@ class DashboardModel extends Model
        'type_name',
        'quntity',
        'Approval_status',
-       'Re_quntity',
+       'Demand_Status',
+       'Re_quntity'
+      
     
 
   

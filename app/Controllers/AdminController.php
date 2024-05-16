@@ -74,8 +74,13 @@ class AdminController extends BaseController
     public function Addreqtable()
     {
         $dashboardModel = new DashboardModel();
+        $usermodel= new UserModel();
       
-        $data['Inventory'] = $dashboardModel->where('Approval_status', 1)->findAll();
+        $data['Inventory'] = $dashboardModel->where('Demand_Status', 0)->findAll();
+        $Userid = session()->get('logged_user');
+       
+            
+        $data['userdata']=$usermodel->getlogindata($Userid);
         
         return view('Admin/Additem_req', $data);
     }
@@ -98,7 +103,7 @@ class AdminController extends BaseController
 
     $data =[
             
-        'Approval_status' => 2 
+        'Demand_Status' => 1
         
 
         
@@ -106,7 +111,8 @@ class AdminController extends BaseController
     $dashboardModel->update($id,$data);
     
     
-    return redirect()->back()->with('status', 'Item Successfully Add Demand Quntity');
+ 
+    return redirect()->to('/Admin')->with('status', 'Item Successfully Add Demand Quntity');
    }
 
 
@@ -200,7 +206,60 @@ class AdminController extends BaseController
         return view('Admin/Add_user',$data);
      }
 
-     
+      // view the add items form
+
+     public function Addinvitemsrequest()
+     {
+        $catogoryModel = new CategoryModel();
+        $usermodel= new UserModel(); 
+        $data['catogory'] = $catogoryModel->orderby('Category_Name', 'ASC')->findAll();
+   
+        $Userid = session()->get('logged_user');
+       
+            
+        $data['userdata']=$usermodel->getlogindata($Userid);
+ 
+        
+        return view('Admin/Add_items.php', $data);
+     }
+
+     // store new item
+
+     public function storeitems()
+     {
+        $dashboardModel = new DashboardModel();
+    
+        // Check the table items already exists
+        $existingItem = $dashboardModel->where([
+            'item_name' => $this->request->getPost('item_name'),
+            'catogory' => $this->request->getPost('ca')
+        ])->first();
+    
+        if ($existingItem) {
+            
+            return redirect()->back()->with('error', 'Item already exists.');
+        }
+    
+        
+        $data = [
+            'item_name' => $this->request->getPost('item_name'),
+            'catogory' => $this->request->getPost('ca'),
+            'type_name' => $this->request->getPost('ty'),
+           
+            
+        ];
+    
+        $dashboardModel->save($data);
+        return redirect('Admin/addreq')->with('status', 'Item has been inserted successfully. Please enter the Overstock Inventory Value.');
+     }
+
+
+  // view demand table
+
+
+
+
+
      
      public function saveuser()
      {

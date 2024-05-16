@@ -1,0 +1,30 @@
+CRITICAL - 2024-05-16 19:30:53 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "/dashboard" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/dashboard')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\AdminController.php(105): redirect('/dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->viewdemandform()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-16 19:31:26 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "/Admin" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Admin')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\AdminController.php(105): redirect('/Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->viewdemandform()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-16 19:31:50 --> CodeIgniter\HTTP\Exceptions\HTTPException: The route for "/Admin" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 62.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(62): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Admin')
+ 2 SYSTEMPATH\Common.php(864): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\AdminController.php(105): redirect('/Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->viewdemandform()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

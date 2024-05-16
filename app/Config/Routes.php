@@ -87,8 +87,15 @@ $routes->get('/generalim', 'imgeneralController::index' );
 
 $routes->get('/Admin', 'AdminController::index');
 
+$routes->get('Admin/Add', 'AdminController::Addinvitemsrequest');
+
 $routes->get('Admin/delete/(:num)','AdminController::delete/$1');
 
+$routes->post('Admin/Additems', 'AdminController::storeitems');
+
+
+
+$routes->get('Admin/requestdemand', 'AdminController::demandtable');
 $routes->get('Admin/Add-user', 'AdminController::Adduser');
 
 $routes->get('Admin/Add-type', 'AdminController::Addtype');
