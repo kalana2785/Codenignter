@@ -51,6 +51,7 @@
       
       <th scope="col">Items Name</th>
       <th scope="col">BN Number</th>
+      <th scope="col">SN Number</th>
       <th scope="col">Request  Quantity</th>
       <th> </th>
     </tr>
@@ -60,6 +61,7 @@
         <tr>
             <td><?= $dashboard['item_name'] ?></td>
             <td><?= $dashboard['BN_number'] ?></td>
+            <td><?= $dashboard['Sn_number'] ?></td>
             <td><?= $dashboard['In_quntity'] ?></td>
         </tr>
     <?php endforeach; ?>

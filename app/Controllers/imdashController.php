@@ -269,11 +269,12 @@ public function  storegeneralinventory()
         'W_start' => $this->request->getPost('ws'),
         'W_end' => $this->request->getPost('we'),
         'In_quntity' => 1,
+        'C_id' => $this->request->getPost('catogory'),
         'Approval_status' => 1
     ];
     $inventoryModel->save($data);
 
-    return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');
+    return redirect()->to(base_url('/Imanger/Additemreq')) ->with('status', 'Add Item inventory Request Successfully');
     
 }
 

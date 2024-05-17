@@ -4,13 +4,15 @@
 <head>
 
  <title>Add Inventory-General</title>
- <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
+ <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<script src="assets/js/main.js"></script>
+<script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 
 </head>
 
@@ -24,6 +26,19 @@
 
 
 <main id="main" class="main">
+
+
+
+<div class="pagetitle">
+      <h1>Add Inventory</h1>
+      <nav>
+        <ol class="breadcrumb">
+        
+      
+          
+        </ol>
+      </nav>
+</div>
  
 <!-- Check if there is an error message and display it -->
 <?php if (session()->has('error')): ?>
@@ -36,19 +51,18 @@
         
 
          
-          <div class="row mb-3">
-
-          
-                  
+              <div class="row mb-3">
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="item_id" value="<?= $items['id']; ?>" readonly hidden>
                   </div>
               </div>
-
+              <div class="row mb-3">
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="catogory" value="<?= $items['catogory']; ?>" readonly hidden>
+                  </div>
+              </div>
 
                  <div class="row mb-3">
-
-
                   <label for="itemname" class="col-sm-2 col-form-label">Item Name</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="item_name" value="<?= $items['item_name']; ?>" readonly>
@@ -82,7 +96,7 @@
 
               
               <div class="text-center">
-                  <input type="submit" class="btn btn-primary" value="Add inventory">
+                  <input type="submit" class="btn btn-primary" value="Add">
                  
                 </div>
            </form>

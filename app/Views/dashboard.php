@@ -155,6 +155,7 @@
                     <tr>
                         <th scope="col">Items Name</th>
                         <th scope="col">Type Name</th>
+                        <th scope="col">Actual Quantity</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -164,8 +165,9 @@
                             <tr>
                                 <td><?= $row['item_name']; ?></td>
                                 <td><?= $row['type_name']; ?></td>
+                                <td><?= $row['quntity']; ?></td>
                                 <td>
-                                    <a href="<?= base_url('Imanger/addinventoryg/' . $row['id']); ?>" class="btn btn-primary btn-sm">Drop Inventory</a>
+                                    <a href="<?= base_url('Imanger/addinventoryg/' . $row['id']); ?>" class="btn btn-primary btn-sm">Add Inventory</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -219,7 +221,8 @@
                         <?php foreach ($generalinventory as $row): ?>
                             <tr>
                                 <td><?= $row['item_name']; ?></td>
-                                <td><?= $row['type_name']; ?></td>
+                                <td><?= $row['Sn_number']; ?></td>
+                           
                                 <td>
                                     <!-- Calculate warranty period -->
                                     <?php
