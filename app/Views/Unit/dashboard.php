@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<title>My Dashboard</title>
+<title>Unit Wise Dashboard</title>
 <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
@@ -38,7 +38,7 @@
 
 <!-- veiw pop up msg-->
 
-<br><br><br><br><br><br>
+
 <main id="main" class="main">
 <?php
   if(session()->getFlashdata('status')){ ?>
@@ -54,7 +54,7 @@
     <a class="nav-link active" onclick="showTable(1)">All</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" onclick="showTable(2)">Sugical</a>
+    <a class="nav-link" onclick="showTable(2)">Surgical</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" onclick="showTable(3)">General</a>
@@ -81,7 +81,7 @@
     <tr>
     
       <th scope="col">Items Name</th>
-      <th scope="col">Catogory</th>
+      <th scope="col">Category</th>
       <th>Sn number/Bn number</th>
       <th scope="col">Avalible Quntity</th>
       <th scope="col">Issue Update</th>

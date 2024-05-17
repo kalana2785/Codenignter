@@ -3,8 +3,8 @@
 
 <head>
 
- <title>Repair Request</title>
- <title>Req Quntity</title>
+
+ <title></title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">

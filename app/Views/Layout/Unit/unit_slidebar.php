@@ -21,14 +21,6 @@
             </a>
           </li>
 
-
-
-
-          <li>
-            <a href="<?= base_url('unit/repairtable');?>">
-              <span>Request Repair</span>
-            </a>
-          </li>
       
         </ul>
       </li>
@@ -38,31 +30,18 @@
         <i class="bi bi-table"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-         
+        <li>
+            <a href="<?= base_url('unit/repairtable');?>">
+              <span>Repair Table</span>
+            </a>
+          </li>
         </ul>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-file-earmark"></i><span>Documents</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-       
-        </ul>
-      </li>
+   
 
 
 
-      <li class="nav-heading">Other</li>
-
-
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= base_url('user/logout');?>">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Log out</span>
-        </a>
-      </li>
 
   
 

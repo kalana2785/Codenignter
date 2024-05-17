@@ -168,6 +168,7 @@ public function repairtab()
 
     $repairrequest = new RepairModel(); 
     $repairstage = new RepairstageModel();
+    $usermodel= new UserModel();
     
     $userIds = session()->get('logged_user');
     
@@ -176,7 +177,11 @@ public function repairtab()
                ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
                 ->whereIn('Unit_id', $userIds)
                 ->findAll();
-
+    $Unituserid = session()->get('login_user');
+       
+            
+   $this->userData =$usermodel->getlogindata($Unituserid);
+   $data['unituserdata'] = $this->userData;
     
     return view('Unit/repairreq_table', $data);
     
