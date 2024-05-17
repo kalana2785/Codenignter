@@ -3,17 +3,37 @@
 
 <head>
 
- <title>Add Inventory-Sugical</title>
- <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
+ <title>Admin Add Inventory</title>
+ <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<script src="assets/js/main.js"></script>
+<script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 
 </head>
 
+<?= $this->include('Layout/Admin/header.php') ?>
+
+<?= $this->include('Layout/Admin/floter.php') ?>
+
+
+
+<main id="main" class="main">
+
+
+<div class="pagetitle">
+      <h1>Add Inventory </h1>
+      <nav>
+        <ol class="breadcrumb">
+          
+          
+        </ol>
+      </nav>
+</div>
 
 <body>
 
@@ -22,7 +42,7 @@
 
 
 
-<main id="main" class="main">
+
  
 <!-- Check if there is an error message and display it -->
 <?php if (session()->has('error')): ?>
@@ -48,7 +68,7 @@
 
                   <div class="col-sm-10">
         
-                  <input type="text" class="form-control" id="inputText" name="Inv_id" value="<?= $Inventory['Inventory_id']; ?>" readonly >
+                  <input type="text" class="form-control" id="inputText" name="Inv_id" value="<?= $Inventory['Inventory_id']; ?>" readonly hidden >
                   </div>
 
 
@@ -119,7 +139,7 @@
 
               
               <div class="text-center">
-                  <input type="submit" class="btn btn-primary" value="Approve">
+                  <input type="submit" class="btn btn-primary" value="Add">
                  
                 </div>
            </form>

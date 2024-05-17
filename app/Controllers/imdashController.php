@@ -213,6 +213,7 @@ public function  insertinventory($id= null)
         'Med_date' => $this->request->getPost('Med'),
         'Exp_date' => $this->request->getPost('Exp'),
         'In_quntity' => $this->request->getPost('uq'),
+        'C_id' => $this->request->getPost('catogory'),
         'Approval_status' => 1
     ];
     $inventoryModel->save($data);

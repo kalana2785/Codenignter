@@ -11,7 +11,7 @@ class InventoryModel extends Model
    protected $allowedFields =
    [
        'item_id',
-        'C_id',
+       'C_id',
        'Sn_number',
        'BN_number',
        'Med_date',

@@ -140,7 +140,6 @@ class AdminController extends BaseController
           return view('Admin/inventroy_reqview',$data);
 
 
-
     }
 
     // update inventory(after approval inventory req)
