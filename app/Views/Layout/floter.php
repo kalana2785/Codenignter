@@ -14,11 +14,7 @@
         <i class="bi bi-file-earmark-plus-fill"></i><span>Add Section</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="<?= base_url('Imanger/Add');?>">
-              <span>Add items</span>
-            </a>
-          </li>
+        
           <li>
             <a href="<?= base_url('Imanger/Purchmentview');?>">
               <span>Add Purchcement</span>
@@ -48,12 +44,12 @@
           </li>
           <li>
              <a href="<?= base_url('Imanger/Requset');?>">
-              <i class="bi bi-circle"></i><span>Unit Requset Tables</span>
+              <i class="bi bi-circle"></i><span>Unit Inventory Request Table</span>
             </a>
           </li>
           <li>
               <a href="<?= base_url('Imanger/Requsetre');?>">
-              <i class="bi bi-circle"></i><span>Request Repair</span>
+              <i class="bi bi-circle"></i><span>Repair Request Table</span>
             </a>
           </li>
           <li>
@@ -66,15 +62,6 @@
 
   
 
-      <li class="nav-heading">Other</li>
-
-    
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= base_url('user/logout');?>">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Log out</span>
-        </a>
-      </li><!-- End Login Page Nav -->
 
       
     </ul>

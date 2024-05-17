@@ -5,12 +5,7 @@
 
  <title>Request Table-Distribution</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
 <link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
 <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -34,6 +29,18 @@
 
 
 <main id="main" class="main">
+
+<div class="pagetitle">
+      <h1>Inventory Request Table</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
+          <li class="breadcrumb-item active">Unit Inventory Request Table</li>
+          
+        </ol>
+      </nav>
+</div>
+
  
 <!-- Check if there is an error message and display it -->
 <?php if (session()->has('error')): ?>
@@ -42,56 +49,47 @@
     </div>
 <?php endif; ?>
 
-
-<div id="table1" class="table-container active-table" >
-<table class="table" name="All">
-  <thead>
-    <tr>
-      
-      <th scope="col">Items Name</th>
-      <th scope="col">Requsets Unit</th>
-      
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php foreach ($request as $row): ?>
+<div id="table1" class="table-container active-table">
+    <table class="table" name="All">
+        <thead>
             <tr>
-               
-                <td><?php echo $row['item_name']; ?></td>
-                <td><?php echo $row['Unit_name']; ?></td>
-                <td><?php if( $row['status'] ==1){?>
-              
-                  <div class="alert alert-warning" role="alert">
-                   
-                         No  Send the Approval
-                  </div>      
-
-              <?php } ?>
-              
-                  <?php if( $row['status'] ==2){?>
-                    <div class="alert alert-warning" role="alert">
-                      
-                      Send the Approval
-                </div>   
-                <?php } ?>
-              </td>
-                <td>
-                <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no'] . '/' .$row['item_id']); ?>" class="btn btn-primary btn-sm">View</a>
-                      
-
-                        
-                        
-                      </a>
-
-
-
-                  </td>
+                <th scope="col">Items Name</th>
+                <th scope="col">Requests Unit</th>
+                <th></th>
             </tr>
-        <?php endforeach; ?>
-</tbody>
-</table>
+        </thead>
+        <tbody>
+            <?php if ($request): ?>
+                <?php foreach ($request as $row): ?>
+                    <tr>
+                        <td><?php echo $row['item_name']; ?></td>
+                        <td><?php echo $row['Unit_name']; ?></td>
+                        <td>
+                            <?php if ($row['status'] == 1): ?>
+                                <div class="alert alert-warning" role="alert">
+                                    No  Send the Approval
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($row['status'] == 2): ?>
+                                <div class="alert alert-warning" role="alert">
+                                    Send the Approval
+                                </div>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no'] . '/' . $row['item_id']); ?>" class="btn btn-primary btn-sm">View</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="3">No Request available</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
 </div>
+
 
 </main>
 </body>
