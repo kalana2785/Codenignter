@@ -201,8 +201,19 @@ class AdminController extends BaseController
      {
         $usermodel = new UserModel();
         $usergroup = new UsergroupModel();
+        $unitmodel = new UnitModel();
         $usermodel->join('user_group','user.usergroup_id =user_group.ugroup_id');
-        $data['user'] = $usergroup->orderby('Usergroup_name','ASC')->findAll();
+        // not filter Admin user role
+        $data['user'] = $usergroup->where('ugroup_id !=', 1)->orderBy('Usergroup_name', 'ASC')->findAll();
+
+        $data['unit'] = $unitmodel->orderby('Unit_name','ASC')->findAll();
+
+
+
+        $Userid = session()->get('logged_user');
+       
+            
+        $data['userdata']=$usermodel->getlogindata($Userid);   
         return view('Admin/Add_user',$data);
      }
 
@@ -265,16 +276,27 @@ class AdminController extends BaseController
      {
        
         $usermodel = new UserModel();
+
+
+        $email = $this->request->getPost('email');
+
+        // Validate the email address
+       
+        
+    
         
         $existinguser = $usermodel->where([
-            'Email' => $this->request->getPost('email')
-            
+            'Email' => $email
+         
         ])->first();
     
         if ($existinguser) {
             
             return redirect()->back()->with('error', 'User already exists.');
         }
+       
+
+
         $password = $this->request->getPost('password');
 
         if (is_string($password)) {
@@ -286,7 +308,8 @@ class AdminController extends BaseController
             'Username' => $this->request->getPost('username'),
             'Email' => $this->request->getPost('email'),
             'Password' =>$hashedPassword,
-            'usergroup_id' => $this->request->getPost('ug')
+            'usergroup_id' => $this->request->getPost('ug'),
+            'Unit_id' => $this->request->getPost('unit')
             
         ];
     
@@ -526,10 +549,13 @@ public function Addunit()
         
        
     }
+
+   // repair request display table  
   public function Reqreptable()
   {
     $repairrequest = new RepairModel(); 
     $repairstage = new RepairstageModel();
+    $usermodel = new UserModel();
 
     $data['request'] = $repairrequest
     ->join('items', 'repair.item_id = items.id')
@@ -538,12 +564,17 @@ public function Addunit()
     ->findAll();
 
 
+    $Userid = session()->get('logged_user');
+       
+            
+    $data['userdata']=$usermodel->getlogindata($Userid);   
 
 
       return view('Admin/Adminrepair_table', $data);
 
 
   }
+  
 
   public function Requestrepiritems($id = null)
 {

@@ -46,7 +46,7 @@ $(document).on('click', '.view_btn', function () {
       var categoryName = $(this).closest('tr').find('td:eq(2)').text();
       var typeName = $(this).closest('tr').find('td:eq(3)').text();
       var quantity = $(this).closest('tr').find('td:eq(4)').text();
-      var date = $(this).closest('tr').find('td:eq(5)').text();
+    
 
       // Build the content for the modal
       var modalContent = `
@@ -55,7 +55,7 @@ $(document).on('click', '.view_btn', function () {
         <p><strong>Category Name:</strong> ${categoryName}</p>
         <p><strong>Type Name:</strong> ${typeName}</p>
         <p><strong>Quantity:</strong> ${quantity}</p>
-        <p><strong>Date:</strong> ${date}</p>
+    
       `;
 
       // Set the content in the modal
@@ -194,15 +194,11 @@ $(document).on('click', '.view_btn', function () {
                 
                 
                 ?></td>
+
                 <td>
 
-                <a href="<?php echo base_url('Imanger/edit/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
                
-
-                 
-                
-                </a>
-                <a href="#"  class="btn btn-info view_btn">View</a>
+            
                 
                 <a href="<?php echo base_url('Admin/delete/' . $row['id']); ?>"  class="btn btn-danger btn-sm">Delete
                

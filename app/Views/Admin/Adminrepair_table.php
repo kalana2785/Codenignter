@@ -3,24 +3,53 @@
 
 <head>
 
- <title>Add Items</title>
+ <title>Unit Repir Request Table</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
- <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css');?>" rel="stylesheet">
+<link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+
+<script src="assets/js/main.js"></script>
+
 <script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
+
+
+<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
+
+<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 </head>
+
 
 <body>
 
+<?= $this->include('Layout/Admin/header.php') ?>
+
+<?= $this->include('Layout/Admin/floter.php') ?>
 
 
 
 <main id="main" class="main">
+
+
+<div class="pagetitle">
+      <h1>Repair Management Table</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Request Tables</a></li>
+          <li class="breadcrumb-item active">Repair Management Table</li>
+          
+        </ol>
+      </nav>
+</div>
+
+
+<body>
  
 <!-- Check if there is an error message and display it -->
 <?php if (session()->has('error')): ?>
@@ -41,6 +70,7 @@
 </tr>
 </thead>
 <tbody>
+    <?php if ($request): ?>
     <?php foreach ($request as $row): ?>
     <tr>
         <td><?php echo $row['item_name']; ?></td>
@@ -77,7 +107,11 @@
         </td>
     </tr>
     <?php endforeach; ?>
-
+    <?php else: ?>
+                <tr>
+                    <td colspan="3">No Repair available</td>
+                </tr>
+            <?php endif; ?>
     
 </tbody>
 

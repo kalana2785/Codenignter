@@ -69,12 +69,13 @@
     <tr>
       
       <th scope="col">Items Name</th>
-    
+     
       
       <th> </th>
     </tr>
   </thead>
   <tbody>
+  <?php if ($Inventory): ?>
   <?php foreach ($Inventory as $row): ?>
 
               <tr>
@@ -97,6 +98,11 @@
              </tr>
           
 <?php endforeach; ?>
+<?php else: ?>
+                <tr>
+                    <td colspan="3">No Data available</td>
+                </tr>
+<?php endif; ?>
 </tbody>
 </table>
 </div>
