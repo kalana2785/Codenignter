@@ -179,8 +179,8 @@ public function actionquntity()
  
 }
 
-// items update drugs edit form
-public function  updatetotal($id= null)
+//   items add the inventory
+public function  insertinventory($id= null)
 {
 
     $dashboardModel = new DashboardModel();
@@ -220,7 +220,7 @@ public function  updatetotal($id= null)
   
 
 
-    return redirect()->to(base_url('dashboard')) ->with('status', 'Add Item inventory Request Successfully');
+    return redirect()->to(base_url('/Imanger/Additemreq')) ->with('status', 'Add Item inventory Request Successfully');
 }
 
 // display each general item  form from inventory
