@@ -100,12 +100,131 @@ $(document).on('click', '.view_btn', function () {
       <li class="nav-item">
         <a class="nav-link" onclick="showTable(3)">General-Items</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="showTable(4)">Inventory Level</a>
+      </li>
     </ul>
 
 
 
 <div id="table1" class="table-container active-table" >
 <table class="table" name="All">
+  <thead>
+    <tr>
+  
+    <th scope="col">Item Name</th>
+    <th scope="col">Category</th>
+    <th scope="col">Type</th>
+    <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if ($dashboards):?>
+        <?php foreach($dashboards as $row) : ?>
+            <tr>
+              
+                <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['Category_Name']; ?></td>
+                <td><?php echo $row['type_name']; ?></td>  
+              
+                <td>
+
+               
+            
+                
+                <a href="<?php echo base_url('Admin/delete/' . $row['id']); ?>"  class="btn btn-danger btn-sm">Delete
+               
+
+                 
+                
+               </a>
+                </td>
+                
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
+</tbody>
+</table>
+</div>
+
+<div id="table2" class="table-container">
+<!--sugical items-->
+        <table class="table" name="Sugical">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Items Name</th>
+              <th scope="col">Type Name</th>
+              <th scope="col">BN Number</th>
+              <th scope="col">Med Date</th>
+              <th scope="col">Exp Date</th>
+              <th scope="col">Quntity</th>
+              <th scope="col"></th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php if ($sugicals):?>
+                <?php foreach($sugicals as $row) : ?>
+                    <tr>
+                      
+                        <td><?php echo $row['item_name']; ?></td>
+                        <td><?php echo $row['type_name']; ?></td>
+                        <td><?php echo $row['quntity']; ?></td>
+                        
+                      <td>
+                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
+                      
+
+                        
+                        
+                      </a>
+
+
+
+                      </td>
+                    </tr>
+                <?php endforeach;?> 
+            <?php endif;?>
+        </tbody>
+        </table>
+</div>
+
+<!-- General items-->
+<div id="table3" class="table-container">
+<table class="table" name="General">
+  
+  <thead>
+    <tr>
+      
+      <th scope="col">Items Name</th>
+      <th scope="col">Type Name</th>
+      <th scope="col">SN number</th>
+      <th scope="col">Warranty Period </th>
+      <th scope="col">Quntity</th>
+      <th scope="col"></th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php if ($general):?>
+        <?php foreach($general as $row) : ?>
+            <tr>
+                
+                <td><?php echo $row['item_name']; ?></td>
+                <td><?php echo $row['type_name']; ?></td>
+                <td><?php echo $row['quntity']; ?></td>
+               
+            </tr>
+        <?php endforeach;?> 
+    <?php endif;?>
+</tbody>
+</table>
+</div>
+
+
+<div id="table4" class="table-container" >
+<table class="table" name="level">
   <thead>
     <tr>
   
@@ -215,80 +334,7 @@ $(document).on('click', '.view_btn', function () {
 </table>
 </div>
 
-<div id="table2" class="table-container">
-<!--sugical items-->
-        <table class="table" name="Sugical">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Items Name</th>
-              <th scope="col">Type Name</th>
-              <th scope="col">BN Number</th>
-              <th scope="col">Med Date</th>
-              <th scope="col">Exp Date</th>
-              <th scope="col">Quntity</th>
-              <th scope="col"></th>
-              <th> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php if ($sugicals):?>
-                <?php foreach($sugicals as $row) : ?>
-                    <tr>
-                      
-                        <td><?php echo $row['item_name']; ?></td>
-                        <td><?php echo $row['type_name']; ?></td>
-                        <td><?php echo $row['quntity']; ?></td>
-                        
-                      <td>
-                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
-                      
 
-                        
-                        
-                      </a>
-
-
-
-                      </td>
-                    </tr>
-                <?php endforeach;?> 
-            <?php endif;?>
-        </tbody>
-        </table>
-</div>
-
-<!-- General items-->
-<div id="table3" class="table-container">
-<table class="table" name="General">
-  
-  <thead>
-    <tr>
-      
-      <th scope="col">Items Name</th>
-      <th scope="col">Type Name</th>
-      <th scope="col">SN number</th>
-      <th scope="col">Warranty Period </th>
-      <th scope="col">Quntity</th>
-      <th scope="col"></th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php if ($general):?>
-        <?php foreach($general as $row) : ?>
-            <tr>
-                
-                <td><?php echo $row['item_name']; ?></td>
-                <td><?php echo $row['type_name']; ?></td>
-                <td><?php echo $row['quntity']; ?></td>
-               
-            </tr>
-        <?php endforeach;?> 
-    <?php endif;?>
-</tbody>
-</table>
-</div>
 
 <!-- view Modal  -->
 <div class="modal fade" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
