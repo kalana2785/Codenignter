@@ -88,6 +88,9 @@
             <li class="nav-item">
                 <a class="nav-link" onclick="showTable(5)">General-inventory</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="showTable(6)">Inventory level</a>
+            </li>
         </ul>
 
 
@@ -98,8 +101,8 @@
                         <th scope="col">Item Name</th>
                         <th scope="col">Category</th>
                         <th scope="col">Type Name</th>
-                        <th scope="col">Status</th>
-                        <th></th>
+                       
+                      
                     </tr>
                 </thead>
                 <tbody>
@@ -109,25 +112,8 @@
                                 <td><?= $row['item_name']; ?></td>
                                 <td><?= $row['Category_Name']; ?></td>
                                 <td><?= $row['type_name']; ?></td>
-                                <td>
-                                    <?php
-                                        $Actual_quntity = $row['quntity'];
-                                        $Total_quntity = $row['overstock_value'];
-                                        $low_capacity = $Actual_quntity / $Total_quntity * 100;
-                                    ?>
-                                    <div class="alert 
-                                        <?= $low_capacity <= 10 ? 'alert-danger' : 
-                                            ($low_capacity <= 30 ? 'alert-warning' : 
-                                            ($low_capacity <= 50 ? 'alert-primary' : 
-                                            ($low_capacity <= 90 ? 'alert-success' : 'alert-dark'))) ?>" role="alert">
-                                        <?= $low_capacity <= 10 ? 'Items in low stock' : 
-                                            ($low_capacity <= 30 ? 'Items in Emergency Level' : 
-                                            ($low_capacity <= 50 ? 'Items in Medium Level' : 
-                                            ($low_capacity <= 90 ? 'Items in Safe Level' : 'Items in OverStock'))) ?>
-                                    </div>
-                                </td>
-                                <td>
-                                    <a href="#" class="btn btn-primary view_btn">View</a>
+                               
+                                    
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -248,6 +234,85 @@
                 </tbody>
             </table>
         </div>
+
+      <!--Inventory Level-->
+
+        <div id="table6" class="table-container ">
+            <table class="table" name="All">
+                <thead>
+                    <tr>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Type Name</th>
+                        <th scope="col">Status</th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if ($dashboards): ?>
+                        <?php foreach($dashboards as $row): ?>
+                            <tr>
+                                <td><?= $row['item_name']; ?></td>
+                                <td><?= $row['Category_Name']; ?></td>
+                                <td><?= $row['type_name']; ?></td>
+                                <td>
+                                    <?php
+                                        $Actual_quntity = $row['quntity'];
+                                        $Total_quntity = $row['overstock_value'];
+                                        $low_capacity = $Actual_quntity / $Total_quntity * 100;
+                                    ?>
+                                
+                                                <?php 
+                                                    if($low_capacity <= 10) {
+                                                ?>
+                                                        <div class="alert alert-danger" role="alert">
+                                                            Low Stock
+                                                        </div>
+                                                <?php 
+                                                    } elseif($low_capacity <= 30) {
+                                                ?>
+                                                        <div class="alert alert-warning" role="alert">
+                                                            Urgent Replenishment
+                                                        </div>
+                                                <?php 
+                                                    } elseif($low_capacity <= 50) {
+                                                ?>
+                                                        <div class="alert alert-primary" role="alert">
+                                                            Moderate Stock
+                                                        </div>
+                                                <?php 
+                                                    } elseif($low_capacity <= 90) {
+                                                ?>
+                                                        <div class="alert alert-success" role="alert">
+                                                            Adequate Stock
+                                                        </div>
+                                                <?php 
+                                                    } else {
+                                                ?>
+                                                        <div class="alert alert-dark" role="alert">
+                                                            Overstocked
+                                                        </div>
+                                                <?php 
+                                                    }
+                                                ?>
+                                            
+
+                                </td>
+                               
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+
+
+
 
 <!-- View Modal -->
 <div class="modal fade" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
