@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UnitModel extends Model
 {
    protected $table ='unit';
-   protected $primaryKey ='Unit_ido';
+   protected $primaryKey ='Unit_id';
    protected $allowedFields =
    [
  
