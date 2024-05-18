@@ -85,7 +85,7 @@
                   </div>
                 </div>
    
-                <div class="row mb-3" id="additionalInputRow" style="display:none;">
+                <div class="row mb-3" id="additionalInputRow" >
 
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Request Quntity</label>
@@ -141,16 +141,7 @@
                         $('#ty').html(html);
 
                         // Check if the selected category value is 1
-                        if (Cid == 1) {
-                           
-                            $('#additionalInputRow').show();
-                            $('#generalItems').hide();
-                        } if(Cid == 2) {
-                           
-                           $('#generalItems').show(); 
-                            $('#additionalInputRow').hide();
-                           
-                        }
+                     
                        
                     }
                 });

@@ -1,0 +1,35 @@
+CRITICAL - 2024-05-18 08:19:47 --> TypeError: App\Controllers\AdminController::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\AdminController.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-18 08:24:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Unit/req.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Unit/req.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/req.php', [], true)
+ 3 APPPATH\Controllers\UnitController.php(88): view('Unit/req.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->req()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-18 08:25:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Unit/req.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Unit/req.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Unit/req.php', [], true)
+ 3 APPPATH\Controllers\UnitController.php(88): view('Unit/req.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UnitController->req()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UnitController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-18 09:09:29 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\imdashController.php on line 368.
+ 1 APPPATH\Controllers\imdashController.php(368): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Controllers\\imdashController.php', 368)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\imdashController->updaterequestgeneral('3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\imdashController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

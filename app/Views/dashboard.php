@@ -39,8 +39,10 @@
     </style>
 </head>
 <body>
-    <?= $this->include('Layout/header.php') ?>
-    <?= $this->include('Layout/floter.php') ?>
+ 
+
+<?= $this->include('Layout/header.php') ?>
+<?= $this->include('Layout/floter.php') ?>
 
     <script>
         $(document).on('click', '.view_btn', function () {

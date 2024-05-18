@@ -48,7 +48,7 @@ $routes->put('Imanger/updatet/(:num)','imdashController::insertinventory/$1');
 
 $routes->get('Imanger/Requset', 'imdashController::Requesttable' );
 $routes->get('Imanger/requestitems/(:num)/(:num)', 'imdashController::Requestitems/$1/$2' );
-$routes->put('Imanger/reupdate/(:num)', 'ImdashController::updaterequest/$1');
+$routes->put('Imanger/reupdate/(:num)', 'ImdashController::updaterequestgeneral/$1');
 $routes->get('Imanger/Requsetre', 'imdashController::Requestrepairtable' );// repair
 $routes->get('Imanger/requestrepair/(:num)', 'imdashController::Requestrepiritems/$1' );
 $routes->put('Imanger/repairupdate/(:num)', 'ImdashController::repairupdate/$1');
@@ -151,6 +151,5 @@ $routes->get('unit/repairtable', 'UnitController::repairtab');
 $routes->get('unit/reqre/(:num)', 'UnitController::reqre/$1');
 $routes->post('/unit/requestre', 'UnitController::requestre');
 $routes->get('unit/requestrepair/(:num)', 'UnitController::Requestrepiritems/$1' );
-
-
+$routes->get('unit/requesttable', 'UnitController::requesttable');
 

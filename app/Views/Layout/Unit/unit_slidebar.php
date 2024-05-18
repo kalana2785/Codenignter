@@ -35,6 +35,12 @@
               <span>Repair Table</span>
             </a>
           </li>
+          <li>
+            <a href="<?= base_url('unit/requesttable');?>">
+              <span>Item Request Table</span>
+            </a>
+          </li>
+
         </ul>
       </li>
 

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-
+use App\Models\AdminitemrequestModel;
 use App\Models\DashboardModel;
 use App\Models\CategoryModel;
 use App\Models\DemandModel;
@@ -288,11 +288,19 @@ public function  storegeneralinventory()
 public function Requesttable ()
 {
     $unitrequest = new UnitrequestModel();
-    $data['request'] = $unitrequest
-    ->join('items', 'unit_request.item_id = items.id')
-    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
-    ->findAll();
+    $data['requestgeneral'] = $unitrequest
+            ->join('items', 'unit_request.item_id = items.id')
+            ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+            ->where('items.catogory', 2)
+            ->findAll();
 
+
+ $data['requestsugical'] = $unitrequest
+            ->join('items', 'unit_request.item_id = items.id')
+            ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+            ->where('items.catogory', 1)
+            ->findAll();
+        
     
     $data['userdata'] = $this->userData;
     return view('iManger/req_table', $data);
@@ -330,16 +338,11 @@ public function Requestitems($id ,$itemId )
     ->find($id);
  
         
-    $data['inventory'] = $inventoryModel
-                        ->where('inventory_items.item_id', $itemId)
-                        ->orderBy('BN_number', 'ASC')
-                        ->findAll();
-                    
-
- $data['Snnumber'] = $inventoryModel
-                        ->where('inventory_items.item_id', $itemId)
-                        ->orderBy('Sn_number', 'ASC')
-                        ->findAll();
+    $data['Snnumber'] = $inventoryModel
+                    ->where('inventory_items.item_id', $itemId)
+                    ->where('inventory_items.Dis_status', 0)
+                    ->orderBy('Sn_number', 'ASC')
+                    ->findAll();
 
  
     $data['userdata'] = $this->userData;
@@ -348,26 +351,46 @@ public function Requestitems($id ,$itemId )
     return view('iManger/view_request', $data);
 }
 
+// general items request for inventory manger
 
-
-public function updaterequest($reqNo)
+public function updaterequestgeneral($reqNo)
 {
     $unitrequest = new UnitrequestModel();
-    if(  $this->request->getPost('Avqu')<=  $this->request->getPost('AddQu'))
-    {
-        return redirect()->back()->with('error', 'Quntity high please reduces.');
-    }
-    
+    $inventoryModel = new InventoryModel();
+    $adminapprovalModel= new AdminitemrequestModel();
+ 
+    $data =[
+        'item_id' => $this->request->getPost('id'),
+        'SN_number' => $this->request->getPost('itemboxname'),
+        
+        
+    ];
+    $adminapprovalModel->save($data);
+
     $data =[
         'itembox_name' => $this->request->getPost('itemboxname'),
+        'req_quntity' => $this->request->getPost('req_quntity')-1,
         'ima_quntity' => $this->request->getPost('AddQu'),
         'status' => 2
         
     ];
     $unitrequest->update($reqNo,$data);
+    $sn = $this->request->getPost('itemboxname');
+
+    $data =[
+        'Dis_status' => 1
+      
+        
+    ];
+    $inventoryModel->update($sn,$data);
+    
+
+
     
     return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
 }
+
+
 
 
 public function Requestrepairtable()

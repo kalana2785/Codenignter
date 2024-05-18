@@ -19,7 +19,8 @@ class InventoryModel extends Model
        'W_start',
        'W_end',
        'In_quntity',
-       'Approval_status'
+       'Approval_status',
+       'Dis_status'
 
   
 

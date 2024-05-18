@@ -59,8 +59,8 @@
             </tr>
         </thead>
         <tbody>
-            <?php if ($request): ?>
-                <?php foreach ($request as $row): ?>
+         
+                <?php foreach ($requestgeneral as $row): ?>
                     <tr>
                         <td><?php echo $row['item_name']; ?></td>
                         <td><?php echo $row['Unit_name']; ?></td>
@@ -71,22 +71,49 @@
                                 </div>
                             <?php endif; ?>
                             <?php if ($row['status'] == 2): ?>
-                                <div class="alert alert-warning" role="alert">
-                                    Send the Approval
+                                <div class="alert alert-info" role="alert">
+                                    Send Admin Approval
                                 </div>
                             <?php endif; ?>
                         </td>
+                        <?php if ($row['status'] == 1): ?>
                         <td>
-                            <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no'] . '/' . $row['item_id']); ?>" class="btn btn-primary btn-sm">View</a>
+                            <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no'] . '/' . $row['item_id']); ?>" class="btn btn-primary btn-sm">Send Approval</a>
                         </td>
+                        <?php endif; ?>
                     </tr>
                 <?php endforeach; ?>
-            <?php else: ?>
-                <tr>
-                    <td colspan="3">No Request available</td>
-                </tr>
-            <?php endif; ?>
+         
         </tbody>
+        <tbody>
+          
+                <?php foreach ($requestsugical as $row): ?>
+                    <tr>
+                        <td><?php echo $row['item_name']; ?></td>
+                        <td><?php echo $row['Unit_name']; ?></td>
+                        <td>
+                            <?php if ($row['status'] == 1): ?>
+                                <div class="alert alert-warning" role="alert">
+                                    No  Send the Approval
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($row['status'] == 2): ?>
+                                <div class="alert alert-info" role="alert">
+                                    Send Admin Approval
+                                </div>
+                            <?php endif; ?>
+                        </td>
+                        <?php if ($row['status'] == 1): ?>
+                        <td> 
+                            <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no'] . '/' . $row['item_id']); ?>" class="btn btn-primary btn-sm">Send Approval</a>
+                        </td>
+                        <?php endif; ?>
+                    </tr>
+                <?php endforeach; ?>
+         
+        </tbody>
+
+
     </table>
 </div>
 
