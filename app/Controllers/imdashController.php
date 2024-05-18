@@ -326,7 +326,7 @@ public function Additemsrequesttable()
 
 
 
-// apper each request items details
+// apper each general request items details
 public function Requestitems($id ,$itemId )
 {
     $unitrequest = new UnitrequestModel();
@@ -376,19 +376,91 @@ public function updaterequestgeneral($reqNo)
     ];
     $unitrequest->update($reqNo,$data);
     $sn = $this->request->getPost('itemboxname');
-
-    $data =[
+    $data = [
         'Dis_status' => 1
-      
-        
     ];
-    $inventoryModel->update($sn,$data);
+    
+    $inventoryModel->set($data)
+                   ->where('Sn_number', $sn)
+                   ->update();
     
 
 
     
     return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
 }
+
+
+// view the sugical items request
+
+public function Requestitemssu($id  )
+{
+    $unitrequest = new UnitrequestModel();
+    $inventoryModel = new InventoryModel();
+
+    $data['req'] = $unitrequest
+    ->join('items', 'unit_request.item_id = items.id')
+    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+    ->find($id);
+ 
+ 
+ 
+    $data['userdata'] = $this->userData;
+    
+ 
+    return view('iManger/view_requestsugical', $data);
+}
+
+
+// add admin approval unitwise sugical item request
+
+
+public function updaterequestsugical($reqNo)
+{
+
+    $unitrequest = new UnitrequestModel();
+    $dashboardModel = new DashboardModel();
+    $adminapprovalModel= new AdminitemrequestModel();
+
+
+    if(  $this->request->getPost('Avqu')<=  $this->request->getPost('AddQu'))
+    {
+        return redirect()->back()->with('error', 'Quntity high please reduces.');
+    }
+    
+    $data =[
+        'ima_quntity' => $this->request->getPost('AddQu'),
+        'status' => 2
+        
+    ];
+    $unitrequest->update($reqNo,$data);
+     
+    $item_id = $this->request->getPost('id');
+
+
+    $data =[
+        'Re_quntity' => $this->request->getPost('Avqu') -$this->request->getPost('AddQu')
+        
+        
+    ];
+    $dashboardModel->update($item_id,$data);
+
+
+    $data =[
+        'item_id' => $item_id,
+        'Manger_Approvalq'=>$this->request->getPost('AddQu')
+        
+        
+    ];
+    $adminapprovalModel->save($data);
+  
+    return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
+}
+
+
+
+
+
 
 
 

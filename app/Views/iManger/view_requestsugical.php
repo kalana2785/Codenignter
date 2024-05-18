@@ -49,7 +49,7 @@
     </div>
 <?php endif; ?>
           
-          <form action="<?= base_url('Imanger/reupdate/'.$req['req_no']) ?>" method="post">
+          <form action="<?= base_url('Imanger/reupdatesu/'.$req['req_no']) ?>" method="post">
           <input type="hidden" name="_method" value="PUT">
         
           <div class="row mb-3">
@@ -76,29 +76,13 @@
                 </div>
        
 
-               
-                      <div class="row mb-3">
-                          <label for="inputEmail3" class="col-sm-2 col-form-label">Select SN number for Distributed</label>
-                          <div class="col-sm-10">
-                              <select name="itemboxname" id="" class="form-control input-lg" required>
-                                  <option value="">Select SN Number</option>
-                                  <?php if (!empty($Snnumber)): ?>
-                                      <?php foreach ($Snnumber as $item): ?>
-                                          <option value="<?= $item['Sn_number']; ?>"><?= $item['Sn_number']; ?></option>
-                                      <?php endforeach; ?>
-                                  <?php endif; ?>
-                              </select>
-                          </div>
-                      </div>
-             
+                <div class="alert alert-warning" role="alert">
+                   Now   <?= $req['Re_quntity']; ?> Avaliable
 
+                  </div>
 
+                  <input type="text" class="form-control" id="inputText" name="Avqu" value=" <?= $req['Re_quntity']; ?>" hidden>
 
-
-               
-               
-
-                  <input type="text" class="form-control" id="inputText" name="Avqu" value=" <?= $req['quntity']; ?>" hidden>
 
 
 

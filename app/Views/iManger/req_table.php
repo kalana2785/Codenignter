@@ -105,7 +105,7 @@
                         </td>
                         <?php if ($row['status'] == 1): ?>
                         <td> 
-                            <a href="<?php echo base_url('Imanger/requestitems/' . $row['req_no'] . '/' . $row['item_id']); ?>" class="btn btn-primary btn-sm">Send Approval</a>
+                            <a href="<?php echo base_url('Imanger/requestitemssecond/' . $row['req_no'] ); ?>" class="btn btn-primary btn-sm">Send Approval</a>
                         </td>
                         <?php endif; ?>
                     </tr>
