@@ -608,7 +608,8 @@ public function addunutinventory()
 
     $unitinventory = new UnitinventoryModel();
     $dashboardModel = new DashboardModel();
-
+    $unitrequest = new UnitrequestModel();
+    $adminitemsreq  = new AdminitemrequestModel();
    
     $data = [
         'item_id' => $this->request->getPost('item_id'),
@@ -620,12 +621,11 @@ public function addunutinventory()
 
     
     $unitinventory->save($data);
-
+    
    
     $available_qu = $this->request->getPost('Avaliable_quntity') - 1;
     $item_id = $this->request->getPost('item_id');
 
-    
     $data = [
         'quntity' => $available_qu,    
         'Re_quntity' => $available_qu  
@@ -633,6 +633,17 @@ public function addunutinventory()
 
    
     $dashboardModel->update($item_id, $data);
+
+    $data = [
+        'Approval_status' => 1,    
+      
+    ];
+
+    $adminitemsreq->update($item_id, $data);
+   
+   
+   
+
 
 
     return redirect()->back()->with('status', 'Approval successfully.');

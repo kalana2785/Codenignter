@@ -69,7 +69,7 @@
                 <input type="text" class="form-control" name="unit_id" value="<?= $requestview['req_unitid']; ?>" readonly hidden>
                 <input type="text" class="form-control" name="category" value="<?= $requestview['catogory']; ?>" readonly hidden>
                 <input type="text" class="form-control" name="item_id" value="<?= $requestview['id']; ?>" readonly hidden>
-                <input type="text" class="form-control" name="Avaliable_quntity" value="<?= $requestview['quntity']; ?>" readonly  hidden>
+                <input type="text" class="form-control" name="" value="<?= $requestview['quntity']; ?>" readonly  hidden>
                
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Approval</button>

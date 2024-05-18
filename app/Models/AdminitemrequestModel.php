@@ -13,7 +13,7 @@ class AdminitemrequestModel extends Model{
         'item_id',
         'req_unitid',
         'SN_number',
-        'Manger_Approvalq'
+        'Approval_status'
        
    
  
