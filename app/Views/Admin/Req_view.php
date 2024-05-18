@@ -3,19 +3,27 @@
 
 <head>
 
- <title>Add Items</title>
- <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
+ <title>Request Form</title>
+ <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<script src="assets/js/main.js"></script>
+<script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 
 </head>
 
 
 <body>
+
+<?= $this->include('Layout/Admin/header.php') ?>
+
+<?= $this->include('Layout/Admin/floter.php') ?>
+
+
 
 
 
@@ -47,6 +55,9 @@
               
               <form class="row g-3" action="<?= base_url('Admin/updatet/' . $requestview['req_no'] . '/' . $requestview['item_id']. '/' . $requestview['req_unit']); ?>" method="post">
               <input type="hidden" name="_method" value="PUT">
+
+
+              <label for="inputName5" class="form-label"><b>Item Details </b></label>
               <div class="col-md-12"> 
                 <label for="inputName5" class="form-label">Items Name</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['item_name']; ?>" readonly>
@@ -63,6 +74,8 @@
                 <label for="inputName5" class="form-label">Req Date/Time</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
                 </div>
+
+                <label for="inputName5" class="form-label"><b>Inventory Manager Status</b></label>
                 <div class="col-3">
                 <label for="inputName5" class="form-label">Approval Quntity</label>
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['ima_quntity']; ?>" readonly>
@@ -72,12 +85,7 @@
                   <input type="text" class="form-control" placeholder="" value="<?= $requestview['Date']; ?>" readonly>
                 </div>
 
-                <div class="col-3">
-                <label for="inputName5" class="form-label"> SN number / BN number</label>
-                  <input type="text" class="form-control" placeholder="" value="<?= $requestview['itembox_name']; ?>" name="itembox_name" readonly >
-                </div>
-
-
+          
 
                 <div class="col-6">
                 <label for="inputName5" class="form-label">Stock Avaliable</label>
@@ -92,7 +100,7 @@
 
                 <div class="col-6">
                
-                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['catogory']; ?>" name="cid" readonly >
+                  <input type="number" class="form-control" placeholder="" value="<?= $requestview['catogory']; ?>" name="cid" readonly hidden >
                 </div>
 
 

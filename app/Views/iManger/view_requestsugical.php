@@ -57,7 +57,7 @@
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="" value="<?= $req['item_name']; ?>" readonly>
                   <input type="text" class="form-control" id="inputText" name="id" value="<?= $req['item_id']; ?>" readonly hidden> 
-                  <input type="text" class="form-control" id="inputText" name="" value="<?= $req['catogory']; ?>" readonly hidden>
+                  <input type="text" class="form-control" id="inputText" name="catogory" value="<?= $req['catogory']; ?>" readonly hidden>
                   </div>
                 </div>
                 
@@ -77,7 +77,7 @@
        
 
                 <div class="alert alert-warning" role="alert">
-                   Now   <?= $req['Re_quntity']; ?> Avaliable
+                    Request Only  <?= $req['Re_quntity']; ?> 
 
                   </div>
 

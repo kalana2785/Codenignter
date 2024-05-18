@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-
+use App\Models\AdminitemrequestModel;
 use App\Models\DashboardModel;
 use App\Models\CategoryModel;
 use App\Models\DemandModel;
@@ -454,18 +454,32 @@ public function Addunit()
 
  public function Reqtable()
 {
-    $typemodel = new TypeModel();
-    $data['item_type'] = $typemodel
-                    ->join('items', 'unit_request.item_id = items.id')
-                    ->join('unit', 'unit_request.req_unit = unit.Unit_id')
-                    ->where('status =',2 )
-                    ->findAll(); // Fetching all records
-    
+  
+    $unitreqmodel= new UnitrequestModel();
+    $adminrequest = new AdminitemrequestModel();
+
+    $data['request'] = $unitreqmodel
+                        ->join('items', 'unit_request.item_id = items.id')
+                        ->join('unit', 'unit_request.req_unit = unit.Unit_id')
+                        ->where('unit_request.Cid', 1)
+                        ->findAll();
+
+                     
+    $data['requestgeneral'] = $adminrequest
+                     ->join('items', 'admin_itemreq.item_id = items.id')
+                     ->join('unit', 'admin_itemreq.req_unitid = unit.Unit_id')
+                    ->findAll(); 
+      $usermodel = new UserModel();
+    $Userid = session()->get('logged_user');
+                       
+                            
+    $data['userdata']=$usermodel->getlogindata($Userid);  
+  
     return view('Admin/Adminview_request', $data);
 }
 
 
-
+// Approval  sugical items from unit distribution
   public function viewreq($id, $req_no)
   {
     $unitrequest = new UnitrequestModel();
@@ -484,11 +498,17 @@ public function Addunit()
                    ->where('status =',2 )
                    ->findAll();
                
-                   
+ $usermodel = new UserModel();
+ $Userid = session()->get('logged_user');
+                                      
+                                           
+ $data['userdata']=$usermodel->getlogindata($Userid);                  
    
     return view('Admin/Req_view',$data);
   }
   
+
+  // update Approval
   public function updatereq($req_no, $item_id, $unit_no)
     {
         // Get input data from the form
@@ -537,8 +557,14 @@ public function Addunit()
     
         $unitinventory->save($data);
 
+
+
+
+
+
+
          
-        return redirect()->back()->with('status', 'Quantity Added successfully.');
+        return redirect()->to('Admin/Drequset')->with('status', 'Approval successfully.');
 
 
         
@@ -548,6 +574,78 @@ public function Addunit()
         
        
     }
+
+
+// view for Approval general item
+
+
+public function Approvalgen($req_no)
+
+{
+    $adminitemsreq=new AdminitemrequestModel();
+
+
+   
+    $data['requestview']=$adminitemsreq
+                   ->join('items', 'admin_itemreq.item_id = items.id')
+                   ->join('unit', 'admin_itemreq.req_unitid = unit.Unit_id')
+                   ->find($req_no);
+
+     $usermodel = new UserModel();
+    $Userid = session()->get('logged_user');
+                                                        
+                                                             
+     $data['userdata']=$usermodel->getlogindata($Userid);  
+    return view('Admin/Approval_genreq',$data);
+
+}
+
+
+
+
+public function addunutinventory()
+{
+
+    $unitinventory = new UnitinventoryModel();
+    $dashboardModel = new DashboardModel();
+
+   
+    $data = [
+        'item_id' => $this->request->getPost('item_id'),
+        'C_id' => $this->request->getPost('category'),  
+        'itembox_name' => $this->request->getPost('sn_num'),
+        'Unit_id' => $this->request->getPost('unit_id'),
+        'Quntity' => 1
+    ];
+
+    
+    $unitinventory->save($data);
+
+   
+    $available_qu = $this->request->getPost('Avaliable_quntity') - 1;
+    $item_id = $this->request->getPost('item_id');
+
+    
+    $data = [
+        'quntity' => $available_qu,    
+        'Re_quntity' => $available_qu  
+    ];
+
+   
+    $dashboardModel->update($item_id, $data);
+
+
+    return redirect()->back()->with('status', 'Approval successfully.');
+
+}
+
+
+
+
+
+
+
+
 
    // repair request display table  
   public function Reqreptable()

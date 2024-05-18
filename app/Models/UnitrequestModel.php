@@ -11,6 +11,7 @@ class UnitrequestModel extends Model
    protected $allowedFields =
    [
        'item_id',
+       'Cid',
        'req_unit',
        'itembox_name',
        'req_quntity',

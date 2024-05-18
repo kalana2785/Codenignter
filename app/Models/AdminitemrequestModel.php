@@ -11,6 +11,7 @@ class AdminitemrequestModel extends Model{
     protected $allowedFields =
     [
         'item_id',
+        'req_unitid',
         'SN_number',
         'Manger_Approvalq'
        

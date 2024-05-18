@@ -362,6 +362,7 @@ public function updaterequestgeneral($reqNo)
     $data =[
         'item_id' => $this->request->getPost('id'),
         'SN_number' => $this->request->getPost('itemboxname'),
+        'req_unitid' => $this->request->getPost('unit_id'),
         
         
     ];
@@ -369,8 +370,9 @@ public function updaterequestgeneral($reqNo)
 
     $data =[
         'itembox_name' => $this->request->getPost('itemboxname'),
+        'Cid' =>$this->request->getPost('catogory'),
         'req_quntity' => $this->request->getPost('req_quntity')-1,
-        'ima_quntity' => $this->request->getPost('AddQu'),
+        'ima_quntity' => $this->request->getPost('imanger_quntity')+1,
         'status' => 2
         
     ];
@@ -378,6 +380,7 @@ public function updaterequestgeneral($reqNo)
     $sn = $this->request->getPost('itemboxname');
     $data = [
         'Dis_status' => 1
+       
     ];
     
     $inventoryModel->set($data)
@@ -387,7 +390,7 @@ public function updaterequestgeneral($reqNo)
 
 
     
-    return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
+    return redirect()->to('Imanger/Requset')->with('status', 'Item Successfully Add Admin Approval');
 }
 
 
@@ -430,6 +433,7 @@ public function updaterequestsugical($reqNo)
     
     $data =[
         'ima_quntity' => $this->request->getPost('AddQu'),
+        'Cid' =>$this->request->getPost('catogory'),
         'status' => 2
         
     ];
@@ -445,14 +449,6 @@ public function updaterequestsugical($reqNo)
     ];
     $dashboardModel->update($item_id,$data);
 
-
-    $data =[
-        'item_id' => $item_id,
-        'Manger_Approvalq'=>$this->request->getPost('AddQu')
-        
-        
-    ];
-    $adminapprovalModel->save($data);
   
     return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
 }

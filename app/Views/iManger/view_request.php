@@ -56,8 +56,10 @@
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Request Item Name</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="" value="<?= $req['item_name']; ?>" readonly>
+                  <input type="text" class="form-control" id="inputText" name="catogory" value="<?= $req['catogory']; ?>" readonly hidden>
+                  <input type="text" class="form-control" id="inputText" name="imanger_quntity" value="<?= $req['ima_quntity']; ?>" readonly hidden>
                   <input type="text" class="form-control" id="inputText" name="id" value="<?= $req['item_id']; ?>" readonly hidden> 
-                  <input type="text" class="form-control" id="inputText" name="" value="<?= $req['catogory']; ?>" readonly hidden>
+                  <input type="text" class="form-control" id="inputText" name="unit_id" value="<?= $req['req_unit']; ?>" readonly hidden>
                   </div>
                 </div>
                 
