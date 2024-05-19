@@ -11,10 +11,10 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="<?= base_url('Imanger/Add');?>">
-        <i class="bi bi-file-earmark-plus-fill"></i><span>Add Section</span><i class="bi bi-chevron-down ms-auto"></i>
+      
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        
+        <!-- 
           <li>
             <a href="<?= base_url('Imanger/Purchmentview');?>">
               <span>Add Purchcement</span>
@@ -25,7 +25,7 @@
              <span>Add Purchcement Order</span>
              </a>
           </li>
-          
+          -->
        
         </ul>
       </li><!-- End Components Nav -->

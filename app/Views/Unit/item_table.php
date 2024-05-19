@@ -3,12 +3,13 @@
 
 <head>
 
- <title>Repair Status Table</title>
- <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
- <link href="<?= base_url('assets/vendor/bootstrap-icons/bootstrap-icons.css');?>" rel="stylesheet">
- <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
+ <title>Inventory Details</title>
+ <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+<link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
+<link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<script src="assets/js/main.js"></script>
 <script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
-<link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
 <script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
 <script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
@@ -61,17 +62,19 @@
 
 <body>
 
-
+<?= $this->include('Layout/Unit/header.php') ?>
+<?=
+ $this->include('Layout/Unit/Unit_slidebar.php') ?>
 
 
 <main id="main" class="main">
     
 <div class="pagetitle">
-      <h1>Repair Table</h1>
+      <h1>Inventory Details</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Tables</a></li>
-          <li class="breadcrumb-item active">Repair Table</li>
+         
+          <li class="breadcrumb-item active">inventory details</li>
           
         </ol>
       </nav>

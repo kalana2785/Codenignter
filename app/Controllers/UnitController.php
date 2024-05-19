@@ -88,12 +88,17 @@ public function req()
 public function unititemfull($id,$unitId)
 {
     $userinventory = new UnitinventoryModel();
+    $usermodel= new UserModel();
     $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')
                                       ->join('inventory_items','unit_inventory.item_id = inventory_items.item_id')
                                        ->where('unit_inventory.item_id',$id)
                                        ->where('unit_inventory.Unit_id',$unitId)
                                         ->findAll();
-
+     $Unituserid = session()->get('login_user');
+       
+            
+    $this->userData =$usermodel->getlogindata($Unituserid);
+     $data['unituserdata'] = $this->userData;
 
      return view('Unit/item_table.php', $data);
 
