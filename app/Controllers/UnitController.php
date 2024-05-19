@@ -220,6 +220,7 @@ public function Requestrepiritems($id = null)
             
             $data['reqre'] = $repairrequest
                             ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
+                            ->join('unit_inventory', 'repair.item_id= unit_inventory.item_id')
                             ->find($id);
                         
             $data['stage'] = $repairstage->orderby('Rs_id', 'ASC')->findAll();
@@ -243,9 +244,16 @@ public function Requestrepiritems($id = null)
             $data['progress'] = $progress;
             $data['total_stages'] = $total_stages;
             $data['stages'] = $stages;
-
-            $data['userdata'] = $this->userData;
-
+        
+         
+            $data['unituserdata'] = $this->userData;
+            $usermodel= new UserModel();
+    
+            $Unituserid = session()->get('login_user');
+       
+            
+            $this->userData =$usermodel->getlogindata($Unituserid);
+            $data['unituserdata'] = $this->userData;
             return view('Unit/view_requestrepair', $data);
 
 }

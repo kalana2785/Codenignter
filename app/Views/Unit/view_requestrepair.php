@@ -3,14 +3,24 @@
 
 <head>
 
- <title>Add Items</title>
+ <title>Repir Stage-unit</title>
  <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
+<link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
+
+<link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+
+<script src="assets/js/main.js"></script>
+
+<script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
+
+
+<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
+
+<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
+<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 
 </head>
 
@@ -56,6 +66,9 @@
 
 </style>
 
+<?= $this->include('Layout/Unit/header.php') ?>
+<?=
+ $this->include('Layout/Unit/Unit_slidebar.php') ?>
 <body>
 
 <main id="main" class="main">
@@ -77,11 +90,18 @@
           <form action="<?= base_url('Imanger/repairupdate/'.$reqre['Re_id']) ?>" method="post">
           <input type="hidden" name="_method" value="PUT">
         
-          <div class="row mb-3">
+              <div class="row mb-3">
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="" value="<?= $reqre['Re_id']; ?>" hidden>
                   </div>
                 </div>
+
+                <div class="row mb-3">
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputText" name="" value="<?= $reqre['itembox_name']; ?>"  readonly>
+                  </div>
+                </div>
+
 
 
                

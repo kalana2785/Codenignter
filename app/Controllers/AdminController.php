@@ -688,6 +688,7 @@ public function addunutinventory()
 {
             $repairrequest = new RepairModel(); 
             $repairstage = new RepairstageModel();
+            $usermodel = new UserModel();
             
             $data['reqre'] = $repairrequest
                             ->join('repair_stage', 'repair.status_id= repair_stage.Rs_id')
@@ -716,6 +717,11 @@ public function addunutinventory()
             $data['stages'] = $stages;
 
             
+
+            $Userid = session()->get('logged_user');
+            
+                    
+            $data['userdata']=$usermodel->getlogindata($Userid);   
 
             return view('Admin/view_requestrepair', $data);
 

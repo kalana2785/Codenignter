@@ -152,13 +152,10 @@ $(document).on('click', '.view_btn', function () {
         <table class="table" name="Sugical">
           <thead>
             <tr>
-              <th scope="col">Id</th>
+             
               <th scope="col">Items Name</th>
               <th scope="col">Type Name</th>
-              <th scope="col">BN Number</th>
-              <th scope="col">Med Date</th>
-              <th scope="col">Exp Date</th>
-              <th scope="col">Quntity</th>
+              <th scope="col">Quantity</th>
               <th scope="col"></th>
               <th> </th>
             </tr>
@@ -172,17 +169,7 @@ $(document).on('click', '.view_btn', function () {
                         <td><?php echo $row['type_name']; ?></td>
                         <td><?php echo $row['quntity']; ?></td>
                         
-                      <td>
-                      <a href="<?php echo base_url('Imanger/editq/' . $row['id']); ?>"  class="btn btn-primary btn-sm">Edit
-                      
-
-                        
-                        
-                      </a>
-
-
-
-                      </td>
+                    
                     </tr>
                 <?php endforeach;?> 
             <?php endif;?>
@@ -199,9 +186,8 @@ $(document).on('click', '.view_btn', function () {
       
       <th scope="col">Items Name</th>
       <th scope="col">Type Name</th>
-      <th scope="col">SN number</th>
-      <th scope="col">Warranty Period </th>
-      <th scope="col">Quntity</th>
+      <th scope="col">Quantity</th>
+    
       <th scope="col"></th>
       <th> </th>
     </tr>
@@ -233,7 +219,7 @@ $(document).on('click', '.view_btn', function () {
     <th scope="col">Type</th>
     <th scope="col">Available Quantity</th>
     <th scope="col">Inventory Status</th>
-    <th>Actions</th>
+
     </tr>
   </thead>
   <tbody>
@@ -314,18 +300,7 @@ $(document).on('click', '.view_btn', function () {
                 
                 ?></td>
 
-                <td>
-
-               
-            
-                
-                <a href="<?php echo base_url('Admin/delete/' . $row['id']); ?>"  class="btn btn-danger btn-sm">Delete
-               
-
-                 
-                
-               </a>
-                </td>
+           
                 
             </tr>
         <?php endforeach;?> 
