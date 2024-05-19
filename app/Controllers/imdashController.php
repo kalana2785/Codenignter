@@ -468,6 +468,8 @@ public function Requestrepairtable()
        
         ->join('items', 'repair.item_id = items.id')
         ->join('unit', 'repair.Unit_id = unit.Unit_id')
+        ->join('inventory_items', 'repair.item_id = inventory_items.item_id')
+        ->join('unit_inventory', 'repair.item_id = unit_inventory.item_id')
         ->findAll();
 
     $data['userdata'] = $this->userData;

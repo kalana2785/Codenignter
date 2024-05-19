@@ -54,6 +54,7 @@
         <thead>
             <tr>
                 <th scope="col">Items Name</th>
+                <th scope="col">Serial Name</th>
                 <th scope="col">Requests Unit</th>
                 <th></th>
             </tr>
@@ -63,7 +64,9 @@
             <?php foreach ($request as $row): ?>
                 <tr>
                     <td><?php echo $row['item_name']; ?></td>
+                    <td><?php echo $row['repair_snnum']; ?></td>
                     <td><?php echo $row['Unit_name']; ?></td>
+                    
                     <td>
                         <a href="<?php echo base_url('Imanger/requestrepair/' . $row['Re_id']); ?>" class="btn btn-primary btn-sm">Add</a>
                     </td>
@@ -85,15 +88,15 @@
                                         <p><b>Unit-In-charge Comment</b><br>
                                             <?php echo $row['Comment']; ?>
                                         </p>
-                                        <p><b>Warranty Start Date -</b><?php ?></p>
-                                        <p><b>Warranty End Date -</b><?php ?></p>
+                                        <p><b>Warranty Start Date -<?php echo $row['W_start'] ?></b><?php ?></p>
+                                        <p><b>Warranty End Date - <?php echo $row['W_end'] ?></b><?php ?></p>
                                         <p>
                                             <b>Warranty Available duration</b><br><br>
                                             <?php
-                                            //$startDate = new DateTime($row['W_start']);
-                                            //$endDate = new DateTime($row['W_end']);
-                                            //$dateDifference = $startDate->diff($endDate);
-                                            //echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
+                                            $startDate = new DateTime($row['W_start']);
+                                            $endDate = new DateTime($row['W_end']);
+                                            $dateDifference = $startDate->diff($endDate);
+                                            echo $dateDifference->y . ' years, ' . $dateDifference->m . ' months, ' . $dateDifference->d . ' days';
                                             ?>
                                         </p>
                                     </div>

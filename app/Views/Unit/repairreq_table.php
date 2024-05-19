@@ -92,7 +92,7 @@
   <thead>
   <tr>
     <th scope="col">Items Name</th>
-  
+    <th scope="col">Serial Number</th>
     <th scope="col">Repair Status</th>
     <th> </th>
 </tr>
@@ -102,6 +102,7 @@
     <?php foreach ($request as $row): ?>
     <tr>
         <td><?php echo $row['item_name']; ?></td>
+        <td><?php echo $row['repair_snnum']; ?></td>
        
         <td><?php echo $row['Stage']; ?></td>
         <td>
