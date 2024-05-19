@@ -28,7 +28,7 @@ class imdashController extends BaseController
 
        
         if (!session()->has('logged_user')) {
-            return redirect()->to(route_to('index'));
+            return redirect()->to('/');
         } else {
           
             $userId = session()->get('logged_user');
@@ -39,6 +39,12 @@ class imdashController extends BaseController
 
     public function index()
     {
+
+        if (!session()->has('logged_user')) {
+            return redirect()->to('/');
+        }
+
+
         $dashboardModel = new DashboardModel();
         $inventoryModel = new InventoryModel();
         

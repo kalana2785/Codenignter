@@ -625,6 +625,7 @@ public function addunutinventory()
    
     $available_qu = $this->request->getPost('Avaliable_quntity') - 1;
     $item_id = $this->request->getPost('item_id');
+    $req_id=$this->request->getPost('req_id');
 
     $data = [
         'quntity' => $available_qu,    
@@ -635,13 +636,13 @@ public function addunutinventory()
     $dashboardModel->update($item_id, $data);
 
     $data = [
-        'Approval_status' => 1,    
+        'InApproval_status' => 1,    
       
     ];
 
-    $adminitemsreq->update($item_id, $data);
+    $adminitemsreq->update($req_id, $data);
    
-   
+    
    
 
 

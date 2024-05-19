@@ -87,16 +87,18 @@
             
                 <td><?php echo $row['item_name']; ?></td>
                 <td><?php echo $row['Unit_name']; ?></td>
+                
                
                 <td>
-              
-                        
-                      </a>
-                      <a href="<?= base_url('Admin/approvalgen/' . $row['Adminreq_id']); ?>" class="btn btn-primary btn-sm">Approval</a>
+                <?php if ($row['InApproval_status'] == 1) : ?>	
+                    <div class="alert alert-success" role="alert">
+                        Approved
+                    </div>
+                <?php else : ?>
+                    <a href="<?= base_url('Admin/approvalgen/' . $row['Adminreq_id']); ?>" class="btn btn-primary btn-sm">Approval</a>
+                <?php endif; ?>
+            </td>
 
-
-
-                      </td>
             </tr>
         <?php endforeach;?>
         <?php else: ?>

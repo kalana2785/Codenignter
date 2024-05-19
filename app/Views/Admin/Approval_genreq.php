@@ -57,6 +57,9 @@
                 <label for="input1" class="form-label">Items Name</label>
                   <input type="text" class="form-control"  placeholder="" value="<?= $requestview['item_name']; ?>" readonly>
                 </div>
+               
+                  <input type="text" class="form-control" name="req_id" placeholder="" value="<?= $requestview['Adminreq_id']; ?>" readonly hidden>
+              
 
                 <div class="col-md-12">
                 <label for="input2" class="form-label">Requset Unit Name</label>
