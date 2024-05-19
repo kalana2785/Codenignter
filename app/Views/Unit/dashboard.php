@@ -53,12 +53,7 @@
   <li class="nav-item">
     <a class="nav-link active" onclick="showTable(1)">All</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" onclick="showTable(2)">Surgical</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" onclick="showTable(3)">General</a>
-  </li>
+
 </ul>
 
 
@@ -81,41 +76,44 @@
     <tr>
     
       <th scope="col">Items Name</th>
-      <th scope="col">Category</th>
-      <th>Sn number/Bn number</th>
-      <th scope="col">Avalible Quntity</th>
-      <th scope="col">Issue Update</th>
+      <th scope="col">Total Quntity</th>
+     
       <th> </th>
     </tr>
   </thead>
   <tbody>
-  <?php foreach ($userData as $userList): ?>
-                <?php foreach ($userList as $user): ?>
+  <?php foreach ($userData as $item): ?>
             <tr>
-                <td><?php echo $user['item_name']; ?></td>
-                <td><?php echo $user['Category_Name']; ?></td> 
-                   <td><?php echo $user['itembox_name']; ?></td> 
-                <td><?php echo $user['Quntity']; ?></td>
-                <td><?php echo $user['issue_date']; ?></td>
+            
+            <td><?= $item['item_name']; ?></td>
+            <td><?= $item['total_quantity']; ?></td>
+            
+
                
                 <td>
 
-                  <a href="<?php echo base_url('unit/reqre/' . $user['Uni_id']); ?>"  class="btn btn-primary btn-sm">Request Repair 
-
-
-                  
-
-                  </a>
+                <a href="<?php echo base_url('unit/fulld/' . $item['id'] . '/' . $item['Unit_id']); ?>"class="btn btn-primary btn-sm">View Full Details 
                 </td>
               
             </tr>
         <?php endforeach;?> 
-    <?php endforeach;?>
+
 </tbody>
 </table>
 </div>
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Inventory</title>
+</head>
+<body>
+
+
+              
+</body>
+</html>
 
 
 

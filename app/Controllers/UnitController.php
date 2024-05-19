@@ -16,49 +16,44 @@ class UnitController extends BaseController
    
 
     private $userData;
-    public function index(): string
-    {      if (!session()->has('logged_user')) {
-        return redirect()->to(route_to('index'));
-    } else {
-        $dashboardModel = new DashboardModel();
-        $usermodel= new UserModel();
-        $userinventory = new UnitinventoryModel();
-        
-// Fetch User_id based on Unit_id
-
-$userIds = session()->get('logged_user');
-$userData = [];
-
-foreach ($userIds as $unitId) {
-    $userData[] = $userinventory->join('items','unit_inventory.item_id = items.id')
-                                ->join('category','unit_inventory.C_id = category.Cid')
-                                ->where('Unit_id', $unitId)
-                                ->findAll();
-}
-
-$data['userData'] = $userData;
-
-
-foreach ($userIds as $unitId) {
-$data['S'] = $userinventory->getDashboardData('1', $unitId);
-
-}
-
-
-// create user session
-$Unituserid = session()->get('login_user');
-       
-            
-$this->userData =$usermodel->getlogindata($Unituserid);
-$data['unituserdata'] = $this->userData;
-
-
-return view('Unit/dashboard', $data);
-    }
-
-
     
-  }
+
+    public function index()
+    {
+        if (!session()->has('logged_user')) {
+            return redirect()->to(route_to('index'));
+        } else {
+            $dashboardModel = new DashboardModel();
+            $usermodel = new UserModel();
+            $userinventory = new UnitinventoryModel();
+            
+            // Fetch User_id based on Unit_id
+            $userIds = session()->get('logged_user');
+            $userData = [];
+    
+            foreach ($userIds as $unitId) {
+                $results = $userinventory->select('items.id, items.item_name,unit_inventory.Unit_id, SUM(unit_inventory.Quntity) as total_quantity')
+                                         ->join('items', 'unit_inventory.item_id = items.id')
+                                         ->join('category', 'unit_inventory.C_id = category.Cid')
+                                         ->where('unit_inventory.Unit_id', $unitId)
+                                         ->groupBy('items.id')
+                                         ->findAll();
+                $userData = array_merge($userData, $results);
+            }
+    
+            $data['userData'] = $userData;
+    
+            $Unituserid = session()->get('login_user');
+    
+            $this->userData = $usermodel->getlogindata($Unituserid);
+            $data['unituserdata'] = $this->userData;
+    
+            return view('Unit/dashboard', $data);
+        }
+    }
+    
+    
+  
 
 // items request page
 
@@ -87,6 +82,28 @@ public function req()
    
     return view('Unit/req.php', $data);
 }
+
+
+// view item details
+public function unititemfull($id,$unitId)
+{
+    $userinventory = new UnitinventoryModel();
+    $data['unititems'] = $userinventory->join('items','unit_inventory.item_id = items.id')
+                                      ->join('inventory_items','unit_inventory.item_id = inventory_items.item_id')
+                                       ->where('unit_inventory.item_id',$id)
+                                       ->where('unit_inventory.Unit_id',$unitId)
+                                        ->findAll();
+
+
+     return view('Unit/item_table.php', $data);
+
+}
+
+
+
+
+
+
 
 
 

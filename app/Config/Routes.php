@@ -164,4 +164,6 @@ $routes->get('unit/reqre/(:num)', 'UnitController::reqre/$1');
 $routes->post('/unit/requestre', 'UnitController::requestre');
 $routes->get('unit/requestrepair/(:num)', 'UnitController::Requestrepiritems/$1' );
 $routes->get('unit/requesttable', 'UnitController::requesttable');
+$routes->get('unit/fulld/(:num)/(:num)', 'UnitController::unititemfull/$1/$2');
+
 
