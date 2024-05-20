@@ -17,6 +17,7 @@ use App\Models\PurchaseOrderModel;
 use App\Models\PurchmentRequestModel;
 use  App\Models\InventoryModel;
 use App\Models\UnitModel;
+use App\Models\UseraccessModel;
 
 class AdminController extends BaseController
 {
@@ -776,5 +777,32 @@ public function Approvalpuc($purshmentId)
     
     return redirect()->back()->with('status', 'Item Successfully  Approval');
 }
+
+
+// login table
+
+public function Logintable()
+{
+
+    $useraccessModel = new UseraccessModel();
+    $usermodel = new UserModel();
+    $data['useracess'] = $useraccessModel
+                     ->join('user', 'user_access.User_id =user.User_id ')
+                     ->findAll(); 
+    $Userid = session()->get('logged_user');
+            
+                    
+     $data['userdata']=$usermodel->getlogindata($Userid);   
+    return view('Admin/Useracess_table',$data);             
+
+
+}
+
+
+
+
+
+
+
 
 }

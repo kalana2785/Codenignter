@@ -150,7 +150,7 @@ $routes->get('Admin/addreq', 'AdminController::Addreqtable' );
 
 $routes->post('Admin/adddemandform', 'AdminController::viewdemandform' );
 
-
+$routes->get('Admin/logintab', 'AdminController::Logintable' );
 
 
 

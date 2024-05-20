@@ -6,8 +6,7 @@
 <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
 <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
+
 <link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
@@ -18,10 +17,6 @@
 <script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
 
 
-<script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
-
-<script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
-<script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 <style>
     .table-container {
       display: none;
@@ -108,7 +103,7 @@ $(document).on('click', '.view_btn', function () {
 
 
 <div id="table1" class="table-container active-table" >
-<table class="table" name="All">
+<table  id="itemTable" class="table" name="All">
   <thead>
     <tr>
   
@@ -149,7 +144,7 @@ $(document).on('click', '.view_btn', function () {
 
 <div id="table2" class="table-container">
 <!--sugical items-->
-        <table class="table" name="Sugical">
+        <table  id="itemTable" class="table" name="Sugical">
           <thead>
             <tr>
              
@@ -179,7 +174,7 @@ $(document).on('click', '.view_btn', function () {
 
 <!-- General items-->
 <div id="table3" class="table-container">
-<table class="table" name="General">
+<table  id="itemTable" class="table" name="General">
   
   <thead>
     <tr>
@@ -210,7 +205,7 @@ $(document).on('click', '.view_btn', function () {
 
 
 <div id="table4" class="table-container" >
-<table class="table" name="level">
+<table  id="itemTable" class="table" name="level">
   <thead>
     <tr>
   
@@ -348,6 +343,15 @@ $(document).on('click', '.view_btn', function () {
   </script>
 
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+    <script>
+        $(document).ready(function() {
+            $('#itemTable').DataTable();
+        });
+    </script>
 
 
 </body>

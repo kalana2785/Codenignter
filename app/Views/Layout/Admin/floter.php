@@ -89,6 +89,12 @@
               <i class="bi bi-circle"></i><span> Overstock Value Table</span>
             </a>
           </li>
+
+          <li>
+            <a a href="<?= base_url('Admin/logintab');?>">
+              <i class="bi bi-circle"></i><span> User Login Table</span>
+            </a>
+          </li>
         </ul>
       </li>
 
