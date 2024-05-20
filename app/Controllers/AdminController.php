@@ -624,7 +624,13 @@ public function addunutinventory()
     $unitinventory->save($data);
     
    
-    $available_qu = $this->request->getPost('Avaliable_quntity') - 1;
+    $available_qu = (int)$this->request->getPost('Available_quantity', FILTER_VALIDATE_INT) - 1;
+
+    // Ensure that the quantity does not go below zero
+    if ($available_qu < 0) {
+        $available_qu = 0;
+    }
+    
     $item_id = $this->request->getPost('item_id');
     $req_id=$this->request->getPost('req_id');
 

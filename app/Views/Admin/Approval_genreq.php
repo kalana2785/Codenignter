@@ -3,7 +3,7 @@
 
 <head>
 
- <title>Add Items</title>
+ <title>Approval general item</title>
  <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">

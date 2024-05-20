@@ -396,7 +396,7 @@ public function updaterequestgeneral($reqNo)
 
 
     
-    return redirect()->to('Imanger/Requset')->with('status', 'Item Successfully Add Admin Approval');
+    return redirect()->back()->with('status', 'Item Successfully Add Admin Approval');
 }
 
 
