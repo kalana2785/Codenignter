@@ -70,7 +70,7 @@
                 </div>
                 
                 <div class="row mb-3">
-                    <label for="Sn number" class="col-sm-2 col-form-label">SN number</label>
+                    <label for="Sn number" class="col-sm-2 col-form-label">SN number Or Inventory No</label>
                     <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputText" name="Sn_number" value="" >
                     </div>
