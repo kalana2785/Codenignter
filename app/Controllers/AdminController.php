@@ -798,10 +798,35 @@ public function Logintable()
 
 }
 
+// user table
+public function usertable()
+{
+    
+  
+    $usermodel = new UserModel();
+    $data['user'] = $usermodel
+                       ->join('user_group', 'user.usergroup_id =user_group.ugroup_id ')
+                       
+                       ->findAll(); 
+    $Userid = session()->get('logged_user');
+            
+                    
+     $data['userdata']=$usermodel->getlogindata($Userid);   
+    return view('Admin/User_table',$data);             
 
+}
 
+// delete user
 
+public function userdelete($id = null)
+{
+    $usermodel = new UserModel();
+    $usermodel->Delete($id);
+    return redirect()->back()->with('status', 'User Deleted Successfully');
 
+   
+
+}
 
 
 

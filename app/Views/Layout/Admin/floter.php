@@ -95,6 +95,11 @@
               <i class="bi bi-circle"></i><span> User Login Table</span>
             </a>
           </li>
+          <li>
+            <a a href="<?= base_url('Admin/usertab');?>">
+              <i class="bi bi-circle"></i><span> User Table</span>
+            </a>
+          </li>
         </ul>
       </li>
 

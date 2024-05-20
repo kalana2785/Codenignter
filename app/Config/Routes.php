@@ -152,7 +152,9 @@ $routes->post('Admin/adddemandform', 'AdminController::viewdemandform' );
 
 $routes->get('Admin/logintab', 'AdminController::Logintable' );
 
+$routes->get('Admin/usertab', 'AdminController::usertable' );
 
+$routes->get('Admin/userdelete/(:num)','AdminController::userdelete/$1');
 
 // unit user 
 
