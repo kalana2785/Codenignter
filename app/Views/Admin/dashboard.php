@@ -151,8 +151,8 @@ $(document).on('click', '.view_btn', function () {
               <th scope="col">Items Name</th>
               <th scope="col">Type Name</th>
               <th scope="col">Quantity</th>
-              <th scope="col"></th>
-              <th> </th>
+              
+             
             </tr>
           </thead>
           <tbody>

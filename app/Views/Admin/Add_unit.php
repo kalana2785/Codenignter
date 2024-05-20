@@ -3,24 +3,14 @@
 
 <head>
 
- <title>Add Item Type</title>
- <link  href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
-<link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+ <title>Add Unit</title>
+ <link  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <link  href="<?= base_url('Assests/boxicons/css/boxicons.min.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.snow.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/quill/quill.bubble.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/remixicon/remixicon.css');?>" rel="stylesheet">
 <link  href="<?= base_url('Assests/css/style.css');?>" rel="stylesheet">
-<link  href="<?= base_url('Assests/simple-datatables/style.css');?>" rel="stylesheet">
 <link href="<?= base_url('Assests/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-
 <script src="assets/js/main.js"></script>
-
 <script src="<?= base_url('Assests/bootstrap/js/bootstrap.bundle.min.js');?>" ></script>
-
-
 <script src="<?= base_url('Assests/js1/jquery-3.7.1.js');?>" ></script>
-
 <script src="<?= base_url('Assests/js1/bootstrap.min.js');?>" ></script>
 <script src="<?= base_url('Assests/js1/popper.min.js');?>" ></script>
 </head>
@@ -64,7 +54,7 @@
           <form action="<?= base_url('Admin/Addunittype');?>" method="post">
 
           <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Unit Name</label>
+                  <label for="input1" class="col-sm-2 col-form-label">Unit Name</label>
                   <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputText" name="unit_name">
                   </div>
