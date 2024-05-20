@@ -1,0 +1,33 @@
+CRITICAL - 2024-05-20 09:43:24 --> ErrorException: Undefined array key "User_id"
+in APPPATH\Views\Admin\itemtype_table.php on line 65.
+ 1 APPPATH\Views\Admin\itemtype_table.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "User_id"', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Admin\\itemtype_table.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Admin\\itemtype_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/itemtype_table', [], true)
+ 5 APPPATH\Controllers\AdminController.php(388): view('Admin/itemtype_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->itemtypetable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-20 09:49:14 --> ErrorException: Undefined array key "Unit_id "
+in APPPATH\Views\Admin\unit_table.php on line 72.
+ 1 APPPATH\Views\Admin\unit_table.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Unit_id "', 'C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Admin\\unit_table.php', 72)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\app\\Views\\Admin\\unit_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Admin/unit_table', [], true)
+ 5 APPPATH\Controllers\AdminController.php(446): view('Admin/unit_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminController->unittable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')
+CRITICAL - 2024-05-20 09:51:17 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\AdminController:deleteunit/$1"
+in SYSTEMPATH\Router\Router.php on line 480.
+ 1 SYSTEMPATH\Router\Router.php(480): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\AdminController:deleteunit/$1')
+ 2 SYSTEMPATH\Router\Router.php(187): CodeIgniter\Router\Router->checkRoutes('Admin/deleteunit/5')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Admin/deleteunit/5')
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\HIMSP\\HIMS\\Codenignter\\public\\index.php')

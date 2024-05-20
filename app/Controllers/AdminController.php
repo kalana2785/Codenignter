@@ -828,6 +828,17 @@ public function userdelete($id = null)
 
 }
 
+public function deletetype($id = null)
+{
+    $typemodel = new TypeModel();
+    $typemodel->Delete($id);
+    return redirect()->back()->with('status', 'Item type Deleted Successfully');
+}
 
-
+public function deleteunit($id = null)
+{
+    $unitmodel = new UnitModel();
+    $unitmodel->Delete($id);
+    return redirect()->back()->with('status', 'Unit Deleted Successfully');
+}
 }

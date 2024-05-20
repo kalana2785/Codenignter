@@ -155,6 +155,10 @@ $routes->get('Admin/logintab', 'AdminController::Logintable' );
 $routes->get('Admin/usertab', 'AdminController::usertable' );
 
 $routes->get('Admin/userdelete/(:num)','AdminController::userdelete/$1');
+$routes->get('Admin/deletetype/(:num)','AdminController::deletetype/$1');
+$routes->get('Admin/deleteunit/(:num)','AdminController::deleteunit/$1');
+
+
 
 // unit user 
 

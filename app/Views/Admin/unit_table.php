@@ -68,7 +68,9 @@
                 <?php foreach ($unit as $row) : ?>
                     <tr>
                         <td><?php echo $row['Unit_name']; ?></td>
-                      
+                        <td>
+                                <a href="<?php echo base_url('Admin/deleteunit/' . $row['Unit_id']); ?>"  class="btn btn-danger btn-sm">Delete
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
